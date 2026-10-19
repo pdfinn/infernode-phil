@@ -100,12 +100,13 @@ commands extracted from `argue`:
   the date: `readings 3/3 claude-opus-5-5 7f3a9c1e 2026-10-19`. A
   person's line, `hand <who>`, outweighs it; a driving agent's line,
   `agent <name>`, is a proposal with that provenance and never
-  outweighs a person's. To add: the decoding settings (temperature,
-  reasoning effort, a seed where there is one), which the 2026 guidance
-  for reproducible model use in the humanities asks for beside model,
-  version, date and prompt; and, for a reader that is a host command
-  and so not confined, the word `unconfined`, as step 0 below already
-  asks.
+  outweighs a person's. A reading's own line (`# read by`) also gives
+  the settings it was asked with (`wwb/ask -s`: temperature, maxtokens,
+  thinking), which the 2026 guidance for reproducible model use in the
+  humanities asks for beside model, version, date and prompt, and how
+  it was confined: `blinded by name space`, or, for a reader that is a
+  host command, `unconfined`. Still to add: a seed, where a provider
+  takes one.
 - **Blinded to the corpus, not to its training.** A reader cannot see
   the other readings or the answers. It can recall what it read in
   training, and the faults of the gold set are the literature's. So

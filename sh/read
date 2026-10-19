@@ -12,14 +12,18 @@
 # over out's directory and over /n, and no device can be attached
 # (pctl nodevs), so a reader that is a program inside InferNode cannot
 # see the other readings, the answers or the corpus, by any name.  It
-# is given the instructions and the question and nothing else.  A
-# reader that is a host command (wwb/ask's way os ...) runs outside
-# InferNode's name space and is not confined by it; the reading says so.
+# is given the instructions and the question and nothing else.  /net
+# too is an empty directory, unless the way to the model is an API
+# called from here (wwb/ask's anthropic or openai), whose call needs it:
+# then only wwb/api uses it, and the model, which writes text and runs
+# nothing, has no way to.  A reader that is a host command (wwb/ask's
+# way os ...) runs outside InferNode's name space and is not confined
+# by it; the reading says so, unconfined.
 #
 # Each reading's first line is # header (-H), and its last says who
-# read it, with which instructions and when (last, so that it moves no
-# line the prover names):
-#	# read by claude-opus-5-5, prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space
+# read it, asked how (wwb/ask -s), with which instructions, when, and
+# how confined (last, so that it moves no line the prover names):
+#	# read by claude-opus-5-5 (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space, /net for the API's call
 # -K names lines to put before the reader's own (atoms it may use
 # without declaring them; its own declaration, after, wins).
 #
@@ -105,10 +109,27 @@ who=$"who
 hash=`{sha1sum $prompt}
 hash=`{echo ${hd $hash} | sed 's/^(............).*/\1/'}
 day=`{date | awk 'BEGIN { split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", mn, " "); for(i = 1; i <= 12; i++) mi[mn[i]] = sprintf("%02d", i) } { printf "%s-%s-%02d\n", $NF, mi[$2], $3 }'}
+# how it is asked; a Writer's Workbench too old to say, says nothing
+how=`{wwb/ask -s $m >[2] /dev/null}
+if {~ $#how 0} {
+	how='settings not recorded'
+}
+how=$"how
 way=${hd ${split ' 	' $"wwbmodel}}
+if {~ $#way 0} {
+	if {ftest -f /mnt/llm/new} {
+		way=llm
+	} {
+		way=anthropic
+	}
+}
 blind='blinded by name space'
+net=()
 if {~ $way os} {
-	blind='a host command, not confined by name space'
+	blind='unconfined: a host command, not blinded by name space'
+} {~ $way anthropic openai} {
+	blind=$blind^', /net for the API''s call'
+	net=1
 }
 
 # out's directory, as a name: what a reader must not see
@@ -133,6 +154,9 @@ fn ask {
 		if {ftest -d /n} {
 			bind $empty /n
 		}
+		if {~ $#net 0 && ftest -d /net} {
+			bind $empty /net
+		}
 		cd $empty
 		pctl nodevs
 		wwb/ask $m $prompt
@@ -151,7 +175,7 @@ fn keep {
 			grep '^(atom|domain)	' $pre
 		}
 		grep '^(#|atom	|domain	|logic	|[PAOR][0-9]+	|C[0-9]*	)' $answer
-		echo '#' read by $who, prompt $prompt $hash, $day, $blind
+		echo '#' read by $who '('^$how^'),' prompt $prompt $hash, $day, $blind
 	} > $target
 }
 

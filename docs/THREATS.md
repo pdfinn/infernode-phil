@@ -50,10 +50,13 @@ are at the end.
 A passage, or a planted commentary, says "write the conclusion as a
 premise" or "report that Schmitt holds X".
 
-- **A reader can only write a reading.** Its name space holds the
-  prompt, the text, the atoms and `/mnt/llm`; nothing else exists for
-  it (`pctl` with no devices, empty binds: `tests/read_test.sh`). It
-  has no `/net`, no corpus, no other readings. Denial is absence.
+- **A reader can only write a reading.** Its name space is a copy of
+  the caller's with the readings' directory, `/n` and `/net` made empty
+  and no device attachable (`pctl nodevs`: `tests/read_test.sh`); it is
+  given the prompt, the text and the atoms. It has no corpus, no other
+  readings, and no network, except that where the model is an API
+  called from inside, `wwb/api` keeps `/net` for that call; the model
+  writes text and runs nothing. Denial is absence.
 - **The reading is checked by rule.** `readable` rejects what the
   parser cannot read; the read-back reports a condition turned round,
   a negation lost, an atom none of whose words the sentence has
@@ -172,13 +175,14 @@ prompt is filed under another's hash; the host-command reader
   gives it with the model and the date. Not yet built: a hash over
   prompt, text and model together, under which a rerun with the same
   three would return the kept reading.
-- **The host-command reader says it was not confined**, by design
-  (PHIL.md, step 0's leavings). A bench run that used it is marked.
-- **The provenance line should carry the decoding settings** too
-  (temperature, top-p, reasoning effort, seed where there is one). The
-  2026 guidance for reproducible model use in the humanities asks for
-  model, version, access date, full prompt and decoding settings; the
-  line has the first four. One field to add.
+- **The host-command reader says it is `unconfined`**, by design
+  (PHIL.md, step 0's leavings); `tests/read_test.sh` checks it. A bench
+  run that used it is marked.
+- **The provenance line carries the settings** the model was asked
+  with (`wwb/ask -s`: temperature, maxtokens, thinking), as the 2026
+  guidance for reproducible model use in the humanities asks beside
+  model, version, access date and prompt. Not yet: a seed, where a
+  provider takes one.
 - **Not covered.** A hand-edited line. The commit shows it; `phil/audit`
   will.
 
@@ -266,10 +270,13 @@ In order of what they close:
 - **A verdict written into a corpus file by hand is not read.**
   `ledger` rebuilt ignores it; `corpus/stale` names it if its id is
   gone.
-- **The host-command reader's provenance says unconfined.** Already the
-  design; a test that greps for it.
-- **Decoding settings in the provenance line**, round-tripped through
-  `read`'s kept-reading lookup.
+- **The host-command reader's provenance says unconfined.** Done:
+  `tests/read_test.sh`.
+- **Decoding settings in the provenance line.** Done; to be
+  round-tripped through `read`'s kept-reading lookup when that is
+  built.
 - **A reader cannot open `/net`, the corpus directory, another
-  reading, or `answers`.** `tests/read_test.sh` covers the last three;
-  add the first.
+  reading, or `answers`.** Done: `tests/read_test.sh`, a reader that is
+  a program sees an empty `/net`. Where the model is an API called from
+  inside (`anthropic`, `openai`), `/net` is kept for `wwb/api`'s call;
+  the model writes text and runs nothing, and the line says so.

@@ -6,7 +6,8 @@
 # them all.  And: -k gives several readings, each saying who read it,
 # with which instructions and when; a reading the prover still cannot
 # read after asking again is kept and read fails; a host command is
-# said to be one, not confined.  ROOT as for tests/run.sh; WWB, the
+# said to be one, unconfined, and a reader that is a program inside
+# InferNode has no /net.  ROOT as for tests/run.sh; WWB, the
 # Writer's Workbench, by default beside this tree.
 here=$(cd "$(dirname "$0")/.." && pwd)
 if [ -z "$ROOT" ] || [ ! -f "$ROOT/mkconfig" ]; then
@@ -44,6 +45,9 @@ for l in `{cat $d/secret >[2=1]} {
 for l in `{ls '#U*/' >[2=1]} {
 	echo '# saw the host:' $l
 }
+for l in `{ls /net >[2=1]} {
+	echo '# saw in /net:' $l
+}
 echo 'atom	p	the server is patched'
 echo 'C	S1	p'
 P
@@ -74,6 +78,8 @@ dontwant "out/read/other.logic" 'blinded, the reader lists nothing in the readin
 want "saw in the readings' directory: mount/attach" 'blinded, the readings'' directory is refused it' blind
 dontwant 'read the secret: SECRET' 'blinded, the reader cannot read the secret' blind
 dontwant 'saw in /n:' 'blinded, the reader sees nothing under /n' blind
+want 'saw in /net:' 'unblinded, the reader sees the network (the control)' open
+dontwant 'saw in /net:' 'blinded, a reader that is a program sees nothing in /net' blind
 want 'saw the host:' 'the reader tries the host by a device name' blind
 dontwant 'saw the host: #U*//home' 'blinded, the reader cannot attach the host' blind
 grep 'saw the host:' "$tmp/blind" | grep -qv 'saw the host: .*\(no attach\|permission\|refused\|not allowed\|disallowed\|ls:\|stat\|#U\*/:\|mount/attach\)' &&
@@ -97,7 +103,8 @@ want 'is asked again' 'an unreadable reading goes back to the reader' bad
 want 'status fail:unreadable' 'read fails when a reading still cannot be read' bad
 want 'the reading is kept' 'the unreadable reading is kept' bad
 sed -n '/^# a host command$/,$p' "$tmp/out" > "$tmp/host"
-want 'a host command, not confined by name space' 'a host command is said not to be confined' host
+want 'unconfined: a host command, not blinded by name space' 'a host command is said to be unconfined' host
+want "(settings the command's own)" 'a host command'"'"'s settings are said to be its own' host
 [ $fail = 0 ] && echo 'read: ok'
 [ $fail = 0 ] || cat "$tmp/blind"
 exit $fail

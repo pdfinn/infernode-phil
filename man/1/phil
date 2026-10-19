@@ -448,6 +448,13 @@ and no device attachable
 so that a reader that is a program inside InferNode cannot see the other
 readings, the answers or the corpus by any name; what it would see is not
 there.
+.B /net
+is an empty directory too, unless the model is an API called from here
+.RB ( $wwbmodel
+.B anthropic
+or
+.BR openai ),
+whose call needs it; the model writes text and runs nothing.
 A reader that is a host command
 .RB ( $wwbmodel
 beginning
@@ -456,10 +463,17 @@ runs outside InferNode's name space and is not confined by it.
 Each reading's first line is
 .BI # " header"
 .RB ( -H ),
-and its last says who read it, with which instructions (by the first
-twelve digits of their SHA-1) and when, and whether it was blinded:
+and its last says who read it, asked how
+.RB ( "wwb/ask -s" :
+temperature, maxtokens, thinking), with which instructions (by the first
+twelve digits of their SHA-1), when, and how it was confined:
+.B blinded by name space
+(with
+.B "/net for the API's call"
+where it was kept), or
+.BR unconfined :
 .EX
-	# read by claude-opus-5-5, prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space
+	# read by claude-opus-5-5 (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space, /net for the API's call
 .EE
 .B -K
 names atom lines to put before the reader's own.

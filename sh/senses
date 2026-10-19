@@ -134,11 +134,15 @@ if {! ftest -s $logic^.words} {
 } | wwb/ask $m /lib/phil/senses > $logic^.senses.new
 # who answered, by what instructions, when: as a reading says it
 who=`{wwb/ask -n $m}
+how=`{wwb/ask -s $m >[2] /dev/null}
+if {~ $#how 0} {
+	how='settings not recorded'
+}
 hash=`{sha1sum /lib/phil/senses}
 hash=`{echo ${hd $hash} | sed 's/^(............).*/\1/'}
 day=`{date | awk 'BEGIN { split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", mn, " "); for(i = 1; i <= 12; i++) mi[mn[i]] = sprintf("%02d", i) } { printf "%s-%s-%02d\n", $NF, mi[$2], $3 }'}
 {
-	echo '#' answered by $"who, prompt /lib/phil/senses $hash, $day
+	echo '#' answered by $"who '('^$"how^'),' prompt /lib/phil/senses $hash, $day
 	cat $logic^.senses.new
 } > $logic^.senses
 rm -f $logic^.senses.new
