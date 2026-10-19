@@ -25,6 +25,11 @@
 # go to factotum, not to InferNode's environment.  WWBMODEL is passed
 # on as $wwbmodel (openai http://localhost:11434/v1, say, or
 # os claude -p), and https_proxy and no_proxy as they are.
+#
+# PHILAUDIT names a host file to keep an audit log in (auditfs(4)): each
+# command serves it again, so the chain runs on from one to the next,
+# phil/read and phil/argue seal their readings in it, and phil audit
+# checks readings against it.
 here=$(cd "$(dirname "$0")" && pwd)
 ROOT=${ROOT:-$(cd "$here/.." && pwd)/infernode}
 WWB=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
@@ -64,6 +69,13 @@ cd $3
 t=$4
 cmd=$5
 args=${tl ${tl ${tl ${tl ${tl $*}}}}}
+# the audit log, on the host file PHILAUDIT names
+if {ftest -f $t/audit} {
+	a=/tmp/phil.audit.^${pid}
+	mkdir -p $a
+	mount -c {auditfs -f `{cat $t/audit}} $a
+	philaudit=$a/log
+}
 # a model's way: the network, factotum and its keys, $wwbmodel
 if {ftest -f $t/setup} {
 	bind -a '#I' /net >[2] /dev/null
@@ -80,6 +92,10 @@ if {ftest -f $t/setup} {
 echo $status > $t/status
 echo halt > /dev/sysctl
 E
+if [ -n "$PHILAUDIT" ]; then
+	touch "$PHILAUDIT" || exit 2
+	printf '#U*%s\n' "$(cd "$(dirname "$PHILAUDIT")" && pwd)/$(basename "$PHILAUDIT")" > "$tmp/audit"
+fi
 # rc's quoting: in quotes, a quote is doubled
 q() { printf "'%s'" "$(printf '%s' "$1" | sed "s/'/''/g")"; }
 case $cmd in

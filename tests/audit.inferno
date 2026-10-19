@@ -1,0 +1,80 @@
+#!/dis/sh.dis
+# audit.inferno phildir wwbdir - phil/audit against a live audit log:
+# readings sealed by phil/read and phil/argue are backed; one changed or
+# written by hand is not; a reader cannot seal a record of its own.
+# Run by tests/audit_test.sh.
+load std
+
+phil=$1
+wwb=${hd ${tl $*}}
+run $phil/philns $phil $wwb
+cd $phil/tests
+rm -rf out/audit
+mkdir -p out/audit
+here=`{pwd}
+d=$here/out/audit
+# the log is served on a directory of the emulator's own, as /mnt/audit is
+m=/tmp/phil.audit.^${pid}
+mkdir -p $m
+mount -c {auditfs -f $d/backing} $m
+philaudit=$m/log
+echo 'The server is patched. So the server is secure.' > $d/doc.md
+echo 'Read it.' > $d/question
+
+echo '# a reading, sealed'
+# a reader that also tries to seal a record of its own
+{
+	echo 'load std'
+	echo 'sh -c ''echo phil/read reading sha256=forged > '^$philaudit^''' >[2] /dev/null'
+	echo 'cat > /dev/null'
+	echo 'echo ''atom	p	the server is patched'''
+	echo 'echo ''atom	s	the server is secure'''
+	echo 'echo ''P1	S1	p'''
+	echo 'echo ''A1	-	p -> s'''
+	echo 'echo ''C	S2	s'''
+} > /tmp/phil.reader.^${pid}
+# a name with no # in it: the command is sh's to parse
+wwbmodel='sh /tmp/phil.reader.'^${pid}
+phil/read -o $d/one /lib/phil/argue $d/question
+phil/audit -c $m/chain $d/one
+echo status $status
+
+echo '# an argument of three readings, kept, sealed'
+phil/argue -k 3 -o $d/arg.logic $d/doc.md > $d/arg.out
+phil/audit -c $m/chain $d/arg.logic
+echo status $status
+
+echo '# a comment added: still backed'
+cp $d/one $d/commented
+echo '# my note' >> $d/commented
+phil/audit -c $m/chain $d/commented
+echo status $status
+
+echo '# a statement changed: unbacked'
+sed 's/^A1	-	p -> s$/P2	S1	p -> s/' $d/one > $d/changed
+phil/audit -c $m/chain $d/changed
+echo status $status
+
+echo '# written by hand, with a provenance line: unbacked'
+{
+	echo 'atom	p	the server is patched'
+	echo 'C	S1	p'
+	echo '# read by claude-opus-5-5 (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space'
+} > $d/forged
+phil/audit -c $m/chain $d/forged
+echo status $status
+
+echo '# not a reading'
+echo 'C	S1	p' > $d/hand
+phil/audit -c $m/chain $d/hand
+
+echo '# the chain'
+if {grep -s 'sha256=forged' $m/chain} {
+	echo a reader sealed a record
+} {
+	echo no record of the reader
+}
+cat $m/chain | auditverify
+unmount $m
+rm -rf $m /tmp/phil.reader.^${pid}
+echo halt > /dev/sysctl

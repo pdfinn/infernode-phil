@@ -115,6 +115,10 @@ jobs:
       working-directory: infernode-phiwb
       run: tests/read_test.sh
 
+    - name: phil/audit, readings against the sealed log
+      working-directory: infernode-phiwb
+      run: tests/audit_test.sh
+
     - name: phil/prove against Z3
       working-directory: infernode-phiwb
       run: tests/prove_z3_test.sh

@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree, audit \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -230,6 +230,15 @@ phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses
 .br
 .B phil/tree
 .I dir
+.br
+.B phil/audit
+[
+.B -h
+] [
+.B -c
+.I chain
+]
+.I file ...
 .SH DESCRIPTION
 These commands read an argument and decide what follows from it.
 A language model writes a document's argument down as a logic file;
@@ -745,6 +754,56 @@ is written afresh each time.
 .BR journal )
 is made if it is missing and never touched: the research's notes,
 kept by the claims' and works' names.
+.TP
+.B phil/audit
+Whether each reading is one a model wrote, as it now stands.
+Where there is an audit log
+.RI ( auditfs (4)
+at
+.BR /mnt/audit ,
+or the log
+.B $philaudit
+names;
+.B ./phil
+serves one on the host file
+.B $PHILAUDIT
+names),
+.I read
+seals each reading it keeps there: the SHA-256 of its statements (every
+line not a comment), the prompt's hash and who read it; and
+.I argue
+seals the reading it keeps after settling and tidying, with the readings
+it was made from.
+A reader's name space has the log's directory empty, so a reader cannot
+seal a record of its own.
+.I Audit
+hashes each
+.I file
+with a
+.B # read by
+line the same way and says
+.B audit/backed
+where a record of
+.I read
+names the hash, or one of
+.I argue
+does whose readings all have records;
+.B audit/unbacked
+(at the
+.B # read by
+line) where none does: written, or changed, by another hand after the
+model read.
+A comment added changes nothing.
+A file with no
+.B # read by
+line is counted as not a model's reading.
+It fails when any reading is unbacked.
+.B -c
+names a copy of the chain; that the chain is whole is
+.IR auditverify 's
+to say.
+.B -h
+prints each file's hash of its statements, as the records carry it.
 .TP
 .B phil/prove
 Decides whether an argument's conclusion follows from its premises.

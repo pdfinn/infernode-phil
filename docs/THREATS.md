@@ -125,10 +125,21 @@ logic file so `prove` says valid.
   the driver: `readings k/n model hash date`, `hand who`, `agent name`.
   An `agent` line never outweighs a `hand` line, and a reader cannot
   write one at all (PHIL.md, "What a model never does").
-- **`phil/audit` holds every `readings` line to a model call in the
-  audit log.** Designed, not built; until it is, the provenance line is
-  a claim the tools make and not one they prove. First on the list in
-  the tests below.
+- **`phil/audit` holds every reading to a sealed record.** `read`
+  seals each reading it keeps in the audit log (auditfs: append-only,
+  sequence and time set by the server, a SHA-256 hash chain), as the
+  hash of its statements with who read it; `argue` seals the reading it
+  keeps with the readings it came from. `phil/audit` hashes a reading
+  as it now stands and says `audit/unbacked` where no record names it:
+  a reading written, or a statement changed, by another hand. A reader
+  cannot reach the log (its directory is empty in the reader's name
+  space; `tests/audit_test.sh`). What is left: auditfs does not
+  authenticate a record's source, so whatever has the log in its name
+  space can write a record that says `phil/read`. Give a driving agent
+  the commands, not the log; and copy `head` off the machine to catch a
+  chain cut back (`auditverify -a`). The corpus files' own lines
+  (`readings k/n`) are not yet held to the records; the readings they
+  were made from are.
 - **Not covered.** A person writing a wrong `hand` line. The commit
   history shows it.
 
@@ -183,8 +194,9 @@ prompt is filed under another's hash; the host-command reader
   guidance for reproducible model use in the humanities asks beside
   model, version, access date and prompt. Not yet: a seed, where a
   provider takes one.
-- **Not covered.** A hand-edited line. The commit shows it; `phil/audit`
-  will.
+- **A hand-edited reading** is `audit/unbacked`; a hand-edited
+  comment, the provenance line among them, is not caught, since
+  comments are not hashed. The commit shows it.
 
 ### Supply: what the rules read
 
@@ -259,10 +271,11 @@ as invalid; `claims/attributed-unread` read as misattribution;
 
 In order of what they close:
 
-- **`phil/audit`** (designed in PHIL.md): every `readings` line in a
-  corpus matches a call in the audit log, and a line with no call is
-  `audit/unbacked`. A scripted run against the fake model, then a line
-  added by hand, detected.
+- **`phil/audit`**: done for readings (`tests/audit_test.sh`: a
+  reading and an argument of three backed, a statement changed and a
+  reading written by hand unbacked, a reader unable to seal, the chain
+  verified). Still to do: the corpus's `readings` lines held to the
+  records of the readings they name.
 - **Two model families in one bench run**, each reader's model in its
   provenance line, and RESULTS.md reporting agreement within a model
   and across models separately. `tests/read_test.sh`'s pattern, with

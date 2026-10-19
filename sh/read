@@ -24,6 +24,11 @@
 # read it, asked how (wwb/ask -s), with which instructions, when, and
 # how confined (last, so that it moves no line the prover names):
 #	# read by claude-opus-5-5 (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space, /net for the API's call
+# Where there is an audit log (/mnt/audit/log, or $philaudit), each
+# reading kept is sealed in it: the SHA-256 of its statements (phil/audit
+# -h), the prompt's hash and who read it; phil/audit checks a reading
+# against it.  The log's directory is empty to a reader.
+#
 # -K names lines to put before the reader's own (atoms it may use
 # without declaring them; its own declaration, after, wins).
 #
@@ -140,6 +145,28 @@ if {~ $#dir 0} {
 empty=/tmp/phil.read.^${pid}
 mkdir -p $empty
 
+# the audit log (auditfs(4)), where it is: each reading kept is sealed
+# there, the hash of its statements with who read it, so that phil/audit
+# can show it was a model's and is unchanged.  A reader never sees the
+# log, so it cannot seal a record of its own.  $philaudit names another.
+log=/mnt/audit/log
+if {! ~ $#philaudit 0} {
+	log=$philaudit
+}
+logdir=()
+if {ftest -e $log} {
+	logdir=`{cleanname -d `{pwd} $log | sed 's,/[^/]*$,,'}
+} {
+	log=()
+}
+fn seal {
+	if {! ~ $#log 0} {
+		sf=$1
+		h=`{phil/audit -h $sf}
+		echo 'phil/read reading sha256='^$h^' prompt='^$hash^' model='^$who > $log
+	}
+}
+
 # ask in out's stead: a reader of its own, blinded; the question on its
 # standard input
 fn ask {
@@ -156,6 +183,9 @@ fn ask {
 		}
 		if {~ $#net 0 && ftest -d /net} {
 			bind $empty /net
+		}
+		if {! ~ $#logdir 0} {
+			bind $empty $logdir
 		}
 		cd $empty
 		pctl nodevs
@@ -233,6 +263,7 @@ for i in `{seq 1 $k} {
 	keep $t^.answer $t
 	rm -f $t^.answer
 	mend $t
+	seal $t
 	if {~ $#unreadable 1} {
 		lost=($lost $t)
 	}

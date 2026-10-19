@@ -290,7 +290,8 @@ Then CORPUS.md's steps 1 to 8, with `questions` at step 4 beside
 - Every line of every corpus file says who wrote it, with the model,
   the prompt's hash and the date where a model did, and every
   `readings` line matches a model call in the audit log (`phil/audit`
-  checks this).
+  checks each reading against the records `read` and `argue` seal;
+  holding the corpus's own lines to them is still to do).
 - A reader that tries to read another reading, the answers, or the
   corpus gets "file does not exist": a host test, after
   `veltro_security_test`'s pattern, starts a reader and has it try.

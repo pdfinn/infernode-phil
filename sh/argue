@@ -52,6 +52,26 @@ fn tidy {
 	}
 }
 
+# seal reading from ...: where there is an audit log (as phil/read
+# finds it), the reading kept, after settling and tidying, sealed with
+# the readings it was made from, so that phil/audit can trace it to them
+fn seal {
+	slog=/mnt/audit/log
+	if {! ~ $#philaudit 0} {
+		slog=$philaudit
+	}
+	if {ftest -e $slog} {
+		# $1 inside a `{} block is the block's, so name it first
+		skept=$1
+		sfrom=''
+		for sg in ${tl $*} {
+			sfrom=$sfrom^`{phil/audit -h $sg}^,
+		}
+		shash=`{phil/audit -h $skept}
+		echo 'phil/argue kept sha256='^$shash^' from='^$sfrom > $slog
+	}
+}
+
 fn usage {
 	echo 'usage: phil/argue [-cjqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file' >[1=2]
 	raise fail:usage
@@ -444,6 +464,7 @@ if {~ $#w 1} {
 	}
 	rm -f $parts/check $parts/joined $parts/top $parts/top.kept
 	tidy $logic
+	seal $logic $done
 	echo '#' the work as a whole, $i parts, written to $logic by $who '(a language model, not a rule)'
 	# a part's conclusion nothing rests on is said once, for them all
 	phil/prove $x $logic $f > $parts/whole >[2=1]
@@ -547,10 +568,12 @@ if {! ~ $k 1} {
 		}
 	}
 	echo '#' $#files readings by $who, compared
+	cp $logic $logic^.read1
 	phil/settle $q $x $m -p $logic^.sents -d $f $files
 	rm -f $logic^.vocab
+	from=$logic^.read1
 	for i in `{seq 2 $k} {
-		rm -f $logic^.$i
+		from=($from $logic^.$i)
 	}
 }
 rm -f $logic^.question $logic^.sents
@@ -558,6 +581,12 @@ if {! ~ $#mine 0} {
 	echo '#' $mine as its writer meant it, beside $logic as $who read it cold
 	phil/prove $x -c -d $f $mine $logic | grep -v ': argue/support |: argue/mismatches |^# best reading|^# if (yes|no):'
 }
+if {~ $k 1} {
+	cp $logic $logic^.read1
+	from=$logic^.read1
+}
 tidy $logic
+seal $logic $from
+rm -f $from
 echo '#' argument written to $logic by $who '(a language model, not a rule)'
 phil/prove $x $logic $f
