@@ -453,6 +453,49 @@ own statements given to the commentary's reader as well, to report
 with where they fit; or the question a person asks, put to a model
 when a report is not entailed: does the source's sentence say this?
 
+## Attribution by rule: phil/says
+
+The first model call put on the roadmap to be replaced. `phil/says`
+finds, with no model, each sentence that gives a claim as someone
+else's: a reporting verb with a named subject (Hobbes argues that),
+the same after a quotation (says Mill), according to a name, a name's
+doctrine or words, as a name calls it, alleged by a name, learnt from
+a name; a pronoun given to the last name reported; "it has been said"
+to no one named; the writer's own (I hold, it must be said) left out.
+The words are tagged by wwb's tagger, an averaged perceptron; a
+capitalized word is a name if the tagger says so, if `/lib/words` lists
+it with a capital, or if it lists it not at all, and not if it ends
+as an abstract noun does (the principle of Utility). It reads a passage
+in about a seventh of a second.
+
+Against the readers' `says` fields on the breadth sample (100
+passages, two runs each; [results/2026-10-19-says/](results/2026-10-19-says/),
+`bench/sayscmp.py`):
+
+| | Sentences |
+|---|---|
+| a report marked by both | 8 |
+| by the rule only | 8 |
+| by the readers only | 10 |
+
+Of the passages where the readers marked a report, the rule names the
+same person in 10 of 14. Of the eight sentences only the rule marks,
+three are reports the readers missed (Jason in the *Politics*, "It has
+been said" in the *Politics*, "the argument of Socrates" in the
+*Phaedo*), three are the same report a sentence earlier or later than
+the readers put it, and two are objections put by no one named ("It
+may be replied"). None is wrong. What only the readers mark is a group
+with no reporting verb (the sceptics, the devotees, the authorities)
+and a report carried into the sentences after it, which no rule over
+one sentence reaches. In the gold and pairs passages it also marks
+narrated dialogue (said Socrates, replied Cleinias), which is speech
+reported, and which a reading of a dialogue may or may not want.
+
+So, for attribution, a rule does most of what the model did, finds
+some of what it missed, and costs nothing. The two can be held to each
+other: a sentence the rule says reports someone, which a reading takes
+as the text's own premise, is the critic's S4 regression found again.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of
