@@ -1276,6 +1276,11 @@ world; in KT the world itself too; for O and P a world with an
 obligation is given one to see, D), ∃ a new individual and ∀ each one
 on the branch; a branch closes (×) where a formula and its denial stand
 at one world, and every branch closing is the proof.
+A conclusion that does not follow gets its tree too, from all the
+premises: a branch with nothing left to take apart that has not closed
+stays open (↑, in ASCII ^), the case it describes read off it, each
+atom true or false at each world (the countermodel's), every other
+branch taken apart as well.
 The tree follows the conclusion's findings as
 .B #
 lines, a branch drawn as
@@ -1284,7 +1289,7 @@ draws one;
 .B phil/tableau
 typesets it.
 A tree past 400 lines, 12 worlds or 8 individuals is not shown, and
-says so.
+says so (an open one too: a branch of ∀ may grow without end).
 .I argue
 writes the logic file it keeps this way.
 .IP
@@ -1402,13 +1407,36 @@ below its w.
 A branch is a column: each line's number set right in a gutter, its
 formula set left, what it came from in a column of its own; where the
 tree forks, the rule that made the fork is said once, level with it; a
-closed branch ends ×.
-The output wants pic, then eqn, then troff; in InferNode, with the
+closed branch ends ×, an open one ↑ with the case it describes; an
+open tree is titled not valid, and set before its countermodel.
+The connectives and operators are the math font's, as TeX sets them,
+the box made the diamond's size and set on the axis; each tree is kept
+whole on a page and described for a tagged PDF
+.RB ( .alt ,
+when it is set under
+.BR -mbook ,
+as
+.IR book (1)
+sets it), its lines in order and then each branch; set alone, its pages
+are given margins of an inch.
+Each tree is laid out from the widths eqn and troff give its
+formulas, numbers and what each line came from (measured by running them, where they are
+bound in; guessed from their characters where not).
+.IP
+An invalid conclusion's countermodel
+.RB ( argue/countermodel )
+is a table
+.RI ( tbl ):
+a row to each claim or predicate and a column to each world (one,
+unnamed, outside modal logic), T or F or the predicate's extension in
+each, the worlds each sees its last row, the domain above it.
+.IP
+The output wants pic, tbl, then eqn, then troff; in InferNode, with the
 .B infernode-troff
 package bound in:
 .EX
 	phil/prove -P arg.logic | phil/tableau |
-		pic | eqn /lib/troff/eqnrc - | troff | tr2pdf > arg.pdf
+		pic | tbl | eqn /lib/troff/eqnrc - | troff | tr2pdf > arg.pdf
 .EE
 It reads what prove wrote, so a tree is set as it was proved.
 .SH EXAMPLES

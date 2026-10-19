@@ -1,0 +1,5 @@
+phil/prove data/argue/gap.logic | phil/tableau
+phil/prove data/argue/middle.logic | phil/tableau
+phil/prove data/argue/shift.logic | phil/tableau
+phil/prove data/argue/modal/oughtis.logic | phil/tableau
+phil/prove data/argue/modal/fallacy.md | phil/tableau

@@ -1,0 +1,2 @@
+phil/prove -P data/argue/middle.logic | phil/tableau
+phil/prove -P data/argue/modal/oughtis.logic | phil/tableau

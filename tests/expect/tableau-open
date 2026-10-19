@@ -1,0 +1,148 @@
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.ne 2.147i
+.alt "A tableau for C (S3), not valid (a branch stays open): 1. ∀x (patched(x) → secure(x)), P1. 2. secure(web1), P2. 3. ¬patched(web1), C denied. 4. patched(web1) → secure(web1), 1 ∀. It branches in two, by 4 →. Branch 1: 5. ¬patched(web1). Open: patched(web1) = F, secure(web1) = T. Branch 2: 6. secure(web1). Open: patched(web1) = F, secure(web1) = T. "
+.PS
+"\fIC (S3)\fP, not valid" at (2.869,0.301)
+"\s-11.\s0" rjust at (1.923,0.000)
+"$ ∀  x  (  roman \&patched  (  x  ) → roman \&secure  (  x  )  ) $" ljust at (1.993,0.000)
+"\s-1P1\s0" ljust at (4.045,0.000)
+"\s-12.\s0" rjust at (1.923,-0.215)
+"$ roman \&secure  (  roman \&web1  ) $" ljust at (1.993,-0.215)
+"\s-1P2\s0" ljust at (4.045,-0.215)
+"\s-13.\s0" rjust at (1.923,-0.430)
+"$¬ roman \&patched  (  roman \&web1  ) $" ljust at (1.993,-0.430)
+"\s-1C denied\s0" ljust at (4.045,-0.430)
+"\s-14.\s0" rjust at (1.923,-0.645)
+"$ roman \&patched  (  roman \&web1  ) → roman \&secure  (  roman \&web1  ) $" ljust at (1.993,-0.645)
+"\s-11 ∀\s0" ljust at (4.045,-0.645)
+"\s-14 →\s0" ljust at (4.045,-0.907)
+line from (2.869,-0.763) to (0.638,-1.083)
+"\s-15.\s0" rjust at (0.132,-1.202)
+"$¬ roman \&patched  (  roman \&web1  ) $" ljust at (0.202,-1.202)
+"$↑ ~ roman \&patched  (  roman \&web1  )  = roman F , roman \&secure  (  roman \&web1  )  = roman T$" ljust at (0.202,-1.417)
+line from (2.869,-0.763) to (3.651,-1.083)
+"\s-16.\s0" rjust at (3.226,-1.202)
+"$ roman \&secure  (  roman \&web1  ) $" ljust at (3.296,-1.202)
+"$↑ ~ roman \&patched  (  roman \&web1  )  = roman F , roman \&secure  (  roman \&web1  )  = roman T$" ljust at (3.296,-1.417)
+.PE
+.sp 1.500
+.ne 1.50i
+.ce
+\fIC (S3)\fP, a countermodel
+.ce
+$D = roman "{" roman \&web1  roman "}"$
+.sp 0.4
+.nr book-keep 1
+.TS
+center;
+l c.
+_
+.sp 0.2
+$ roman \&patched $	$∅$
+$ roman \&secure $	$roman "{" roman \&web1  roman "}"$
+.sp 0.2
+_
+.TE
+.sp 1.500
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.ne 1.591i
+.alt "A tableau for C, not valid (a branch stays open): 1. O pay, w0, P1. 2. ¬pay, w0, C denied. 3. w0 R w1, D. 4. pay, w1, 1 O. Open: w0: pay = F; w1: pay = T. "
+.PS
+"\fIC\fP, not valid" at (0.445,0.301)
+"\s-11.\s0" rjust at (0.132,0.000)
+"$ roman O ^  roman \&pay  ,  w sub 0 $" ljust at (0.202,0.000)
+"\s-1P1\s0" ljust at (0.988,0.000)
+"\s-12.\s0" rjust at (0.132,-0.215)
+"$¬ roman \&pay  ,  w sub 0 $" ljust at (0.202,-0.215)
+"\s-1C denied\s0" ljust at (0.988,-0.215)
+"\s-13.\s0" rjust at (0.132,-0.430)
+"$ w sub 0  ~roman R~  w sub 1 $" ljust at (0.202,-0.430)
+"\s-1D\s0" ljust at (0.988,-0.430)
+"\s-14.\s0" rjust at (0.132,-0.645)
+"$ roman \&pay  ,  w sub 1 $" ljust at (0.202,-0.645)
+"\s-11 O\s0" ljust at (0.988,-0.645)
+"$↑ ~ w sub 0  : ~ roman \&pay  = roman F ;~ w sub 1  : ~ roman \&pay  = roman T$" ljust at (0.202,-0.860)
+.PE
+.sp 1.500
+.ne 1.72i
+.ce
+\fIC\fP, a countermodel
+.sp 0.4
+.nr book-keep 1
+.TS
+center;
+l c c.
+_
+	$ w sub 0 $	$ w sub 1 $
+_
+.sp 0.2
+$ roman \&pay $	F	T
+$roman R ( w )$	$roman "{" w sub 1  roman "}"$	$roman "{" w sub 1  roman "}"$
+.sp 0.2
+_
+.TE
+.sp 1.500

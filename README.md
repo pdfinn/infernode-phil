@@ -38,7 +38,7 @@ Xenith and acme open it with button 3 and wwb's `gate`, `delta` and
 | `phil/prove` | whether a conclusion follows: a counterexample, the fallacy's name, the missing premise, a contradiction, circularity, unstated assumptions; objections and replies, and what survives; every coherent position over a family of claims (`-p`) |
 | `phil/join` | the logic files of a work's parts as one argument in steps, for `argue -w` |
 | `phil/map` | an argument's shape: what each step rests on, as a tree, or in Argdown for argument-mapping tools |
-| `phil/tableau` | `prove -P`'s proofs, analytic tableaux, typeset for troff: the tree in pic, the formulas in eqn |
+| `phil/tableau` | `prove -P`'s proofs, analytic tableaux, typeset for troff: the tree in pic, the formulas in eqn; countermodels as tables |
 | `phil/read` | a reading: a model writes a logic file, its own lines kept, each reader blinded by name space, a file the prover cannot read sent back; each reading says who read it, with which instructions and when |
 | `phil/settle` | which of several readings to keep: where they differ, a question yes or no, answered afresh or by a person |
 | `phil/readable` | what makes a logic file one the prover cannot read; `read`'s checker for `argue` |
@@ -215,11 +215,28 @@ line numbered with what it came from:
 #	   × 3, 5
 ```
 
-`phil/tableau` typesets the trees for troff, the tree in pic and each
-formula in eqn, as the textbooks set them (in InferNode, with the
-[troff package](https://github.com/pdfinn/infernode-troff): `phil/prove -P
-f.logic | phil/tableau | pic | eqn /lib/troff/eqnrc - | troff | tr2pdf`). An invalid conclusion gets its
-countermodel instead (`argue/countermodel`).
+An invalid conclusion gets its countermodel (`argue/countermodel`), and with
+`-P` its tree too: a branch that stays open, marked ↑, the case it describes
+read off it.
+
+```
+# C (S3), not proved by a tableau: a branch stays open (↑)
+#	1. patched → secure   P1
+#	2. secure             P2
+#	3. ¬patched           C denied
+#	├─ 4. ¬patched        1 →
+#	│  ↑ patched = F, secure = T
+#	└─ 5. secure          1 →
+#	   ↑ patched = F, secure = T
+```
+
+`phil/tableau` typesets them for troff, as the textbooks set them: each tree
+in pic, each formula in eqn, an open one titled not valid, laid out from the widths troff gives them; each
+countermodel a table (tbl), what is true where, a row to each claim and a
+column to each world, the worlds each sees its last row. In InferNode, with
+the [troff package](https://github.com/pdfinn/infernode-troff):
+`phil/prove -P f.logic | phil/tableau | pic | tbl | eqn /lib/troff/eqnrc - |
+troff | tr2pdf`; in a book, `book(1)` sets them, tagged for a PDF/UA-1 PDF.
 
 With `-v`, a valid argument is explained as an invalid one is: what the
 conclusion follows from, and for each premise it needs, the case in which it

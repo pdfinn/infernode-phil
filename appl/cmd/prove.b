@@ -4338,7 +4338,7 @@ check(prems: list of ref Stmt, c: ref Stmt): int
 	sreport(c, "argue/invalid", msg);
 	if(model != nil)
 		sreport(c, "argue/countermodel", model);
-	if(proofflag > 1)
+	if(proofflag)
 		tableau(c, prems);
 	bridges: string;
 	if(modal == Mclassical)
@@ -5440,7 +5440,7 @@ fatal(s: string)
 
 eflag := 0;	# -e: every statement read back
 vflag := 0;	# -v: why a valid conclusion follows
-proofflag := 0;	# -P: a valid step's proof, as a tableau; -PP tries invalid ones too (a test)
+proofflag := 0;	# -P: a step's tableau: a valid one's proof, an invalid one's open branch
 fflag := 0;	# -f: the logic file again, its formulas in logic's symbols
 scopek := 0;	# -s n: the logic file with its nth scope turned over; -S (-1) every one on a consequent
 aflag := 0;	# -A: formulas shown in ASCII, as a logic file may write them
@@ -6142,7 +6142,11 @@ eng1(q: ref Q, op: int): string
 # KT each world sees itself.  ∃x A gives A of a new individual, ∀x A
 # gives A of each one on the branch.  A branch closes (×) when a
 # formula and its denial stand at one world, and every branch closing
-# is the proof.  Each line says what it came from.  Too large a tree is
+# is the proof.  A branch with nothing left to take apart that has not
+# closed stays open (↑), and the case it describes is read off it: each
+# atom true or false at each world, as on the branch (the conclusion
+# fails there, so the step is invalid); every other branch is taken
+# apart too.  Each line says what it came from.  Too large a tree is
 # not shown.
 #
 
@@ -6202,11 +6206,14 @@ tableau(c: ref Stmt, need: list of ref Stmt)
 		for(; rest != nil; rest = tl rest)
 			acc = hd rest :: acc;
 	}
-	if(!closed){
+	if(closed < 0){
 		out.puts(sys->sprint("# no tableau shown for %s: the tree grows past %d lines, %d worlds or %d individuals\n", what, Tmaxlines, Tmaxworlds, Tmaxinds));
 		return;
 	}
-	out.puts(sys->sprint("# %s, proved by a tableau: every branch closes (×)\n", what));
+	if(closed)
+		out.puts(sys->sprint("# %s, proved by a tableau: every branch closes (×)\n", what));
+	else
+		out.puts(sys->sprint("# %s, not proved by a tableau: a branch stays open (%s)\n", what, sym("↑", "^")));
 	# what each line came from, in a column of its own
 	col := 0;
 	ol: list of string;
@@ -6269,13 +6276,14 @@ tpush(b: ref Br, x: ref TN): string
 }
 
 # The branch taken apart, each line it adds prefixed by pre (the tree's
-# lines to its left): 1 if every branch below closes.
+# lines to its left): 1 if every branch below closes, 0 if one stays
+# open (each still taken apart), -1 if the tree grows too large.
 texpand(b: ref Br, pre: string): (int, list of string)
 {
 	acc: list of string;
 	for(;;){
 		if(tline > Tmaxlines || tworld > Tmaxworlds || len b.inds > Tmaxinds)
-			return (0, nil);
+			return (-1, nil);
 		# what does not branch, first
 		adds := tstep(b);
 		if(adds != nil){
@@ -6287,9 +6295,10 @@ texpand(b: ref Br, pre: string): (int, list of string)
 			continue;
 		}
 		x := tbeta(b);
-		if(x == nil)
-			return (0, nil);	# an open branch: no proof here
+		if(x == nil)	# nothing left: the branch stays open, its case read off it
+			return (0, revs(pre + sym("↑", "^") + " " + topen(b) :: acc));
 		b.done = x.n :: b.done;
+		open := 0;
 		for(sl := tsides(x.q); sl != nil; sl = tl sl){
 			nb := ref Br(b.nodes, b.done, b.used, b.worlds, b.inds);
 			(lead, more) := ("├─ ", "│  ");
@@ -6311,13 +6320,65 @@ texpand(b: ref Br, pre: string): (int, list of string)
 				continue;
 			}
 			(closed, sub) := texpand(nb, pre + more);
+			if(closed < 0)
+				return (-1, nil);
 			if(!closed)
-				return (0, nil);
+				open = 1;
 			for(; sub != nil; sub = tl sub)
 				acc = hd sub :: acc;
 		}
-		return (1, revs(acc));
+		return (!open, revs(acc));
 	}
+}
+
+# The case an open branch describes: each atom it has, or its denial,
+# true or false at each world, as prove gives a countermodel.
+topen(b: ref Br): string
+{
+	ws: list of int;
+	vals: list of (int, string);
+	for(l := rev2tn(b.nodes); l != nil; l = tl l){
+		x := hd l;
+		if(x.q == nil)
+			continue;
+		v: string;
+		if(x.q.op == Fatom)
+			v = x.s + " = T";
+		else if(x.q.op == Fnot && x.q.l.op == Fatom)
+			v = qshow(x.q.l) + " = F";
+		else
+			continue;
+		had := 0;
+		for(vl := vals; vl != nil; vl = tl vl)
+			if((hd vl).t0 == x.w && (hd vl).t1 == v)
+				had = 1;
+		if(had)
+			continue;
+		vals = (x.w, v) :: vals;
+		if(!intin(x.w, ws))
+			ws = x.w :: ws;
+	}
+	s := "";
+	for(w := 0; w <= tworld; w++){
+		if(!intin(w, ws))
+			continue;
+		at: list of string;
+		for(vl := vals; vl != nil; vl = tl vl)
+			if((hd vl).t0 == w)
+				at = (hd vl).t1 :: at;
+		t := "";
+		for(at = sortstr(at); at != nil; at = tl at){
+			if(t != "")
+				t += ", ";
+			t += hd at;
+		}
+		if(framed)
+			t = sys->sprint("w%d: ", w) + t;
+		if(s != "")
+			s += "; ";
+		s += t;
+	}
+	return s;
 }
 
 # Whether □ or ◇ ranges over every world (S5, and s5kd's alethic ones).

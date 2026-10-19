@@ -1,0 +1,58 @@
+data/argue/gap.logic:5: argue/unlinked: C (S2): the conclusion speaks of "the code is safe to deploy", which no premise mentions: nothing links it to them
+data/argue/gap.logic:5: argue/invalid: C (S2): does not follow: when "the code was audited" and "the audit found no bugs" are true, "the code is safe to deploy" is false, every premise holds and the conclusion fails
+data/argue/gap.logic:5: argue/countermodel: C (S2): audited = T, nobugs = T, safe = F
+# C (S2), not proved by a tableau: a branch stays open (↑)
+#	1. audited ∧ nobugs   P1
+#	2. ¬safe              C denied
+#	3. audited            1 ∧
+#	4. nobugs             1 ∧
+#	↑ audited = T, nobugs = T, safe = F
+data/argue/gap.logic:5: argue/missing: C (S2): it would follow given "audited → safe", or "nobugs → safe"
+data/argue/gap.logic: argue/valid 0
+data/argue/gap.logic:4: argue/unlinked: P1 (S1): P1 is the only statement about "the code was audited" and "the audit found no bugs": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/middle.logic:6: argue/invalid: C (S3): does not follow: when "web1 is secure" is true, "web1 is patched" is false, every premise holds and the conclusion fails; this is affirming the consequent (P1 and P2)
+data/argue/middle.logic:6: argue/countermodel: C (S3): D = {web1}; patched = ∅, secure = {web1}
+# C (S3), not proved by a tableau: a branch stays open (↑)
+#	1. ∀x (patched(x) → secure(x))    P1
+#	2. secure(web1)                   P2
+#	3. ¬patched(web1)                 C denied
+#	4. patched(web1) → secure(web1)   1 ∀
+#	├─ 5. ¬patched(web1)              4 →
+#	│  ↑ patched(web1) = F, secure(web1) = T
+#	└─ 6. secure(web1)                4 →
+#	   ↑ patched(web1) = F, secure(web1) = T
+data/argue/middle.logic:6: argue/missing: C (S3): it would follow given "secure(web1) → patched(web1)"
+data/argue/middle.logic: argue/valid 0
+data/argue/consequent.logic:5: argue/invalid: C (S3): does not follow: when "the server is secure" is true, "the server is patched" is false, every premise holds and the conclusion fails; this is affirming the consequent (P1 and P2)
+data/argue/consequent.logic:5: argue/countermodel: C (S3): patched = F, secure = T
+# C (S3), not proved by a tableau: a branch stays open (↑)
+#	1. patched → secure   P1
+#	2. secure             P2
+#	3. ¬patched           C denied
+#	├─ 4. ¬patched        1 →
+#	│  ↑ patched = F, secure = T
+#	└─ 5. secure          1 →
+#	   ↑ patched = F, secure = T
+data/argue/consequent.logic:5: argue/missing: C (S3): it would follow given "secure → patched"
+data/argue/consequent.logic: argue/valid 0
+data/argue/modal/oughtis.logic:4: argue/invalid: C: does not follow: when "it ought to be that you pay your debts" is true, "you pay your debts" is false, every premise holds and the conclusion fails
+data/argue/modal/oughtis.logic:4: argue/countermodel: C: W = {w0, w1}; R = {(w0, w1), (w1, w1)}; w0: pay = F; w1: pay = T
+# C, not proved by a tableau: a branch stays open (↑)
+#	1. O pay, w0   P1
+#	2. ¬pay, w0    C denied
+#	3. w0 R w1     D
+#	4. pay, w1     1 O
+#	↑ w0: pay = F; w1: pay = T
+data/argue/modal/oughtis.logic: argue/valid 0
+data/argue/consequent.logic:5: argue/invalid: C (S3): does not follow: when "the server is secure" is true, "the server is patched" is false, every premise holds and the conclusion fails; this is affirming the consequent (P1 and P2)
+data/argue/consequent.logic:5: argue/countermodel: C (S3): patched = F, secure = T
+# C (S3), not proved by a tableau: a branch stays open (^)
+#	1. patched -> secure   P1
+#	2. secure              P2
+#	3. !patched            C denied
+#	├─ 4. !patched         1 ->
+#	│  ^ patched = F, secure = T
+#	└─ 5. secure           1 ->
+#	   ^ patched = F, secure = T
+data/argue/consequent.logic:5: argue/missing: C (S3): it would follow given "secure -> patched"
+data/argue/consequent.logic: argue/valid 0

@@ -1,3 +1,28 @@
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
 .EQ
 delim $$
 chartype bin "∧"
@@ -6,43 +31,70 @@ chartype bin "→"
 chartype bin "↔"
 chartype punct ","
 .EN
+.ne 3.008i
+.alt "A tableau for C: 1. □(p → q), w0, P1. 2. □p, w0, P2. 3. ¬□q, w0, C denied. 4. ◇¬q, w0, 3 ¬□. 5. w0 R w1, 4 ◇. 6. ¬q, w1, 4 ◇. 7. p → q, w1, 1 □. 8. p, w1, 2 □. It branches in two, by 7 →. Branch 1: 9. ¬p, w1. Closed by 8, 9. Branch 2: 10. q, w1. Closed by 6, 10. "
 .PS
-"\fIC\fP" at (1.323,0.301)
-"\s-21.\s0" rjust at (0.847,0.000)
-"$□ (  p → q  )  ,  w sub 0 $" ljust at (0.917,0.000)
-"\s-2P1\s0" ljust at (2.027,0.000)
-"\s-22.\s0" rjust at (0.847,-0.215)
-"$□ p  ,  w sub 0 $" ljust at (0.917,-0.215)
-"\s-2P2\s0" ljust at (2.027,-0.215)
-"\s-23.\s0" rjust at (0.847,-0.430)
-"$¬□ q  ,  w sub 0 $" ljust at (0.917,-0.430)
-"\s-2C denied\s0" ljust at (2.027,-0.430)
-"\s-24.\s0" rjust at (0.847,-0.645)
-"$◇¬ q  ,  w sub 0 $" ljust at (0.917,-0.645)
-"\s-23 ¬□\s0" ljust at (2.027,-0.645)
-"\s-25.\s0" rjust at (0.847,-0.860)
-"$ w sub 0  ~roman R~  w sub 1 $" ljust at (0.917,-0.860)
-"\s-24 ◇\s0" ljust at (2.027,-0.860)
-"\s-26.\s0" rjust at (0.847,-1.075)
-"$¬ q  ,  w sub 1 $" ljust at (0.917,-1.075)
-"\s-24 ◇\s0" ljust at (2.027,-1.075)
-"\s-27.\s0" rjust at (0.847,-1.290)
-"$ p → q  ,  w sub 1 $" ljust at (0.917,-1.290)
-"\s-21 □\s0" ljust at (2.027,-1.290)
-"\s-28.\s0" rjust at (0.847,-1.505)
-"$ p  ,  w sub 1 $" ljust at (0.917,-1.505)
-"\s-22 □\s0" ljust at (2.027,-1.505)
-"\s-27 →\s0" ljust at (2.027,-1.767)
-line from (1.323,-1.623) to (0.378,-1.943)
-"\s-29.\s0" rjust at (0.120,-2.062)
-"$¬ p  ,  w sub 1 $" ljust at (0.190,-2.062)
-"$times$ \s-28, 9\s0" ljust at (0.190,-2.276)
-line from (1.323,-1.623) to (1.775,-1.943)
-"\s-210.\s0" rjust at (1.495,-2.062)
-"$ q  ,  w sub 1 $" ljust at (1.565,-2.062)
-"$times$ \s-26, 10\s0" ljust at (1.565,-2.276)
+"\fIC\fP" at (1.189,0.301)
+"\s-11.\s0" rjust at (0.714,0.000)
+"$□ (  p → q  )  ,  w sub 0 $" ljust at (0.784,0.000)
+"\s-1P1\s0" ljust at (1.894,0.000)
+"\s-12.\s0" rjust at (0.714,-0.215)
+"$□ p  ,  w sub 0 $" ljust at (0.784,-0.215)
+"\s-1P2\s0" ljust at (1.894,-0.215)
+"\s-13.\s0" rjust at (0.714,-0.430)
+"$¬□ q  ,  w sub 0 $" ljust at (0.784,-0.430)
+"\s-1C denied\s0" ljust at (1.894,-0.430)
+"\s-14.\s0" rjust at (0.714,-0.645)
+"$◇¬ q  ,  w sub 0 $" ljust at (0.784,-0.645)
+"\s-13 ¬□\s0" ljust at (1.894,-0.645)
+"\s-15.\s0" rjust at (0.714,-0.860)
+"$ w sub 0  ~roman R~  w sub 1 $" ljust at (0.784,-0.860)
+"\s-14 ◇\s0" ljust at (1.894,-0.860)
+"\s-16.\s0" rjust at (0.714,-1.075)
+"$¬ q  ,  w sub 1 $" ljust at (0.784,-1.075)
+"\s-14 ◇\s0" ljust at (1.894,-1.075)
+"\s-17.\s0" rjust at (0.714,-1.290)
+"$ p → q  ,  w sub 1 $" ljust at (0.784,-1.290)
+"\s-11 □\s0" ljust at (1.894,-1.290)
+"\s-18.\s0" rjust at (0.714,-1.505)
+"$ p  ,  w sub 1 $" ljust at (0.784,-1.505)
+"\s-12 □\s0" ljust at (1.894,-1.505)
+"\s-17 →\s0" ljust at (1.894,-1.767)
+line from (1.189,-1.623) to (0.400,-1.943)
+"\s-19.\s0" rjust at (0.132,-2.062)
+"$¬ p  ,  w sub 1 $" ljust at (0.202,-2.062)
+"$times$ \s-18, 9\s0" ljust at (0.202,-2.276)
+line from (1.189,-1.623) to (1.847,-1.943)
+"\s-110.\s0" rjust at (1.546,-2.062)
+"$ q  ,  w sub 1 $" ljust at (1.616,-2.062)
+"$times$ \s-16, 10\s0" ljust at (1.616,-2.276)
 .PE
-.sp 0.6
+.sp 1.500
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
 .EQ
 delim $$
 chartype bin "∧"
@@ -51,50 +103,54 @@ chartype bin "→"
 chartype bin "↔"
 chartype punct ","
 .EN
+.ne 2.147i
+.alt "A tableau for C1 (S3): 1. ∀x (began(x) → caused(x)), P1. 2. began(universe), P2. 3. ¬caused(universe), C1 denied. 4. began(universe) → caused(universe), 1 ∀. It branches in two, by 4 →. Branch 1: 5. ¬began(universe). Closed by 2, 5. Branch 2: 6. caused(universe). Closed by 3, 6. "
 .PS
-"\fIC1 (S3)\fP" at (1.872,0.301)
-"\s-21.\s0" rjust at (0.740,0.000)
-"$ ∀  x  (  roman \&began  (  x  ) → roman \&caused  (  x  )  ) $" ljust at (0.810,0.000)
-"\s-2P1\s0" ljust at (3.234,0.000)
-"\s-22.\s0" rjust at (0.740,-0.215)
-"$ roman \&began  (  roman \&universe  ) $" ljust at (0.810,-0.215)
-"\s-2P2\s0" ljust at (3.234,-0.215)
-"\s-23.\s0" rjust at (0.740,-0.430)
-"$¬ roman \&caused  (  roman \&universe  ) $" ljust at (0.810,-0.430)
-"\s-2C1 denied\s0" ljust at (3.234,-0.430)
-"\s-24.\s0" rjust at (0.740,-0.645)
-"$ roman \&began  (  roman \&universe  ) → roman \&caused  (  roman \&universe  ) $" ljust at (0.810,-0.645)
-"\s-21 ∀\s0" ljust at (3.234,-0.645)
-"\s-24 →\s0" ljust at (3.234,-0.907)
-line from (1.872,-0.763) to (0.688,-1.083)
-"\s-25.\s0" rjust at (0.120,-1.202)
-"$¬ roman \&began  (  roman \&universe  ) $" ljust at (0.190,-1.202)
-"$times$ \s-22, 5\s0" ljust at (0.190,-1.417)
-line from (1.872,-0.763) to (2.605,-1.083)
-"\s-26.\s0" rjust at (2.056,-1.202)
-"$ roman \&caused  (  roman \&universe  ) $" ljust at (2.126,-1.202)
-"$times$ \s-23, 6\s0" ljust at (2.126,-1.417)
+"\fIC1 (S3)\fP" at (1.704,0.301)
+"\s-11.\s0" rjust at (0.572,0.000)
+"$ ∀  x  (  roman \&began  (  x  ) → roman \&caused  (  x  )  ) $" ljust at (0.642,0.000)
+"\s-1P1\s0" ljust at (3.066,0.000)
+"\s-12.\s0" rjust at (0.572,-0.215)
+"$ roman \&began  (  roman \&universe  ) $" ljust at (0.642,-0.215)
+"\s-1P2\s0" ljust at (3.066,-0.215)
+"\s-13.\s0" rjust at (0.572,-0.430)
+"$¬ roman \&caused  (  roman \&universe  ) $" ljust at (0.642,-0.430)
+"\s-1C1 denied\s0" ljust at (3.066,-0.430)
+"\s-14.\s0" rjust at (0.572,-0.645)
+"$ roman \&began  (  roman \&universe  ) → roman \&caused  (  roman \&universe  ) $" ljust at (0.642,-0.645)
+"\s-11 ∀\s0" ljust at (3.066,-0.645)
+"\s-14 →\s0" ljust at (3.066,-0.907)
+line from (1.704,-0.763) to (0.700,-1.083)
+"\s-15.\s0" rjust at (0.132,-1.202)
+"$¬ roman \&began  (  roman \&universe  ) $" ljust at (0.202,-1.202)
+"$times$ \s-12, 5\s0" ljust at (0.202,-1.417)
+line from (1.704,-0.763) to (2.629,-1.083)
+"\s-16.\s0" rjust at (2.080,-1.202)
+"$ roman \&caused  (  roman \&universe  ) $" ljust at (2.150,-1.202)
+"$times$ \s-13, 6\s0" ljust at (2.150,-1.417)
 .PE
-.sp 0.6
+.sp 1.500
+.ne 1.933i
+.alt "A tableau for C (S5): 1. caused(universe), C1. 2. caused(universe) → created, P3. 3. ¬created, C denied. It branches in two, by 2 →. Branch 1: 4. ¬caused(universe). Closed by 1, 4. Branch 2: 5. created. Closed by 3, 5. "
 .PS
-"\fIC (S5)\fP" at (1.641,0.301)
-"\s-21.\s0" rjust at (0.740,0.000)
-"$ roman \&caused  (  roman \&universe  ) $" ljust at (0.810,0.000)
-"\s-2C1\s0" ljust at (2.772,0.000)
-"\s-22.\s0" rjust at (0.740,-0.215)
-"$ roman \&caused  (  roman \&universe  ) → roman \&created $" ljust at (0.810,-0.215)
-"\s-2P3\s0" ljust at (2.772,-0.215)
-"\s-23.\s0" rjust at (0.740,-0.430)
-"$¬ roman \&created $" ljust at (0.810,-0.430)
-"\s-2C denied\s0" ljust at (2.772,-0.430)
-"\s-22 →\s0" ljust at (2.772,-0.692)
-line from (1.641,-0.548) to (0.719,-0.868)
-"\s-24.\s0" rjust at (0.120,-0.986)
-"$¬ roman \&caused  (  roman \&universe  ) $" ljust at (0.190,-0.986)
-"$times$ \s-21, 4\s0" ljust at (0.190,-1.202)
-line from (1.641,-0.548) to (2.405,-0.868)
-"\s-25.\s0" rjust at (2.118,-0.986)
-"$ roman \&created $" ljust at (2.188,-0.986)
-"$times$ \s-23, 5\s0" ljust at (2.188,-1.202)
+"\fIC (S5)\fP" at (1.473,0.301)
+"\s-11.\s0" rjust at (0.572,0.000)
+"$ roman \&caused  (  roman \&universe  ) $" ljust at (0.642,0.000)
+"\s-1C1\s0" ljust at (2.604,0.000)
+"\s-12.\s0" rjust at (0.572,-0.215)
+"$ roman \&caused  (  roman \&universe  ) → roman \&created $" ljust at (0.642,-0.215)
+"\s-1P3\s0" ljust at (2.604,-0.215)
+"\s-13.\s0" rjust at (0.572,-0.430)
+"$¬ roman \&created $" ljust at (0.642,-0.430)
+"\s-1C denied\s0" ljust at (2.604,-0.430)
+"\s-12 →\s0" ljust at (2.604,-0.692)
+line from (1.473,-0.548) to (0.731,-0.868)
+"\s-14.\s0" rjust at (0.132,-0.986)
+"$¬ roman \&caused  (  roman \&universe  ) $" ljust at (0.202,-0.986)
+"$times$ \s-11, 4\s0" ljust at (0.202,-1.202)
+line from (1.473,-0.548) to (2.429,-0.868)
+"\s-15.\s0" rjust at (2.142,-0.986)
+"$ roman \&created $" ljust at (2.212,-0.986)
+"$times$ \s-13, 5\s0" ljust at (2.212,-1.202)
 .PE
-.sp 0.6
+.sp 1.500

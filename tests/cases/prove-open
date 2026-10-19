@@ -1,0 +1,5 @@
+phil/prove -P data/argue/gap.logic
+phil/prove -P data/argue/middle.logic
+phil/prove -P data/argue/consequent.logic
+phil/prove -P data/argue/modal/oughtis.logic
+phil/prove -A -P data/argue/consequent.logic

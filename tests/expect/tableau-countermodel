@@ -1,0 +1,235 @@
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.ne 1.72i
+.ce
+\fIC (S2)\fP, a countermodel
+.sp 0.4
+.nr book-keep 1
+.TS
+center;
+l c.
+_
+.sp 0.2
+$ roman \&audited $	T
+$ roman \&nobugs $	T
+$ roman \&safe $	F
+.sp 0.2
+_
+.TE
+.sp 1.500
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.ne 1.50i
+.ce
+\fIC (S3)\fP, a countermodel
+.ce
+$D = roman "{" roman \&web1  roman "}"$
+.sp 0.4
+.nr book-keep 1
+.TS
+center;
+l c.
+_
+.sp 0.2
+$ roman \&patched $	$∅$
+$ roman \&secure $	$roman "{" roman \&web1  roman "}"$
+.sp 0.2
+_
+.TE
+.sp 1.500
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.ne 1.29i
+.ce
+\fIC (S2)\fP, a countermodel
+.ce
+$D = roman "{" roman \&another  , roman \&another2  roman "}"$
+.sp 0.4
+.nr book-keep 1
+.TS
+center;
+l c.
+_
+.sp 0.2
+$ roman \&admires $	$roman "{" (  roman \&another  ,  roman \&another  )  , (  roman \&another2  ,  roman \&another2  )  roman "}"$
+.sp 0.2
+_
+.TE
+.sp 1.500
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.ne 1.72i
+.ce
+\fIC\fP, a countermodel
+.sp 0.4
+.nr book-keep 1
+.TS
+center;
+l c c.
+_
+	$ w sub 0 $	$ w sub 1 $
+_
+.sp 0.2
+$ roman \&pay $	F	T
+$roman R ( w )$	$roman "{" w sub 1  roman "}"$	$roman "{" w sub 1  roman "}"$
+.sp 0.2
+_
+.TE
+.sp 1.500
+.char → \f[S]\N'arrowright'
+.char ↔ \f[S]\N'arrowboth'
+.char ∧ \f[S]\N'logicaland'
+.char ∨ \f[S]\N'logicalor'
+.char ¬ \f[S]\N'logicalnot'
+.char ∀ \f[S]\N'universal'
+.char ∃ \f[S]\N'existential'
+.char ◇ \f[S]\N'uni25C7'
+.char × \f[S]\N'multiply'
+.char ∅ \f[S]\N'emptyset'
+.char ↑ \f[S]\N'arrowup'
+.rules 1
+.fp 13 SZ S
+.fzoom SZ 1333
+.char □ \v'0.072m'\f[SZ]\N'H22073'\v'-0.072m'
+.de tableau-hd
+'sp |1i
+..
+.de tableau-fo
+'bp
+..
+.if !\n[book-ps] .wh 0 tableau-hd
+.if !\n[book-ps] .wh -1i tableau-fo
+.if !\n[book-ps] .ps 11
+.if !\n[book-ps] .vs 14
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
