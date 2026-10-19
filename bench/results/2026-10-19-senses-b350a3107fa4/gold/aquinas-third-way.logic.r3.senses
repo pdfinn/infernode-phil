@@ -1,0 +1,14 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+contingent	one
+generated_corrupt	one
+exists_at	one
+begin_needs_existing	one
+something_began	one
+now_nothing	one
+necessary	one
+caused_nec	one
+infinite_regress	one
+god	one
+# "possible to be and not to be" means the same throughout: able to come to be and pass away, and so at some time not existing. S2 and S3 tie it to generation and corruption, and C3 and A1 use it the same way.
+# "necessary" means "cannot not be" throughout. Whether that necessity is caused or comes of itself is a separate claim (caused_nec), so C5 and P10 do not shift the sense of "necessary" itself.
+# The step from P3 to C1 moves from "each thing at some time is not" to "at some time nothing is". That is a change in the order of the quantifiers, not a change in the sense of a word, so it is not reported as a bridge.

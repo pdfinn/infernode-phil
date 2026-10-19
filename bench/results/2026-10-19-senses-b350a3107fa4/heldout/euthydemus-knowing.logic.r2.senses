@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+knows_something	one
+knowing	two	knowing	P4 P7	a knower, i.e. one who knows some things	knowing without qualification, i.e. knowing all things
+knows_all	one
+ignorant_something	one
+bridge	P4	knowing	a knower of some things	one who knows all things
+# C asserts "knowing" in the first sense (from P2) and denies it in the second (from P7), so it is not a real contradiction.
+# The sophist's "that makes no difference" in S5 dismisses Socrates' qualification "of the knowledge which I have". That is where the shift happens.

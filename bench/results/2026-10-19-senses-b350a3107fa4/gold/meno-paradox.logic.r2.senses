@@ -1,0 +1,7 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+knows	one
+can_enquire	one
+# The classic objection to this dilemma is that "know" shifts. In "if he knows, he has no need to enquire" it means knowing the answer. In "he does not know the very subject" it means not even being able to identify what is sought.
+# I did not mark this as two senses because P1–P3 are not given in words, so I cannot tie either sense to a particular statement.
+# A similar slide is possible in can_enquire: the "knows" branch only shows he has "no need" to enquire, not that he "cannot". The conclusion's "cannot" may run these together.
+# But only P2 and C use can_enquire, and I cannot see which branch P2 states, so I treated it as one sense.

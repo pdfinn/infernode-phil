@@ -1,0 +1,11 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+man_eq_magistrate	one
+citizen_obeys	one
+magistrate_diff_citizen	one
+man_eq_citizen	one
+citizen_both	one
+man_only_command	one
+same_commendation	one
+# "citizen" shifts across the text: in S2 it means one who obeys the magistrate, in S4-S5 one fit both to command and to obey.
+# No single claim carries both senses, though: man_eq_citizen and citizen_obeys use the first, citizen_both the second. They are different claims, each in its own sense.
+# A1 joins man_eq_magistrate to man_only_command. Its key word is "magistrate" read as one who commands, not "citizen", so I do not count it as a bridge.

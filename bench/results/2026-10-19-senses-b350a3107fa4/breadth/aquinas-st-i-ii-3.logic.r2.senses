@@ -1,0 +1,11 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+herbs_little_effort	one
+animals_much_trouble	one
+soil_simple	one
+flesh_delicate	one
+god_wishes_simple	one
+forbid_animals	one
+forbid_soil	one
+animals_idols	one
+soil_idols	one
+# "simple" in soil_simple (A1, C1, A2) and in god_wishes_simple (P3, A2) means the same thing: plain, low-effort living as opposed to delicate living. So A2 does not move "simple" between senses.

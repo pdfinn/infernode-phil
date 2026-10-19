@@ -1,0 +1,15 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+servants_vicious	one
+servants_burden	one
+servants_honest	one
+virtue_others	one
+servants_thine	two	counted in the sum of thy possessions	A5	belongs to thee as thine own (another's virtue is not thine)	counts as a good or asset to thee (a ruinous burden adds nothing of worth)
+possessions_thine	one
+beautiful	one
+beauty_thine	one
+ground_grief_joy	one
+pleasing_without	one
+precious_from_counting	one
+# servants_thine: in P3 and A2, "counted in thy possessions" means ownership, in line with S3's "really thine". In A5, vicious servants are excluded because they are a harm, not because they belong to someone else; that reading is about worth. A2 then carries only the ownership sense to C.
+# No single premise or assumption joins the two senses of one word, so I name no bridge. The shift happens across the separate uses of servants_thine.
+# beauty_thine: "what is that to thee" is read as "of no concern or value to thee" in A3, C1 and A4 alike, so I count it as one sense.

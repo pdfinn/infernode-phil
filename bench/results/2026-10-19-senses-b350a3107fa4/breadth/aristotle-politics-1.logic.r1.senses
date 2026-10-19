@@ -1,0 +1,14 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+same_rank_in_office	one
+causes_sedition	one
+magistracy_hazardous	one
+golden_particle_fixed	one
+military_unhappy	one
+artisans_unhappy	one
+part_happy	one
+city_happy	one
+has_defects	one
+# city_happy: Socrates might mean the happiness of the whole city collectively, as a property of the whole rather than of its members.
+# But S2 explicitly rejects that reading: happiness "must exist in every individual" and cannot be added together like numerical equality.
+# P9 and C3 both use the individual-based sense, so the claim stays in one sense, and P9 is a premise joining claims rather than a bridge.
+# golden_particle_fixed lists P4, which is not among the statements given; it was judged on P5 and P6 only.

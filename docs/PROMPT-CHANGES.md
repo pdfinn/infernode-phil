@@ -6,6 +6,29 @@ with a record: the scripted tests unchanged, live runs before and
 after with the same model, and what each finding did. This is that
 record, newest first.
 
+## senses asks for bridges (October 2026)
+
+`lib/phil/senses` from `f4c9d13865f3` to `b350a3107fa4`, with
+`phil/senses` taking a bridge out and proving again. Added: the whole
+argument in words, and a second question, whether a premise or
+assumption takes a word from one sense to another. Its example ("what
+is free costs nothing") is from no passage of the bench.
+
+**Scripted.** `tests/senses_test.sh` gains a bridge the argument needs,
+one it does not, and a conclusion named as one; it and `tests/run.sh`,
+`argue_test.sh`, `read_test.sh`, `runner_test.sh`, `typeset_test.sh`
+and `format_test.sh` pass.
+
+**Live.** Claude Opus 5.5 through the Anthropic API, on the readings of
+the last check: 293 calls, 778,915 tokens in and 110,219 out; none
+failed. Equivocations found in 17 runs of 30 (15 before), named in 4
+(4), missed in 8 (9); false alarms on the valid passages 2 runs of 24
+(2), and one in the breadth sample's 200 readings (0), each defensible.
+The gain is the held-out *Euthydemus* sophisms, whose shifts the
+readers had written as premises; three runs found before were not,
+within the variation of asking again. Kept. Details in
+[bench/RESULTS.md](../bench/RESULTS.md).
+
 ## senses: a new prompt (October 2026)
 
 `lib/phil/senses` at `f4c9d13865f3`, new, with `phil/senses` and

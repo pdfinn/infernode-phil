@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+learns	two	learner	P4 C	one who acquires knowledge he does not yet have	one who grasps or understands the dictation, using what he already knows
+knows	one
+wise_k	one
+unlearned	two	unlearned	A2 C	ignorant of what is being learned, lacking that knowledge	dull or slow, the opposite of the clever, apt pupils
+wise_c	one
+bridge	A2	unlearned	ignorant of what is being learned	dull, not clever
+# In C the second conjunct restates C3, so it still uses "unlearned" and "learner" in their first senses; only the first conjunct uses the second senses. I list C under the second sense because its new claim, the first conjunct, does.
+# The "learner" shift follows Socrates' own diagnosis: learning means both acquiring knowledge and understanding with knowledge one already has. No single premise joins the two senses of "learner". P4 simply uses the second sense.

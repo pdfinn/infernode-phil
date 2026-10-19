@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+knows	two	knows	P3	knows fully what the answer about it is	has at least enough acquaintance to know what the subject is
+can_enquire	two	enquire	P2	is able to enquire about it	has a reason or need to enquire about it
+# The premises are not given in words, so I inferred them from S2. P2 is likely "if he knows, he has no need to enquire", and P3 likely "if not, he cannot, for he does not know the very subject".
+# knows: the first horn requires full knowledge of the answer for enquiry to be pointless. The second horn's "does not know" means not knowing even what the subject is. A man can lack the first kind of knowledge while having the second, so the two horns do not cover every case.
+# can_enquire: C uses "cannot" both times, as inability. S2 grounds the first horn only in "no need to enquire", which is pointlessness, not inability.
+# C conjoins both horns, so it carries each claim in both of its senses. I named only the premise that carries each second sense.
+# I listed no bridge. P2 joins two different claims, but it may itself be the place where "no need" is restated as "cannot". I was unsure whether that counts as a bridge.

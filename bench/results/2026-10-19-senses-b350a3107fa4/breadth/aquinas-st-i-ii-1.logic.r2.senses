@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+act_respect	one
+can_act	one
+deficient_respect	one
+causes_deficient	one
+# "act" means actuality in "in act" and "deficient in act", but operation in "can act" and "deficient act".
+# P1 and P2 each join a claim about actuality to a different claim about operation, the principle that a thing acts insofar as it is in act.
+# So each claim keeps one sense, and neither P1 nor P2 is a bridge.

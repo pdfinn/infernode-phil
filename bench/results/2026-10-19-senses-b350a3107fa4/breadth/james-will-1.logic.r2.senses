@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+undetectable	one
+past_dispensable	one
+future_different	one
+confidence	one
+liking	one
+# "warrant" might shift between Mill's epistemic sense (S4, "warranted in believing") and James's use for substance as what guarantees an order (S5).
+# But no listed statement uses the Mill sense: P3 and P5 both read "warrant (substance) for the order of the irrecoverably past", so I count past_dispensable as one sense.
+# undetectable is credited to P1 and P2, which are not written out; nothing in S1-S4 suggests a change of sense there.

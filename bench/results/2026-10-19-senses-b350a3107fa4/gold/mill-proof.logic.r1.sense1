@@ -1,0 +1,22 @@
+# the argument of mill-proof.md as claude-opus-5-5 read it: check that it says what the text says
+# "Desirable" shifts sense: in S1-S3, by analogy with visible and audible,
+# it means "capable of being desired"; in S6 it means "a good" (worthy of
+# desire). Each sense gets its own atom. S6 asserts the step to "good" directly.
+atom	desired_own	each person, so far as he believes it attainable, actually desires his own happiness
+atom	desirable_own	each person's happiness is desirable, in the sense of capable of being desired (S3's sense)
+atom	good_own	each person's happiness is a good to that person
+atom	good_general	the general happiness is a good to the aggregate of all persons
+atom	end_conduct	happiness has made out its title as one of the ends of conduct
+atom	criterion_morality	happiness is one of the criteria of morality
+# S1-S2 are analogies only: visible is shown by being seen, audible by being heard.
+P1	S3	desired_own → desirable_own	kind conceptual
+P2	S5	desired_own	kind empirical
+P3	S6	(desired_own → good_own) | !(desired_own → good_own)
+P4	S6	good_own → good_general
+C1	S6	good_own	from P2 P3
+C2	S6	good_general	from C1 P4
+# The text plainly relies on this: being shown a good gives happiness its title as an end of conduct.
+A1	-	good_general → end_conduct
+P5	S7	end_conduct → criterion_morality
+C	S7	end_conduct ∧ criterion_morality	from C2 A1 P5
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

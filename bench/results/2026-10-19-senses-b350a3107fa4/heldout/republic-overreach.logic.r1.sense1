@@ -1,0 +1,35 @@
+# the argument of republic-overreach.md as claude-opus-5-5 read it: check that it says what the text says
+# Republic I: Socrates' argument that the just resembles the wise and good, and the unjust the bad and ignorant.
+# Individuals: just = the just man, unjust = the unjust man.
+# The musician and physician cases (S9-S25) only illustrate the general claim about knowledge in S26-S29, so they are left out.
+atom	knowing(x)	x has knowledge
+atom	ignorant(x)	x is ignorant
+atom	wise(x)	x is wise
+atom	good(x)	x is good
+atom	bad(x)	x is bad (evil)
+atom	overlike(x)	x desires to gain more than his like
+atom	overlike_2(x)	take a larger share or advantage over another (pleonexia)
+atom	overunlike(x)	x desires to gain more than his unlike
+atom	like(x, y)	x is like y
+atom	such_as(x, y)	x is such as y is
+A3	-	wise(sage) ∧ good(sage) ∧ bad(fool) ∧ ignorant(fool)
+P1	S1	¬overlike_2(just) ∧ overunlike(just) ∧ overlike_2(unjust) ∧ overunlike(unjust)
+P2	S3	wise(unjust) ∧ good(unjust) ∧ ¬wise(just) ∧ ¬good(just)	says thrasymachus
+# S5 is Thrasymachus' view, which the conclusion contradicts.
+P3	S5	∀y (wise(y) ∧ good(y) → like(unjust, y)) ∧ ¬∀y (wise(y) ∧ good(y) → like(just, y))	says thrasymachus
+P4	S7	∀x ∀y (like(x, y) → such_as(x, y))	kind conceptual
+# The text writes the knowing man's excess over his unlike only for the musician and physician; it is read here as part of the general claim in S26.
+P5	S27	∀x (knowing(x) → ¬overlike(x) ∧ overunlike(x))
+P6	S29	∀x (ignorant(x) → overlike(x) ∧ overunlike(x))
+P7	S31	∀x (knowing(x) → wise(x))	kind conceptual
+P8	S33	∀x (wise(x) → good(x))	kind conceptual
+# S35 treats the wise as the knowing, so it relies on the converse of S31.
+A1	-	∀x (wise(x) → knowing(x))
+C1	S35	∀x (wise(x) ∧ good(x) → ¬overlike(x) ∧ overunlike(x))	from P5 A1
+C2	S37	∀x (bad(x) ∧ ignorant(x) → overlike(x) ∧ overunlike(x))	from P6
+P9	S39	overlike_2(unjust) ∧ overunlike(unjust)
+P10	S42	¬overlike_2(just) ∧ overunlike(just)
+# S44 relies on the converse of S7: those whose desire to exceed has the same pattern are alike.
+A2	-	∀x ∀y ((overlike(x) ↔ overlike(y)) ∧ (overunlike(x) ↔ overunlike(y)) → like(x, y))
+C	S44	∀y (wise(y) ∧ good(y) → like(just, y)) ∧ ∀y (bad(y) ∧ ignorant(y) → like(unjust, y))	from C1 C2 P9 P10 A2 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

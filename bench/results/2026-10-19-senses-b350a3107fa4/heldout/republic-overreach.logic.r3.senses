@@ -1,0 +1,15 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+# The shift is in "desire more". In S1, S39 and S42 it is the unjust man's grasping for gain over others.
+# In the arts passage (S17-S29) it is outdoing others in the practice of a skill, as in tightening strings or prescribing.
+# A2 carries the pattern found for the skilled over to the just and unjust, read in the sense of gain.
+just	one
+unjust	one
+knowing	one
+ignorant	one
+wise	one
+good	one
+unlike_only	two	more	P3 C1	seeks advantage or gain over the unlike but not over the like	seeks to exceed the unlike, but not the like, in the practice of a skill
+both	two	more	P4 C2	seeks advantage or gain over everyone, like and unlike	seeks to exceed everyone, like and unlike, in the practice of a skill
+like_wise	one
+like_ignorant	one
+bridge	A2	more	exceeding others in the practice of a skill	seeking advantage or gain over others

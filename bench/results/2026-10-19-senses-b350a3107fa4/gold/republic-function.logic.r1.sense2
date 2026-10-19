@@ -1,0 +1,22 @@
+# reading 3 of republic-function.md by claude-opus-5-5
+# S10's "must necessarily" is read as plain implication, not as modal necessity.
+# "Can never" in S22 is read as plain negation.
+atom	just(x)	x is just (has justice)
+atom	excellent(x)	x has the excellence of the soul
+atom	fulfils(x)	x fulfils the soul's own ends well (rules, superintends, lives well)
+atom	lives_well(x)	x lives well
+atom	happy(x)	x is blessed and happy (otherwise miserable)
+atom	happiness_profitable	happiness and not misery is profitable
+atom	injustice_more_profitable	injustice is more profitable than justice
+P1	S9	∀x (¬excellent(x) → ¬fulfils(x))
+P2	S10	∀x (excellent(x) → fulfils(x))
+# S4: life is among the soul's ends, so fulfilling them well is living well, and failing them is living ill.
+P3	S4	∀x (fulfils(x) ↔ lives_well(x))
+P4	S12	∀x (just(x) ↔ excellent(x))
+C1	S14	∀x ((just(x) → lives_well(x)) ∧ (¬just(x) → ¬lives_well(x)))	from P1 P2 P3 P4
+P5	S16	(∀x (lives_well(x) ↔ happy(x))) | !(∀x (lives_well(x) ↔ happy(x)))
+C2	S18	∀x ((just(x) → happy(x)) ∧ (¬just(x) → ¬happy(x)))	from C1 P5
+P6	S20	happiness_profitable
+A1	-	happiness_profitable ∧ ∀x ((just(x) → happy(x)) ∧ (¬just(x) → ¬happy(x))) → ¬injustice_more_profitable
+C	S22	¬injustice_more_profitable	from C2 P6 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

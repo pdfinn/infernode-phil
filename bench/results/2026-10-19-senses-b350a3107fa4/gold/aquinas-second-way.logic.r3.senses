@@ -1,0 +1,10 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+self_cause	one
+prior_to_self	one
+infinite	one
+first	two	first	P6	a cause with no cause before it, the beginning of the whole series	the member of a given ordered chain that causes the intermediate, first only relative to that chain
+intermediate	one
+ultimate	one
+# P6 draws on S4–S5: take away the cause that heads a chain and its effects go too. Read that way, "first" means whatever cause stands before the intermediate in that chain.
+# An infinite series still has such a relative first in every finite stretch. So P6 is true in that sense, but it does not give what P7 and C need: a cause with nothing before it.
+# I found no premise or assumption that equates the two senses, so I name no bridge. The shift sits in how P6 is read against P7 and C.

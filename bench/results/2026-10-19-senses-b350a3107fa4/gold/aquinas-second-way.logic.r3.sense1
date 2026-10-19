@@ -1,0 +1,28 @@
+# reading 3 of aquinas-second-way.md by claude-opus-5-5
+logic	s5
+atom	order_exists	in the world of sense there is an order of efficient causes
+atom	self_cause	a thing is the efficient cause of itself
+atom	prior_to_self	a thing is prior to itself
+atom	infinite	in efficient causes one goes on to infinity
+atom	chain	in efficient causes following in order, the first is the cause of the intermediate and the intermediate is the cause of the ultimate
+atom	first	there is a first efficient cause
+atom	first_2	the member of a given ordered chain that causes the intermediate, first only relative to that chain
+atom	intermediate	there is an intermediate efficient cause
+atom	ultimate	there is an ultimate cause (ultimate effect)
+atom	god	the first efficient cause is what everyone names God
+P1	S2	order_exists	kind empirical
+P2	S3	¬◇self_cause
+P3	S3	self_cause → prior_to_self
+P4	S3	¬◇prior_to_self
+P5	S4	chain
+# S4 gives the chain structure as the reason ("because") that an infinite regress is impossible; the text states no conditional linking them, so the step rests on P5 alone
+C1	S4	¬◇infinite	from P5
+# S6 is drawn from S5 ("to take away the cause is to take away the effect"), which has no atom of its own; it is written as a stated premise
+P6	S6	¬first_2 → ¬ultimate ∧ ¬intermediate
+P7	S7	infinite → ¬first ∧ ¬ultimate ∧ ¬intermediate
+# "all of which is plainly false": there are an ultimate effect and intermediate causes
+P8	S7	ultimate ∧ intermediate	kind empirical
+# "it is necessary to admit a first efficient cause" is read as the claim that there is one, the necessity being that of the inference; it could be read as []first
+C	S8	first	from P6 P8
+P9	S8	god	kind empirical
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

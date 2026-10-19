@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+in_act	one
+can_act	one
+deficient	one
+cause_deficient	one
+# "act" appears both as actuality ("in act", "deficient in act") and as operation ("can act", "a deficient act").
+# Each claim keeps one of these senses in every statement that uses it.
+# P2 and P3 join an actuality claim to an operation claim. That is the text's own principle (act as actuality grounds act as operation), so neither is a bridge.

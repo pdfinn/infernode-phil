@@ -1,0 +1,7 @@
+euthydemus-learn.logic.r3: argue/equivocates: P4 (S16): "learner" is taken as one who grasps or understands the dictation, using what he already knows in P4 C and as one who acquires knowledge he does not yet have where learns is used else, a reader says: the argument holds only if they are one; taken apart, C3 (S13) does not follow (euthydemus-learn.logic.r3.sense1)
+euthydemus-learn.logic.r3: argue/countermodel: C3 (S13): D = {another, cleinias}; learns = {another, cleinias}, unlearned = {cleinias}, wise_k = ∅
+euthydemus-learn.logic.r3: argue/countermodel: C (S17): D = {another, cleinias}; learns = {cleinias}, learns_2 = ∅, unlearned = ∅, wise_c = ∅, wise_k = ∅
+euthydemus-learn.logic.r3: argue/two-senses: A2: "unlearned" is taken as dull or slow, the opposite of the clever, apt pupils in A2 C and as ignorant of what is being learned, lacking that knowledge where unlearned is used else, a reader says: the argument does not turn on it
+euthydemus-learn.logic.r3: argue/equivocates: A2: it takes "unlearned" from ignorant of what is being learned to dull, not clever, a reader says: the argument holds only through it; without it, C3 (S13) does not follow (euthydemus-learn.logic.r3.sense3)
+euthydemus-learn.logic.r3: argue/countermodel: C3 (S13): D = {another, cleinias}; learns = {another, cleinias}, unlearned = {cleinias}, wise_k = ∅
+euthydemus-learn.logic.r3: argue/countermodel: C (S17): D = {another, cleinias}; learns = {cleinias}, unlearned = {cleinias}, wise_c = {cleinias}, wise_k = ∅

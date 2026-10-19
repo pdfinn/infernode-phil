@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+enq_known	one
+enq_unknown	one
+need_known	one
+knows_subject	one
+# Possible weak spot: "know" in enq_unknown ("that which he does not know") may mean lacking the full answer.
+# In knows_subject (P6, P7) it may mean being able to identify what one is looking for.
+# I did not mark P7 as a bridge, because each claim keeps a single sense throughout. P7 joins two different claims rather than reading one word two ways.
+# A1 joins "need" to "can", which are different words, so it is not a bridge either.

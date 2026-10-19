@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+heat	one
+pain	two	pain	P1	feels pain, as only a perceiving being can	has something painful, i.e. bears a quality that causes pain in a perceiver
+perceives	one
+# S1 says the most vehement heat "is a very great pain". Read as "heat is painful", this lets a pain-causing quality sit in an object.
+# S5 and S13 instead use "capable of pain" for feeling pain, which only a perceiver can do.
+# What makes "x is the subject of pain" true differs between these readings: x feels it, versus x bears what causes it.
+# The shift happens inside the pain claim in P1, not through a premise joining two claims, so no bridge is named.
+# Unsure whether "heat perceived by sense" also shifts between C and P1 (heat as sensation versus heat as a quality in matter). Both statements qualify it as "perceived by sense", so I left it as one sense.

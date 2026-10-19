@@ -1,0 +1,13 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+just	one
+excellent	one
+fulfils	one
+lives_well	two	lives well	P5	performs the soul's work of living excellently, as a function done well	fares well, prospers, does well for oneself
+happy	one
+happiness_profitable	one
+injustice_more_profitable	one
+bridge	P5	lives well	performs the soul's function of living excellently	fares well, prospers (is blessed and happy)
+# In S4, P3 and S14, "living well" is the soul doing its proper work (life) well, the way an eye sees well.
+# S16 reads the same words as faring well (eu prattein), which is what licenses "blessed and happy".
+# Doing one's function well could be true while faring well is false, so P5 carries the argument across the two senses.
+# "Profitable" may also shift between Thrasymachus's gain and Socrates's happiness. Both statements using injustice_more_profitable read it the same way, so I left it as one sense.

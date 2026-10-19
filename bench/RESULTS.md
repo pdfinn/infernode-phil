@@ -315,6 +315,65 @@ process between: it took the extension for a false premise the text
 asserts, not a word that shifts, which is a reading the gold could
 have allowed. A second asker is not worth its call.
 
+## Bridges between senses (b350a3107fa4)
+
+Of the 13 runs `phil/senses` did not find, six had the shift between
+two claims, not within one: the reader had given the two senses two
+atoms and written the move between them as a premise, and the asker,
+asked only whether each claim kept its sense, said in a comment that
+the shift was there ("it lies between two claims, joined by P4") and
+answered one sense. The model saw it; the question had no place for
+it. So `lib/phil/senses` asks a second question: does a premise or
+assumption take a word from one sense to another? The prover decides
+such a bridge as it decides a split: taken out (its formula made
+always true), does the argument still hold? Needed is
+`argue/equivocates`, at the bridge. The asker is now given the whole
+argument in words. Run on the same readings as before: 293 calls,
+0.78 million tokens in and 0.11 million out (about $5). Output in
+[results/2026-10-19-senses-b350a3107fa4/](results/2026-10-19-senses-b350a3107fa4/);
+judged in
+[results/senses-judged-b350a3107fa4.tsv](results/senses-judged-b350a3107fa4.tsv).
+
+| Set | Runs | Found | Named | Related | Missed |
+|---|---|---|---|---|---|
+| gold equivocations, without bridges | 15 | 8 | 2 | 0 | 5 |
+| gold equivocations, with bridges | 15 | 8 | 1 | 0 | 6 |
+| held out, without bridges | 15 | 7 | 2 | 2 | 4 |
+| held out, with bridges | 15 | 9 | 3 | 1 | 2 |
+
+- **Gained.** The *Euthydemus*' "be" sophism, found in one run of
+  three before, is found in all three, each time at the premise that
+  takes "be" from no longer being ignorant to no longer existing; the
+  "knowing" sophism is named at its bridge in two runs (missed before;
+  the readings were not valid as read, so nothing is decided); the
+  *Phaedo*'s "opposites", contradictories against contraries, found
+  for the first time (one run); Socrates' own diagnosis of "learn" in a
+  third run. Most findings on the *Republic* and the *Gorgias* now come
+  twice, as a split claim and as its bridge.
+- **Lost.** Three runs found before are not now (Berkeley's master
+  argument once, the *Gorgias* once, the Meno's "know" named once):
+  asked again, a model does not always answer alike, and with the
+  longer question it did not here. Over the 30 runs, found rises from
+  15 to 17 and missed falls from 9 to 8; the gain is where bridges
+  were the reason, and the losses are of the size the run-to-run
+  variation already shows.
+- **False alarms.** On the valid passages, two runs of 24 again: the
+  objection from evil's "infinite", and Philonous's "pain" in
+  Berkeley's heat-pain argument, a quality that causes pain against
+  feeling it, the charge commonly made against that argument. On the
+  breadth sample, one finding in 200 readings, and a defensible one:
+  in the *Consolation*, an assumption moves "counted among thy
+  possessions" from "a good to thee" to "belonging to thee", and the
+  vicious-servant horn shows only the first.
+
+Kept. A bridge named in a reply (R1) is not yet tested: one reading
+of the "knowing" sophism put the move there.
+
+`argue -e` was taken out with this change: a tool that runs another
+under a flag is the thing "cat -v considered harmful" warns against.
+`phil/senses` reads a reading, any reading, as `phil/prove` does;
+`bench/senses.sh` composes it after `phil/argue`.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of

@@ -1,0 +1,20 @@
+# the argument of phaedo-opposites.md as claude-opus-5-5 read it: check that it says what the text says
+# The universal claim's "of necessity" (S4, S17) is folded into the universal quantifier rather than given a modal operator.
+# The sleep/waking analysis (S26-S27) and the greater/less, weaker/stronger cases (S4-S10) only illustrate, so they are left out.
+atom	opp(x)	the members of x are opposites
+atom	opp_2(x)	contradictory states with nothing between (alive vs not alive), where nothing becomes "more dead" by degrees
+atom	genopp(x)	the members of x are generated out of one another
+atom	process(x)	there is a passing or process from one member of x to the other
+atom	living_from_dead	the living, whether things or persons, are generated from the dead
+atom	souls_below	our souls exist in the world below
+domain	lifedeath
+P1	S17	∀x (opp(x) → genopp(x) ∧ process(x))
+P2	S31	opp_2(lifedeath)
+C1	S33	genopp(lifedeath)	from P1 P2
+# S38 is Cebes' answer that the living come from the dead. The step from mutual generation to "living from dead" is relied on, so it is written as an assumption.
+A1	-	genopp(lifedeath) → living_from_dead
+C2	S39	living_from_dead	from C1 A1
+# The inference to souls existing below is never stated; it needs the unstated link that if the living come from the dead, souls must exist in the world below.
+A2	-	living_from_dead → souls_below
+C	S41	souls_below	from C2 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

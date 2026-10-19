@@ -1,0 +1,16 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+generated_corrupt	one
+contingents_exist	one
+all_contingent	one
+once_nothing	two	could	P5 C3	possibly at some time nothing existed	at some time nothing actually existed
+begin_needs_existing	one
+now_nothing	one
+necessary_exists	one
+all_caused	one
+infinite_regress	one
+self_necessary	one
+god	one
+# once_nothing: S4 draws only that there "could have been" nothing, a possibility. S5 ("if this were true") and S6 ("if at one time nothing was in existence") need that nothing actually existed at some time. Only an actual time of nothing would leave nothing now.
+# The reading's wording "could have been (was)" hides this difference. What makes the claim true differs: a mere possibility versus an actual past state.
+# No premise or assumption carries the shift. C2 is drawn, not stated as a premise. P5 and C3 just use the actual sense, so I name no bridge.
+# I was unsure about "necessary": necessary_exists and self_necessary seem to share one sense (cannot cease to be). Caused necessity versus necessity of itself is drawn inside that sense, not as a second sense.

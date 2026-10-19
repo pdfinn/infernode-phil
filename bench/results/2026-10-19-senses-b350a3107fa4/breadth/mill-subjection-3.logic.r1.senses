@@ -1,0 +1,23 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+short_time	one
+few_attempts	one
+eminence_expected	one
+as_much_as_expected	one
+early_success	one
+sappho_great	one
+myrtis_corinna_merit	aspasia_taught	one
+sufficient_grounds	one
+
+Wait — correcting the line above, each claim gets its own line:
+
+short_time	one
+few_attempts	one
+eminence_expected	one
+as_much_as_expected	one
+early_success	one
+sappho_great	one
+myrtis_corinna_merit	one
+aspasia_taught	one
+sufficient_grounds	one
+# S4 is a question in the text ("It is a relevant question, whether..."). The reading takes it as the negated claim, but that negation is in the same sense as A1 and A3 use it.
+# "Distinguished success" (C2) and "first-rate eminence" (C1, C) are different claims, each in its own sense. A3 joins them without treating them as the same word, so it is no bridge.

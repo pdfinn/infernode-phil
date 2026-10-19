@@ -1,0 +1,15 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+learner	one
+knew	one
+wise_know	one
+unlearned	one
+unlearned_learn	two	unlearned	O1	the ignorant, who do not yet know a thing, are the ones who acquire knowledge of it	the dull, as opposed to the clever, are the ones who grasp what is taught
+wise_learn	one
+wise_apt_learned	one
+wise_apt_learn	one
+dull_learn	one
+# O1 is S17's denial that "the unlearned" learn. S17 sets the unlearned against the clever boys who took in the dictation, so there it means the dull.
+# C1 (S13) and A1 use the word for the ignorant, those who do not yet know what they are learning.
+# The ignorant can acquire knowledge while the dull do not grasp the dictation, so O1 can be true while C1 is true. O1 only contradicts C1 through this shift.
+# "learn" also moves, from acquiring knowledge (S11, S13) to understanding a dictation (S15–S17).
+# No premise or assumption carries the shift. A2 stays in the clever/dull sense throughout, and the move happens only between C1 and O1. So I name no bridge.

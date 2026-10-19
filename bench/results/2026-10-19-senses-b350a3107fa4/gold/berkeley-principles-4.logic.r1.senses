@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+perceived_by_sense	two	perceive	P3	x is something we perceive by sense: a thing (house, river) that sense-perception is of	x is something we immediately perceive: the direct content of awareness, which is only our own ideas
+sensible	one
+idea	one
+exists_unperceived	one
+opinion_contradictory	one
+# P2 is plausible only if "perceive" covers the everyday objects of perception: houses and rivers are what we see.
+# P3 is plausible only if "perceive" means the immediate content of awareness: what we immediately perceive is ideas.
+# The shift sits in perceived_by_sense between P2 and P3. No single premise or assumption joins two "perceive" claims, so I list no bridge.

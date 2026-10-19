@@ -1,0 +1,3 @@
+aquinas-second-way.logic.r3: argue/equivocates: P6 (S6): "first" is taken as the member of a given ordered chain that causes the intermediate, first only relative to that chain in P6 and as a cause with no cause before it, the beginning of the whole series where first is used else, a reader says: the argument holds only if they are one; taken apart, C1 (S4) does not follow (aquinas-second-way.logic.r3.sense1)
+aquinas-second-way.logic.r3: argue/countermodel: C1 (S4): W = {w0, w1, w2, w3}; R = W × W; w0: chain = T, infinite = T; w1: infinite = F; w2: infinite = F; w3: infinite = F
+aquinas-second-way.logic.r3: argue/countermodel: C (S8): W = {w0, w1, w2, w3}; R = W × W; w0: first = F, first_2 = T, intermediate = T, ultimate = T; w1: ; w2: ; w3: 

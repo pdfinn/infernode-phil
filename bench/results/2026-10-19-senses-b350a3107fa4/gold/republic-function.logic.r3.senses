@@ -1,0 +1,16 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+life_end	one
+just_excellent	one
+unjust_defective	one
+just_fulfils	one
+unjust_fulfils	one
+just_lives_well	two	live well	P5	performing the soul's function (living) excellently	faring well, being blessed and happy
+unjust_lives_ill	two	lives ill	P5	performing the soul's function (living) badly	faring badly, being wretched
+just_happy	one
+unjust_miserable	one
+happiness_profitable	one
+misery_profitable	one
+injustice_more_profitable	one
+bridge	P5	live well	performing the soul's function (living) excellently	faring well, being blessed and happy
+# In A1, A2 and C1, "live well/ill" is drawn from the soul doing its function (life) well or badly through its excellence. P5 takes the same phrase in the everyday sense of faring well or being happy. That carries the conclusion from functioning to happiness.
+# I was less sure about "excellence" (functional excellence vs. moral justice, P3/P4) and "profitable" (advantage in Thrasymachus's sense vs. what is good for one). In both cases each claim keeps one sense across the statements that use it.

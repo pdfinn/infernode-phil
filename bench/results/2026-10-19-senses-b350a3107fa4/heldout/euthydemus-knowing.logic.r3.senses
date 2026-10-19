@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+knows_something	one
+knowing_q	one
+knowing_u	one
+ignorant_some	one
+bridge	P3	knowing	knowing in respect of the particular knowledge one has	knowing without qualification, knowing all things
+# P3 is the step Socrates objects to in S4 ("of the knowledge which I have"). It turns knowing some things into knowing everything.
+# P5 is not a bridge as read. Not knowing some things does entail not knowing all things, so it moves within one sense of "knowing".

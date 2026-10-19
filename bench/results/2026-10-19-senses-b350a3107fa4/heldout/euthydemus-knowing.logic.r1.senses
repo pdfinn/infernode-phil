@@ -1,0 +1,10 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+knows_something	one
+ignorant_some	one
+knowing	one
+knowing_known	one
+knows_all	one
+bridge	R1	knowing	knowing in a qualified sense: knowing just the things he does know	knowing without qualification, as a knower simply, which commits one to knowing all things
+# R1 rests on "that makes no difference" in S5. It moves from Socrates' qualified "knowing, of the knowledge which I have" (S4) to the sophist's unqualified "knowing," which P3 takes to mean knowing all things.
+# P6 makes a matching move on the negative side. It goes from not knowing some things straight to being unqualifiedly not knowing, while Socrates qualifies it in S8 (O2). But P6 joins two different claims rather than restating "knowing" in two senses, so I have not marked it as a bridge.
+# In S9, "you said just now that you were knowing" points back to a statement Socrates made in the qualified sense. As the argument reads it, though, C uses only the unqualified claim, so I have kept "knowing" as one sense.

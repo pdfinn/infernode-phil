@@ -1,0 +1,23 @@
+# reading 2 of republic-function.md by claude-opus-5-5
+# The "necessarily" of S10/S11 is not written modally: the argument is quantified over souls and men.
+# S10 is read as a premise (good soul rules well) together with S8-S9 (without excellence, ends not fulfilled).
+# S4: life is one of the soul's ends, so fulfilling the soul's ends well is read as living well, and failing them as living ill.
+# S20: "happiness and not misery is profitable" is read in both directions: happy -> profitable, and not happy -> not profitable.
+# S22: "injustice can never be more profitable than justice" is read as: the just are profitable and the unjust are not.
+atom	excellent(x)	x has the excellence proper to the soul
+atom	fulfils(x)	x fulfils the soul's own ends well (rules, superintends and deliberates well)
+atom	lives_well(x)	x lives well
+atom	lives_well_2(x)	faring well: prospering, being blessed and happy
+atom	just(x)	x is just
+atom	happy(x)	x is blessed and happy
+atom	profitable(x)	x's condition is profitable
+P1	S9	∀x (¬excellent(x) → ¬fulfils(x))
+P2	S10	∀x (excellent(x) → fulfils(x))
+P3	S4	∀x ((fulfils(x) → lives_well(x)) ∧ (¬fulfils(x) → ¬lives_well(x)))
+P4	S12	∀x (just(x) ↔ excellent(x))
+C1	S14	∀x ((just(x) → lives_well(x)) ∧ (¬just(x) → ¬lives_well(x)))	from P1 P2 P3 P4
+P5	S16	∀x ((lives_well_2(x) → happy(x)) ∧ (¬lives_well_2(x) → ¬happy(x)))
+C2	S18	∀x ((just(x) → happy(x)) ∧ (¬just(x) → ¬happy(x)))	from C1 P5
+P6	S20	∀x ((happy(x) → profitable(x)) ∧ (¬happy(x) → ¬profitable(x)))
+C	S22	∀x ((just(x) → profitable(x)) ∧ (¬just(x) → ¬profitable(x)))	from C2 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

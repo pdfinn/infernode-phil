@@ -1,0 +1,15 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+wise	one
+good	one
+ignorant	one
+knowing	one
+exceeds_like	two	go beyond	P8 P9	wanting to outdo others in a skill or practice (e.g. tuning a lyre past what another musician does)	grasping for more gain or advantage than others (the pleonexia Thrasymachus credits to the unjust)
+exceeds_unlike	two	go beyond	P8 P9	wanting to outdo others in a skill or practice	grasping for more gain or advantage than others
+like_wise_good	one
+like_evil_ignorant	one
+bridge	A3	go beyond	grasping for more gain or advantage	wanting to outdo others in a skill or practice
+bridge	A4	go beyond	grasping for more gain or advantage	wanting to outdo others in a skill or practice
+# S1, S39 and S42 use "desire more / go beyond" for the unjust man's appetite for gain.
+# S17-S29 use it for exceeding a standard of correct practice in an art or in knowledge. S35 and S37 phrase this as "gain more", but they carry the craft sense.
+# A3 and A4 match their antecedents to P9 and P8 (the gain sense). Their consequents are only supported by C1 and C2 (the craft sense). So I read A3 and A4 as the bridges.
+# I was unsure whether "like" in S7 ("such as his like is") also shifts, between resembling someone and being of the same nature. I kept like_wise_good as one sense.

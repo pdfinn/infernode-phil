@@ -1,0 +1,12 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+desired_own	one
+good_own	one
+good_general	one
+end_conduct	one
+criterion_morality	one
+bridge	P3	desirable	capable of being desired, which actual desire proves (S3)	worth desiring, a good (S6)
+# No shared claim changes sense across its own statements; the shift happens inside P3.
+# S3 makes actual desire the evidence that something is "desirable," taken on the model of visible and audible as "capable of being desired" (P1).
+# S5 and S6 then treat what is "desirable" as "a good," that is, worth desiring.
+# P3 goes straight from actual desire to "a good." It can pass only by reading S3's principle with "desirable" moved from the first sense to the second.
+# I was unsure whether to call this a bridge, since the word "desirable" does not appear in P3 itself. I count it because P3 depends on the text treating "desirable" and "good" as the same word.

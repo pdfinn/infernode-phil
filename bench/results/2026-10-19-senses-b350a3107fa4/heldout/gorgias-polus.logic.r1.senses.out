@@ -1,0 +1,4 @@
+gorgias-polus.logic.r1: argue/equivocates: A1: "pain" is taken as doing wrong brings more pain to the one who does it (the injurer suffers more) in A1 C1 and as doing wrong produces more pain, by the standard of S1 and S11 (pain given to those affected or to onlookers) where dw_more_pain is used else, a reader says: the argument holds only if they are one; taken apart, C (S32) does not follow (gorgias-polus.logic.r1.sense1)
+gorgias-polus.logic.r1: argue/countermodel: C (S32): dw_more_disgraceful = T, dw_more_evil = F, dw_more_pain = T, dw_more_pain_2 = F
+gorgias-polus.logic.r1: argue/equivocates: A1: it takes "pain" from more pain produced, measured by the standard of the beautiful and the disgraceful to more pain felt by the doer of wrong, a reader says: the argument holds only through it; without it, C1 (S24) does not follow (gorgias-polus.logic.r1.sense2)
+gorgias-polus.logic.r1: argue/countermodel: C1 (S24): dw_more_pain = T, injurers_suffer_more = F

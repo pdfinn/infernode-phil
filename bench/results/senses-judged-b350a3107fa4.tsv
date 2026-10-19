@@ -1,0 +1,42 @@
+# phil/senses with bridges (prompt b350a3107fa4), 19 October 2026, on
+# the same readings as senses-judged.tsv (gold: argue 48e3990c5a0a;
+# held out: the readings argue made there), judged by the same rule.
+# A bridge is a premise or assumption the asker says takes a word from
+# one sense to another.
+# set	passage	run	judged	why
+gold	berkeley-master	1	found	"unconceived", act and content, as before
+gold	berkeley-master	2	found	the same, as a bridge (A1)
+gold	berkeley-master	3	no	every claim one sense, no bridge (found before)
+gold	berkeley-principles-4	1	found	"perceive", as before
+gold	berkeley-principles-4	2	no	every claim one sense, no bridge
+gold	berkeley-principles-4	3	found	as run 1
+gold	meno-paradox	1	no	every claim one sense
+gold	meno-paradox	2	no	every claim one sense (named before)
+gold	meno-paradox	3	named	"knows", the reading not valid as read
+gold	phaedo-opposites	1	no	every claim one sense
+gold	phaedo-opposites	2	no	every claim one sense
+gold	phaedo-opposites	3	found	"opposites": contradictory states with nothing between, against contraries with degrees between; C fails split (missed in every run before)
+gold	republic-function	1	found	"live well", split and as a bridge (P5)
+gold	republic-function	2	found	as run 1
+gold	republic-function	3	found	as run 1
+gold	aquinas-evil-objection	3	defensible	valid class; "infinite", as before
+gold	berkeley-heat-pain	2	defensible	valid class; "pain": bearing a quality that causes pain in a perceiver, against feeling pain; the charge commonly made against Philonous's argument (the sensation and its object)
+gold	aquinas-second-way	3	defensible	"first", relative to a chain against absolutely first, as before
+gold	aquinas-third-way	2	defensible	"could", as before
+gold	mill-proof	1	defensible	a bridge (P3): "desirable" from able to be desired to worth desiring, the second half of the gold; C1 fails without it
+heldout	euthydemus-learn	1	named	"learning", understanding against acquiring, the reading not valid as read, as before
+heldout	euthydemus-learn	2	related	"unlearned", dull against ignorant
+heldout	euthydemus-learn	3	found	"learner": one who understands the dictation against one who acquires knowledge he lacks, Socrates' diagnosis; C3 fails split; also a bridge (A2) on "unlearned"
+heldout	euthydemus-perish	1	found	a bridge (P4): "be" from predicative, no longer ignorant, to existential, no longer to exist; C2 fails without it (missed before)
+heldout	euthydemus-perish	2	found	a bridge (P5), as run 1
+heldout	euthydemus-perish	3	found	a bridge (P5), as run 1 (missed before)
+heldout	euthydemus-knowing	1	no	the asker names the bridge, R1, a reply; a reply's bridge is not tested
+heldout	euthydemus-knowing	2	named	a bridge (P4): "knowing" from a knower of some things to one who knows all things; the reading not valid as read
+heldout	euthydemus-knowing	3	named	a bridge (P3), the same; not valid as read (missed before)
+heldout	republic-overreach	1	found	"more", split and as a bridge (A2)
+heldout	republic-overreach	2	found	"go beyond", split and as bridges (A3, A4)
+heldout	republic-overreach	3	found	a bridge (A2): "more" from outdoing in a craft to seeking advantage
+heldout	gorgias-polus	1	found	"pain", split and as a bridge (A1)
+heldout	gorgias-polus	2	no	every claim one sense, no bridge (found before)
+heldout	gorgias-polus	3	found	"pain" split; "evil" as a bridge (P5), Vlastos's point
+breadth	boethius-1	1	defensible	the only finding in 200 readings: an assumption (A5) moves "counted among thy possessions" from a good to thee to belonging to thee; the vicious-servant horn shows only the first

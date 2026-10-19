@@ -1,0 +1,13 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+resolution	one
+resolution_obliges	one
+produces_obligation	one
+desire	one
+bind_without_desire	one
+willing_action	one
+future	one
+will_present_only	one
+willing_obligation	one
+# I considered whether "will" shifts between S3 ("the will has an influence only on present actions") and C/S4 ("the willing of that obligation"). Both take willing as an act of volition; they differ in its object (an action versus an obligation), not in what "will" means.
+# Inside each claim, "will" keeps one sense across its statements. A3 joins willing_action and will_present_only with volition in the same sense, so A3 is not a bridge.
+# A1 joins "the act of the mind exprest by a promise" with "the act of the mind which enters into a promise". The text treats these as the same act, in one sense.

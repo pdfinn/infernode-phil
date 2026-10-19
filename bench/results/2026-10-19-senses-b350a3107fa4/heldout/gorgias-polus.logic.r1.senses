@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+dw_more_disgraceful	one
+dw_more_pain	two	pain	A1 C1	doing wrong produces more pain, by the standard of S1 and S11 (pain given to those affected or to onlookers)	doing wrong brings more pain to the one who does it (the injurer suffers more)
+dw_more_evil	one
+injurers_suffer_more	one
+bridge	A1	pain	more pain produced, measured by the standard of the beautiful and the disgraceful	more pain felt by the doer of wrong
+# The standard set up in S1 to S15 measures beauty by pleasure or use to someone, for example "the sight of them gives pleasure to the spectators". Pain as the measure of disgrace is then pain caused, not necessarily pain felt by the agent.
+# S22 and S23 test only whether the injurers themselves suffer more. A1 is the step that reads "exceeds in pain" as pain suffered by the doer.
+# I was unsure about "evil". S32 moves from "an excess of evil" (harmful, possibly to others) to "a greater evil than suffering injustice", which S36 sets against Polus's S18 sense of evil for the person who suffers it. P1 and C carry the same gloss, so I left this claim as one sense.

@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses b350a3107fa4, 2026-10-19
+satisfied	one
+all_mistaken	one
+reason_equal	one
+diversity_from_reason	one
+diversity_from_conduct	one
+# reason_equal: C1 takes "most equally distributed" from S1, and P3/P4 take "by nature equal in all men" from S2. Both say the same thing: each person has as much of the power to judge rightly as any other. So this is one sense, not a shift.
+# satisfied: in both P1 and P3, "good sense" is something people think they have enough of. P3 then moves from that belief to the fact of equal endowment, but that is an inference between two different claims, not a change in what "good sense" means. Its strength is not at issue here.
