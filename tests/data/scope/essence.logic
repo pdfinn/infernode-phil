@@ -1,0 +1,6 @@
+logic	s5
+atom	god	God exists
+atom	essence	God's essence involves existence
+P1	S1	<>!god -> !essence
+P2	S2	essence	kind conceptual
+C	S3	[]god

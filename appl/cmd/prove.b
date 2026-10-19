@@ -120,7 +120,7 @@ init(nil: ref Draw->Context, args: list of string)
 	prose->init();
 	arg := load Arg Arg->PATH;
 	arg->init(args);
-	arg->setusage("phil/prove [-APevx] logicfile [document]\n\tphil/prove -p logicfile [document]\n\tphil/prove [-Ax] -c [-a answers] [-d document] logicfile ...\n\tphil/prove -t logicfile\n\tphil/prove [-A] -f logicfile\n\tphil/prove [-A] -s n logicfile");
+	arg->setusage("phil/prove [-APevx] logicfile [document]\n\tphil/prove -p logicfile [document]\n\tphil/prove [-Ax] -c [-a answers] [-d document] logicfile ...\n\tphil/prove -t logicfile\n\tphil/prove [-A] -f logicfile\n\tphil/prove [-A] -s n logicfile\n\tphil/prove [-A] -S logicfile");
 	cflag := 0;
 	tflag := 0;
 	docname: string;
@@ -137,6 +137,7 @@ init(nil: ref Draw->Context, args: list of string)
 		'A' =>	aflag = 1;
 		'f' =>	fflag = 1;
 		's' =>	scopek = int arg->earg();
+		'S' =>	scopek = -1;
 		'P' =>	proofflag++;
 		* =>	arg->usage();
 		}
@@ -166,7 +167,7 @@ init(nil: ref Draw->Context, args: list of string)
 		out.flush();
 		return;
 	}
-	if(scopek > 0){
+	if(scopek != 0){
 		scopes(logic, scopek);
 		out.flush();
 		return;
@@ -1633,8 +1634,9 @@ reformat(file: string)
 # The scope of a necessity or an ought in a conditional: "if p, then
 # necessarily q" may put it on q alone, p → □q, or on the whole,
 # □(p → q); and the same for ought.  The other reading of each premise
-# or assumption read one way, in the formula or in one of the
-# conjuncts it asserts, as a whole formula with what it says.
+# or assumption read one way, in the formula, in one of the conjuncts
+# it asserts, or in the consequent of its conditional, as a whole
+# formula with what it says.
 Flip: adt {
 	q:	ref Q;
 	how:	string;	# where the reading put it: "consequent" or "whole"
@@ -1652,11 +1654,29 @@ flips(q: ref Q): list of ref Flip
 			what = "obligation";
 		r = ref Flip(ref Q(Fnec, q.r.name, nil, ref Q(Fimp, nil, nil, q.l, q.r.l), nil), "consequent", what) :: r;
 	}
+	# ◇¬q → ¬p, or ◇a → b: the same claim as p → □q, ¬b → □¬a; on the
+	# whole, □(a → b)
+	if(q.op == Fimp && q.l != nil && q.l.op == Fpos && !deontic(q.l))
+		r = ref Flip(ref Q(Fnec, q.l.name, nil, ref Q(Fimp, nil, nil, q.l.l, q.r), nil), "consequent", what) :: r;
 	if(q.op == Fnec && q.l != nil && q.l.op == Fimp){
 		if(deontic(q))
 			what = "obligation";
 		r = ref Flip(ref Q(Fimp, nil, nil, q.l.l, ref Q(Fnec, q.name, nil, q.l.r, nil)), "whole", what) :: r;
 	}
+	# within a necessity: □(p → □q), as a premise read as necessary is
+	# written
+	if(q.op == Fnec && q.l != nil)
+		for(nl := flips(q.l); nl != nil; nl = tl nl){
+			# □□p is □p: the necessity turned over is the one outside
+			if((hd nl).q.op == Fnec && (hd nl).q.name == q.name)
+				r = hd nl :: r;
+			else
+				r = ref Flip(ref Q(Fnec, q.name, nil, (hd nl).q, nil), (hd nl).how, (hd nl).what) :: r;
+		}
+	# within the consequent of a conditional: p → (q → □r)
+	if(q.op == Fimp)
+		for(cl := flips(q.r); cl != nil; cl = tl cl)
+			r = ref Flip(ref Q(Fimp, nil, nil, q.l, (hd cl).q), (hd cl).how, (hd cl).what) :: r;
 	if(q.op == Fand){
 		for(l := flips(q.l); l != nil; l = tl l)
 			r = ref Flip(ref Q(Fand, nil, nil, (hd l).q, q.r), (hd l).how, (hd l).what) :: r;
@@ -1679,6 +1699,10 @@ scopes(file: string, k: int)
 	out = stdout;
 	if(errors)
 		raise "fail:syntax";
+	if(k < 0){
+		scopesall(file, stmts);
+		return;
+	}
 	n := 0;
 	at: ref Stmt;
 	flip: ref Flip;
@@ -1706,6 +1730,75 @@ scopes(file: string, k: int)
 	while((s := b.gets('\n')) != nil){
 		line++;
 		if(line == at.line){
+			nl := "";
+			if(s[len s-1] == '\n'){
+				s = s[0:len s-1];
+				nl = "\n";
+			}
+			f := 0;
+			for(i := 0; i < len s; i++)
+				if(s[i] == '\t' && ++f == 2)
+					break;
+			if(i < len s){
+				j := i+1;
+				while(j < len s && s[j] != '\t')
+					j++;
+				s = s[0:i+1] + qshow(flip.q) + s[j:];
+			}
+			s += nl;
+		}
+		out.puts(s);
+	}
+}
+
+# Every premise and assumption read with the necessity or ought on a
+# consequent, turned over together, the first such place in each: two
+# premises may each give what the other does, so that neither turned
+# over alone changes the verdict.  The first line names them:
+#	# scope<TAB>P1 P2<TAB>-<TAB>consequent<TAB>necessity<TAB>-<TAB>-
+# and nothing is written if fewer than two are turned.
+scopesall(file: string, stmts: list of ref Stmt)
+{
+	turned: list of (ref Stmt, ref Flip);
+	names := "";
+	what := "";
+	for(l := stmts; l != nil; l = tl l){
+		st := hd l;
+		if(st.name == nil || st.name[0] != 'P' && st.name[0] != 'A')
+			continue;
+		for(fl := rev2f(flips(st.q)); fl != nil; fl = tl fl)
+			if((hd fl).how == "consequent"){
+				turned = (st, hd fl) :: turned;
+				if(what == "" || what == (hd fl).what)
+					what = (hd fl).what;
+				else
+					what = "necessity or obligation";
+				break;
+			}
+	}
+	if(len turned < 2)
+		return;
+	# in the order of the file (the statements come last first)
+	for(t := turned; t != nil; t = tl t){
+		(st, nil) := hd t;
+		if(names != "")
+			names += " ";
+		names += st.name;
+	}
+	out.puts("# scope\t" + names + "\t-\tconsequent\t" + what + "\t-\t-\n");
+	b := bufio->open(file, Bufio->OREAD);
+	if(b == nil)
+		fatal(sys->sprint("cannot open %s: %r", file));
+	line := 0;
+	while((s := b.gets('\n')) != nil){
+		line++;
+		flip: ref Flip;
+		for(tt := turned; tt != nil; tt = tl tt){
+			(st, f) := hd tt;
+			if(st.line == line)
+				flip = f;
+		}
+		if(flip != nil){
 			nl := "";
 			if(s[len s-1] == '\n'){
 				s = s[0:len s-1];
@@ -5310,7 +5403,7 @@ eflag := 0;	# -e: every statement read back
 vflag := 0;	# -v: why a valid conclusion follows
 proofflag := 0;	# -P: a valid step's proof, as a tableau; -PP tries invalid ones too (a test)
 fflag := 0;	# -f: the logic file again, its formulas in logic's symbols
-scopek := 0;	# -s n: the logic file with its nth scope turned over
+scopek := 0;	# -s n: the logic file with its nth scope turned over; -S (-1) every one on a consequent
 aflag := 0;	# -A: formulas shown in ASCII, as a logic file may write them
 pflag := 0;	# -p: every impossible set and coherent position
 

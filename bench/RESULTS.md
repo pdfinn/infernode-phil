@@ -374,18 +374,64 @@ under a flag is the thing "cat -v considered harmful" warns against.
 `phil/senses` reads a reading, any reading, as `phil/prove` does;
 `bench/senses.sh` composes it after `phil/argue`.
 
+## Scope: phil/scope
+
+Every reader of Boethius wrote that "if God foresees it, it must
+necessarily happen" could be read either way, and no finding said so.
+The two readings, the necessity of the consequent (p → □q) and of the
+consequence (□(p → q)), are formulas the prover can write itself, so no
+model is needed: `prove -s n` writes a reading with its nth such scope
+turned over (and `-S` every one at once, where two premises each give
+what the other does); `phil/scope` proves each again and says
+`argue/scope` where the verdict turns. A reading with the necessity on
+the whole that holds is not marked; a premise read as conceptual is
+taken as necessary, so that a conceptual antecedent does not make a
+difference without a distinction. The same for ought, narrow scope and
+wide. It was run, at no cost, over every reading already made, and on a
+held-out set: four objections in the *Summa* that argue from God's
+knowledge, will or providence to necessity, each answered by Aquinas
+with the composite and divided sense or conditional necessity, read
+live with `argue -n 3` (48 calls, about $1). Judged in
+[results/scope-judged.tsv](results/scope-judged.tsv); output in
+[results/2026-10-19-scope/](results/2026-10-19-scope/).
+
+| Set | Runs | Found | Missed |
+|---|---|---|---|
+| Boethius, the gold set's scope shift, both prompts | 6 | 6 | 0 |
+| held out, the *Summa*'s four | 12 | 10 | 2 |
+
+- **Missed**, both by the reading: one wrote "must necessarily be" as
+  a predicate, `necbe(x)`, and one wrote the necessity into its atoms'
+  names; with no □ there is no scope to turn. The readers of the other
+  ten wrote the scope as the sentence has it and said, in a comment,
+  that the objection needs that reading; the tool now says so too.
+- **On the other passages** (156 gold readings, 200 breadth): every
+  finding is a real dependency of the argument on a necessity or ought
+  read on a consequent. Five of necessity are in an assumption the
+  reader added (Aquinas's first way, Berkeley's *Principles* 4), two in
+  Aristotle's "there must necessarily be as many forms of government",
+  a necessity of the consequence read on the consequent. Nine are of
+  ought: "if the young need sustaining, the union ought to last", the
+  narrow reading every argument from facts to duties takes. Real, but
+  everywhere in such arguments; a person may want to filter them.
+
+Two of the misses Boethius's readers made at first were fixed on the
+way: a necessity nested in a consequent (p → (q → □r)), and the claim
+written as ◇¬q → ¬p, which says the same as p → □q.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of
    three, and a second asker adds nothing; most of what it missed was a
    shift between two claims, which its second question, a bridge
-   between senses, is for ([below](#bridges-between-senses)). Next: the
+   between senses, is for ([above](#bridges-between-senses-b350a3107fa4)). Next: the
    same question put across works, to
    check `phil/corpus`'s alignments of one work's claim with
    another's, where a shift of sense between authors would hide.
-2. A reader's comment that a sentence "could be read the other way" is
-   the tool's to act on: write the other reading too, and let
-   `phil/settle` ask the question it already asks when readings differ.
+2. Scope: `phil/scope` (above) finds it in 16 runs of 18, with no
+   model. Next: a held-out set from more than one author; whether ought
+   findings should be marked apart; and the quantifier order the
+   readers now keep, which `prove -s` could turn over the same way.
 3. `argue/unfaithful` in dialogues: a claim put as a question and
    granted in the reply should be read from both.
 4. For `phil/corpus`: a source read as everything it asserts, not one

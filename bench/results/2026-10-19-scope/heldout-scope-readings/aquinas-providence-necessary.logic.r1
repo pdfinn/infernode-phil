@@ -1,0 +1,18 @@
+# the argument of aquinas-providence-necessary.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+# The argument is put forward as an objection (S1 "It seems that ..."), but its premises and its conclusion are the text's own steps, so I write them as a plain argument.
+# "cannot be frustrated" is read as the necessity of the effect following from providence.
+atom	providence_preexists	the providence of God, being eternal, pre-exists (a past or present per se cause of the effect)
+atom	follows_necessarily	the effect necessarily follows from divine providence
+atom	not_frustrated	divine providence cannot be frustrated
+atom	happens_from_necessity	the things foreseen happen from necessity
+atom	imposes_necessity	divine providence imposes necessity upon things foreseen
+P1	S2	providence_preexists ∧ follows_necessarily → happens_from_necessity	says aristotle
+P2	S2	providence_preexists ∧ follows_necessarily → happens_from_necessity
+P3	S3	providence_preexists
+P4	S3	not_frustrated
+P5	S3	not_frustrated → follows_necessarily
+C1	S3	follows_necessarily	from P4 P5
+A1	-	happens_from_necessity → imposes_necessity
+C	S4	imposes_necessity	from P2 P3 C1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

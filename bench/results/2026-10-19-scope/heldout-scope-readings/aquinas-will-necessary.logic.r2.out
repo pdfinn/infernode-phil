@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-will-necessary.md:1: argue/readings: S2 is read 2 ways: aquinas-will-necessary.logic.r2 has nothing from it; aquinas-will-necessary.logic.r2.2 and aquinas-will-necessary.logic.r2.3 have "comes_to_be → god_wills"; they differ when only "the thing willed comes to be (in Augustine's case, the person is saved)" is true, which the first allows
+aquinas-will-necessary.md:1: argue/answered: S2: answered no, which keeps aquinas-will-necessary.logic.r2.2 and aquinas-will-necessary.logic.r2.3, to: Suppose "the thing willed comes to be (in Augustine's case, the person is saved)" is true and "God wills the thing (in Augustine's case, that someone be saved)" is false. Is S2, "For Augustine says (Enchiridion 103): "No one is saved, except whom God has willed to be saved.", true then?
+aquinas-will-necessary.md:1: argue/negation: aquinas-will-necessary.logic.r2.2 P3 (S2): the sentence says "no", but P3 denies nothing it speaks of: it reads "if the thing willed comes to be (in Augustine's case, the person is saved), then God wills the thing (in Augustine's case, that someone be saved)"
+aquinas-will-necessary.md:1: argue/negation: aquinas-will-necessary.logic.r2.3 P3 (S2): the sentence says "no", but P3 denies nothing it speaks of: it reads "if the thing willed comes to be (in Augustine's case, the person is saved), then God wills the thing (in Augustine's case, that someone be saved)"
+aquinas-will-necessary.logic.r2: argue/readings-agree 2
+aquinas-will-necessary.logic.r2: argue/readings-differ 1
+aquinas-will-necessary.logic.r2: argue/verdicts-agree 1
+aquinas-will-necessary.logic.r2: argue/mismatches 0
+aquinas-will-necessary.logic.r2.2: argue/mismatches 1
+aquinas-will-necessary.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: aquinas-will-necessary.logic.r2.2
+# argument written to aquinas-will-necessary.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-will-necessary.md:1: argue/negation: P3 (S2): the sentence says "no", but P3 denies nothing it speaks of: it reads "if the thing willed comes to be (in Augustine's case, the person is saved), then God wills the thing (in Augustine's case, that someone be saved)"
+aquinas-will-necessary.md:1: argue/circular: C (S1): the conclusion only restates P4: it is assumed, not argued
+aquinas-will-necessary.logic.r2: argue/valid 0

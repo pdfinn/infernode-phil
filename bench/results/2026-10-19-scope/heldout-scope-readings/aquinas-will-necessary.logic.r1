@@ -1,0 +1,14 @@
+# reading 2 of aquinas-will-necessary.md by claude-opus-5-5
+# Objection 1 argues from Augustine's words (S2, S3) to the claim in S1.
+# S3's "it must necessarily be" is read as wills -> []saved: necessity once God wills.
+# It could also be read as [](wills -> saved), necessity of the whole conditional; I take the first.
+logic	s5
+atom	wills	God wills that this one be saved
+atom	saved	this one is saved
+atom	imposes_necessity	the will of God imposes necessity on the things willed
+P1	S2	saved → wills	says augustine
+P2	S3	wills → □saved	says augustine
+P3	S3	wills → □saved
+A1	-	(wills → □saved) → imposes_necessity
+C	S1	imposes_necessity	from P3 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

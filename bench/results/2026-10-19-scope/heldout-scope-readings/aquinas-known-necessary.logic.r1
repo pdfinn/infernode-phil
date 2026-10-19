@@ -1,0 +1,21 @@
+# reading 2 of aquinas-known-necessary.md by claude-opus-5-5
+# S1 ("Obj. 3") is only a label. The whole passage is put as an objection,
+# but no claim here is set against it, so its argument is written as the main one.
+# The atoms refer to one contingent future thing, so no quantifiers are used.
+# S2 "must necessarily be": read as necessity of the consequent, known -> []is.
+# It could instead be read as necessity of the whole, [](known -> is).
+# The argument needs the consequent reading to clash with S3.
+logic	s5
+atom	known_god	the contingent future thing is known by God
+atom	known_us	the contingent future thing is known by us
+atom	is	the contingent future thing is (comes to be)
+atom	future_contingent	the thing is a future contingent thing
+atom	god_more_certain	the knowledge of God is much more certain than ours
+P1	S2	known_us → □is
+P2	S2	god_more_certain
+# The a fortiori step: if what we know must be, and God's knowledge is more certain than ours, then what God knows must be. S2 relies on this without stating it.
+A1	-	(known_us → □is) ∧ god_more_certain → (known_god → □is)
+C1	S2	known_god → □is	from P1 P2 A1
+P3	S3	future_contingent → ¬□is
+C	S4	future_contingent → ¬known_god	from C1 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

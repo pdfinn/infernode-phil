@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-will-antecedent.md:1: argue/readings: S3 is read 2 ways: aquinas-will-antecedent.logic.r3 and aquinas-will-antecedent.logic.r3.3 have "wills → nec_by_cause"; aquinas-will-antecedent.logic.r3.2 has nothing from it; they differ when only "God wills a thing" is true, which the second allows
+aquinas-will-antecedent.md:1: argue/answered: S3: answered no, which keeps aquinas-will-antecedent.logic.r3 and aquinas-will-antecedent.logic.r3.3, to: Suppose "God wills a thing" is true and "the thing is necessary by its antecedent cause, the divine will" is false. Is S3, "Now things created by God are related to the divine will as to an antecedent cause, whereby they have necessity.", true then?
+aquinas-will-antecedent.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: aquinas-will-antecedent.logic.r3 and aquinas-will-antecedent.logic.r3.3 have nothing from it; aquinas-will-antecedent.logic.r3.2 has "□(wills → comes) → (wills → nec_by_cause)"; they differ when only "God wills a thing" and "necessarily, (if God wills a thing, then the thing God wills comes to pass)" are true, which the first allows
+aquinas-will-antecedent.md:1: argue/unfaithful: aquinas-will-antecedent.logic.r3 P1 (S2): the sentence has no word of "the thing God wills comes to pass": is it the sentence P1 came from?
+aquinas-will-antecedent.md:1: argue/unfaithful: aquinas-will-antecedent.logic.r3.2 P1 (S2): the sentence has no word of "the thing God wills comes to pass": is it the sentence P1 came from?
+aquinas-will-antecedent.md:1: argue/unfaithful: aquinas-will-antecedent.logic.r3.3 P1 (S2): the sentence has no word of "the thing God wills comes to pass": is it the sentence P1 came from?
+aquinas-will-antecedent.logic.r3: argue/readings-agree 3
+aquinas-will-antecedent.logic.r3: argue/readings-differ 2
+aquinas-will-antecedent.logic.r3: argue/verdicts-agree 1
+aquinas-will-antecedent.logic.r3: argue/mismatches 1
+aquinas-will-antecedent.logic.r3.2: argue/mismatches 1
+aquinas-will-antecedent.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: aquinas-will-antecedent.logic.r3
+# argument written to aquinas-will-antecedent.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+aquinas-will-antecedent.md:1: argue/unfaithful: P1 (S2): the sentence has no word of "the thing God wills comes to pass": is it the sentence P1 came from?
+aquinas-will-antecedent.md:1: argue/unused: P3 (S4): P3 is not needed: the conclusion follows from P1 and P2 without it
+aquinas-will-antecedent.md:1: argue/unused: P4 (S4): P4 is not needed: the conclusion follows from P1 and P2 without it
+aquinas-will-antecedent.logic.r3: argue/valid 1

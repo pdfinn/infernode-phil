@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-known-necessary.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: aquinas-known-necessary.logic.r3 and aquinas-known-necessary.logic.r3.2 have "∀x (knownbyus(x) → necbe(x)) ∧ godmorecertain → ∀x (knownbygod(x) → necbe(x))"; aquinas-known-necessary.logic.r3.3 has nothing from it; they differ when only "the knowledge of God is much more certain than ours" is true, which the second allows
+aquinas-known-necessary.logic.r3: argue/readings: U1: aquinas-known-necessary.logic.r3 and aquinas-known-necessary.logic.r3.2 take for granted "if ((for every x, if x is known by us (what we ourselves know), then x must necessarily be) and the knowledge of God is much more certain than ours), then (for every x, if x is known by God, then x must necessarily be)"; aquinas-known-necessary.logic.r3.3 does not
+aquinas-known-necessary.logic.r3: argue/answered: U1: answered yes, which keeps aquinas-known-necessary.logic.r3 and aquinas-known-necessary.logic.r3.2, to: Does the text's argument take this for granted, whether or not it says so: "if ((for every x, if x is known by us (what we ourselves know), then x must necessarily be) and the knowledge of God is much more certain than ours), then (for every x, if x is known by God, then x must necessarily be)"? Answer yes if the author would accept it as part of the argument.
+aquinas-known-necessary.logic.r3: argue/verdicts: valid as aquinas-known-necessary.logic.r3, aquinas-known-necessary.logic.r3.2 read it, not as the others do: which reading is right decides the verdict
+aquinas-known-necessary.logic.r3: argue/readings-agree 3
+aquinas-known-necessary.logic.r3: argue/readings-differ 1
+aquinas-known-necessary.logic.r3: argue/verdicts-agree 0
+aquinas-known-necessary.logic.r3: argue/mismatches 0
+aquinas-known-necessary.logic.r3.2: argue/mismatches 0
+aquinas-known-necessary.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-known-necessary.logic.r3
+# argument written to aquinas-known-necessary.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+aquinas-known-necessary.md:1: argue/assumed: C1 (S2): follows only by A1, which the text never states: state it, or argue for it
+aquinas-known-necessary.md:1: argue/own-sentence: C1 (S2): needs P1 and P2, read from the conclusion's own sentence: check that S2 gives them as its reason and does not conclude them
+aquinas-known-necessary.logic.r3: argue/valid 1

@@ -1,0 +1,17 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+aquinas-known-necessary.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aquinas-known-necessary.logic.r1 has nothing from it; aquinas-known-necessary.logic.r1.2 and aquinas-known-necessary.logic.r1.3 have "(known_us → □is) ∧ god_more_certain → (known_god → □is)"; they differ when only "the contingent future thing is known by God" and "the knowledge of God is much more certain than ours" are true, which the first allows
+aquinas-known-necessary.logic.r1: argue/readings: U1: aquinas-known-necessary.logic.r1.2 and aquinas-known-necessary.logic.r1.3 take for granted "if ((if the contingent future thing is known by us, then necessarily, the contingent future thing is (comes to be)) and the knowledge of God is much more certain than ours), then (if the contingent future thing is known by God, then necessarily, the contingent future thing is (comes to be))"; aquinas-known-necessary.logic.r1 does not [in 2 of 3 runs]
+aquinas-known-necessary.logic.r1: argue/answered: U1: answered yes, which keeps aquinas-known-necessary.logic.r1.2 and aquinas-known-necessary.logic.r1.3, to: Does the text's argument take this for granted, whether or not it says so: "if ((if the contingent future thing is known by us, then necessarily, the contingent future thing is (comes to be)) and the knowledge of God is much more certain than ours), then (if the contingent future thing is known by God, then necessarily, the contingent future thing is (comes to be))"? Answer yes if the author would accept it as part of the argument. [in 2 of 3 runs]
+aquinas-known-necessary.md:1: argue/unfaithful: aquinas-known-necessary.logic.r1 P1 (S2): the sentence has no word of "the contingent future thing is (comes to be)": is it the sentence P1 came from? [in 2 of 3 runs]
+aquinas-known-necessary.logic.r1: argue/verdicts: valid as aquinas-known-necessary.logic.r1.2, aquinas-known-necessary.logic.r1.3 read it, not as the others do: which reading is right decides the verdict [in 2 of 3 runs]
+# kept the reading that best fits the words and the other readings: aquinas-known-necessary.logic.r1.2
+# argument written to aquinas-known-necessary.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-known-necessary.md:1: argue/unfaithful: P1 (S2): the sentence has no word of "the contingent future thing is (comes to be)": is it the sentence P1 came from? [in 2 of 3 runs]
+aquinas-known-necessary.md:1: argue/unfaithful: C1 (S2): the sentence has no word of "the contingent future thing is (comes to be)": is it the sentence C1 came from? [in 2 of 3 runs]
+aquinas-known-necessary.md:1: argue/assumed: C1 (S2): follows only by A1, which the text never states: state it, or argue for it [in 2 of 3 runs]
+aquinas-known-necessary.md:1: argue/own-sentence: C1 (S2): needs P1 and P2, read from the conclusion's own sentence: check that S2 gives them as its reason and does not conclude them
+aquinas-known-necessary.logic.r1: argue/valid 1
+aquinas-known-necessary.logic: argue/runs-agree 1

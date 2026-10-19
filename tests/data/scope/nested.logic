@@ -1,0 +1,8 @@
+logic	s5
+atom	certain	God's knowledge is certain
+atom	foresees	God foresees that I will sit
+atom	sit	I will sit
+P1	S1	certain -> (foresees -> []sit)
+P2	S2	foresees
+P3	S2	certain
+C	S3	[]sit

@@ -1,0 +1,13 @@
+# reading 2 of aquinas-will-antecedent.md by claude-opus-5-5
+# S2 reads "necessary absolutely" as [] of the thing's coming to pass.
+# S4's "every true conditional statement is necessary" is read as necessity of the whole, [](wills -> comes).
+logic	s5
+atom	wills	God wills the thing
+atom	comes	the thing comes to pass
+atom	nec_ante	the thing is necessary by its antecedent cause
+P1	S2	nec_ante → □comes
+P2	S3	wills → nec_ante
+P3	S4	wills → comes
+P4	S4	□(wills → comes)
+C	S5	wills → □comes	from P1 P2 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

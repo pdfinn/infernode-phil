@@ -1,0 +1,36 @@
+# phil/scope (no model), 19 October 2026, over readings already made:
+# the gold set's under argue a036b21b8816 (gold) and 48e3990c5a0a
+# (gold2), the breadth sample's, and the held-out scope set's, read
+# with argue 48e3990c5a0a, -n 3 -k 3, the same day.  Premises read as
+# conceptual taken as necessary.  found: argue/scope at the premise
+# the author who answers it names; no: nothing, and why.  Every
+# finding on a passage whose gold is not scope is listed, with whether
+# it is defensible.
+# set	passage	run	judged	why
+gold	boethius-foreknowledge	1	found	P1 (S2): foresees → □happens; on the whole, C1 fails
+gold	boethius-foreknowledge	2	found	as run 1
+gold	boethius-foreknowledge	3	found	as run 1
+gold2	boethius-foreknowledge	1	found	as gold
+gold2	boethius-foreknowledge	2	found	P1 and P2 (◇¬happens → ¬foreknows, the same claim) turned over together: each alone gives what the other does
+gold2	boethius-foreknowledge	3	found	as run 1
+heldout-scope	aquinas-known-necessary	1	found	P1 (S2): what we know is necessary, known → □is, the premise the a fortiori rests on
+heldout-scope	aquinas-known-necessary	2	found	P3 (S2), the necessity in the consequent of a nested conditional (known by God → □be)
+heldout-scope	aquinas-known-necessary	3	no	the reading writes "must necessarily be" as a predicate, necbe(x), not with □: no scope to turn
+heldout-scope	aquinas-providence-necessary	1	no	the reading writes the necessity into atoms (happens_from_necessity): no scope to turn
+heldout-scope	aquinas-providence-necessary	2	found	P2 (S2): a per se cause → □happens
+heldout-scope	aquinas-providence-necessary	3	found	as run 2
+heldout-scope	aquinas-will-antecedent	1	found	P1 (S2): necessary by its antecedent cause → □comes
+heldout-scope	aquinas-will-antecedent	2	found	as run 1, and P5, "every true conditional is necessary"
+heldout-scope	aquinas-will-antecedent	3	found	as run 1
+heldout-scope	aquinas-will-necessary	1	found	P3 (S3): wills → □saved
+heldout-scope	aquinas-will-necessary	2	found	the conclusion restates P4, wills → □saved; on the whole it does not follow
+heldout-scope	aquinas-will-necessary	3	found	as run 2
+gold	aquinas-first-way	2	defensible	an assumption the reader added: from what motion is to the necessity that nothing moves itself; the hinge is in the reader's assumption
+gold	aquinas-first-way	3	defensible	as run 2
+gold2	aquinas-first-way	1	defensible	as gold
+gold	berkeley-principles-4	1	defensible	the reader's bridging assumption (A1), already the equivocation on "perceive"
+gold2	berkeley-principles-4	2	defensible	as gold
+breadth	aristotle-politics-4	1	defensible	"there must necessarily be as many forms of government": a necessity of the consequence read on the consequent; the hinge is the text's
+breadth	aristotle-politics-4	2	defensible	as run 1
+breadth	aquinas-st-i-3	2	defensible	the reader's assumption (A1): will as inclination, so necessarily not against it
+breadth	(nine runs, seven passages)	-	ought	if a fact holds, one ought to do a thing (Locke on the duration of marriage, Mill on liberty, Hobbes on definitions, Aristotle's Ethics and Politics): the narrow ought that every argument from facts to duties reads; real, but everywhere in such arguments
