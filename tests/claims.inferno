@@ -1,0 +1,23 @@
+#!/dis/sh.dis
+# claims.inferno phildir wwbdir port - phil/claims on data/claims/source
+# against tests/fakellm.py answering with data/claims/replies; run by
+# tests/claims_test.sh.
+load std
+
+phil=$1
+wwb=${hd ${tl $*}}
+port=${hd ${tl ${tl $*}}}
+bind -a '#I' /net
+ndb/cs
+run $phil/philns $phil $wwb
+wwbmodel='openai http://127.0.0.1:'^$port^'/v1'
+cd $phil/tests
+mkdir -p out
+rm -f out/source.claims
+phil/claims -m fake-model -o out/source.claims data/claims/source.md
+echo '#' status $status
+echo '#' the claims
+cat out/source.claims
+echo '#' files
+ls out | grep 'source\.claims\.'
+echo halt > /dev/sysctl

@@ -23,7 +23,8 @@
 # -K names lines to put before the reader's own (atoms it may use
 # without declaring them; its own declaration, after, wins).
 #
-# With -c, checker is a command given the reading's file, and the
+# With -c, checker is a command (with its options, if any: -c
+# 'phil/readable -n') given the reading's file, and the
 # document it reads (-d); what it prints is what is wrong with the
 # reading, and nothing means it can be read (phil/readable, for a
 # logic file).
@@ -170,7 +171,7 @@ fn mend {
 		tries=()
 	}
 	for try in $tries {
-		$checker $target $doc > $target^.wrong >[2=1]
+		${split ' ' $checker} $target $doc > $target^.wrong >[2=1]
 		unreadable=()
 		if {ftest -s $target^.wrong} {
 			unreadable=1

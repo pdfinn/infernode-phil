@@ -1,0 +1,92 @@
+#!/dis/sh.dis
+# phil/claims [-m model] [-r a-b] [-V vocab] [-o logicfile] file - what
+# a document claims: every claim it asserts and every claim it gives as
+# another's, written down by a language model as a logic file with no
+# conclusion (a premise a claim, with its sentence, says and kind as
+# argue writes them), by a reader of its own (phil/read, blinded), with
+# the instructions in /lib/phil/claims.  It is the reading of a source
+# phil/corpus holds reports to: an argument's reading (phil/argue)
+# keeps only what one argument uses, and a claim the source makes
+# elsewhere would be missing from it.  -V gives the reader atoms to use
+# where they fit (another work's); -r reads only those sentences.  The
+# file is written to logicfile (file.claims by default), its formulas
+# in logic's symbols.
+load std
+
+fn usage {
+	echo 'usage: phil/claims [-m model] [-r a-b] [-V vocab] [-o logicfile] file' >[1=2]
+	raise fail:usage
+}
+
+m=()
+r=()
+vocab=()
+logic=()
+args=$*
+while {~ ${hd $args} -*} {
+	opt=${hd $args}
+	args=${tl $args}
+	if {~ $opt -m -r -V -o} {
+		if {~ $#args 0} {usage}
+		if {~ $opt -m} {
+			m=(-m ${hd $args})
+		} {~ $opt -r} {
+			r=(-r ${hd $args})
+		} {~ $opt -V} {
+			vocab=${hd $args}
+		} {
+			logic=${hd $args}
+		}
+		args=${tl $args}
+	} {
+		usage
+	}
+}
+if {! ~ $#args 1} {usage}
+f=${hd $args}
+if {! ftest -f $f} {
+	echo 'phil/claims: no file '^$f >[1=2]
+	raise 'fail:no file'
+}
+if {~ $#logic 0} {
+	logic=$f^.claims
+}
+who=`{wwb/ask -n $m}
+if {~ $#who 0} {
+	raise 'fail:no model'
+}
+who=$"who
+
+{
+	echo 'The sentences, numbered:'
+	echo
+	wwb/sentences -m -t $r $f
+} > $logic^.sents
+{
+	cat $logic^.sents
+	if {! ~ $#vocab 0} {
+		echo
+		echo 'Use these atoms where they fit, and add others for claims they do not'
+		echo 'cover; write their lines and then the statements:'
+		echo
+		cat $vocab
+	}
+} > $logic^.question
+pre=()
+if {! ~ $#vocab 0} {
+	pre=(-K $vocab)
+}
+phil/read $m $pre -c 'phil/readable -n' -d $f -r $logic^.sents -H 'the claims of '^$f^' as '^$who^' read them: check that they say what the text says' -o $logic /lib/phil/claims $logic^.question
+st=$status
+rm -f $logic^.question $logic^.sents
+# in logic's symbols, as argue keeps a reading; left as it is if the
+# prover cannot read it
+if {phil/prove -f $logic > $logic^.tidy >[2] /dev/null} {
+	mv $logic^.tidy $logic
+} {
+	rm -f $logic^.tidy
+}
+if {! ~ $st ''} {
+	raise $st
+}
+exit

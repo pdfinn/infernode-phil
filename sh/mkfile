@@ -4,6 +4,7 @@
 # finds them as phil/name.
 SCRIPTS=\
 	argue\
+	claims\
 	read\
 	readable\
 	scope\

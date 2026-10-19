@@ -1,13 +1,21 @@
 #!/dis/sh.dis
-# phil/readable logicfile [document] - what makes a logic file one the
-# prover cannot read: a syntax error, a statement without a sentence
+# phil/readable [-n] logicfile [document] - what makes a logic file one
+# the prover cannot read: a syntax error, a statement without a sentence
 # the document has, no conclusion, a name twice, an atom undeclared.
-# Nothing printed means it can be read.  phil/read's checker for the
-# readings argue asks for.
+# With -n a file need have no conclusion: a reading of what a work
+# claims (phil/claims), not of an argument.  Nothing printed means it
+# can be read.  phil/read's checker for the readings argue asks for.
 load std
-if {! ~ $#* 1 2} {
-	echo 'usage: phil/readable logicfile [document]' >[1=2]
+# (in a block, $* is the block's own: the arguments are kept first)
+args=$*
+which='(argue/syntax|argue/no-sentence|argue/no-conclusion|argue/duplicate|argue/undefined)'
+if {~ ${hd $args} -n} {
+	which='(argue/syntax|argue/no-sentence|argue/duplicate|argue/undefined)'
+	args=${tl $args}
+}
+if {! ~ $#args 1 2} {
+	echo 'usage: phil/readable [-n] logicfile [document]' >[1=2]
 	raise fail:usage
 }
-phil/prove $* >[2=1] | grep '(argue/syntax|argue/no-sentence|argue/no-conclusion|argue/duplicate|argue/undefined)'
+phil/prove $args >[2=1] | grep $which
 exit

@@ -1,6 +1,8 @@
 #!/bin/sh
 # bench/pairs.sh dir results - each attribution pair in dir read and
-# checked: the source (primary) read by phil/argue -k 3; the commentary
+# checked: the source (primary) read for everything it claims
+# (phil/claims), not for one argument, since a report may be of any of
+# its claims; the commentary
 # read the same way given the source's atoms (-V), so that its reports
 # of the source's claims use the source's names; then a corpus of the
 # two, the shared atoms the source's, aligned by name (provenance
@@ -19,7 +21,7 @@ for p in "$dir"/*/; do
 	sec=$(awk -F'\t' '$3 == "secondary" {print $1}' "$c/works")
 	(
 	cd "$c"
-	"$here/phil" argue -k 3 -m "$model" -o "$prim.logic" "$prim.md" > "$prim.out" 2>&1
+	"$here/phil" claims -m "$model" -o "$prim.logic" "$prim.md" > "$prim.out" 2>&1
 	grep '^atom	' "$prim.logic" > vocab
 	"$here/phil" argue -k 3 -m "$model" -V vocab -o "$sec.logic" "$sec.md" > "$sec.out" 2>&1
 	cp vocab atoms

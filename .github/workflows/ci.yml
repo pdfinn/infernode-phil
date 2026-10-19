@@ -107,6 +107,10 @@ jobs:
       working-directory: infernode-phil
       run: tests/senses_test.sh
 
+    - name: phil/claims, what a source claims
+      working-directory: infernode-phil
+      run: tests/claims_test.sh
+
     - name: phil/read's readers blinded
       working-directory: infernode-phil
       run: tests/read_test.sh

@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -188,7 +188,26 @@ phil, argue, prove, join, map, tableau, read, settle, senses, scope, readable, c
 .I document
 .I logicfile
 .br
+.B phil/claims
+[
+.B -m
+.I model
+] [
+.B -r
+.IB a - b
+] [
+.B -V
+.I vocab
+] [
+.B -o
+.I logicfile
+]
+.I file
+.br
 .B phil/readable
+[
+.B -n
+]
 .I logicfile
 [
 .I document
@@ -519,10 +538,37 @@ says so, with both readings.
 Which the sentence means, and which is true, is not the prover's to
 say; no model is asked.
 .TP
+.B phil/claims
+What a document claims: every claim it asserts and every claim it gives
+as another's, written down by a reader of its own
+.RI ( read ,
+blinded, with the instructions in
+.BR /lib/phil/claims )
+as a logic file with no conclusion, its premises carrying
+.B says
+and
+.B kind
+as
+.I argue
+writes them.
+It is the reading of a source that
+.I corpus
+holds reports to: a reading of one argument keeps only what that
+argument uses.
+.B -V
+gives atoms to use where they fit;
+.B -r
+reads only those sentences.
+.TP
 .B phil/readable
 What makes a logic file one the prover cannot read: a syntax error, a
 statement without a sentence the document has, no conclusion, a name
 twice, an atom undeclared.
+With
+.B -n
+a file need have no conclusion, as a reading by
+.I claims
+has none.
 Nothing printed means it can be read.
 It is the checker
 .I argue
@@ -1296,6 +1342,11 @@ joins a work's parts
 instructions to the model when
 .I argue
 asks which reading is right
+.TP
+.B /lib/phil/claims
+instructions to the model when
+.I claims
+reads what a document claims
 .TP
 .B /lib/phil/senses
 instructions to the model when
