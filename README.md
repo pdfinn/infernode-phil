@@ -58,7 +58,9 @@ problem.
 
 ## What is to come
 
-The design for the rest is in three documents:
+Where the tools stand, and what published work says about the hard
+parts, is [docs/STATUS.md](docs/STATUS.md). The design for the rest is
+in three documents:
 
 - [docs/PHIL.md](docs/PHIL.md): the collection, the two ways it uses a
   model (blinded readings under one protocol; a driver composing the
