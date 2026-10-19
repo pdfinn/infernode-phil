@@ -1,0 +1,6 @@
+source	D. Hume, Enquiry concerning Human Understanding (1748), sect. X
+text	Project Gutenberg ebook 9662, https://www.gutenberg.org/ebooks/9662
+class	inference
+at	S6	There must, therefore, be a uniform experience against every miraculous event
+fault	question-begging: that experience against miracles is uniform is drawn from the definition of a miracle, which presupposes that no testimony to one is part of experience
+reference	J. Earman, Hume's Abject Failure (2000); W. Paley, Evidences of Christianity (1794)

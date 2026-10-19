@@ -1,0 +1,1 @@
+Reply Obj. 2: Nothing hinders a thing from being in act in a certain respect, so that it can act; and in a certain respect deficient in act, so as to cause a deficient act. Thus a blind man has in act the power of walking, whereby he is able to walk; but inasmuch as he is deprived of sight he suffers a defect in walking by stumbling when he walks.

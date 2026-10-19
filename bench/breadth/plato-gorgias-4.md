@@ -1,0 +1,1 @@
+SOCRATES: And must we not have the same end in view in the treatment of our city and citizens? Must we not try and make them as good as possible? For we have already discovered that there is no use in imparting to them any other good, unless the mind of those who are to have the good, whether money, or office, or any other sort of power, be gentle and good. Shall we say that?

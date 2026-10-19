@@ -1,0 +1,6 @@
+source	Thomas Aquinas, Summa Theologica I, tr. Fathers of the English Dominican Province (1920), q.2 a.3
+text	Project Gutenberg ebook 17611, https://www.gutenberg.org/ebooks/17611
+class	inference
+at	S4	Therefore, if everything is possible not to be, then at one time there could have been nothing in existence
+fault	quantifier shift: from "each contingent thing at some time does not exist" to "at some time nothing exists"
+reference	A. Kenny, The Five Ways (1969), ch. 4; P. Geach, in Three Philosophers (1961)

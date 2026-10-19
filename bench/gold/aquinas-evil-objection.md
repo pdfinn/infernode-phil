@@ -1,0 +1,1 @@
+Objection 1: It seems that God does not exist; because if one of two contraries be infinite, the other would be altogether destroyed. But the word "God" means that He is infinite goodness. If, therefore, God existed, there would be no evil discoverable; but there is evil in the world. Therefore God does not exist.

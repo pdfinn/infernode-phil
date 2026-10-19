@@ -1,0 +1,6 @@
+source	Boethius, Consolation of Philosophy V.3, tr. H. R. James (1897)
+text	Project Gutenberg ebook 14328, https://www.gutenberg.org/ebooks/14328
+class	inference
+at	S2	For if God foresees everything, and can in no wise be deceived
+fault	modal scope: from "necessarily, if God foresees it, it happens" to "if God foresees it, it necessarily happens"
+reference	Aquinas, Summa Contra Gentiles I.67; standard as the fallacy of necessity of the consequence and of the consequent

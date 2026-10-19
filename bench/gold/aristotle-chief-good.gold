@@ -1,0 +1,6 @@
+source	Aristotle, Nicomachean Ethics I.1, tr. D. P. Chase
+text	Project Gutenberg ebook 8438, https://www.gutenberg.org/ebooks/8438
+class	inference
+at	S1	Every art, and every science reduced to a teachable form
+fault	quantifier shift: from "every action aims at some good" to "there is some good at which every action aims"
+reference	P. Geach, "History of a Fallacy" (1958); G. E. M. Anscombe

@@ -1,0 +1,6 @@
+source	Plato, Phaedo 70c-72a, tr. B. Jowett
+text	Project Gutenberg ebook 1658, https://www.gutenberg.org/ebooks/1658
+class	equivocation
+at	S39	Then the living, whether things or persons, Cebes, are generated from the dead?
+fault	"generated from its opposite" holds of comparatives (larger from smaller) and is extended to contradictories (living, dead), where it does not
+reference	D. Gallop, Plato: Phaedo (1975), notes on 70c-72e

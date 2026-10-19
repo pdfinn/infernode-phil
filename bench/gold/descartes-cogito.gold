@@ -1,0 +1,6 @@
+source	R. Descartes, Discourse on Method (1637), part IV, tr. J. Veitch
+text	Project Gutenberg ebook 59, https://www.gutenberg.org/ebooks/59
+class	inference
+at	S1	But immediately upon this I observed
+fault	read as an inference, it needs the unstated premise that whatever thinks exists (Descartes, Second Replies, denies it is a syllogism)
+reference	P. Gassendi, Fifth Objections; J. Hintikka, "Cogito, ergo sum: inference or performance?" (1962)

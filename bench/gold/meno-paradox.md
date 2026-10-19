@@ -1,0 +1,1 @@
+I know, Meno, what you mean; but just see what a tiresome dispute you are introducing. You argue that a man cannot enquire either about that which he knows, or about that which he does not know; for if he knows, he has no need to enquire; and if not, he cannot; for he does not know the very subject about which he is to enquire

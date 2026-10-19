@@ -1,0 +1,1 @@
+Are we then to suppose, that while carpenter and cobbler have certain works and courses of action, Man as Man has none, but is left by Nature without a work? or would not one rather hold, that as eye, hand, and foot, and generally each of his members, has manifestly some special work; so too the whole Man, as distinct from all these, has some work of his own?

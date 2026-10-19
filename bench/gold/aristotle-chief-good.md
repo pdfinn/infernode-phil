@@ -1,0 +1,1 @@
+Every art, and every science reduced to a teachable form, and in like manner every action and moral choice, aims, it is thought, at some good: for which reason a common and by no means a bad description of the Chief Good is, “that which all things aim at.
