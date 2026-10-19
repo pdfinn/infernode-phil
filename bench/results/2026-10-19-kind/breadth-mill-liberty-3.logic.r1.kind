@@ -1,0 +1,6 @@
+results/breadth/mill-liberty-3.logic.r1:11: kind/rule: A5: empirical (left, in the past tense)
+results/breadth/mill-liberty-3.logic.r1:15: kind/rule: A2: empirical (feel)
+results/breadth/mill-liberty-3.logic.r1:18: kind/rule: A3: empirical (feel)
+results/breadth/mill-liberty-3.logic.r1:20: kind/rule: P3 (S9): empirical (was, in the past tense); read empirical
+results/breadth/mill-liberty-3.logic.r1:22: kind/rule: A4: normative (ought in the formula)
+results/breadth/mill-liberty-3.logic.r1: kind/tagged 5

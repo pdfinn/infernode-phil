@@ -1,0 +1,7 @@
+results/breadth/plato-gorgias-3.logic.r1:17: kind/rule: A1: normative (virtue)
+results/breadth/plato-gorgias-3.logic.r1:19: kind/rule: P2 (S2): normative (ought in the formula); read normative
+results/breadth/plato-gorgias-3.logic.r1:20: kind/rule: P3 (S3): normative (justice); read normative
+results/breadth/plato-gorgias-3.logic.r1:21: kind/rule: P4 (S4): normative (blame); read empirical
+results/breadth/plato-gorgias-3.logic.r1:22: kind/rule: P5 (S5): normative (praise); read empirical
+results/breadth/plato-gorgias-3.logic.r1:24: kind/rule: P7 (S6): empirical (custom)
+results/breadth/plato-gorgias-3.logic.r1: kind/tagged 6

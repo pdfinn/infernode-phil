@@ -1,0 +1,4 @@
+results/gold2/mill-proof.logic.r2:20: kind/rule: P1 (S1): empirical (seen)
+results/gold2/mill-proof.logic.r2:21: kind/rule: P2 (S2): empirical (actually)
+results/gold2/mill-proof.logic.r2:22: kind/rule: P3 (S3): normative (desirable)
+results/gold2/mill-proof.logic.r2: kind/tagged 3

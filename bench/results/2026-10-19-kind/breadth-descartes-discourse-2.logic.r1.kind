@@ -1,0 +1,9 @@
+results/breadth/descartes-discourse-2.logic.r1:13: kind/rule: P1 (S1): empirical (received, in the past tense)
+results/breadth/descartes-discourse-2.logic.r1:14: kind/rule: P2 (S2): empirical (received, in the past tense); read empirical
+results/breadth/descartes-discourse-2.logic.r1:18: kind/rule: P6 (S3): empirical (appears); read empirical
+results/breadth/descartes-discourse-2.logic.r1:19: kind/rule: A1: empirical (custom)
+results/breadth/descartes-discourse-2.logic.r1:21: kind/rule: P7 (S5): empirical (found)
+results/breadth/descartes-discourse-2.logic.r1:22: kind/rule: P8 (S5): empirical (found)
+results/breadth/descartes-discourse-2.logic.r1:24: kind/rule: P9 (S6): normative (worthy); read empirical
+results/breadth/descartes-discourse-2.logic.r1:25: kind/rule: A2: normative (worthy)
+results/breadth/descartes-discourse-2.logic.r1: kind/tagged 8

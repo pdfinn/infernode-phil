@@ -1,0 +1,8 @@
+results/breadth/plato-republic-1.logic.r2:19: kind/rule: P1 (S1): normative (injustice)
+results/breadth/plato-republic-1.logic.r2:20: kind/rule: P2 (S1): normative (injustice)
+results/breadth/plato-republic-1.logic.r2:21: kind/rule: P3 (S1): normative (justice)
+results/breadth/plato-republic-1.logic.r2:23: kind/rule: A1: normative (justice)
+results/breadth/plato-republic-1.logic.r2:25: kind/rule: P4 (S3): normative (just); read empirical
+results/breadth/plato-republic-1.logic.r2:26: kind/rule: P5 (S3): normative (unjust)
+results/breadth/plato-republic-1.logic.r2:27: kind/rule: P6 (S5): normative (unjust); read empirical
+results/breadth/plato-republic-1.logic.r2: kind/tagged 7

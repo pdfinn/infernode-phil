@@ -1,0 +1,4 @@
+results/gold2/berkeley-master.logic.r2:13: kind/rule: P1 (S2): empirical (perceive)
+results/gold2/berkeley-master.logic.r2:15: kind/rule: P2 (S3): empirical (perceive)
+results/gold2/berkeley-master.logic.r2:23: kind/rule: A2: empirical (shows)
+results/gold2/berkeley-master.logic.r2: kind/tagged 3

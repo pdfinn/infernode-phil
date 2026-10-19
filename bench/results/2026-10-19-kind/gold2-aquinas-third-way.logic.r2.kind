@@ -1,0 +1,4 @@
+results/gold2/aquinas-third-way.logic.r2:17: kind/rule: P1 (S2): empirical (found); read empirical
+results/gold2/aquinas-third-way.logic.r2:18: kind/rule: P2 (S2): empirical (found)
+results/gold2/aquinas-third-way.logic.r2:23: kind/rule: P5 (S5): empirical (was, in the past tense)
+results/gold2/aquinas-third-way.logic.r2: kind/tagged 3

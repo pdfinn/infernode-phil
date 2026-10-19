@@ -1,0 +1,4 @@
+results/gold2/descartes-cogito.logic.r1:8: kind/rule: P1 (S1): conceptual (necessity in the formula)
+results/gold2/descartes-cogito.logic.r1:9: kind/rule: P2 (S1): empirical (was, in the past tense); read empirical
+results/gold2/descartes-cogito.logic.r1:12: kind/rule: A1: normative (ought in the formula); read normative
+results/gold2/descartes-cogito.logic.r1: kind/tagged 3

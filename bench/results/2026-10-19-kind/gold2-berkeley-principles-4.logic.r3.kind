@@ -1,0 +1,4 @@
+results/gold2/berkeley-principles-4.logic.r3:10: kind/rule: P1 (S3): empirical (perceive); read conceptual
+results/gold2/berkeley-principles-4.logic.r3:11: kind/rule: P2 (S3): empirical (perceive)
+results/gold2/berkeley-principles-4.logic.r3:12: kind/rule: P3 (S3): empirical (perceived); read conceptual
+results/gold2/berkeley-principles-4.logic.r3: kind/tagged 3

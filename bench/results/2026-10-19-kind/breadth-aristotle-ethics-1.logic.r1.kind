@@ -1,0 +1,5 @@
+results/breadth/aristotle-ethics-1.logic.r1:8: kind/rule: P1 (S2): conceptual (defined); read conceptual
+results/breadth/aristotle-ethics-1.logic.r1:9: kind/rule: P2 (S2): empirical (feel); read empirical
+results/breadth/aristotle-ethics-1.logic.r1:11: kind/rule: P3 (S3): conceptual (defined)
+results/breadth/aristotle-ethics-1.logic.r1:17: kind/rule: A1: normative (virtue); read conceptual
+results/breadth/aristotle-ethics-1.logic.r1: kind/tagged 4

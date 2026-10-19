@@ -1,0 +1,8 @@
+results/gold2/hume-induction.logic.r2:13: kind/rule: A2: empirical (experience)
+results/gold2/hume-induction.logic.r2:14: kind/rule: P1 (S1): empirical (experience); read conceptual
+results/gold2/hume-induction.logic.r2:15: kind/rule: P2 (S2): conceptual (contradiction)
+results/gold2/hume-induction.logic.r2:16: kind/rule: P3 (S2): conceptual (contradiction); read conceptual
+results/gold2/hume-induction.logic.r2:18: kind/rule: P5 (S5): conceptual (contradiction); read conceptual
+results/gold2/hume-induction.logic.r2:21: kind/rule: P6 (S8): empirical (experience)
+results/gold2/hume-induction.logic.r2:22: kind/rule: P7 (S9): empirical (experience)
+results/gold2/hume-induction.logic.r2: kind/tagged 7

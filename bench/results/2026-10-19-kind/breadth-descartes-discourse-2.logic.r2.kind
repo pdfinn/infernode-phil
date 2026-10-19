@@ -1,0 +1,7 @@
+results/breadth/descartes-discourse-2.logic.r2:14: kind/rule: P4 (S3): empirical (appears); read empirical
+results/breadth/descartes-discourse-2.logic.r2:15: kind/rule: A1: empirical (custom)
+results/breadth/descartes-discourse-2.logic.r2:17: kind/rule: P5 (S5): empirical (found); read empirical
+results/breadth/descartes-discourse-2.logic.r2:18: kind/rule: P6 (S5): empirical (found)
+results/breadth/descartes-discourse-2.logic.r2:20: kind/rule: P7 (S6): normative (worthy); read empirical
+results/breadth/descartes-discourse-2.logic.r2:22: kind/rule: A2: normative (worthy)
+results/breadth/descartes-discourse-2.logic.r2: kind/tagged 6

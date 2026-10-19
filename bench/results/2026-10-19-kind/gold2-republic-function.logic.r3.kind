@@ -1,0 +1,8 @@
+results/gold2/republic-function.logic.r3:17: kind/rule: P2 (S8): normative (unjust)
+results/gold2/republic-function.logic.r3:18: kind/rule: P3 (S10): normative (just)
+results/gold2/republic-function.logic.r3:19: kind/rule: P4 (S12): normative (unjust); read conceptual
+results/gold2/republic-function.logic.r3:21: kind/rule: A1: normative (just)
+results/gold2/republic-function.logic.r3:22: kind/rule: A2: normative (unjust)
+results/gold2/republic-function.logic.r3:24: kind/rule: P5 (S16): normative (unjust)
+results/gold2/republic-function.logic.r3:28: kind/rule: A3: normative (injustice)
+results/gold2/republic-function.logic.r3: kind/tagged 7

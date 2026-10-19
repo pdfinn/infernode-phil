@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, claims, says, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -209,6 +209,9 @@ phil, argue, claims, says, prove, join, map, tableau, read, settle, senses, scop
 .B -x
 ]
 .I document
+.br
+.B phil/kind
+.I logicfile
 .br
 .B phil/readable
 [
@@ -592,6 +595,24 @@ and not by an abstract noun's ending.
 Each report is a
 .B says/report
 finding at its sentence, with the person and the words that say so.
+.TP
+.B phil/kind
+What kind of claim each premise and assumption of a reading is, by
+rule, with no model:
+.B normative
+(an ought or permitted in its formula, or a word of duty, right, virtue,
+justice, praise or blame),
+.B conceptual
+(a necessity in its formula, or a word of meaning, definition, essence
+or contradiction), or
+.B empirical
+(a verb in the past tense, or a word of observing or experience), tried
+in that order on the words of the atoms its formula uses.
+A claim with none is left untagged.
+Each is a
+.B kind/rule
+finding at its line, with the word that decided it and the reader's own
+kind, where the reading gives one.
 .TP
 .B phil/readable
 What makes a logic file one the prover cannot read: a syntax error, a

@@ -1,0 +1,8 @@
+results/breadth/berkeley-principles-1.logic.r2:13: kind/rule: P1 (S2): empirical (appears)
+results/breadth/berkeley-principles-1.logic.r2:14: kind/rule: P2 (S2): empirical (appears); read empirical
+results/breadth/berkeley-principles-1.logic.r2:15: kind/rule: P3 (S2): empirical (appears)
+results/breadth/berkeley-principles-1.logic.r2:17: kind/rule: P5 (S3): empirical (settled, in the past tense)
+results/breadth/berkeley-principles-1.logic.r2:22: kind/rule: P9 (S5): empirical (appears); read empirical
+results/breadth/berkeley-principles-1.logic.r2:23: kind/rule: P10 (S5): empirical (appears)
+results/breadth/berkeley-principles-1.logic.r2:25: kind/rule: A1: empirical (settled, in the past tense)
+results/breadth/berkeley-principles-1.logic.r2: kind/tagged 7

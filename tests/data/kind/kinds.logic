@@ -1,0 +1,12 @@
+logic	kd
+atom	promise	you promised to repay
+atom	repay	you repay the debt
+atom	bachelor	a bachelor is by definition an unmarried man
+atom	sat	Caesar crossed the Rubicon
+atom	unjust	the unjust man is wretched
+atom	plain	the sky is blue
+P1	S1	promise -> ought repay	kind normative
+P2	S2	bachelor	kind conceptual
+P3	S3	sat	kind empirical
+P4	S4	unjust
+P5	S5	plain

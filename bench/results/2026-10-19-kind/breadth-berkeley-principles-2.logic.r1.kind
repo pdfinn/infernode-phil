@@ -1,0 +1,6 @@
+results/breadth/berkeley-principles-2.logic.r1:13: kind/rule: P2 (S1): empirical (perceived)
+results/breadth/berkeley-principles-2.logic.r1:16: kind/rule: P3 (S2): empirical (perceive)
+results/breadth/berkeley-principles-2.logic.r1:17: kind/rule: P4 (S2): empirical (perceive); read empirical
+results/breadth/berkeley-principles-2.logic.r1:21: kind/rule: P7 (S4): conceptual (meant)
+results/breadth/berkeley-principles-2.logic.r1:22: kind/rule: P8 (S5): conceptual (consists); read conceptual
+results/breadth/berkeley-principles-2.logic.r1: kind/tagged 5

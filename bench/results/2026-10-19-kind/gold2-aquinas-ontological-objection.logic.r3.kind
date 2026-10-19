@@ -1,0 +1,5 @@
+results/gold2/aquinas-ontological-objection.logic.r3:11: kind/rule: P1 (S2): conceptual (self-evident); read conceptual
+results/gold2/aquinas-ontological-objection.logic.r3:14: kind/rule: P4 (S6): empirical (actually); read conceptual
+results/gold2/aquinas-ontological-objection.logic.r3:17: kind/rule: A1: empirical (actually)
+results/gold2/aquinas-ontological-objection.logic.r3:20: kind/rule: A2: empirical (actually)
+results/gold2/aquinas-ontological-objection.logic.r3: kind/tagged 4

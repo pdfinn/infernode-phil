@@ -1,0 +1,7 @@
+results/breadth/kant-practical-1.logic.r2:12: kind/rule: P1 (S1): conceptual (contradiction)
+results/breadth/kant-practical-1.logic.r2:15: kind/rule: P4 (S1): conceptual (contradiction)
+results/breadth/kant-practical-1.logic.r2:17: kind/rule: P5 (S2): empirical (seen); read conceptual
+results/breadth/kant-practical-1.logic.r2:19: kind/rule: A1: conceptual (contradiction)
+results/breadth/kant-practical-1.logic.r2:22: kind/rule: P6 (S4): empirical (found); read empirical
+results/breadth/kant-practical-1.logic.r2:23: kind/rule: P7 (S4): empirical (found)
+results/breadth/kant-practical-1.logic.r2: kind/tagged 6

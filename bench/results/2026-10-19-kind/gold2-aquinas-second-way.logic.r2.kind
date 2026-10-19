@@ -1,0 +1,5 @@
+results/gold2/aquinas-second-way.logic.r2:18: kind/rule: P2 (S3): conceptual (necessity in the formula); read conceptual
+results/gold2/aquinas-second-way.logic.r2:21: kind/rule: P4 (S4): conceptual (necessity in the formula)
+results/gold2/aquinas-second-way.logic.r2:22: kind/rule: P5 (S5): conceptual (necessity in the formula); read conceptual
+results/gold2/aquinas-second-way.logic.r2:24: kind/rule: P6 (S7): conceptual (necessity in the formula)
+results/gold2/aquinas-second-way.logic.r2: kind/tagged 4

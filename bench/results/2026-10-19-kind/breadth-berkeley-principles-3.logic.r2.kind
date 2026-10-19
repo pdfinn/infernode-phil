@@ -1,0 +1,5 @@
+results/breadth/berkeley-principles-3.logic.r2:8: kind/rule: P1 (S3): empirical (perceives); read conceptual
+results/breadth/berkeley-principles-3.logic.r2:9: kind/rule: A1: empirical (perceives)
+results/breadth/berkeley-principles-3.logic.r2:11: kind/rule: A2: conceptual (necessity in the formula)
+results/breadth/berkeley-principles-3.logic.r2:13: kind/rule: A3: conceptual (necessity in the formula)
+results/breadth/berkeley-principles-3.logic.r2: kind/tagged 4

@@ -3,6 +3,7 @@
 TARG=\
 	corpus.dis\
 	join.dis\
+	kind.dis\
 	map.dis\
 	prove.dis\
 	says.dis\

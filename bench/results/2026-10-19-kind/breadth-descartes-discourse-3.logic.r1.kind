@@ -1,0 +1,7 @@
+results/breadth/descartes-discourse-3.logic.r1:13: kind/rule: P1 (S1): empirical (observed); read empirical
+results/breadth/descartes-discourse-3.logic.r1:14: kind/rule: P2 (S1): empirical (took, in the past tense); read empirical
+results/breadth/descartes-discourse-3.logic.r1:15: kind/rule: P3 (S1): empirical (found)
+results/breadth/descartes-discourse-3.logic.r1:17: kind/rule: P4 (S2): empirical (found)
+results/breadth/descartes-discourse-3.logic.r1:18: kind/rule: P5 (S2): empirical (had, in the past tense)
+results/breadth/descartes-discourse-3.logic.r1:20: kind/rule: P7 (S2): empirical (enabled, in the past tense)
+results/breadth/descartes-discourse-3.logic.r1: kind/tagged 6

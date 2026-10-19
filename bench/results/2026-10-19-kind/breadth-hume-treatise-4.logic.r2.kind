@@ -1,0 +1,8 @@
+results/breadth/hume-treatise-4.logic.r2:14: kind/rule: P1 (S1): normative (obligation); read conceptual
+results/breadth/hume-treatise-4.logic.r2:15: kind/rule: P2 (S4): normative (obligation)
+results/breadth/hume-treatise-4.logic.r2:16: kind/rule: A1: normative (obligation)
+results/breadth/hume-treatise-4.logic.r2:18: kind/rule: P3 (S2): empirical (declared, in the past tense)
+results/breadth/hume-treatise-4.logic.r2:19: kind/rule: A2: empirical (declared, in the past tense)
+results/breadth/hume-treatise-4.logic.r2:25: kind/rule: A4: normative (obligation)
+results/breadth/hume-treatise-4.logic.r2:28: kind/rule: P6 (S5): normative (obligation); read empirical
+results/breadth/hume-treatise-4.logic.r2: kind/tagged 7

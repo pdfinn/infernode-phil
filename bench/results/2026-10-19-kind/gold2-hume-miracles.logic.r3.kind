@@ -1,0 +1,5 @@
+results/gold2/hume-miracles.logic.r3:13: kind/rule: P2 (S1): empirical (experience)
+results/gold2/hume-miracles.logic.r3:14: kind/rule: P3 (S3): empirical (happens); read conceptual
+results/gold2/hume-miracles.logic.r3:16: kind/rule: A1: empirical (experience)
+results/gold2/hume-miracles.logic.r3:18: kind/rule: P4 (S7): empirical (experience)
+results/gold2/hume-miracles.logic.r3: kind/tagged 4
