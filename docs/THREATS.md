@@ -113,10 +113,11 @@ A driver, instructed or merely helpful, writes an `align` line, a
 `verdicts` line or a ledger entry as if a rule had made it; or edits a
 logic file so `prove` says valid.
 
-- **Verdicts are recomputed, never read.** `ledger` and `agenda` are
-  rules over the corpus files and are rebuilt; nothing reads a stored
-  verdict as a fact. `corpus/stale` names a line whose id no reading
-  has.
+- **Verdicts are recomputed, never read.** `phil/corpus` rebuilds
+  `claims` and its findings from the readings each run, and `phil/tree`
+  rewrites `tree/` whole; nothing reads a stored verdict as a fact.
+  `ledger` and `agenda` are designed the same way. `corpus/stale`, to
+  name a line whose id no reading has, is designed, not built.
 - **Provenance is written by the tool that made the line,** never by
   the driver: `readings k/n model hash date`, `hand who`, `agent name`.
   An `agent` line never outweighs a `hand` line, and a reader cannot
@@ -167,8 +168,10 @@ A provenance line names the wrong model; a reading made with one
 prompt is filed under another's hash; the host-command reader
 (`os claude -p`) was not blinded and its line does not say so.
 
-- **The hash is computed** from prompt, text and model, and a rerun
-  with the same three returns the kept reading.
+- **The hash is computed** from the prompt, and the provenance line
+  gives it with the model and the date. Not yet built: a hash over
+  prompt, text and model together, under which a rerun with the same
+  three would return the kept reading.
 - **The host-command reader says it was not confined**, by design
   (PHIL.md, step 0's leavings). A bench run that used it is marked.
 - **The provenance line should carry the decoding settings** too
@@ -198,14 +201,15 @@ word list changes `says` by rule; a changed text changes the bench.
 
 ### Cost
 
-A gold run is about 1,400 calls and 3.5 million tokens (RESULTS.md); a
+A gold run is about 1,400 calls and 3.5 million tokens, in and out (RESULTS.md); a
 thesis is hours. A driving agent that loops, or an instructed one, runs
 it again.
 
 - **`llmsrv`'s per-session limits**, and the task's budget in the
   brief.
-- **Readings are kept under their hash** and not remade for the same
-  prompt, text and model, so a rerun costs nothing.
+- **Readings kept under a hash of prompt, text and model,** so that a
+  rerun costs nothing: designed (above), not built. Today a rerun is
+  paid for again; the bench keeps its outputs by directory instead.
 - **Not covered.** A legitimate run that is large. RESULTS.md reports
   cost per run so it can be planned.
 
