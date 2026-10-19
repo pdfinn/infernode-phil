@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, claims, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, says, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -203,6 +203,12 @@ phil, argue, claims, prove, join, map, tableau, read, settle, senses, scope, rea
 .I logicfile
 ]
 .I file
+.br
+.B phil/says
+[
+.B -x
+]
+.I document
 .br
 .B phil/readable
 [
@@ -559,6 +565,33 @@ argument uses.
 gives atoms to use where they fit;
 .B -r
 reads only those sentences.
+.TP
+.B phil/says
+Whom a document gives its claims to, by rule, with no model: each
+sentence with a reporting verb and a named subject
+.RI ( "Hobbes argues that" ),
+the verb after a quotation
+.RI ( "says Mill" ),
+.IR "according to" ,
+a name's doctrine or words,
+.IR "as Bentham calls it" ,
+.IR "alleged by" ,
+.IR "learnt from" ;
+a pronoun given to the last name reported, and
+.I "it has been said"
+to no one named
+.RB ( - );
+the writer's own
+.RI ( "I hold" , " it must be said" )
+left out.
+Words are tagged by
+.IR wwb (1)'s
+tagger; a capitalized word is a name by its tag, by
+.BR /lib/words ,
+and not by an abstract noun's ending.
+Each report is a
+.B says/report
+finding at its sentence, with the person and the words that say so.
 .TP
 .B phil/readable
 What makes a logic file one the prover cannot read: a syntax error, a

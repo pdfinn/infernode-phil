@@ -64,7 +64,7 @@ problem.
 
 Where the tools stand, and what published work says about the hard
 parts, is [docs/STATUS.md](docs/STATUS.md). The design for the rest is
-in three documents:
+in four documents:
 
 - [docs/PHIL.md](docs/PHIL.md): the collection, the two ways it uses a
   model (blinded readings under one protocol; a driver composing the
@@ -75,6 +75,12 @@ in three documents:
   benchmark of settled debates to pass first.
 - [docs/REACH.md](docs/REACH.md): the problems the tools can and cannot
   reach.
+- [docs/MECHANICAL.md](docs/MECHANICAL.md): each place a model is called,
+  and the rule or small trained model that could do it instead, judged
+  by the bench.
+
+What the tools do on primary texts, and what was changed because of it,
+is [bench/RESULTS.md](bench/RESULTS.md).
 
 Every change to a prompt in `lib/phil` is checked live before and after,
 and recorded in [docs/PROMPT-CHANGES.md](docs/PROMPT-CHANGES.md).
