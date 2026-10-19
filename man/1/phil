@@ -1,0 +1,1016 @@
+.TH PHIL 1
+.SH NAME
+phil, argue, prove, join, map, tableau \- the Philosopher's Workbench, \(*fwb
+.SH SYNOPSIS
+.B run philns
+[
+.I dir
+[
+.I wwbdir
+]
+]
+.br
+.B phil/argue
+[
+.B -cjqwx
+] [
+.B -k
+.I readings
+] [
+.B -m
+.I model
+] [
+.B -n
+.I runs
+] [
+.B -o
+.I logicfile
+] [
+.B -p
+.I size
+] [
+.B -r
+.IB a - b
+] [
+.B -s
+.I mine
+] [
+.B -V
+.I vocab
+] [
+.B -E
+.I earlier
+]
+.I file
+.br
+.B phil/prove
+[
+.B -APevx
+]
+.I logicfile
+[
+.I document
+]
+.br
+.B phil/prove
+.B -p
+.I logicfile
+[
+.I document
+]
+.br
+.B phil/prove
+[
+.B -x
+]
+.B -c
+[
+.B -a
+.I answers
+] [
+.B -d
+.I document
+]
+.I logicfile ...
+.br
+.B phil/prove
+.B -t
+.I logicfile
+.br
+.B phil/prove
+[
+.B -A
+]
+.B -f
+.I logicfile
+.br
+.B phil/join
+[
+.B -a
+|
+.B -c
+|
+.B -t
+.I top
+]
+.I part.logic ...
+.br
+.B phil/map
+[
+.B -a
+] [
+.B -f
+.I findings
+]
+.I logicfile
+[
+.I document
+]
+.br
+.B phil/tableau
+[
+.I file ...
+]
+.SH DESCRIPTION
+These commands read an argument and decide what follows from it.
+A language model writes a document's argument down as a logic file;
+.I prove
+decides, by rule, whether its conclusion follows, and says what is
+wrong where it does not: the case that refutes it, the fallacy's name,
+the premise missing, the premise never stated, the objection left
+unanswered.
+The model reads; the rules decide.
+Each command writes one finding to a line as
+.IB file : line :
+.IB rule :
+.IR message ,
+the form of
+.IR wwb (1),
+so that Xenith and
+.IR acme (1)
+open it with button 3 and
+.IR wwb 's
+.IR gate ,
+.I delta
+and
+.I tally
+read it.
+.PP
+.I Philns
+puts the commands in the name space as
+.BI /dis/phil/ name ,
+run as
+.BI phil/ name ,
+and the same directory as
+.BR /dis/\(*fwb ;
+its prompts as
+.BR /lib/phil ;
+and this manual as
+.BR /man/1/phil .
+The workbench reads prose through the Writer's Workbench: its sentence
+numbering
+.RI ( wwb/sentences ),
+its prose library, and its way to a model
+.RI ( wwb/ask ,
+and
+.B $wwbmodel
+to choose one).
+If
+.B /dis/wwb
+is not in the name space,
+.I philns
+runs the
+.I wwbns
+of
+.IR wwbdir ,
+by default
+.B infernode-wwb
+beside
+.IR dir .
+.PP
+What the commands can and cannot do for a philosophical problem is in
+.BR docs/REACH.md ;
+the logic file is described in
+.BR docs/ARGUMENT-FORMAT.md .
+.TP
+.B phil/argue
+Has a language model write a document's argument as a logic file,
+given the sentences numbered and the instructions in
+.BR /lib/phil/argue ,
+then runs
+.I prove
+over it and the document.
+Only lines in the logic file's form are kept from the answer.
+A file the prover cannot read (a formula that does not parse, a sentence
+the document does not have, no conclusion) goes back to the model with
+the prover's complaints, twice at most, before it is proved.
+The model is told to write steps, objections and replies, and the logic
+.RB ( s5 ,
+.BR kd )
+where the text calls for them.
+With
+.B -s
+.IR mine ,
+the writer's own logic file for the document, the model reads the text
+cold, given only that file's atoms, and
+.I prove -c
+sets its reading beside the writer's, sentence by sentence: where they
+differ is where the prose does not say what its writer meant.
+Write the argument first, then the prose, then this.
+With
+.BR -k ,
+the model reads the text that many times, each afresh but with the first
+reading's atoms, and
+.I prove -c
+compares the readings.
+Each question it asks about a sentence read two ways is put to the model
+afresh, to answer yes or no
+.RB ( -q :
+left in the output for a person to answer, with
+.IR "prove -c -a" );
+of the readings the answers leave, the one with fewest mismatches with
+its sentences (below), and of those the one most of the others agree
+with, is kept and proved.
+A yes or no about one situation is easier to get right than a whole
+reading (Ryu et al., CLOVER, ICLR 2025, settle disagreements the same way).
+A model is likelier to misread a sentence than to misjudge an argument,
+and readings that differ show where; readings that agree show only that the
+model is consistent, not that it is right.
+For that,
+.I prove
+reads the kept reading back into English and sets each statement beside
+its sentence (above): a condition turned round, a denial dropped or
+added, a
+.I most
+made all, an atom from another sentence, found by rule from the words
+and the parse, not by asking the model again.
+Comparing readings,
+.I prove -c -d
+counts each reading's mismatches
+.RB ( argue/mismatches )
+and keeps, of the readings no answer rules out, the one with fewest,
+and of those the one most of the others agree with: two readings
+that misread a sentence alike outvote a right one, but not the words.
+The logic file is left in
+.IB file .logic
+(or as
+.B -o
+names it), headed with the model's name: how a model reads the text
+is the one step a rule can check only in part, so the file is there to be read,
+corrected, and proved again with
+.IR prove .
+.IP
+A long work (a chapter, an article, a thesis) is read with
+.B -w
+part by part, as
+.I sentences -p
+divides it
+.RB ( -p
+.IR size ,
+30 sentences).
+Each part is read as above, with
+.BR -r :
+the model is shown only that part, its sentences numbered as in the whole,
+the atoms the parts before it used
+.RB ( -V )
+and what they concluded
+.RB ( -E ),
+to rest on by writing the earlier conclusion as a premise at its sentence.
+A part that argues nothing (it narrates, describes, summarises) says so,
+and is passed over.
+Then
+.I join
+makes the parts one argument in steps, the model is asked, with the
+instructions in
+.BR /lib/phil/argue-work ,
+which steps the work's main conclusion rests on and what unstated links
+join them, and
+.I prove
+checks the whole: each part's step, the main conclusion, the links
+.RB ( argue/assumed ),
+and the parts' conclusions nothing after them rests on, said once
+.RB ( argue/unused-steps ).
+With
+.B -r
+as well, only the parts within that range: one chapter of a thesis.
+Each part's findings are given as it is read; its files are kept in
+.IB logicfile .parts ,
+and
+.B -j
+joins them again without reading them anew, after one has been
+corrected by hand.
+The assumptions the joining adds are read back to the model in the
+meanings their atoms declare
+.RI ( prove " -e)"
+and it is asked whether each says what it meant: an atom one part
+declared in one sense and the joining used in another shows there, and
+the model writes its lines again.
+.B -c
+carries on a run cut short: a part read to the end before, over the
+same sentences, is not read again.
+.IP
+A model reads the same text differently from one run to the next.
+.B -n
+does the whole that many times, each afresh, into
+.IB logicfile .r1 ,
+.BR .r2 ,
+and so on, and gives the first run's findings (its logic file is
+.IR logicfile ):
+one every run made as it is, one fewer made marked
+.RI [in " c " of " n " runs] .
+A finding is the same where its rule and its sentence are, whatever its
+statement is called.
+.B argue/runs-agree
+is 1 if every run's verdict was the same, 0 if not: a verdict that
+changes with the run rests on how the text is read.
+.TP
+.B phil/prove
+Decides whether an argument's conclusion follows from its premises.
+The argument is a logic file, a statement to a line, its fields
+separated by tabs:
+.EX
+	atom	patched	the server is patched
+	atom	secure	the server is secure
+	P1	S1	patched -> secure
+	P2	S2	secure
+	A1	-	secure -> audited
+	C	S3	patched
+.EE
+An
+.B atom
+line names a claim and says, in the text's words, what it stands for;
+a name is letters, digits and
+.LR _ ,
+and not a word of the notation
+.RB ( true ,
+.BR T ,
+.BR not ,
+.BR and ,
+.BR or ,
+.BR implies ,
+.BR iff ).
+There is no equality: "other than itself" is a premise such as
+.LR "all x: !moves(x, x)" .
+Premises
+.RB ( P1 ,
+.BR P2 ,
+\&...) and the conclusion
+.RB ( C )
+name the sentence they were taken from, numbered as
+.I sentences
+numbers them; an assumption
+.RB ( A1 ,
+\&...) is a premise the text needs but never states, and names none
+.RB ( - ).
+Formulas join atoms with
+.B !
+(not),
+.B &
+(and),
+.B |
+(or),
+.B ->
+(implies) and
+.B <->
+(if and only if), with parentheses;
+.BR not ,
+.BR and ,
+.BR or ,
+.BR implies ,
+.BR iff ,
+.BR && ,
+.BR || ,
+.B =>
+and
+.B <=>
+are taken too, as are the logician's
+¬ ∧ ∨ → ↔ ∀ ∃, since a model writes whichever it likes.
+Lines beginning
+.B #
+are comments.
+.IP
+An argument may go in steps: a conclusion
+.BR C1 ,
+.BR C2 ,
+\&... drawn from statements named in a fourth field,
+.LR "from P1 P2" ,
+which later steps and the argument's
+.B C
+may in turn rest on:
+.IP
+.EX
+	C1	S3	caused(universe)	from P1 P2
+	C	S5	created	from C1 P3
+.EE
+.IP
+Each step is checked as a whole argument is, against what it names and
+nothing else, and reported at its sentence; a conclusion with no
+.B from
+rests on the steps before it and the premises they do not draw on.
+Steps that rest on each other are
+.BR argue/cycle ,
+a step nothing rests on
+.BR argue/unused-step ;
+.B argue/valid
+is 1 if every step the conclusion depends on holds.
+.IP
+An objection
+.RB ( O1 ,
+\&...) or a reply
+.RB ( R1 ,
+\&...) says what it is
+.LR against :
+.IP
+.EX
+	O1	S6	some x: began(x) & !caused(x)	against P1
+	R1	S7	all x: !caused(x) -> !began(x)	against O1
+.EE
+.IP
+An attack holds if it contradicts its target, alone or given the premises no
+objection disputes; one that does not is
+.BR argue/misses ,
+and a reply that says no more than the premise its objection disputes is
+.BR argue/restates .
+What survives the attacks that hold is decided by Dung's grounded semantics,
+a step standing only while all it rests on stands: what falls is
+.BR argue/defeated ,
+with what brought it down, what attacks leave going round is
+.BR argue/undecided ,
+and the measure
+.B argue/survives
+is 1, 0 or \-1 as the conclusion stands, falls or neither.
+.I map
+draws the objections and replies beneath what they attack.
+.IP
+A line
+.L "logic	s5"
+before the statements reads the argument in the modal logic S5, with
+.B []
+(or
+.BR □ ,
+.BR nec )
+for necessarily and
+.B <>
+(or
+.BR ◇ ,
+.BR pos )
+for possibly;
+.L "logic	kd"
+in the standard deontic logic, where they are also written
+.B ought
+(or
+.BR O )
+and
+.B permitted
+(or
+.BR P ),
+which are then not atoms.
+.L "logic	s5kd"
+has both: necessity and possibility as in S5, and
+.B ought
+and
+.B permitted
+.RB ( O ,
+.BR P )
+as in the deontic logic, so that one argument can speak of what must be
+and of what must be done; what is necessary holds in every world, those
+as they ought to be among them, so it ought to be too.
+Where necessities over every world make ever more worlds that ought to
+be, those more deeply nested than the argument's own operators are left
+open: an argument no case refutes even so is valid, and one refuted only
+with them left open is
+.BR argue/undecided .
+.L "logic	k"
+and
+.L "logic	kt"
+are the basic modal logic and its reflexive extension.
+.IP
+A modal word that can mean either, such as
+.IR must ,
+.IR may ,
+.I can
+or
+.IR should ,
+read in two senses is a fault of the text: within one reading, the
+same word read as necessity at one sentence and as obligation at
+another, or one sentence read both ways, is
+.BR argue/equivocates ;
+with
+.BR -c ,
+readings that give a sentence different modalities (or one none) are
+compared in
+.B s5kd
+and the sentence is
+.BR argue/modal-ambiguous ,
+whatever the answers to the questions keep.
+The premises hold, and the conclusion must, in the actual world; a case
+that refutes the argument is told world by world.
+An argument that would need more than 2048 worlds is refuted if a case
+among them refutes it, and otherwise left
+.BR argue/undecided ;
+the dedicated modal provers
+.RB ( tools/prove-bench/README )
+go much further on large modal formulas.
+Modal arguments are propositional: all and some are refused in them.
+.B -t
+writes them by the standard translation, each atom holding at a world,
+for a first-order prover.
+See
+.B docs/ARGUMENT-FORMAT.md
+in the workbench's tree.
+.IP
+An atom may take individuals, and a formula may say
+.BI all " x" :
+or
+.BI some " x" :
+of them:
+.EX
+	atom	audited(x)	x was audited
+	atom	safe(x)	x is safe
+	P1	S1	all x: audited(x) -> safe(x)
+	P2	S2	audited(web1)
+	C	S3	safe(web1)
+.EE
+.B all
+and
+.B some
+range over the individuals the argument names (a
+.B domain
+line names more) and others, called
+.BR another ,
+as many as decide the argument where its logic allows
+(Börger, Grädel and Gurevich,
+.IR "The Classical Decision Problem" ):
+none without
+.B all
+or
+.BR some ;
+.RI 2^ k
+where every atom takes at most one individual and
+.I k
+of them take one;
+one for each
+.B some
+where, the conclusion denied, no
+.B some
+lies within an
+.B all
+(the Bernays–Schönfinkel class).
+Otherwise three are tried, and if no case refutes the argument
+.I prove
+looks for a proof, by Herbrand's theorem: each
+.B some
+in the premises and the denied conclusion is replaced by a name for what
+it says exists (one that depends on the individuals of the
+.B all
+it lies within), and
+.B all
+is taken over the individuals named, those names, and the names applied
+to them, a level at a time, up to four levels and sixteen individuals.
+If the instances at some level contradict each other, no case of any size
+refutes the argument, and it is valid
+.RB ( argue/proved ,
+measure
+.B argue/valid
+1).
+Otherwise it is
+.B argue/undecided
+(measure
+.B argue/valid
+\-1), not valid: such logic cannot be decided in general, and an argument
+refuted only by endlessly many individuals
+.RI ( "every release has a later one" )
+is undecided, not invalid.
+Premises that no case tried makes true are likewise inconsistent only if
+a proof shows it, and otherwise undecided.
+A counterexample is the smallest found, told of the others only where the
+conclusion is about them; a counterexample is always a true one, so invalid is
+never in doubt.
+.IP
+The prover tries every case that matters and does not take anyone's word,
+the model's included.
+It searches the cases as a SAT solver does (clause learning, in the order of
+the atoms, so that the case it shows is the plainest), and an argument of
+hundreds of statements takes it well under a second;
+.B tools/prove-bench
+holds it to Z3, E and Vampire.
+It reports, as findings, a conclusion that does not follow
+.RB ( argue/invalid ),
+with a case in which every premise holds and the conclusion fails,
+told in the atoms' own meanings, and the name of the fallacy where it has one
+(affirming the consequent, with or without
+.BR all ;
+denying the antecedent; a generalization from the cases named to every case);
+the same case as a logician writes a model
+.RB ( argue/countermodel ):
+each claim's truth value, T or F, each predicate's extension over the
+domain D, and in a modal logic the worlds W, what each sees (R: W × W
+in S5; in s5kd □ ranges over W and O over R) and what holds at each,
+made as small as it will go, as in
+.LR "W = {w0, w1}; R = {(w0, w1), (w1, w1)}; w0: pay = F; w1: pay = T" ;
+up to three premises of the form
+.IB x " -> " y
+any of which would make it follow
+.RB ( argue/missing );
+premises that contradict each other, from which anything follows
+.RB ( argue/inconsistent );
+a conclusion that only restates a premise
+.RB ( argue/circular )
+or is true whatever the case
+.RB ( argue/trivial );
+premises the conclusion does not need
+.RB ( argue/unused );
+a valid argument that rests on an assumption the text never states
+.RB ( argue/assumed ),
+or on assumptions alone, the text's own premises doing no work
+.RB ( argue/begs );
+a valid argument that needs a premise read from the conclusion's own
+sentence, which may be the conclusion read twice
+.RB ( argue/own-sentence ).
+It also says what in the writing hides an argument's sense:
+a premise true whatever the case
+.RB ( argue/empty )
+or never true
+.RB ( argue/impossible );
+a conclusion about something no premise mentions, and, when the argument
+fails, a premise about something nothing else mentions
+.RB ( argue/unlinked ),
+which is where a fact was left out or one thing was named two ways,
+the commonest faults in an argument a model writes down;
+and one name used with different numbers of individuals
+.RB ( argue/syntax ).
+Then the measure
+.B argue/valid
+(1 or 0), for
+.IR gate .
+Given the document, findings about a statement are addressed at the
+sentence it was taken from
+.RB ( -x ,
+its characters), not at the logic file's line;
+a statement that cites a sentence the document does not have is
+.BR argue/no-sentence .
+.IP
+Given the document,
+.I prove
+also reads each statement back into English, from its atoms' meanings,
+and sets it beside its sentence, to catch the misreading a model makes
+the same way every time, which no number of its readings and no answer
+of its own can show:
+an atom none of whose words the sentence has
+.RB ( argue/unfaithful ),
+the sentence perhaps not the one the statement came from;
+a condition turned round, the words after
+.IR if ,
+.I when
+or
+.I every
+made what follows, or
+.I only if
+read as
+.I if
+.RB ( argue/converse );
+a
+.IR not ,
+.I never
+or
+.I no
+the formula leaves out, or a denial in the formula of what the sentence
+states plainly
+.RB ( argue/negation );
+and
+.IR most ,
+.I many
+or
+.I some
+read as all, or
+.I every
+as some
+.RB ( argue/quantifier );
+.I either ... or
+read as allowing both, or a plain
+.I or
+as ruling both out
+.RB ( argue/or ).
+Each finding gives the statement as it reads back, for a person to
+judge; a paraphrase the words cannot show (a synonym, an antonym, a
+pronoun) is not reported, so silence is not proof of a faithful reading.
+.B -e
+gives every statement's reading
+.RB ( argue/says ),
+whether or not it cites a sentence.
+The conditions come from the parser
+.RI ( parse );
+without its model only the other three are looked for.
+.IP
+A logic file that does not parse
+.RB ( argue/syntax )
+is not checked, and
+.I prove
+fails.
+.IP
+With
+.BR -c ,
+.I prove
+compares several readings of one text, logic files over the same atoms
+(as
+.I argue -k
+makes), sentence by sentence: two readings of a sentence agree when each
+entails the other, however differently written.
+Where they differ
+.RB ( argue/readings )
+it says which files read it which way and a situation that one allows and
+the other does not; where the verdict turns on the reading,
+.BR argue/verdicts .
+The measures
+.BR argue/readings-agree ,
+.BR argue/readings-differ ,
+.B argue/verdicts-agree
+and, for each file,
+.B argue/support
+(how many of its readings are the commonest) follow, and a comment names
+the best supported file.
+For each sentence read two ways it asks a question, as comments:
+a situation the readings tell apart, every atom either uses true or false,
+and whether the sentence is true in it, with the files a yes or a no
+would keep:
+.EX
+	# question S1: Suppose "the server is secure" is true and
+	#	"the server is patched" is false. Is S1 true then?
+	# if yes: r1.logic r3.logic
+	# if no: r2.logic
+.EE
+Where some readings take an assumption for granted and others do not, it
+asks whether the text's argument takes it for granted, numbered
+.BR U1 ,
+.BR U2 ,
+and so on: a yes keeps the readings that have it, stated or assumed.
+.B -a
+names a file of answers, lines such as
+.BR "S1 no"
+.RB ( C
+for the conclusion,
+.B U1
+for an assumption,
+.B M
+for which sentence is the main conclusion, asked where the readings put
+it at different sentences);
+an answered question is
+.BR argue/answered ,
+and rules out the readings that answer otherwise, so the best supported
+file is the best of the readings that are left.
+Where the answers rule out every reading
+.RB ( argue/answers-split ),
+the one that agrees with most of them is kept; an assumption answered
+yes that it lacks is named in a line
+.BI "# assume S" n :
+with its formula, the sentence of the step that rests on it, and
+.I argue
+adds it to the reading kept, drawn on by that step (or by the
+conclusion).
+.B -d
+gives the document, to address findings at its sentences.
+.IP
+With
+.BR -t ,
+.I prove
+writes the argument in TPTP's first-order form (fof), in ASCII as TPTP
+is: premises and
+assumptions as axioms, the conclusion as the conjecture, for E, Vampire
+or any prover that reads it.
+.B tests/prove_z3_test.sh
+uses it to hold
+.IR prove 's
+verdicts to Z3's.
+Note that
+.B argue/valid
+is 0 for an argument whose premises contradict each other or whose
+conclusion restates a premise: such a conclusion follows in logic, but
+the argument shows nothing.
+.IP
+A formula in a finding is shown in logic's own symbols, whatever the
+file wrote:
+¬ ∧ ∨ → ↔ ∀ ∃, □ and ◇ for necessity and possibility, O and P for
+obligation and permission in every logic, so that it never needs the
+file's logic line to be read, and brackets only where the operators'
+binding needs them:
+.LR "∀x (began(x) → caused(x))" ,
+.LR "P abused → O limited" .
+.B -A
+shows them in ASCII instead, as a logic file may write them
+.RB ( ! ,
+.BR & ,
+.BR | ,
+.BR -> ,
+.BR <-> ,
+.BR [] ,
+.BR <> ,
+.BR ought ,
+.BR permitted ,
+.BR "all x:" ),
+for a tool that cannot take UTF-8.
+With
+.BR -f ,
+.I prove
+writes the logic file out again, its formulas so shown and everything
+else as it was; a file it cannot read is not written.
+.IP
+With
+.BR -P ,
+each conclusion that follows is proved as a logician checks a proof,
+by an analytic tableau (a truth tree, after Smullyan, and for the
+modal logics Priest): the premises it needs set down at the actual
+world w0 with the conclusion denied, each line taken apart by the rule
+for its main operator and numbered with what it came from, ◇A at a
+world giving A at a new world it sees
+.RB ( "w0 R w1" ),
+□A giving A at each world seen (in S5, and for □ and ◇ in s5kd, every
+world; in KT the world itself too; for O and P a world with an
+obligation is given one to see, D), ∃ a new individual and ∀ each one
+on the branch; a branch closes (×) where a formula and its denial stand
+at one world, and every branch closing is the proof.
+The tree follows the conclusion's findings as
+.B #
+lines, a branch drawn as
+.I map
+draws one;
+.B phil/tableau
+typesets it.
+A tree past 400 lines, 12 worlds or 8 individuals is not shown, and
+says so.
+.I argue
+writes the logic file it keeps this way.
+.IP
+With
+.BR -v ,
+a valid conclusion is explained as an invalid one is: what it follows
+from
+.RB ( argue/follows ),
+and, for each statement it needs, the case in which it fails without
+that one
+.RB ( argue/needed ).
+.IP
+A step that does not follow cannot stand, whatever the objections:
+.B argue/survives
+is 0 for an argument whose conclusion does not follow, or rests on a
+step that does not.
+Where a step that fails would follow from statements in the file that
+its
+.B from
+does not name,
+.B argue/missing
+names them; and where one claim the premises speak of, taken as true
+or false, would make a conclusion follow, it is named first, in its own
+words.
+.IP
+With
+.BR -p ,
+.I prove
+takes the premises and assumptions as a family of claims and puts every
+subset of them to the solver, smallest first: each smallest set that
+cannot all be true
+.RB ( positions/impossible ,
+at its first statement's sentence), and each largest set that can
+.RB ( positions/coherent ,
+told as what it gives up, with the plainest case in which the rest
+hold), with the counts
+.RB ( positions/checked ,
+.BR positions/impossible ,
+.BR positions/coherent ).
+The conclusion, steps and objections are not used.
+A line
+.B rivals
+.I "P10 P11"
+names two rival premises (alternative accounts of the same matter, say):
+a set with both is left out, not reported as impossible.
+At most 16 premises and assumptions are taken; the search is
+exhaustive, so its result is easy to audit, and lists the sets in the
+order Python's
+.B itertools.combinations
+does, so it can be set beside a z3 model's.
+.TP
+.B phil/join
+The logic files of a work's parts, as
+.I argue -w
+writes them, made one argument in steps: each part's statements numbered
+anew, its conclusion made a step
+.RB ( C1 ,
+.BR C2 ,
+\&...) drawn from what it was drawn from, and a premise of a later part
+that is an earlier part's conclusion, at its sentence and as written
+there, made that step.
+.B -a
+gives only the parts' atoms together,
+.B -c
+only their conclusions, one to a line
+.RI ( "S3 formula" ),
+for the next part to be given;
+.B -t
+.I top
+adds the lines that join the parts, and where the main conclusion they give
+is a part's, makes that step the main conclusion.
+.TP
+.B phil/map
+An argument's shape, from its logic file: the conclusion, what each step is drawn
+from beneath it, down to the premises, as a tree in text; steps the conclusion
+does not rest on after it, and a circle where the steps go round.
+Given the
+.IR document ,
+each statement is shown by its sentence, with its address; given
+.IR prove 's
+findings
+.RB ( -f ),
+each is marked with what
+.I prove
+found of it, and a statement the text never states is shown as
+.B prove -e
+reads it back.
+.I map
+decides nothing:
+.IP
+.EX
+	phil/prove -e essay.logic essay.md > findings
+	phil/map -f findings essay.logic essay.md
+.EE
+.IP
+With
+.BR -a ,
+Argdown instead, for the argument-mapping tools that read it: each step a
+premise-conclusion structure, its statements named as in the logic file, so that
+one step's conclusion is the next one's premise and the steps are joined.
+.TP
+.B phil/tableau
+The tableaux
+.B "phil/prove -P"
+writes, typeset as the textbooks set them.
+Each tree is a picture
+.RI ( pic )
+of its branches and the lines between them, and each formula in it is
+mathematics
+.RI ( eqn ),
+set by eqn's rules in the mathematical font: atoms and variables
+italic, names of more than one letter roman, the connectives spaced as
+binary operators, ¬ □ ◇ O P close to what they govern, a world's number
+below its w.
+A branch is a column: each line's number set right in a gutter, its
+formula set left, what it came from in a column of its own; where the
+tree forks, the rule that made the fork is said once, level with it; a
+closed branch ends ×.
+The output wants pic, then eqn, then troff; in InferNode, with the
+.B infernode-troff
+package bound in:
+.EX
+	phil/prove -P arg.logic | phil/tableau |
+		pic | eqn /lib/troff/eqnrc - | troff | tr2pdf > arg.pdf
+.EE
+It reads what prove wrote, so a tree is set as it was proved.
+.SH EXAMPLES
+Whether an argument holds, at the sentences it is read from:
+.IP
+.EX
+phil/prove agents.logic agents.md
+.EE
+.PP
+Three readings of a passage by a model, compared, and the reading kept proved:
+.IP
+.EX
+phil/argue -k 3 passage.md
+phil/prove -v passage.md.logic passage.md
+.EE
+.PP
+A chapter read part by part and joined:
+.IP
+.EX
+phil/argue -w -k 3 chapter.ms
+.EE
+.PP
+Every coherent position over a family of claims:
+.IP
+.EX
+phil/prove -p claims.logic
+.EE
+.SH FILES
+.TF /lib/phil/argue-work
+.TP
+.B /lib/phil/argue
+instructions to the model for
+.I argue
+.TP
+.B /lib/phil/argue-work
+instructions to the model when
+.I argue -w
+joins a work's parts
+.TP
+.B /lib/phil/settle
+instructions to the model when
+.I argue
+asks which reading is right
+.PD
+.SH SOURCE
+.B appl/cmd/*.b
+and
+.B sh/*
+in the workbench's tree, github.com/pdfinn/infernode-phil;
+.B appl/lib/prose.b
+of the Writer's Workbench reads the documents.
+.SH SEE ALSO
+.IR wwb (1),
+.IR acme (1)
+.br
+P. M. Dung, ``On the acceptability of arguments and its fundamental role in nonmonotonic reasoning, logic programming and n-person games'',
+.I "Artificial Intelligence"
+77(2), 1995.
+.SH BUGS
+The prover decides arguments whose atoms take one individual, or whose
+denied conclusion puts no
+.I some
+within an
+.IR all ;
+of the rest it shows invalid ones by a case and valid ones by a proof
+when one is small enough to find, and leaves the others
+.BR argue/undecided .
+.PP
+A logic file is a reading, and the verdict is the reading's: a valid
+argument is one whose conclusion follows from the premises as read, not
+one whose premises are true.
+.PP
+The read-back that finds misreadings knows English words only.

@@ -1,2 +1,2 @@
-wwb/prove -P data/argue/modal/dist-k.logic | wwb/tableau
-wwb/prove -P data/argue/steps/kalam.logic | wwb/tableau
+phil/prove -P data/argue/modal/dist-k.logic | phil/tableau
+phil/prove -P data/argue/steps/kalam.logic | phil/tableau

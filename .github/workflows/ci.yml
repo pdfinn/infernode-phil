@@ -1,0 +1,124 @@
+name: CI
+
+# The workbench runs on InferNode and reads prose through the Writer's
+# Workbench, so CI builds both first: InferNode's headless emulator, mk,
+# limbo and Dis tree, then wwb. It takes InferNode's and wwb's master as
+# they are that day, so a change there that breaks this collection shows
+# here, on a push or on the weekly run, before a user meets it. The
+# trees are checked out side by side, as the defaults expect.
+#
+# infernode-wwb is private: a secret WWB_TOKEN, a token that can read
+# it, lets this job check it out. Without one, the checkout fails.
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '23 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    env:
+      ROOT: ${{ github.workspace }}/infernode
+
+    steps:
+    - name: Check out the workbench
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        path: infernode-phil
+
+    - name: Check out InferNode
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        repository: infernode-os/infernode
+        ref: master
+        path: infernode
+
+    - name: Check out the Writer's Workbench
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        repository: pdfinn/infernode-wwb
+        ref: master
+        path: infernode-wwb
+        token: ${{ secrets.WWB_TOKEN || github.token }}
+
+    - name: Check out the troff package
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      with:
+        repository: pdfinn/infernode-troff
+        path: infernode-troff
+
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update && sudo apt-get install -y build-essential libfido2-dev libudev-dev python3 python3-pip
+        pip3 install --break-system-packages z3-solver
+
+    - name: Build InferNode (headless emulator, mk, limbo)
+      working-directory: infernode
+      run: |
+        echo "InferNode at $(git rev-parse --short HEAD)"
+        chmod +x build-linux-amd64.sh
+        ./build-linux-amd64.sh headless
+
+    - name: Build InferNode's Dis tree
+      working-directory: infernode
+      run: |
+        export PATH="$ROOT/Linux/amd64/bin:$PATH"
+        ./tools/verify-dis-build.sh
+
+    - name: Build the Writer's Workbench
+      working-directory: infernode-wwb
+      run: |
+        echo "wwb at $(git rev-parse --short HEAD)"
+        export PATH="$ROOT/Linux/amd64/bin:$PATH"
+        mk install
+
+    - name: Build the troff package
+      working-directory: infernode-troff
+      run: |
+        export PATH="$ROOT/Linux/amd64/bin:$PATH"
+        mk install
+
+    - name: Build the workbench
+      working-directory: infernode-phil
+      run: |
+        export PATH="$ROOT/Linux/amd64/bin:$PATH"
+        mk install
+
+    - name: Unit cases
+      working-directory: infernode-phil
+      run: tests/run.sh
+
+    - name: phil/argue through a model
+      working-directory: infernode-phil
+      run: tests/argue_test.sh
+
+    - name: phil/prove against Z3
+      working-directory: infernode-phil
+      run: tests/prove_z3_test.sh
+
+    - name: Logic files rewritten, countermodels checked, tableaux closed
+      working-directory: infernode-phil
+      run: tests/format_test.sh
+
+    - name: phil/tableau set by troff
+      working-directory: infernode-phil
+      run: tests/typeset_test.sh
+
+    - name: demo/guide, clicked through in Xenith (skipped on a headless emulator)
+      working-directory: infernode-phil
+      run: tests/demo_test.sh
+
+    - name: ./phil, the workbench from the host
+      working-directory: infernode-phil
+      run: tests/runner_test.sh

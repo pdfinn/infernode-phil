@@ -17,7 +17,7 @@ implement Prove;
 # as wwb/sentences numbers them; - for one the text never states), and
 # a formula: atoms joined by ! (not), & (and), | (or), -> (implies) and
 # <-> (if and only if), with parentheses.  A model may write the file
-# (wwb/argue has one do it) or a person may; either way what follows
+# (phil/argue has one do it) or a person may; either way what follows
 # from it is decided here, by trying every case, and not by anyone's
 # say-so.
 #
@@ -114,7 +114,7 @@ init(nil: ref Draw->Context, args: list of string)
 	prose->init();
 	arg := load Arg Arg->PATH;
 	arg->init(args);
-	arg->setusage("wwb/prove [-APevx] logicfile [document]\n\twwb/prove -p logicfile [document]\n\twwb/prove [-Ax] -c [-a answers] [-d document] logicfile ...\n\twwb/prove -t logicfile\n\twwb/prove [-A] -f logicfile");
+	arg->setusage("phil/prove [-APevx] logicfile [document]\n\tphil/prove -p logicfile [document]\n\tphil/prove [-Ax] -c [-a answers] [-d document] logicfile ...\n\tphil/prove -t logicfile\n\tphil/prove [-A] -f logicfile");
 	cflag := 0;
 	tflag := 0;
 	docname: string;
@@ -598,7 +598,7 @@ appendlist(a, b: list of ref Stmt): list of ref Stmt
 }
 
 #
-# Several readings of one text (wwb/argue -k): logic files over the
+# Several readings of one text (phil/argue -k): logic files over the
 # same atoms, compared sentence by sentence.  Two readings of a
 # sentence agree if each entails the other; where they do not, a
 # situation that one allows and the other does not says how they
@@ -5113,7 +5113,7 @@ rev2(l: list of ref Stmt): list of ref Stmt
 
 fatal(s: string)
 {
-	sys->fprint(sys->fildes(2), "wwb/prove: %s\n", s);
+	sys->fprint(sys->fildes(2), "phil/prove: %s\n", s);
 	raise "fail:error";
 }
 
@@ -5121,7 +5121,7 @@ fatal(s: string)
 # Faithfulness: whether a statement says what its sentence says,
 # judged from the words, not by a model.  A model that misreads a
 # sentence the same way every time agrees with itself across readings
-# and answers its own questions the same way, so wwb/argue -k cannot
+# and answers its own questions the same way, so phil/argue -k cannot
 # catch it; but the formula can be read back into English from the
 # atoms' meanings and set beside the sentence.  Four mismatches are
 # found so:
@@ -5144,7 +5144,7 @@ aflag := 0;	# -A: formulas shown in ASCII, as a logic file may write them
 pflag := 0;	# -p: every impossible set and coherent position
 
 # Each statement in English, from its atoms' meanings (argue/says), at
-# its sentence if it has one: for a person to compare, and for wwb/map
+# its sentence if it has one: for a person to compare, and for phil/map
 # to show an assumption the text never states.
 readback(l: list of ref Stmt)
 {

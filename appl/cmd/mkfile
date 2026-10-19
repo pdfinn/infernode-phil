@@ -1,0 +1,25 @@
+<$ROOT/mkconfig
+
+TARG=\
+	join.dis\
+	map.dis\
+	prove.dis\
+	tableau.dis\
+
+# prove and map use the Writer's Workbench's prose library, and map
+# and tableau its findings parser: WWB is its tree (the top mkfile
+# sets it).
+MODULES=\
+	$WWB/module/prose.m\
+	$WWB/appl/cmd/findings.b\
+
+SYSMODULES=\
+	arg.m\
+	bufio.m\
+	draw.m\
+	sys.m\
+
+DISBIN=../../dis/phil
+
+<$ROOT/mkfiles/mkdis
+LIMBOFLAGS=-I$WWB/module -I$WWB/appl/cmd -I$ROOT/module

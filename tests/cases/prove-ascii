@@ -1,4 +1,4 @@
-wwb/prove -A -c -d data/argue/modal/amb.md data/argue/modal/amb.logic data/argue/modal/amb.logic.2 data/argue/modal/amb.logic.3
-wwb/prove -A data/argue/steps/kalam.logic data/argue/steps/kalam.md
-wwb/prove -A data/argue/modal/fallacy.logic data/argue/modal/fallacy.md
-wwb/prove -A data/argue/modal/equiv.logic data/argue/modal/equiv.md
+phil/prove -A -c -d data/argue/modal/amb.md data/argue/modal/amb.logic data/argue/modal/amb.logic.2 data/argue/modal/amb.logic.3
+phil/prove -A data/argue/steps/kalam.logic data/argue/steps/kalam.md
+phil/prove -A data/argue/modal/fallacy.logic data/argue/modal/fallacy.md
+phil/prove -A data/argue/modal/equiv.logic data/argue/modal/equiv.md

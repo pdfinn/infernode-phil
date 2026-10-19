@@ -1,16 +1,18 @@
 #!/dis/sh.dis
-# argue.inferno wwbdir port - wwb/argue calling an OpenAI-compatible
+# argue.inferno phildir wwbdir port - phil/argue calling an OpenAI-compatible
 # API directly (no llmsrv), tests/fakellm.py, answering with
 # data/argue/reply; run by tests/argue_test.sh.
 load std
 
-wwb=$1
+phil=$1
+wwb=${hd ${tl $*}}
+*=($phil ${tl ${tl $*}})
 port=${hd ${tl $*}}
 bind -a '#I' /net
 ndb/cs
-run $wwb/wwbns $wwb
+run $phil/philns $phil $wwb
 wwbmodel='openai http://127.0.0.1:'^$port^'/v1'
-cd $wwb/tests
+cd $phil/tests
 mkdir -p out
 # -d names another document to argue
 args=${tl ${tl $*}}
@@ -19,7 +21,7 @@ if {~ ${hd $args} -d} {
 	doc=${hd ${tl $args}}
 	args=${tl ${tl $args}}
 }
-wwb/argue -m fake-model $args -o out/argue.logic $doc
+phil/argue -m fake-model $args -o out/argue.logic $doc
 echo '#' the logic file
 cat out/argue.logic
 echo halt > /dev/sysctl

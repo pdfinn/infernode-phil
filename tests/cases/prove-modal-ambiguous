@@ -1,1 +1,1 @@
-wwb/prove -c -d data/argue/modal/amb.md data/argue/modal/amb.logic data/argue/modal/amb.logic.2 data/argue/modal/amb.logic.3
+phil/prove -c -d data/argue/modal/amb.md data/argue/modal/amb.logic data/argue/modal/amb.logic.2 data/argue/modal/amb.logic.3

@@ -1,1 +1,1 @@
-wwb/join -t data/argue/join/top data/argue/join/p1.logic data/argue/join/p2.logic
+phil/join -t data/argue/join/top data/argue/join/p1.logic data/argue/join/p2.logic

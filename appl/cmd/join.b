@@ -1,7 +1,7 @@
 implement Join;
 
 #
-# wwb/join part.logic ... - the logic files of a work's parts as one
+# phil/join part.logic ... - the logic files of a work's parts as one
 # argument in steps: each part's statements numbered anew (P1 of the
 # second part becomes, say, P7, and its from and against lines follow),
 # and each part's conclusion C made a step, C1, C2, ..., drawn from what
@@ -10,7 +10,7 @@ implement Join;
 # line differs from the first's is left out, saying so.  The last line,
 # a comment, names the parts' conclusions as steps:
 #	# steps: C3 C5 C9
-# for wwb/argue -w to have the model join them.  A premise of a later
+# for phil/argue -w to have the model join them.  A premise of a later
 # part that is an earlier part's conclusion, at its sentence and as
 # written there, is that step: it is dropped, and what was drawn from it
 # is drawn from the step.  With -a, only the atoms, the vocabulary the
@@ -18,7 +18,7 @@ implement Join;
 # need: the atoms the last three parts used, and those in any part's
 # conclusion, which it may rest on; with -c, only the parts' conclusions, one to a
 # line, S3<TAB>formula, for the next part to rest on.  With -t top,
-# the lines that join the parts (wwb/argue -w has the model write them)
+# the lines that join the parts (phil/argue -w has the model write them)
 # follow the parts; where the main conclusion they give is a part's
 # conclusion, at its sentence and as written there, that step is made
 # the main conclusion, drawn from what it was drawn from and what top
@@ -75,7 +75,7 @@ init(nil: ref Draw->Context, args: list of string)
 		args = tl args;
 	}
 	if(args == nil){
-		sys->fprint(stderr, "usage: wwb/join [-a | -c | -t top] part.logic ...\n");
+		sys->fprint(stderr, "usage: phil/join [-a | -c | -t top] part.logic ...\n");
 		raise "fail:usage";
 	}
 	body := "";
@@ -83,7 +83,7 @@ init(nil: ref Draw->Context, args: list of string)
 	for(i := 1; args != nil; args = tl args){
 		(b, c, err) := part(hd args, i);
 		if(err != nil){
-			sys->fprint(stderr, "wwb/join: %s\n", err);
+			sys->fprint(stderr, "phil/join: %s\n", err);
 			body += sys->sprint("# part %d, %s, left out: %s\n", i, hd args, err);
 		}else{
 			body += b;
@@ -367,7 +367,7 @@ jointop(body, top: string): (string, string)
 {
 	b := bufio->open(top, Bufio->OREAD);
 	if(b == nil){
-		sys->fprint(stderr, "wwb/join: cannot open %s: %r\n", top);
+		sys->fprint(stderr, "phil/join: cannot open %s: %r\n", top);
 		return (body, "");
 	}
 	tail := "";

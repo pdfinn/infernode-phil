@@ -1,6 +1,6 @@
-wwb/prove -P data/argue/valid.logic
-wwb/prove -P data/argue/steps/kalam.logic data/argue/steps/kalam.md
-wwb/prove -P data/argue/modal/dist-k.logic
-wwb/prove -P data/argue/modal/mix-necought.logic
-wwb/prove -A -P data/argue/modal/dist-kd.logic
-wwb/prove -P data/argue/modal/t-kt.logic
+phil/prove -P data/argue/valid.logic
+phil/prove -P data/argue/steps/kalam.logic data/argue/steps/kalam.md
+phil/prove -P data/argue/modal/dist-k.logic
+phil/prove -P data/argue/modal/mix-necought.logic
+phil/prove -A -P data/argue/modal/dist-kd.logic
+phil/prove -P data/argue/modal/t-kt.logic

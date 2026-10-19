@@ -1,5 +1,5 @@
 #!/bin/sh
-# tests/prove_z3_test.sh - wwb/prove against Z3.  Each logic file in
+# tests/prove_z3_test.sh - phil/prove against Z3.  Each logic file in
 # tests/data/argue is written as TPTP (prove -t) and decided by Z3
 # (tests/fof2z3.py); its verdict must be prove's: Theorem where prove
 # says valid, CounterSatisfiable where it says invalid, either where it
@@ -21,9 +21,14 @@ Darwin)	host=MacOSX;;
 *)	host=$(uname -s);;
 esac
 emu=$ROOT/emu/$host/o.emu
+wwb=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
+if [ ! -f "$wwb/dis/wwb/lib/prose.dis" ]; then
+	echo "$0: no built Writer's Workbench at $wwb: set WWB" >&2
+	exit 1
+fi
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
-timeout 300 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/prove.inferno" "#U*$here" "#U*$tmp" >/dev/null 2>&1
+timeout 300 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/prove.inferno" "#U*$here" "#U*$wwb" "#U*$tmp" >/dev/null 2>&1
 fail=0
 n=0
 for p in "$tmp"/*.p; do

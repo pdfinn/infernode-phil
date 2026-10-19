@@ -1,7 +1,7 @@
 implement Tableau;
 
 #
-# tableau - the tableaux wwb/prove -P writes, typeset as the textbooks
+# tableau - the tableaux phil/prove -P writes, typeset as the textbooks
 # set them.  Each tree is a picture (pic) of its branches and the lines
 # between them; every formula in it is mathematics (eqn), so it is set
 # by eqn's rules in the mathematical font: atoms and variables italic,
@@ -31,7 +31,7 @@ Tableau: module
 	init:	fn(nil: ref Draw->Context, args: list of string);
 };
 
-progname := "wwb/tableau";
+progname := "phil/tableau";
 
 include "findings.b";
 
@@ -63,7 +63,7 @@ init(nil: ref Draw->Context, args: list of string)
 	bufio = load Bufio Bufio->PATH;
 	arg := load Arg Arg->PATH;
 	arg->init(args);
-	arg->setusage("wwb/tableau [file ...]");
+	arg->setusage("phil/tableau [file ...]");
 	while(arg->opt() != 0)
 		arg->usage();
 	args = arg->argv();

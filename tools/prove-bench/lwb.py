@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""lwb.py lwbdir outdir logic [limit] - wwb/prove on the Logics Workbench
+"""lwb.py lwbdir outdir logic [limit] - phil/prove on the Logics Workbench
 benchmark (Balsiger, Heuerding and Schwendimann 2000) for modal logic K
 or KT, beside KSP and Spartacus, the dedicated modal provers.
 
@@ -10,14 +10,15 @@ a class from the first formula up, with a limit of seconds each
 the highest formula it decided, and any verdict against the class's is
 reported as WRONG.  lwbdir is a checkout of
 github.com/cormackikkert/LWB-benchmark-generator (its fmls_k, fmls_kt);
-$WWB is the workbench, $ROOT the InferNode tree, $KSP and $SPARTACUS
+$WWB is the Writer's Workbench (by default beside this tree), $ROOT the InferNode tree, $KSP and $SPARTACUS
 the provers' binaries (and $KSPCONF its conf.files directory).
 
 	python3 -I tools/prove-bench/lwb.py lwb out k 10
 """
 import os, re, subprocess, sys, time
 
-WWB = os.environ.get('WWB', os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+PHIL = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+WWB = os.environ.get('WWB', os.path.join(os.path.dirname(PHIL), 'infernode-wwb'))
 ROOT = os.environ['ROOT']
 KSP = os.environ.get('KSP')
 KSPCONF = os.environ.get('KSPCONF')
@@ -53,8 +54,8 @@ def run(cmd, limit, cwd=None):
 def prove(path, limit):
 	script = os.path.join(os.path.dirname(path), 'prove1.inferno')
 	if not os.path.exists(script):
-		open(script, 'w').write('load std\nrun $1/wwbns $1\nwwb/prove $2 >[2=1]\necho halt > /dev/sysctl\n')
-	out, t = run([EMU, '-c1', '-pheap=1024m', '-pmain=1024m', '-r' + ROOT, 'sh', '#U*' + script, '#U*' + WWB, '#U*' + path], limit)
+		open(script, 'w').write('load std\nrun $1/philns $1 $2\nphil/prove $3 >[2=1]\necho halt > /dev/sysctl\n')
+	out, t = run([EMU, '-c1', '-pheap=1024m', '-pmain=1024m', '-r' + ROOT, 'sh', '#U*' + script, '#U*' + PHIL, '#U*' + WWB, '#U*' + path], limit)
 	m = re.search(r'argue/valid (-?\d)', out)
 	if m:
 		v = int(m.group(1))

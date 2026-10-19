@@ -19,7 +19,7 @@ C (S3): So God exists.  data/argue/steps/circle.md:3
 C (S2): the code is safe to deploy  [assumed]
 ├─ P1 (S1): the code was audited
 └─ A1 (unstated): if the code was audited, then the code is safe to deploy
-// data/argue/steps/kalam.logic, as wwb/map draws it
+// data/argue/steps/kalam.logic, as phil/map draws it
 
 <Step C1>
 
@@ -54,7 +54,7 @@ C (S5): Therefore something created the universe.  data/argue/steps/kalam-debate
 │  │        └─ against: O1 (S6): But some particles begin to exist without a cause.  data/argue/steps/kalam-debate.md:6  (round in a circle)
 │  └─ P2 (S2): The universe began to exist.  data/argue/steps/kalam-debate.md:2
 └─ P3 (S4): If the universe has a cause, something created it.  data/argue/steps/kalam-debate.md:4
-// data/argue/steps/rejoinder.logic, as wwb/map draws it
+// data/argue/steps/rejoinder.logic, as phil/map draws it
 
 <Step C1>
 

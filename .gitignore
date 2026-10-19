@@ -1,0 +1,12 @@
+# Build products: mk install fills dis/ from appl/ and sh/, as
+# InferNode's own dis/ is filled from its appl/.
+/dis/
+*.dis
+*.sbl
+
+# Host clutter
+.DS_Store
+
+# What the tests last wrote
+/tests/out/
+__pycache__/

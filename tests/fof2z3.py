@@ -1,7 +1,7 @@
-# fof2z3.py file.p - decide a TPTP fof problem, the subset wwb/prove -t
+# fof2z3.py file.p - decide a TPTP fof problem, the subset phil/prove -t
 # writes, with Z3: Theorem if the axioms and the denied conjecture are
 # unsatisfiable, CounterSatisfiable if satisfiable, else Unknown.  An
-# independent check on wwb/prove (tests/prove_z3_test.sh).
+# independent check on phil/prove (tests/prove_z3_test.sh).
 import re, sys, z3
 toks_re = re.compile(r"\s*(<=>|=>|\$true|\$false|[!?~&|(),:\[\]]|'[^']*'|[A-Za-z_][A-Za-z0-9_]*)")
 U = z3.DeclareSort('U')

@@ -1,0 +1,125 @@
+#!/bin/sh
+# phil command [arg ...] - run a Philosopher's Workbench command from the
+# host shell:
+#
+#	./phil prove argument.logic argument.md
+#	./phil argue -k 3 passage.md
+#	/path/to/infernode-phil/phil map -a argument.logic
+#
+# It starts an InferNode emulator with the workbench bound in, runs
+# phil/command in the current directory, prints what it prints, and exits
+# with its status: 0 when it succeeds, 1 when it fails (as prove does
+# on a file it cannot read).  Each argument reaches the command as it is
+# here, so nothing needs quoting twice; an argument that is a host path
+# beginning with / is given to it as InferNode sees that path.
+#
+# ROOT is the InferNode tree, built; by default ../infernode beside this
+# one.  WWB is the Writer's Workbench, built, which reads the prose; by
+# default ../infernode-wwb.  The workbench is the tree this script is
+# in, built (mk install).  PHILFLAGS adds emulator flags (default -c1,
+# compiled).
+#
+# argue reaches a language model (through wwb/ask):
+# for them the emulator is given the network, and a factotum holding
+# $ANTHROPIC_API_KEY and $OPENAI_API_KEY if they are set here; the keys
+# go to factotum, not to InferNode's environment.  WWBMODEL is passed
+# on as $wwbmodel (openai http://localhost:11434/v1, say, or
+# os claude -p), and https_proxy and no_proxy as they are.
+here=$(cd "$(dirname "$0")" && pwd)
+ROOT=${ROOT:-$(cd "$here/.." && pwd)/infernode}
+WWB=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
+if [ $# = 0 ]; then
+	echo 'usage: phil command [arg ...]   (phil prove x.logic x.md)' >&2
+	exit 2
+fi
+if [ ! -f "$ROOT/mkconfig" ]; then
+	echo "phil: no InferNode tree at $ROOT: set ROOT" >&2
+	exit 2
+fi
+case $(uname -s) in
+Darwin)	host=MacOSX;;
+*)	host=$(uname -s);;
+esac
+emu=$ROOT/emu/$host/o.emu
+if [ ! -x "$emu" ]; then
+	echo "phil: no emulator at $emu: build InferNode first" >&2
+	exit 2
+fi
+if [ ! -d "$here/dis/phil" ]; then
+	echo "phil: the workbench is not built: mk install in $here" >&2
+	exit 2
+fi
+if [ ! -d "$WWB/dis/wwb" ]; then
+	echo "phil: no built Writer's Workbench at $WWB: set WWB" >&2
+	exit 2
+fi
+cmd=$1
+shift
+tmp=$(mktemp -d "${TMPDIR:-/tmp}/phil.XXXXXX")
+trap 'rm -rf "$tmp"' EXIT
+cat > "$tmp/run" <<'E'
+load std
+run $1/philns $1 $2
+cd $3
+t=$4
+cmd=$5
+args=${tl ${tl ${tl ${tl ${tl $*}}}}}
+# a model's way: the network, factotum and its keys, $wwbmodel
+if {ftest -f $t/setup} {
+	bind -a '#I' /net >[2] /dev/null
+	ndb/cs
+	run $t/setup
+	if {! ~ $#keys 0} {
+		auth/factotum
+		for k in $keys {
+			cat $t/$k > /mnt/factotum/ctl
+		}
+	}
+}
+{phil/^$cmd $args} >[2=1]
+echo $status > $t/status
+echo halt > /dev/sysctl
+E
+# rc's quoting: in quotes, a quote is doubled
+q() { printf "'%s'" "$(printf '%s' "$1" | sed "s/'/''/g")"; }
+case $cmd in
+argue)
+	(
+	umask 077
+	: > "$tmp/setup"
+	keys=
+	for v in ANTHROPIC_API_KEY:anthropic OPENAI_API_KEY:openai; do
+		eval "key=\${${v%%:*}:-}"
+		if [ -n "$key" ]; then
+			printf 'key proto=pass service=%s user=phil !password=%s\n' "${v#*:}" "$key" > "$tmp/key.${v#*:}"
+			keys="$keys key.${v#*:}"
+		fi
+	done
+	echo "keys=($keys)" >> "$tmp/setup"
+	[ -n "$WWBMODEL" ] && echo "wwbmodel=$(q "$WWBMODEL")" >> "$tmp/setup"
+	for v in https_proxy HTTPS_PROXY no_proxy NO_PROXY; do
+		eval "val=\${$v:-}"
+		[ -n "$val" ] && echo "$v=$(q "$val")" >> "$tmp/setup"
+	done
+	)
+	;;
+esac
+# host paths as InferNode sees them
+set -- "$@" --phil-end--
+while [ "$1" != --phil-end-- ]; do
+	a=$1
+	shift
+	case $a in
+	/*)	[ -e "$a" ] || [ -e "$(dirname "$a")" ] && a="#U*$a";;
+	esac
+	set -- "$@" "$a"
+done
+shift
+: > "$tmp/status"
+"$emu" ${PHILFLAGS:--c1} -pheap=1024m -pmain=1024m -r"$ROOT" sh "#U*$tmp/run" \
+	"#U*$here" "#U*$WWB" "#U*$PWD" "#U*$tmp" "$cmd" "$@" 2>&1 | grep -v '^fs: fsqid\|^llmclient: '
+if [ ! -s "$tmp/status" ]; then
+	echo "phil: the emulator stopped before $cmd finished" >&2
+	exit 2
+fi
+[ "$(tr -d '\n' < "$tmp/status")" = "" ]

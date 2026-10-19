@@ -1,1 +1,1 @@
-wwb/prove -x data/argue/consequent.logic data/argue/sample.md
+phil/prove -x data/argue/consequent.logic data/argue/sample.md

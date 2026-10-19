@@ -1,8 +1,8 @@
-wwb/prove -e data/argue/phil/evil.logic data/argue/phil/evil.md
-wwb/prove data/argue/phil/kalam.logic data/argue/phil/kalam.md
-wwb/prove data/argue/phil/firstway.logic data/argue/phil/firstway.md
-wwb/prove data/argue/phil/agents.logic data/argue/phil/agents.md
-wwb/prove data/argue/phil/agents-misread.logic data/argue/phil/agents.md
-wwb/prove data/argue/phil/circle.logic data/argue/phil/circle.md
-wwb/prove data/argue/phil/circle-true.logic data/argue/phil/circle.md >[2=1]
-wwb/prove -t data/argue/phil/kalam.logic
+phil/prove -e data/argue/phil/evil.logic data/argue/phil/evil.md
+phil/prove data/argue/phil/kalam.logic data/argue/phil/kalam.md
+phil/prove data/argue/phil/firstway.logic data/argue/phil/firstway.md
+phil/prove data/argue/phil/agents.logic data/argue/phil/agents.md
+phil/prove data/argue/phil/agents-misread.logic data/argue/phil/agents.md
+phil/prove data/argue/phil/circle.logic data/argue/phil/circle.md
+phil/prove data/argue/phil/circle-true.logic data/argue/phil/circle.md >[2=1]
+phil/prove -t data/argue/phil/kalam.logic

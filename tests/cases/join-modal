@@ -1,1 +1,1 @@
-wwb/join -t data/argue/join/mtop data/argue/join/m1.logic data/argue/join/m2.logic > out/joined.logic; wwb/prove out/joined.logic data/argue/join/m.md
+phil/join -t data/argue/join/mtop data/argue/join/m1.logic data/argue/join/m2.logic > out/joined.logic; phil/prove out/joined.logic data/argue/join/m.md

@@ -1,5 +1,5 @@
 #!/bin/sh
-# same.sh dir out - wwb/prove over every logic file in dir, as built now,
+# same.sh dir out - phil/prove over every logic file in dir, as built now,
 # its findings and its TPTP written to out (made afresh), with times.
 # same.sh -c old new - whether two such runs said the same thing, byte for
 # byte, and how their times compare.
@@ -45,9 +45,10 @@ if [ -z "$ROOT" ] || [ $# != 2 ]; then
 	echo 'usage: ROOT=... same.sh dir out | same.sh -c old new' >&2
 	exit 1
 fi
+wwb=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
 rm -rf "$2"
 mkdir -p "$2"
 cp "$1"/*.logic "$2"/
 "$ROOT/emu/$(uname -s | sed s/Darwin/MacOSX/)/o.emu" -c1 -pheap=1024m -pmain=1024m -r"$ROOT" \
-	sh "#U*$here/tools/prove-bench/run.inferno" "#U*$here" "#U*$(cd "$2" && pwd)" >/dev/null 2>&1
+	sh "#U*$here/tools/prove-bench/run.inferno" "#U*$here" "#U*$wwb" "#U*$(cd "$2" && pwd)" >/dev/null 2>&1
 echo "$(ls "$2"/*.ours | wc -l) arguments run into $2"

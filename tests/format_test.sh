@@ -1,5 +1,5 @@
 #!/bin/bash
-# tests/format_test.sh - wwb/prove -f: every logic file of data/argue
+# tests/format_test.sh - phil/prove -f: every logic file of data/argue
 # written again in logic's symbols, and that written back in ASCII
 # (-A), is proved as the file was: the same findings, word for word,
 # but for the file's name.  A file prove cannot read is not rewritten.
@@ -18,9 +18,14 @@ Darwin)	host=MacOSX;;
 *)	host=$(uname -s);;
 esac
 emu=$ROOT/emu/$host/o.emu
+wwb=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
+if [ ! -f "$wwb/dis/wwb/lib/prose.dis" ]; then
+	echo "$0: no built Writer's Workbench at $wwb: set WWB" >&2
+	exit 1
+fi
 tmp=$(mktemp -d)
 [ -n "$KEEP" ] || trap 'rm -rf "$tmp"' EXIT
-timeout 300 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/format.inferno" "#U*$here" "#U*$tmp" >/dev/null 2>&1
+timeout 300 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/format.inferno" "#U*$here" "#U*$wwb" "#U*$tmp" >/dev/null 2>&1
 fail=0
 n=0
 for u in "$tmp"/*.u.logic; do

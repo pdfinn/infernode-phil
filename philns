@@ -1,0 +1,56 @@
+#!/dis/sh.dis
+# philns [dir [wwbdir]] - add the Philosopher's Workbench, ϕwb, to this
+# name space.
+#
+# Run it with run, so that its binds are made in the calling shell's
+# name space:
+#	run /n/local/home/you/src/infernode-phil/philns
+# dir is this checkout as Inferno sees it; without it, the directory
+# this script is in.  Its commands appear as /dis/phil/*, run as
+# phil/prove and so on, and the same directory as /dis/ϕwb; its prompts
+# as /lib/phil; its manual as /man/1/phil.  Each is bound after
+# InferNode's own (bind -a), so nothing of InferNode's is hidden, and
+# nothing is copied.
+#
+# ϕwb reads prose through the Writer's Workbench: its sentence
+# numbering, its markup removal, its prose library and its way to a
+# model (wwb/ask).  If /dis/wwb is not here already, wwbdir's wwbns is
+# run first; wwbdir is by default infernode-wwb beside this checkout.
+load std
+self=$0
+phildir=`{echo $self | sed 's,/[^/]*$,,'}
+if {! ~ $#* 0} {
+	phildir=$1
+}
+wwbdir=$phildir/../infernode-wwb
+if {! ~ $#* 0 1} {
+	wwbdir=$2
+}
+if {! ftest -d $phildir^/dis/phil} {
+	echo 'philns: no '^$phildir^'/dis/phil: build it first (mk install on the host)' >[1=2]
+	raise 'fail:not built'
+}
+if {! ftest -d /dis/wwb} {
+	if {! ftest -f $wwbdir^/wwbns} {
+		echo 'philns: no Writer''s Workbench at '^$wwbdir^': give its directory, or run its wwbns first' >[1=2]
+		raise 'fail:no wwb'
+	}
+	run $wwbdir/wwbns $wwbdir
+}
+# the collection's own name, as well as the one that is easy to type.
+# Both binds are made from one directory: each walk of a #U path from
+# its root is an attach of its own, and a bind made on one is not seen
+# through another.
+here=`{pwd}
+cd $phildir/dis
+if {ftest -d ϕwb} {
+	bind phil ϕwb
+}
+bind -a . /dis
+cd $here
+bind -a $phildir/lib /lib
+if {ftest -d /man} {
+	bind -a $phildir/man/1 /man/1
+} {
+	echo 'philns: this InferNode has no /man; the manual is in '^$phildir^'/man' >[1=2]
+}

@@ -1,0 +1,23 @@
+<$ROOT/mkconfig
+
+# Shell scripts, installed beside the Limbo commands so that the shell
+# finds them as phil/name.
+SCRIPTS=\
+	argue\
+
+DISBIN=../dis/phil
+
+all:V:
+
+install:V:	${SCRIPTS:%=$DISBIN/%}
+
+$DISBIN/%:	%
+	mkdir -p $DISBIN
+	rm -f $DISBIN/$stem
+	cp $stem $DISBIN/$stem
+	chmod 755 $DISBIN/$stem
+
+clean:V:
+
+nuke:V:
+	cd $DISBIN; rm -f $SCRIPTS

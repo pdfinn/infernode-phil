@@ -1,8 +1,8 @@
 #!/bin/sh
-# tests/argue_test.sh - wwb/argue end to end: a real llmsrv whose
+# tests/argue_test.sh - phil/argue end to end: a real llmsrv whose
 # model (tests/fakellm.py) answers with the logic file in
 # tests/data/argue/reply, talk and all.  Checks that the file is kept
-# without the talk and that wwb/prove finds the fallacy in it, at the
+# without the talk and that phil/prove finds the fallacy in it, at the
 # sentence the conclusion came from.  Then a model whose first file
 # does not parse (data/argue/replies): it is shown the prover's
 # complaint and asked again, and its second file is proved.  Then
@@ -25,6 +25,11 @@ Darwin)	host=MacOSX;;
 *)	host=$(uname -s);;
 esac
 emu=$ROOT/emu/$host/o.emu
+wwb=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
+if [ ! -f "$wwb/dis/wwb/lib/prose.dis" ]; then
+	echo "$0: no built Writer's Workbench at $wwb: set WWB" >&2
+	exit 1
+fi
 tmp=$(mktemp -d)
 rm -rf "$here/tests/out/argue.logic.parts"
 fake=
@@ -34,7 +39,7 @@ python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests" "$here/tests/data/ar
 fake=$!
 sleep 1
 
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out"
 fail=0
 want() {
@@ -49,7 +54,7 @@ dontwant() {
 		fail=1
 	fi
 }
-want 'You are helping check the reasoning' 'the model is given /lib/wwb/argue' requests
+want 'You are helping check the reasoning' 'the model is given /lib/phil/argue' requests
 want 'S3 line 2: So the server is patched.' 'the model is given the numbered sentences' requests
 want '# argument written to out/argue.logic by fake-model' 'the model is named' out
 want 'data/argue/sample.md:2: argue/invalid: C (S3)' 'the invalid conclusion is found, at its sentence' out
@@ -65,7 +70,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests2" "$here/tests/data/argue/replies" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out2"
 want '# the prover could not read out/argue.logic: fake-model is asked again' 'a file that does not parse is sent back' out2
 want 'P1: the formula ends too soon' 'the model is told what is wrong' requests2
@@ -83,7 +88,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests3" "$here/tests/data/argue/kreplies" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -k 3 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -k 3 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out3"
 want '# 3 readings by fake-model, compared' 'the readings are compared' out3
 want 'argue/readings: S1 is read 2 ways' 'a sentence read two ways is found' out3
@@ -104,7 +109,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests3b" "$here/tests/data/argue/kreplies3" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -k 3 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -k 3 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out3b"
 want 'argue/answered: S1: answered no' 'an answer reasoned before its no is read' out3b
 
@@ -115,7 +120,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests3c" "$here/tests/data/argue/kreplies4" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -k 3 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -k 3 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out3c"
 want '# the prover could not read out/argue.logic.2: fake-model is asked again' 'a later reading that does not parse is sent back' out3c
 want '# 3 readings by fake-model, compared' 'and, corrected, compared' out3c
@@ -129,7 +134,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests4" "$here/tests/data/argue/misreply" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out4"
 want 'data/argue/sample.md:1: argue/converse: P1 (S1)' 'a condition turned round is found, at its sentence' out4
 want 'it reads "if the server is secure, then the server is patched"' 'the statement is read back' out4
@@ -142,7 +147,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests5" "$here/tests/data/argue/kreplies2" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -k 3 -q 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -k 3 -q 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out5"
 want 'out/argue.logic.2: argue/mismatches 1' 'the misreadings are counted' out5
 want 'out/argue.logic: argue/mismatches 0' 'the right reading has none' out5
@@ -158,7 +163,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests6" "$here/tests/data/argue/structreply" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -d data/argue/structured.md 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -d data/argue/structured.md 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out6"
 want 'from C1 P3' 'a step is kept' out6
 want 'against P1' 'an objection is kept' out6
@@ -174,7 +179,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests7" "$here/tests/data/argue/misreply" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -s data/argue/mine.logic 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -s data/argue/mine.logic 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out7"
 want 'Use these atoms, and no others' 'the cold reading is given the writer'"'"'s atoms' requests7
 want '# data/argue/mine.logic as its writer meant it, beside out/argue.logic' 'the readings are set side by side' out7
@@ -189,7 +194,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests9" "$here/tests/data/argue/nreplies" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -n 2 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -n 2 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out9"
 want '# run 2 of 2' 'the work is done twice' out9
 want 'data/argue/sample.md:2: argue/invalid: C (S3)' 'the first run'"'"'s findings are given' out9
@@ -207,7 +212,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests8" "$here/tests/data/argue/workreplies" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -d data/argue/work.md -w 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -d data/argue/work.md -w 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out8"
 want '# part 1, S1-S4: Whales' 'the first section is a part' out8
 want '# part 2, S5-S7: Breathing' 'the second is another' out8
@@ -231,7 +236,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests12" "$here/tests/data/argue/affirmreplies" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -d data/argue/affirm/text.md -k 3 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -d data/argue/affirm/text.md -k 3 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out12"
 want 'argue/answers-split' 'the answers split the readings' out12
 want 'as the answers say the text takes it for granted: wet → cancelled' 'the affirmed assumption is added' out12
@@ -247,7 +252,7 @@ python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests11" "$here/tests/data/
 fake=$!
 sleep 1
 rm -rf "$here/tests/out/argue.logic.parts"
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -d data/argue/work.md -w 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -d data/argue/work.md -w 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out11"
 want 'Here are the assumptions you added, read back' 'the joining assumptions are read back to the model' requests11
 want 'A1: reads \"if Moby breathes air, then Moby is a whale' 'in the meanings their atoms declare (the log is JSON)' requests11
@@ -263,7 +268,7 @@ port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0));
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests10" "$here/tests/data/argue/workrest" &
 fake=$!
 sleep 1
-timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "$port" -d data/argue/work.md -w -c 2>&1 |
+timeout 120 "$emu" -c1 -r"$ROOT" sh "#U*$here/tests/argue.inferno" "#U*$here" "#U*$wwb" "$port" -d data/argue/work.md -w -c 2>&1 |
 	grep -v '^fs: fsqid' > "$tmp/out10"
 dontwant 'S6 line' 'a part read to the end is not read again' requests10
 dontwant 'S9 line' 'nor another' requests10

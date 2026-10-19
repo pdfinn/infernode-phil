@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""gen.py outdir [seed] - arguments for benchmarking wwb/prove against
+"""gen.py outdir [seed] - arguments for benchmarking phil/prove against
 first-order provers (Z3, E, Vampire).  Each is a logic file as
-wwb/argue writes them, named by its class:
+phil/argue writes them, named by its class:
 
 	prop	propositional, a few atoms, as a paragraph's argument is
 	propm	propositional, a dozen atoms and premises, a long document's

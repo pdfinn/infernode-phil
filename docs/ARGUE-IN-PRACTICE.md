@@ -1,6 +1,6 @@
 # argue and prove in practice
 
-What `wwb/argue` and `wwb/prove` showed when run over real philosophy, and
+What `phil/argue` and `phil/prove` showed when run over real philosophy, and
 how to use them well. Learned in October 2026 from passages of a
 dissertation in political philosophy and from formal work on the same
 author's arguments. The text, and what the tools found in it, stay with

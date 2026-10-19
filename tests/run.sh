@@ -1,5 +1,5 @@
 #!/bin/sh
-# tests/run.sh [-u] - run the workbench's tests in an InferNode emulator.
+# tests/run.sh [-u] - run the Philosopher's Workbench's tests in an InferNode emulator.
 #
 # ROOT must name an InferNode tree with a built emulator, and the
 # workbench must be built (mk install).  -u rewrites the expected
@@ -14,15 +14,20 @@ Darwin)	host=MacOSX;;
 *)	host=$(uname -s);;
 esac
 emu=$ROOT/emu/$host/o.emu
+wwb=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
+if [ ! -f "$wwb/dis/wwb/lib/prose.dis" ]; then
+	echo "$0: no built Writer's Workbench at $wwb: set WWB" >&2
+	exit 1
+fi
 if [ ! -x "$emu" ]; then
 	echo "tests/run.sh: no emulator at $emu: build InferNode first" >&2
 	exit 1
 fi
-if [ ! -d "$here/dis/wwb" ]; then
+if [ ! -d "$here/dis/phil" ]; then
 	echo 'tests/run.sh: build the workbench first (mk install)' >&2
 	exit 1
 fi
-out=$("$emu" -c1 -r"$ROOT" sh "#U*$here/tests/run.inferno" "#U*$here" "$@" 2>&1)
+out=$("$emu" -c1 -r"$ROOT" sh "#U*$here/tests/run.inferno" "#U*$here" "#U*$wwb" "$@" 2>&1)
 status=$?
 printf '%s\n' "$out" | grep -v '^fs: fsqid'
 # emu's own exit status does not carry the script's; read the summary

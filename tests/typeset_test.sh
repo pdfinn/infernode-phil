@@ -1,5 +1,5 @@
 #!/bin/sh
-# tests/typeset_test.sh - wwb/tableau's output set by InferNode's own
+# tests/typeset_test.sh - phil/tableau's output set by InferNode's own
 # troff (the infernode-troff package: pic, eqn, troff, tr2pdf) with no
 # complaint from any of them, one picture to each tableau, and a PDF.
 # TROFFPKG names the package's tree, built; without it, a sibling
@@ -21,23 +21,28 @@ Darwin)	host=MacOSX;;
 *)	host=$(uname -s);;
 esac
 emu=$ROOT/emu/$host/o.emu
+wwb=${WWB:-$(cd "$here/.." && pwd)/infernode-wwb}
+if [ ! -f "$wwb/dis/wwb/lib/prose.dis" ]; then
+	echo "$0: no built Writer's Workbench at $wwb: set WWB" >&2
+	exit 1
+fi
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 cat > "$tmp/run" <<'X'
 load std
-(wwb pkg tmp) = $*
+(phil wwb pkg tmp) = $*
 run $pkg/troffns $pkg
-run $wwb/wwbns $wwb
-cd $wwb/tests
+run $phil/philns $phil $wwb
+cd $phil/tests
 for f in data/argue/modal/*.logic data/argue/steps/kalam.logic data/argue/valid.logic {
-	wwb/prove -P $f
+	phil/prove -P $f
 } | grep '^#' > $tmp/proofs
-wwb/tableau $tmp/proofs > $tmp/tr
+phil/tableau $tmp/proofs > $tmp/tr
 cd $tmp
 {pic tr | eqn /lib/troff/eqnrc - | troff | tr2pdf > pdf} >[2] err
 echo halt > /dev/sysctl
 X
-timeout 300 "$emu" -c1 -r"$ROOT" sh "#U*$tmp/run" "#U*$here" "#U*$pkg" "#U*$tmp" >/dev/null 2>&1
+timeout 300 "$emu" -c1 -r"$ROOT" sh "#U*$tmp/run" "#U*$here" "#U*$wwb" "#U*$pkg" "#U*$tmp" >/dev/null 2>&1
 fail=0
 n=$(grep -c 'proved by a tableau' "$tmp/proofs")
 [ "$n" -ge 10 ] || { echo "FAIL: only $n tableaux to set"; fail=1; }

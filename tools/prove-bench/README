@@ -1,4 +1,4 @@
-prove-bench: wwb/prove against Z3, E and Vampire
+prove-bench: phil/prove against Z3, E and Vampire
 
 	python3 -I tools/prove-bench/gen.py /tmp/bench 1
 	emu -c1 -r$ROOT sh '#U*'$PWD/tools/prove-bench/run.inferno '#U*'$PWD '#U*/tmp/bench'

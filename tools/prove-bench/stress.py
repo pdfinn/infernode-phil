@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """stress.py outdir - logic files that grow along one dimension each,
-to find where wwb/prove breaks and how (run.sh runs them).  Each family
+to find where phil/prove breaks and how (run.sh runs them).  Each family
 doubles a size until the file is large; the answer of each is known:
 
 	chain-N	N implications in a row; valid

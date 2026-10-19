@@ -1,5 +1,5 @@
 #!/dis/sh.dis
-# format.inferno wwbdir outdir - each logic file of data/argue proved
+# format.inferno phildir wwbdir outdir - each logic file of data/argue proved
 # as it is (name.ours), written again in logic's symbols by prove -f
 # and proved (name.u.logic, name.uours), and that written back in ASCII
 # by prove -A -f and proved (name.a.logic, name.aours), and its TPTP
@@ -8,19 +8,21 @@
 # tests/format_test.sh.
 load std
 
-wwb=$1
+phil=$1
+wwb=${hd ${tl $*}}
+*=($phil ${tl ${tl $*}})
 outdir=${hd ${tl $*}}
-run $wwb/wwbns $wwb
-cd $wwb/tests
+run $phil/philns $phil $wwb
+cd $phil/tests
 for f in data/argue/*.logic data/argue/*/*.logic {
 	b=`{echo $f | sed 's/^data\/argue\///; s/\//-/g; s/\.logic$//'}
-	wwb/prove $f > $outdir/$b.ours >[2] /dev/null
-	wwb/prove -t $f > $outdir/$b.p >[2] /dev/null
-	wwb/prove -P -P $f > $outdir/$b.proof >[2] /dev/null
-	if {wwb/prove -f $f > $outdir/$b.u.logic >[2] /dev/null} {
-		wwb/prove $outdir/$b.u.logic > $outdir/$b.uours >[2] /dev/null
-		wwb/prove -A -f $outdir/$b.u.logic > $outdir/$b.a.logic >[2] /dev/null
-		wwb/prove $outdir/$b.a.logic > $outdir/$b.aours >[2] /dev/null
+	phil/prove $f > $outdir/$b.ours >[2] /dev/null
+	phil/prove -t $f > $outdir/$b.p >[2] /dev/null
+	phil/prove -P -P $f > $outdir/$b.proof >[2] /dev/null
+	if {phil/prove -f $f > $outdir/$b.u.logic >[2] /dev/null} {
+		phil/prove $outdir/$b.u.logic > $outdir/$b.uours >[2] /dev/null
+		phil/prove -A -f $outdir/$b.u.logic > $outdir/$b.a.logic >[2] /dev/null
+		phil/prove $outdir/$b.a.logic > $outdir/$b.aours >[2] /dev/null
 	} {
 		rm -f $outdir/$b.u.logic
 	}

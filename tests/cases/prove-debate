@@ -1,6 +1,6 @@
-wwb/prove data/argue/steps/objected.logic data/argue/steps/kalam-debate.md
-wwb/prove data/argue/steps/answered.logic data/argue/steps/kalam-debate.md
-wwb/prove data/argue/steps/rejoinder.logic data/argue/steps/kalam-debate.md
-wwb/prove data/argue/steps/roundabout.logic data/argue/steps/kalam-debate.md
-wwb/prove data/argue/steps/misses.logic data/argue/steps/kalam-debate.md
-wwb/prove data/argue/steps/answered-invalid.logic data/argue/steps/kalam-debate.md
+phil/prove data/argue/steps/objected.logic data/argue/steps/kalam-debate.md
+phil/prove data/argue/steps/answered.logic data/argue/steps/kalam-debate.md
+phil/prove data/argue/steps/rejoinder.logic data/argue/steps/kalam-debate.md
+phil/prove data/argue/steps/roundabout.logic data/argue/steps/kalam-debate.md
+phil/prove data/argue/steps/misses.logic data/argue/steps/kalam-debate.md
+phil/prove data/argue/steps/answered-invalid.logic data/argue/steps/kalam-debate.md

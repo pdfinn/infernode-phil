@@ -1,14 +1,14 @@
 #!/dis/sh.dis
-# wwb/argue [-cjqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file - whether a document's
+# phil/argue [-cjqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file - whether a document's
 # conclusion follows from what it says.  A language model writes the
 # argument down as a logic file (atoms, premises with the sentences
 # they come from, assumptions the text never states, the conclusion);
-# wwb/prove decides, by trying every case, whether it is valid, and
+# phil/prove decides, by trying every case, whether it is valid, and
 # says what is wrong if it is not.  The logic file is kept (-o names
 # it) so that a person or an agent can correct how the model read the
-# text and run wwb/prove on it again.  With -s, the writer's own logic
+# text and run phil/prove on it again.  With -s, the writer's own logic
 # file for the document: the model reads the text cold, given only that
-# file's atoms, and wwb/prove compares its reading with the writer's,
+# file's atoms, and phil/prove compares its reading with the writer's,
 # sentence by sentence, to show where the prose does not say what the
 # writer meant.  The model is reached through wwb/ask: $wwbmodel says
 # how (the Anthropic API with factotum's key, unless it names another
@@ -20,10 +20,10 @@
 # part, numbered as in the whole, and given the atoms the parts before
 # it and the parts' conclusions used (-V), and what they concluded (-E),
 # so that a part can rest on
-# an earlier one's conclusion, which wwb/join makes the link.  A part that argues nothing (history, a summary) says so and
-# is passed over.  wwb/join makes the parts one argument in steps, each
+# an earlier one's conclusion, which phil/join makes the link.  A part that argues nothing (history, a summary) says so and
+# is passed over.  phil/join makes the parts one argument in steps, each
 # part's conclusion a step; the model is asked how the work's main
-# conclusion is drawn from them; and wwb/prove checks the whole: each
+# conclusion is drawn from them; and phil/prove checks the whole: each
 # part's step, the main conclusion, parts the conclusion does not rest
 # on, links between parts the work never states.  With -r as well, only
 # the parts within that range of sentences (one chapter of a thesis).
@@ -45,7 +45,7 @@ load std
 # the logic file's formulas in logic's own symbols, ¬ ∧ ∨ → ∀ □ O, as
 # the prover shows them; left as it is if the prover cannot read it
 fn tidy {
-	if {wwb/prove -f $1 > $1^.tidy >[2] /dev/null} {
+	if {phil/prove -f $1 > $1^.tidy >[2] /dev/null} {
 		mv $1^.tidy $1
 	} {
 		rm -f $1^.tidy
@@ -53,7 +53,7 @@ fn tidy {
 }
 
 fn usage {
-	echo 'usage: wwb/argue [-cjqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file' >[1=2]
+	echo 'usage: phil/argue [-cjqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file' >[1=2]
 	raise fail:usage
 }
 
@@ -114,7 +114,7 @@ while {~ ${hd $args} -*} {
 if {! ~ $#args 1} {usage}
 f=${hd $args}
 if {! ftest -f $f} {
-	echo 'wwb/argue: no file '^$f >[1=2]
+	echo 'phil/argue: no file '^$f >[1=2]
 	raise 'fail:no file'
 }
 if {~ $#logic 0} {
@@ -122,11 +122,11 @@ if {~ $#logic 0} {
 }
 if {! ~ $#mine 0} {
 	if {! ftest -f $mine} {
-		echo 'wwb/argue: no file '^$mine >[1=2]
+		echo 'phil/argue: no file '^$mine >[1=2]
 		raise 'fail:no file'
 	}
 	if {~ $mine $logic} {
-		echo 'wwb/argue: -s names the file the reading would be written to: use -o' >[1=2]
+		echo 'phil/argue: -s names the file the reading would be written to: use -o' >[1=2]
 		raise 'fail:usage'
 	}
 }
@@ -147,7 +147,7 @@ if {! ~ $nruns 1} {
 	runs=()
 	for i in `{seq 1 $nruns} {
 		echo '#' run $i of $nruns
-		wwb/argue $o -o $logic^.r$i $f > $logic^.r$i^.out >[2=1]
+		phil/argue $o -o $logic^.r$i $f > $logic^.r$i^.out >[2=1]
 		runs=($runs $logic^.r$i^.out)
 	}
 	# each finding's key: its address, rule and sentence
@@ -260,7 +260,7 @@ if {~ $#w 1} {
 		ifs=' 	
 '
 		if {~ $#done 0} {
-			echo 'wwb/argue: -j: no parts in '^$parts^' to join' >[1=2]
+			echo 'phil/argue: -j: no parts in '^$parts^' to join' >[1=2]
 			raise 'fail:no parts'
 		}
 	}
@@ -284,8 +284,8 @@ if {~ $#w 1} {
 			pf=$parts/part$i.logic
 			rm -f $parts/vocab $parts/earlier
 			if {! ~ $#done 0} {
-				wwb/join -v $done > $parts/vocab
-				wwb/join -c $done > $parts/earlier
+				phil/join -v $done > $parts/vocab
+				phil/join -c $done > $parts/earlier
 			}
 			vo=()
 			if {ftest -s $parts/vocab} {
@@ -306,7 +306,7 @@ if {~ $#w 1} {
 			}
 			if {~ $again 1} {
 				rm -f $parts/part$i.span
-				wwb/argue $kq -r $a-$b $vo -o $pf $f > $parts/part$i.out >[2=1]
+				phil/argue $kq -r $a-$b $vo -o $pf $f > $parts/part$i.out >[2=1]
 				if {grep -s '^# no argument|: argue/valid ' $parts/part$i.out} {
 					echo S^$a^-S^$b > $parts/part$i.span
 				}
@@ -330,7 +330,7 @@ if {~ $#w 1} {
 	}
 	# the parts as one argument in steps, and the model asked how the
 	# work's main conclusion is drawn from them
-	wwb/join $done > $parts/joined
+	phil/join $done > $parts/joined
 	steps=`{grep '^# steps:' $parts/joined | sed 's/^# steps://'}
 	na=`{grep '^A[0-9]+	' $parts/joined | wc -l}
 	nc=`{grep '^C[0-9]+	' $parts/joined | wc -l}
@@ -367,13 +367,13 @@ if {~ $#w 1} {
 		wwb/sentences -m -t -r $last $f
 		echo
 		echo 'Number further steps from C'^`{echo $nc + 1 | calc}^' and assumptions from A'^`{echo $na + 1 | calc}^'.'
-	} | wwb/ask $m /lib/wwb/argue-work > $parts/top
+	} | wwb/ask $m /lib/phil/argue-work > $parts/top
 	{
 		echo '#' the argument of $f as $who read it, part by part: check that it says what the text says
 		grep '^(#|atom	|A[0-9]+	|C[0-9]*	)' $parts/top > $parts/top.kept
-		wwb/join -t $parts/top.kept $done
+		phil/join -t $parts/top.kept $done
 	} > $logic
-	wwb/prove $logic $f > $parts/check >[2=1]
+	phil/prove $logic $f > $parts/check >[2=1]
 	if {grep -s 'argue/(syntax|no-sentence|no-conclusion|duplicate|undefined)' $parts/check} {
 		echo '#' the prover could not read how the parts are joined: $who is asked again
 		grep 'argue/(syntax|no-sentence|no-conclusion|duplicate|undefined)' $parts/check
@@ -391,11 +391,11 @@ if {~ $#w 1} {
 			grep 'argue/(syntax|no-sentence|no-conclusion|duplicate|undefined)' $parts/check
 			echo
 			echo 'Write your lines again, corrected, and nothing else.'
-		} | wwb/ask $m /lib/wwb/argue-work > $parts/top
+		} | wwb/ask $m /lib/phil/argue-work > $parts/top
 		{
 			echo '#' the argument of $f as $who read it, part by part: check that it says what the text says
 			grep '^(#|atom	|A[0-9]+	|C[0-9]*	)' $parts/top > $parts/top.kept
-			wwb/join -t $parts/top.kept $done
+			phil/join -t $parts/top.kept $done
 		} > $logic
 	}
 	# the assumptions the joining added, read back in the meanings their
@@ -403,7 +403,7 @@ if {~ $#w 1} {
 	# used in another shows there, and the model is asked to mend it
 	asm=`{grep '^A[0-9]+	' $parts/top.kept | sed 's/	.*//'}
 	if {! ~ $#asm 0} {
-		wwb/prove -e $logic > $parts/says >[2=1]
+		phil/prove -e $logic > $parts/says >[2=1]
 		{
 			echo 'You joined the steps of this argument with these lines:'
 			echo
@@ -422,16 +422,16 @@ if {~ $#w 1} {
 			echo 'If one does not, because an atom is used in a sense other than the one'
 			echo 'it declares, write all your lines again, corrected, and nothing else:'
 			echo 'declare a new atom for a claim no atom states.'
-		} | wwb/ask $m /lib/wwb/argue-work > $parts/top2
+		} | wwb/ask $m /lib/phil/argue-work > $parts/top2
 		if {! grep -s '^# as meant' $parts/top2} {
 			if {grep -s '^C	' $parts/top2} {
 				cp $logic $parts/before
 				{
 					echo '#' the argument of $f as $who read it, part by part: check that it says what the text says
 					grep '^(#|atom	|A[0-9]+	|C[0-9]*	)' $parts/top2 > $parts/top.kept
-					wwb/join -t $parts/top.kept $done
+					phil/join -t $parts/top.kept $done
 				} > $logic
-				wwb/prove $logic $f > $parts/check >[2=1]
+				phil/prove $logic $f > $parts/check >[2=1]
 				if {grep -s 'argue/(syntax|no-sentence|no-conclusion|duplicate|undefined)' $parts/check} {
 					cp $parts/before $logic
 				} {
@@ -446,7 +446,7 @@ if {~ $#w 1} {
 	tidy $logic
 	echo '#' the work as a whole, $i parts, written to $logic by $who '(a language model, not a rule)'
 	# a part's conclusion nothing rests on is said once, for them all
-	wwb/prove $x $logic $f > $parts/whole >[2=1]
+	phil/prove $x $logic $f > $parts/whole >[2=1]
 	grep -v ': argue/unused-step: ' $parts/whole
 	idle=`{grep ': argue/unused-step: ' $parts/whole | sed 's/.*argue\/unused-step: ([^ ]+ \(S[0-9]+\)).*/\1/'}
 	if {! ~ $#idle 0} {
@@ -493,7 +493,7 @@ if {~ $#w 1} {
 		echo
 		grep '^(atom|domain|logic)	' $mine
 	}
-} | wwb/ask $m /lib/wwb/argue > $logic^.answer
+} | wwb/ask $m /lib/phil/argue > $logic^.answer
 # only the file's own lines: a model that talks is not obeyed
 # keep answer file header: only the file's own lines, under header
 fn keep {
@@ -520,7 +520,7 @@ fn mend {
 	header=${tl $*}
 	unreadable=()
 	for try in 1 2 3 {
-		wwb/prove $target $f > $target^.check >[2=1]
+		phil/prove $target $f > $target^.check >[2=1]
 		grep '(argue/syntax|argue/no-sentence|argue/no-conclusion|argue/duplicate|argue/undefined)' $target^.check > $target^.wrong
 		unreadable=()
 		if {ftest -s $target^.wrong} {
@@ -544,7 +544,7 @@ fn mend {
 				cat $target^.wrong
 				echo
 				echo 'Write the whole file again, corrected, and nothing else.'
-			} | wwb/ask $m /lib/wwb/argue > $target^.answer
+			} | wwb/ask $m /lib/phil/argue > $target^.answer
 			keep $target^.answer $target $header
 		}
 	}
@@ -575,7 +575,7 @@ if {! ~ $k 1} {
 			echo 'Use these atoms, and no others; write their lines and then the statements:'
 			echo
 			cat $logic^.vocab
-		} | wwb/ask $m /lib/wwb/argue > $logic^.answer
+		} | wwb/ask $m /lib/phil/argue > $logic^.answer
 		keep $logic^.answer $logic^.$i reading $i of $f by $who
 		mend $logic^.$i reading $i of $f by $who
 		# one reading the prover cannot read would stop the comparison
@@ -586,7 +586,7 @@ if {! ~ $k 1} {
 		}
 	}
 	echo '#' $#files readings by $who, compared
-	wwb/prove $x -c -d $f $files > $logic^.cmp >[2=1]
+	phil/prove $x -c -d $f $files > $logic^.cmp >[2=1]
 	# where they differ, a question the prover asks, yes or no, about a
 	# situation that tells the readings apart; put to the model afresh
 	# (unless -q), the answers rule readings out
@@ -600,7 +600,7 @@ if {! ~ $k 1} {
 				wwb/sentences -m -t $r $f
 				echo
 				grep '^# question '^$key^': ' $logic^.cmp | sed 's/^# question [^:]*: //'
-			} | wwb/ask $m /lib/wwb/settle > $logic^.yn
+			} | wwb/ask $m /lib/phil/settle > $logic^.yn
 			# a model may reason first: the answer is the last line
 			# that is only yes or no, else the reply's first word
 			yn=`{tr A-Z a-z < $logic^.yn | sed -n 's/^[^a-z]*(yes|no)[^a-z]*$/\1/p' | tail -1}
@@ -612,7 +612,7 @@ if {! ~ $k 1} {
 			}
 		}
 		if {ftest -s $logic^.answers} {
-			wwb/prove $x -c -a $logic^.answers -d $f $files > $logic^.cmp >[2=1]
+			phil/prove $x -c -a $logic^.answers -d $f $files > $logic^.cmp >[2=1]
 		}
 	}
 	grep -v ': argue/support |^# best reading|^# assume S' $logic^.cmp
@@ -672,8 +672,8 @@ if {! ~ $k 1} {
 }
 if {! ~ $#mine 0} {
 	echo '#' $mine as its writer meant it, beside $logic as $who read it cold
-	wwb/prove $x -c -d $f $mine $logic | grep -v ': argue/support |: argue/mismatches |^# best reading|^# if (yes|no):'
+	phil/prove $x -c -d $f $mine $logic | grep -v ': argue/support |: argue/mismatches |^# best reading|^# if (yes|no):'
 }
 tidy $logic
 echo '#' argument written to $logic by $who '(a language model, not a rule)'
-wwb/prove $x $logic $f
+phil/prove $x $logic $f

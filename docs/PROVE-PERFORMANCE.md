@@ -1,6 +1,6 @@
 # Making prove faster without changing what it says
 
-A record of the work on `wwb/prove`'s speed: the rule it was held to, how
+A record of the work on `phil/prove`'s speed: the rule it was held to, how
 that was checked, what was changed, what was tried and gave nothing, what
 was turned down and why, and what is left. Read it before trying to make
 `prove` faster, so as not to try the same things again. The numbers are in
@@ -42,7 +42,7 @@ files up to chain-800, wide-1600, cnf-75, steps-800, objs-800 and nest and
 paren to 1000. Two rules for the comparison:
 
 - **Take the baseline before installing anything new.** `run.inferno`
-  loads `dis/wwb/prove.dis` for each file, so installing in the middle of
+  loads `dis/phil/prove.dis` for each file, so installing in the middle of
   a run mixes the two builds.
 - **Time on a quiet machine.** Running alongside another emulator has
   more than doubled times, and a benchmark run under load once gave a

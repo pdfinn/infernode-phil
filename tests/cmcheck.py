@@ -1,4 +1,4 @@
-# cmcheck.py file.p model - whether a countermodel as wwb/prove writes
+# cmcheck.py file.p model - whether a countermodel as phil/prove writes
 # it (argue/countermodel, after the statement's name) makes every axiom
 # of the TPTP problem prove -t writes true and its conjecture false.
 # The formulas are evaluated over the model as given: variables named

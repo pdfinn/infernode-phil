@@ -1,15 +1,17 @@
 #!/dis/sh.dis
-# run.inferno wwbdir [-u] - the workbench's tests, inside InferNode.
+# run.inferno phildir wwbdir [-u] - the Philosopher's Workbench's tests, inside InferNode.
 # Each file in cases is a command, run from this directory; what it
 # writes must match the file of the same name in expect.  With -u,
 # write expect afresh instead (then read the diff before committing).
 # tests/run.sh on the host starts an emulator to run this.
 load std
 
-wwb=$1
+phil=$1
+wwb=${hd ${tl $*}}
+*=($phil ${tl ${tl $*}})
 update=${tl $*}
-run $wwb/wwbns $wwb
-cd $wwb/tests
+run $phil/philns $phil $wwb
+cd $phil/tests
 
 # diff reads files, not pipes, so each case's output goes to out
 mkdir -p out

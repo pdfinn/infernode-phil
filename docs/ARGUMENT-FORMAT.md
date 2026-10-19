@@ -4,7 +4,7 @@ A design sketch, before code.  Status: built, 1 to 5 below; the real-text benchm
 
 ## Why
 
-`wwb/argue` and `wwb/prove` take one conclusion per document.  An essay
+`phil/argue` and `phil/prove` take one conclusion per document.  An essay
 or a work of philosophy argues in stages: sub-conclusions that later
 steps rest on, several lines of support for one claim, objections and
 replies to them.  The format has to hold that, stay readable and
@@ -128,11 +128,11 @@ it is addressed at the first; the faithfulness check reads all.
 
 | Tool | Reads | Writes |
 |---|---|---|
-| `wwb/argue` | the document | `doc.logic` (and, with `-k`, readings beside it) |
-| `wwb/argue -s mine.logic` | the document, the writer's own logic file | a cold reading over the same atoms, and `prove -c`'s comparison |
-| `wwb/prove` | the logic file, the document | findings, each at its sentence; a verdict for each step; what survives |
-| `wwb/map` (new) | the logic file | the argument as a tree in text, or Argdown for argument-mapping tools |
-| `wwb/prove -t` | the logic file | TPTP, for Z3, E or Vampire |
+| `phil/argue` | the document | `doc.logic` (and, with `-k`, readings beside it) |
+| `phil/argue -s mine.logic` | the document, the writer's own logic file | a cold reading over the same atoms, and `prove -c`'s comparison |
+| `phil/prove` | the logic file, the document | findings, each at its sentence; a verdict for each step; what survives |
+| `phil/map` (new) | the logic file | the argument as a tree in text, or Argdown for argument-mapping tools |
+| `phil/prove -t` | the logic file | TPTP, for Z3, E or Vampire |
 
 `wwbfs` may later serve the same as files at `/mnt/wwb`; it would call
 these commands, never hold the only copy of anything.
@@ -156,7 +156,7 @@ these commands, never hold the only copy of anything.
 ## Order of work
 
 1. Steps (`from`, several conclusions, cycles), with tests.  Done.
-2. `wwb/map`: the tree in text; Argdown.  Done; its Argdown is read by
+2. `phil/map`: the tree in text; Argdown.  Done; its Argdown is read by
    Argdown's own tools (`argdown map` joins the steps).
 3. Objections and replies, and what survives.  Done; `map` draws them
    (in Argdown as attacks).

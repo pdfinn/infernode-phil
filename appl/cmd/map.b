@@ -8,13 +8,13 @@ implement Map;
 # conclusion is another's premise).
 #
 # Given the document, each statement is shown by its sentence, with its
-# address; given wwb/prove's findings (-f), each is marked with what
+# address; given phil/prove's findings (-f), each is marked with what
 # prove found of it, and one the text never states is shown as prove
 # reads it back (prove -e).  map decides nothing: prove judges, map
 # draws.
 #
-#	wwb/prove -e essay.logic essay.md > findings
-#	wwb/map -f findings essay.logic essay.md
+#	phil/prove -e essay.logic essay.md > findings
+#	phil/map -f findings essay.logic essay.md
 #
 
 include "sys.m";
@@ -33,7 +33,7 @@ Map: module
 	init:	fn(nil: ref Draw->Context, args: list of string);
 };
 
-progname := "wwb/map";
+progname := "phil/map";
 
 include "findings.b";
 
@@ -67,7 +67,7 @@ init(nil: ref Draw->Context, args: list of string)
 	aflag := 0;
 	ffile: string;
 	arg->init(args);
-	arg->setusage("wwb/map [-a] [-f findings] logicfile [document]");
+	arg->setusage("phil/map [-a] [-f findings] logicfile [document]");
 	while((o := arg->opt()) != 0)
 		case o {
 		'a' =>	aflag = 1;
@@ -179,7 +179,7 @@ readfindings(file: string)
 	}
 }
 
-# What a statement rests on, as wwb/prove takes it: what its from
+# What a statement rests on, as phil/prove takes it: what its from
 # names, or for a conclusion without one, the steps before it and the
 # premises they do not draw on.
 support(n: ref Node): list of ref Node
@@ -293,7 +293,7 @@ text(n: ref Node): string
 # conclusion and a later step's premise are one statement.
 argdown(c: ref Node)
 {
-	out.puts(sys->sprint("// %s, as wwb/map draws it\n", logic));
+	out.puts(sys->sprint("// %s, as phil/map draws it\n", logic));
 	k := 0;
 	for(l := nodes; l != nil; l = tl l){
 		n := hd l;
@@ -414,6 +414,6 @@ rev2(l: list of string): list of string
 
 fatal(s: string)
 {
-	sys->fprint(sys->fildes(2), "wwb/map: %s\n", s);
+	sys->fprint(sys->fildes(2), "phil/map: %s\n", s);
 	raise "fail:error";
 }

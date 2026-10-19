@@ -1,2 +1,2 @@
-wwb/prove -c -a data/argue/split/answers -d data/argue/split/text.md data/argue/split/r1.logic data/argue/split/r2.logic data/argue/split/r3.logic
-wwb/prove data/argue/split/views.logic data/argue/split/views.md
+phil/prove -c -a data/argue/split/answers -d data/argue/split/text.md data/argue/split/r1.logic data/argue/split/r2.logic data/argue/split/r3.logic
+phil/prove data/argue/split/views.logic data/argue/split/views.md

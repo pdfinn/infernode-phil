@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""compare.py benchdir [vampire] - wwb/prove's verdicts and times (from
+"""compare.py benchdir [vampire] - phil/prove's verdicts and times (from
 run.inferno) set beside Z3's, E's and Vampire's on the same arguments,
 written as TPTP by prove -t.  Each prover gets 10 seconds an argument.
 

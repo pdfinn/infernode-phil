@@ -1,0 +1,123 @@
+The Philosopher's Workbench, a guide to read in Xenith
+
+Everything here is run by clicking.  Sweep a command with button 2
+(the middle button; Option and drag on a Mac trackpad) to run it; a
+single word, such as Put, needs only a click.  What a command prints
+goes to a window named +Errors in this directory.  Each finding there
+begins with an address, such as agents.md:3; click it with button 3
+(Cmd on a Mac) and Xenith opens the file at that line.  Button 3 on a
+file name below opens the file.
+
+Nothing here talks to a model except section 7, and nothing needs a
+service: the workbench is commands, run as any other.
+
+0. Once, to start
+
+Put the workbench in this Xenith's name space:
+
+	Local run ../philns
+
+Local runs it in Xenith's own name space, so every command after it
+finds phil/prove and the rest.  It brings in the Writer's Workbench
+too, from infernode-wwb beside this tree, which reads the prose; if
+your profile already runs philns, skip this.
+
+1. A model's misreading, caught by rule
+
+agents.md is three sentences.  A logic file says what each one means;
+a model writes it (section 7), or a person.  This one is right:
+
+	phil/prove agents.logic agents.md
+
+argue/valid 1: the conclusion follows.  This one was written by a
+model that read "only" as "if", which models do:
+
+	phil/prove agents-misread.logic agents.md
+
+argue/converse finds the misreading at the sentence it misreads;
+argue/invalid gives the case that refutes the argument as read, and
+names the fallacy (denying the antecedent); argue/missing says what
+premise would make it follow.  Open the two logic files side by side
+and compare P1.
+
+2. Necessity and obligation
+
+A classic slip, from "necessarily, if p then q" and p to
+"necessarily q":
+
+	phil/prove necessity.logic necessity.md
+
+And from "you ought to" to "you do" (logic kd, the logic of ought):
+
+	phil/prove ought.logic ought.md
+
+Each says when it fails, in the sentences' own words.
+
+3. An argument's shape
+
+cosmos.md argues in steps (C1, then C), meets an objection (O1) and
+answers it (R1).  The logic file says what rests on what:
+
+	phil/map cosmos.logic
+
+The same in Argdown, for argument-mapping tools:
+
+	phil/map -a cosmos.logic
+
+4. Objections and replies
+
+	phil/prove cosmos.logic cosmos.md
+
+The steps hold, and the conclusion survives the objection, but
+argue/restates says the reply only repeats the premise the objection
+disputes: it begs the question.  Take the reply away:
+
+	phil/prove cosmos-unanswered.logic cosmos.md
+
+The objection stands, so P1 falls, and with it C1 and C, each at its
+sentence.  A reply aimed at the wrong thing:
+
+	phil/prove cosmos-missed.logic cosmos.md
+
+argue/misses: it does not contradict the objection.  And
+argue/negation: the logic drops the "nothing" its sentence says.
+
+5. Correcting the logic and asking again
+
+Open agents-misread.logic (button 3 on its name).  In P1 change
+
+	rational(x) -> moral(x)
+
+to
+
+	moral(x) -> rational(x)
+
+click Put in its tag, and run the line in section 1 again: it now
+holds.  This is the loop: a model or a person writes the logic, prove
+decides, the file is corrected by hand, prove decides again.  (Change
+P1 back after, and Put, so that the next reader sees the misreading;
+or, on the host, git checkout demo.)
+
+6. For another prover
+
+	phil/prove -t agents.logic
+
+The same argument in TPTP, for E, Vampire or Z3 to check.
+
+7. With a model (llmsrv at /mnt/llm, a key in factotum, or $wwbmodel;
+   see wwb/ask in wwb(1))
+
+argue has the model read the document three times and write the
+logic; where the readings differ, prove asks a question that tells
+them apart:
+
+	phil/argue -k 3 cosmos.md
+
+It writes cosmos.md.logic; open it, correct it if need be, and:
+
+	phil/prove cosmos.md.logic cosmos.md
+
+The model only reads; the rules decide.
+
+The manual is man 1 phil; what the tools can and cannot do for a
+philosophical problem is in ../docs/REACH.md.
