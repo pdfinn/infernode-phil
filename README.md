@@ -93,12 +93,12 @@ tree, since `prove` and `map` load wwb's prose library:
 ```sh
 git clone https://github.com/infernode-os/infernode
 git clone https://github.com/pdfinn/infernode-wwb
-git clone https://github.com/pdfinn/infernode-phil
+git clone https://github.com/pdfinn/infernode-phiwb
 export ROOT=$PWD/infernode
 export PATH=$ROOT/MacOSX/arm64/bin:$PATH   # or Linux/amd64, and so on
 # build InferNode as its README says, then:
 (cd infernode-wwb; mk install)
-(cd infernode-phil; mk install)
+(cd infernode-phiwb; mk install)
 ```
 
 This builds into `dis/` inside this tree; nothing is copied into
@@ -109,7 +109,7 @@ clean: `mk nuke` and `mk install`.
 Inside InferNode, bind it in:
 
 ```
-run /n/local/path/to/infernode-phil/philns
+run /n/local/path/to/infernode-phiwb/philns
 ```
 
 `philns` binds the commands to `/dis/phil`, run as `phil/prove` and so on,
@@ -117,7 +117,7 @@ and the same directory to `/dis/ϕwb`; the prompts to `/lib/phil`; the
 manual to `/man/1/phil`. If wwb is not in the name space already, it runs
 wwb's `wwbns` first, from `infernode-wwb` beside this tree or the
 directory given as its second argument. Nothing of InferNode's is hidden.
-In a running Xenith, `Local run /n/local/path/to/infernode-phil/philns`
+In a running Xenith, `Local run /n/local/path/to/infernode-phiwb/philns`
 makes the binds in Xenith's own name space.
 
 From the host shell, or for an agent, `./phil` runs a command without
@@ -134,6 +134,32 @@ which: the Anthropic API, an OpenAI-compatible one, `/mnt/llm`, or a
 command. wwb's README, under "Reaching a model", has the details. The whole
 document goes to the model; for one that must not leave the machine, use
 a local model.
+
+## Trying it
+
+From the host shell, in `demo/`, after installing. These need no model:
+
+```sh
+cd demo
+../phil prove agents-misread.logic agents.md   # a misreading caught by rule
+../phil scope necessity.logic necessity.md     # an argument that turns on where "necessarily" goes
+../phil says reports.md                        # who the text gives its claims to
+```
+
+These read a text with a model (`ANTHROPIC_API_KEY` set, or `WWBMODEL`
+naming another way), each writing a file the next reads:
+
+```sh
+../phil argue -k 3 -o cosmos.logic cosmos.md   # read the argument three times, settle, prove
+../phil senses -d cosmos.md cosmos.logic       # one word in two senses?
+../phil scope cosmos.logic cosmos.md           # turns on the scope of a necessity?
+../phil claims reports.md                      # everything a source claims, for a corpus
+```
+
+The tools compose: each reads files and writes one, and none runs
+another under a flag. `demo/guide` is the same tour, clicked through in
+Xenith; `bench/` is the tools run on primary texts, with what they found
+in `bench/RESULTS.md`.
 
 ## Arguments
 

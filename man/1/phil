@@ -1391,7 +1391,7 @@ take a word from one sense to another
 .B appl/cmd/*.b
 and
 .B sh/*
-in the workbench's tree, github.com/pdfinn/infernode-phil;
+in the workbench's tree, github.com/pdfinn/infernode-phiwb;
 .B appl/lib/prose.b
 of the Writer's Workbench reads the documents.
 .SH SEE ALSO

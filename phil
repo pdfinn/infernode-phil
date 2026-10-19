@@ -4,7 +4,7 @@
 #
 #	./phil prove argument.logic argument.md
 #	./phil argue -k 3 passage.md
-#	/path/to/infernode-phil/phil map -a argument.logic
+#	/path/to/infernode-phiwb/phil map -a argument.logic
 #
 # It starts an InferNode emulator with the workbench bound in, runs
 # phil/command in the current directory, prints what it prints, and exits

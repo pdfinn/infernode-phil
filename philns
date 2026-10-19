@@ -4,7 +4,7 @@
 #
 # Run it with run, so that its binds are made in the calling shell's
 # name space:
-#	run /n/local/home/you/src/infernode-phil/philns
+#	run /n/local/home/you/src/infernode-phiwb/philns
 # dir is this checkout as Inferno sees it; without it, the directory
 # this script is in.  Its commands appear as /dis/phil/*, run as
 # phil/prove and so on, and the same directory as /dis/ϕwb; its prompts

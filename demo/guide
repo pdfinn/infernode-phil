@@ -8,7 +8,7 @@ begins with an address, such as agents.md:3; click it with button 3
 (Cmd on a Mac) and Xenith opens the file at that line.  Button 3 on a
 file name below opens the file.
 
-Nothing here talks to a model except section 7, and nothing needs a
+Nothing here talks to a model except section 8, and nothing needs a
 service: the workbench is commands, run as any other.
 
 0. Once, to start
@@ -51,7 +51,16 @@ And from "you ought to" to "you do" (logic kd, the logic of ought):
 
 	phil/prove ought.logic ought.md
 
-Each says when it fails, in the sentences' own words.
+Each says when it fails, in the sentences' own words.  Where an
+argument turns on where the necessity is put, scope says so: it turns
+each "if p, then necessarily q" over, p → □q against □(p → q), and
+proves the argument again:
+
+	phil/scope necessity.logic necessity.md
+
+Read as the sentence has it, the argument fails; it needs the necessity
+on "he is unmarried" itself, which the sentence does not give.  No
+model is asked: the prover writes both readings.
 
 3. An argument's shape
 
@@ -104,7 +113,15 @@ or, on the host, git checkout demo.)
 
 The same argument in TPTP, for E, Vampire or Z3 to check.
 
-7. With a model (llmsrv at /mnt/llm, a key in factotum, or $wwbmodel;
+7. Who says what
+
+	phil/says reports.md
+
+Each sentence that gives a claim as someone else's, and whose: by rule,
+from the words' parts of speech, with no model.  "We hold" is the
+writer's own, and is not listed.
+
+8. With a model (llmsrv at /mnt/llm, a key in factotum, or $wwbmodel;
    see wwb/ask in wwb(1))
 
 argue has the model read the document three times and write the
@@ -116,6 +133,21 @@ them apart:
 It writes cosmos.md.logic; open it, correct it if need be, and:
 
 	phil/prove cosmos.md.logic cosmos.md
+
+Then whether the argument moves between two senses of one word: a
+model is asked only "one sense or two?", and the prover says whether
+the argument turns on it:
+
+	phil/senses -d cosmos.md cosmos.md.logic
+
+And whether it turns on the scope of a necessity or an ought:
+
+	phil/scope cosmos.md.logic cosmos.md
+
+To read a source for everything it claims, not one argument (what a
+corpus holds a commentary's reports to):
+
+	phil/claims reports.md
 
 The model only reads; the rules decide.
 
