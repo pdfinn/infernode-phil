@@ -12,3 +12,14 @@ end	two	end	P1 P2 P3	the aim	the last point
 I think the claims are used consistently.
 
 end	one
+=====
+aim	one
+last	one
+perfection	one
+bridge	A1	end	the last point of a thing	the aim of a thing
+=====
+aim	one
+last	one
+perfection	one
+bridge	P3	end	the last point of a thing	the aim of a thing
+bridge	C	end	the last point of a thing	the aim of a thing

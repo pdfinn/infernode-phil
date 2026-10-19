@@ -12,7 +12,7 @@ phil, argue, prove, join, map, tableau, read, settle, senses, readable, corpus \
 .br
 .B phil/argue
 [
-.B -cejqwx
+.B -cjqwx
 ] [
 .B -k
 .I readings
@@ -374,11 +374,6 @@ statement is called.
 .B argue/runs-agree
 is 1 if every run's verdict was the same, 0 if not: a verdict that
 changes with the run rests on how the text is read.
-.IP
-.B -e
-checks the kept reading with
-.IR senses :
-whether the argument moves between two senses of one claim.
 .TP
 .B phil/read
 A reading: a language model, given the instructions in
@@ -460,24 +455,31 @@ It prints the comparison.
 .B phil/senses
 Whether the argument read in
 .I logicfile
-moves between two senses of one claim.
-Each atom more than one statement uses is put to a model afresh, with the
-instructions in
+moves between two senses of one word.
+The argument is put to a model afresh, with the instructions in
 .BR /lib/phil/senses ,
-the document's sentences, and each statement that uses it in words; the
-model says whether the text means it in one sense throughout or in two,
-and if two, which statements take the second, and what each sense is.
+the document's sentences, each statement in words, and each atom more than
+one statement uses.
+The model says whether each such atom is meant in one sense throughout or
+in two, and if two, which statements take the second; and whether a
+premise or assumption takes a word from one sense to another, a bridge
+joining two atoms that use it differently.
 It does not judge the argument.
-The prover does: the atom is split, a second atom for the second sense in
-those statements, and the argument proved again.
-Valid as read and invalid split is
+The prover does: an atom in two senses is split, a second atom for the
+second sense in those statements; a bridge is taken out, its formula made
+one that is always true; and the argument is proved again.
+Valid as read and invalid after is
 .BR argue/equivocates ,
-at the first statement of the second sense, with the case in which the
-conclusion fails; the split is kept in
+with the case in which the conclusion fails; what was proved is kept in
 .IB logicfile .sense N.
 Valid either way is
 .BR argue/two-senses :
 a shift the argument does not turn on.
+It reads any reading, as
+.I prove
+does, and is not run by
+.IR argue :
+.B phil/argue -o x.logic doc; phil/senses -d doc x.logic.
 The answers are kept in
 .IB logicfile .senses ,
 with the model, the instructions' hash and the date.
@@ -1251,7 +1253,8 @@ asks which reading is right
 .B /lib/phil/senses
 instructions to the model when
 .I senses
-asks whether a claim is in one sense or two
+asks whether a claim is in one sense or two, and which statements
+take a word from one sense to another
 .PD
 .SH SOURCE
 .B appl/cmd/*.b

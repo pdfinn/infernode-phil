@@ -1,19 +1,24 @@
 #!/dis/sh.dis
 # phil/senses [-x] [-m model] [-r a-b] -d document logicfile - whether
-# the argument read in logicfile moves between two senses of one claim.
-# Each claim (atom) the argument uses in more than one statement is put
-# to a model afresh, through wwb/ask with the instructions in
-# /lib/phil/senses: the document's sentences, and each statement that
-# uses the claim, in words (phil/prove -e).  The model says, claim by
-# claim, whether the text means it in one sense throughout or in two,
-# and if two, which statements take the second.  It does not judge the
-# argument.  The prover does: each claim said to be in two senses is
-# split, a second atom for the second sense in the statements that use
-# it, and the argument proved again.  Valid as read and not valid split
-# is argue/equivocates, at the first statement of the second sense,
-# with the case in which it fails; still valid is argue/two-senses,
-# a shift the argument does not turn on.  The model's answers are kept
-# in logicfile.senses, and a split that fails in logicfile.senseN.
+# the argument read in logicfile moves between two senses of one word.
+# The argument is put to a model afresh, through wwb/ask with the
+# instructions in /lib/phil/senses: the document's sentences, each
+# statement in words (phil/prove -e), and each claim (atom) more than
+# one statement uses.  The model answers two questions.  Is each claim
+# meant in one sense throughout, or in two, and which statements take
+# the second?  And does a premise or assumption take a word from one
+# sense to another, joining two claims that use it differently?  It
+# does not judge the argument.  The prover does.  A claim in two senses
+# is split, a second atom for the second sense in the statements that
+# use it; a bridge between senses is taken out (its formula made one
+# that is always true); and the argument proved again.  Valid as read
+# and not valid after is argue/equivocates, with the case in which it
+# fails; still valid is argue/two-senses, a shift the argument does
+# not turn on.  The model's answers are kept in logicfile.senses, and a
+# split or a taking out that fails in logicfile.senseN.
+#
+# It is not run by phil/argue: it reads a reading, any reading, as
+# phil/prove does.  phil/argue -o x.logic doc; phil/senses -d doc x.logic
 load std
 
 fn usage {
@@ -83,10 +88,6 @@ awk -F '	' $ren^'
 				print at[i] "	" mean[at[i]] l
 		}
 	}' $logic > $logic^.shared
-if {! ftest -s $logic^.shared} {
-	rm -f $logic^.shared
-	exit
-}
 
 # what each statement says, in words
 # (awk, not sed: this sed breaks on some lines of logic's symbols)
@@ -100,13 +101,25 @@ phil/prove -e $logic $doc >[2=1] | awk '{
 	sub(/: reads /, ": ", r)
 	print n "	" r
 }' > $logic^.words
+if {! ftest -s $logic^.words} {
+	rm -f $logic^.shared $logic^.words
+	exit
+}
 {
 	echo 'The sentences, numbered:'
 	echo
 	wwb/sentences -m -t $r $doc
 	echo
+	echo 'The argument as it was read, statement by statement:'
+	echo
+	awk -F '	' '{ print "  " $2 }' $logic^.words
+	echo
 	echo 'The claims the argument uses in more than one statement, each with'
 	echo 'the statements that use it:'
+	if {! ftest -s $logic^.shared} {
+		echo
+		echo '(none)'
+	}
 	awk -F '	' -v 'wf='^$logic^.words 'FILENAME == wf { w[$1] = $2; next }
 		{
 			print ""
@@ -187,6 +200,54 @@ for l in `{grep '^[a-z_][a-z0-9_]*	two	' $logic^.senses} {
 					what = "it"
 				if(eq == "1")
 					print logic ": argue/equivocates: " at ": " msg ": the argument holds only if they are one; taken apart, " what " does not follow (" kept ")"
+				else if(v0 == 1 && v1 == 1)
+					print logic ": argue/two-senses: " at ": " msg ": the argument does not turn on it"
+				else
+					print logic ": argue/two-senses: " at ": " msg
+			}' $logic^.ans $logic
+		if {~ $#eq 1} {
+			awk -v 'logic='^$logic '/: argue\/countermodel: / { sub(/^[^ ]*: /, ""); print logic ": " $0 }' $logic^.splitout
+		}
+	}
+	rm -f $logic^.ans $logic^.split $logic^.splitout
+}
+
+# a bridge: a premise or assumption that takes a word from one sense to
+# another, taken out, its formula made one that holds whatever is so:
+# does the argument still hold without it?
+for l in `{grep '^bridge	[PA][0-9]+	' $logic^.senses} {
+	n=`{echo $n + 1 | calc}
+	echo $l > $logic^.ans
+	ok=`{awk -F '	' -v 'OFS=	' -v 'out='^$logic^.split '
+		NR == FNR { b = $2; next }
+		$1 == b {
+			$3 = "(" $3 ") | !(" $3 ")"
+			found = 1
+		}
+		{ print > out }
+		END { if(found) print "out"; else print "none" }' $logic^.ans $logic}
+	if {~ $ok out} {
+		phil/prove $logic^.split $doc > $logic^.splitout >[2=1]
+		v1=`{awk $valid $logic^.splitout}
+		fails=`{awk 'BEGIN { f = "" } /argue\/invalid: [^ ]+ \(S[0-9]+\)/ { if(!got){ i = index($0, "argue/invalid: "); r = substr($0, i+15); j = index(r, ")"); f = substr(r, 1, j); got = 1 } } END { print f }' $logic^.splitout}
+		eq=()
+		if {~ $v0 1 && ~ $v1 0} {
+			eq=1
+			cp $logic^.split $logic^.sense^$n
+		}
+		awk -F '	' -v 'v0='^$"v0 -v 'v1='^$"v1 -v 'eq='^$"eq -v 'fails='^$"fails -v 'logic='^$logic -v 'kept='^$logic^.sense^$n '
+			NR == FNR { b = $2; word = $3; s1 = $4; s2 = $5; next }
+			$1 == b { sent = $2 }
+			END {
+				at = b
+				if(sent ~ /^S[0-9]+$/)
+					at = at " (" sent ")"
+				msg = "it takes \"" word "\" from " s1 " to " s2 ", a reader says"
+				what = fails
+				if(what == "")
+					what = "it"
+				if(eq == "1")
+					print logic ": argue/equivocates: " at ": " msg ": the argument holds only through it; without it, " what " does not follow (" kept ")"
 				else if(v0 == 1 && v1 == 1)
 					print logic ": argue/two-senses: " at ": " msg ": the argument does not turn on it"
 				else

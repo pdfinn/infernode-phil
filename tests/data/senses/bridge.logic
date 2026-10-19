@@ -1,0 +1,8 @@
+atom	aim(x)	x is the end of a thing, its aim
+atom	last(x)	x is the end of a thing, its last point
+atom	perfection(x)	x is the perfection of a thing
+P1	S1	all x: aim(x) -> perfection(x)
+P2	S2	last(death)
+P3	S3	last(life) -> aim(life)
+A1	-	all x: last(x) -> aim(x)
+C	S4	perfection(death)	from P1 P2 A1

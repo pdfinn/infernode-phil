@@ -1,6 +1,6 @@
 #!/dis/sh.dis
 # senses.inferno phildir wwbdir port - phil/senses on data/senses/end
-# four times, against tests/fakellm.py answering with
+# five times and data/senses/bridge twice, against tests/fakellm.py answering with
 # data/senses/replies in turn; run by tests/senses_test.sh.
 load std
 
@@ -13,14 +13,18 @@ run $phil/philns $phil $wwb
 wwbmodel='openai http://127.0.0.1:'^$port^'/v1'
 cd $phil/tests
 mkdir -p out
-for i in 1 2 3 4 5 {
+for i in 1 2 3 4 5 6 7 {
+	l=end
+	if {~ $i 6 7} {
+		l=bridge
+	}
 	# in logic's symbols, as argue keeps a reading
-	phil/prove -f data/senses/end.logic > out/senses.logic
+	phil/prove -f data/senses/$l.logic > out/senses.logic
 	echo '#' ask $i
 	phil/senses -m fake-model -d data/senses/end.md out/senses.logic
 	if {ftest -f out/senses.logic.sense1} {
 		echo '#' kept split
-		grep '^atom	|^P2' out/senses.logic.sense1
+		grep '^atom	|^P2|^A1' out/senses.logic.sense1
 	}
 	sed 1q out/senses.logic.senses
 	echo '#' files

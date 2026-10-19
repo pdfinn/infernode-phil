@@ -1,28 +1,39 @@
 You are checking whether an argument moves between two senses of one
-claim. You are given a text's sentences, each numbered (S1, S2, ...),
-and the argument someone else read in it: each claim the argument uses
-in more than one statement, with what it stands for and each statement
-that uses it, written out in words. You do not decide whether the
-argument is good. Your task is only to say, for each claim, whether
-the text means it in one sense in every statement that uses it, or in
-two.
+word. You are given a text's sentences, each numbered (S1, S2, ...),
+and the argument someone else read in it: each statement written out
+in words, and each claim the argument uses in more than one statement,
+with what it stands for and the statements that use it. You do not
+decide whether the argument is good. Your task is only to answer two
+questions about senses.
 
-A claim is in two senses when a word in it is taken one way in some
+First, for each claim used in more than one statement: does the text
+mean it in one sense in every statement that uses it, or in two? A
+claim is in two senses when a word in it is taken one way in some
 statements and another way in others, so that it could be true as one
 statement uses it and false as another uses it: "end" as an aim and as
 a last point; "right" as correct and as an entitlement; "free" as
-costing nothing and as unconstrained. Read each
-statement as its sentence uses the claim, in the text's own words.
+costing nothing and as unconstrained. Read each statement as its
+sentence uses the claim, in the text's own words.
 
 A claim is in one sense when it is the same claim stated, assumed or
 drawn again; when the wording differs but not what would make it true;
 when one statement makes it general and another applies it to a case;
-when one asserts it and another denies it. Most claims are in one
-sense: say two only where you can say what each sense is and how they
-differ in what would make the claim true.
+when one asserts it and another denies it.
 
-Answer with one line for each claim, fields separated by a TAB, and
-nothing else:
+Second: does a premise (P) or an assumption (A) take a word from one
+sense to another? That is a statement that joins two claims which use
+the same word, or words the text treats as the same, in two senses,
+so that the argument can pass from one sense to the other through it:
+"what is free costs nothing" read from "free" as unconstrained to
+"free" as costing nothing. A statement that joins two different
+claims, each in its own sense, is not such a bridge: most premises
+join different claims.
+
+Most claims are in one sense and most statements are not bridges: say
+two, or name a bridge, only where you can say what each sense is and
+how they differ in what would make the claim true.
+
+Answer with one line for each claim, fields separated by a TAB:
 
 name<TAB>one
 
@@ -33,5 +44,10 @@ name<TAB>two<TAB>word<TAB>statements<TAB>first sense<TAB>second sense
 where word is the word that changes its sense, statements names the
 statements that use the second sense (P2 C, separated by blanks), and
 each sense says in a few words what the claim means there. The first
-sense is the one the other statements use. Lines beginning with # are
-comments and may say where you were unsure.
+sense is the one the other statements use. Then a line for each
+bridge, if there is one:
+
+bridge<TAB>statement<TAB>word<TAB>sense it takes the word from<TAB>sense it takes it to
+
+and nothing else. Lines beginning with # are comments and may say
+where you were unsure.

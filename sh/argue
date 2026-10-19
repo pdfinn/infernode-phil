@@ -1,5 +1,5 @@
 #!/dis/sh.dis
-# phil/argue [-cejqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file - whether a document's
+# phil/argue [-cjqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file - whether a document's
 # conclusion follows from what it says.  A language model writes the
 # argument down as a logic file (atoms, premises with the sentences
 # they come from, assumptions the text never states, the conclusion);
@@ -34,12 +34,6 @@
 # With -c, a run cut short carries on: a part read to the end before,
 # over the same sentences, is not read again.
 #
-# With -e, the kept reading is checked for a claim used in two senses
-# (phil/senses): a model is asked, claim by claim, whether the text
-# means it alike in every statement that uses it, and the prover says
-# whether the argument holds with a claim it says is in two senses
-# split in two (argue/equivocates where it does not).
-#
 # Readings of the same text vary from one run to the next.  With -n, the
 # whole is done that many times, each afresh (logicfile.r1, .r2, ...),
 # and the first run's findings are given, each found in every run as it
@@ -59,7 +53,7 @@ fn tidy {
 }
 
 fn usage {
-	echo 'usage: phil/argue [-cejqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file' >[1=2]
+	echo 'usage: phil/argue [-cjqwx] [-k readings] [-m model] [-n runs] [-o logicfile] [-p size] [-r a-b] [-s mine] [-V vocab] [-E earlier] file' >[1=2]
 	raise fail:usage
 }
 
@@ -67,7 +61,6 @@ model=()
 logic=()
 mine=()
 k=1
-e=()
 x=()
 q=()
 w=()
@@ -84,8 +77,6 @@ while {~ ${hd $args} -*} {
 	args=${tl $args}
 	if {~ $opt -x} {
 		x=-x
-	} {~ $opt -e} {
-		e=-e
 	} {~ $opt -q} {
 		q=-q
 	} {~ $opt -w} {
@@ -570,12 +561,3 @@ if {! ~ $#mine 0} {
 tidy $logic
 echo '#' argument written to $logic by $who '(a language model, not a rule)'
 phil/prove $x $logic $f
-st=$status
-if {~ $#e 1} {
-	phil/senses $x $m $r -d $f $logic
-}
-# the prover's status, as without -e
-if {! ~ $st ''} {
-	raise $st
-}
-exit

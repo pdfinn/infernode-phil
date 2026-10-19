@@ -246,8 +246,10 @@ is put to a model afresh, with the statements in words: one sense
 throughout, or two, and which statements take the second? The model
 does not judge the argument. The prover does: the atom is split for
 those statements and the argument proved again; valid as read and
-invalid split is `argue/equivocates`, with the case. `argue -e` runs it
-on the kept reading. Run the same day: alone, on the gold set's
+invalid split is `argue/equivocates`, with the case. It was first run
+on the kept reading by `argue -e`, a flag since taken out: a reading
+is checked by `phil/senses` after `phil/argue`, as by `phil/prove`, and
+the bench composes them. Run the same day: alone, on the gold set's
 readings made with `48e3990c5a0a` and on the breadth sample's 200; and
 `argue -e -n 3` on [heldout/](heldout/), five equivocations the
 literature names in texts the bench had not used, none of them seen
@@ -316,8 +318,10 @@ have allowed. A second asker is not worth its call.
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of
-   three, and a second asker adds nothing. Next: whether `-e` should
-   be argue's default; and the same question put across works, to
+   three, and a second asker adds nothing; most of what it missed was a
+   shift between two claims, which its second question, a bridge
+   between senses, is for ([below](#bridges-between-senses)). Next: the
+   same question put across works, to
    check `phil/corpus`'s alignments of one work's claim with
    another's, where a shift of sense between authors would hide.
 2. A reader's comment that a sentence "could be read the other way" is
