@@ -14,7 +14,8 @@ wwbmodel='openai http://127.0.0.1:'^$port^'/v1'
 cd $phil/tests
 mkdir -p out
 for i in 1 2 3 4 5 {
-	cp data/senses/end.logic out/senses.logic
+	# in logic's symbols, as argue keeps a reading
+	phil/prove -f data/senses/end.logic > out/senses.logic
 	echo '#' ask $i
 	phil/senses -m fake-model -d data/senses/end.md out/senses.logic
 	if {ftest -f out/senses.logic.sense1} {

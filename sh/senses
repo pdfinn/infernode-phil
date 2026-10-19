@@ -89,7 +89,17 @@ if {! ftest -s $logic^.shared} {
 }
 
 # what each statement says, in words
-phil/prove -e $logic $doc >[2=1] | sed -n 's/^.*argue\/says: ([^ :]+)( \(S[0-9]+\))?: reads (.*)$/\1	\1\2: \3/p' > $logic^.words
+# (awk, not sed: this sed breaks on some lines of logic's symbols)
+phil/prove -e $logic $doc >[2=1] | awk '{
+	i = index($0, "argue/says: ")
+	if(!i)
+		next
+	r = substr($0, i+12)
+	n = r
+	sub(/[ :].*/, "", n)
+	sub(/: reads /, ": ", r)
+	print n "	" r
+}' > $logic^.words
 {
 	echo 'The sentences, numbered:'
 	echo
@@ -97,7 +107,7 @@ phil/prove -e $logic $doc >[2=1] | sed -n 's/^.*argue\/says: ([^ :]+)( \(S[0-9]+
 	echo
 	echo 'The claims the argument uses in more than one statement, each with'
 	echo 'the statements that use it:'
-	awk -F '	' 'NR == FNR { w[$1] = $2; next }
+	awk -F '	' -v 'wf='^$logic^.words 'FILENAME == wf { w[$1] = $2; next }
 		{
 			print ""
 			print "Claim " $1 ": " $2
@@ -120,7 +130,8 @@ day=`{date | awk 'BEGIN { split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
 } > $logic^.senses
 rm -f $logic^.senses.new
 
-v0=`{phil/prove $logic $doc >[2=1] | sed -n 's/.*argue\/valid (-?[0-9]+)$/\1/p' | tail -1}
+valid='/argue\/valid -?[0-9]+$/ { v = $NF } END { print v }'
+v0=`{phil/prove $logic $doc >[2=1] | awk $valid}
 ifs='
 '
 n=0
@@ -155,8 +166,9 @@ for l in `{grep '^[a-z_][a-z0-9_]*	two	' $logic^.senses} {
 		END { print (moved > 0 && moved < uses) ? "split" : "none" }' $logic^.ans $logic}
 	if {~ $ok split} {
 		phil/prove $logic^.split $doc > $logic^.splitout >[2=1]
-		v1=`{sed -n 's/.*argue\/valid (-?[0-9]+)$/\1/p' $logic^.splitout | tail -1}
-		fails=`{sed -n 's/.*argue\/invalid: ([^ ]+ \(S[0-9]+\)).*/\1/p' $logic^.splitout | sed 1q}
+		v1=`{awk $valid $logic^.splitout}
+		# (an unset variable is 0 to this awk, not "")
+		fails=`{awk 'BEGIN { f = "" } /argue\/invalid: [^ ]+ \(S[0-9]+\)/ { if(!got){ i = index($0, "argue/invalid: "); r = substr($0, i+15); j = index(r, ")"); f = substr(r, 1, j); got = 1 } } END { print f }' $logic^.splitout}
 		eq=()
 		if {~ $v0 1 && ~ $v1 0} {
 			eq=1
@@ -170,15 +182,18 @@ for l in `{grep '^[a-z_][a-z0-9_]*	two	' $logic^.senses} {
 				if(sent[at] ~ /^S[0-9]+$/)
 					at = at " (" sent[at] ")"
 				msg = "\"" word "\" is taken as " s2 " in " list " and as " s1 " where " a " is used else, a reader says"
+				what = fails
+				if(what == "")
+					what = "it"
 				if(eq == "1")
-					print logic ": argue/equivocates: " at ": " msg ": the argument holds only if they are one; taken apart, " (fails != "" ? fails : "it") " does not follow (" kept ")"
+					print logic ": argue/equivocates: " at ": " msg ": the argument holds only if they are one; taken apart, " what " does not follow (" kept ")"
 				else if(v0 == 1 && v1 == 1)
 					print logic ": argue/two-senses: " at ": " msg ": the argument does not turn on it"
 				else
 					print logic ": argue/two-senses: " at ": " msg
 			}' $logic^.ans $logic
 		if {~ $#eq 1} {
-			grep ': argue/countermodel: ' $logic^.splitout | sed 's|^[^ ]*: |'^$logic^': |'
+			awk -v 'logic='^$logic '/: argue\/countermodel: / { sub(/^[^ ]*: /, ""); print logic ": " $0 }' $logic^.splitout
 		}
 	}
 	rm -f $logic^.ans $logic^.split $logic^.splitout
