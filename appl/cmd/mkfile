@@ -1,6 +1,7 @@
 <$ROOT/mkconfig
 
 TARG=\
+	corpus.dis\
 	join.dis\
 	map.dis\
 	prove.dis\
@@ -16,6 +17,8 @@ MODULES=\
 SYSMODULES=\
 	arg.m\
 	bufio.m\
+	keyring.m\
+	sh.m\
 	draw.m\
 	sys.m\
 

@@ -42,6 +42,7 @@ Xenith and acme open it with button 3 and wwb's `gate`, `delta` and
 | `phil/read` | a reading: a model writes a logic file, its own lines kept, each reader blinded by name space, a file the prover cannot read sent back; each reading says who read it, with which instructions and when |
 | `phil/settle` | which of several readings to keep: where they differ, a question yes or no, answered afresh or by a person |
 | `phil/readable` | what makes a logic file one the prover cannot read; `read`'s checker for `argue` |
+| `phil/corpus` | a field's works read as one, by rule: each work over the shared atoms, the claims and who asserts, denies, assumes or reports each, statement ids that survive a reread, and the secondary literature checked against the primary (a claim given as a work's that its reading denies, or never makes) |
 
 The manual is `man 1 phil`. The logic file is described in
 [docs/ARGUMENT-FORMAT.md](docs/ARGUMENT-FORMAT.md), and what the tools
@@ -243,7 +244,7 @@ the rule a change to `prove` is held to.
 ## Layout
 
 ```
-appl/cmd/          prove, join, map, tableau (Limbo)
+appl/cmd/          prove, join, map, tableau, corpus (Limbo)
 sh/                argue, read, settle, readable (Inferno shell)
 lib/phil/          the instructions argue gives a model
 man/1/phil         the manual

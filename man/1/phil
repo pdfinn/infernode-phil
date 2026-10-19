@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, prove, join, map, tableau, read, settle, readable \- the Philosopher's Workbench, \(*fwb
+phil, argue, prove, join, map, tableau, read, settle, readable, corpus \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -162,6 +162,12 @@ phil, argue, prove, join, map, tableau, read, settle, readable \- the Philosophe
 [
 .I document
 ]
+.br
+.B phil/corpus
+[
+.B -x
+]
+.I dir
 .SH DESCRIPTION
 These commands read an argument and decide what follows from it.
 A language model writes a document's argument down as a logic file;
@@ -442,6 +448,56 @@ It is the checker
 gives
 .IR read .
 .TP
+.B phil/corpus
+A field's works read as one, by rule.
+.I Dir
+holds
+.B works
+(one to a line, by tabs: an id, the bibliography key, primary or
+secondary, the date, the text's path, its revision, the title),
+.B atoms
+(the atoms the works share),
+.B align
+(lines
+.BI same " id" : "atom shared"
+and
+.BI negates " id" : "atom shared" ,
+with who decided), and each work's reading in
+.BI readings/ id /logic\fR.
+It writes each reading over the shared atoms
+.RB ( readings/\fIid\fP/shared.logic :
+an atom aligned
+.B same
+is the shared one,
+.B negates
+its denial, any other the work's own, named
+.IB id _ atom\fR),
+.B claims
+(each claim, and every work that
+.BR asserts ,
+.BR denies ,
+.BR assumes
+or
+.B reports
+it), and
+.B ids
+(each statement's id, computed from its work, its kind and its formula,
+so that it survives a reread).
+A premise that
+.B says
+a work in the corpus holds a claim is checked by
+.IR prove :
+.B claims/contradicts-source
+where what that work holds, as read, entails the claim's denial,
+.B claims/misattributed
+where it entails neither;
+.B claims/attributed-unread
+names a work not in the corpus, and
+.B claims/reported-only
+a claim no work asserts or assumes.
+Each is at the reporting work's sentence; measures follow, for
+.IR wwb/gate .
+.TP
 .B phil/prove
 Decides whether an argument's conclusion follows from its premises.
 The argument is a logic file, a statement to a line, its fields
@@ -559,6 +615,30 @@ and the measure
 is 1, 0 or \-1 as the conclusion stands, falls or neither.
 .I map
 draws the objections and replies beneath what they attack.
+.IP
+A premise may report another's claim rather than assert it:
+.IP
+.EX
+	P1	S1	short	says hobbes
+	P2	S2	distrust	kind empirical
+.EE
+.IP
+A premise with
+.B says
+is the work's account of what the work or person named holds: never a
+premise of its argument, and a step drawn from one is
+.BR argue/reported-as-premise .
+.B kind
+says what kind of claim a statement is,
+.BR empirical ,
+.B normative
+or
+.BR conceptual .
+Each is a field of its own after the formula, after
+.B from
+or
+.B against
+where there is one.
 .IP
 A line
 .L "logic	s5"

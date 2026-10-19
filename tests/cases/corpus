@@ -1,0 +1,19 @@
+load std
+rm -rf out/corpus.d
+mkdir -p out/corpus.d
+cp -r data/corpus/sovereign out/corpus.d/sovereign
+phil/corpus out/corpus.d/sovereign
+echo '#' claims
+cat out/corpus.d/sovereign/claims
+echo '#' ids
+cat out/corpus.d/sovereign/ids
+echo '#' the critic over the shared atoms
+cat out/corpus.d/sovereign/readings/critic/shared.logic
+echo '#' read again, numbered otherwise: the same ids
+cut -f 3,6 out/corpus.d/sovereign/ids | sort > out/corpus.d/ids.before
+cp data/corpus/reread/critic.logic out/corpus.d/sovereign/readings/critic/logic
+phil/corpus out/corpus.d/sovereign > /dev/null
+cut -f 3,6 out/corpus.d/sovereign/ids | sort > out/corpus.d/ids.after
+if {cmp out/corpus.d/ids.before out/corpus.d/ids.after} {echo same ids}
+echo '#' exact
+phil/corpus -x out/corpus.d/sovereign | sed 2q

@@ -1,0 +1,5 @@
+# how each work's atoms map onto the shared ones, and who decided
+same	hobbes:distrust	distrust	hand
+same	hobbes:noindustry	noindustry	hand
+same	critic:notrust	distrust	hand
+negates	critic:industry	noindustry	hand

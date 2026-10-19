@@ -1,0 +1,47 @@
+out/corpus.d/sovereign/critic.md:2: claims/contradicts-source: critic P2 gives "!distrust" (not: without a sovereign, people cannot trust one another) as hobbes's, but what hobbes holds, as read (readings/hobbes/logic), entails its denial
+out/corpus.d/sovereign/critic.md:3: claims/misattributed: critic P3 gives "critic_elected" (the sovereign must be elected) as hobbes's, but nothing hobbes holds, as read (readings/hobbes/logic), entails it, nor its denial
+out/corpus.d/sovereign/critic.md:4: claims/attributed-unread: critic P4 gives "critic_promises" (without a sovereign, people keep their promises) as the view of locke, which is not in the corpus: add it to check
+out/corpus.d/sovereign/critic.md:3: claims/reported-only: critic P3 gives "critic_elected" (the sovereign must be elected) as hobbes's, and no work in the corpus asserts or assumes it: it is only reported
+out/corpus.d/sovereign/critic.md:4: claims/reported-only: critic P4 gives "critic_promises" (without a sovereign, people keep their promises) as locke's, and no work in the corpus asserts or assumes it: it is only reported
+out/corpus.d/sovereign: corpus/works 2
+out/corpus.d/sovereign: corpus/claims 5
+out/corpus.d/sovereign: claims/attributed 1
+out/corpus.d/sovereign: claims/misattributed 1
+out/corpus.d/sovereign: claims/contradicts-source 1
+out/corpus.d/sovereign: claims/attributed-unread 1
+out/corpus.d/sovereign: claims/reported-only 2
+# claims
+# each claim and the works that assert, deny, assume or report it, written by phil/corpus
+claim	distrust	asserts hobbes:P1	reports critic:P1 Hobbes1651	reports-not critic:P2 hobbes
+claim	distrust->noindustry	asserts hobbes:P2
+claim	noindustry	asserts hobbes:C	denies critic:P5	denies critic:C
+claim	critic_elected	reports critic:P3 hobbes
+claim	critic_promises	reports critic:P4 locke
+# ids
+# every statement's id, written by phil/corpus: work, id, name, sentence, formula over the shared atoms
+id	hobbes	k8f2a575b	P1	S1	distrust
+id	hobbes	k4b81bcf2	P2	S2	distrust->noindustry
+id	hobbes	k8b1f2e87	C	S3	noindustry
+id	critic	k959cf92b	P1	S1	distrust
+id	critic	kccc18e89	P2	S2	!distrust
+id	critic	k245fb740	P3	S3	critic_elected
+id	critic	kf98a614c	P4	S4	critic_promises
+id	critic	k002ee04d	P5	S5	!noindustry
+id	critic	kf34cd63b	C	S6	!noindustry
+# the critic over the shared atoms
+# critic over the corpus's shared atoms, written by phil/corpus from readings/critic/logic: not to be edited
+atom	distrust	without a sovereign, people cannot trust one another
+atom	noindustry	without a sovereign there is no industry
+atom	critic_elected	the sovereign must be elected
+atom	critic_promises	without a sovereign, people keep their promises
+P1	S1	distrust	says Hobbes1651
+P2	S2	!distrust	says hobbes
+P3	S3	critic_elected	says hobbes
+P4	S4	critic_promises	says locke
+P5	S5	!noindustry	kind empirical
+C	S6	!noindustry
+# read again, numbered otherwise: the same ids
+same ids
+# exact
+out/corpus.d/sovereign/critic.md:#72,#132: claims/contradicts-source: critic P3 gives "!distrust" (not: without a sovereign, people cannot trust one another) as hobbes's, but what hobbes holds, as read (readings/hobbes/logic), entails its denial
+out/corpus.d/sovereign/critic.md:#133,#185: claims/misattributed: critic P4 gives "critic_elected" (the sovereign must be elected) as hobbes's, but nothing hobbes holds, as read (readings/hobbes/logic), entails it, nor its denial

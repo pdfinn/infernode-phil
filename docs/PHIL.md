@@ -1,7 +1,8 @@
 # ϕwb: the Philosopher's Workbench
 
 A design sketch, before code. Status: step 0 is done, the move and
-`read` and `settle`; CORPUS.md's step 1 is next. This is the collection
+`read` and `settle`; CORPUS.md's step 1 is built but for what it lists
+as left. This is the collection
 that `argue`, `prove` and the corpus of [CORPUS.md](CORPUS.md) move
 into, what stays behind in the Writer's Workbench, how the two meet,
 and the two ways a language model is used in it. [REACH.md](REACH.md)
@@ -31,7 +32,7 @@ Workbench, which the Writer's Workbench was built on.
 | Moves to ϕwb | Stays in wwb | ϕwb reaches through a bind |
 |---|---|---|
 | `argue`, `prove`, `join`, `map`, `tableau` | every prose check; `claims`, `facts`, `bib` | `sentences`, `deroff`: the exact addresses that make a finding clickable |
-| `align`, `cases`, `ledger`, `agenda`, `schemes`, `contest`, `split`, `read`, `settle` (new) | `review`, `rewrite`, `vet`, `judge`, `gate`, `delta`, `tally`, `grade` | `ask`: the one way to a model, and `$wwbmodel` |
+| `corpus`, `read`, `settle`, `readable` (built); `align`, `cases`, `ledger`, `agenda`, `schemes`, `contest`, `split` (to come) | `review`, `rewrite`, `vet`, `judge`, `gate`, `delta`, `tally`, `grade` | `ask`: the one way to a model, and `$wwbmodel` |
 | the logic file, its manual, `lib/argue*`, `lib/settle`, `tests/cases/argue-*`, `prove-*`, `tests/prove-bench` | the rule packs, the OED, the tagger and parser, `wwbfs` | `gate` and `delta`, which read ϕwb's findings unchanged |
 
 The dependency is a mount, not a copy. `philns` binds `wwb/` into the

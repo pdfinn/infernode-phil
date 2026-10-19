@@ -78,16 +78,15 @@ And three of its own:
 
 	corpus/
 		works			the works, one to a line
-		works/<id>/		one directory per work
-			source		path and revision of the text
-			logic		argue -w's stepped reading, as today
-			logic.2 ...	the other readings, answers, as today
-			span		which sentences each part covered
+		readings/<id>/		one directory per work
+			logic		its reading: argue -w's, or one written by hand
+			logic.parts/	argue -w's parts, as today
+			shared.logic	the reading over the shared atoms (written by phil/corpus)
 		atoms			the shared vocabulary
 		align			which works' atoms are one claim
-		claims			the claims, over the shared vocabulary
+		claims			the claims, and who asserts, denies, assumes or reports each (phil/corpus)
+		ids			every statement's id (phil/corpus)
 		questions		the question each work takes itself to answer
-		corpus.logic		the works joined: one stepped logic file
 		cases/<id>/		scenarios, one directory each
 			text		the scenario, in English
 			logic		the scenario as a valuation of atoms
@@ -95,6 +94,10 @@ And three of its own:
 		positions		named sets of claims, and who holds them
 		ledger			what each premise costs (written by phil/ledger)
 		agenda			what is open (written by phil/agenda)
+
+The works' texts are where `works` says, relative to the corpus. (The
+first draft of this design put a work's readings under `works/<id>/`,
+beside a file named `works`; a name cannot be both.)
 
 Every file is written by a tool from the files before it, or by hand.
 `ledger` and `agenda` are outputs; the rest is state. A tool's output
@@ -153,7 +156,7 @@ decided:
   proposal is not made again, with `verbal` where the works disagree
   only in the word (below).
 - `rival`: two claims the corpus treats as alternatives, for `prove
-  -p`; the line goes into `corpus.logic` as `rivals`.
+  -p`; the line goes into a family `prove -p` is given as `rivals`.
 - The last field says who decided: `answers k/n` (that many of n
   readings answered yes to the question), `hand`, or `prove` (the
   formulas were found equivalent under the works' own premises).
@@ -161,21 +164,35 @@ decided:
 An atom aligned to nothing keeps its work's name prefixed with the
 work's id, as `join` renames a colliding atom today (`outmoded_81`).
 
-### claims and corpus.logic
+### claims, and why there is no corpus.logic
 
-`claims` is the index: one line per shared atom or statement, naming
-every work that asserts, denies, assumes or reports it.
+`claims` is the index: one line per claim, naming every work that
+asserts, denies, assumes or reports it. A claim is a statement's formula
+over the shared atoms, as `prove -A -f` writes it, with an even number
+of denials before it taken off; a work that states its denial denies it.
 
 	claim	contain_succeeds	denies mine:C	asserts gross:P14	assumes dyzenhaus:A3
 	claim	exception_decides	asserts schmitt:P3	reports gross:P7 schmitt	reports mine:P41 schmitt	denies gross:P8
 
-`corpus.logic` is one stepped logic file over the shared vocabulary:
-every work's premises, assumptions, steps, objections and replies,
-renamed by `align`, each statement's name prefixed with its work
-(`mine:C12`), the sentence field keeping the work's sentence number.
-It is what `prove` reads for the corpus as a whole. `prove` needs no
-change to read it: a prefixed name is a name, and a work's `S240` is
-addressed through `works/mine/source`.
+The relations are `asserts` and `denies` (a premise or a conclusion),
+`assumes` and `assumes-not` (an assumption), and `reports` and
+`reports-not` (a premise with `says`), the last naming whose claim it
+reports. Objections and replies are moves in an exchange, not
+commitments, and are left out.
+
+The first draft of this design had a `corpus.logic` as well: every work
+joined into one stepped file, for `prove` to read as one argument. It is
+not built, for two reasons the code made plain. A debate's works
+contradict each other by design (one asserts what another denies), so
+the corpus taken as one argument is inconsistent, and every verdict on
+it says only that; consistency is a property of a position, a work's
+or one a person chooses, which is what `prove -p` and the ledger are
+for. And `prove` reads a statement's part in the argument from its name
+(`C`, `C1`, `P1`, `O1`), so names prefixed with their work (`mine:C12`)
+are not read at all. Each work is read over the shared atoms in its own
+file (`readings/<id>/shared.logic`), and what a tool needs from several
+works together, it builds: `phil/corpus` gives `prove` one work's
+commitments and another's claim, and asks whether they entail it.
 
 ### Who says what
 
@@ -207,8 +224,8 @@ statement line can say whose claim it reports:
   none that names another author (`argue/attribution`), as it checks a
   condition turned round.
 
-`join` carries attributions into `claims` as `reports`, and the corpus
-can then check scholarship, by rule:
+`phil/corpus` carries attributions into `claims` as `reports`, and
+checks scholarship, by rule, each check decided by `prove` (built):
 
 | Finding | Meaning |
 |---|---|
@@ -334,18 +351,18 @@ lab stands, and `positions/too-many` goes.
 
 | Tool | Reads | Writes |
 |---|---|---|
-| `phil/argue -w` | a work | `works/<id>/logic`, as today |
+| `phil/argue -w` | a work | `readings/<id>/logic`, as today |
 | `phil/align` (new) | the works' logic files, `atoms`, `align` | proposed `same`, `negates`, `rival` lines, and the questions that settle them; with `-a` the answers, and the lines kept |
-| `phil/join -W` (new flag) | `works`, `align`, the logic files | `corpus.logic`, `claims` |
-| `phil/prove` | `corpus.logic` | as today, over the corpus: consistency, what follows, what survives, `-p` positions |
-| `phil/cases` (new) | `corpus.logic`, a claim, `cases/` | a proposed scenario and its valuation, for readers to judge; with `-r`, runs every recorded case against every position |
-| `phil/ledger` (new) | `claims`, `corpus.logic`, `cases/`, `prove`'s findings | `ledger`: each premise's holders, commitments, the cases it fails, the works that assume it unstated |
-| `phil/agenda` (new) | `ledger`, `corpus.logic`, `align`, `prove -p` | `agenda`: what is open |
+| `phil/corpus` (built) | `works`, `atoms`, `align`, the readings | each reading over the shared atoms, `claims`, `ids`; the attribution findings, each decided by `prove` |
+| `phil/prove` | a work's reading, or a position built from several | as today: what follows, what survives, `-p` positions; `says` and `kind` read (built) |
+| `phil/cases` (new) | the works' shared readings, a claim, `cases/` | a proposed scenario and its valuation, for readers to judge; with `-r`, runs every recorded case against every position |
+| `phil/ledger` (new) | `claims`, the shared readings, `cases/`, `prove`'s findings | `ledger`: each premise's holders, commitments, the cases it fails, the works that assume it unstated |
+| `phil/agenda` (new) | `ledger`, the shared readings, `align`, `prove -p` | `agenda`: what is open |
 | `phil/schemes` (new) | a work's logic file and text | each step's scheme where it is not deductive, and the critical questions, as findings |
 | `phil/split` (new) | an inconsistent set or a verbal dispute, `atoms`, `align` | a proposed distinction: one atom made two, with meanings, and what the corpus gains and loses by it |
-| `phil/contest` (later) | a position, `corpus.logic` | objections and replies in rounds, checked by `prove` |
+| `phil/contest` (later) | a position, the shared readings | objections and replies in rounds, checked by `prove` |
 | `phil/report` (new) | one work's ledger and agenda lines, the text | a model's reading of them as prose, marked as a model's, as `wwb/review` does for a document's findings |
-| `phil/map -W` (new flag) | `corpus.logic`, `claims` | the corpus as a graph: works, the claims they share, attacks across them; in text and in Argdown |
+| `phil/map -W` (new flag) | the shared readings, `claims` | the corpus as a graph: works, the claims they share, attacks across them; in text and in Argdown |
 | `phil/pending` (new) | the corpus | the questions and verdicts waiting for a person, each with what it would settle; `-a` records an answer |
 
 Every tool's findings are `file:line: rule: message`, as the rest of
@@ -420,7 +437,7 @@ What the corpus leaves open, by rule:
 
 | Finding | Meaning |
 |---|---|
-| `agenda/unanswered` | an objection in some work that no reply in any work answers (grounded semantics over `corpus.logic`) |
+| `agenda/unanswered` | an objection in some work that no reply in any work answers (grounded semantics over the objections and replies of the works, joined for it) |
 | `agenda/unoccupied` | a coherent position from `prove -p` that no work holds |
 | `agenda/inconsistent` | a work's position that `prove` finds inconsistent, with the smallest set |
 | `agenda/field-assumes` | an assumption more than one work rests on and none states |
@@ -493,7 +510,7 @@ two senses are:
 
 The lines go into `atoms`; `align` must then place every work's use of
 the old atom on one side or the other, by the protocol; `join`
-rewrites `corpus.logic`; and `ledger` says whether the distinction
+rewrites each reading's shared form; and `ledger` says whether the distinction
 earned its keep: the inconsistencies removed, the cases now passed,
 against the new assumptions the works need to be read with it. A
 distinction that resolves nothing is reported so, and the lines are
@@ -510,7 +527,6 @@ dialectic, not the proof. It waits on everything above.
 
 ## Measures, for gate
 
-	corpus/consistent	= 1
 	corpus/survives		= 1
 	corpus/assumed		<= 3
 	corpus/readings-agree	>= 80
@@ -520,7 +536,10 @@ dialectic, not the proof. It waits on everything above.
 	ledger/unsourced	<= 2
 	corpus/stale		= 0
 
-A policy over these is what "correct" means to this system, and the
+(`corpus/consistent`, in the first draft, is gone with `corpus.logic`:
+a debate is inconsistent by design.) `phil/corpus` gives `corpus/works`,
+`corpus/claims`, `claims/attributed` (reports checked and held), and
+the four attribution measures. A policy over these is what "correct" means to this system, and the
 policy file says so in its first line. A position that passes is the
 best so far; the ledger shows what it costs.
 
@@ -550,12 +569,23 @@ is, and the two other works.
 
 ## Order of work
 
-1. **The directory and `join -W`.** `works` with kinds and dates,
-   `atoms`, `align` and the `says` and `kind` fields written by hand
-   for the corpus owner's own work and one other; `join -W` makes
-   `corpus.logic`, `claims` with `reports`, and `ids`; `prove` runs
-   over it unchanged; the attribution checks. No model. This proves
-   the format holds a corpus before any tool reads one.
+1. **The directory and `phil/corpus`.** `works` with kinds and dates,
+   `atoms`, `align` and the `says` and `kind` fields written by hand;
+   `phil/corpus` makes each work's shared reading, `claims` with
+   `reports`, and `ids`; the attribution checks. No model. **Built**,
+   on a test corpus of two works (`tests/data/corpus/sovereign`) whose
+   planted faults it finds. `prove` reads `says` and `kind`: a
+   reported premise is never a premise, and a step drawn from one is
+   `argue/reported-as-premise`; nothing it said of any existing file
+   changed (944 arguments, 1,888 files of verdicts and TPTP compared).
+   `map` marks a reported premise with whose claim it is; `join`
+   carries every field and never makes a report a conclusion's
+   implicit premise. **Left of step 1:** `argue`'s instructions do not
+   yet ask the model for `says` and `kind` (a prompt change, held to
+   PHIL.md's check); the read-back does not yet check a `says`
+   statement's sentence for the marks of reporting
+   (`argue/attribution`); and the owner's own work with one other is
+   still to be written by hand.
 2. **`ledger`**, by rule, from what step 1 gives, with premises' kinds
    and `ledger/unsourced`. The first useful output. `delta` over it.
 3. **`cases`** and the suite runner; `pending` for the verdicts; the
@@ -584,17 +614,22 @@ work is read; a reading is made again with a better prompt. Every
 alignment, case and verdict points at a statement, and statements are
 named `C12` and `S240` in a reading that will be replaced.
 
-- **Statements have identity across readings.** `join` assigns each
-  statement of a work a stable id and keeps the map in
-  `works/<id>/ids`:
+- **Statements have identity across readings.** `phil/corpus` gives
+  each statement an id and writes them all in `ids`:
 
-	id	k12	C12	S240	contain_succeeds -> !norm_constitutional
+	id	mine	k3f9a01c2	C12	S240	contain_succeeds->!norm_constitutional
 
-  On a reread, a statement whose formula over the shared atoms is
-  unchanged keeps its id, whatever its name and sentence now are; the
-  reader is given the old reading's atoms as its vocabulary, as
-  `argue -w` gives each part the atoms before it, so names persist. A
-  changed statement gets a new id, and the old one is marked `gone`.
+  The id is computed, not kept: `k` and the first eight hexadecimal
+  digits of the SHA-1 of the work, the kind of statement (and whose
+  claim, for a report) and its formula over the shared atoms as `prove`
+  writes it. So a statement whose formula is unchanged keeps its id
+  whatever its name and sentence now are, with no state to keep, and a
+  changed one has a new id; the test corpus is read again, every
+  statement renumbered, and the ids are the same. The reader is given
+  the old reading's atoms as its vocabulary, as `argue -w` gives each
+  part the atoms before it, so that a formula's atoms persist. Two
+  statements of one work with one kind and formula are told apart by
+  `.2`, `.3` in the order read.
 - **Corpus files name ids, never sentences.** `align`, `claims`,
   `cases/*/verdicts` and `positions` say `mine:k12`. The sentence is
   looked up through `ids` when a finding is reported, so a finding is
@@ -613,7 +648,7 @@ named `C12` and `S240` in a reading that will be replaced.
 
 A thesis of about 2,400 sentences took several hours with three
 readings per part. A corpus of ten such works is days, run once. The
-readings are a function of the text, so `works/<id>/logic` is kept and
+readings are a function of the text, so `readings/<id>/logic` is kept and
 reread only when `source`'s revision changes; `-c` continues a cut-off
 run as now. `align`'s questions are one call each and there are at most
 as many as candidate pairs; `cases` is one call per scenario per reader.
@@ -686,7 +721,7 @@ decides whether any of it is working.
 ## Open questions
 
 - Should `align`'s one-direction entailments (`A -> B` by answers) go
-  into `corpus.logic` as premises? They are readers' claims, not any
+  into the commitments `phil/corpus` gives `prove` as premises? They are readers' claims, not any
   work's. Proposed: yes, as assumptions with `answers` provenance, so
   `prove` can use them and `ledger` can show what rests on them.
 - A case's valuation is over shared atoms, but a scenario can turn on a

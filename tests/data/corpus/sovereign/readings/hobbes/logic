@@ -1,0 +1,6 @@
+# the argument of hobbes.md, read by hand
+atom	distrust	without a sovereign, people cannot trust one another
+atom	noindustry	without a sovereign there is no industry
+P1	S1	distrust
+P2	S2	distrust -> noindustry	kind empirical
+C	S3	noindustry
