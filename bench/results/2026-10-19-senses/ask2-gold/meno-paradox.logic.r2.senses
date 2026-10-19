@@ -1,0 +1,5 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+knows	one
+can_enquire	two	can	P2	is able to enquire about it	has some need or point in enquiring about it
+# can_enquire: S2 gives the knowing case as "he has no need to enquire" and the not-knowing case as "he cannot". So P2 (if he knows, he cannot enquire) seems to rest on there being no need. The conclusion means he is unable to enquire. I assumed P2 is the knowing-case conditional; its wording was not shown.
+# knows: unsure. "He knows" in the no-need case could mean knowing the answer. "He does not know the very subject" could mean not being able to pick out what he is looking for. The premise wording was not given, so I could not tell which statement uses which sense, and I left it as one.

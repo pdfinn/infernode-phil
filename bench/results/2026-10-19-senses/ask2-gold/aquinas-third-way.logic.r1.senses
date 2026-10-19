@@ -1,0 +1,14 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+generated	one
+contingent_sometime_not	one
+all_contingent	one
+# once_nothing: S4 says only that at one time there "could have been" nothing. S5-S6 reason from a time at which nothing actually "was" in existence.
+once_nothing	two	could have been / was	P5	at some time it was possible that nothing existed	at some actual past time nothing existed
+begin_needs_existing	one
+nothing_now	one
+# necessary_exists: in S8-S10 "necessary" might be read as merely incorruptible (necessity received from another). But it still means "not possible not to be", as in S7, so I kept one sense.
+necessary_exists	one
+all_necessity_caused	one
+regress	one
+self_necessary	one
+god	one

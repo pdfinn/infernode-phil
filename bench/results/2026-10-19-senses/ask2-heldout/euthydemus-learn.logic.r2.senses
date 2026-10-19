@@ -1,0 +1,14 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+learner	one
+knew	one
+wise_know	one
+unlearned	one
+unlearned_learn	two	unlearned	O1	those who do not yet know the thing being learned (ignorant)	those who are dull or slow, lacking cleverness
+wise_learn	one
+wise_apt_learned	one
+wise_apt_learn	one
+dull_learn	one
+# In S13 "the unlearned" are those still ignorant of what they are being taught.
+# S17's "not the unlearned" opposes them to the clever boys of S16, so "unlearned" there means dull.
+# The ignorant can learn while the dull do not, so C1 and O1 can both be true.
+# "learn" may also shift, between acquiring knowledge (S5–S13) and grasping a dictation (S15–S17). It does not change the sense of any listed claim, which is why no line marks it.

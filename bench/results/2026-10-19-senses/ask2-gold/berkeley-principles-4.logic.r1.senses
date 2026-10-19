@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+sensible	one
+perceived_by_sense	two	perceive	P3	what we see, hear or touch in the ordinary way, such as the house itself	what is immediately present to the mind in perceiving, i.e. the content of sensation
+idea	one
+exists_unperceived	one
+opinion_contradictory	one
+# perceived_by_sense: P2 holds because houses and rivers are what we ordinarily perceive. P3 holds only if "perceive" means immediate awareness, whose objects are ideas.
+# On the ordinary sense, P3 is false, since we perceive houses and not only ideas. This is the standard objection to this passage.

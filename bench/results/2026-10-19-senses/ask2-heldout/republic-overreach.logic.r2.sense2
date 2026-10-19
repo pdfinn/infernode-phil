@@ -1,0 +1,35 @@
+# reading 2 of republic-overreach.md by claude-opus-5-5
+# reading 2 of republic-overreach.md by claude-opus-5-5
+atom	wise(x)	x is wise
+atom	good(x)	x is good
+atom	bad(x)	x is bad
+atom	ignorant(x)	x is ignorant
+atom	knowing(x)	x has knowledge
+atom	exceeds_like(x)	x desires to go beyond (have more than) his like
+atom	exceeds_unlike(x)	x desires to go beyond (have more than) his unlike
+atom	exceeds_unlike_2(x)	to want to get a greater share of gain or advantage than others, as in overreaching
+atom	like_wise_good(x)	x is like the wise and good
+atom	like_evil_ignorant(x)	x is like the evil and ignorant
+# Thrasymachus's earlier positions, which the argument turns against him
+P1	S3	wise(unjust) ∧ good(unjust) ∧ ¬wise(just) ∧ ¬good(just)	says thrasymachus
+P2	S5	like_wise_good(unjust) ∧ ¬like_wise_good(just)	says thrasymachus
+# S6-S7: each is such as his like is
+P3	S7	∀x (like_wise_good(x) → wise(x) ∧ good(x))
+# S26-S27: the knowing does not wish to go beyond his like
+P4	S26	∀x (knowing(x) → ¬exceeds_like(x))
+# The text gets "the knowing go beyond the unknowing" only from the musician and physician cases (S19, S24), never in general
+A1	-	∀x (knowing(x) → exceeds_unlike(x))
+P5	S29	∀x (ignorant(x) → exceeds_like(x) ∧ exceeds_unlike(x))	kind empirical
+P6	S31	∀x (knowing(x) → wise(x))
+P7	S33	∀x (wise(x) → good(x))
+# S35 carries what holds of the knowing over to the wise and good. The text states only knowing -> wise (S31) and treats the two as interchangeable; the converse is never stated.
+A2	-	∀x (wise(x) → knowing(x))
+C1	S35	∀x (wise(x) ∧ good(x) → ¬exceeds_like(x) ∧ exceeds_unlike(x))	from P4 A1 A2
+C2	S37	∀x (bad(x) ∧ ignorant(x) → exceeds_like(x) ∧ exceeds_unlike(x))	from P5
+P8	S39	exceeds_like(unjust) ∧ exceeds_unlike_2(unjust)
+P9	S42	¬exceeds_like(just) ∧ exceeds_unlike_2(just)
+# S44 relies unstated on this: whoever acts as the wise and good act is like them, and whoever acts as the evil and ignorant act is like them
+A3	-	∀x (¬exceeds_like(x) ∧ exceeds_unlike(x) → like_wise_good(x))
+A4	-	∀x (exceeds_like(x) ∧ exceeds_unlike(x) → like_evil_ignorant(x))
+C	S44	like_wise_good(just) ∧ like_evil_ignorant(unjust)	from C1 C2 P8 P9 A3 A4
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

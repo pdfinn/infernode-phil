@@ -1,0 +1,29 @@
+# reading 2 of aquinas-second-way.md by claude-opus-5-5
+# S1 only introduces the second way and is left out.
+# S3: "no case known (neither is it possible)" is read as the modal claim; the "no case known" part is not separately encoded.
+# S4's "it is not possible to go on to infinity" is the claim argued for. The ordering in S4's because-clause (first causes intermediate, intermediate causes ultimate) is read as dependence: ultimate requires intermediate, and intermediate requires first.
+# S5 ("to take away the cause is to take away the effect") is read as the same dependence, put negatively.
+# S7's "all of which is plainly false" is read as asserting that there is an ultimate effect and an intermediate cause.
+# S8's "necessary to admit" is read as the argument's necessity (we must grant it), not as metaphysical necessity, so C is first rather than []first. The text's own necessity reading would need []ultimate, which it never gives.
+# Gap: S4 claims !<>infinite, but with these premises only !infinite follows.
+logic	s5
+atom	order_exists	in the world of sense there is an order of efficient causes
+atom	self_cause	a thing is the efficient cause of itself
+atom	prior_self	a thing is prior to itself
+atom	infinite	in efficient causes one goes on to infinity
+atom	first	there is a first efficient cause
+atom	first_2	an uncaused cause that begins the whole series, with nothing before it
+atom	intermediate	there is an intermediate efficient cause
+atom	ultimate	there is an ultimate effect (ultimate cause)
+P1	S2	order_exists	kind empirical
+P2	S3	□(self_cause → prior_self)	kind conceptual
+P3	S3	¬◇prior_self	kind conceptual
+C1	S3	¬◇self_cause	from P2 P3
+P4	S4	□(ultimate → intermediate) ∧ □(intermediate → first)
+P5	S5	□(¬first → ¬intermediate) ∧ □(¬intermediate → ¬ultimate)	kind conceptual
+C2	S6	□(¬first → ¬ultimate ∧ ¬intermediate)	from P4 P5
+P6	S7	□(infinite → ¬first_2)
+P7	S7	ultimate ∧ intermediate	kind empirical
+C3	S7	¬infinite	from P6 C2 P7
+C	S8	first_2	from C2 P7
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

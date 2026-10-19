@@ -1,0 +1,11 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+knowing	one
+ignorant	one
+wise	two	wise	P2 P3	having a craft's knowledge, as the musician or physician is wise	shrewd and clever at getting the advantage, as Thrasymachus calls the unjust wise
+good	two	good	P2 P3	good at one's craft insofar as one knows it	successful and well-off through getting the advantage
+bad	one
+overlike	two	more	P5 P6	seeks to get the advantage over or have more than others like oneself	seeks to outdo others like oneself in performing a craft, e.g. tuning strings or prescribing
+overunlike	two	more	P5 P6	seeks to get the advantage over or have more than those unlike oneself	seeks to outdo those unlike oneself in performing a craft
+like	two	like	A2 C	of the same nature or character, so that each is such as his like is	resembling in one respect only, here sharing a pattern of what one desires to outdo
+# like: I was unsure here. The shift is from same-nature likeness (S6, S7) to likeness that rests only on sharing one behaviour (A2). C draws on the second sense and then transfers wisdom and goodness by the first.
+# P2 and P3 are taken to be S3 and S5. Those statements are not quoted, so this assignment is inferred.

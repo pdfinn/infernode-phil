@@ -297,14 +297,26 @@ defensible; none names a shift the text does not make.
 
 So the gap is mostly closed: from none to about two runs in three
 naming the shift, held out as well as on the gold, with no false alarm
-in the breadth sample. The step costs one call a run. What it misses,
-it misses by answering "one sense"; a second asker, the split made if
-either says two, would test whether that is chance.
+in the breadth sample. The step costs one call a run.
+
+**A second asker.** Every reading was asked again, by a model afresh
+(287 calls, about $3.50; in `ask2-*`). The two askers agree on whether
+the argument equivocates on 289 readings of 293 (all 200 of the
+breadth sample's), and where they differ it is the first that found
+the shift and the second that did not, four times. Splitting where
+either says two would have found nothing more: what the step misses is
+not chance in the asking. It is in the reading, or in the text. The
+*Phaedo*'s asker, in every run, wrote that living and dead "could be
+read as contradictories rather than contraries", and answered one
+sense because the text says, at S23, that they are opposites with a
+process between: it took the extension for a false premise the text
+asserts, not a word that shifts, which is a reading the gold could
+have allowed. A second asker is not worth its call.
 
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of
-   three. Next: whether a second asker raises that; whether `-e` should
+   three, and a second asker adds nothing. Next: whether `-e` should
    be argue's default; and the same question put across works, to
    check `phil/corpus`'s alignments of one work's claim with
    another's, where a shift of sense between authors would hide.

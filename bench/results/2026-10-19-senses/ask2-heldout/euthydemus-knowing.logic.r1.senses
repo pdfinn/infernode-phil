@@ -1,0 +1,8 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+knows_something	one
+ignorant_some	one
+knowing	one
+knowing_known	one
+knows_all	one
+# The qualified and unqualified senses of "knowing" are already split into separate claims (knowing_known vs knowing). The move between them is stated openly as premise R1 (S5), so no single claim shifts sense.
+# S9's "you said just now that you were knowing" recalls Socrates' qualified admission in S4. Even so, the argument uses it in the unqualified sense throughout, so I have treated "knowing" as one sense.

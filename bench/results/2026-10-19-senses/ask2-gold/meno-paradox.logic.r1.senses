@@ -1,0 +1,7 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+enq_known	one
+enq_unknown	one
+need_known	one
+knows_subject	one
+# The classic worry in Meno's dispute is that "know" shifts. "That which he does not know" may mean lacking full knowledge of an answer, while "does not know the very subject" may mean being unable even to identify what is sought.
+# That gap, if real, lies between two different claims (enq_unknown and knows_subject), linked by P7. Each claim is worded and meant the same way in every statement that uses it, so none is in two senses.

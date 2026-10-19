@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+self_cause	one
+prior_self	one
+infinite	one
+first	two	first	P6 C	a cause standing before the intermediate causes in a given series, which each intermediate needs	an uncaused cause that begins the whole series, with nothing before it
+intermediate	one
+ultimate	one
+# first: P4, P5 and C2 are true only if "first" means a preceding cause of the intermediate. An infinite series has such a cause for every member, so it does not lack a first in this sense.
+# P6 is true only if "first" means absolutely uncaused, and C asserts a first cause in that sense.
