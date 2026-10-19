@@ -1,0 +1,13 @@
+# every statement's id, written by phil/corpus: work, id, name, sentence, formula over the shared atoms
+id	kant	k44cb0848	P1	S2	cannot_repay
+id	kant	k4fdc2832	P2	S2	!promises->!lent
+id	kant	kbc1c2e96	P3	S4	resolves->maxim_false_promise
+id	kant	kb35891b4	P4	S5	<>consistent_welfare
+id	kant	kb3840e38	P5	S7	!<>holds_law_nature
+id	kant	k0cc6d291	P6	S7	[](univ_law->self_contradict)
+id	kant	kf80b0cdc	P7	S8	univ_law->none_believe
+id	kant	k3598dd18	P8	S8	none_believe->!<>promise_exists&!<>end_attained
+id	kant	k97597eb4	P9	S8	univ_law->!<>promise_exists&!<>end_attained
+id	mill	kdde6489c	P1	S2	mill_kant_principle
+id	mill	k087b2754	P2	S4	mill_shows_bad_consequences&!mill_shows_contradiction
+id	mill	ka42c1369	C	S3	!mill_shows_contradiction

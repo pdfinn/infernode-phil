@@ -1,0 +1,25 @@
+# every statement's id, written by phil/corpus: work, id, name, sentence, formula over the shared atoms
+id	mill	k739178c4	P1	S1	all x:(proven_visible(x)->seen(x))
+id	mill	kef547f3e	P2	S2	all x:(proven_audible(x)->heard(x))
+id	mill	k7e87b0a4	P3	S3	all x:(proven_desirable_cap(x)->desired(x))
+id	mill	k12ce7134	P4	S4	!acknowledged_end(h)->!convincible_end(h)
+id	mill	kd60fff83	P5	S5	reason_desirable_good(gh)->all x:(person(x)->desires_own_happiness(x))
+id	mill	k43cf5f02	P6	S6	all x:(person(x)->desires_own_happiness(x))
+id	mill	k1bd1f6ae	P7	S6	all x:((person(x)->desires_own_happiness(x))->full_proof_good(h))
+id	mill	k318160c5	P8	S6	good(h)
+id	mill	k05bba0da	P9	S6	all x:(person(x)->own_happiness_good(x))
+id	mill	k15de0818	P10	S6	all x:((person(x)->own_happiness_good(x))->good_to_aggregate(gh))
+id	mill	k30ace270	P11	S6	good_to_aggregate(gh)
+id	mill	kb7ddffc6	P12	S7	end_of_conduct(h)
+id	mill	kefb4797e	P13	S7	end_of_conduct(h)->criterion_of_morality(h)
+id	mill	kc55204e9	P14	S7	criterion_of_morality(h)
+id	sidgwick	ka24cbf67	P1	S7	all x:(proven_desirable_cap(x)->desired(x))
+id	sidgwick	k2e227bfa	P2	S8	reason_desirable_good(gh)->all x:(person(x)->desires_own_happiness(x))
+id	sidgwick	k39fbf1bb	P3	S9	all x:((person(x)->desires_own_happiness(x))->full_proof_good(happiness)&all x:((person(x)->own_happiness_good(x))&good_to_aggregate(gh)))
+id	sidgwick	k35ae95e7	P4	S11	sidgwick_means_ought
+id	sidgwick	kfd5c20a7	P5	S13	all x:(person(x)->!desires_general(x))
+id	sidgwick	kaf3b683d	P6	S14	all x:((person(x)->!desires_general(x))->!sidgwick_established)
+id	sidgwick	ke917a0bd	P7	S14	!sidgwick_established->sidgwick_gap
+id	sidgwick	k8fb914b3	P8	S14	sidgwick_only_benevolence_fills
+id	sidgwick	ka96ec637	C1	S12	!sidgwick_established
+id	sidgwick	k0fc10fc7	C	S14	sidgwick_gap

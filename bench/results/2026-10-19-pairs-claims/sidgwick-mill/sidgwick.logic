@@ -1,0 +1,54 @@
+# reading 2 of sidgwick.md by claude-opus-5-5
+atom	proven_visible(x)	proof can be given that x is visible
+atom	seen(x)	people actually see x
+atom	proven_audible(x)	proof can be given that x is audible
+atom	heard(x)	people hear x
+atom	proven_desirable_cap(x)	evidence can be produced that x is desirable, in the sense of capable of being desired, by analogy with visible and audible
+atom	desired(x)	people do actually desire x
+atom	acknowledged_end(x)	x is acknowledged, in theory and in practice, to be an end
+atom	convincible_end(x)	some person could be convinced that x is an end
+atom	reason_desirable_good(x)	a reason can be given why x is desirable, in the sense of worth desiring
+atom	person(x)	x is a person
+atom	desires_own_happiness(x)	x desires his own happiness, so far as he believes it attainable
+atom	full_proof_good(x)	we have all the proof the case admits of, and all it is possible to require, that x is a good
+atom	good(x)	x is a good
+atom	own_happiness_good(x)	x's happiness is a good to x
+atom	good_to_aggregate(x)	x is a good to the aggregate of all persons
+atom	end_of_conduct(x)	x has made out its title as one of the ends of conduct
+atom	criterion_of_morality(x)	x is one of the criteria of morality
+atom	proven_visible(x)	proof can be given that x is visible
+atom	seen(x)	people actually see x
+atom	proven_audible(x)	proof can be given that x is audible
+atom	heard(x)	people hear x
+atom	proven_desirable_cap(x)	evidence can be produced that x is desirable, in the sense of capable of being desired, by analogy with visible and audible
+atom	desired(x)	people do actually desire x
+atom	acknowledged_end(x)	x is acknowledged, in theory and in practice, to be an end
+atom	convincible_end(x)	some person could be convinced that x is an end
+atom	reason_desirable_good(x)	a reason can be given why x is desirable, in the sense of worth desiring
+atom	person(x)	x is a person
+atom	desires_own_happiness(x)	x desires his own happiness, so far as he believes it attainable
+atom	full_proof_good(x)	we have all the proof the case admits of, and all it is possible to require, that x is a good
+atom	good(x)	x is a good
+atom	own_happiness_good(x)	x's happiness is a good to x
+atom	good_to_aggregate(x)	x is a good to the aggregate of all persons
+atom	end_of_conduct(x)	x has made out its title as one of the ends of conduct
+atom	criterion_of_morality(x)	x is one of the criteria of morality
+atom	desires_general(x)	x has an actual desire for the general happiness
+atom	ought_aim_general	each individual ought to desire, or aim at realising in action, the general happiness
+atom	means_ought	by "the general happiness is desirable" Mill means that it is what each individual ought to desire or aim at
+atom	established	the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning
+atom	gap	there is a gap in Mill's expressed argument
+atom	only_benevolence_fills	the gap can only be filled by some such proposition as the intuition of Rational Benevolence
+# gh = the general happiness; happiness = happiness in general
+# "desirable" shifts sense: in S7 it means capable of being desired (proven_desirable_cap); in S8 and S11 it means worth desiring, what ought to be desired (reason_desirable_good, means_ought)
+P1	S7	∀x (proven_desirable_cap(x) → desired(x))	says mill
+P2	S8	reason_desirable_good(gh) → ∀x (person(x) → desires_own_happiness(x))	says mill
+P3	S9	∀x (person(x) → desires_own_happiness(x)) → full_proof_good(happiness) ∧ ∀x (person(x) → own_happiness_good(x)) ∧ good_to_aggregate(gh)	says mill
+P4	S11	means_ought	kind conceptual
+P5	S13	∀x (person(x) → ¬desires_general(x))
+P6	S14	∀x (person(x) → ¬desires_general(x)) → ¬established
+P7	S14	¬established → gap
+P8	S14	only_benevolence_fills
+C1	S12	¬established	from P5 P6
+C	S14	gap	from C1 P7
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

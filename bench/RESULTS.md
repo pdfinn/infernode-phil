@@ -419,6 +419,40 @@ Two of the misses Boethius's readers made at first were fixed on the
 way: a necessity nested in a consequent (p → (q → □r)), and the claim
 written as ◇¬q → ¬p, which says the same as p → □q.
 
+## The pairs again, sources read for their claims
+
+The first pairs run lost one report to the tool: Locke says in the
+excerpt that "words become general by being made the signs of general
+ideas", but `argue` read the source as one argument and left the claim
+out. `phil/claims` reads a document for everything it asserts and
+reports, with no conclusion; `bench/pairs.sh` now reads each source so.
+Run the same day: 16 calls, about $0.70. Output in
+[results/2026-10-19-pairs-claims/](results/2026-10-19-pairs-claims/).
+
+The sources' readings now hold everything in them: Locke's 18 claims
+across its three paragraphs (two or three before), Mill's 14. The
+counts did not improve (attributed 5 against 7, flagged 7 against 6),
+and why is the next problem, not coverage:
+
+- **Two readers, two forms.** Locke's reader wrote "words become
+  general by being made the signs of general ideas" as a conditional
+  (signs of general ideas → general); Berkeley's reader wrote his
+  report of it as asserting both. The claim is now in Locke's reading,
+  and the report is still not entailed by it.
+- **One right.** Berkeley's reader gave Locke the claim that beasts do
+  not compound their ideas; Locke leaves it open ("if it may be doubted
+  whether beasts compound ..."). `claims/misattributed` is right there.
+- **Out of the excerpt**, as before: Locke on brutes reasoning in
+  particulars (*Essay* II.xi.11), Kant's formula as the ground of
+  obligation; and commentators' reconstructions.
+
+So holding a report to its source now turns on the two readers writing
+one claim in one form. The vocabulary the commentary's reader is given
+fixes the atoms, not how they are combined. What would: the source's
+own statements given to the commentary's reader as well, to report
+with where they fit; or the question a person asks, put to a model
+when a report is not entailed: does the source's sentence say this?
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of
@@ -434,9 +468,10 @@ written as ◇¬q → ¬p, which says the same as p → □q.
    readers now keep, which `prove -s` could turn over the same way.
 3. `argue/unfaithful` in dialogues: a claim put as a question and
    granted in the reply should be read from both.
-4. For `phil/corpus`: a source read as everything it asserts, not one
-   argument; and a finding name for "the source as read does not say
-   it" that is not `misattributed`.
+4. For `phil/corpus`: a source is read for everything it claims
+   (`phil/claims`, above); a report and its source are now held apart
+   by the form two readers give one claim. Next: give the commentary's
+   reader the source's statements, not only its atoms.
 5. The gold set: revise `descartes-cogito` and `aquinas-fourth-way`;
    add held-out scope shifts before the next prompt change, as the
    equivocations now are.

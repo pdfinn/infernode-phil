@@ -1,0 +1,34 @@
+# each claim and the works that assert, deny, assume or report it, written by phil/corpus
+claim	beasts_abstract	denies locke:P1
+claim	general_ideas_distinguish	asserts locke:P2	reports berkeley:P3 locke
+claim	brutes_attain_general	denies locke:P3
+claim	observed_signs	denies locke:P4
+claim	beasts_use_signs	denies locke:P5
+claim	!observed_signs->!beasts_abstract	asserts locke:P6
+claim	!beasts_use_signs->!beasts_abstract	asserts locke:P7
+claim	words_signs_general_ideas->words_general	asserts locke:P8
+claim	separate_circumstances->ideas_general	asserts locke:P9
+claim	separate_circumstances->represent_many	asserts locke:P10
+claim	conforms_to_abstract->of_that_sort	asserts locke:P11
+claim	triangle_requires_pains	asserts locke:P12
+claim	triangle_more_abstract	denies locke:P13
+claim	!tri_oblique&!tri_rectangle&!tri_equilateral&!tri_equicrural&!tri_scalene	asserts locke:P14
+claim	tri_all_and_none	asserts locke:P15
+claim	tri_imperfect	asserts locke:P16
+claim	!<>tri_exists	asserts locke:P17
+claim	tri_inconsistent_parts	asserts locke:P18
+claim	general_ideas_distinguish&!brutes_attain_general	reports berkeley:P1 locke
+claim	!observed_signs&!beasts_use_signs&(!beasts_use_signs->!beasts_abstract)	reports berkeley:P2 locke
+claim	berkeley_beasts_have_ideas&!berkeley_bare_machines->berkeley_beasts_reason	reports berkeley:P4 locke
+claim	berkeley_beasts_reason&berkeley_beasts_reason_particular_only	reports berkeley:P5 locke
+claim	!beasts_abstract&!beasts_compound_enlarge	reports berkeley:P6 locke
+claim	!beasts_abstract&!brutes_attain_general	asserts berkeley:P7
+claim	general_ideas_distinguish->berkeley_many_men_beasts	asserts berkeley:P8
+claim	(!beasts_use_signs->!beasts_abstract)&(berkeley_use_words->berkeley_men_abstract)	reports berkeley:P9 locke
+claim	berkeley_use_words->berkeley_men_abstract	asserts berkeley:P10
+claim	berkeley_use_words	assumes berkeley:A1
+claim	berkeley_men_abstract	asserts berkeley:C1
+claim	words_signs_general_ideas&(words_signs_general_ideas->words_general)	reports berkeley:P11 locke
+claim	words_general&berkeley_words_signs_particulars	asserts berkeley:P12
+claim	berkeley_words_signs_particulars->!words_signs_general_ideas	assumes berkeley:A2
+claim	words_signs_general_ideas	denies berkeley:C

@@ -1,0 +1,16 @@
+./berkeley.md:1: claims/misattributed: berkeley P4 gives "berkeley_beasts_have_ideas&!berkeley_bare_machines->berkeley_beasts_reason" as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/misattributed: berkeley P5 gives "berkeley_beasts_reason&berkeley_beasts_reason_particular_only" as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/misattributed: berkeley P6 gives "!beasts_abstract&!beasts_compound_enlarge" as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/misattributed: berkeley P9 gives "(!beasts_use_signs->!beasts_abstract)&(berkeley_use_words->berkeley_men_abstract)" as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/misattributed: berkeley P11 gives "words_signs_general_ideas&(words_signs_general_ideas->words_general)" as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/reported-only: berkeley P4 gives "berkeley_beasts_have_ideas&!berkeley_bare_machines->berkeley_beasts_reason" as locke's, and no work in the corpus holds it: it is only reported
+./berkeley.md:1: claims/reported-only: berkeley P5 gives "berkeley_beasts_reason&berkeley_beasts_reason_particular_only" as locke's, and no work in the corpus holds it: it is only reported
+./berkeley.md:1: claims/reported-only: berkeley P6 gives "!beasts_abstract&!beasts_compound_enlarge" as locke's, and no work in the corpus holds it: it is only reported
+./berkeley.md:1: claims/reported-only: berkeley P11 gives "words_signs_general_ideas&(words_signs_general_ideas->words_general)" as locke's, and no work in the corpus holds it: it is only reported
+.: corpus/works 2
+.: corpus/claims 33
+.: claims/attributed 3
+.: claims/misattributed 5
+.: claims/contradicts-source 0
+.: claims/attributed-unread 0
+.: claims/reported-only 4

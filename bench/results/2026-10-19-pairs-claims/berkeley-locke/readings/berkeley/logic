@@ -1,0 +1,62 @@
+# the argument of berkeley.md as claude-opus-5-5 read it: check that it says what the text says
+atom	beasts_compound_enlarge	beasts compound and enlarge their ideas that way to any degree
+atom	beasts_abstract	the power of abstracting is in beasts
+atom	general_ideas_distinguish	the having of general ideas puts a perfect distinction betwixt man and brutes
+atom	brutes_attain_general	the faculties of brutes attain to the having of general ideas
+atom	observed_signs	we observe footsteps in beasts of making use of general signs for universal ideas
+atom	beasts_use_signs	beasts have use of words or any other general signs
+atom	words_signs_general_ideas	words are made the signs of general ideas
+atom	words_general	words are general
+atom	separate_circumstances	the circumstances of time and place and other determining ideas are separated from ideas
+atom	ideas_general	ideas are general
+atom	represent_many	ideas are capable of representing more individuals than one
+atom	conforms_to_abstract	an individual has in it a conformity to the abstract idea
+atom	of_that_sort	that individual is of that sort
+atom	triangle_requires_pains	forming the general idea of a triangle requires some pains and skill
+atom	triangle_more_abstract	the general idea of a triangle is one of the more abstract, comprehensive and difficult ideas
+atom	tri_oblique	the general idea of a triangle is oblique
+atom	tri_rectangle	the general idea of a triangle is rectangle
+atom	tri_equilateral	the general idea of a triangle is equilateral
+atom	tri_equicrural	the general idea of a triangle is equicrural
+atom	tri_scalene	the general idea of a triangle is scalinon
+atom	tri_all_and_none	the general idea of a triangle is all and none of these kinds at once
+atom	tri_imperfect	the general idea of a triangle is something imperfect
+atom	tri_exists	the general idea of a triangle exists
+atom	tri_inconsistent_parts	the general idea of a triangle puts together parts of several different and inconsistent ideas
+# Berkeley, Introduction to the Principles, §11: Locke's case for abstraction and Berkeley's reply.
+# Locke's claims (S3-S8, S16) are written as reports; Berkeley's own claims are written as plain premises.
+atom	beasts_compound_enlarge	beasts compound and enlarge their ideas that way to any degree
+atom	beasts_abstract	the power of abstracting is in beasts
+atom	general_ideas_distinguish	the having of general ideas puts a perfect distinction betwixt man and brutes
+atom	brutes_attain_general	the faculties of brutes attain to the having of general ideas
+atom	observed_signs	we observe footsteps in beasts of making use of general signs for universal ideas
+atom	beasts_use_signs	beasts have use of words or any other general signs
+atom	words_signs_general_ideas	words are made the signs of general ideas
+atom	words_general	words are general
+atom	beasts_have_ideas	brutes have any ideas at all
+atom	bare_machines	brutes are bare machines
+atom	beasts_reason	brutes have some reason
+atom	beasts_reason_particular_only	brutes reason only in particular ideas, just as they receive them from their senses
+atom	many_men_beasts	a great many of those that pass for men must be reckoned into the number of brutes
+atom	use_words	men make use of words
+atom	men_abstract	men who use language are able to abstract or generalize their ideas
+atom	words_signs_particulars	a word becomes general by being made the sign of several particular ideas, any one of which it indifferently suggests to the mind
+P1	S3	general_ideas_distinguish ∧ ¬brutes_attain_general	says locke
+P2	S4	¬observed_signs ∧ ¬beasts_use_signs ∧ (¬beasts_use_signs → ¬beasts_abstract)	says locke
+P3	S5	general_ideas_distinguish	says locke
+P4	S6	beasts_have_ideas ∧ ¬bare_machines → beasts_reason	says locke
+P5	S7	beasts_reason ∧ beasts_reason_particular_only	says locke
+P6	S8	¬beasts_abstract ∧ ¬beasts_compound_enlarge	says locke
+P7	S11	¬beasts_abstract ∧ ¬brutes_attain_general
+P8	S12	general_ideas_distinguish → many_men_beasts
+# S13 reports the supposition on which Locke's reasoning rests. Berkeley draws S14 from it, so it is also written as a plain premise (P10).
+P9	S13	(¬beasts_use_signs → ¬beasts_abstract) ∧ (use_words → men_abstract)	says locke
+P10	S13	use_words → men_abstract
+A1	-	use_words	kind empirical
+C1	S14	men_abstract	from P10 A1
+P11	S16	words_signs_general_ideas ∧ (words_signs_general_ideas → words_general)	says locke
+P12	S18	words_general ∧ words_signs_particulars
+# The contrast "not of an abstract general idea, but of several particular ideas" is taken as an exclusion; it is written as an assumption.
+A2	-	words_signs_particulars → ¬words_signs_general_ideas
+C	S18	¬words_signs_general_ideas	from P12 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

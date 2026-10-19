@@ -1,0 +1,9 @@
+./sidgwick.md:3: claims/misattributed: sidgwick P3 gives "all x:((person(x)->desires_own_happiness(x))->full_proof_good(happiness)&all x:((person(x)->own_happiness_good(x))&good_to_aggregate(gh)))" as mill's, but nothing mill holds, as read (readings/mill/logic), entails it, nor its denial
+./sidgwick.md:3: claims/reported-only: sidgwick P3 gives "all x:((person(x)->desires_own_happiness(x))->full_proof_good(happiness)&all x:((person(x)->own_happiness_good(x))&good_to_aggregate(gh)))" as mill's, and no work in the corpus holds it: it is only reported
+.: corpus/works 2
+.: corpus/claims 22
+.: claims/attributed 2
+.: claims/misattributed 1
+.: claims/contradicts-source 0
+.: claims/attributed-unread 0
+.: claims/reported-only 1

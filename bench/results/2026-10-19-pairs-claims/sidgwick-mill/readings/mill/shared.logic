@@ -1,0 +1,33 @@
+# mill over the corpus's shared atoms, written by phil/corpus from readings/mill/logic: not to be edited
+domain	h gh
+atom	proven_visible(x)	proof can be given that x is visible
+atom	seen(x)	people actually see x
+atom	proven_audible(x)	proof can be given that x is audible
+atom	heard(x)	people hear x
+atom	proven_desirable_cap(x)	evidence can be produced that x is desirable, in the sense of capable of being desired, by analogy with visible and audible
+atom	desired(x)	people do actually desire x
+atom	acknowledged_end(x)	x is acknowledged, in theory and in practice, to be an end
+atom	convincible_end(x)	some person could be convinced that x is an end
+atom	reason_desirable_good(x)	a reason can be given why x is desirable, in the sense of worth desiring
+atom	person(x)	x is a person
+atom	desires_own_happiness(x)	x desires his own happiness, so far as he believes it attainable
+atom	full_proof_good(x)	we have all the proof the case admits of, and all it is possible to require, that x is a good
+atom	good(x)	x is a good
+atom	own_happiness_good(x)	x's happiness is a good to x
+atom	good_to_aggregate(x)	x is a good to the aggregate of all persons
+atom	end_of_conduct(x)	x has made out its title as one of the ends of conduct
+atom	criterion_of_morality(x)	x is one of the criteria of morality
+P1	S1	∀x (proven_visible(x) → seen(x))
+P2	S2	∀x (proven_audible(x) → heard(x))
+P3	S3	∀x (proven_desirable_cap(x) → desired(x))
+P4	S4	¬acknowledged_end(h) → ¬convincible_end(h)
+P5	S5	reason_desirable_good(gh) → ∀x (person(x) → desires_own_happiness(x))
+P6	S6	∀x (person(x) → desires_own_happiness(x))	kind empirical
+P7	S6	∀x (person(x) → desires_own_happiness(x)) → full_proof_good(h)
+P8	S6	good(h)
+P9	S6	∀x (person(x) → own_happiness_good(x))
+P10	S6	∀x (person(x) → own_happiness_good(x)) → good_to_aggregate(gh)
+P11	S6	good_to_aggregate(gh)
+P12	S7	end_of_conduct(h)
+P13	S7	end_of_conduct(h) → criterion_of_morality(h)
+P14	S7	criterion_of_morality(h)

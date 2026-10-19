@@ -1,0 +1,13 @@
+# each claim and the works that assert, deny, assume or report it, written by phil/corpus
+claim	cannot_repay	asserts kant:P1
+claim	!promises->!lent	asserts kant:P2
+claim	resolves->maxim_false_promise	asserts kant:P3
+claim	<>consistent_welfare	asserts kant:P4
+claim	!<>holds_law_nature	asserts kant:P5
+claim	[](univ_law->self_contradict)	asserts kant:P6
+claim	univ_law->none_believe	asserts kant:P7
+claim	none_believe->!<>promise_exists&!<>end_attained	asserts kant:P8
+claim	univ_law->!<>promise_exists&!<>end_attained	asserts kant:P9
+claim	mill_kant_principle	reports mill:P1 kant
+claim	mill_shows_bad_consequences&!mill_shows_contradiction	asserts mill:P2
+claim	mill_shows_contradiction	denies mill:C

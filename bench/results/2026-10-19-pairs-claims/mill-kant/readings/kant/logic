@@ -1,0 +1,27 @@
+# the claims of kant.md as claude-opus-5-5 read them: check that they say what the text says
+logic	s5
+atom	cannot_repay	he will not be able to repay the money
+atom	promises	he promises stoutly to repay it in a definite time
+atom	lent	something will be lent to him
+atom	resolves	he resolves to get out of the difficulty by making this promise
+atom	maxim_false_promise	the maxim of his action is: when I think myself in want of money, I will borrow money and promise to repay it, although I know that I never can do so
+atom	consistent_welfare	this principle of self-love is consistent with my whole future welfare
+atom	holds_law_nature	the maxim holds as a universal law of nature
+atom	univ_law	it is a universal law that everyone in a difficulty may promise whatever he pleases with the purpose of not keeping the promise
+atom	self_contradict	the maxim contradicts itself
+atom	promise_exists	the promise itself exists
+atom	end_attained	the end one might have in view in the promise is attained
+atom	none_believe	no one considers that anything was promised to him, but ridicules all such statements as vain pretences
+# S1 and S3 set up the example; S3 and S5's "Is it right?" are questions, not claims.
+P1	S2	cannot_repay
+P2	S2	¬promises → ¬lent
+P3	S4	resolves → maxim_false_promise
+# S5: "may perhaps be consistent" read as possibility.
+P4	S5	◇consistent_welfare
+P5	S7	¬◇holds_law_nature
+# S7 "would necessarily contradict itself": read as the whole conditional being necessary; it could be read as univ_law -> []self_contradict.
+P6	S7	□(univ_law → self_contradict)
+P7	S8	univ_law → none_believe
+P8	S8	none_believe → ¬◇promise_exists ∧ ¬◇end_attained
+P9	S8	univ_law → ¬◇promise_exists ∧ ¬◇end_attained
+# read by claude-opus-5-5, prompt /lib/phil/claims 088c436c8b72, 2026-10-19, blinded by name space

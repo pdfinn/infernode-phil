@@ -1,0 +1,23 @@
+# each claim and the works that assert, deny, assume or report it, written by phil/corpus
+claim	all x:(proven_visible(x)->seen(x))	asserts mill:P1
+claim	all x:(proven_audible(x)->heard(x))	asserts mill:P2
+claim	all x:(proven_desirable_cap(x)->desired(x))	asserts mill:P3	reports sidgwick:P1 mill
+claim	!acknowledged_end(h)->!convincible_end(h)	asserts mill:P4
+claim	reason_desirable_good(gh)->all x:(person(x)->desires_own_happiness(x))	asserts mill:P5	reports sidgwick:P2 mill
+claim	all x:(person(x)->desires_own_happiness(x))	asserts mill:P6
+claim	all x:((person(x)->desires_own_happiness(x))->full_proof_good(h))	asserts mill:P7
+claim	good(h)	asserts mill:P8
+claim	all x:(person(x)->own_happiness_good(x))	asserts mill:P9
+claim	all x:((person(x)->own_happiness_good(x))->good_to_aggregate(gh))	asserts mill:P10
+claim	good_to_aggregate(gh)	asserts mill:P11
+claim	end_of_conduct(h)	asserts mill:P12
+claim	end_of_conduct(h)->criterion_of_morality(h)	asserts mill:P13
+claim	criterion_of_morality(h)	asserts mill:P14
+claim	all x:((person(x)->desires_own_happiness(x))->full_proof_good(happiness)&all x:((person(x)->own_happiness_good(x))&good_to_aggregate(gh)))	reports sidgwick:P3 mill
+claim	sidgwick_means_ought	asserts sidgwick:P4
+claim	all x:(person(x)->!desires_general(x))	asserts sidgwick:P5
+claim	all x:((person(x)->!desires_general(x))->!sidgwick_established)	asserts sidgwick:P6
+claim	!sidgwick_established->sidgwick_gap	asserts sidgwick:P7
+claim	sidgwick_only_benevolence_fills	asserts sidgwick:P8
+claim	sidgwick_established	denies sidgwick:C1
+claim	sidgwick_gap	asserts sidgwick:C

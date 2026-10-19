@@ -1,0 +1,10 @@
+# 3 readings by claude-opus-5-5, compared
+mill.logic: argue/readings-agree 2
+mill.logic: argue/readings-differ 0
+mill.logic: argue/verdicts-agree 1
+mill.logic: argue/mismatches 0
+mill.logic.2: argue/mismatches 0
+mill.logic.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: mill.logic
+# argument written to mill.logic by claude-opus-5-5 (a language model, not a rule)
+mill.logic: argue/valid 1

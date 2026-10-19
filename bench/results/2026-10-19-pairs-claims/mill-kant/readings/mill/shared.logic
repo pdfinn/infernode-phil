@@ -1,0 +1,19 @@
+# mill over the corpus's shared atoms, written by phil/corpus from readings/mill/logic: not to be edited
+atom	cannot_repay	he will not be able to repay the money
+atom	promises	he promises stoutly to repay it in a definite time
+atom	lent	something will be lent to him
+atom	resolves	he resolves to get out of the difficulty by making this promise
+atom	maxim_false_promise	the maxim of his action is: when I think myself in want of money, I will borrow money and promise to repay it, although I know that I never can do so
+atom	consistent_welfare	this principle of self-love is consistent with my whole future welfare
+atom	holds_law_nature	the maxim holds as a universal law of nature
+atom	univ_law	it is a universal law that everyone in a difficulty may promise whatever he pleases with the purpose of not keeping the promise
+atom	self_contradict	the maxim contradicts itself
+atom	promise_exists	the promise itself exists
+atom	end_attained	the end one might have in view in the promise is attained
+atom	none_believe	no one considers that anything was promised to him, but ridicules all such statements as vain pretences
+atom	mill_kant_principle	the universal first principle and ground of moral obligation is: so act that the rule on which thou actest would admit of being adopted as a law by all rational beings
+atom	mill_shows_contradiction	Kant shows that there would be some contradiction or logical impossibility in the adoption by all rational beings of the most outrageously immoral rules of conduct
+atom	mill_shows_bad_consequences	Kant shows that the consequences of the universal adoption of such rules would be such as no one would choose to incur
+P1	S2	mill_kant_principle	says kant
+P2	S4	mill_shows_bad_consequences ∧ ¬mill_shows_contradiction	kind empirical
+C	S3	¬mill_shows_contradiction	from P2

@@ -1,0 +1,54 @@
+[Sh] Broken: "dereference of nil"
+sh: 213 "Sh":dereference of nil
+# the prover could not read sidgwick.logic.3: claude-opus-5-5 is asked again
+sidgwick.logic.3: argue/no-conclusion: the argument has no conclusion (a line C)
+wwb/api: openai: cannot connect to tcp!127.0.0.1!18411: Connection refused (connect 127.0.0.1!18411 )
+# the prover could not read sidgwick.logic.3: claude-opus-5-5 is asked again
+sidgwick.logic.3: argue/no-conclusion: the argument has no conclusion (a line C)
+wwb/api: openai: cannot connect to tcp!127.0.0.1!18411: Connection refused (connect 127.0.0.1!18411 )
+# reading 3 is left out: the prover still cannot read it
+# 2 readings by claude-opus-5-5, compared
+wwb/api: openai: cannot connect to tcp!127.0.0.1!18411: Connection refused (connect 127.0.0.1!18411 )
+wwb/api: openai: cannot connect to tcp!127.0.0.1!18411: Connection refused (connect 127.0.0.1!18411 )
+wwb/api: openai: cannot connect to tcp!127.0.0.1!18411: Connection refused (connect 127.0.0.1!18411 )
+wwb/api: openai: cannot connect to tcp!127.0.0.1!18411: Connection refused (connect 127.0.0.1!18411 )
+wwb/api: openai: cannot connect to tcp!127.0.0.1!18411: Connection refused (connect 127.0.0.1!18411 )
+sidgwick.md:5: argue/readings: S11 is read 2 ways: sidgwick.logic has "means_ought ∧ (means_ought → (established → ought_aim_general))"; sidgwick.logic.2 has "means_ought"; they differ when only "by "the general happiness is desirable" Mill means that it is what each individual ought to desire or aim at" and "the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning" are true, which the second allows
+sidgwick.md:5: argue/readings: S12 is read 2 ways: sidgwick.logic has "∀x (desired(x) → reason_desirable_good(x))" and "established → desired(genhap)"; sidgwick.logic.2 has nothing from it; they differ when only "the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning", "people do actually desire genhap", "people do actually desire gh", "people do actually desire happiness", "a reason can be given why gh is desirable, in the sense of worth desiring", "a reason can be given why genhap is desirable, in the sense of worth desiring" and "a reason can be given why happiness is desirable, in the sense of worth desiring" are true, which the second allows
+sidgwick.md:5: argue/readings: S13 is read 2 ways: sidgwick.logic has "¬∃x (person(x) ∧ desires_general(x))" and "desired(genhap) → ∃x (person(x) ∧ desires_general(x))"; sidgwick.logic.2 has "∀x (person(x) → ¬desires_general(x))"; they differ when only "people do actually desire genhap", "genhap is a person", "gh is a person" and "happiness is a person" are true, which the second allows
+sidgwick.md:5: argue/readings: S14 is read 2 ways: sidgwick.logic has "¬established → gap" and "gap → only_benevolence_fills"; sidgwick.logic.2 has "∀x (person(x) → ¬desires_general(x)) → ¬established" and "¬established → gap" and "only_benevolence_fills"; they differ when only "the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning", "there is a gap in Mill's expressed argument", "the gap can only be filled by some such proposition as the intuition of Rational Benevolence", "genhap is a person", "gh is a person" and "happiness is a person" are true, which the first allows
+sidgwick.md:5: argue/readings: the conclusion is read 2 ways: sidgwick.logic has "gap ∧ only_benevolence_fills"; sidgwick.logic.2 has "gap"; they differ when only "there is a gap in Mill's expressed argument" is true, which the second allows
+sidgwick.md:5: argue/negation: sidgwick.logic P6 (S12): the sentence says "not", but P6 denies nothing it speaks of: it reads "if the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning, then people do actually desire genhap"
+sidgwick.md:5: argue/unfaithful: sidgwick.logic P7 (S13): the sentence has no word of "x is a person": is it the sentence P7 came from?
+sidgwick.md:5: argue/unfaithful: sidgwick.logic P8 (S13): the sentence has no word of "x is a person": is it the sentence P8 came from?
+sidgwick.md:5: argue/quantifier: sidgwick.logic P8 (S13): the sentence says "each", but P8 says only some: it reads "if people do actually desire genhap, then (for some x, x is a person and x has an actual desire for the general happiness)"
+sidgwick.md:5: argue/unfaithful: sidgwick.logic.2 P5 (S13): the sentence has no word of "x is a person": is it the sentence P5 came from?
+sidgwick.md:5: argue/unfaithful: sidgwick.logic.2 P6 (S14): the sentence has no word of "x is a person": is it the sentence P6 came from?
+sidgwick.md:5: argue/quantifier: sidgwick.logic.2 P6 (S14): the sentence says "some", but P6 says all: it reads "if (for every x, if x is a person, then it is not so that x has an actual desire for the general happiness), then it is not so that the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning"
+sidgwick.logic: argue/readings-agree 0
+sidgwick.logic: argue/readings-differ 5
+sidgwick.logic: argue/verdicts-agree 1
+sidgwick.logic: argue/mismatches 4
+sidgwick.logic.2: argue/mismatches 3
+# question S11: Suppose "by "the general happiness is desirable" Mill means that it is what each individual ought to desire or aim at" and "the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning" are true and "each individual ought to desire, or aim at realising in action, the general happiness" is false. Is S11, "Now, as we have seen, it is as a “standard of right and wrong,” or “directive rule of conduct,” that the utilitarian principle is put forward by Mill: hence, in giving as a statement of this principle that “the general happiness is desirable,” he must be understood to mean (and his whole treatise shows that he does mean) that it is what each individual ought to desire, or at least--in the stricter sense of ‘ought’--to aim at realising in action.", true then?
+# if yes: sidgwick.logic.2
+# if no: sidgwick.logic
+# question S12: Suppose "the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning", "people do actually desire genhap", "people do actually desire gh", "people do actually desire happiness", "a reason can be given why gh is desirable, in the sense of worth desiring", "a reason can be given why genhap is desirable, in the sense of worth desiring" and "a reason can be given why happiness is desirable, in the sense of worth desiring" are true. Is S12, "But this proposition is not established by Mill’s reasoning, even if we grant that what is actually desired may be legitimately inferred to be in this sense desirable.", true then?
+# if yes: sidgwick.logic.2
+# if no: sidgwick.logic
+# question S13: Suppose "people do actually desire genhap", "genhap is a person", "gh is a person" and "happiness is a person" are true and "genhap has an actual desire for the general happiness", "gh has an actual desire for the general happiness" and "happiness has an actual desire for the general happiness" are false. Is S13, "For an aggregate of actual desires, each directed towards a different part of the general happiness, does not constitute an actual desire for the general happiness, existing in any individual; and Mill would certainly not contend that a desire which does not exist in any individual can possibly exist in an aggregate of individuals.", true then?
+# if yes: sidgwick.logic.2
+# if no: sidgwick.logic
+# question S14: Suppose "the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning", "there is a gap in Mill's expressed argument", "the gap can only be filled by some such proposition as the intuition of Rational Benevolence", "genhap is a person", "gh is a person" and "happiness is a person" are true and "genhap has an actual desire for the general happiness", "gh has an actual desire for the general happiness" and "happiness has an actual desire for the general happiness" are false. Is S14, "There being therefore no actual desire--so far as this reasoning goes--for the general happiness, the proposition that the general happiness is desirable cannot be in this way established: so that there is a gap in the expressed argument, which can, I think, only be filled by some such proposition as that which I have above tried to exhibit as the intuition of Rational Benevolence.", true then?
+# if yes: sidgwick.logic
+# if no: sidgwick.logic.2
+# question C: Suppose "there is a gap in Mill's expressed argument" is true and "the gap can only be filled by some such proposition as the intuition of Rational Benevolence" is false. Is the conclusion, "There being therefore no actual desire--so far as this reasoning goes--for the general happiness, the proposition that the general happiness is desirable cannot be in this way established: so that there is a gap in the expressed argument, which can, I think, only be filled by some such proposition as that which I have above tried to exhibit as the intuition of Rational Benevolence.", true then?
+# if yes: sidgwick.logic.2
+# if no: sidgwick.logic
+# kept the reading that best fits the words and the other readings: sidgwick.logic.2
+# argument written to sidgwick.logic by claude-opus-5-5 (a language model, not a rule)
+sidgwick.md:5: argue/unfaithful: P5 (S13): the sentence has no word of "x is a person": is it the sentence P5 came from?
+sidgwick.md:5: argue/unfaithful: P6 (S14): the sentence has no word of "x is a person": is it the sentence P6 came from?
+sidgwick.md:5: argue/quantifier: P6 (S14): the sentence says "some", but P6 says all: it reads "for every x, if (if x is a person, then it is not so that x has an actual desire for the general happiness), then it is not so that the proposition that the general happiness is desirable (in the ought sense) is established by Mill's reasoning"
+sidgwick.md:5: argue/own-sentence: C (S14): needs P7, read from the conclusion's own sentence: check that S14 gives it as its reason and does not conclude it
+sidgwick.logic: argue/valid 1
