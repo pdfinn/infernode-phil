@@ -59,3 +59,9 @@ data/argue/faith/only.md:1: argue/unlinked: C (S1): the conclusion speaks of "x 
 data/argue/faith/only.md:1: argue/invalid: C (S1): does not follow: when "another is an admin" is true, "another can deploy" is false, the conclusion fails, and there are no premises; this is a generalization: what holds of the cases named need not hold of every case
 data/argue/faith/only.md:1: argue/countermodel: C (S1): D = {another}; admin = {another}, deploy = ∅
 data/argue/faith/only-misread.logic: argue/valid 0
+data/argue/faith/long.md:2: argue/negation: P4 (S2): the sentence says "nothing", but P4 denies nothing it speaks of: it reads "if the mail server is patched, then the mail server is exposed"
+data/argue/faith/long.md:2: argue/negation: P5 (S2): the sentence says "nothing", but P5 denies nothing it speaks of: it reads "the mail server is patched"
+data/argue/faith/long.md:1: argue/own-sentence: C1 (S1): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S1 gives them as its reason, the reading has it assert what it concludes
+data/argue/faith/long.md:2: argue/own-sentence: C (S2): follows from P4 and P5 alone, read from the conclusion's own sentence: unless S2 gives them as its reason, the reading has it assert what it concludes
+data/argue/faith/long.md:1: argue/unused-step: C1 (S1): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+data/argue/faith/long.logic: argue/valid 1

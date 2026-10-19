@@ -1,0 +1,13 @@
+atom	no_body	I could suppose that I had no body
+atom	doubted	I doubted
+atom	existed	I existed
+atom	thinks	I am a thing that thinks
+atom	patched	the mail server is patched
+atom	exposed	the mail server is exposed
+P1	S1	no_body
+P2	S1	doubted -> existed
+P3	S1	doubted
+C1	S1	existed	from P2 P3
+P4	S2	patched -> exposed
+P5	S2	patched
+C	S2	exposed	from P4 P5

@@ -5522,9 +5522,22 @@ negation(st: ref Stmt, words: array of string, ps: list of string)
 			continue;
 		cue = 1;
 		# no, none, neither deny what is said of the thing they
-		# name: anything denied in the formula will do
+		# name: anything denied in the formula will do.  Only where
+		# the formula speaks of the next word of substance: a long
+		# sentence read as several statements has its denial in one
 		if(w == "no" || w == "none" || w == "nothing" || w == "nobody" || w == "neither" || w == "nor"){
-			if(negs == nil && !negmeaning(ps))
+			if(negs != nil || negmeaning(ps))
+				continue;
+			for(j := i+1; j < n && j <= i+3; j++){
+				if(stopword(words[j]) || isneg(words[j]))
+					continue;
+				if(about(words[j], ps) != nil){
+					report1(st, w);
+					return;
+				}
+				break;
+			}
+			if(j >= n || j > i+3)
 				{
 				report1(st, w);
 				return;
