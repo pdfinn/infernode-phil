@@ -1,0 +1,7 @@
+atom	war	war threatens the state
+atom	rebellion	rebellion threatens the state
+atom	order	order may be kept
+atom	policies	the quarrel is about two policies
+atom	views	the quarrel is about two views of law
+P1	S1	(war | rebellion) -> order
+C	S2	views

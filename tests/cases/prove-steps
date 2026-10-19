@@ -1,0 +1,7 @@
+wwb/prove data/argue/steps/kalam.logic data/argue/steps/kalam.md
+wwb/prove data/argue/steps/kalam-gap.logic data/argue/steps/kalam.md
+wwb/prove data/argue/steps/kalam-unused.logic data/argue/steps/kalam.md
+wwb/prove data/argue/steps/kalam-nofrom.logic data/argue/steps/kalam.md
+wwb/prove data/argue/steps/circle.logic data/argue/steps/circle.md
+wwb/prove data/argue/steps/bad.logic >[2=1]
+wwb/prove -v data/argue/steps/kalam.logic data/argue/steps/kalam.md

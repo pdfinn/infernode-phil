@@ -1,0 +1,4 @@
+atom	breathes	Moby breathes air
+P1	S6	mammal -> breathes
+P2	S4	!whale | mammal
+C	S7	whale -> breathes	from P1 P2

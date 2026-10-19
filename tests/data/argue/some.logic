@@ -1,0 +1,6 @@
+# some servers are unpatched; every unpatched server is exposed; so some server is exposed
+atom	patched(x)	x is patched
+atom	exposed(x)	x is exposed
+P1	S1	some x: !patched(x)
+P2	S2	all x: !patched(x) -> exposed(x)
+C	S3	some x: exposed(x)

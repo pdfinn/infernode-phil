@@ -1,0 +1,6 @@
+atom	up	the service is up
+atom	down	the outage continues
+P1	S1	up
+P2	S2	up -> !down
+P3	S3	down
+C	S4	up & down

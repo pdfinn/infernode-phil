@@ -1,0 +1,61 @@
+data/argue/sample.md:1: argue/says: P1 (S1): reads "if the server is secure, then the server is patched"
+data/argue/sample.md:1: argue/says: P2 (S2): reads "the server is secure"
+data/argue/sample.md:2: argue/says: C (S3): reads "the server is patched"
+data/argue/sample.md:1: argue/converse: P1 (S1): the sentence makes the words after "if" the condition, but P1 has them follow from it: it reads "if the server is secure, then the server is patched"
+data/argue/faith/converse.logic: argue/valid 1
+data/argue/faith/text.md:1: argue/converse: P1 (S1): the sentence makes the words after "every" the condition, but P1 has them follow from it: it reads "for every s, if s is patched, then s is audited"
+data/argue/faith/text.md:2: argue/negation: P2 (S2): the sentence says "not", but P2 denies nothing it speaks of: it reads "mail is exposed"
+data/argue/faith/text.md:3: argue/quantifier: P3 (S3): the sentence says "most", but P3 says all: it reads "for every s, if s is patched, then s is monitored"
+data/argue/faith/text.md:5: argue/negation: P5 (S5): the sentence states "x is monitored", with no word of denial, but P5 denies it: it reads "it is not so that web is monitored"
+data/argue/faith/text.md:5: argue/unfaithful: P6 (S5): the sentence has no word of "x is billed": is it the sentence P6 came from?
+data/argue/faith/text.md:6: argue/invalid: C (S6): does not follow: when "mail is audited", "mail is exposed" and "web is billed" are true, "mail is monitored" is false, and nothing else is true, every premise holds and the conclusion fails
+data/argue/faith/text.md:6: argue/countermodel: C (S6): D = {mail, web}; audited = {mail}, billed = {web}, exposed = {mail}, monitored = ∅, patched = ∅
+data/argue/faith/text.md:6: argue/missing: C (S6): it would follow given "patched(mail)" (mail is patched), or "audited(mail) → monitored(mail)", or "¬patched(mail) → monitored(mail)"
+data/argue/faith/misread.logic: argue/valid 0
+data/argue/faith/text.md:2: argue/unlinked: P2 (S2): P2 is the only statement about "x is exposed": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/text.md:5: argue/unlinked: P6 (S5): P6 is the only statement about "x is billed": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/text.md:6: argue/invalid: C (S6): does not follow: when "mail is patched", "mail is audited", "web is patched" and "web is monitored" are true, "mail is monitored" is false, and nothing else is true, every premise holds and the conclusion fails
+data/argue/faith/text.md:6: argue/countermodel: C (S6): D = {another, mail, web}; audited = {mail}, exposed = ∅, monitored = {web}, patched = {mail, web}
+data/argue/faith/text.md:6: argue/missing: C (S6): it would follow given "patched(mail) → monitored(mail)", or "audited(mail) → monitored(mail)", or "¬exposed(mail) → monitored(mail)"
+data/argue/faith/right.logic: argue/valid 0
+data/argue/faith/text.md:2: argue/unlinked: P2 (S2): P2 is the only statement about "x is exposed": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:7: argue/unfaithful: P13 (S7): the sentence has no word of "the build passes": is it the sentence P13 came from?
+data/argue/faith/tricky.md:13: argue/invalid: C (S13): does not follow: when "the build passes", "the tests pass", "the build fails", "the alarm sounds", "the door opens", "the cache is warm", "the request is refused", "bob is patched", "another is patched", "bob is safe", "another is safe" and "another is monitored" are true, "the release ships" is false, and nothing else is true, every premise holds and the conclusion fails
+data/argue/faith/tricky.md:13: argue/countermodel: C (S13): D = {another, bob, old}; fails = T, friday = F, opens = T, pass = T, refused = F, ships = F, slow = F, sounds = T, tests = T, up = F, valid = T, warm = T, monitored = {bob}, patched = {another, bob}, safe = {another, bob}, trusted = ∅, vetted = ∅
+data/argue/faith/tricky.md:13: argue/missing: C (S13): it would follow given "¬fails" (it is not so that the build fails), or "pass → ships", or "tests → ships"
+data/argue/faith/tricky.logic: argue/valid 0
+data/argue/faith/tricky.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "the tests pass": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:2: argue/unlinked: P2 (S2): P2 is the only statement about "the build fails": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:5: argue/unlinked: P5 (S5): P5 is the only statement about "the alarm sounds": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:7: argue/unlinked: P7 (S7): P7 is the only statement about "the service is up": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:9: argue/unlinked: P9 (S9): P9 is the only statement about "x is safe": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:10: argue/unlinked: P10 (S10): P10 is the only statement about "x is monitored": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:12: argue/unlinked: P12 (S12): P12 is the only statement about "the deploy runs on Fridays": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:15: argue/unlinked: P15 (S15): P15 is the only statement about "the cache is warm" and "the request is slow": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:16: argue/unlinked: P16 (S16): P16 is the only statement about "the token is valid" and "the request is refused": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/faith/tricky.md:1: argue/converse: P1 (S1): "only if" makes what follows it necessary, not sufficient, but P1 has it the other way round: it reads "if the tests pass, then the build passes"
+data/argue/faith/tricky.md:3: argue/quantifier: P3 (S3): the sentence says "not every", but P3 says it of every one: it reads "for every s, it is not so that s is patched"
+data/argue/faith/tricky.md:4: argue/negation: P4 (S4): the sentence says "unpatched", but P4 denies nothing it speaks of: it reads "for every s, if s is patched, then it is not so that s is trusted"
+data/argue/faith/tricky.md:5: argue/converse: P5 (S5): the sentence makes the words after "when" the condition, but P5 has them follow from it: it reads "if the alarm sounds, then the door opens"
+data/argue/faith/tricky.md:6: argue/negation: P6 (S6): the sentence states "the door opens", with no word of denial, but P6 denies it: it reads "it is not so that the door opens"
+data/argue/faith/tricky.md:8: argue/converse: P8 (S8): the sentence makes the words after "if" the condition, but P8 has them follow from it: it reads "if bob is trusted, then bob is vetted"
+data/argue/faith/tricky.md:9: argue/converse: P9 (S9): the sentence says "if and only if", but P9 goes one way only: it reads "for every s, if s is safe, then s is patched"
+data/argue/faith/tricky.md:10: argue/quantifier: P10 (S10): the sentence says "some", but P10 says all: it reads "for every s, s is monitored"
+data/argue/faith/tricky.md:11: argue/converse: P11 (S11): the sentence makes the words after "every" the condition, but P11 has them follow from it: it reads "for every e, if e is trusted, then e is vetted"
+data/argue/faith/tricky.md:12: argue/negation: P12 (S12): the sentence says "never", but P12 denies nothing it speaks of: it reads "the deploy runs on Fridays"
+data/argue/faith/tricky.md:14: argue/negation: P14 (S14): the sentence says "unpatched", but P14 denies nothing it speaks of: it reads "old is patched"
+data/argue/faith/tricky.md:15: argue/or: P15 (S15): the sentence says "either ... or", which often means one and not both, but P15 allows both: it reads "either the cache is warm or the request is slow"; if not both, say so with & !(... & ...)
+data/argue/faith/tricky.md:16: argue/or: P16 (S16): the sentence's plain "or" allows both, but P16 rules both out: it reads "it is not so that (the token is valid if and only if the request is refused)"
+data/argue/faith/tricky.md:3: argue/inconsistent: P3 (S3): P3 and P14 contradict each other, so anything at all would follow from them
+data/argue/faith/tricky-misread.logic: argue/valid 0
+data/argue/faith/only.md:1: argue/unlinked: C (S1): the conclusion speaks of "x is an admin", which no premise mentions: nothing links it to them
+data/argue/faith/only.md:1: argue/unlinked: C (S1): the conclusion speaks of "x can deploy", which no premise mentions: nothing links it to them
+data/argue/faith/only.md:1: argue/invalid: C (S1): does not follow: when "another can deploy" is true, "another is an admin" is false, the conclusion fails, and there are no premises; this is a generalization: what holds of the cases named need not hold of every case
+data/argue/faith/only.md:1: argue/countermodel: C (S1): D = {another}; admin = ∅, deploy = {another}
+data/argue/faith/only.logic: argue/valid 0
+data/argue/faith/only.md:1: argue/converse: C (S1): "only" makes what follows it necessary, not sufficient, but C has it the other way round: it reads "for every p, if p is an admin, then p can deploy"
+data/argue/faith/only.md:1: argue/unlinked: C (S1): the conclusion speaks of "x can deploy", which no premise mentions: nothing links it to them
+data/argue/faith/only.md:1: argue/unlinked: C (S1): the conclusion speaks of "x is an admin", which no premise mentions: nothing links it to them
+data/argue/faith/only.md:1: argue/invalid: C (S1): does not follow: when "another is an admin" is true, "another can deploy" is false, the conclusion fails, and there are no premises; this is a generalization: what holds of the cases named need not hold of every case
+data/argue/faith/only.md:1: argue/countermodel: C (S1): D = {another}; admin = {another}, deploy = ∅
+data/argue/faith/only-misread.logic: argue/valid 0

@@ -1,0 +1,16 @@
+#!/dis/sh.dis
+# prove.inferno wwbdir outdir - for each logic file of data/argue,
+# wwb/prove's verdict (name.ours) and its TPTP form (name.p) in outdir;
+# run by tests/prove_z3_test.sh.
+load std
+
+wwb=$1
+outdir=${hd ${tl $*}}
+run $wwb/wwbns $wwb
+cd $wwb/tests
+for f in data/argue/*.logic data/argue/k/*.logic data/argue/modal/*.logic {
+	b=`{basename $f .logic}
+	wwb/prove -t $f > $outdir/$b.p >[2] /dev/null
+	wwb/prove $f > $outdir/$b.ours >[2] /dev/null
+}
+echo halt > /dev/sysctl

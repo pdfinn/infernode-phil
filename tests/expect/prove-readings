@@ -1,0 +1,23 @@
+data/argue/split/text.md:2: argue/readings: S2 is read 2 ways: data/argue/split/r1.logic has nothing from it; data/argue/split/r2.logic and data/argue/split/r3.logic have "closed → slow"; they differ when only "the bridge is closed" is true, which the first allows
+data/argue/split/text.md:2: argue/answered: S2: answered no, which keeps data/argue/split/r2.logic and data/argue/split/r3.logic, to: Suppose "the bridge is closed" is true and "the traffic is slow" is false. Is S2, "Closing a bridge has the potential to slow traffic.", true then?
+data/argue/split/text.md:3: argue/readings: S3 is read 2 ways: data/argue/split/r1.logic has "slow → lose"; data/argue/split/r2.logic and data/argue/split/r3.logic have nothing from it; they differ when only "the traffic is slow" is true, which the second allows
+data/argue/split/text.md:3: argue/answered: S3: answered no, which keeps data/argue/split/r1.logic, to: Suppose "the traffic is slow" is true and "the shops lose trade" is false. Is S3, "So the traffic is slow, and thus the shops lose trade.", true then?
+data/argue/split/text.md:3: argue/readings: the conclusion is read 2 ways: data/argue/split/r1.logic has "lose"; data/argue/split/r2.logic and data/argue/split/r3.logic have "slow"; they differ when only "the shops lose trade" is true, which the first allows
+data/argue/split/text.md:3: argue/answered: the conclusion: answered yes, which keeps data/argue/split/r1.logic, to: Suppose "the shops lose trade" is true and "the traffic is slow" is false. Is the conclusion, "So the traffic is slow, and thus the shops lose trade.", true then?
+data/argue/split/r1.logic: argue/verdicts: valid as data/argue/split/r2.logic, data/argue/split/r3.logic read it, not as the others do: which reading is right decides the verdict
+data/argue/split/r1.logic: argue/readings-agree 1
+data/argue/split/r1.logic: argue/readings-differ 3
+data/argue/split/r1.logic: argue/verdicts-agree 0
+data/argue/split/r1.logic: argue/answers-split: no reading agrees with all 3 answers (data/argue/split/r1.logic 2, data/argue/split/r2.logic 1, data/argue/split/r3.logic 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+data/argue/split/r1.logic: argue/support 1
+data/argue/split/r1.logic: argue/mismatches 0
+data/argue/split/r2.logic: argue/support 4
+data/argue/split/r2.logic: argue/mismatches 0
+data/argue/split/r3.logic: argue/support 4
+data/argue/split/r3.logic: argue/mismatches 0
+# best reading: data/argue/split/r1.logic
+data/argue/split/views.md:2: argue/unlinked: C (S2): the conclusion speaks of "the quarrel is about two views of law", which no premise mentions: nothing links it to them
+data/argue/split/views.md:2: argue/invalid: C (S2): does not follow: when nothing is true, every premise holds and the conclusion fails
+data/argue/split/views.md:2: argue/countermodel: C (S2): order = F, rebellion = F, views = F, war = F
+data/argue/split/views.logic: argue/valid 0
+data/argue/split/views.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "war threatens the state", "rebellion threatens the state" and "order may be kept": as written it cannot bear on the conclusion; was the same thing named two ways?

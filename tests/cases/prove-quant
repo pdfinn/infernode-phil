@@ -1,0 +1,5 @@
+wwb/prove data/argue/syllogism.logic
+wwb/prove data/argue/middle.logic
+wwb/prove data/argue/some.logic
+wwb/prove data/argue/hasty.logic
+wwb/prove data/argue/arity.logic >[2=1]

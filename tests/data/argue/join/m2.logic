@@ -1,0 +1,5 @@
+logic	kd
+atom	q	we keep it
+P1	S3	[](p -> q)
+P2	S2	[]p
+C	S4	[]q	from P1 P2

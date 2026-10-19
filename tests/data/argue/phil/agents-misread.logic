@@ -1,0 +1,5 @@
+atom	rational(x)	x is rational
+atom	moral(x)	x is a moral agent
+P1	S1	all x: rational(x) -> moral(x)
+P2	S2	!rational(dolphin)
+C	S3	!moral(dolphin)

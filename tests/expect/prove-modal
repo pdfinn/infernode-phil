@@ -1,0 +1,59 @@
+data/argue/modal/ontological.md:1: argue/says: P1 (S1): reads "possibly, necessarily, a maximally great being exists"
+data/argue/modal/ontological.md:2: argue/says: C1 (S2): reads "necessarily, a maximally great being exists"
+data/argue/modal/ontological.md:3: argue/says: C (S3): reads "a maximally great being exists"
+data/argue/modal/ontological.md:2: argue/circular: C1 (S2): the conclusion only restates P1: it is assumed, not argued
+data/argue/modal/ontological.logic: argue/valid 0
+data/argue/modal/fallacy.md:3: argue/invalid: C (S3): does not follow: when "the bachelor is unmarried" and "necessarily, (if the bachelor is unmarried, then he is unmarried)" are true, "necessarily, he is unmarried" is false, every premise holds and the conclusion fails
+data/argue/modal/fallacy.md:3: argue/countermodel: C (S3): W = {w0, w1, w2}; R = W × W; w0: p = T, q = T; w1: p = F, q = F; w2: p = F, q = F
+data/argue/modal/fallacy.logic: argue/valid 0
+data/argue/modal/oughtmay.logic:3: argue/says: P1: reads "it ought to be that you pay your debts"
+data/argue/modal/oughtmay.logic:4: argue/says: C: reads "it is permitted that you pay your debts"
+data/argue/modal/oughtmay.logic:4: argue/begs: C: follows from P1 alone, which the text never states: the text's own premises do no work
+data/argue/modal/oughtmay.logic: argue/valid 1
+data/argue/modal/oughtis.logic:4: argue/invalid: C: does not follow: when "it ought to be that you pay your debts" is true, "you pay your debts" is false, every premise holds and the conclusion fails
+data/argue/modal/oughtis.logic:4: argue/countermodel: C: W = {w0, w1}; R = {(w0, w1), (w1, w1)}; w0: pay = F; w1: pay = T
+data/argue/modal/oughtis.logic: argue/valid 0
+data/argue/modal/kd-k.logic:6: argue/begs: C: follows from P1 and P2 alone, which the text never states: the text's own premises do no work
+data/argue/modal/kd-k.logic: argue/valid 1
+data/argue/modal/nologic.logic:2: argue/syntax: P1: necessity and possibility need a line logic s5, ought and permitted logic kd, both logic s5kd
+data/argue/modal/quantified.logic:3: argue/syntax: P1: all and some are not decided in modal logic here: its arguments are propositional
+% data/argue/modal/fallacy.logic, for a first-order prover
+% logic s5, by the standard translation: each atom holds at a world, w0 the actual one
+% p: the bachelor is unmarried
+% q: he is unmarried
+fof(p1, axiom, (! [W1] : (p(W1) => q(W1)))).
+fof(p2, axiom, p(w0)).
+fof(c, conjecture, (! [W2] : q(W2))).
+% data/argue/modal/oughtis.logic, for a first-order prover
+% logic kd, by the standard translation: each atom holds at a world, w0 the actual one
+fof(serial, axiom, (! [X] : (? [Y] : r(X,Y)))).
+% pay: you pay your debts
+fof(p1, axiom, (! [W1] : (r(w0,W1) => pay(W1)))).
+fof(c, conjecture, pay(w0)).
+data/argue/modal/t-k.logic:4: argue/invalid: C: does not follow: when "necessarily, p holds" is true, "p holds" is false, every premise holds and the conclusion fails
+data/argue/modal/t-k.logic:4: argue/countermodel: C: W = {w0}; R = ∅; w0: p = F
+data/argue/modal/t-k.logic: argue/valid 0
+data/argue/modal/d-k.logic:4: argue/invalid: C: does not follow: when "necessarily, p holds" is true, "possibly, p holds" is false, every premise holds and the conclusion fails
+data/argue/modal/d-k.logic:4: argue/countermodel: C: W = {w0}; R = ∅; w0: p = F
+data/argue/modal/d-k.logic: argue/valid 0
+data/argue/modal/dist-k.logic:6: argue/begs: C: follows from P1 and P2 alone, which the text never states: the text's own premises do no work
+data/argue/modal/dist-k.logic: argue/valid 1
+data/argue/modal/t-kt.logic:4: argue/begs: C: follows from P1 alone, which the text never states: the text's own premises do no work
+data/argue/modal/t-kt.logic: argue/valid 1
+data/argue/modal/d-kt.logic:4: argue/begs: C: follows from P1 alone, which the text never states: the text's own premises do no work
+data/argue/modal/d-kt.logic: argue/valid 1
+data/argue/modal/dist-kt.logic:6: argue/begs: C: follows from P1 and P2 alone, which the text never states: the text's own premises do no work
+data/argue/modal/dist-kt.logic: argue/valid 1
+data/argue/modal/t-kd.logic:4: argue/invalid: C: does not follow: when "it ought to be that p holds" is true, "p holds" is false, every premise holds and the conclusion fails
+data/argue/modal/t-kd.logic:4: argue/countermodel: C: W = {w0, w1}; R = {(w0, w1), (w1, w1)}; w0: p = F; w1: p = T
+data/argue/modal/t-kd.logic: argue/valid 0
+data/argue/modal/d-kd.logic:4: argue/begs: C: follows from P1 alone, which the text never states: the text's own premises do no work
+data/argue/modal/d-kd.logic: argue/valid 1
+data/argue/modal/dist-kd.logic:6: argue/begs: C: follows from P1 and P2 alone, which the text never states: the text's own premises do no work
+data/argue/modal/dist-kd.logic: argue/valid 1
+% data/argue/modal/t-kt.logic, for a first-order prover
+% logic kt, by the standard translation: each atom holds at a world, w0 the actual one
+fof(reflexive, axiom, (! [X] : r(X,X))).
+% p: p holds
+fof(p1, axiom, (! [W1] : (r(w0,W1) => p(W1)))).
+fof(c, conjecture, p(w0)).

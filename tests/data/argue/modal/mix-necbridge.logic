@@ -1,0 +1,7 @@
+logic	s5kd
+atom	p	the treaty is kept
+atom	a	the state is attacked
+atom	b	the state defends itself
+P1	S1	[](a -> b)
+P2	S2	ought a
+C	S3	ought b

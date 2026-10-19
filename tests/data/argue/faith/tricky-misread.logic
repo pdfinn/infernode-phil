@@ -1,0 +1,33 @@
+atom	pass	the build passes
+atom	tests	the tests pass
+atom	fails	the build fails
+atom	ships	the release ships
+atom	patched(x)	x is patched
+atom	trusted(x)	x is trusted
+atom	sounds	the alarm sounds
+atom	opens	the door opens
+atom	up	the service is up
+atom	vetted(x)	x is vetted
+atom	safe(x)	x is safe
+atom	monitored(x)	x is monitored
+atom	warm	the cache is warm
+atom	slow	the request is slow
+atom	valid	the token is valid
+atom	refused	the request is refused
+atom	friday	the deploy runs on Fridays
+P1	S1	tests -> pass
+P2	S2	!fails -> ships
+P3	S3	all s: !patched(s)
+P4	S4	all s: patched(s) -> !trusted(s)
+P5	S5	sounds -> opens
+P6	S6	!opens
+P7	S7	up
+P8	S8	trusted(bob) -> vetted(bob)
+P9	S9	all s: safe(s) -> patched(s)
+P10	S10	all s: monitored(s)
+P11	S11	all e: trusted(e) -> vetted(e)
+P12	S12	friday
+P14	S14	patched(old)
+P15	S15	warm | slow
+P16	S16	!(valid <-> refused)
+C	S13	ships

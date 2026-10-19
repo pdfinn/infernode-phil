@@ -1,0 +1,9 @@
+# the syllogism and its fallacy, as a model might write them
+atom	audited(x)	x was audited
+atom	safe(x)	x is safe
+atom	android	the client is an Android app
+atom	ordered	the build was ordered
+P1	S1	∀x. audited(x) → safe(x)
+P2	S2	audited(web1) ∧ ¬ordered
+P3	S3	android implies (ordered or not ordered)
+C	S4	safe(web1) and not ordered

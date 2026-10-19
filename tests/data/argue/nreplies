@@ -1,0 +1,13 @@
+# S1 is a conditional; S2 affirms its consequent
+atom	patched	the server is patched
+atom	secure	the server is secure
+P1	S1	patched -> secure
+P2	S2	secure
+C	S3	patched
+=====
+# S1 read the other way round
+atom	patched	the server is patched
+atom	secure	the server is secure
+P1	S1	secure -> patched
+P2	S2	secure
+C	S3	patched

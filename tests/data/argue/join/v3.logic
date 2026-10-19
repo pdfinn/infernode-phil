@@ -1,0 +1,4 @@
+atom	w3	premise 3
+atom	c3	conclusion 3
+P1	S7	w3
+C	S8	c3	from P1

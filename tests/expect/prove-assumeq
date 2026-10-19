@@ -1,0 +1,16 @@
+data/argue/assume/rain.logic: argue/readings: what the text leaves unstated is read 2 ways: data/argue/assume/rain.logic and data/argue/assume/rain.logic.2 have "rain → indoors"; data/argue/assume/rain.logic.3 has nothing from it; they differ when only "it will rain all afternoon" is true, which the second allows
+data/argue/assume/rain.logic: argue/readings: U1: data/argue/assume/rain.logic and data/argue/assume/rain.logic.2 take for granted "if it will rain all afternoon, then the match should be moved indoors"; data/argue/assume/rain.logic.3 does not
+data/argue/assume/rain.logic: argue/verdicts: valid as data/argue/assume/rain.logic, data/argue/assume/rain.logic.2 read it, not as the others do: which reading is right decides the verdict
+data/argue/assume/rain.logic: argue/readings-agree 2
+data/argue/assume/rain.logic: argue/readings-differ 1
+data/argue/assume/rain.logic: argue/verdicts-agree 0
+data/argue/assume/rain.logic: argue/support 3
+data/argue/assume/rain.logic: argue/mismatches 0
+data/argue/assume/rain.logic.2: argue/support 3
+data/argue/assume/rain.logic.2: argue/mismatches 0
+data/argue/assume/rain.logic.3: argue/support 2
+data/argue/assume/rain.logic.3: argue/mismatches 0
+# question U1: Does the text's argument take this for granted, whether or not it says so: "if it will rain all afternoon, then the match should be moved indoors"? Answer yes if the author would accept it as part of the argument.
+# if yes: data/argue/assume/rain.logic data/argue/assume/rain.logic.2
+# if no: data/argue/assume/rain.logic.3
+# best reading: data/argue/assume/rain.logic

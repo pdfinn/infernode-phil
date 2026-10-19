@@ -1,0 +1,6 @@
+data/argue/notation.logic:8: argue/empty: P3 (S3): P3 is true whatever the case: it says nothing
+data/argue/notation.logic:8: argue/unused: P3 (S3): P3 is not needed: the conclusion follows from P1 and P2 without it
+data/argue/notation.logic: argue/valid 1
+data/argue/notation2.logic:5: argue/invalid: C (S3): does not follow: when "another is secure" is true, "web1 is patched" and "another is patched" are false, and nothing else is true, every premise holds and the conclusion fails
+data/argue/notation2.logic:5: argue/countermodel: C (S3): D = {another, web1}; patched = ∅, secure = {web1}
+data/argue/notation2.logic: argue/valid 0

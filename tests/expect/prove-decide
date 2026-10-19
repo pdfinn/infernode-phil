@@ -1,0 +1,11 @@
+data/argue/undecided.logic:9: argue/proved: C (S3): valid whatever the individuals, not only in the cases tried: the premises, applied to the individuals named and one they say exist, leave no case in which the conclusion fails
+data/argue/undecided.logic: argue/valid 1
+data/argue/shift.logic:4: argue/invalid: C (S2): does not follow: when "another admires another" and "another2 admires another2" are true, "another admires another2" and "another2 admires another" are false, every premise holds and the conclusion fails
+data/argue/shift.logic:4: argue/countermodel: C (S2): D = {another, another2}; admires = {(another, another), (another2, another2)}
+data/argue/shift.logic: argue/valid 0
+data/argue/monadic.logic: argue/valid 1
+data/argue/infinite.logic:7: argue/undecided: C (S3): no case with the individuals named and 3 others refutes it, and no proof turned up: its logic (some within all, over relations) cannot be decided in general, so it is left open
+data/argue/infinite.logic: argue/valid -1
+data/argue/endless.logic:9: argue/unlinked: C (S4): the conclusion speaks of "x shipped", which no premise mentions: nothing links it to them
+data/argue/endless.logic:9: argue/undecided: C (S4): no case with the individuals named and 3 others makes every premise true, but whether a larger one does cannot be decided by trying cases
+data/argue/endless.logic: argue/valid -1

@@ -1,0 +1,6 @@
+logic	k
+atom	p	p holds
+atom	q	q holds
+P1	-	[](p -> q)
+P2	-	[]p
+C	-	[]q

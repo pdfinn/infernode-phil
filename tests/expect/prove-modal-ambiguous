@@ -1,0 +1,33 @@
+data/argue/modal/amb.md:1: argue/readings: S1 is read 3 ways: data/argue/modal/amb.logic has "abused"; data/argue/modal/amb.logic.2 has "◇abused"; they differ when only "possibly, emergency powers are abused" is true, which the second allows; data/argue/modal/amb.logic.3 has "P abused"
+data/argue/modal/amb.md:1: argue/modal-ambiguous: S1 is read data/argue/modal/amb.logic with no modality; data/argue/modal/amb.logic.2 as what is necessary or possible; data/argue/modal/amb.logic.3 as what ought to be or is permitted: its "may" does not say which it means
+data/argue/modal/amb.logic: argue/readings: what the text leaves unstated is read 3 ways: data/argue/modal/amb.logic has "abused → limited"; data/argue/modal/amb.logic.2 has "□(◇abused → limited)"; they differ when only "emergency powers are abused" and "emergency powers are limited" are true, which the first allows; data/argue/modal/amb.logic.3 has "P abused → O limited"
+data/argue/modal/amb.md:1: argue/readings: the conclusion is read 3 ways: data/argue/modal/amb.logic has "limited"; data/argue/modal/amb.logic.2 has "□limited"; they differ when only "emergency powers are limited" is true, which the first allows; data/argue/modal/amb.logic.3 has "O limited"
+data/argue/modal/amb.md:1: argue/modal-ambiguous: the conclusion is read data/argue/modal/amb.logic with no modality; data/argue/modal/amb.logic.2 as what is necessary or possible; data/argue/modal/amb.logic.3 as what ought to be or is permitted: its "must" does not say which it means
+data/argue/modal/amb.logic: argue/readings: U1: data/argue/modal/amb.logic and data/argue/modal/amb.logic.2 take for granted "if emergency powers are abused, then emergency powers are limited"; data/argue/modal/amb.logic.3 does not
+data/argue/modal/amb.logic: argue/readings: U2: data/argue/modal/amb.logic.2 takes for granted "necessarily, (if possibly, emergency powers are abused, then emergency powers are limited)"; data/argue/modal/amb.logic and data/argue/modal/amb.logic.3 do not
+data/argue/modal/amb.logic: argue/readings: U3: data/argue/modal/amb.logic.2 and data/argue/modal/amb.logic.3 take for granted "if it is permitted that emergency powers are abused, then it ought to be that emergency powers are limited"; data/argue/modal/amb.logic does not
+data/argue/modal/amb.logic: argue/readings-agree 0
+data/argue/modal/amb.logic: argue/readings-differ 3
+data/argue/modal/amb.logic: argue/verdicts-agree 1
+data/argue/modal/amb.logic: argue/support 3
+data/argue/modal/amb.logic: argue/mismatches 0
+data/argue/modal/amb.logic.2: argue/support 0
+data/argue/modal/amb.logic.2: argue/mismatches 0
+data/argue/modal/amb.logic.3: argue/support 0
+data/argue/modal/amb.logic.3: argue/mismatches 0
+# question S1: Suppose "it is permitted that emergency powers are abused" and "possibly, emergency powers are abused" are true and "emergency powers are abused" is false. Is S1, "Emergency powers may be abused.", true then?
+# if yes: data/argue/modal/amb.logic.2 data/argue/modal/amb.logic.3
+# if no: data/argue/modal/amb.logic
+# question C: Suppose "emergency powers are limited" and "it ought to be that emergency powers are limited" are true and "necessarily, emergency powers are limited" is false. Is the conclusion, "So they must be limited.", true then?
+# if yes: data/argue/modal/amb.logic data/argue/modal/amb.logic.3
+# if no: data/argue/modal/amb.logic.2
+# question U1: Does the text's argument take this for granted, whether or not it says so: "if emergency powers are abused, then emergency powers are limited"? Answer yes if the author would accept it as part of the argument.
+# if yes: data/argue/modal/amb.logic data/argue/modal/amb.logic.2
+# if no: data/argue/modal/amb.logic.3
+# question U2: Does the text's argument take this for granted, whether or not it says so: "necessarily, (if possibly, emergency powers are abused, then emergency powers are limited)"? Answer yes if the author would accept it as part of the argument.
+# if yes: data/argue/modal/amb.logic.2
+# if no: data/argue/modal/amb.logic data/argue/modal/amb.logic.3
+# question U3: Does the text's argument take this for granted, whether or not it says so: "if it is permitted that emergency powers are abused, then it ought to be that emergency powers are limited"? Answer yes if the author would accept it as part of the argument.
+# if yes: data/argue/modal/amb.logic.2 data/argue/modal/amb.logic.3
+# if no: data/argue/modal/amb.logic
+# best reading: data/argue/modal/amb.logic

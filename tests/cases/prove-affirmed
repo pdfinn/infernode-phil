@@ -1,0 +1,1 @@
+wwb/prove -c -a data/argue/affirm/answers -d data/argue/affirm/text.md data/argue/affirm/r.logic data/argue/affirm/r.logic.2 data/argue/affirm/r.logic.3

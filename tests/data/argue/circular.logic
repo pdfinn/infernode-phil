@@ -1,0 +1,5 @@
+atom	reliable	the system is reliable
+atom	trusted	users trust the system
+P1	S1	reliable <-> trusted
+P2	S2	reliable
+C	S3	reliable

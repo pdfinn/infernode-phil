@@ -1,0 +1,5 @@
+logic	s5
+atom	g	a maximally great being exists
+P1	S1	<>[]g
+C1	S2	[]g	from P1
+C	S3	g	from C1

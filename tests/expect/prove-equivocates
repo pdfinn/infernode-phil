@@ -1,0 +1,4 @@
+data/argue/modal/equiv.md:1: argue/equivocates: C (S3): "must" is read as what ought to be or is permitted here and as what is necessary or possible at S1 (P1): one word in two senses, so the argument may move from one to the other; say which each means
+data/argue/modal/equiv.md:1: argue/invalid: C (S3): does not follow: when "the treaty is signed" and "necessarily, (if the treaty is signed, then we go to war)" are true, "it ought to be that we go to war" is false, every premise holds and the conclusion fails
+data/argue/modal/equiv.md:1: argue/countermodel: C (S3): W = {w0, w3}; □ over W, O over R: R = {(w0, w3), (w3, w3)}; w0: signed = T, war = T; w3: signed = F, war = F
+data/argue/modal/equiv.logic: argue/valid 0

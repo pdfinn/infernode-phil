@@ -1,0 +1,8 @@
+# modus ponens, with a premise it does not need
+atom	rain	it rains
+atom	wet	the street is wet
+atom	cold	it is cold
+P1	S1	rain -> wet
+P2	S2	rain
+P3	S3	cold
+C	S4	wet

@@ -1,0 +1,5 @@
+# web1 and web2 passed the audit; so every server passes it
+domain	web1 web2
+atom	passed(x)	x passed the audit
+P1	S1	passed(web1) & passed(web2)
+C	S2	all x: passed(x)

@@ -1,0 +1,8 @@
+atom	a	the first claim
+atom	b	the second claim
+atom	c	the third claim
+P1	S1	a
+C1	S2	b	from P1
+P2	S3	c
+P3	S4	!c
+C	S5	a & b	from P1 C1

@@ -1,0 +1,5 @@
+atom	rain	it will rain all afternoon
+atom	indoors	the match should be moved indoors
+P1	S1	rain
+A1	-	rain -> indoors
+C	S2	indoors

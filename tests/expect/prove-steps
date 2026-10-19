@@ -1,0 +1,23 @@
+data/argue/steps/kalam.logic: argue/valid 1
+data/argue/steps/kalam.md:3: argue/invalid: C1 (S3): does not follow: when nothing is true, every premise holds and the conclusion fails
+data/argue/steps/kalam.md:3: argue/countermodel: C1 (S3): D = {universe}; began = ∅, caused = ∅
+data/argue/steps/kalam.md:3: argue/missing: C1 (S3): it would follow given "began(universe)" (universe began to exist), or "¬began(universe) → caused(universe)"
+data/argue/steps/kalam.md:3: argue/missing: C1 (S3): C1 would follow if it were drawn from P2 too: add it to its from
+data/argue/steps/kalam.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "x began to exist": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/steps/kalam-gap.logic: argue/valid 0
+data/argue/steps/kalam.md:3: argue/unfaithful: C2 (S3): the sentence has no word of "x began to exist": is it the sentence C2 came from?
+data/argue/steps/kalam.md:3: argue/circular: C2 (S3): the conclusion only restates P2: it is assumed, not argued
+data/argue/steps/kalam.md:3: argue/unused-step: C2 (S3): nothing rests on C2, and it is not the conclusion: a step that leads nowhere
+data/argue/steps/kalam-unused.logic: argue/valid 1
+data/argue/steps/kalam-nofrom.logic: argue/valid 1
+data/argue/steps/circle.md:2: argue/cycle: C1 (S2): C1 and C2 rest on each other: the argument goes round in a circle
+data/argue/steps/circle.logic: argue/valid 0
+data/argue/steps/bad.logic:2: argue/syntax: P1: only a conclusion (C, C1, C2, ...) is drawn from others
+data/argue/steps/bad.logic:3: argue/syntax: C1 is drawn from P9, which is not in the file
+data/argue/steps/kalam.md:3: argue/follows: C1 (S3): C1 follows from P1 and P2: there is no case in which they all hold and C1 fails
+data/argue/steps/kalam.md:1: argue/needed: P1 (S1): P1 is needed: without it C1 could fail: when "universe began to exist" is true, "universe has a cause" is false, the other premises hold and C1 fails
+data/argue/steps/kalam.md:2: argue/needed: P2 (S2): P2 is needed: without it C1 could fail: when nothing is true, the other premises hold and C1 fails
+data/argue/steps/kalam.md:5: argue/follows: C (S5): C follows from C1 and P3: there is no case in which they all hold and C fails
+data/argue/steps/kalam.md:3: argue/needed: C1 (S3): C1 is needed: without it C could fail: when nothing is true, the other premises hold and C fails
+data/argue/steps/kalam.md:4: argue/needed: P3 (S4): P3 is needed: without it C could fail: when "universe has a cause" is true, "something created the universe" is false, the other premises hold and C fails
+data/argue/steps/kalam.logic: argue/valid 1

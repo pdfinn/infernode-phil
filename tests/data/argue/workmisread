@@ -1,0 +1,21 @@
+atom	whale	Moby is a whale
+atom	mammal	Moby is a mammal
+P1	S2	whale -> mammal
+P2	S3	whale
+C	S4	mammal
+=====
+atom	breathes	Moby breathes air
+P1	S6	mammal -> breathes
+P2	S4	mammal
+C	S7	breathes	from P1 P2
+=====
+# no argument
+=====
+# no argument
+=====
+A1	-	breathes -> whale
+C	S12	whale	from C2 A1
+=====
+atom	surfaces	Moby must come up for air
+A1	-	breathes -> surfaces
+C	S12	surfaces	from C2 A1

@@ -1,0 +1,38 @@
+#!/dis/sh.dis
+# run.inferno wwbdir [-u] - the workbench's tests, inside InferNode.
+# Each file in cases is a command, run from this directory; what it
+# writes must match the file of the same name in expect.  With -u,
+# write expect afresh instead (then read the diff before committing).
+# tests/run.sh on the host starts an emulator to run this.
+load std
+
+wwb=$1
+update=${tl $*}
+run $wwb/wwbns $wwb
+cd $wwb/tests
+
+# diff reads files, not pipes, so each case's output goes to out
+mkdir -p out
+passed=()
+failed=()
+for c in cases/* {
+	n=`{basename $c}
+	sh $c > out/$n
+	if {~ $update -u} {
+		cp out/$n expect/$n
+		passed=($passed $n)
+	} {! ftest -f expect/$n} {
+		echo 'FAIL' $n: no expect/$n
+		failed=($failed $n)
+	} {diff expect/$n out/$n > /dev/null} {
+		passed=($passed $n)
+	} {
+		echo 'FAIL' $n
+		diff expect/$n out/$n
+		failed=($failed $n)
+	}
+}
+echo $#passed passed, $#failed failed
+if {! ~ $#failed 0} {
+	raise 'fail:'^$#failed^' failed'
+}

@@ -1,0 +1,4 @@
+# everyone admires someone; so someone is admired by everyone
+atom	admires(x,y)	x admires y
+P1	S1	all x: some y: admires(x,y)
+C	S2	some y: all x: admires(x,y)

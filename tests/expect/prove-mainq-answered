@@ -1,0 +1,18 @@
+data/argue/mainc/tax.logic: argue/readings: what the text leaves unstated is read 2 ways: data/argue/mainc/tax.logic and data/argue/mainc/tax.logic.2 have "cut → drop"; data/argue/mainc/tax.logic.3 has nothing from it; they differ when only "the tax will cut demand" is true, which the second allows
+data/argue/mainc/tax.md:1: argue/readings: the conclusion is read 2 ways: data/argue/mainc/tax.logic and data/argue/mainc/tax.logic.2 have "drop"; data/argue/mainc/tax.logic.3 has "cut"; they differ when only "the scheme should be dropped" is true, which the first allows
+data/argue/mainc/tax.logic: argue/readings: the main conclusion is read at 2 sentences: data/argue/mainc/tax.logic and data/argue/mainc/tax.logic.2 put it at S4, "And so the scheme should be dropped."; data/argue/mainc/tax.logic.3 at S3, "So the tax will cut demand."
+data/argue/mainc/tax.logic: argue/answered: M: answered no, which keeps data/argue/mainc/tax.logic.3, to: Is the text's main conclusion S4, "And so the scheme should be dropped.", rather than S3, "So the tax will cut demand."?
+data/argue/mainc/tax.logic: argue/readings: U1: data/argue/mainc/tax.logic and data/argue/mainc/tax.logic.2 take for granted "if the tax will cut demand, then the scheme should be dropped"; data/argue/mainc/tax.logic.3 does not
+data/argue/mainc/tax.logic: argue/readings-agree 2
+data/argue/mainc/tax.logic: argue/readings-differ 2
+data/argue/mainc/tax.logic: argue/verdicts-agree 1
+data/argue/mainc/tax.logic: argue/support 4
+data/argue/mainc/tax.logic: argue/mismatches 0
+data/argue/mainc/tax.logic.2: argue/support 4
+data/argue/mainc/tax.logic.2: argue/mismatches 0
+data/argue/mainc/tax.logic.3: argue/support 2
+data/argue/mainc/tax.logic.3: argue/mismatches 0
+# question U1: Does the text's argument take this for granted, whether or not it says so: "if the tax will cut demand, then the scheme should be dropped"? Answer yes if the author would accept it as part of the argument.
+# if yes: data/argue/mainc/tax.logic data/argue/mainc/tax.logic.2
+# if no: data/argue/mainc/tax.logic.3
+# best reading: data/argue/mainc/tax.logic.3

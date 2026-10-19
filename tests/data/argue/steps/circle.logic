@@ -1,0 +1,6 @@
+atom	god	God exists
+atom	bible	the Bible is true
+P1	S1	bible -> god
+C1	S2	bible	from C2
+C2	S3	god	from C1 P1
+C	S3	god	from C2

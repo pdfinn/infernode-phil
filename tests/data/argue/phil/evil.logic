@@ -1,0 +1,10 @@
+atom	omni	God is omnipotent
+atom	good	God is wholly good
+atom	can	God can prevent evil
+atom	wants	God wants to prevent evil
+atom	evil	there is evil
+P1	S1	omni -> can
+P2	S2	good -> wants
+P3	S3	(can & wants) -> !evil
+P4	S4	evil
+C	S5	!(omni & good)

@@ -1,0 +1,4 @@
+data/argue/sample.md:#62,#87: argue/invalid: C (S3): does not follow: when "the server is secure" is true, "the server is patched" is false, every premise holds and the conclusion fails; this is affirming the consequent (P1 and P2)
+data/argue/sample.md:#62,#87: argue/countermodel: C (S3): patched = F, secure = T
+data/argue/sample.md:#62,#87: argue/missing: C (S3): it would follow given "secure → patched"
+data/argue/consequent.logic: argue/valid 0

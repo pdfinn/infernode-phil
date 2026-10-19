@@ -1,0 +1,9 @@
+atom	tax	the tax will raise prices
+atom	cut	the tax will cut demand
+atom	drop	the scheme should be dropped
+atom	high	higher prices will cut demand
+P1	S1	tax
+P2	S2	tax -> cut
+C1	S3	cut	from P1 P2
+A1	-	cut -> drop
+C	S4	drop	from C1 A1

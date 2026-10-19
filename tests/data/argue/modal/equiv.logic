@@ -1,0 +1,6 @@
+logic	s5kd
+atom	signed	the treaty is signed
+atom	war	we go to war
+P1	S1	[](signed -> war)
+P2	S2	signed
+C	S3	ought war

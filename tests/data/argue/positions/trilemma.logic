@@ -1,0 +1,11 @@
+atom	power	God is all-powerful
+atom	good	God is wholly good
+atom	evil	evil exists
+atom	needed	evil is needed for a greater good
+P1	S1	power
+P2	S2	good
+P3	S3	evil
+P4	S4	good & power & !needed -> !evil
+A1	S5	needed
+A2	-	!needed
+rivals	A1 A2

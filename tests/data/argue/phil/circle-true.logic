@@ -1,0 +1,7 @@
+atom	true	the scriptures are true
+atom	word	the scriptures are the word of God
+atom	say	the scriptures say they are the word of God
+P1	S1	word -> true
+P2	S2	(say & true) -> word
+P3	S2	say
+C	S3	true

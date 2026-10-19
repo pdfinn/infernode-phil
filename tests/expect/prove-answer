@@ -1,0 +1,14 @@
+data/argue/sample.md:1: argue/readings: S1 is read 2 ways: data/argue/k/r1.logic and data/argue/k/r3.logic have "patched → secure"; data/argue/k/r2.logic has "secure → patched"; they differ when only "the server is secure" is true, which the first allows
+data/argue/sample.md:1: argue/answered: S1: answered no, which keeps data/argue/k/r2.logic, to: Suppose "the server is secure" is true and "the server is patched" is false. Is S1, "If the server is patched, it is secure.", true then?
+data/argue/sample.md:1: argue/converse: data/argue/k/r2.logic P1 (S1): the sentence makes the words after "if" the condition, but P1 has them follow from it: it reads "if the server is secure, then the server is patched"
+data/argue/k/r1.logic: argue/verdicts: valid as data/argue/k/r2.logic reads it, not as the others do: which reading is right decides the verdict
+data/argue/k/r1.logic: argue/readings-agree 2
+data/argue/k/r1.logic: argue/readings-differ 1
+data/argue/k/r1.logic: argue/verdicts-agree 0
+data/argue/k/r1.logic: argue/support 3
+data/argue/k/r1.logic: argue/mismatches 0
+data/argue/k/r2.logic: argue/support 2
+data/argue/k/r2.logic: argue/mismatches 1
+data/argue/k/r3.logic: argue/support 3
+data/argue/k/r3.logic: argue/mismatches 0
+# best reading: data/argue/k/r2.logic

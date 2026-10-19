@@ -1,0 +1,6 @@
+atom	moving(x)	x is in motion
+atom	moves(x,y)	x moves y
+P1	S1	some x: moving(x)
+P2	S2	all x: moving(x) -> (some y: moves(y,x))
+A1	-	all x: !moves(x,x)
+C	S3	some y: (some x: moves(y,x)) & !(some z: moves(z,y))

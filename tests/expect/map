@@ -1,0 +1,78 @@
+C (S5): Therefore something created the universe.  data/argue/steps/kalam.md:5
+├─ C1 (S3): So the universe has a cause.  [invalid, missing]  data/argue/steps/kalam.md:3
+│  └─ P1 (S1): Whatever begins to exist has a cause.  [unlinked]  data/argue/steps/kalam.md:1
+└─ P3 (S4): If the universe has a cause, something created it.  data/argue/steps/kalam.md:4
+C (S5): something created the universe
+├─ C1 (S3): universe has a cause
+│  ├─ P1 (S1): for every x, if x began to exist, then x has a cause
+│  └─ P2 (S2): universe began to exist
+└─ P3 (S4): if universe has a cause, then something created the universe
+
+not on the way to C:
+C2 (S3): universe began to exist  [circular, unused-step]
+└─ P2 (S2): universe began to exist
+C (S3): So God exists.  data/argue/steps/circle.md:3
+└─ C2 (S3): So God exists.  data/argue/steps/circle.md:3
+   ├─ C1 (S2): The Bible is true, because God exists.  data/argue/steps/circle.md:2
+   │  └─ C2 (S3): So God exists.  data/argue/steps/circle.md:3  (round in a circle)
+   └─ P1 (S1): If the Bible is true, God exists.  data/argue/steps/circle.md:1
+C (S2): the code is safe to deploy  [assumed]
+├─ P1 (S1): the code was audited
+└─ A1 (unstated): if the code was audited, then the code is safe to deploy
+// data/argue/steps/kalam.logic, as wwb/map draws it
+
+<Step C1>
+
+(1) [P1]: Whatever begins to exist has a cause.
+(2) [P2]: The universe began to exist.
+----
+(3) [C1]: So the universe has a cause.
+
+<Argument>
+
+(1) [C1]: So the universe has a cause.
+(2) [P3]: If the universe has a cause, something created it.
+----
+(3) [C]: Therefore something created the universe.
+C (S4): wet
+├─ P1 (S1): rain -> wet
+├─ P2 (S2): rain
+└─ P3 (S3): cold
+C (S5): Therefore something created the universe.  [defeated]  data/argue/steps/kalam-debate.md:5
+├─ C1 (S3): So the universe has a cause.  [defeated]  data/argue/steps/kalam-debate.md:3
+│  ├─ P1 (S1): Whatever begins to exist has a cause.  [defeated]  data/argue/steps/kalam-debate.md:1
+│  │  └─ against: O1 (S6): But some particles begin to exist without a cause.  data/argue/steps/kalam-debate.md:6
+│  │     └─ against: R1 (S7): Those particles do not begin to exist; they borrow energy from the vacuum.  [unfaithful, restates, defeated]  data/argue/steps/kalam-debate.md:7
+│  │        └─ against: O2 (S6): But some particles begin to exist without a cause.  data/argue/steps/kalam-debate.md:6
+│  └─ P2 (S2): The universe began to exist.  data/argue/steps/kalam-debate.md:2
+└─ P3 (S4): If the universe has a cause, something created it.  data/argue/steps/kalam-debate.md:4
+C (S5): Therefore something created the universe.  data/argue/steps/kalam-debate.md:5
+├─ C1 (S3): So the universe has a cause.  data/argue/steps/kalam-debate.md:3
+│  ├─ P1 (S1): Whatever begins to exist has a cause.  data/argue/steps/kalam-debate.md:1
+│  │  └─ against: O1 (S6): But some particles begin to exist without a cause.  data/argue/steps/kalam-debate.md:6
+│  │     └─ against: R1 (S7): Those particles do not begin to exist; they borrow energy from the vacuum.  data/argue/steps/kalam-debate.md:7
+│  │        └─ against: O1 (S6): But some particles begin to exist without a cause.  data/argue/steps/kalam-debate.md:6  (round in a circle)
+│  └─ P2 (S2): The universe began to exist.  data/argue/steps/kalam-debate.md:2
+└─ P3 (S4): If the universe has a cause, something created it.  data/argue/steps/kalam-debate.md:4
+// data/argue/steps/rejoinder.logic, as wwb/map draws it
+
+<Step C1>
+
+(1) [P1]: Whatever begins to exist has a cause.
+(2) [P2]: The universe began to exist.
+----
+(3) [C1]: So the universe has a cause.
+
+<Argument>
+
+(1) [C1]: So the universe has a cause.
+(2) [P3]: If the universe has a cause, something created it.
+----
+(3) [C]: Therefore something created the universe.
+
+// objections and replies
+
+[P1]
+    <- [O1]: But some particles begin to exist without a cause.
+        <- [R1]: Those particles do not begin to exist; they borrow energy from the vacuum.
+            <- [O2]: But some particles begin to exist without a cause.

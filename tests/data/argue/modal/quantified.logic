@@ -1,0 +1,4 @@
+logic	s5
+atom	f(x)	x is f
+P1	-	all x: []f(x)
+C	-	[]f(a)

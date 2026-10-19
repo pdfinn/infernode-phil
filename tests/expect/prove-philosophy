@@ -1,0 +1,27 @@
+data/argue/phil/evil.md:1: argue/says: P1 (S1): reads "if God is omnipotent, then God can prevent evil"
+data/argue/phil/evil.md:2: argue/says: P2 (S2): reads "if God is wholly good, then God wants to prevent evil"
+data/argue/phil/evil.md:3: argue/says: P3 (S3): reads "if (God can prevent evil and God wants to prevent evil), then it is not so that there is evil"
+data/argue/phil/evil.md:4: argue/says: P4 (S4): reads "there is evil"
+data/argue/phil/evil.md:5: argue/says: C (S5): reads "it is not so that (God is omnipotent and God is wholly good)"
+data/argue/phil/evil.logic: argue/valid 1
+data/argue/phil/kalam.logic: argue/valid 1
+data/argue/phil/firstway.md:3: argue/invalid: C (S3): does not follow: when "another2 is in motion", "another2 moves another" and "another moves another2" are true, "another moves another" and "another2 moves another2" are false, every premise holds and the conclusion fails
+data/argue/phil/firstway.md:3: argue/countermodel: C (S3): D = {another, another2}; moves = {(another, another2), (another2, another)}, moving = {another}
+data/argue/phil/firstway.logic: argue/valid 0
+data/argue/phil/agents.logic: argue/valid 1
+data/argue/phil/agents.md:1: argue/converse: P1 (S1): "only" makes what follows it necessary, not sufficient, but P1 has it the other way round: it reads "for every x, if x is rational, then x is a moral agent"
+data/argue/phil/agents.md:3: argue/invalid: C (S3): does not follow: when only "dolphin is a moral agent" is true, every premise holds and the conclusion fails; this is denying the antecedent (P1 and P2)
+data/argue/phil/agents.md:3: argue/countermodel: C (S3): D = {dolphin}; moral = {dolphin}, rational = ∅
+data/argue/phil/agents.md:3: argue/missing: C (S3): it would follow given "¬rational(dolphin) → ¬moral(dolphin)"
+data/argue/phil/agents-misread.logic: argue/valid 0
+data/argue/phil/circle.md:3: argue/invalid: C (S3): does not follow: when "the scriptures say they are the word of God" is true, "the scriptures are true" is false, and nothing else is true, every premise holds and the conclusion fails
+data/argue/phil/circle.md:3: argue/countermodel: C (S3): say = T, scripture = F, word = F
+data/argue/phil/circle.md:3: argue/missing: C (S3): it would follow given "word" (the scriptures are the word of God), or "¬word → scripture", or "say → scripture"
+data/argue/phil/circle.logic: argue/valid 0
+data/argue/phil/circle-true.logic:1: argue/syntax: "true" cannot be an atom's name: it is a word of the notation
+% data/argue/phil/kalam.logic, for a first-order prover
+% began: x began to exist
+% caused: x has a cause
+fof(p1, axiom, (! [X] : (began(X) => caused(X)))).
+fof(p2, axiom, began(universe)).
+fof(c, conjecture, caused(universe)).

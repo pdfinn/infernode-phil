@@ -1,0 +1,7 @@
+wwb/prove -e data/argue/faith/converse.logic data/argue/sample.md
+wwb/prove data/argue/faith/misread.logic data/argue/faith/text.md
+wwb/prove data/argue/faith/right.logic data/argue/faith/text.md
+wwb/prove data/argue/faith/tricky.logic data/argue/faith/tricky.md
+wwb/prove data/argue/faith/tricky-misread.logic data/argue/faith/tricky.md
+wwb/prove data/argue/faith/only.logic data/argue/faith/only.md
+wwb/prove data/argue/faith/only-misread.logic data/argue/faith/only.md

@@ -1,0 +1,13 @@
+wwb/prove -e data/argue/steps/kalam-gap.logic data/argue/steps/kalam.md > out/map-f >[2=1]
+wwb/map -f out/map-f data/argue/steps/kalam-gap.logic data/argue/steps/kalam.md
+wwb/prove -e data/argue/steps/kalam-unused.logic > out/map-f >[2=1]
+wwb/map -f out/map-f data/argue/steps/kalam-unused.logic
+wwb/map data/argue/steps/circle.logic data/argue/steps/circle.md
+wwb/prove -e data/argue/assumed.logic > out/map-f >[2=1]
+wwb/map -f out/map-f data/argue/assumed.logic
+wwb/map -a data/argue/steps/kalam.logic data/argue/steps/kalam.md
+wwb/map data/argue/valid.logic >[2=1]
+wwb/prove -e data/argue/steps/rejoinder.logic data/argue/steps/kalam-debate.md > out/map-f >[2=1]
+wwb/map -f out/map-f data/argue/steps/rejoinder.logic data/argue/steps/kalam-debate.md
+wwb/map data/argue/steps/roundabout.logic data/argue/steps/kalam-debate.md
+wwb/map -a data/argue/steps/rejoinder.logic data/argue/steps/kalam-debate.md

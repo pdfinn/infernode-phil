@@ -1,0 +1,4 @@
+logic	s5
+atom	p	the treaty holds
+P1	S1	[]p
+C	S2	[]p

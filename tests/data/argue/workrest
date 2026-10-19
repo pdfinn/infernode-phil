@@ -1,0 +1,7 @@
+# no argument
+=====
+atom	surfaces	Moby must come up for air
+A1	-	breathes -> surfaces
+C	S12	surfaces	from C2 A1
+=====
+# as meant

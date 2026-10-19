@@ -1,0 +1,5 @@
+atom	abused	emergency powers are abused
+atom	limited	emergency powers are limited
+P1	S1	abused
+A1	-	abused -> limited
+C	S2	limited

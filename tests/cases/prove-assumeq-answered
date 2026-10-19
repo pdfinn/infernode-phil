@@ -1,0 +1,1 @@
+wwb/prove -c -a data/argue/assume/answers -d data/argue/assume/rain.md data/argue/assume/rain.logic data/argue/assume/rain.logic.2 data/argue/assume/rain.logic.3

@@ -1,0 +1,6 @@
+logic	kd
+atom	promise	you promised
+atom	pay	you pay
+P1	-	ought (promise -> pay)
+P2	-	ought promise
+C	-	ought pay

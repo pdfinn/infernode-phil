@@ -1,0 +1,9 @@
+# everyone trusts someone; whoever is trusted is vouched for; so someone is
+# vouched for.  Trying cases cannot decide it (some within all, over a
+# relation); a proof does
+atom	trusts(x,y)	x trusts y
+atom	vouched(x)	x is vouched for
+domain	alice
+P1	S1	all x: some y: trusts(x,y)
+P2	S2	all x: all y: trusts(x,y) -> vouched(y)
+C	S3	some y: vouched(y)

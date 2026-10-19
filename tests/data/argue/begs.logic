@@ -1,0 +1,7 @@
+# the text's premise does no work: the assumption carries it
+atom	audited	the code was audited
+atom	safe	the code is safe to deploy
+atom	tested	the code was tested
+P1	S1	audited
+A1	-	tested & (tested -> safe)
+C	S2	safe

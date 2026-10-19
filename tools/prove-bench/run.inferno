@@ -1,0 +1,22 @@
+#!/dis/sh.dis
+# run.inferno wwbdir benchdir [file ...] - wwb/prove over the logic
+# files named, or every one in benchdir, each timed (microseconds, from /dev/time, the command's
+# loading included), and each written as TPTP for the other provers.
+# Run by bench.sh.
+load std
+
+run $1/wwbns $1
+cd $2
+files=${tl ${tl $*}}
+if {~ $#files 0} {
+	files=*.logic
+}
+for f in $files {
+	b=`{basename $f .logic}
+	t0=`{cat /dev/time}
+	wwb/prove $f > $b.ours >[2=1]
+	t1=`{cat /dev/time}
+	echo $b $t0 $t1 >> times
+	wwb/prove -t $f > $b.p >[2] /dev/null
+}
+echo halt > /dev/sysctl

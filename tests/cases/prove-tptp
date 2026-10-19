@@ -1,0 +1,3 @@
+wwb/prove -t data/argue/syllogism.logic
+wwb/prove -t data/argue/undecided.logic
+wwb/prove -t data/argue/consequent.logic

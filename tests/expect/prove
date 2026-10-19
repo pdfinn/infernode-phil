@@ -1,0 +1,25 @@
+data/argue/valid.logic:7: argue/unused: P3 (S3): P3 is not needed: the conclusion follows from P1 and P2 without it
+data/argue/valid.logic: argue/valid 1
+data/argue/consequent.logic:5: argue/invalid: C (S3): does not follow: when "the server is secure" is true, "the server is patched" is false, every premise holds and the conclusion fails; this is affirming the consequent (P1 and P2)
+data/argue/consequent.logic:5: argue/countermodel: C (S3): patched = F, secure = T
+data/argue/consequent.logic:5: argue/missing: C (S3): it would follow given "secure → patched"
+data/argue/consequent.logic: argue/valid 0
+data/argue/antecedent.logic:5: argue/invalid: C (S3): does not follow: when only "the server is secure" is true, every premise holds and the conclusion fails; this is denying the antecedent (P1 and P2)
+data/argue/antecedent.logic:5: argue/countermodel: C (S3): patched = F, secure = T
+data/argue/antecedent.logic:5: argue/missing: C (S3): it would follow given "¬patched → ¬secure"
+data/argue/antecedent.logic: argue/valid 0
+data/argue/gap.logic:5: argue/unlinked: C (S2): the conclusion speaks of "the code is safe to deploy", which no premise mentions: nothing links it to them
+data/argue/gap.logic:5: argue/invalid: C (S2): does not follow: when "the code was audited" and "the audit found no bugs" are true, "the code is safe to deploy" is false, every premise holds and the conclusion fails
+data/argue/gap.logic:5: argue/countermodel: C (S2): audited = T, nobugs = T, safe = F
+data/argue/gap.logic:5: argue/missing: C (S2): it would follow given "audited → safe", or "nobugs → safe"
+data/argue/gap.logic: argue/valid 0
+data/argue/gap.logic:4: argue/unlinked: P1 (S1): P1 is the only statement about "the code was audited" and "the audit found no bugs": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/assumed.logic:5: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it
+data/argue/assumed.logic: argue/valid 1
+data/argue/circular.logic:5: argue/circular: C (S3): the conclusion only restates P2: it is assumed, not argued
+data/argue/circular.logic: argue/valid 0
+data/argue/inconsistent.logic:3: argue/inconsistent: P1 (S1): P1, P2 and P3 contradict each other, so anything at all would follow from them
+data/argue/inconsistent.logic: argue/valid 0
+data/argue/bad.logic:2: argue/syntax: P1: the formula ends too soon
+data/argue/bad.logic:3: argue/syntax: "S9x" is not a sentence: S and its number, or -
+data/argue/bad.logic: argue/undefined: atom b is used but not given a meaning (atom	b	...)

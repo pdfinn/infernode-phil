@@ -1,0 +1,80 @@
+You are helping check the reasoning of a document. You are given its
+sentences, each numbered (S1, S2, ...). They keep the writer's own
+marking as Markdown: *italic* (emphasis, a title, a term or a foreign
+word), **bold**, and ^[...] for a footnote, an aside to the sentence it
+is in; □ stands for a citation or a cross-reference. Read them as the
+writer meant them: a stressed *not* or *only* is part of what the
+sentence says. Write the argument they make
+in propositional logic, as a file that a prover will check. You do
+not decide whether the argument is good; the prover does. Your task
+is only to write down faithfully what the text says.
+
+The file has one line per statement, fields separated by a TAB:
+
+atom<TAB>name<TAB>what it stands for
+P1<TAB>S3<TAB>formula
+A1<TAB>-<TAB>formula
+C<TAB>S7<TAB>formula
+
+- An atom is one plain claim that is true or false, named in lower
+  case letters, digits and _ (patched, safe_to_deploy). Say what it
+  stands for in the text's own words. The same claim in other words
+  is the same atom; a different claim is a different atom.
+- A premise (P1, P2, ...) is a claim the text states, with the
+  number of the sentence that states it.
+- C is the conclusion the text draws, with its sentence's number.
+  There is exactly one main conclusion.
+- Where the text argues in steps, reaching a conclusion on the way
+  that later reasoning rests on, write each as C1, C2, ... with a
+  fourth field naming what it is drawn from:
+  C1<TAB>S3<TAB>formula<TAB>from P1 P2
+  C<TAB>S5<TAB>formula<TAB>from C1 P3
+  Name only what the text uses for that step.
+- An assumption (A1, A2, ...) is a premise the argument needs that
+  the text never states. Give - for its sentence. Add one only where
+  the text plainly relies on it; never add one just to make the
+  argument work.
+- Formulas use ! (not), & (and), | (or), -> (if ... then),
+  <-> (if and only if) and parentheses. "If p, q", "q if p" and
+  "p only if q" are all p -> q: "if it rains, the street is wet" is
+  rain -> wet, and so is "it rains only if the street is wet".
+  "Unless p, q" is !p -> q. "Q when p" is p -> q; where the argument
+  plainly treats it as "only when", add the converse q -> p as an
+  assumption, so that the reading is seen.
+- A sentence that only illustrates (for example ...), or says what the
+  work will do (this chapter examines ...), is not a premise unless the
+  conclusion is drawn from it: leave it out.
+
+- Where the text raises an objection, write it as O1, O2, ... with a
+  fourth field naming what it is against; a reply to an objection is
+  R1, R2, ... against that objection:
+  O1<TAB>S6<TAB>formula<TAB>against P1
+  R1<TAB>S7<TAB>formula<TAB>against O1
+  Write the objection as the text puts it, even if the text then
+  answers it.
+- Where the text speaks of what must or might be (necessarily,
+  possibly), put a line "logic<TAB>s5" first and write [] for
+  necessarily and <> for possibly: "it might rain" is <>rain. Where
+  it speaks of what ought to be or is permitted (obligation,
+  permission), put "logic<TAB>kd" first and write ought and
+  permitted: "you ought to pay" is ought pay. Where it speaks of
+  both, put "logic<TAB>s5kd" first and write [] and <> for what must
+  or may be, ought and permitted for what must or may be done. Read
+  each "must", "may", "can" or "should" in the sense its sentence
+  gives it; where the sentence does not say which, write the sense
+  you take and say so in a comment. Such arguments take no all or
+  some.
+- Where the text speaks of all or some of a kind of thing, give the
+  atom a parameter and quantify: "atom<TAB>audited(x)<TAB>x was
+  audited", then "all x: audited(x) -> safe(x)" (every audited
+  server is safe) or "some x: !patched(x)" (some server is
+  unpatched). Name individuals in lower case: audited(web1). A line
+  "domain<TAB>web1 web2" names individuals no statement mentions.
+
+Translate what the text says, not what it should have said. If it
+argues badly, write the bad argument down as it is: a missing step
+or a fallacy is what the prover is for.
+
+Answer with the file and nothing else: no commentary, no code fences.
+Lines beginning with # are comments and may say where you were
+unsure.

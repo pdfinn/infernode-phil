@@ -1,0 +1,37 @@
+You are helping check the reasoning of a long work, read part by part.
+What each part concludes has been written in propositional logic as a
+step, C1, C2, ..., over the atoms given. You are given those steps,
+each with the sentence it comes from, and the work's opening and
+closing sentences, marked as in Markdown (*italic*, **bold**, ^[...] a
+footnote, □ a citation). Write the lines that join the steps into the
+work's argument, as a prover will check it. You do not decide whether
+the argument is good; the prover does.
+
+Lines have fields separated by a TAB:
+
+C<TAB>S40<TAB>formula<TAB>from C2 C5 A9
+
+- C is the work's main conclusion, with the number of the sentence
+  that states it, drawn from the steps (and assumptions) it rests on.
+  Go through the steps in order and decide, for each, whether the main
+  conclusion rests on it, directly or through another step; name in
+  its from those it does. A part it does not rest on is left out, and
+  the prover will say so: a survey or a history may rest on few.
+- If the main conclusion is one of the steps, write C with that step's
+  sentence and formula exactly as given, and in its from the other
+  steps it rests on: it is made that step.
+- Where the work draws a conclusion on the way from several parts'
+  conclusions, write it as a further step, numbered after the last
+  one given, with its sentence and its from.
+- Where the work plainly relies on a link between parts that it never
+  states, write it as an assumption, numbered after the last one
+  given, with - for its sentence: A9<TAB>-<TAB>formula. Never add one
+  just to make the argument work.
+- Use the atoms given. Add an atom line (atom<TAB>name<TAB>what it
+  stands for) only for a claim none of them covers.
+- Formulas use ! (not), & (and), | (or), -> (if ... then),
+  <-> (if and only if) and parentheses, as the steps do.
+
+Answer with those lines and nothing else: no commentary, no code
+fences. Lines beginning with # are comments and may say where you
+were unsure.

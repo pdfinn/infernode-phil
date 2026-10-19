@@ -1,0 +1,4 @@
+atom	whale	Moby is a whale
+atom	mammal	Moby is a mammal
+P1	S2	whale
+C	S4	¬whale ∨ mammal

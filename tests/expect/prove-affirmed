@@ -1,0 +1,18 @@
+data/argue/affirm/text.md:1: argue/readings: S1 is read 2 ways: data/argue/affirm/r.logic and data/argue/affirm/r.logic.3 have "rain → wet"; data/argue/affirm/r.logic.2 has "wet → rain"; they differ when only "the street is wet" is true, which the first allows
+data/argue/affirm/text.md:1: argue/answered: S1: answered yes, which keeps data/argue/affirm/r.logic and data/argue/affirm/r.logic.3, to: Suppose "the street is wet" is true and "it rains" is false. Is S1, "If it rains, the street is wet.", true then?
+data/argue/affirm/r.logic: argue/readings: what the text leaves unstated is read 2 ways: data/argue/affirm/r.logic and data/argue/affirm/r.logic.3 have nothing from it; data/argue/affirm/r.logic.2 has "wet → cancelled"; they differ when only "the street is wet" is true, which the first allows
+data/argue/affirm/r.logic: argue/readings: U1: data/argue/affirm/r.logic.2 takes for granted "if the street is wet, then the match is cancelled"; data/argue/affirm/r.logic and data/argue/affirm/r.logic.3 do not
+data/argue/affirm/r.logic: argue/answered: U1: answered yes, which keeps data/argue/affirm/r.logic.2, to: Does the text's argument take this for granted, whether or not it says so: "if the street is wet, then the match is cancelled"? Answer yes if the author would accept it as part of the argument.
+data/argue/affirm/text.md:1: argue/converse: data/argue/affirm/r.logic.2 P1 (S1): the sentence makes the words after "if" the condition, but P1 has them follow from it: it reads "if the street is wet, then it rains"
+data/argue/affirm/r.logic: argue/readings-agree 2
+data/argue/affirm/r.logic: argue/readings-differ 2
+data/argue/affirm/r.logic: argue/verdicts-agree 1
+data/argue/affirm/r.logic: argue/answers-split: no reading agrees with all 2 answers (data/argue/affirm/r.logic 1, data/argue/affirm/r.logic.2 1, data/argue/affirm/r.logic.3 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+data/argue/affirm/r.logic: argue/support 4
+data/argue/affirm/r.logic: argue/mismatches 0
+data/argue/affirm/r.logic.2: argue/support 2
+data/argue/affirm/r.logic.2: argue/mismatches 1
+data/argue/affirm/r.logic.3: argue/support 4
+data/argue/affirm/r.logic.3: argue/mismatches 0
+# best reading: data/argue/affirm/r.logic
+# assume S3: wet → cancelled

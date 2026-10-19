@@ -1,0 +1,4 @@
+atom	w1	first premise
+atom	c1	first conclusion
+P1	S1	w1
+C	S2	c1	from P1

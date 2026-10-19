@@ -1,0 +1,18 @@
+% data/argue/syllogism.logic, for a first-order prover
+% audited: x was audited
+% safe: x is safe
+fof(p1, axiom, (! [X] : (audited(X) => safe(X)))).
+fof(p2, axiom, audited(web1)).
+fof(c, conjecture, safe(web1)).
+% data/argue/undecided.logic, for a first-order prover
+% trusts: x trusts y
+% vouched: x is vouched for
+fof(p1, axiom, (! [X] : (? [Y] : trusts(X,Y)))).
+fof(p2, axiom, (! [X] : (! [Y] : (trusts(X,Y) => vouched(Y))))).
+fof(c, conjecture, (? [Y] : vouched(Y))).
+% data/argue/consequent.logic, for a first-order prover
+% patched: the server is patched
+% secure: the server is secure
+fof(p1, axiom, (patched => secure)).
+fof(p2, axiom, secure).
+fof(c, conjecture, patched).

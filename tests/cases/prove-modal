@@ -1,0 +1,19 @@
+wwb/prove -e data/argue/modal/ontological.logic data/argue/modal/ontological.md
+wwb/prove data/argue/modal/fallacy.logic data/argue/modal/fallacy.md
+wwb/prove -e data/argue/modal/oughtmay.logic
+wwb/prove data/argue/modal/oughtis.logic
+wwb/prove data/argue/modal/kd-k.logic
+wwb/prove data/argue/modal/nologic.logic >[2=1]
+wwb/prove data/argue/modal/quantified.logic >[2=1]
+wwb/prove -t data/argue/modal/fallacy.logic
+wwb/prove -t data/argue/modal/oughtis.logic
+wwb/prove data/argue/modal/t-k.logic
+wwb/prove data/argue/modal/d-k.logic
+wwb/prove data/argue/modal/dist-k.logic
+wwb/prove data/argue/modal/t-kt.logic
+wwb/prove data/argue/modal/d-kt.logic
+wwb/prove data/argue/modal/dist-kt.logic
+wwb/prove data/argue/modal/t-kd.logic
+wwb/prove data/argue/modal/d-kd.logic
+wwb/prove data/argue/modal/dist-kd.logic
+wwb/prove -t data/argue/modal/t-kt.logic

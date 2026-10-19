@@ -1,0 +1,7 @@
+# every release has a later one, and later is transitive; so some
+# release is later than itself.  Invalid, but only an endless line of
+# releases shows it: no case of any finite size does
+atom	later(x,y)	y is later than x
+P1	S1	all x: some y: later(x,y)
+P2	S2	all x: all y: all z: later(x,y) & later(y,z) -> later(x,z)
+C	S3	some x: later(x,x)

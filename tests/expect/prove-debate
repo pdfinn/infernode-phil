@@ -1,0 +1,37 @@
+data/argue/steps/objected.logic: argue/valid 1
+data/argue/steps/kalam-debate.md:1: argue/defeated: P1 (S1): P1 falls to O1, which nothing answers
+data/argue/steps/kalam-debate.md:3: argue/defeated: C1 (S3): C1 falls with P1, which it rests on
+data/argue/steps/kalam-debate.md:5: argue/defeated: C (S5): C falls with C1, which it rests on
+data/argue/steps/objected.logic: argue/survives 0
+data/argue/steps/kalam-debate.md:7: argue/unfaithful: R1 (S7): the sentence has no word of "x has a cause": is it the sentence R1 came from?
+data/argue/steps/answered.logic: argue/valid 1
+data/argue/steps/kalam-debate.md:7: argue/restates: R1 (S7): R1 says no more than P1, which O1 disputes: it answers the objection by repeating what is in question
+data/argue/steps/kalam-debate.md:6: argue/defeated: O1 (S6): O1 falls to R1, which nothing answers
+data/argue/steps/answered.logic: argue/survives 1
+data/argue/steps/kalam-debate.md:7: argue/unfaithful: R1 (S7): the sentence has no word of "x has a cause": is it the sentence R1 came from?
+data/argue/steps/rejoinder.logic: argue/valid 1
+data/argue/steps/kalam-debate.md:7: argue/restates: R1 (S7): R1 says no more than P1, which O1 disputes: it answers the objection by repeating what is in question
+data/argue/steps/kalam-debate.md:1: argue/defeated: P1 (S1): P1 falls to O1, whose replies fail
+data/argue/steps/kalam-debate.md:3: argue/defeated: C1 (S3): C1 falls with P1, which it rests on
+data/argue/steps/kalam-debate.md:5: argue/defeated: C (S5): C falls with C1, which it rests on
+data/argue/steps/kalam-debate.md:7: argue/defeated: R1 (S7): R1 falls to O2, which nothing answers
+data/argue/steps/rejoinder.logic: argue/survives 0
+data/argue/steps/kalam-debate.md:7: argue/unfaithful: R1 (S7): the sentence has no word of "x has a cause": is it the sentence R1 came from?
+data/argue/steps/roundabout.logic: argue/valid 1
+data/argue/steps/kalam-debate.md:7: argue/restates: R1 (S7): R1 says no more than P1, which O1 disputes: it answers the objection by repeating what is in question
+data/argue/steps/kalam-debate.md:1: argue/undecided: P1 (S1): P1 neither stands nor falls: the objections to it and the replies to them go round, each defeating the other
+data/argue/steps/roundabout.logic: argue/survives -1
+data/argue/steps/misses.logic: argue/valid 1
+data/argue/steps/kalam-debate.md:6: argue/misses: O1 (S6): O1 does not contradict P2, even given the premises no one disputes: as written it leaves P2 standing; is it aimed at something else?
+data/argue/steps/misses.logic: argue/survives 1
+data/argue/steps/kalam-debate.md:7: argue/unfaithful: R1 (S7): the sentence has no word of "x has a cause": is it the sentence R1 came from?
+data/argue/steps/kalam-debate.md:3: argue/invalid: C1 (S3): does not follow: when nothing is true, every premise holds and the conclusion fails
+data/argue/steps/kalam-debate.md:3: argue/countermodel: C1 (S3): D = {another, universe}; began = ∅, caused = ∅
+data/argue/steps/kalam-debate.md:3: argue/missing: C1 (S3): it would follow given "began(universe)" (universe began to exist), or "¬began(universe) → caused(universe)"
+data/argue/steps/kalam-debate.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "x began to exist": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/steps/answered-invalid.logic: argue/valid 0
+data/argue/steps/kalam-debate.md:7: argue/restates: R1 (S7): R1 says no more than P1, which O1 disputes: it answers the objection by repeating what is in question
+data/argue/steps/kalam-debate.md:3: argue/defeated: C1 (S3): C1 cannot stand: it does not follow from what it rests on, so no reply to the objections can save it
+data/argue/steps/kalam-debate.md:5: argue/defeated: C (S5): C falls with C1, which it rests on
+data/argue/steps/kalam-debate.md:6: argue/defeated: O1 (S6): O1 falls to R1, which nothing answers
+data/argue/steps/answered-invalid.logic: argue/survives 0

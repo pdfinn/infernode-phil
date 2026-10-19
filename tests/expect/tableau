@@ -1,0 +1,100 @@
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.PS
+"\fIC\fP" at (1.323,0.301)
+"\s-21.\s0" rjust at (0.847,0.000)
+"$□ (  p → q  )  ,  w sub 0 $" ljust at (0.917,0.000)
+"\s-2P1\s0" ljust at (2.027,0.000)
+"\s-22.\s0" rjust at (0.847,-0.215)
+"$□ p  ,  w sub 0 $" ljust at (0.917,-0.215)
+"\s-2P2\s0" ljust at (2.027,-0.215)
+"\s-23.\s0" rjust at (0.847,-0.430)
+"$¬□ q  ,  w sub 0 $" ljust at (0.917,-0.430)
+"\s-2C denied\s0" ljust at (2.027,-0.430)
+"\s-24.\s0" rjust at (0.847,-0.645)
+"$◇¬ q  ,  w sub 0 $" ljust at (0.917,-0.645)
+"\s-23 ¬□\s0" ljust at (2.027,-0.645)
+"\s-25.\s0" rjust at (0.847,-0.860)
+"$ w sub 0  ~roman R~  w sub 1 $" ljust at (0.917,-0.860)
+"\s-24 ◇\s0" ljust at (2.027,-0.860)
+"\s-26.\s0" rjust at (0.847,-1.075)
+"$¬ q  ,  w sub 1 $" ljust at (0.917,-1.075)
+"\s-24 ◇\s0" ljust at (2.027,-1.075)
+"\s-27.\s0" rjust at (0.847,-1.290)
+"$ p → q  ,  w sub 1 $" ljust at (0.917,-1.290)
+"\s-21 □\s0" ljust at (2.027,-1.290)
+"\s-28.\s0" rjust at (0.847,-1.505)
+"$ p  ,  w sub 1 $" ljust at (0.917,-1.505)
+"\s-22 □\s0" ljust at (2.027,-1.505)
+"\s-27 →\s0" ljust at (2.027,-1.767)
+line from (1.323,-1.623) to (0.378,-1.943)
+"\s-29.\s0" rjust at (0.120,-2.062)
+"$¬ p  ,  w sub 1 $" ljust at (0.190,-2.062)
+"$times$ \s-28, 9\s0" ljust at (0.190,-2.276)
+line from (1.323,-1.623) to (1.775,-1.943)
+"\s-210.\s0" rjust at (1.495,-2.062)
+"$ q  ,  w sub 1 $" ljust at (1.565,-2.062)
+"$times$ \s-26, 10\s0" ljust at (1.565,-2.276)
+.PE
+.sp 0.6
+.EQ
+delim $$
+chartype bin "∧"
+chartype bin "∨"
+chartype bin "→"
+chartype bin "↔"
+chartype punct ","
+.EN
+.PS
+"\fIC1 (S3)\fP" at (1.872,0.301)
+"\s-21.\s0" rjust at (0.740,0.000)
+"$ ∀  x  (  roman \&began  (  x  ) → roman \&caused  (  x  )  ) $" ljust at (0.810,0.000)
+"\s-2P1\s0" ljust at (3.234,0.000)
+"\s-22.\s0" rjust at (0.740,-0.215)
+"$ roman \&began  (  roman \&universe  ) $" ljust at (0.810,-0.215)
+"\s-2P2\s0" ljust at (3.234,-0.215)
+"\s-23.\s0" rjust at (0.740,-0.430)
+"$¬ roman \&caused  (  roman \&universe  ) $" ljust at (0.810,-0.430)
+"\s-2C1 denied\s0" ljust at (3.234,-0.430)
+"\s-24.\s0" rjust at (0.740,-0.645)
+"$ roman \&began  (  roman \&universe  ) → roman \&caused  (  roman \&universe  ) $" ljust at (0.810,-0.645)
+"\s-21 ∀\s0" ljust at (3.234,-0.645)
+"\s-24 →\s0" ljust at (3.234,-0.907)
+line from (1.872,-0.763) to (0.688,-1.083)
+"\s-25.\s0" rjust at (0.120,-1.202)
+"$¬ roman \&began  (  roman \&universe  ) $" ljust at (0.190,-1.202)
+"$times$ \s-22, 5\s0" ljust at (0.190,-1.417)
+line from (1.872,-0.763) to (2.605,-1.083)
+"\s-26.\s0" rjust at (2.056,-1.202)
+"$ roman \&caused  (  roman \&universe  ) $" ljust at (2.126,-1.202)
+"$times$ \s-23, 6\s0" ljust at (2.126,-1.417)
+.PE
+.sp 0.6
+.PS
+"\fIC (S5)\fP" at (1.641,0.301)
+"\s-21.\s0" rjust at (0.740,0.000)
+"$ roman \&caused  (  roman \&universe  ) $" ljust at (0.810,0.000)
+"\s-2C1\s0" ljust at (2.772,0.000)
+"\s-22.\s0" rjust at (0.740,-0.215)
+"$ roman \&caused  (  roman \&universe  ) → roman \&created $" ljust at (0.810,-0.215)
+"\s-2P3\s0" ljust at (2.772,-0.215)
+"\s-23.\s0" rjust at (0.740,-0.430)
+"$¬ roman \&created $" ljust at (0.810,-0.430)
+"\s-2C denied\s0" ljust at (2.772,-0.430)
+"\s-22 →\s0" ljust at (2.772,-0.692)
+line from (1.641,-0.548) to (0.719,-0.868)
+"\s-24.\s0" rjust at (0.120,-0.986)
+"$¬ roman \&caused  (  roman \&universe  ) $" ljust at (0.190,-0.986)
+"$times$ \s-21, 4\s0" ljust at (0.190,-1.202)
+line from (1.641,-0.548) to (2.405,-0.868)
+"\s-25.\s0" rjust at (2.118,-0.986)
+"$ roman \&created $" ljust at (2.188,-0.986)
+"$times$ \s-23, 5\s0" ljust at (2.188,-1.202)
+.PE
+.sp 0.6

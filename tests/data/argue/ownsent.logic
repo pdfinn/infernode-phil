@@ -1,0 +1,6 @@
+atom	closed	the bridge was closed
+atom	moved	traffic has moved to the ferry
+atom	over	the ferry is overloaded
+P1	S1	closed
+P2	S2	moved & over
+C	S2	over

@@ -1,0 +1,3 @@
+atom	admin(x)	x is an admin
+atom	deploy(x)	x can deploy
+C	S1	all p: deploy(p) -> admin(p)

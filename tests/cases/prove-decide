@@ -1,0 +1,5 @@
+wwb/prove data/argue/undecided.logic
+wwb/prove data/argue/shift.logic
+wwb/prove data/argue/monadic.logic
+wwb/prove data/argue/infinite.logic
+wwb/prove data/argue/endless.logic

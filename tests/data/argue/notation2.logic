@@ -1,0 +1,5 @@
+atom	patched(x)	x is patched
+atom	secure(x)	x is secure
+P1	S1	forall x: patched(x) => secure(x)
+P2	S2	exists x. secure(x) && !patched(x) || secure(web1)
+C	S3	∃x: patched(x)

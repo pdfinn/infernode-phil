@@ -1,0 +1,10 @@
+atom	whale	Moby is a whale
+atom	mammal	Moby is a mammal
+atom	breathes	Moby breathes air
+# part 1: data/argue/join/u1.logic
+P1	S2	whale
+C1	S4	¬whale ∨ mammal	from P1
+# part 2: data/argue/join/u2.logic
+P2	S6	mammal -> breathes
+C2	S7	whale -> breathes	from P2 C1
+# steps: C1 C2

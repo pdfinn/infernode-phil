@@ -1,0 +1,6 @@
+atom	up	the service is up
+atom	down	the service is down
+atom	paged	the on-call engineer was paged
+P1	S1	up | !up
+P2	S2	paged & !paged
+C	S3	down

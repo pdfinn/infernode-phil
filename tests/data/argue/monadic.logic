@@ -1,0 +1,7 @@
+# no auditor is careless; some engineers are careless; so some engineers are not auditors
+atom	auditor(x)	x is an auditor
+atom	careless(x)	x is careless
+atom	engineer(x)	x is an engineer
+P1	S1	all x: auditor(x) -> !careless(x)
+P2	S2	some x: engineer(x) & careless(x)
+C	S3	some x: engineer(x) & !auditor(x)

@@ -1,0 +1,6 @@
+# every audited server is safe; web1 was audited; so web1 is safe
+atom	audited(x)	x was audited
+atom	safe(x)	x is safe
+P1	S1	all x: audited(x) -> safe(x)
+P2	S2	audited(web1)
+C	S3	safe(web1)

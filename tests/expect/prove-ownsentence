@@ -1,0 +1,3 @@
+data/argue/ownsent.md:1: argue/unused: P1 (S1): P1 is not needed: the conclusion follows from P2 without it
+data/argue/ownsent.md:1: argue/own-sentence: C (S2): follows from P2 alone, read from the conclusion's own sentence: unless S2 gives it as its reason, the reading has it assert what it concludes
+data/argue/ownsent.logic: argue/valid 1

@@ -1,0 +1,40 @@
+atom	posture1	posture at period 1
+atom	posture2	posture at period 2
+atom	posture3	posture at period 3
+atom	posture4	posture at period 4
+atom	intend1	intend at period 1
+atom	intend2	intend at period 2
+atom	intend3	intend at period 3
+atom	intend4	intend at period 4
+atom	override1	override at period 1
+atom	override2	override at period 2
+atom	override3	override at period 3
+atom	override4	override at period 4
+atom	wrongRet1	wrongRet at period 1
+atom	wrongRet2	wrongRet at period 2
+atom	wrongRet3	wrongRet at period 3
+atom	wrongRet4	wrongRet at period 4
+atom	wrongInt1	wrongInt at period 1
+atom	wrongInt2	wrongInt at period 2
+atom	wrongInt3	wrongInt at period 3
+atom	wrongInt4	wrongInt at period 4
+atom	perm1	perm at period 1
+atom	perm2	perm at period 2
+atom	perm3	perm at period 3
+atom	perm4	perm at period 4
+atom	nec1	nec at period 1
+atom	nec2	nec at period 2
+atom	nec3	nec at period 3
+atom	nec4	nec at period 4
+P1	-	(!override1 -> wrongRet1) & (!override2 -> wrongRet2) & (!override3 -> wrongRet3) & (!override4 -> wrongRet4)
+P2	-	(intend1 & wrongRet1 -> wrongInt1) & (intend2 & wrongRet2 -> wrongInt2) & (intend3 & wrongRet3 -> wrongInt3) & (intend4 & wrongRet4 -> wrongInt4)
+P3	-	(posture1 -> intend1) & (posture2 -> intend2) & (posture3 -> intend3) & (posture4 -> intend4)
+P4	-	(posture1 & wrongInt1 -> !perm1) & (posture2 & wrongInt2 -> !perm2) & (posture3 & wrongInt3 -> !perm3) & (posture4 & wrongInt4 -> !perm4)
+P5	-	(posture1) & (posture2) & (posture3) & (posture4)
+P6	-	(perm1) & (perm2) & (perm3) & (perm4)
+P7	-	!override2 & !override3 & !override4
+P8	-	!(override1 & override2) & !(override2 & override3) & !(override3 & override4)
+P9	-	(override1 -> nec1) & (override2 -> nec2) & (override3 -> nec3) & (override4 -> nec4)
+P10	-	nec1 & nec2 & nec3 & nec4
+P11	-	!nec2 & !nec3 & !nec4
+rivals	P10 P11

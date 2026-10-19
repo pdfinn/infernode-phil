@@ -1,0 +1,9 @@
+# every release has a later one, later is transitive, and nothing is
+# later than itself: these hold only of endlessly many releases, so no
+# case tried makes them all true, yet they do not contradict each other
+atom	later(x,y)	y is later than x
+atom	shipped(x)	x shipped
+P1	S1	all x: some y: later(x,y)
+P2	S2	all x: all y: all z: later(x,y) & later(y,z) -> later(x,z)
+P3	S3	all x: !later(x,x)
+C	S4	some x: shipped(x)

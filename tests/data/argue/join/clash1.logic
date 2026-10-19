@@ -1,0 +1,5 @@
+atom	outmoded	the old approach was outmoded
+atom	lost	the war was lost
+P1	S1	outmoded
+P2	S2	outmoded -> lost
+C	S3	lost	from P1 P2

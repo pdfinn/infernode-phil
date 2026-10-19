@@ -1,0 +1,6 @@
+atom	closed	the bridge is closed
+atom	slow	the traffic is slow
+atom	lose	the shops lose trade
+P1	S1	closed
+P2	S3	slow -> lose
+C	S3	lose

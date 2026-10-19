@@ -1,0 +1,5 @@
+atom	audited	the code was audited
+atom	nobugs	the audit found no bugs
+atom	safe	the code is safe to deploy
+P1	S1	audited & nobugs
+C	S2	safe

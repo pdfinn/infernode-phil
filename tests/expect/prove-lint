@@ -1,0 +1,10 @@
+data/argue/begs.logic:5: argue/unused: P1 (S1): P1 is not needed: the conclusion follows from A1 without it
+data/argue/begs.logic:7: argue/begs: C (S2): follows from A1 alone, which the text never states: the text's own premises do no work
+data/argue/begs.logic: argue/valid 1
+data/argue/lints.logic:4: argue/empty: P1 (S1): P1 is true whatever the case: it says nothing
+data/argue/lints.logic:5: argue/impossible: P2 (S2): P2 can never be true
+data/argue/lints.logic:6: argue/unlinked: C (S3): the conclusion speaks of "the service is down", which no premise mentions: nothing links it to them
+data/argue/lints.logic:5: argue/inconsistent: P2 (S2): with P2 among the premises anything at all would follow
+data/argue/lints.logic: argue/valid 0
+data/argue/arity2.logic:2: argue/syntax: P2: trusts is used with 2 individuals and with 1
+data/argue/arity2.logic: argue/undefined: atom trusts is used but not given a meaning (atom	trusts	...)

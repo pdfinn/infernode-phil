@@ -1,0 +1,14 @@
+atom	outmoded	the old approach was outmoded
+atom	lost	the war was lost
+atom	outmoded_2	the classical view is outmoded
+atom	revived	the classical view is revived
+# part 1: data/argue/join/clash1.logic
+P1	S1	outmoded
+P2	S2	outmoded -> lost
+C1	S3	lost	from P1 P2
+# part 2: data/argue/join/clash2.logic
+# outmoded here is outmoded_2: an earlier part's outmoded means the old approach was outmoded
+P3	S5	revived
+A1	-	revived -> !outmoded_2
+C2	S6	!outmoded_2	from P3 A1
+# steps: C1 C2

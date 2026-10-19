@@ -1,0 +1,6 @@
+logic	s5
+atom	p	the bachelor is unmarried
+atom	q	he is unmarried
+P1	S1	[](p -> q)
+P2	S2	p
+C	S3	[]q

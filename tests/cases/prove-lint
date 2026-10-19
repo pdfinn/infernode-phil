@@ -1,0 +1,3 @@
+wwb/prove data/argue/begs.logic
+wwb/prove data/argue/lints.logic
+wwb/prove data/argue/arity2.logic >[2=1]

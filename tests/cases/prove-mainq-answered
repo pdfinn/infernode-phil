@@ -1,0 +1,1 @@
+wwb/prove -c -a data/argue/mainc/answers -d data/argue/mainc/tax.md data/argue/mainc/tax.logic data/argue/mainc/tax.logic.2 data/argue/mainc/tax.logic.3

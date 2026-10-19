@@ -1,0 +1,5 @@
+atom	began(x)	x began to exist
+atom	caused(x)	x has a cause
+P1	S1	all x: began(x) -> caused(x)
+P2	S2	began(universe)
+C	S3	caused(universe)

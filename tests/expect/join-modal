@@ -1,0 +1,6 @@
+data/argue/join/m.md:1: argue/unfaithful: P2 (S3): the sentence has no word of "the treaty holds": is it the sentence P2 came from?
+data/argue/join/m.md:1: argue/equivocates: P2 (S3): "must" is read as what ought to be or is permitted here and as what is necessary or possible at S1 (P1): one word in two senses, so the argument may move from one to the other; say which each means
+data/argue/join/m.md:1: argue/equivocates: C1 (S2): its "must" is read as what is necessary or possible by C1 and as what ought to be or is permitted by P3: one sentence in two senses; say which it means
+data/argue/join/m.md:1: argue/circular: C1 (S2): the conclusion only restates P1: it is assumed, not argued
+data/argue/join/m.md:1: argue/unused: P3 (S2): P3 is not needed: the conclusion follows from P2 and C1 without it
+out/joined.logic: argue/valid 0

@@ -1,0 +1,74 @@
+data/argue/valid.logic:7: argue/unused: P3 (S3): P3 is not needed: the conclusion follows from P1 and P2 without it
+# C (S4), proved by a tableau: every branch closes (×)
+#	1. rain → wet   P1
+#	2. rain         P2
+#	3. ¬wet         C denied
+#	├─ 4. ¬rain     1 →
+#	│  × 2, 4
+#	└─ 5. wet       1 →
+#	   × 3, 5
+data/argue/valid.logic: argue/valid 1
+# C1 (S3), proved by a tableau: every branch closes (×)
+#	1. ∀x (began(x) → caused(x))            P1
+#	2. began(universe)                      P2
+#	3. ¬caused(universe)                    C1 denied
+#	4. began(universe) → caused(universe)   1 ∀
+#	├─ 5. ¬began(universe)                  4 →
+#	│  × 2, 5
+#	└─ 6. caused(universe)                  4 →
+#	   × 3, 6
+# C (S5), proved by a tableau: every branch closes (×)
+#	1. caused(universe)             C1
+#	2. caused(universe) → created   P3
+#	3. ¬created                     C denied
+#	├─ 4. ¬caused(universe)         2 →
+#	│  × 1, 4
+#	└─ 5. created                   2 →
+#	   × 3, 5
+data/argue/steps/kalam.logic: argue/valid 1
+data/argue/modal/dist-k.logic:6: argue/begs: C: follows from P1 and P2 alone, which the text never states: the text's own premises do no work
+# C, proved by a tableau: every branch closes (×)
+#	1. □(p → q), w0   P1
+#	2. □p, w0         P2
+#	3. ¬□q, w0        C denied
+#	4. ◇¬q, w0        3 ¬□
+#	5. w0 R w1        4 ◇
+#	6. ¬q, w1         4 ◇
+#	7. p → q, w1      1 □
+#	8. p, w1          2 □
+#	├─ 9. ¬p, w1      7 →
+#	│  × 8, 9
+#	└─ 10. q, w1      7 →
+#	   × 6, 10
+data/argue/modal/dist-k.logic: argue/valid 1
+# C (S2), proved by a tableau: every branch closes (×)
+#	1. □O p, w0   P1
+#	2. ¬O p, w0   C denied
+#	3. P ¬p, w0   2 ¬O
+#	4. w0 R w1    3 P
+#	5. ¬p, w1     3 P
+#	6. O p, w0    1 □
+#	× 2, 6
+data/argue/modal/mix-necought.logic: argue/valid 1
+data/argue/modal/dist-kd.logic:6: argue/begs: C: follows from P1 and P2 alone, which the text never states: the text's own premises do no work
+# C, proved by a tableau: every branch closes (×)
+#	1. ought (p -> q), w0   P1
+#	2. ought p, w0          P2
+#	3. !ought q, w0         C denied
+#	4. permitted !q, w0     3 !ought
+#	5. w0 R w1              4 permitted
+#	6. !q, w1               4 permitted
+#	7. p -> q, w1           1 ought
+#	8. p, w1                2 ought
+#	├─ 9. !p, w1            7 ->
+#	│  × 8, 9
+#	└─ 10. q, w1            7 ->
+#	   × 6, 10
+data/argue/modal/dist-kd.logic: argue/valid 1
+data/argue/modal/t-kt.logic:4: argue/begs: C: follows from P1 alone, which the text never states: the text's own premises do no work
+# C, proved by a tableau: every branch closes (×)
+#	1. □p, w0   P1
+#	2. ¬p, w0   C denied
+#	3. p, w0    1 □, T
+#	× 2, 3
+data/argue/modal/t-kt.logic: argue/valid 1

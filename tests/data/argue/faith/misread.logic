@@ -1,0 +1,12 @@
+atom	audited(x)	x is audited
+atom	patched(x)	x is patched
+atom	exposed(x)	x is exposed
+atom	monitored(x)	x is monitored
+atom	billed(x)	x is billed
+P1	S1	all s: patched(s) -> audited(s)
+P2	S2	exposed(mail)
+P3	S3	all s: patched(s) -> monitored(s)
+P4	S4	audited(mail)
+P5	S5	!monitored(web)
+P6	S5	billed(web)
+C	S6	monitored(mail)

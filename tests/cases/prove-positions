@@ -1,0 +1,2 @@
+wwb/prove -p data/argue/positions/trilemma.logic data/argue/positions/trilemma.md
+wwb/prove -p data/argue/positions/deterrence.logic

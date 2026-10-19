@@ -1,0 +1,212 @@
+prove-bench: wwb/prove against Z3, E and Vampire
+
+	python3 -I tools/prove-bench/gen.py /tmp/bench 1
+	emu -c1 -r$ROOT sh '#U*'$PWD/tools/prove-bench/run.inferno '#U*'$PWD '#U*/tmp/bench'
+	EPROVER=... python3 -I tools/prove-bench/compare.py /tmp/bench path/to/vampire
+
+gen.py writes 635 arguments in classes (see it); run.inferno runs prove
+over them in InferNode, timing each, and writes each as TPTP (prove -t);
+compare.py runs the others on the TPTP, 10 seconds an argument, and
+tabulates.  The random 3-CNF classes (cnf*) are best run one emulator
+each under a host timeout, as prove's search on them can run for minutes.
+
+Results, 16 October 2026 (seed 1; a 4-core Linux container; Z3 5.3.0
+through its Python API; E 3.5.1 built from source; Vampire built from
+source, casc then casc_sat; prove under emu -c1, JIT, its cases searched
+by clause learning):
+
+class	n	valid	prove right/undecided/wrong	Z3 right/undecided/wrong	E right/undecided/wrong	Vampire right/undecided/wrong
+chain10	3	3	3/0/0	3/0/0	3/0/0	3/0/0
+chain160	3	3	3/0/0	3/0/0	3/0/0	3/0/0
+chain20	3	3	3/0/0	3/0/0	3/0/0	3/0/0
+chain40	3	3	3/0/0	3/0/0	3/0/0	3/0/0
+chain80	3	3	3/0/0	3/0/0	3/0/0	3/0/0
+mono	200	142	200/0/0	200/0/0	200/0/0	200/0/0
+prop	200	151	200/0/0	200/0/0	200/0/0	200/0/0
+propm	100	69	100/0/0	100/0/0	100/0/0	100/0/0
+rel	100	37	99/1/0	54/46/0	90/10/0	100/0/0
+cnf10	4	1	4/0/0	4/0/0	4/0/0	4/0/0
+cnf20	4	1	4/0/0	4/0/0	4/0/0	4/0/0
+cnf30	4	2	4/0/0	4/0/0	4/0/0	4/0/0
+cnf40	4	1	4/0/0	4/0/0	4/0/0	4/0/0
+cnf50	4	2	4/0/0	4/0/0	4/0/0	4/0/0
+
+seconds, median (max)	prove	Z3 solver	Z3 command	E	Vampire
+chain10	0.009 (0.01)	0.003 (0.00)	0.165 (0.28)	0.006 (0.03)	0.006 (0.02)
+chain160	0.235 (0.27)	0.018 (0.02)	0.186 (0.20)	0.015 (0.02)	0.010 (0.01)
+chain20	0.013 (0.01)	0.004 (0.00)	0.128 (0.15)	0.005 (0.01)	0.006 (0.01)
+chain40	0.024 (0.02)	0.006 (0.01)	0.167 (0.18)	0.006 (0.01)	0.007 (0.01)
+chain80	0.064 (0.07)	0.010 (0.01)	0.140 (0.15)	0.008 (0.01)	0.007 (0.01)
+mono	0.010 (0.02)	0.004 (0.02)	0.099 (0.21)	0.004 (0.01)	0.006 (0.01)
+prop	0.012 (0.03)	0.002 (0.01)	0.097 (0.16)	0.004 (0.01)	0.006 (0.02)
+propm	0.016 (0.14)	0.003 (0.01)	0.097 (0.15)	0.005 (0.01)	0.006 (0.01)
+rel	0.014 (0.02)	0.017 (15.25)	0.130 (12.47)	0.004 (10.16)	0.009 (1.04)
+cnf10	0.032 (0.05)	0.010 (0.01)	0.107 (0.12)	0.005 (0.01)	0.109 (0.11)
+cnf20	0.356 (0.42)	0.014 (0.01)	0.105 (0.11)	0.009 (0.01)	0.111 (0.11)
+cnf30	0.071 (1.48)	0.020 (0.02)	0.115 (0.12)	0.022 (0.03)	0.113 (0.11)
+cnf40	0.122 (2.99)	0.025 (0.03)	0.118 (0.13)	0.040 (0.06)	0.114 (0.12)
+cnf50	0.202 (0.32)	0.030 (0.03)	0.134 (0.15)	0.308 (0.47)	0.115 (0.12)
+
+no disagreements
+
+No prover contradicted another on any argument.  prove decides 634 of
+the 635: every argument of the kinds people and models write (prop,
+propm, mono, chains to 160), the random 3-CNF to 50 atoms, and 99 of
+100 relational ones (Z3 54, E 90, Vampire 100); the one it leaves open
+needs four individuals to refute.  It takes 10 to 30 ms on an argument
+of paragraph or document size, its loading included (Z3 as a command
+100 ms, E and Vampire 4 to 8), and well under a second on the large.
+
+Before the clause-learning search (commit a9e81e1), prove's search was
+plain backtracking: a chain of 160 took 14 seconds, and 11 of the 12
+3-CNF problems of 30 atoms or more did not finish in 60.  On the 624 it
+did finish, the new search's output is the old one's, byte for byte.
+
+Modal and deontic (gen.py's s5 and kd classes; 150 each; prove -t
+writes them by the standard translation, each atom holding at a world):
+
+	class	n	valid	prove	Z3	E	Vampire	(right/undecided/wrong)
+	s5	150	93	150/0/0	150/0/0	150/0/0	150/0/0
+	kd	150	83	150/0/0	135/15/0	137/13/0	150/0/0
+
+	seconds, median (max): s5 prove 0.014 (0.06), Z3 0.005, E 0.004,
+	Vampire 0.007; kd prove 0.021 (80), Z3 0.015 (12), E 0.007 (10),
+	Vampire 0.010 (2.9)
+
+No disagreements.  (A first KD run, made while other benchmarks ran
+beside it, had Z3, E and Vampire deciding 133, 82 and 84: they ran out
+of their ten seconds under the load.  Run alone, Vampire decides all
+150 as prove does, E 137, Z3 135.)  A first S5 run had prove out of memory on 17 (nested
+operators copied at every world, at every level); S5 necessities and
+possibilities are now each one atom, defined once, and the worst takes
+0.06 seconds.  (That run also showed compare.py scoring problems prove
+had not written; it now skips them.)
+
+Against the dedicated modal provers (lwb.py): the Logics Workbench
+benchmark for K (Balsiger, Heuerding and Schwendimann 2000), 18 classes
+of 21 formulas, harder as they go; each prover climbs a class until it
+fails twice, 10 seconds a formula; the score is the highest formula
+decided.  KSP 0.1.6 (Nalon, resolution; its ijcar-2022 cord_mlple_K
+configuration, with tcmalloc) and Spartacus 1.1 (Goetzmann, Kaminski and
+Smolka, tableaux), built from the sources in
+github.com/blorbb/modal-logic-benchmarks:
+
+class	prove	KSP	Spartacus	(highest formula decided of 21; how the next failed)
+k_branch_n	2 (timeout)	9 (timeout)	9 (timeout)
+k_branch_p	2 (timeout)	10 (timeout)	10 (timeout)
+k_d4_n	1 (timeout)	21	21
+k_d4_p	1 (undecided)	21	21
+k_dum_n	5 (undecided)	21	21
+k_dum_p	3 (undecided)	21	21
+k_grz_n	10 (timeout)	21	21
+k_grz_p	2 (undecided)	21	21
+k_lin_n	3 (timeout)	21	21
+k_lin_p	2 (undecided)	21	21
+k_path_n	1 (undecided)	21	21
+k_path_p	2 (undecided)	21	21
+k_ph_n	7 (timeout)	5 (timeout)	21
+k_ph_p	7 (timeout)	5 (timeout)	7 (timeout)
+k_poly_n	5 (timeout)	21	21
+k_poly_p	5 (timeout)	21	21
+k_t4p_n	1 (undecided)	21	21
+k_t4p_p	0 (undecided)	21	21
+
+And for KT (reflexive frames; KSP with -global2local and T_ref,
+Spartacus --reflexive), run 16 October 2026 after the changes above:
+
+class	prove	KSP	Spartacus
+kt_45_n	1 (timeout)	21	21
+kt_45_p	1 (undecided)	21	21
+kt_branch_n	2 (timeout)	5 (timeout)	8 (timeout)
+kt_branch_p	2 (undecided)	8 (timeout)	21
+kt_dum_n	0 (undecided)	19 (timeout)	21
+kt_dum_p	0 (undecided)	21	21
+kt_grz_n	5 (timeout)	14 (timeout)	21
+kt_grz_p	0 (undecided)	21	21
+kt_md_n	3 (timeout)	11 (timeout)	7 (timeout)
+kt_md_p	2 (undecided)	7 (timeout)	5 (timeout)
+kt_path_n	2 (timeout)	21	19 (timeout)
+kt_path_p	2 (undecided)	21	20 (timeout)
+kt_ph_n	7 (timeout)	5 (timeout)	12 (timeout)
+kt_ph_p	4 (undecided)	5 (timeout)	7 (timeout)
+kt_poly_n	0 (timeout)	4 (timeout)	6 (timeout)
+kt_poly_p	0 (undecided)	16 (timeout)	4 (timeout)
+kt_t4p_n	1 (timeout)	15 (timeout)	21
+kt_t4p_p	0 (undecided)	21	21
+
+The K run repeated after the changes gave prove the same scores, class
+by class: these formulas are limited by the worlds they need, not by
+the speed of the search.
+
+No prover gave a wrong answer.  prove is far behind on everything but
+the pigeonhole classes (ph), which are mostly propositional and where
+its clause-learning search matches or passes the others; elsewhere it
+stops within the first few formulas, out of time or out of worlds (more
+than 2048, when it leaves the question open rather than guess).  The
+reason is its encoding: every possibility gets a world of its own at
+every world where it is met (Km2SAT, Sebastiani and Vescovi 2009, here
+in negation normal form, one way, statements grounded asserted and
+denied), and the LWB formulas, with dozens of operators nested deep,
+ask for more worlds than that allows.  Spartacus reuses worlds whose
+formulas it has seen (caching) and builds them only as its search needs
+them; KSP needs no worlds at all.  prove's arguments, a few operators
+nested two or three deep, are far below where this bites; a modal
+argument of LWB's size wants those provers, which prove -t can feed.
+
+The encoding before this one (a fixed tree of worlds, its branching
+the count of every operator) did worse: it decided the second formula
+of no class, and on KD arguments it had cut short it once called
+premises contradictory that were not (kd-056, kd-102), which the
+benchmark's scoring then hid; a frame cut short now decides only a
+refutation, never a proof.
+
+Where prove breaks (stress.py; each family grows until it fails, one
+emulator a file, 120 seconds, 1 GB):
+
+	family			fine			slow			out of time
+	independent premises	1600 (0.4 s)		6400 (6.1 s)		25600
+	chain of implications	1600 (0.7 s)		6400 (8.7 s)		-
+	random 3-CNF, atoms	75 (3.2 s)		100 (56 s)		150
+	steps, each on the last	3200 (2.5 s)		-			-
+	formula nested deep	100000 (0.6 s)		-			-
+	objections and replies	3200 (1.0 s)		-			-
+	one-place predicates	8 (0.05 s)		-			-
+
+No wrong answer and no crash in any of them; what fails is time.  The
+first run of this table broke at a quarter of these sizes (premises at
+1600 in 24 s, chains at 1600 in 27 s, steps at 800 in 12 s, objections
+at 800 in 2.6 s), and was mended without changing any output: every
+argument here and in gen.py's set, 953 in all, gives the same findings
+byte for byte, its TPTP too, as before.  What it took:
+
+- every question had been sized to the whole argument (each "is P1 a
+  tautology?" built a solver for every atom); now to the atoms of its
+  own formulas, numbered in their order.  An atom no clause holds is
+  only ever decided true, at a level nothing follows from, so the
+  search and the case it finds are the same.
+- the explanations (what is needed, what contradicts, what is missing)
+  ask one solver many questions under assumptions (MiniSat's), each
+  premise behind a guard of its own; they answer only yes or no, a fact
+  of logic, so the same as before.  Unsatisfiable cores, which would ask
+  fewer, are not used: they can pick a different smallest set, and the
+  findings would change.
+- the next variable to decide was found by looking from the first at
+  every decision; now from where every one before is known to be set.
+  The same variable, so the same search: kd-105, 25394 variables, 84 s
+  to 25 s.
+- atoms, predicates and names found by hash; the grounded labelling of
+  objections over attacks indexed once (it is the least the rules
+  allow, whatever order it is found in).
+
+The whole account, with what was tried and turned down, and the check
+any further change must pass (same.sh), is docs/PROVE-PERFORMANCE.md.
+
+What is left is in the nature of the method.  What is needed is found
+by dropping each premise in turn and asking again, which is the square
+of the premises (5 s of the 6 at 6400 independent premises); the order
+it drops them in decides which smallest set is reported, and a faster
+method could report another.  The ordered search that finds the
+plainest case repeats its decisions after each conflict (kd-105: 670
+conflicts, 750000 decisions a question).  The random 3-CNF is a search
+no argument needs; industrial solvers' restarts and heuristics would
+carry it further, at the cost of the plainest case.

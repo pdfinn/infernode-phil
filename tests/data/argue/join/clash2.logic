@@ -1,0 +1,5 @@
+atom	outmoded	the classical view is outmoded
+atom	revived	the classical view is revived
+P1	S5	revived
+A1	-	revived -> !outmoded
+C	S6	!outmoded	from P1 A1

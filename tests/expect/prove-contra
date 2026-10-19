@@ -1,0 +1,6 @@
+data/argue/steps/contra.logic:5: argue/invalid: C1 (S2): does not follow: when "the first claim" is true, "the second claim" is false, every premise holds and the conclusion fails
+data/argue/steps/contra.logic:5: argue/countermodel: C1 (S2): a = T, b = F
+data/argue/steps/contra.logic:5: argue/missing: C1 (S2): it would follow given "a → b"
+data/argue/steps/contra.logic:4: argue/unlinked: P1 (S1): P1 is the only statement about "the first claim": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/steps/contra.logic:6: argue/inconsistent: P2 (S3): P2 and P3 cannot all be true: read together, the work's premises and assumptions contradict each other
+data/argue/steps/contra.logic: argue/valid 0

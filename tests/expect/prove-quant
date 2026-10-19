@@ -1,0 +1,11 @@
+data/argue/syllogism.logic: argue/valid 1
+data/argue/middle.logic:6: argue/invalid: C (S3): does not follow: when "web1 is secure" is true, "web1 is patched" is false, every premise holds and the conclusion fails; this is affirming the consequent (P1 and P2)
+data/argue/middle.logic:6: argue/countermodel: C (S3): D = {web1}; patched = ∅, secure = {web1}
+data/argue/middle.logic:6: argue/missing: C (S3): it would follow given "secure(web1) → patched(web1)"
+data/argue/middle.logic: argue/valid 0
+data/argue/some.logic: argue/valid 1
+data/argue/hasty.logic:5: argue/invalid: C (S2): does not follow: when "web2 passed the audit" and "web1 passed the audit" are true, "another passed the audit" is false, every premise holds and the conclusion fails; this is a generalization: what holds of the cases named need not hold of every case
+data/argue/hasty.logic:5: argue/countermodel: C (S2): D = {another, web1, web2}; passed = {web1, web2}
+data/argue/hasty.logic: argue/valid 0
+data/argue/arity.logic:2: argue/syntax: P1: safe takes 1 individual, not 2
+data/argue/arity.logic:3: argue/syntax: C: safe takes 1 individual, not 0
