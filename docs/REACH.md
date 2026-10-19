@@ -66,6 +66,13 @@ Problems the tools as built do something useful with, and what.
 | What a premise costs: who holds it, what it commits them to, which case it fails | any | `ledger`, by rule, from the corpus |
 | Positions nobody has taken: a coherent set of the debate's claims no work holds | classical | `prove -p` against `positions`: `agenda/unoccupied` |
 
+A note on what "now" means. Rows that name `cases`, `align`, `ledger`
+or `agenda` describe tools CORPUS.md designs and has not yet built
+(its order of work, steps 2 to 5); today those rows give what `prove`,
+`prove -p` and `argue -k` give, which is the verdict, the positions
+and the readings' splits, and not yet the cases, the costs or the
+agenda. The rows that need only `prove` and `argue` are as built.
+
 Two notes on the table. The analyses row is the method of cases, and
 the method of cases is how conceptual analysis has been done since
 Plato; so analysis of the "what is knowledge" kind is within reach to

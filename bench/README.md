@@ -52,3 +52,55 @@ directory); `tools/gold.py` is the gold set's specification.
 
 Results, with the model, the prompt's hash and the date, are in
 [RESULTS.md](RESULTS.md).
+
+## Next
+
+What the bench lacks to be a test rather than a development result, in
+the order each closes the most (STATUS.md, items 5 and 6).
+
+1. **A second judge.** `results/gold-judged.tsv` and `kind/sample.tsv`
+   judged by a second person who did not write the gold; agreement
+   reported as Krippendorff's alpha with the number and the band, not a
+   pass; disagreements kept as a third column.
+2. **Two model families in one run.** `run.sh` takes two `$WWBMODEL`s
+   and binds each in turn at `/mnt/llm`, so each gold passage has
+   readings from both; `score.py` and RESULTS.md report agreement
+   within a model and across models apart, and a fault found by one
+   family only is listed.
+3. **Canon and held-out scored apart.** Each `gold/<id>.gold` says
+   whether its fault is in the standard literature (Kenny, Geach,
+   Moore, the commentaries named) or planted here; RESULTS.md gives
+   found-in-canon and found-in-held-out as two numbers, since a reader
+   blinded to the corpus is not blinded to its training (THREATS.md).
+4. **Keyed sets from outside the project**, each under its licence,
+   share-alike in its own directory:
+   - forall x: Calgary (CC BY 4.0) with its solutions booklet:
+     symbolization exercises with a key, so `argue`'s atoms and
+     formulas are scored against an answer and `prove`'s verdict
+     against the key's;
+   - the Open Logic Project's exercises (CC BY), for `prove` on
+     first-order fragments and where it says `undecided`;
+   - FOLIO with its corrected labels (arXiv 2606.02837), for `prove`
+     against solver-verified items;
+   - Benzmüller's ontological-argument benchmark, 294 theorems and 45
+     non-theorems in TPTP (arXiv 2609.26806), for `prove -t` on the
+     fragment it reaches, coverage stated;
+   - the Microtext corpus and SemEval-2018 Task 12, for
+     `argue/missing` against the published enthymeme results (Feng and
+     Hunter, COMMA 2026, code released);
+   - DeepA2 and Argunauts' solver-checked reconstructions (CC BY-SA,
+     Apache), for `argue` against expert encodings under shared atoms.
+   SEP's reconstructions and the open-access journals under NC-ND are
+   used locally and never redistributed; what is published is the
+   citation and this repository's own encoding.
+5. **Texts after 1910 and outside English translation.** The
+   Gutenberg sets are nineteenth-century translation (Chase, Jowett,
+   Elwes, Meiklejohn): what is measured is the tools on those
+   sentences. The owner's own work (the dissertation run in
+   `philosophy-dissertation/analysis`) and open-access papers used
+   locally are the held-out set for modern prose.
+6. **Decoding settings in every provenance line**, so a run can be
+   described as the 2026 reproducibility guidance asks.
+
+Each item is a change to `run.sh`, `score.py` or a `.gold` file and a
+section of RESULTS.md, and none changes a tool.

@@ -75,9 +75,17 @@ commands extracted from `argue`:
   starts, so the blinding is structural; on a host without one it is a
   directory and a prompt that says not to look, and the provenance
   line says which.
-- **Several.** `-k` independent readers, each a new session; different
-  models where asked, by binding a different server at `/mnt/llm` for
-  each.
+- **Several, and not all one model.** `-k` readers, each a new
+  session; different models by binding a different server at
+  `/mnt/llm` for each. Samples of one model are not independent
+  readers: where its error is systematic they agree on it, and the
+  question `settle` would ask is never asked (STATUS.md, "Independence
+  of readings"). So where a verdict matters, the readers are of at least
+  two models, the provenance line says which, and agreement is reported
+  within a model and across models apart; and a reader that is not a
+  model at all, the skeleton written by rule from the parse
+  (MECHANICAL.md), is a reader of another kind and counts for more than
+  a third sample.
 - **Declared format, parsed by rule.** A reading the parser cannot
   read goes back once with the reason; a second failure is a reading
   lost, reported.
@@ -92,7 +100,18 @@ commands extracted from `argue`:
   the date: `readings 3/3 claude-opus-5-5 7f3a9c1e 2026-10-19`. A
   person's line, `hand <who>`, outweighs it; a driving agent's line,
   `agent <name>`, is a proposal with that provenance and never
-  outweighs a person's.
+  outweighs a person's. To add: the decoding settings (temperature,
+  reasoning effort, a seed where there is one), which the 2026 guidance
+  for reproducible model use in the humanities asks for beside model,
+  version, date and prompt; and, for a reader that is a host command
+  and so not confined, the word `unconfined`, as step 0 below already
+  asks.
+- **Blinded to the corpus, not to its training.** A reader cannot see
+  the other readings or the answers. It can recall what it read in
+  training, and the faults of the gold set are the literature's. So
+  the bench scores canon passages apart from held-out ones, and the gap
+  between them is reported as the measure of what blinding cannot
+  remove ([THREATS.md](THREATS.md)).
 - **Kept, and reproducible as far as a model allows.** A live reading
   cannot be rerun and get the same answer, so it is never thrown
   away: `read` keeps every reading under the hash of its prompt, text
@@ -263,7 +282,8 @@ Then CORPUS.md's steps 1 to 8, with `questions` at step 4 beside
 - The benchmark corpora pass with scripted readers: the golden ledger
   and agenda come out of the texts and the scripted readings by rule.
 - Gettier, Mackie and Chisholm pass with a live model in two runs of
-  three: the known fault is found from the texts alone.
+  three: the known fault is found from the texts alone, with readers of
+  two model families, and found by both.
 - The corpus owner's own work with Gross and Dyzenhaus yields a ledger and an
   agenda a person has read and found to be about the texts.
 - Every line of every corpus file says who wrote it, with the model,

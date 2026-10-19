@@ -49,6 +49,29 @@ local model, `/mnt/llm`, a command), so a small model for `senses` and a
 large one for the reading can be used side by side while the change is
 made; that is configuration, not code.
 
+## What is on the shelf
+
+The published numbers for each call's mechanical kin, as of October
+2026, so that a replacement is held to a bar and not to a hope. Each is
+the figure to beat on the bench, on philosophy, where the external one
+was measured on news, science or debate text. STATUS.md, "What the
+research says", has the sources.
+
+| Call | Kin on the shelf | Its number | What that means here |
+|---|---|---|---|
+| `says` | attribution and reported-speech detection (PARC 3.0) | BERT macro-F1 82.6 on content spans; transfers badly between corpora | the rule's 10 of 14 is in range; a trained model would need philosophy examples, which the readings are |
+| `kind` | argument-scheme classification (EthiX, USTV) | macro-F1 0.72 and 0.44 with fine-tuned BERT; tested on ten arguments a scheme | 67% agreement is where the field is; the judged sample decides whether reader or rule was right, and is the training set |
+| `settle` | natural-language inference, small cross-encoders | DeBERTa-v3-small 91.65 SNLI, 87.55 MNLI-mm; an xsmall binary model on 782k pairs | the first call to move: 362 questions with answers are the test, and the question is written to be an NLI pair |
+| `senses` | word-sense disambiguation | no philosophy inventory exists; contextual embeddings do the general case | the corpus's `terms/` is the inventory to make; until then a model, one call a run |
+| `scope` | none needed | done by rule | the prover writes both readings |
+| `argue`, `claims` | LLM-to-logic with fine-tuning | an 8B open model at 95% validity against a frontier model's 61%, with validity and faithfulness scored together | the skeleton by rule first; then the small model with `prove` as judge, trained on the readings the checks passed |
+| a reader of another kind | the rule-written skeleton | none published | it counts for more than a third sample of one model, because its errors are not the model's (THREATS.md) |
+
+A replacement is taken when the bench says it is as good on the
+held-out sets, and the model it replaces stays bound at `/mnt/llm` for
+the calls not yet moved. The decision is per call, recorded in
+STATUS.md with the numbers, and reversible.
+
 ## What is not on the roadmap
 
 A local agent keeping the workbench's notes, or a graph database. The
