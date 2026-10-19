@@ -49,6 +49,34 @@ tools moved, October 2026; update it as things move.
    a missing step found nearly every time; a valid argument called valid
    23 times in 24 or better; attributions marked accurately; the noisiest
    check (`argue/negation`) halved.
+5. **Independent readers.** `argue -k 3` reads with one model three
+   times. Three samples of one model agree where its error is
+   systematic, the question `settle` would ask is never asked, and the
+   vote is unanimous and wrong. The mechanism for readers of different
+   models is built (a different server at `/mnt/llm` for each,
+   CORPUS.md) and is not yet how a bench run is made. What is wanted:
+   two model families in every gold run, agreement reported within a
+   model and across models apart; a reader of another kind (the
+   skeleton by rule, MECHANICAL.md) counted as more than a third
+   sample; and the bench scoring canon passages, whose faults a model
+   may have read in the literature, apart from held-out ones.
+6. **A second judge.** Every gold run was judged by the one person who
+   wrote the gold (RESULTS.md says so: "a development result, not a
+   test"). What is wanted: a second annotator over
+   `results/gold-judged.tsv` and the `kind` sample, agreement reported
+   (Krippendorff's alpha, with the bands named and their arbitrariness
+   admitted), and keyed sets from outside the project beside the gold:
+   forall x's exercises with its solutions booklet (CC BY 4.0), the
+   Open Logic Project's, the corrected FOLIO labels, Benzmüller's
+   ontological-argument benchmark (294 theorems and 45 non-theorems in
+   TPTP) for the fragment `prove` covers, and the Microtext corpus for
+   `argue/missing`. See bench/README.md, "Next".
+7. **Sources.** Nothing here says whether a reference is on record, a
+   canonical citation names a passage that exists, or a quotation
+   matches its edition; `claims/attributed-unread` says which work
+   would let a check run and stops there. [SOURCES.md](SOURCES.md) is
+   the design, and [THREATS.md](THREATS.md) what the whole collection
+   must defend against.
 
 ## What the research says
 
@@ -75,6 +103,117 @@ tools moved, October 2026; update it as things move.
   nearest prior design to `argue`.
 - Agreement among samples of one model is not proof of faithfulness: a
   model can be consistently wrong.
+- The 2026 work on faithfulness has gone where the read-back went:
+  VERGE found that on FOLIO only 29% of conclusions reach unanimous
+  agreement among sampled formalizations (arXiv 2601.20055); a
+  round-trip translation back to English is now standard and an
+  October 2026 paper shows it misses premise sets that are jointly
+  contradictory (arXiv 2610.20573), which `prove` reports as
+  `argue/inconsistent`; another found a plain reverse translation
+  "amplified the problem" and asks per-clause questions instead (arXiv
+  2607.13303), which is what `settle`'s situation questions are. FOLIO's
+  own labels were found flawed and re-annotated (arXiv 2606.02837); a
+  bench that uses FOLIO uses the corrected set.
+- Argument reconstruction scored on validity and faithfulness together,
+  the pair `prove` over `argue` embodies: Ryu, Betz and colleagues'
+  "Argument Reconstruction as Supervision" (arXiv, March 2026) reports
+  a fine-tuned 8-billion-parameter open model at 95% validity against
+  61% for a frontier commercial model. That is the case for the Jetson
+  item below, with `prove` as the exact reward.
+
+### Independence of readings
+
+- Model judges are not independent. Across ten judges the average
+  pairwise error correlation was 0.21, so ten behave like three or four
+  independent ones, and the correlation is higher among frontier models
+  of different providers; 28% of comparisons flipped under a
+  confounder-aware aggregation (arXiv 2609.22512; CARE, ICML 2026).
+  Model-to-model agreement on argument schemes and spans was found
+  higher than human-to-human (Lindahl, *SEM 2025), which is a sign of
+  shared bias as much as of skill. `argue -k` across one model inherits
+  all of this; across models by bind, less; a reader that is a rule,
+  none.
+- Krippendorff's alpha bands (0.80 reliable, 0.667 tentative) are the
+  norm in humanities annotation and are criticised as arbitrary; report
+  the number and the band, not a pass.
+- Reproducibility guidance for model use in the humanities (2026) asks
+  for model name and version, access date, the full prompt and the
+  decoding settings. The provenance line has the first four; the
+  settings are the field to add (THREATS.md).
+
+### Missing premises
+
+- No published system has a prover compute the missing premise. Feng
+  and Hunter (COMMA 2026) have a model propose implicit premises and a
+  SAT solver confirm entailment, lifting three-class accuracy on the
+  Microtext corpus from 0.426 to 0.555, code released; a two-agent
+  debate holds the SemEval-2018 Task 12 premise-selection result.
+  `argue/missing` computes up to three bridging premises by rule;
+  measured on Microtext it would be the first comparison of the two
+  ways.
+- Fallacy detection is span classification (MAFALDA, 23 classes:
+  GPT-3.5 at F1 0.138 against a human 0.186); none derives the name
+  from the form, as `prove` does for affirming the consequent, denying
+  the antecedent and the generalization from named cases.
+
+### Proof assistants in philosophy
+
+- Benzmüller and colleagues hand-formalize in Isabelle/HOL and, in
+  September 2026, ported Gödel's and Scott's ontological arguments to
+  Lean 4 and TPTP as a benchmark: 294 theorems and 45 non-theorems, of
+  which five higher-order provers and cvc5 prove 227 within 10 s and
+  232 within 60 s and none of the non-theorems (arXiv 2609.26806); a
+  machine-checked faithfulness theorem for first-order modal embeddings
+  (arXiv 2607.10880); three years of teaching with the method (arXiv
+  2610.08214). No model is used anywhere in it. The benchmark is
+  higher-order modal; `prove -t` could be measured on the fragment it
+  reaches, with coverage stated.
+- The cautionary tale: Oppenheimer and Zalta's 2011 Prover9
+  simplification of the ontological argument turned out, on the
+  project's own page, to be an artefact of how definite descriptions
+  were eliminated. A sound prover over an unfaithful translation proves
+  the wrong thing, which is why the read-back exists.
+
+### Computational reflective equilibrium
+
+- The nearest work to the ledger is Beisbart, Betz and Brun's formal
+  model of reflective equilibrium (Ergo 8(15), 2021) and its Python
+  packages `rethon` and `theodias` (github.com/re-models, 1.0.0, August
+  2024), the latter Betz's theory of dialectical structures: positions
+  over a sentence pool, an achievement function, the trolley case study
+  (Rechnitzer, Synthese 2022). Later papers find the model raises
+  agreement without uniqueness (Freivogel 2023) and that results depend
+  on the simulation's setup (Freivogel and Cacean 2024). It is
+  hand-built and propositional, with no text pinning and no attribution;
+  the corpus is what would feed it. CORPUS.md, "Kin".
+- Nothing encodes a philosophical debate across authors over shared
+  atoms with attribution. AIFdb holds argument maps by the thousand
+  (domains mostly not philosophy); IBM Debater's datasets are claim and
+  evidence spans; Archelogos (scholar-written analyses of Plato and
+  Aristotle, to 2003) is prose; the PhilPapers Survey is positions
+  without arguments.
+
+### Attribution, kinds, settling, senses
+
+- Attribution and reported speech: PARC 3.0 (about 20,000 attribution
+  relations) with BERT at macro-F1 82.6 on content spans, and poor
+  transfer across corpora; hedge detection F1 60 to 68 classically.
+  `says` by rule matched readers in 10 of 14 passages. None of it is
+  evaluated on philosophy.
+- Argument-scheme classification tops out at macro-F1 0.72 on one small
+  set (EthiX, 686 arguments, 8 schemes) and 0.44 on another (USTV, 505
+  arguments, 38 schemes), tested on ten arguments a scheme (ArgMining
+  2025). `kind`'s 67% agreement with readers sits in that range; the
+  disagreements are about what a claim says, not its words, which is
+  why the next step is a small classifier on judged examples.
+- Natural-language inference is ripe for `settle`: a DeBERTa-v3-small
+  cross-encoder reports 91.65 on SNLI and 87.55 on MNLI-mismatched, and
+  an xsmall binary model trained on 782,000 pairs including adversarial
+  ones runs on a laptop. The 362 settle questions and answers in the
+  breadth run are the test set.
+- No philosophy-specific word-sense inventory exists. `senses`' two
+  senses per atom, kept per corpus under `terms/` (issue #1), would be
+  the first.
 
 ### Decision procedures
 

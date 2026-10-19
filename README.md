@@ -79,6 +79,13 @@ in four documents:
 - [docs/MECHANICAL.md](docs/MECHANICAL.md): each place a model is called,
   and the rule or small trained model that could do it instead, judged
   by the bench.
+- [docs/SOURCES.md](docs/SOURCES.md): references resolved against the
+  record, canonical citations (Bekker, Stephanus, Akademie-Ausgabe)
+  resolved to passages, quotations checked against their edition; what
+  `claims/attributed-unread` points at.
+- [docs/THREATS.md](docs/THREATS.md): what readers, a driver and a
+  corpus must be defended against, what the name space answers, what
+  it does not, and the tests that asks for.
 
 What the tools do on primary texts, and what was changed because of it,
 is [bench/RESULTS.md](bench/RESULTS.md).

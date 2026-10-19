@@ -1,6 +1,8 @@
 # The corpus: a field's claims as files
 
-A design sketch, before code. Status: proposed; nothing built. Read
+A design sketch, before code. Status: step 1 of the order of work is
+built (`phil/corpus`, `phil/claims`, `phil/tree`, the attribution
+checks), the rest proposed. Read
 [ARGUMENT-FORMAT.md](ARGUMENT-FORMAT.md) first: everything here extends
 the logic file and the tools that read it, and changes none of them.
 [REACH.md](REACH.md) says which problems the tools can do something
@@ -236,7 +238,7 @@ checks scholarship, by rule, each check decided by `prove` (built):
 |---|---|
 | `claims/misattributed` | a work reports a claim of a work in the corpus that no reading of that work asserts |
 | `claims/contradicts-source` | a work reports a claim its source, in the corpus, denies |
-| `claims/attributed-unread` | a claim attributed to a work not in the corpus: the corpus cannot check it, and says which work would let it |
+| `claims/attributed-unread` | a claim attributed to a work not in the corpus: the corpus cannot check it, and says which work would let it; [SOURCES.md](SOURCES.md) is the design for saying whether that work is on record and which passage is cited |
 | `claims/reported-only` | a reported claim no work in the corpus holds, the reporter included: none whose own commitments entail it, as `prove` decides; held by someone outside the corpus, or by no one |
 
 The first two are the findings a historian of philosophy wants and no
@@ -709,6 +711,42 @@ every tool here is a function of files and could be run from a Unix
 shell. The name space is used where it changes the method, in the
 agent layer, for blinding, model binding and audit, and the benchmark
 decides whether any of it is working.
+
+## Kin
+
+What the sweep of October 2026 found nearest to this, and what each
+suggests (sources in STATUS.md, "Computational reflective
+equilibrium").
+
+- **The RE model and `theodias`.** Beisbart, Betz and Brun's formal
+  model of reflective equilibrium, with Betz's theory of dialectical
+  structures as `theodias` and the RE process as `rethon` (Python,
+  August 2024), is the one published machinery for positions over a
+  sentence pool with an achievement function, and the one place a
+  "ledger of what a premise costs" has been computed. It is hand-built,
+  propositional, and knows nothing of texts or authors. The corpus is
+  exactly the input it lacks. Before `ledger` is written from scratch,
+  `phil/ledger -t theodias` should export a corpus's claims and
+  positions in its form, so that its measures can be read beside the
+  ledger's and its ten years of results compared with; the ledger's
+  own measures then add what it has not: attribution, kinds, cases at
+  their sentences. The RE project's own finding, that results turn on
+  the simulation's parameters, is a reason to record every search
+  parameter as provenance on a ledger line.
+- **Argument maps.** `map` writes Argdown; an AIF export beside it lets
+  OVA and Carneades read a corpus's attacks, and Carneades 4 decides
+  grounded, preferred and stable semantics independently, which is the
+  check on `argue/survives` that `prove -t` is for validity.
+- **Positions without arguments.** The PhilPapers Survey gives
+  positions a field holds; `positions` could take its categories as
+  names for the coherent sets `prove -p` finds, so `agenda/unoccupied`
+  can say "no survey position" rather than only "no work".
+- **Nobody has done the rest.** No project encodes a debate across
+  authors over shared atoms with who asserts, denies, assumes or
+  reports each claim. The attribution findings
+  (`claims/misattributed`, `claims/contradicts-source`) have no
+  counterpart; the nearest is citation-error detection in science, with
+  small models at micro-F1 about 0.59.
 
 ## What this is not
 
