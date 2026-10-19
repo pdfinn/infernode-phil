@@ -30,7 +30,21 @@ tools moved, October 2026; update it as things move.
    [CORPUS.md](CORPUS.md) is the design for reading a field's works as
    one: shared atoms, aligned claims, cases as a test suite, a ledger of
    what each premise costs, and the open questions, with a benchmark of
-   settled debates to pass first. Proposed; step 0 of PHIL.md, the move, is done.
+   settled debates to pass first. Step 1 is built: the corpus directory,
+   `phil/corpus` holding each work's reports to what the reported work
+   holds (by `prove`), and `phil/claims` reading a source for everything
+   it claims. Measured on three commentaries and their sources
+   ([bench/RESULTS.md](../bench/RESULTS.md)): a report and its source
+   now turn on the form two readers give one claim. The rest (cases,
+   ledger, agenda, the benchmark of settled debates) is not built.
+4. **The bench** ([bench/](../bench/)). The tools on primary texts:
+   26 canonical arguments with what the literature says is wrong with
+   them, 100 passages from 25 works, three commentaries with their
+   sources, and held-out sets for equivocation and scope. What it found
+   and what was done about it is [bench/RESULTS.md](../bench/RESULTS.md):
+   a missing step found nearly every time; a valid argument called valid
+   23 times in 24 or better; attributions marked accurately; the noisiest
+   check (`argue/negation`) halved.
 
 ## What the research says
 
@@ -93,6 +107,17 @@ tools moved, October 2026; update it as things move.
    and premises no finite case satisfies are inconsistent only when a
    proof shows it. TPTP output (`prove -t`), and every test argument's
    verdict held to Z3's (`tests/prove_z3_test.sh`).
+
+3. `senses`: **done, measured:** a claim used in two senses, or a
+   premise that takes a word from one sense to another, put to a model
+   as one narrow question and decided by the prover (split, or taken
+   out, and proved again). From no equivocation found to about two runs
+   in three, on the gold set and held out alike; no false alarm in 200
+   breadth readings but one, defensible.
+4. `scope`: **done, measured:** where an argument turns on the scope of
+   a necessity or an ought (`p → □q` or `□(p → q)`), decided by the
+   prover alone, no model. Boethius's foreknowledge argument in 6 runs
+   of 6, the held-out objections in the *Summa* in 10 of 12.
 
 ## Later, to one side
 
