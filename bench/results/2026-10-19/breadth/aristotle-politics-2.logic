@@ -1,0 +1,13 @@
+# the argument of aristotle-politics-2.md as claude-opus-5-5 read it: check that it says what the text says
+# The main argument (S1-S3) holds that not all of Socrates' discourses are true. S4-S5 begin a separate point about legislation and are left out.
+# S3's "ought to be possible" is read as a standard any acceptable (true) hypothesis must meet, so it is written without deontic operators.
+atom	all_true	all the discourses of Socrates are true
+atom	posits_5000	the scheme posits the number just spoken of, five thousand idle persons besides women and servants
+atom	needs_vast_land	the scheme would want the country of Babylonia or one like it, of immeasurable extent, to support them
+atom	hyp_possible	the hypothesis is possible
+P1	S2	posits_5000	kind empirical
+P2	S2	posits_5000 → needs_vast_land	kind empirical
+A1	-	needs_vast_land → ¬hyp_possible
+P3	S3	all_true → hyp_possible	kind normative
+C	S1	¬all_true
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

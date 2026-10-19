@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+epictetus-1.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: epictetus-1.logic.r2 and epictetus-1.logic.r2.2 have "carpenter_learns ∧ pilot_learns → must_learn_phil" and "must_learn_phil → ¬wish_sufficient"; epictetus-1.logic.r2.3 has nothing from it; they differ when only "the carpenter becomes a carpenter when he has learned certain things", "the pilot becomes a pilot by learning certain things", "in philosophy it is sufficient to wish to be wise and good" and "in philosophy there is also a necessity to learn certain things" are true, which the second allows
+epictetus-1.logic.r2: argue/readings: U1: epictetus-1.logic.r2 and epictetus-1.logic.r2.2 take for granted "if (the carpenter becomes a carpenter when he has learned certain things and the pilot becomes a pilot by learning certain things), then in philosophy there is also a necessity to learn certain things"; epictetus-1.logic.r2.3 does not
+epictetus-1.logic.r2: argue/answered: U1: answered yes, which keeps epictetus-1.logic.r2 and epictetus-1.logic.r2.2, to: Does the text's argument take this for granted, whether or not it says so: "if (the carpenter becomes a carpenter when he has learned certain things and the pilot becomes a pilot by learning certain things), then in philosophy there is also a necessity to learn certain things"? Answer yes if the author would accept it as part of the argument.
+epictetus-1.logic.r2: argue/readings: U2: epictetus-1.logic.r2 and epictetus-1.logic.r2.2 take for granted "if in philosophy there is also a necessity to learn certain things, then it is not so that in philosophy it is sufficient to wish to be wise and good"; epictetus-1.logic.r2.3 does not
+epictetus-1.logic.r2: argue/answered: U2: answered yes, which keeps epictetus-1.logic.r2 and epictetus-1.logic.r2.2, to: Does the text's argument take this for granted, whether or not it says so: "if in philosophy there is also a necessity to learn certain things, then it is not so that in philosophy it is sufficient to wish to be wise and good"? Answer yes if the author would accept it as part of the argument.
+epictetus-1.logic.r2: argue/verdicts: valid as epictetus-1.logic.r2, epictetus-1.logic.r2.2 read it, not as the others do: which reading is right decides the verdict
+epictetus-1.logic.r2: argue/readings-agree 4
+epictetus-1.logic.r2: argue/readings-differ 1
+epictetus-1.logic.r2: argue/verdicts-agree 0
+epictetus-1.logic.r2: argue/mismatches 0
+epictetus-1.logic.r2.2: argue/mismatches 0
+epictetus-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: epictetus-1.logic.r2
+# argument written to epictetus-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+epictetus-1.md:1: argue/unused: P3 (S5): P3 is not needed: the conclusion follows from P1, A1 and A2 without it
+epictetus-1.md:1: argue/unused: P4 (S6): P4 is not needed: the conclusion follows from P1, A1 and A2 without it
+epictetus-1.md:1: argue/assumed: C (S2): follows only by A1 and A2, which the text never states: state it, or argue for it
+epictetus-1.logic.r2: argue/valid 1

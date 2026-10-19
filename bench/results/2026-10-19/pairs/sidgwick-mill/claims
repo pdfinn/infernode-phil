@@ -1,0 +1,19 @@
+# each claim and the works that assert, deny, assume or report it, written by phil/corpus
+claim	desired->proof	asserts mill:P1	reports sidgwick:P3 mill
+claim	desired	asserts mill:P2	reports sidgwick:P2 mill
+claim	proof	asserts mill:C1
+claim	proof->own_good	asserts mill:P3	reports sidgwick:P4 mill
+claim	own_good	asserts mill:C2
+claim	own_good->general_good	asserts mill:P4	reports sidgwick:P5 mill
+claim	general_good	asserts mill:C3
+claim	general_good->end_of_conduct	assumes mill:A1
+claim	end_of_conduct->criterion	asserts mill:P5
+claim	end_of_conduct&criterion	asserts mill:C
+claim	sidgwick_established->sidgwick_actual_desire_general	reports sidgwick:P1 mill	asserts sidgwick:P7
+claim	sidgwick_actual_desire_general->sidgwick_general_desirable	asserts sidgwick:P6
+claim	sidgwick_individual_desire_general	denies sidgwick:P8
+claim	!sidgwick_individual_desire_general->!sidgwick_aggregate_desire_general	asserts sidgwick:P9
+claim	sidgwick_actual_desire_general->sidgwick_individual_desire_general|sidgwick_aggregate_desire_general	assumes sidgwick:A1
+claim	sidgwick_actual_desire_general	denies sidgwick:C1
+claim	sidgwick_gap_filled->sidgwick_rational_benevolence	asserts sidgwick:P10
+claim	sidgwick_established	denies sidgwick:C

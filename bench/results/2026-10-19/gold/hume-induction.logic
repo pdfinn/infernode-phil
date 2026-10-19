@@ -1,0 +1,32 @@
+# reading 2 of hume-induction.md by claude-opus-5-5
+# Hume's case that no argument, demonstrative or probable, engages us to trust past experience.
+# S3 and S4 are rhetorical questions offered as cases of what can be conceived; S3 is taken as asserting conceivability.
+# The "can" and "must" in S2, S5 and S6 are read as non-modal (plain implication), so no modal logic is used.
+atom	justified	we are engaged by arguments to put trust in past experience and make it the standard of our future judgement
+atom	demo	there is a demonstrative argument (concerning relations of ideas) that the future will be conformable to the past
+atom	probable	there is a probable argument (concerning matter of fact and existence) that the future will be conformable to the past
+atom	contra	it implies a contradiction that the course of nature may change
+atom	conceivable	that the course of nature may change, and like objects be attended with contrary effects, can be clearly and distinctly conceived
+atom	causal	all arguments concerning existence are founded on the relation of cause and effect
+atom	fromexp	our knowledge of the relation of cause and effect is derived entirely from experience
+atom	presupp	all our experimental conclusions proceed upon the supposition that the future will be conformable to the past
+atom	circular	proving the supposition that the future will be conformable to the past by probable arguments is going in a circle, taking for granted the point in question
+P1	S1	justified → demo ∨ probable	kind conceptual
+P2	S3	conceivable
+P3	S5	conceivable → ¬contra	kind conceptual
+C1	S2	¬contra	from P2 P3
+P4	S5	¬contra → ¬demo	kind conceptual
+C2	S2	¬demo	from C1 P4
+C3	S6	justified → probable	from P1 C2
+P5	S8	causal
+P6	S8	fromexp
+P7	S8	presupp
+# The "therefore" in S9 draws circularity from the three S8 claims; the link is unstated.
+A1	-	causal ∧ fromexp ∧ presupp → circular
+C4	S9	circular	from P5 P6 P7 A1
+# Unstated: a circular proof is no argument of this kind.
+A2	-	circular → ¬probable
+C5	S7	¬probable	from C4 A2
+# S7's "no argument of this kind", together with S6, yields that we are not engaged by arguments.
+C	S7	¬justified	from C3 C5
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

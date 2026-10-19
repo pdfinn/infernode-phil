@@ -1,0 +1,17 @@
+# the argument of aristotle-ethics-4.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+# "should" and "must" are read throughout as obligation (ought).
+# S1 (honour to elders, frankness to companions) lists duties the conclusion is not drawn from, so it is left out.
+atom	render_due	we render to those of the same family, tribe or city, and all similarly connected with us, their due
+atom	discriminate	we discriminate what belongs to each in respect of nearness of connection, goodness or intimacy
+atom	same_class_easier	in the case of those of the same class the discrimination is easier
+atom	diff_class_harder	in the case of those who are in different classes the discrimination is a matter of more trouble
+atom	give_up	we give up the attempt to discriminate
+atom	observe_practicable	we observe the distinctions so far as it is practicable to do so
+P1	S2	O render_due ∧ O discriminate	kind normative
+P2	S2	same_class_easier ∧ diff_class_harder	kind empirical
+# S3: the greater trouble "should not be a reason for giving up the attempt"; read as: though it is harder, since we ought to discriminate, we ought not give up.
+P3	S3	diff_class_harder ∧ O discriminate → O ¬give_up	kind normative
+A1	-	O discriminate → O observe_practicable	kind normative
+C	S3	O ¬give_up ∧ O observe_practicable	from P1 P2 P3 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

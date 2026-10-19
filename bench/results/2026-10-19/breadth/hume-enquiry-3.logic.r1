@@ -1,0 +1,28 @@
+# reading 3 of hume-enquiry-3.md by claude-opus-5-5
+# S1: the objection (frenzy) and its parity reply (earthquake) are kept as plain atoms.
+# The atoms already carry "may"/"possibility", so no modal logic is used.
+# The bridge from the hand-in-fire case to the general claim about inferences from
+# human conduct is unstated, so it is supplied as A1. Placing the main conclusion at S6 is my reading.
+atom	assured_no_stab	I rest assured that my honest, opulent friend is not to stab me to rob me of my silver standish
+atom	assured_house_stands	I rest assured that my new, solidly built house will not fall
+atom	frenzy_possible	he may have been seized with a sudden and unknown frenzy
+atom	earthquake_possible	a sudden earthquake may arise and tumble my house about my ears
+atom	certain_no_hand_fire	I know with certainty that he is not to put his hand into the fire and hold it there till it be consumed
+atom	certain_no_suspend	I can foretell with assurance that, if he throw himself out at the window and meet no obstruction, he will not remain a moment suspended in the air
+atom	contrary_nature	holding his hand in the fire till it be consumed is contrary to all the known principles of human nature
+atom	frenzy_no_possibility	no suspicion of an unknown frenzy can give the least possibility to his holding his hand in the fire
+atom	moral_inference_certain	inferences from the usual conduct of mankind attain certainty proportioned to our experience of that conduct
+atom	half_reasonings_similar	above one half of human reasonings contain inferences of a similar nature
+P1	S1	assured_no_stab ∧ assured_house_stands
+O1	S1	frenzy_possible	against P1
+R1	S1	earthquake_possible ∧ assured_house_stands	against O1
+P2	S3	certain_no_suspend
+P3	S3	certain_no_suspend → certain_no_hand_fire
+C1	S3	certain_no_hand_fire	from P2 P3
+P4	S4	contrary_nature
+P5	S4	contrary_nature → frenzy_no_possibility
+C2	S4	frenzy_no_possibility	from P4 P5
+A1	-	certain_no_hand_fire ∧ frenzy_no_possibility → moral_inference_certain
+P6	S6	half_reasonings_similar	kind empirical
+C	S6	moral_inference_certain ∧ half_reasonings_similar	from C1 C2 A1 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

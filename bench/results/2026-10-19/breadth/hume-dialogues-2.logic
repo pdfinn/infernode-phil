@@ -1,0 +1,21 @@
+# reading 2 of hume-dialogues-2.md by claude-opus-5-5
+# Philo's analogical argument: the universe resembles an animal, so it is one, with the Deity as its soul.
+# S2 reads as detail of the resemblance in S1, so its claims stand as further premises, not as a separate step.
+# The text gives no explicit bridge from resemblance to identity. The analogical step it relies on ("therefore, I infer") is supplied as A1.
+atom	resembles_animal	the universe, so far as it falls under our knowledge, bears a great resemblance to an animal or organised body
+atom	like_principle	the universe seems actuated with a like principle of life and motion
+atom	circulation_no_disorder	a continual circulation of matter in the universe produces no disorder
+atom	waste_repaired	a continual waste in every part of the universe is incessantly repaired
+atom	sympathy	the closest sympathy is perceived throughout the entire system
+atom	parts_preserve	each part or member, in performing its proper offices, operates both to its own preservation and to that of the whole
+atom	world_animal	the world is an animal
+atom	deity_soul	the Deity is the soul of the world, actuating it and actuated by it
+P1	S1	resembles_animal	kind empirical
+P2	S1	like_principle	kind empirical
+P3	S2	circulation_no_disorder	kind empirical
+P4	S2	waste_repaired	kind empirical
+P5	S2	sympathy	kind empirical
+P6	S2	parts_preserve	kind empirical
+A1	-	resembles_animal ∧ like_principle ∧ circulation_no_disorder ∧ waste_repaired ∧ sympathy ∧ parts_preserve → world_animal ∧ deity_soul
+C	S3	world_animal ∧ deity_soul
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

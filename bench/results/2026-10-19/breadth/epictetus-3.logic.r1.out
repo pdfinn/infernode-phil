@@ -1,0 +1,29 @@
+# 3 readings by claude-opus-5-5, compared
+epictetus-3.md:1: argue/readings: S1 is read 2 ways: epictetus-3.logic.r1 has "purify_faculty"; epictetus-3.logic.r1.2 and epictetus-3.logic.r1.3 have nothing from it; they differ when nothing is true, which the second allows
+epictetus-3.md:1: argue/answered: S1: answered no, which keeps epictetus-3.logic.r1, to: Suppose "you must make your ruling faculty pure, and this mode of life also" is false. Is S1, "In the first place then you must make your ruling faculty pure, and this mode of life also.", true then?
+epictetus-3.md:1: argue/readings: S8 is read 2 ways: epictetus-3.logic.r1 and epictetus-3.logic.r1.2 have nothing from it; epictetus-3.logic.r1.3 has "¬can_eject"; they differ when only "some man can eject me out of the world" is true, which the first allows
+epictetus-3.md:1: argue/answered: S8: answered no, which keeps epictetus-3.logic.r1.3, to: Suppose "some man can eject me out of the world" is true. Is S8, "He cannot.", true then?
+epictetus-3.md:1: argue/readings: S9 is read 2 ways: epictetus-3.logic.r1 and epictetus-3.logic.r1.2 have nothing from it; epictetus-3.logic.r1.3 has "same_everywhere"; they differ when nothing is true, which the first allows
+epictetus-3.md:1: argue/answered: S9: answered no, which keeps epictetus-3.logic.r1.3, to: Suppose "wherever I go there are the sun, moon, stars, dreams, omens and conversation with gods" is false. Is S9, "But wherever I go, there is the sun, there is the moon, there are the stars, dreams, omens, and the conversation ([Greek: omilia]) with gods.", true then?
+epictetus-3.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: epictetus-3.logic.r1 has "material_understanding ∧ business_appearances ∧ body_nothing → death_indifferent" and "¬can_eject ∧ same_everywhere → ¬should_fly"; epictetus-3.logic.r1.2 and epictetus-3.logic.r1.3 have "material_understanding ∧ business_appearances → purify_faculty" and "body_nothing → death_indifferent" and "¬can_eject ∧ same_everywhere → ¬should_fly"; they differ when only "you must make your ruling faculty pure, and this mode of life also", "the matter for me to work on is my understanding, as wood is to the carpenter", "the body and its parts are nothing to me", "one should fly (to escape)" and "some man can eject me out of the world" are true, which the first allows
+epictetus-3.md:1: argue/readings: the conclusion is read 2 ways: epictetus-3.logic.r1 has "death_indifferent"; epictetus-3.logic.r1.2 and epictetus-3.logic.r1.3 have "purify_faculty"; they differ when only "death, of the whole or of a part, may come when it chooses" is true, which the first allows
+epictetus-3.logic.r1: argue/readings: the main conclusion is read at 2 sentences: epictetus-3.logic.r1 puts it at S5, "Let it come when it chooses, either death of the whole or of a part."; epictetus-3.logic.r1.2 and epictetus-3.logic.r1.3 at S1, "In the first place then you must make your ruling faculty pure, and this mode of life also."
+epictetus-3.logic.r1: argue/answered: M: answered no, which keeps epictetus-3.logic.r1.2 and epictetus-3.logic.r1.3, to: Is the text's main conclusion S5, "Let it come when it chooses, either death of the whole or of a part.", rather than S1, "In the first place then you must make your ruling faculty pure, and this mode of life also."?
+epictetus-3.md:1: argue/unfaithful: epictetus-3.logic.r1.3 P4 (S8): the sentence has no word of "some man can eject me out of the world": is it the sentence P4 came from?
+epictetus-3.logic.r1: argue/readings-agree 2
+epictetus-3.logic.r1: argue/readings-differ 5
+epictetus-3.logic.r1: argue/verdicts-agree 1
+epictetus-3.logic.r1: argue/answers-split: no reading agrees with all 4 answers (epictetus-3.logic.r1 1, epictetus-3.logic.r1.2 1, epictetus-3.logic.r1.3 3 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+epictetus-3.logic.r1: argue/mismatches 0
+epictetus-3.logic.r1.2: argue/mismatches 0
+epictetus-3.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: epictetus-3.logic.r1.3
+# argument written to epictetus-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+epictetus-3.md:1: argue/unfaithful: P4 (S8): the sentence has no word of "some man can eject me out of the world": is it the sentence P4 came from?
+epictetus-3.md:1: argue/unfaithful: R1 (S9): the sentence has no word of "one should fly (to escape)": is it the sentence R1 came from?
+epictetus-3.md:1: argue/assumed: C1 (S5): follows only by A1, which the text never states: state it, or argue for it
+epictetus-3.md:1: argue/assumed: C (S1): follows only by A3, which the text never states: state it, or argue for it
+epictetus-3.md:1: argue/unused-step: C1 (S5): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+epictetus-3.logic.r1: argue/valid 1
+epictetus-3.md:1: argue/defeated: O1 (S6): O1 falls to R1, which nothing answers
+epictetus-3.logic.r1: argue/survives 1

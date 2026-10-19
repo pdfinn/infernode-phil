@@ -1,0 +1,33 @@
+# reading 3 of kant-practical-3.md by claude-opus-5-5
+logic	s5
+atom	thcat_forms_only	the theoretic categories of nature are only forms of thought that designate objects indefinitely by universal concepts of every possible intuition
+atom	frcat_refer_will	the categories of freedom refer to the determination of a free elective will
+atom	will_pure_law	the free elective will has as its foundation a pure practical a priori law
+atom	theory_no_pure_law	no concept of the theoretic use of our cognitive faculties has a pure practical a priori law as its foundation
+atom	frcat_form_pure_will	the categories of freedom have as their foundation the form of a pure will, given in reason itself
+atom	intuition_from_sensibility	the form of intuition (space and time) does not lie in reason but is drawn from sensibility
+atom	frcat_advantage	the categories of freedom have an obvious advantage over the theoretic categories
+atom	precepts_will_only	all precepts of pure practical reason have to do only with the determination of the will, not with the physical conditions of executing one's purpose
+atom	produce_reality	the practical a priori principles themselves produce the reality of that to which they refer (the intention of the will)
+atom	theory_produce_reality	theoretical concepts produce the reality of that to which they refer
+atom	principles_cognitions	the practical a priori principles in relation to the supreme principle of freedom are at once cognitions and need not wait for intuitions to acquire significance
+atom	only_practical	the categories of freedom apply only to the practical reason
+atom	ordered	the categories proceed in order from those subject to sensible conditions and morally indeterminate to those free from sensible conditions and determined merely by the moral law
+P1	S1	thcat_forms_only	kind conceptual
+P2	S1	frcat_refer_will	kind conceptual
+P3	S1	will_pure_law	kind conceptual
+P4	S1	theory_no_pure_law	kind conceptual
+P5	S1	intuition_from_sensibility	kind conceptual
+C1	S1	frcat_form_pure_will	from P2 P3
+A1	-	frcat_refer_will ∧ will_pure_law → frcat_form_pure_will
+P6	S1	thcat_forms_only ∧ frcat_form_pure_will ∧ intuition_from_sensibility → frcat_advantage
+C2	S1	frcat_advantage	from P1 C1 P5 P6
+P7	S2	precepts_will_only	kind conceptual
+P8	S2	produce_reality
+P9	S2	¬theory_produce_reality
+P10	S2	precepts_will_only ∧ produce_reality → principles_cognitions
+C	S2	principles_cognitions	from P7 P8 P10
+P11	S3	only_practical	kind conceptual
+P12	S3	only_practical → ordered
+C3	S3	ordered	from P11 P12
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,18 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+berkeley-heat-pain.md:3: argue/unfaithful: berkeley-heat-pain.logic.r1 P1 (S3): the sentence has no word of "the most vehement and intense degree of heat is a very great pain": is it the sentence P1 came from?
+berkeley-heat-pain.md:3: argue/negation: berkeley-heat-pain.logic.r1 P1 (S3): the sentence says "no", but P1 denies nothing it speaks of: it reads "the most vehement and intense degree of heat is a very great pain"
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r1 P2 (S7): the sentence has no word of "material substance can be the subject of pain": is it the sentence P2 came from?
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r1 P2 (S7): the sentence has no word of "material substance is a senseless (unperceiving) being": is it the sentence P2 came from?
+# kept the reading that best fits the words and the other readings: berkeley-heat-pain.logic.r1
+# argument written to berkeley-heat-pain.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+berkeley-heat-pain.md:3: argue/unfaithful: P1 (S3): the sentence has no word of "the most vehement and intense degree of heat is a very great pain": is it the sentence P1 came from?
+berkeley-heat-pain.md:3: argue/negation: P1 (S3): the sentence says "no", but P1 denies nothing it speaks of: it reads "the most vehement and intense degree of heat is a very great pain"
+berkeley-heat-pain.md:7: argue/unfaithful: P2 (S7): the sentence has no word of "material substance can be the subject of pain": is it the sentence P2 came from?
+berkeley-heat-pain.md:7: argue/unfaithful: P2 (S7): the sentence has no word of "material substance is a senseless (unperceiving) being": is it the sentence P2 came from?
+berkeley-heat-pain.md:15: argue/unfaithful: C1 (S15): the sentence has no word of "material substance can be the subject of pain": is it the sentence C1 came from? [in 2 of 3 runs]
+berkeley-heat-pain.md:17: argue/assumed: C (S17): follows only by A1, which the text never states: state it, or argue for it
+berkeley-heat-pain.logic.r1: argue/valid 1
+berkeley-heat-pain.logic: argue/runs-agree 1

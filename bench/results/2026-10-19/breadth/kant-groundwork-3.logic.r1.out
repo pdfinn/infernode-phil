@@ -1,0 +1,12 @@
+# 3 readings by claude-opus-5-5, compared
+kant-groundwork-3.logic.r1: argue/readings-agree 5
+kant-groundwork-3.logic.r1: argue/readings-differ 0
+kant-groundwork-3.logic.r1: argue/verdicts-agree 1
+kant-groundwork-3.logic.r1: argue/mismatches 0
+kant-groundwork-3.logic.r1.2: argue/mismatches 0
+kant-groundwork-3.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: kant-groundwork-3.logic.r1
+# argument written to kant-groundwork-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+kant-groundwork-3.md:1: argue/own-sentence: C1 (S5): needs P3, P4 and P5, read from the conclusion's own sentence: check that S5 gives them as its reason and does not conclude them
+kant-groundwork-3.md:1: argue/assumed: C (S6): follows only by A1, which the text never states: state it, or argue for it
+kant-groundwork-3.logic.r1: argue/valid 1

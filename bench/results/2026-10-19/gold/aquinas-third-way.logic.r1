@@ -1,0 +1,33 @@
+# reading 3 of aquinas-third-way.md by claude-opus-5-5
+logic	s5
+atom	generated	things in nature are found to be generated and to corrupt
+atom	contingents_exist	we find in nature things that are possible to be and not to be
+atom	all_contingent	everything is possible not to be
+atom	each_sometime_not	each thing that is possible not to be at some time is not
+atom	once_nothing	at one time there was nothing in existence
+atom	only_from_existing	that which does not exist only begins to exist by something already existing
+atom	now_nothing	even now nothing would be in existence
+atom	necessary_exists	there exists something the existence of which is necessary
+atom	all_caused	every necessary thing has its necessity caused by another
+atom	regress	there is an infinite series of necessary things which have their necessity caused by another
+atom	self_necessary	there exists some being having of itself its own necessity, not receiving it from another
+atom	god	God exists (the being all men speak of as God)
+P1	S2	generated	kind empirical
+P2	S2	generated → contingents_exist
+P3	S3	each_sometime_not
+A1	-	all_contingent ∧ each_sometime_not → ◇once_nothing
+C1	S4	all_contingent → ◇once_nothing	from P3 A1
+P4	S5	only_from_existing
+A2	-	only_from_existing → (once_nothing → now_nothing)
+C2	S6	once_nothing → now_nothing	from P4 A2
+P5	S6	¬now_nothing
+# S7 infers from "nothing could have existed" via "if this were true"; the step from <>once_nothing to once_nothing is left as the text gives it
+A3	-	¬all_contingent → necessary_exists	kind conceptual
+C3	S7	¬all_contingent ∧ necessary_exists	from C1 C2 P5 A3
+P6	S8	necessary_exists → all_caused ∨ self_necessary	kind conceptual
+P7	S9	¬◇regress
+A4	-	all_caused → regress
+C4	S10	self_necessary	from C3 P6 P7 A4
+P8	S11	self_necessary → god	kind conceptual
+C	S11	god	from C4 P8
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

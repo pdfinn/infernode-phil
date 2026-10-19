@@ -1,0 +1,22 @@
+# the argument of mill.md as claude-opus-5-5 read it: check that it says what the text says
+atom	universal	my maxim is a universal law: everyone in difficulty may promise whatever he pleases with the purpose of not keeping it
+atom	nobody_believes	no one would consider that anything was promised to him, but would ridicule all such statements as vain pretences
+atom	promise_possible	the promise itself, and the end one has in view in it, is possible
+atom	holds	the maxim holds as a universal law of nature without contradicting itself
+# The supplied atoms are from Kant's lying-promise example, which this passage never discusses, so they are declared but unused.
+# The passage turns on what Kant shows (contradiction or only undesirable consequences), so further atoms cover that.
+# Reading of S3: deducing actual duties from the precept requires showing that universal adoption of immoral rules is contradictory or impossible (A1).
+atom	universal	my maxim is a universal law: everyone in difficulty may promise whatever he pleases with the purpose of not keeping it
+atom	nobody_believes	no one would consider that anything was promised to him, but would ridicule all such statements as vain pretences
+atom	promise_possible	the promise itself, and the end one has in view in it, is possible
+atom	holds	the maxim holds as a universal law of nature without contradicting itself
+atom	principle_ground	the rule 'So act, that the rule on which thou actest would admit of being adopted as a law by all rational beings' is the universal first principle, the origin and ground of moral obligation
+atom	shows_contradiction	Kant shows that there would be a contradiction, a logical or physical impossibility, in the adoption by all rational beings of the most outrageously immoral rules of conduct
+atom	shows_bad_consequences	Kant shows that the consequences of the universal adoption of such rules would be such as no one would choose to incur
+atom	deduces_duties	Kant succeeds in deducing the actual duties of morality from this precept
+P1	S2	principle_ground	says kant
+P2	S3	¬shows_contradiction	kind empirical
+P3	S4	shows_bad_consequences ∧ ¬shows_contradiction	kind empirical
+A1	-	deduces_duties → shows_contradiction
+C	S3	¬deduces_duties	from P2 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

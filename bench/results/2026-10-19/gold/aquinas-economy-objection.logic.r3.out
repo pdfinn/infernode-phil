@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-economy-objection.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: aquinas-economy-objection.logic.r3 and aquinas-economy-objection.logic.r3.3 have "natural_reduced ∧ voluntary_reduced → accounted_other" and "superfluous_many ∧ accounted_other → ¬need_god"; aquinas-economy-objection.logic.r3.2 has "superfluous_many ∧ accounted_other → ¬need_god"; they differ when only "it is superfluous to suppose that what can be accounted for by a few principles has been produced by many", "all natural things can be reduced to one principle which is nature" and "all voluntary things can be reduced to one principle which is human reason, or will" are true, which the second allows
+aquinas-economy-objection.logic.r3: argue/readings: U1: aquinas-economy-objection.logic.r3 and aquinas-economy-objection.logic.r3.3 take for granted "if (all natural things can be reduced to one principle which is nature and all voluntary things can be reduced to one principle which is human reason, or will), then everything we see in the world can be accounted for by other principles, supposing God did not exist"; aquinas-economy-objection.logic.r3.2 does not
+aquinas-economy-objection.logic.r3: argue/answered: U1: answered yes, which keeps aquinas-economy-objection.logic.r3 and aquinas-economy-objection.logic.r3.3, to: Does the text's argument take this for granted, whether or not it says so: "if (all natural things can be reduced to one principle which is nature and all voluntary things can be reduced to one principle which is human reason, or will), then everything we see in the world can be accounted for by other principles, supposing God did not exist"? Answer yes if the author would accept it as part of the argument.
+aquinas-economy-objection.logic.r3: argue/verdicts: valid as aquinas-economy-objection.logic.r3, aquinas-economy-objection.logic.r3.3 read it, not as the others do: which reading is right decides the verdict
+aquinas-economy-objection.logic.r3: argue/readings-agree 3
+aquinas-economy-objection.logic.r3: argue/readings-differ 1
+aquinas-economy-objection.logic.r3: argue/verdicts-agree 0
+aquinas-economy-objection.logic.r3: argue/mismatches 0
+aquinas-economy-objection.logic.r3.2: argue/mismatches 0
+aquinas-economy-objection.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-economy-objection.logic.r3
+# argument written to aquinas-economy-objection.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+aquinas-economy-objection.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aquinas-economy-objection.md:1: argue/assumed: C (S5): follows only by A2, which the text never states: state it, or argue for it
+aquinas-economy-objection.logic.r3: argue/valid 1

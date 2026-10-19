@@ -1,0 +1,27 @@
+# 3 readings by claude-opus-5-5, compared
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "necessarily, (if I think, wishing to think that all was false, then I, who thus thought, am somewhat)"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2 P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "I think, wishing to think that all was false"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2 C (S1): the sentence says "no", but C denies nothing it speaks of: it reads "it is permitted that I accept "I think, therefore I am" as the first principle of the philosophy I was in search of"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2.2 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "I think, wishing to think that all was false"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2.2 P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "necessarily, (if I think, wishing to think that all was false, then I, who thus thought, am somewhat)"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2.2 C (S1): the sentence says "no", but C denies nothing it speaks of: it reads "it is permitted that I accept "I think, therefore I am" as the first principle of the philosophy I was in search of"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2.3 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "I think, wishing to think that all was false"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2.3 P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "necessarily, (if I think, wishing to think that all was false, then I, who thus thought, am somewhat)"
+descartes-cogito.md:1: argue/negation: descartes-cogito.logic.r2.3 C (S1): the sentence says "no", but C denies nothing it speaks of: it reads "it is permitted that I accept "I think, therefore I am" as the first principle of the philosophy I was in search of"
+descartes-cogito.logic.r2: argue/readings-agree 3
+descartes-cogito.logic.r2: argue/readings-differ 0
+descartes-cogito.logic.r2: argue/verdicts-agree 1
+descartes-cogito.logic.r2: argue/mismatches 3
+descartes-cogito.logic.r2.2: argue/mismatches 3
+descartes-cogito.logic.r2.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: descartes-cogito.logic.r2
+# argument written to descartes-cogito.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+descartes-cogito.md:1: argue/negation: P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "necessarily, (if I think, wishing to think that all was false, then I, who thus thought, am somewhat)"
+descartes-cogito.md:1: argue/negation: P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "I think, wishing to think that all was false"
+descartes-cogito.md:1: argue/negation: C1 (S1): the sentence says "no", but C1 denies nothing it speaks of: it reads "I, who thus thought, am somewhat"
+descartes-cogito.md:1: argue/negation: C (S1): the sentence says "no", but C denies nothing it speaks of: it reads "it is permitted that I accept "I think, therefore I am" as the first principle of the philosophy I was in search of"
+descartes-cogito.md:1: argue/own-sentence: C1 (S1): follows from P1 and P2 alone, read from the conclusion's own sentence: unless S1 gives them as its reason, the reading has it assert what it concludes
+descartes-cogito.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it
+descartes-cogito.md:1: argue/own-sentence: C (S1): needs P3, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+descartes-cogito.md:1: argue/unused-step: C1 (S1): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+descartes-cogito.logic.r2: argue/valid 1

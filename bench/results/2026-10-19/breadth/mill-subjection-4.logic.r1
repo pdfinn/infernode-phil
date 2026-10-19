@@ -1,0 +1,19 @@
+# reading 2 of mill-subjection-4.md by claude-opus-5-5
+atom	freedom_strongest_want	after food and raiment, freedom is the first and strongest want of human nature
+atom	women_liberated	sex ceases to be a disqualification for privileges and a badge of subjection
+atom	gain_private_happiness	there is an unspeakable gain in private happiness to the liberated half of the species
+atom	social_benefits	the world gains social benefits (more thinking and acting power, better association of men with women) by ending sex as a disqualification
+atom	reason_duty_no_less_freedom	those who have learnt the meaning of duty and the value of reason do not desire freedom less nor accept others' will as interpreter of their principles
+atom	cultivated_assert_freedom	the communities where reason and social duty are most cultivated most strongly assert individual freedom of action
+atom	lawless_desire_lawless	while mankind are lawless, their desire is for lawless freedom
+P1	S1	women_liberated → social_benefits
+P2	S3	freedom_strongest_want
+P3	S4	lawless_desire_lawless	kind empirical
+P4	S5	reason_duty_no_less_freedom
+P5	S6	cultivated_assert_freedom	kind empirical
+C1	S5	reason_duty_no_less_freedom	from P4 P5
+# S6 ("On the contrary") supports S5's claim that reason and duty do not lessen the desire for freedom.
+# The text relies, without saying so, on the step that if freedom is the strongest want, liberating women brings a gain in private happiness.
+A1	-	freedom_strongest_want ∧ reason_duty_no_less_freedom → (women_liberated → gain_private_happiness)
+C	S2	women_liberated → gain_private_happiness	from P2 C1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

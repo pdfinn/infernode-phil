@@ -1,0 +1,9 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+# kept the reading that best fits the words and the other readings: plato-gorgias-4.logic.r1
+# argument written to plato-gorgias-4.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+plato-gorgias-4.md:1: argue/invalid: C (S2): does not follow: when "it ought to be that there is use in imparting to the citizens any other good, whether money, office or any other sort of power" is true, "it ought to be that the mind of those who are to have the good (our citizens) is gentle and good, i.e. the citizens are made as good as possible" is false, and nothing else is true, every premise holds and the conclusion fails
+plato-gorgias-4.md:1: argue/countermodel: C (S2): W = {w0, w3}; R = {(w0, w3), (w3, w3)}; w0: imparting_useful = F, minds_good = F; w3: imparting_useful = T, minds_good = F
+plato-gorgias-4.logic.r1: argue/valid 0
+plato-gorgias-4.logic: argue/runs-agree 1

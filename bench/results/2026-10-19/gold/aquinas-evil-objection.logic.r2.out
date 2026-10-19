@@ -1,0 +1,22 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r2 P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r2 P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "if there exists something that is infinite goodness, then it is not so that there is evil in the world"
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r2 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r2.2 P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r2.2 P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "if there exists something that is infinite goodness, then it is not so that there is evil in the world"
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r2.2 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r2.3 P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r2.3 P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "if there exists something that is infinite goodness, then it is not so that there is evil in the world"
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r2.3 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.logic.r2: argue/readings-agree 4
+aquinas-evil-objection.logic.r2: argue/readings-differ 0
+aquinas-evil-objection.logic.r2: argue/verdicts-agree 1
+aquinas-evil-objection.logic.r2: argue/mismatches 3
+aquinas-evil-objection.logic.r2.2: argue/mismatches 3
+aquinas-evil-objection.logic.r2.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: aquinas-evil-objection.logic.r2
+# argument written to aquinas-evil-objection.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-evil-objection.md:1: argue/unfaithful: P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "if there exists something that is infinite goodness, then it is not so that there is evil in the world"
+aquinas-evil-objection.md:1: argue/negation: P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.logic.r2: argue/valid 1

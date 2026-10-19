@@ -1,0 +1,14 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-ii-3.logic.r2: argue/readings: what the text leaves unstated is read 3 ways: aquinas-st-i-ii-3.logic.r2 has "herbs_little_effort ∧ animals_much_trouble → soil_simple ∧ flesh_delicate" and "god_wishes_simple ∧ soil_simple ∧ flesh_delicate → forbid_animals ∧ ¬forbid_soil" and "animals_idols ∧ ¬soil_idols → forbid_animals ∧ ¬forbid_soil"; aquinas-st-i-ii-3.logic.r2.2 has "herbs_little_effort → soil_simple" and "animals_much_trouble → flesh_delicate" and "god_wishes_simple ∧ flesh_delicate → forbid_animals" and "god_wishes_simple ∧ soil_simple → ¬forbid_soil"; they differ when only "the soil gives birth to the herb of its own accord, and such products may be had in great quantities with very little effort", "the eating of the products of the soil savors rather of a simple life", "God was wishful to bring His people back to a more simple way of living", "God forbade His people to eat many kinds of animals", "God forbade His people to eat the things produced by the soil", "animals were offered to idols" and "the products of the soil were offered to idols" are true, which the first allows; aquinas-st-i-ii-3.logic.r2.3 has "herbs_little_effort ∧ animals_much_trouble → soil_simple ∧ flesh_delicate" and "god_wishes_simple ∧ soil_simple ∧ flesh_delicate → forbid_animals ∧ ¬forbid_soil"
+aquinas-st-i-ii-3.logic.r2: argue/readings-agree 5
+aquinas-st-i-ii-3.logic.r2: argue/readings-differ 1
+aquinas-st-i-ii-3.logic.r2: argue/verdicts-agree 1
+aquinas-st-i-ii-3.logic.r2: argue/mismatches 0
+aquinas-st-i-ii-3.logic.r2.2: argue/mismatches 0
+aquinas-st-i-ii-3.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-ii-3.logic.r2
+# argument written to aquinas-st-i-ii-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-ii-3.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-ii-3.md:1: argue/assumed: C (S5): follows only by A2, which the text never states: state it, or argue for it
+aquinas-st-i-ii-3.md:1: argue/own-sentence: C (S5): needs P3, read from the conclusion's own sentence: check that S5 gives it as its reason and does not conclude it
+aquinas-st-i-ii-3.logic.r2: argue/valid 1

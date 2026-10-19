@@ -1,0 +1,16 @@
+# the argument of plato-gorgias-2.md as claude-opus-5-5 read it: check that it says what the text says
+# Socrates' reductio: if "better" just meant "stronger", the stronger slaves (and two men over one) would be better, which Callicles denies.
+# The conclusion is only implicit in S3 ("if they are not the stronger"); I take it as the conclusion drawn.
+atom	better_is_stronger	the better are the stronger
+atom	slaves_stronger	Callicles' slaves are stronger than he is
+atom	slaves_better	Callicles' slaves are better than he is
+atom	many_stronger	two men are stronger than one
+atom	two_better	two men are better than one
+P1	S2	slaves_stronger	kind empirical
+P2	S2	¬slaves_better
+P3	S2	¬two_better
+A1	-	better_is_stronger ∧ slaves_stronger → slaves_better	kind conceptual
+A2	-	many_stronger	kind empirical
+A3	-	better_is_stronger ∧ many_stronger → two_better	kind conceptual
+C	S3	¬better_is_stronger
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

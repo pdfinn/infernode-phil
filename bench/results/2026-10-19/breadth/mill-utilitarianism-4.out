@@ -1,0 +1,17 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+mill-utilitarianism-4.md:1: argue/negation: mill-utilitarianism-4.logic.r1 P1 (S4): the sentence says "no", but P1 denies nothing it speaks of: it reads "the exposition given of the nature and origin of the sentiment of justice recognises a real distinction"
+mill-utilitarianism-4.md:1: argue/negation: mill-utilitarianism-4.logic.r1 P6 (S5): the sentence says "not", but P6 denies nothing it speaks of: it reads "justice grounded on utility is the chief part, and incomparably the most sacred and binding part, of all morality"
+mill-utilitarianism-4.md:1: argue/unfaithful: mill-utilitarianism-4.logic.r1 C (S3): the sentence has no word of "justice is a more sacred thing than policy, so mankind have not been under a delusion in thinking so": is it the sentence C came from?
+mill-utilitarianism-4.md:1: argue/unfaithful: mill-utilitarianism-4.logic.r1 C (S3): the sentence has no word of "the difference between the Just and the Expedient is a real, not merely imaginary, distinction": is it the sentence C came from?
+# kept the reading that best fits the words and the other readings: mill-utilitarianism-4.logic.r1
+# argument written to mill-utilitarianism-4.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+mill-utilitarianism-4.md:1: argue/negation: P1 (S4): the sentence says "no", but P1 denies nothing it speaks of: it reads "the exposition given of the nature and origin of the sentiment of justice recognises a real distinction"
+mill-utilitarianism-4.md:1: argue/negation: P6 (S5): the sentence says "not", but P6 denies nothing it speaks of: it reads "justice grounded on utility is the chief part, and incomparably the most sacred and binding part, of all morality"
+mill-utilitarianism-4.md:1: argue/unfaithful: C (S3): the sentence has no word of "justice is a more sacred thing than policy, so mankind have not been under a delusion in thinking so": is it the sentence C came from?
+mill-utilitarianism-4.md:1: argue/unfaithful: C (S3): the sentence has no word of "the difference between the Just and the Expedient is a real, not merely imaginary, distinction": is it the sentence C came from?
+mill-utilitarianism-4.md:1: argue/own-sentence: C1 (S6): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S6 gives them as its reason, the reading has it assert what it concludes
+mill-utilitarianism-4.md:1: argue/assumed: C (S3): follows only by A1 and A2, which the text never states: state it, or argue for it
+mill-utilitarianism-4.logic.r1: argue/valid 1
+mill-utilitarianism-4.logic: argue/runs-agree 1

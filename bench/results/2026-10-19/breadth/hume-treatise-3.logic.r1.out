@@ -1,0 +1,12 @@
+# 3 readings by claude-opus-5-5, compared
+hume-treatise-3.md:1: argue/negation: hume-treatise-3.logic.r1.2 P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "if this contrariety of passions is attended with more than small danger, then the contrariety concurs with a peculiarity in our outward circumstances which affords it an opportunity of exerting itself"
+hume-treatise-3.logic.r1: argue/readings-agree 7
+hume-treatise-3.logic.r1: argue/readings-differ 0
+hume-treatise-3.logic.r1: argue/verdicts-agree 1
+hume-treatise-3.logic.r1: argue/mismatches 0
+hume-treatise-3.logic.r1.2: argue/mismatches 1
+hume-treatise-3.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: hume-treatise-3.logic.r1
+# argument written to hume-treatise-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-treatise-3.md:1: argue/assumed: C (S6): follows only by A1, which the text never states: state it, or argue for it
+hume-treatise-3.logic.r1: argue/valid 1

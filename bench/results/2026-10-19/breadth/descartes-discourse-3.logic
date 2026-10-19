@@ -1,0 +1,24 @@
+# reading 2 of descartes-discourse-3.md by claude-opus-5-5
+logic	s5
+atom	condemned	persons to whom I greatly defer had condemned a certain doctrine in physics published by another
+atom	saw_nothing_prejudicial	previously to their censure I had observed in that doctrine nothing prejudicial to religion or the state
+atom	fear_error	I came to fear lest among my own doctrines some one might be found in which I had departed from the truth
+atom	took_great_care	I always took great care not to believe new opinions without certain demonstrations and not to express aught that might hurt any one
+atom	strong_reasons_publish	the reasons that had induced me to resolve to publish were very strong
+atom	inclination_hostile	my inclination has always been hostile to writing books
+atom	found_excuses	my inclination enabled me to discover other considerations sufficient to excuse me from publishing
+atom	alter_purpose	I altered my purpose of publishing my treatise
+atom	my_interest_state	it is in some measure my interest to state these reasons
+atom	public_interest_know	it is in the public's interest to know these reasons
+P1	S1	condemned ∧ saw_nothing_prejudicial	kind empirical
+P2	S1	took_great_care	kind empirical
+P3	S1	condemned ∧ saw_nothing_prejudicial → fear_error
+C1	S1	fear_error	from P1 P3
+P4	S2	fear_error → alter_purpose
+P5	S2	strong_reasons_publish
+P6	S2	inclination_hostile	kind empirical
+P7	S2	inclination_hostile → found_excuses
+C	S2	alter_purpose	from C1 P4
+# S3 "perhaps" read as possibility
+P8	S3	my_interest_state ∧ ◇public_interest_know
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

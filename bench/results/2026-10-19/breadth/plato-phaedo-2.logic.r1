@@ -1,0 +1,13 @@
+# reading 3 of plato-phaedo-2.md by claude-opus-5-5
+# S2-S3 (Endymion, Anaxagoras) are analogies and are left out; S6 is only a cross-reference.
+# The "for" in S5 needs the unstated step that, with no return to life, the living would have to spring from other things that die too (A1).
+atom	no_return	things that partook of life die, remain in the form of death, and do not come to life again
+atom	living_from_other	the living spring from other things than the dead
+atom	others_die	those other things from which the living spring die too
+atom	all_die_eventually	all things at last die and are swallowed up in death
+atom	something_alive	something is alive
+P1	S5	living_from_other ∧ others_die → all_die_eventually	kind conceptual
+P2	S4	all_die_eventually → ¬something_alive	kind conceptual
+A1	-	no_return → living_from_other ∧ others_die
+C	S4	no_return → all_die_eventually ∧ ¬something_alive
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

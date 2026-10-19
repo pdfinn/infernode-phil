@@ -1,0 +1,27 @@
+# 3 readings by claude-opus-5-5, compared
+berkeley-heat-pain.md:3: argue/unfaithful: berkeley-heat-pain.logic.r3 P1 (S3): the sentence has no word of "the most vehement and intense degree of heat is a very great pain": is it the sentence P1 came from?
+berkeley-heat-pain.md:3: argue/negation: berkeley-heat-pain.logic.r3 P1 (S3): the sentence says "no", but P1 denies nothing it speaks of: it reads "the most vehement and intense degree of heat is a very great pain"
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r3 P2 (S7): the sentence has no word of "x is capable of being the subject of pain": is it the sentence P2 came from?
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r3 P2 (S7): the sentence has no word of "x is endowed with sense and perception (is not an unperceiving, senseless thing)": is it the sentence P2 came from?
+berkeley-heat-pain.md:3: argue/unfaithful: berkeley-heat-pain.logic.r3.2 P1 (S3): the sentence has no word of "the most vehement and intense degree of heat is a very great pain": is it the sentence P1 came from?
+berkeley-heat-pain.md:3: argue/negation: berkeley-heat-pain.logic.r3.2 P1 (S3): the sentence says "no", but P1 denies nothing it speaks of: it reads "the most vehement and intense degree of heat is a very great pain"
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r3.2 P2 (S7): the sentence has no word of "x is capable of being the subject of pain": is it the sentence P2 came from?
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r3.2 P2 (S7): the sentence has no word of "x is endowed with sense and perception (is not an unperceiving, senseless thing)": is it the sentence P2 came from?
+berkeley-heat-pain.md:3: argue/unfaithful: berkeley-heat-pain.logic.r3.3 P1 (S3): the sentence has no word of "the most vehement and intense degree of heat is a very great pain": is it the sentence P1 came from?
+berkeley-heat-pain.md:3: argue/negation: berkeley-heat-pain.logic.r3.3 P1 (S3): the sentence says "no", but P1 denies nothing it speaks of: it reads "the most vehement and intense degree of heat is a very great pain"
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r3.3 P2 (S7): the sentence has no word of "x is capable of being the subject of pain": is it the sentence P2 came from?
+berkeley-heat-pain.md:7: argue/unfaithful: berkeley-heat-pain.logic.r3.3 P2 (S7): the sentence has no word of "x is endowed with sense and perception (is not an unperceiving, senseless thing)": is it the sentence P2 came from?
+berkeley-heat-pain.logic.r3: argue/readings-agree 5
+berkeley-heat-pain.logic.r3: argue/readings-differ 0
+berkeley-heat-pain.logic.r3: argue/verdicts-agree 1
+berkeley-heat-pain.logic.r3: argue/mismatches 4
+berkeley-heat-pain.logic.r3.2: argue/mismatches 4
+berkeley-heat-pain.logic.r3.3: argue/mismatches 4
+# kept the reading that best fits the words and the other readings: berkeley-heat-pain.logic.r3
+# argument written to berkeley-heat-pain.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+berkeley-heat-pain.md:3: argue/unfaithful: P1 (S3): the sentence has no word of "the most vehement and intense degree of heat is a very great pain": is it the sentence P1 came from?
+berkeley-heat-pain.md:3: argue/negation: P1 (S3): the sentence says "no", but P1 denies nothing it speaks of: it reads "the most vehement and intense degree of heat is a very great pain"
+berkeley-heat-pain.md:7: argue/unfaithful: P2 (S7): the sentence has no word of "x is capable of being the subject of pain": is it the sentence P2 came from?
+berkeley-heat-pain.md:7: argue/unfaithful: P2 (S7): the sentence has no word of "x is endowed with sense and perception (is not an unperceiving, senseless thing)": is it the sentence P2 came from?
+berkeley-heat-pain.md:17: argue/assumed: C (S17): follows only by A1, which the text never states: state it, or argue for it
+berkeley-heat-pain.logic.r3: argue/valid 1

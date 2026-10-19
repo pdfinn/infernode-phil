@@ -1,0 +1,17 @@
+# the argument of mill-subjection-2.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	men_qualified_knowledge	some man, or all men together, have knowledge that qualifies them to lay down the law to women as to what is or is not their vocation
+atom	most_men_know_nothing	most men know absolutely nothing of the true nature of women
+atom	knowledge_necessary	such knowledge is necessary for some practical purpose connected with the position of women in relation to society and life
+atom	rests_with_women	the question rests with women themselves, to be decided by their own experience and the use of their own faculties
+atom	only_by_trying	there are no means of finding what either one person or many can do but by trying
+atom	others_can_discover	someone else can discover for them what it is for their happiness to do or leave undone
+P1	S1	most_men_know_nothing	kind empirical
+P2	S1	¬◇men_qualified_knowledge
+P3	S3	rests_with_women	kind normative
+P4	S4	only_by_trying
+P5	S4	¬others_can_discover
+# The step from S3-S4 to S2 is marked only by "For"; the link is left unstated.
+A1	-	rests_with_women ∧ only_by_trying ∧ ¬others_can_discover → ¬knowledge_necessary
+C	S2	¬knowledge_necessary
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

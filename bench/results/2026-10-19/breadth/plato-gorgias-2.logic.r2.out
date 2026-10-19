@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+plato-gorgias-2.md:1: argue/readings: S2 is read 2 ways: plato-gorgias-2.logic.r2 and plato-gorgias-2.logic.r2.2 have "¬slaves_better" and "¬two_better" and "slaves_stronger"; plato-gorgias-2.logic.r2.3 has "slaves_stronger" and "two_stronger" and "¬slaves_better" and "¬two_better"; they differ when only "Callicles' slaves are stronger than he is" is true, which the first allows
+plato-gorgias-2.md:1: argue/answered: S2: answered yes, which keeps plato-gorgias-2.logic.r2 and plato-gorgias-2.logic.r2.2, to: Suppose "Callicles' slaves are stronger than he is" is true and "Callicles' slaves are better than he is", "two men are stronger than one" and "two men are better than one" are false. Is S2, "I wanted to know clearly what you meant; for you surely do not think that two men are better than one, or that your slaves are better than you because they are stronger?", true then?
+plato-gorgias-2.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: plato-gorgias-2.logic.r2 and plato-gorgias-2.logic.r2.2 have "two_stronger" and "better_is_stronger → (slaves_stronger → slaves_better) ∧ (two_stronger → two_better)"; plato-gorgias-2.logic.r2.3 has "better_is_stronger → (slaves_stronger → slaves_better)" and "better_is_stronger → (two_stronger → two_better)"; they differ when only "the better are the stronger (the superior)", "Callicles' slaves are stronger than he is" and "Callicles' slaves are better than he is" are true, which the second allows
+plato-gorgias-2.logic.r2: argue/readings-agree 1
+plato-gorgias-2.logic.r2: argue/readings-differ 2
+plato-gorgias-2.logic.r2: argue/verdicts-agree 1
+plato-gorgias-2.logic.r2: argue/mismatches 0
+plato-gorgias-2.logic.r2.2: argue/mismatches 0
+plato-gorgias-2.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: plato-gorgias-2.logic.r2
+# argument written to plato-gorgias-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+plato-gorgias-2.md:1: argue/unused: P1 (S2): P1 is not needed: the conclusion follows from P2, A1 and A2 without it
+plato-gorgias-2.md:1: argue/unused: P3 (S2): P3 is not needed: the conclusion follows from P2, A1 and A2 without it
+plato-gorgias-2.md:1: argue/assumed: C (S3): follows only by A1 and A2, which the text never states: state it, or argue for it
+plato-gorgias-2.logic.r2: argue/valid 1

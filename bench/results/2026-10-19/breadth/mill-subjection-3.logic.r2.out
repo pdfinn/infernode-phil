@@ -1,0 +1,17 @@
+# 3 readings by claude-opus-5-5, compared
+mill-subjection-3.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: mill-subjection-3.logic.r2 has "short_time ∧ few_attempts → ¬eminence_expected" and "¬eminence_expected ∧ done_as_expected → ¬sufficient_grounds"; mill-subjection-3.logic.r2.2 and mill-subjection-3.logic.r2.3 have "short_time ∧ few_attempts → ¬eminence_expected" and "¬eminence_expected ∧ done_as_expected ∧ early_success → ¬sufficient_grounds"; they differ when only "it is scarcely three generations since women have begun to try their capacity in philosophy, science, or art", "only in the present generation have women's attempts been at all numerous, and they are even now extremely few", "in all but the very highest grades women have done quite as much as could be expected from the length of time and the number of competitors" and "experience has afforded sufficient grounds for an induction" are true, which the second allows
+mill-subjection-3.md:1: argue/negation: mill-subjection-3.logic.r2 C (S1): the sentence states "experience has afforded sufficient grounds for an induction", with no word of denial, but C denies it: it reads "it is not so that experience has afforded sufficient grounds for an induction"
+mill-subjection-3.md:1: argue/negation: mill-subjection-3.logic.r2.2 C (S1): the sentence states "experience has afforded sufficient grounds for an induction", with no word of denial, but C denies it: it reads "it is not so that experience has afforded sufficient grounds for an induction"
+mill-subjection-3.md:1: argue/negation: mill-subjection-3.logic.r2.3 C (S1): the sentence states "experience has afforded sufficient grounds for an induction", with no word of denial, but C denies it: it reads "it is not so that experience has afforded sufficient grounds for an induction"
+mill-subjection-3.logic.r2: argue/readings-agree 5
+mill-subjection-3.logic.r2: argue/readings-differ 1
+mill-subjection-3.logic.r2: argue/verdicts-agree 1
+mill-subjection-3.logic.r2: argue/mismatches 1
+mill-subjection-3.logic.r2.2: argue/mismatches 1
+mill-subjection-3.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: mill-subjection-3.logic.r2.2
+# argument written to mill-subjection-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+mill-subjection-3.md:1: argue/negation: C (S1): the sentence states "experience has afforded sufficient grounds for an induction", with no word of denial, but C denies it: it reads "it is not so that experience has afforded sufficient grounds for an induction"
+mill-subjection-3.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it
+mill-subjection-3.md:1: argue/assumed: C (S1): follows only by A2, which the text never states: state it, or argue for it
+mill-subjection-3.logic.r2: argue/valid 1

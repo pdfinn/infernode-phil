@@ -1,0 +1,17 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+james-will-1.md:1: argue/readings: S6 is read 2 ways: james-will-1.logic.r1 has "¬empty_future"; james-will-1.logic.r1.2 and james-will-1.logic.r1.3 have nothing from it; they differ when only "substance is an empty complication to our notions of the future" is true, which the second allows
+james-will-1.md:1: argue/answered: S6: answered no, which keeps james-will-1.logic.r1, to: Suppose "substance is an empty complication to our notions of the future" is true. Is S6, "But with regard to the facts yet to come the case is far different.", true then? [in 1 of 2 runs]
+james-will-1.md:1: argue/unfaithful: james-will-1.logic.r1 P3 (S5): the sentence has no word of "substance may be dropped from our conception of the irrecoverably past": is it the sentence P3 came from? [in 1 of 2 runs]
+james-will-1.md:1: argue/unfaithful: james-will-1.logic.r1 P4 (S6): the sentence has no word of "substance is an empty complication to our notions of the future": is it the sentence P4 came from? [in 1 of 2 runs]
+# kept the reading that best fits the words and the other readings: james-will-1.logic.r1
+# argument written to james-will-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+james-will-1.md:1: argue/unfaithful: P3 (S5): the sentence has no word of "substance may be dropped from our conception of the irrecoverably past": is it the sentence P3 came from? [in 1 of 2 runs]
+james-will-1.md:1: argue/unfaithful: P4 (S6): the sentence has no word of "substance is an empty complication to our notions of the future": is it the sentence P4 came from? [in 1 of 2 runs]
+james-will-1.md:1: argue/assumed: C (S9): follows only by A1, which the text never states: state it, or argue for it
+james-will-1.logic.r1: argue/valid 1
+james-will-1.md:1: argue/misses: O1 (S4): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else? [in 1 of 2 runs]
+james-will-1.md:1: argue/misses: R1 (S7): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else? [in 1 of 2 runs]
+james-will-1.logic.r1: argue/survives 1 [in 1 of 2 runs]
+james-will-1.logic: argue/runs-agree 1

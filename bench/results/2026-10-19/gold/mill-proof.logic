@@ -1,0 +1,23 @@
+# the argument of mill-proof.md as claude-opus-5-5 read it: check that it says what the text says
+# Mill's proof of utility. S1 and S2 (visible/audible) are analogies offered for S3 and are left out.
+# S3's principle is rendered as applied to happiness: that people desire it is the evidence that it is desirable (a good).
+atom	desired_own	each person, so far as he believes it to be attainable, desires his own happiness
+atom	own_good	each person's happiness is a good to that person
+atom	general_good	the general happiness is a good to the aggregate of all persons
+atom	happiness_good	happiness is a good
+atom	end_of_conduct	happiness is one of the ends of conduct
+atom	criterion	happiness is one of the criteria of morality
+P1	S3	desired_own → own_good
+P2	S5	general_good → desired_own
+P3	S6	desired_own	kind empirical
+C1	S6	own_good	from P1 P3
+# "and the general happiness, therefore, a good to the aggregate": the move from each person's good to the general good is relied on but not stated.
+A1	-	own_good → general_good
+C2	S6	general_good	from C1 A1
+A2	-	own_good ∧ general_good → happiness_good
+C3	S6	happiness_good	from C1 C2 A2
+A3	-	happiness_good → end_of_conduct
+# "and consequently one of the criteria of morality"
+A4	-	end_of_conduct → criterion
+C	S7	end_of_conduct ∧ criterion	from C3 A3 A4
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

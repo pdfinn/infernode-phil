@@ -1,0 +1,27 @@
+# 3 readings by claude-opus-5-5, compared
+augustine-2.md:1: argue/readings: S3 is read 2 ways: augustine-2.logic.r2 and augustine-2.logic.r2.3 have "blind_touched"; augustine-2.logic.r2.2 has nothing from it; they differ when nothing is true, which the second allows
+augustine-2.md:1: argue/answered: S3: answered yes, which keeps augustine-2.logic.r2.2, to: Suppose "the blind citizen touched the bier of the saints with his handkerchief and put it to his eyes" is false. Is S3, "Led thither, he begged to be allowed to touch with his handkerchief the bier of Thy saints, whose death is precious in Thy sight.", true then?
+augustine-2.md:1: argue/readings: S4 is read 2 ways: augustine-2.logic.r2 and augustine-2.logic.r2.3 have "blind_touched → eyes_opened"; augustine-2.logic.r2.2 has "blind_touched" and "blind_touched → eyes_opened"; they differ when nothing is true, which the first allows
+augustine-2.md:1: argue/answered: S4: answered no, which keeps augustine-2.logic.r2.2, to: Suppose "the blind citizen touched the bier of the saints with his handkerchief and put it to his eyes" and "the blind man's eyes were forthwith opened" are false. Is S4, "Which when he had done, and put to his eyes, they were forthwith opened.", true then?
+augustine-2.md:1: argue/readings: S5 is read 2 ways: augustine-2.logic.r2 and augustine-2.logic.r2.3 have "demoniacs_cured ∧ eyes_opened → fame_spread ∧ empress_turned_back"; augustine-2.logic.r2.2 has "eyes_opened → fame_spread ∧ empress_turned_back"; they differ when only "the blind man's eyes were forthwith opened" and "the fame spread and God's praises glowed and shone" are true, which the first allows
+augustine-2.md:1: argue/answered: S5: answered no, which keeps augustine-2.logic.r2.2, to: Suppose "the blind man's eyes were forthwith opened" and "the fame spread and God's praises glowed and shone" are true and "they who were vexed with unclean spirits were cured" and "the mind of the Empress was turned back from her fury of persecuting" are false. Is S5, "Thence did the fame spread, thence Thy praises glowed, shone; thence the mind of that enemy, though not turned to the soundness of believing, was yet turned back from her fury of persecuting.", true then?
+augustine-2.md:1: argue/unfaithful: augustine-2.logic.r2 P4 (S5): the sentence has no word of "the blind man's eyes were forthwith opened": is it the sentence P4 came from?
+augustine-2.md:1: argue/unfaithful: augustine-2.logic.r2 P4 (S5): the sentence has no word of "they who were vexed with unclean spirits were cured": is it the sentence P4 came from?
+augustine-2.md:1: argue/negation: augustine-2.logic.r2 P4 (S5): the sentence says "not", but P4 denies nothing it speaks of: it reads "if (they who were vexed with unclean spirits were cured and the blind man's eyes were forthwith opened), then (the fame spread and God's praises glowed and shone and the mind of the Empress was turned back from her fury of persecuting)"
+augustine-2.md:1: argue/unfaithful: augustine-2.logic.r2.2 P5 (S5): the sentence has no word of "the blind man's eyes were forthwith opened": is it the sentence P5 came from?
+augustine-2.md:1: argue/negation: augustine-2.logic.r2.2 P5 (S5): the sentence says "not", but P5 denies nothing it speaks of: it reads "if the blind man's eyes were forthwith opened, then (the fame spread and God's praises glowed and shone and the mind of the Empress was turned back from her fury of persecuting)"
+augustine-2.md:1: argue/unfaithful: augustine-2.logic.r2.3 P5 (S5): the sentence has no word of "the blind man's eyes were forthwith opened": is it the sentence P5 came from?
+augustine-2.md:1: argue/unfaithful: augustine-2.logic.r2.3 P5 (S5): the sentence has no word of "they who were vexed with unclean spirits were cured": is it the sentence P5 came from?
+augustine-2.md:1: argue/negation: augustine-2.logic.r2.3 P5 (S5): the sentence says "not", but P5 denies nothing it speaks of: it reads "if (they who were vexed with unclean spirits were cured and the blind man's eyes were forthwith opened), then (the fame spread and God's praises glowed and shone and the mind of the Empress was turned back from her fury of persecuting)"
+augustine-2.logic.r2: argue/readings-agree 4
+augustine-2.logic.r2: argue/readings-differ 3
+augustine-2.logic.r2: argue/verdicts-agree 1
+augustine-2.logic.r2: argue/mismatches 3
+augustine-2.logic.r2.2: argue/mismatches 2
+augustine-2.logic.r2.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: augustine-2.logic.r2.2
+# argument written to augustine-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+augustine-2.md:1: argue/unfaithful: P5 (S5): the sentence has no word of "the blind man's eyes were forthwith opened": is it the sentence P5 came from?
+augustine-2.md:1: argue/negation: P5 (S5): the sentence says "not", but P5 denies nothing it speaks of: it reads "if the blind man's eyes were forthwith opened, then (the fame spread and God's praises glowed and shone and the mind of the Empress was turned back from her fury of persecuting)"
+augustine-2.md:1: argue/assumed: C (S9): follows only by A1, which the text never states: state it, or argue for it
+augustine-2.logic.r2: argue/valid 1

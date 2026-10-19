@@ -1,0 +1,25 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-1.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-1.logic.r1 has "person_individual_substance ∧ individual_distinct → person_signifies_distinct"; aquinas-st-i-1.logic.r1.2 and aquinas-st-i-1.logic.r1.3 have nothing from it; they differ when only ""person" in general signifies the individual substance of a rational nature" and "the individual is in itself undivided, but is distinct from others" are true, which the second allows
+aquinas-st-i-1.logic.r1: argue/readings: U1: aquinas-st-i-1.logic.r1 takes for granted "if ("person" in general signifies the individual substance of a rational nature and the individual is in itself undivided, but is distinct from others), then "person" in any nature signifies what is distinct in that nature"; aquinas-st-i-1.logic.r1.2 and aquinas-st-i-1.logic.r1.3 do not
+aquinas-st-i-1.logic.r1: argue/answered: U1: answered no, which keeps aquinas-st-i-1.logic.r1.2 and aquinas-st-i-1.logic.r1.3, to: Does the text's argument take this for granted, whether or not it says so: "if ("person" in general signifies the individual substance of a rational nature and the individual is in itself undivided, but is distinct from others), then "person" in any nature signifies what is distinct in that nature"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-1.logic.r1: argue/verdicts: valid as aquinas-st-i-1.logic.r1 reads it, not as the others do: which reading is right decides the verdict
+aquinas-st-i-1.logic.r1: argue/readings-agree 5
+aquinas-st-i-1.logic.r1: argue/readings-differ 1
+aquinas-st-i-1.logic.r1: argue/verdicts-agree 0
+aquinas-st-i-1.logic.r1: argue/mismatches 0
+aquinas-st-i-1.logic.r1.2: argue/mismatches 0
+aquinas-st-i-1.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-1.logic.r1.2
+# argument written to aquinas-st-i-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-1.md:1: argue/unlinked: C (S6): the conclusion speaks of ""person" in any nature signifies what is distinct in that nature", which no premise mentions: nothing links it to them
+aquinas-st-i-1.md:1: argue/invalid: C1 (S2): does not follow: when "something may be included in the meaning of a less common term which is not included in the more common term" is true, "it is one thing to ask the meaning of the word animal, and another to ask its meaning when the animal in question is man" is false, every premise holds and the conclusion fails
+aquinas-st-i-1.md:1: argue/countermodel: C1 (S2): animal_meaning_differs = F, less_common_includes = T
+aquinas-st-i-1.md:1: argue/missing: C1 (S2): it would follow given "less_common_includes → animal_meaning_differs"
+aquinas-st-i-1.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "something may be included in the meaning of a less common term which is not included in the more common term": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/invalid: C (S6): does not follow: when ""person" in general signifies the individual substance of a rational nature" and "the individual is in itself undivided, but is distinct from others" are true, ""person" in any nature signifies what is distinct in that nature" is false, every premise holds and the conclusion fails
+aquinas-st-i-1.md:1: argue/countermodel: C (S6): individual_distinct = T, person_individual_substance = T, person_signifies_distinct = F
+aquinas-st-i-1.md:1: argue/missing: C (S6): it would follow given "person_individual_substance → person_signifies_distinct", or "individual_distinct → person_signifies_distinct"
+aquinas-st-i-1.md:1: argue/unlinked: P3 (S4): P3 is the only statement about ""person" in general signifies the individual substance of a rational nature": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/unlinked: P4 (S5): P4 is the only statement about "the individual is in itself undivided, but is distinct from others": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/unused-step: C1 (S2): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-1.logic.r1: argue/valid 0

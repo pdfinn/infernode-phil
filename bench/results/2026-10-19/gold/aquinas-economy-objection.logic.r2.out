@@ -1,0 +1,26 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-economy-objection.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aquinas-economy-objection.logic.r2 and aquinas-economy-objection.logic.r2.3 have "natural_reduced ∧ voluntary_reduced → accounted_other" and "superfluous_many ∧ accounted_other → ¬need_god"; aquinas-economy-objection.logic.r2.2 has "superfluous_many ∧ accounted_other → ¬need_god"; they differ when only "it is superfluous to suppose that what can be accounted for by a few principles has been produced by many", "all natural things can be reduced to one principle which is nature" and "all voluntary things can be reduced to one principle which is human reason, or will" are true, which the second allows
+aquinas-economy-objection.logic.r2: argue/readings: U1: aquinas-economy-objection.logic.r2 and aquinas-economy-objection.logic.r2.3 take for granted "if (all natural things can be reduced to one principle which is nature and all voluntary things can be reduced to one principle which is human reason, or will), then everything we see in the world can be accounted for by other principles, supposing God did not exist"; aquinas-economy-objection.logic.r2.2 does not
+aquinas-economy-objection.logic.r2: argue/answered: U1: answered yes, which keeps aquinas-economy-objection.logic.r2 and aquinas-economy-objection.logic.r2.3, to: Does the text's argument take this for granted, whether or not it says so: "if (all natural things can be reduced to one principle which is nature and all voluntary things can be reduced to one principle which is human reason, or will), then everything we see in the world can be accounted for by other principles, supposing God did not exist"? Answer yes if the author would accept it as part of the argument.
+aquinas-economy-objection.logic.r2: argue/verdicts: valid as aquinas-economy-objection.logic.r2, aquinas-economy-objection.logic.r2.3 read it, not as the others do: which reading is right decides the verdict
+aquinas-economy-objection.logic.r2: argue/readings-agree 3
+aquinas-economy-objection.logic.r2: argue/readings-differ 1
+aquinas-economy-objection.logic.r2: argue/verdicts-agree 0
+aquinas-economy-objection.logic.r2: argue/mismatches 0
+aquinas-economy-objection.logic.r2.2: argue/mismatches 0
+aquinas-economy-objection.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-economy-objection.logic.r2
+# argument written to aquinas-economy-objection.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-economy-objection.md:1: argue/invalid: C1 (S3): does not follow: when "all natural things can be reduced to one principle which is nature" and "all voluntary things can be reduced to one principle which is human reason, or will" are true, "everything we see in the world can be accounted for by other principles, supposing God did not exist" is false, every premise holds and the conclusion fails
+aquinas-economy-objection.md:1: argue/countermodel: C1 (S3): accounted_other = F, natural_reduced = T, voluntary_reduced = T
+aquinas-economy-objection.md:1: argue/missing: C1 (S3): it would follow given "natural_reduced → accounted_other", or "voluntary_reduced → accounted_other"
+aquinas-economy-objection.md:1: argue/missing: C1 (S3): C1 would follow if it were drawn from A1 too: add it to its from
+aquinas-economy-objection.md:1: argue/unlinked: P2 (S4): P2 is the only statement about "all natural things can be reduced to one principle which is nature": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-economy-objection.md:1: argue/unlinked: P3 (S4): P3 is the only statement about "all voluntary things can be reduced to one principle which is human reason, or will": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-economy-objection.md:1: argue/invalid: C (S5): does not follow: when "it is superfluous to suppose that what can be accounted for by a few principles has been produced by many", "everything we see in the world can be accounted for by other principles, supposing God did not exist" and "there is need to suppose God's existence" are true, every premise holds and the conclusion fails
+aquinas-economy-objection.md:1: argue/countermodel: C (S5): accounted_other = T, need_god = T, superfluous_many = T
+aquinas-economy-objection.md:1: argue/missing: C (S5): it would follow given "superfluous_many → ¬need_god", or "accounted_other → ¬need_god"
+aquinas-economy-objection.md:1: argue/missing: C (S5): C would follow if it were drawn from A2 too: add it to its from
+aquinas-economy-objection.md:1: argue/unlinked: P1 (S2): P1 is the only statement about "it is superfluous to suppose that what can be accounted for by a few principles has been produced by many": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-economy-objection.md:1: argue/unlinked: C1 (S3): C1 is the only statement about "everything we see in the world can be accounted for by other principles, supposing God did not exist": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-economy-objection.logic.r2: argue/valid 0

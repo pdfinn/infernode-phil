@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+descartes-discourse-3.md:1: argue/negation: descartes-discourse-3.logic.r2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "persons to whom I greatly defer had condemned a certain doctrine in physics published by another individual"
+descartes-discourse-3.md:1: argue/unfaithful: descartes-discourse-3.logic.r2 P4 (S2): the sentence has no word of "I feared lest among my own doctrines some one might be found in which I had departed from the truth": is it the sentence P4 came from?
+descartes-discourse-3.md:1: argue/negation: descartes-discourse-3.logic.r2.2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "persons to whom I greatly defer had condemned a certain doctrine in physics published by another individual"
+descartes-discourse-3.md:1: argue/unfaithful: descartes-discourse-3.logic.r2.2 P4 (S2): the sentence has no word of "I feared lest among my own doctrines some one might be found in which I had departed from the truth": is it the sentence P4 came from?
+descartes-discourse-3.md:1: argue/negation: descartes-discourse-3.logic.r2.3 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "persons to whom I greatly defer had condemned a certain doctrine in physics published by another individual"
+descartes-discourse-3.md:1: argue/unfaithful: descartes-discourse-3.logic.r2.3 P4 (S2): the sentence has no word of "I feared lest among my own doctrines some one might be found in which I had departed from the truth": is it the sentence P4 came from?
+descartes-discourse-3.logic.r2: argue/readings-agree 3
+descartes-discourse-3.logic.r2: argue/readings-differ 0
+descartes-discourse-3.logic.r2: argue/verdicts-agree 1
+descartes-discourse-3.logic.r2: argue/mismatches 2
+descartes-discourse-3.logic.r2.2: argue/mismatches 2
+descartes-discourse-3.logic.r2.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: descartes-discourse-3.logic.r2
+# argument written to descartes-discourse-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+descartes-discourse-3.md:1: argue/negation: P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "persons to whom I greatly defer had condemned a certain doctrine in physics published by another individual"
+descartes-discourse-3.md:1: argue/unfaithful: P4 (S2): the sentence has no word of "I feared lest among my own doctrines some one might be found in which I had departed from the truth": is it the sentence P4 came from?
+descartes-discourse-3.md:1: argue/negation: C1 (S1): the sentence says "nothing", but C1 denies nothing it speaks of: it reads "I feared lest among my own doctrines some one might be found in which I had departed from the truth"
+descartes-discourse-3.md:1: argue/own-sentence: C1 (S1): follows from P1, P2 and P3 alone, read from the conclusion's own sentence: unless S1 gives them as its reason, the reading has it assert what it concludes
+descartes-discourse-3.md:1: argue/own-sentence: C (S2): needs P4, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+descartes-discourse-3.logic.r2: argue/valid 1

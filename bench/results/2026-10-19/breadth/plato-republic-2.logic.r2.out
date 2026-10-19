@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+plato-republic-2.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: plato-republic-2.logic.r2 has "O enquire → O test"; plato-republic-2.logic.r2.2 and plato-republic-2.logic.r2.3 have "O(enquire → test)"; they differ when nothing is true, which the first allows
+plato-republic-2.md:1: argue/negation: plato-republic-2.logic.r2 C (S2): the sentence says "not", but C denies nothing it speaks of: it reads "it ought to be that we watch them from their youth upwards and make them perform actions in which they are most likely to forget or to be deceived"
+plato-republic-2.md:1: argue/negation: plato-republic-2.logic.r2.2 C (S2): the sentence says "not", but C denies nothing it speaks of: it reads "it ought to be that we watch them from their youth upwards and make them perform actions in which they are most likely to forget or to be deceived"
+plato-republic-2.md:1: argue/negation: plato-republic-2.logic.r2.3 C (S2): the sentence says "not", but C denies nothing it speaks of: it reads "it ought to be that we watch them from their youth upwards and make them perform actions in which they are most likely to forget or to be deceived"
+plato-republic-2.logic.r2: argue/readings-agree 3
+plato-republic-2.logic.r2: argue/readings-differ 1
+plato-republic-2.logic.r2: argue/verdicts-agree 1
+plato-republic-2.logic.r2: argue/mismatches 1
+plato-republic-2.logic.r2.2: argue/mismatches 1
+plato-republic-2.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: plato-republic-2.logic.r2.2
+# argument written to plato-republic-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+plato-republic-2.md:1: argue/negation: C (S2): the sentence says "not", but C denies nothing it speaks of: it reads "it ought to be that we watch them from their youth upwards and make them perform actions in which they are most likely to forget or to be deceived"
+plato-republic-2.md:1: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it
+plato-republic-2.logic.r2: argue/valid 1

@@ -1,0 +1,13 @@
+# 3 readings by claude-opus-5-5, compared
+berkeley-principles-1.logic.r2: argue/readings-agree 6
+berkeley-principles-1.logic.r2: argue/readings-differ 0
+berkeley-principles-1.logic.r2: argue/verdicts-agree 1
+berkeley-principles-1.logic.r2: argue/mismatches 0
+berkeley-principles-1.logic.r2.2: argue/mismatches 0
+berkeley-principles-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: berkeley-principles-1.logic.r2
+# argument written to berkeley-principles-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+berkeley-principles-1.md:1: argue/own-sentence: C1 (S3): follows from P4 and P5 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes
+berkeley-principles-1.md:1: argue/own-sentence: C2 (S5): follows from P9 and P10 alone, read from the conclusion's own sentence: unless S5 gives them as its reason, the reading has it assert what it concludes
+berkeley-principles-1.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it
+berkeley-principles-1.logic.r2: argue/valid 1

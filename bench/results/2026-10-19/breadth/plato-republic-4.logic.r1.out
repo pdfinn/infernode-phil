@@ -1,0 +1,14 @@
+# 3 readings by claude-opus-5-5, compared
+plato-republic-4.md:1: argue/readings: S2 is read 2 ways: plato-republic-4.logic.r1 has "freed → seen_as_is" and "seen_as_is → know_nature"; plato-republic-4.logic.r1.2 and plato-republic-4.logic.r1.3 have "freed → seen_as_is"; they differ when only "the soul wholly follows the superior principle and is disengaged from the earthly things that have grown around her" and "you would see her as she is" are true, which the second allows
+plato-republic-4.md:1: argue/answered: S2: answered no, which keeps plato-republic-4.logic.r1, to: Suppose "the soul wholly follows the superior principle and is disengaged from the earthly things that have grown around her" and "you would see her as she is" are true and "you would know whether she have one shape only or many, or what her nature is" is false. Is S2, "Let us see whom she affects, and what society and converse she seeks in virtue of her near kindred with the immortal and eternal and divine; also how different she would become if wholly following this superior principle, and borne by a divine impulse out of the ocean in which she now is, and disengaged from the stones and shells and things of earth and rock which in wild variety spring up around her because she feeds upon earth, and is overgrown by the good things of this life as they are termed: then you would see her as she is, and know whether she have one shape only or many, or what her nature is.", true then?
+plato-republic-4.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: plato-republic-4.logic.r1 has nothing from it; plato-republic-4.logic.r1.2 and plato-republic-4.logic.r1.3 have "seen_as_is → know_nature"; they differ when only "you would see her as she is" is true, which the first allows
+plato-republic-4.logic.r1: argue/readings-agree 1
+plato-republic-4.logic.r1: argue/readings-differ 2
+plato-republic-4.logic.r1: argue/verdicts-agree 1
+plato-republic-4.logic.r1: argue/mismatches 0
+plato-republic-4.logic.r1.2: argue/mismatches 0
+plato-republic-4.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: plato-republic-4.logic.r1
+# argument written to plato-republic-4.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+plato-republic-4.md:1: argue/own-sentence: C (S2): follows from P1 and P2 alone, read from the conclusion's own sentence: unless S2 gives them as its reason, the reading has it assert what it concludes
+plato-republic-4.logic.r1: argue/valid 1

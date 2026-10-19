@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+mill-subjection-2.md:1: argue/readings: S3 is read 2 ways: mill-subjection-2.logic.r2 and mill-subjection-2.logic.r2.3 have "rests_with_women"; mill-subjection-2.logic.r2.2 has nothing from it; they differ when nothing is true, which the second allows
+mill-subjection-2.md:1: argue/answered: S3: answered yes, which keeps mill-subjection-2.logic.r2.2, to: Suppose "the question rests with women themselves, to be decided by their own experience and the use of their own faculties" is false. Is S3, "For, according to all the principles involved in modern society, the question rests with women themselves--to be decided by their own experience, and by the use of their own faculties.", true then?
+mill-subjection-2.logic.r2: argue/readings: what the text leaves unstated is read 3 ways: mill-subjection-2.logic.r2 has "rests_with_women ∧ only_by_trying ∧ none_else_can_discover → ¬knowledge_necessary"; mill-subjection-2.logic.r2.2 has "only_by_trying ∧ none_else_can_discover → rests_with_women" and "rests_with_women → ¬knowledge_necessary"; they differ when only "such knowledge is necessary for some practical purpose connected with the position of women in society and life", "the question rests with women themselves, to be decided by their own experience and the use of their own faculties" and "there are no means of finding what one person or many can do but by trying" are true, which the first allows; mill-subjection-2.logic.r2.3 has "rests_with_women → ¬knowledge_necessary"
+mill-subjection-2.md:1: argue/negation: mill-subjection-2.logic.r2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "it is at present impossible that any man, or all men together, should have knowledge qualifying them to lay down the law to women as to their vocation"
+mill-subjection-2.md:1: argue/negation: mill-subjection-2.logic.r2.2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "it is at present impossible that any man, or all men together, should have knowledge qualifying them to lay down the law to women as to their vocation"
+mill-subjection-2.md:1: argue/negation: mill-subjection-2.logic.r2.3 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "it is at present impossible that any man, or all men together, should have knowledge qualifying them to lay down the law to women as to their vocation"
+mill-subjection-2.logic.r2: argue/readings-agree 3
+mill-subjection-2.logic.r2: argue/readings-differ 2
+mill-subjection-2.logic.r2: argue/verdicts-agree 1
+mill-subjection-2.logic.r2: argue/mismatches 1
+mill-subjection-2.logic.r2.2: argue/mismatches 1
+mill-subjection-2.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: mill-subjection-2.logic.r2.2
+# argument written to mill-subjection-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+mill-subjection-2.md:1: argue/negation: P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "it is at present impossible that any man, or all men together, should have knowledge qualifying them to lay down the law to women as to their vocation"
+mill-subjection-2.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+mill-subjection-2.md:1: argue/assumed: C (S2): follows only by A2, which the text never states: state it, or argue for it
+mill-subjection-2.logic.r2: argue/valid 1

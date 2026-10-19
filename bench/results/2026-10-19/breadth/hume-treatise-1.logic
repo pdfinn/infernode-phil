@@ -1,0 +1,15 @@
+# the argument of hume-treatise-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Hume. "Must" in S1 is read as a practical requirement: to begin regularly, i.e. to reason justly
+# about causation, we have to trace the idea to its origin. It is written as a conditional, not a modal.
+# The "impossible ... without" claims in S2 are read as plain conditionals, without modal operators.
+atom	reason_justly	we reason justly (begin regularly) concerning causation
+atom	understand_idea	we understand perfectly the idea of causation
+atom	trace_origin	we trace the idea of causation up to its origin and examine the primary impression from which it arises
+atom	clear_idea	the idea of causation has clearness
+atom	clear_reasoning	our reasoning concerning causation has a like clearness
+P1	S2	reason_justly → understand_idea	kind conceptual
+P2	S2	understand_idea → trace_origin	kind conceptual
+P3	S3	trace_origin → clear_idea
+P4	S3	clear_idea → clear_reasoning
+C	S1	reason_justly → trace_origin
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,14 @@
+# the argument of hume-necessary-being.md as claude-opus-5-5 read it: check that it says what the text says
+atom	demonstrable(x)	the existence of x is demonstrable
+atom	contra(x)	the non-existence of x (the contrary of its existence) implies a contradiction
+atom	conceivable_non(x)	x can be distinctly conceived as non-existent
+atom	conceived(x)	we conceive x as existent
+# "can conceive" is kept inside an atom so that the quantified reading is not mixed with modal operators
+P1	S1	∀x (demonstrable(x) → contra(x))	kind conceptual
+P2	S2	∀x (conceivable_non(x) → ¬contra(x))	kind conceptual
+P3	S3	∀x (conceived(x) → conceivable_non(x))
+# The step to "there is no being" relies on every being in question being one we conceive as existent
+A1	-	∀x conceived(x)
+C1	S4	∀x ¬contra(x)	from P2 P3 A1
+C	S5	∀x ¬demonstrable(x)	from P1 C1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

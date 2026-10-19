@@ -1,0 +1,20 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-ethics-1.md:1: argue/readings: S1 is read 2 ways: aristotle-ethics-1.logic.r2 has "shame_feeling → ¬shame_virtue"; aristotle-ethics-1.logic.r2.2 and aristotle-ethics-1.logic.r2.3 have nothing from it; they differ when only "Shame is a Virtue" and "Shame is much more like a feeling than a moral state" are true, which the second allows
+aristotle-ethics-1.md:1: argue/answered: S1: answered no, which keeps aristotle-ethics-1.logic.r2, to: Suppose "Shame is a Virtue" and "Shame is much more like a feeling than a moral state" are true. Is S1, "To speak of Shame as a Virtue is incorrect, because it is much more like a feeling than a moral state.", true then?
+aristotle-ethics-1.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aristotle-ethics-1.logic.r2 has "shame_blush → shame_physical" and "fear_pale → fear_physical"; aristotle-ethics-1.logic.r2.2 and aristotle-ethics-1.logic.r2.3 have "shame_blush → shame_physical" and "fear_pale → fear_physical" and "shame_feeling → ¬shame_virtue"; they differ when only "Shame is a Virtue", "Shame is much more like a feeling than a moral state", "they who feel Shame grow red", "they who fear death turn pale", "Shame is in a way physical" and "fear of danger is in a way physical" are true, which the first allows
+aristotle-ethics-1.md:1: argue/negation: aristotle-ethics-1.logic.r2 C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.md:1: argue/negation: aristotle-ethics-1.logic.r2.2 C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.md:1: argue/negation: aristotle-ethics-1.logic.r2.3 C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.logic.r2: argue/readings-agree 3
+aristotle-ethics-1.logic.r2: argue/readings-differ 2
+aristotle-ethics-1.logic.r2: argue/verdicts-agree 1
+aristotle-ethics-1.logic.r2: argue/mismatches 1
+aristotle-ethics-1.logic.r2.2: argue/mismatches 1
+aristotle-ethics-1.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: aristotle-ethics-1.logic.r2
+# argument written to aristotle-ethics-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aristotle-ethics-1.md:1: argue/negation: C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.md:1: argue/assumed: C1 (S3): follows only by A1 and A2, which the text never states: state it, or argue for it
+aristotle-ethics-1.md:1: argue/own-sentence: C2 (S3): needs P4, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it
+aristotle-ethics-1.md:1: argue/own-sentence: C (S1): needs P5, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+aristotle-ethics-1.logic.r2: argue/valid 1

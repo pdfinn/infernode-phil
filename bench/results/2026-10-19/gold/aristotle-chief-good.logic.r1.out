@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-chief-good.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aristotle-chief-good.logic.r1 and aristotle-chief-good.logic.r1.3 have nothing from it; aristotle-chief-good.logic.r1.2 has "∀x (pursuit(x) → aims_at_good(x)) → apt_description"; they differ when nothing is true, which the first allows
+aristotle-chief-good.logic.r1: argue/readings: U1: aristotle-chief-good.logic.r1.2 takes for granted "if (for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good), then "that which all things aim at" is a common and by no means a bad description of the Chief Good"; aristotle-chief-good.logic.r1 and aristotle-chief-good.logic.r1.3 do not
+aristotle-chief-good.logic.r1: argue/answered: U1: answered yes, which keeps aristotle-chief-good.logic.r1.2, to: Does the text's argument take this for granted, whether or not it says so: "if (for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good), then "that which all things aim at" is a common and by no means a bad description of the Chief Good"? Answer yes if the author would accept it as part of the argument.
+aristotle-chief-good.md:1: argue/negation: aristotle-chief-good.logic.r1 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: aristotle-chief-good.logic.r1 P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.md:1: argue/negation: aristotle-chief-good.logic.r1.2 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: aristotle-chief-good.logic.r1.2 P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.md:1: argue/negation: aristotle-chief-good.logic.r1.3 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: aristotle-chief-good.logic.r1.3 P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.logic.r1: argue/verdicts: valid as aristotle-chief-good.logic.r1.2 reads it, not as the others do: which reading is right decides the verdict
+aristotle-chief-good.logic.r1: argue/readings-agree 2
+aristotle-chief-good.logic.r1: argue/readings-differ 1
+aristotle-chief-good.logic.r1: argue/verdicts-agree 0
+aristotle-chief-good.logic.r1: argue/mismatches 2
+aristotle-chief-good.logic.r1.2: argue/mismatches 2
+aristotle-chief-good.logic.r1.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aristotle-chief-good.logic.r1.2
+# argument written to aristotle-chief-good.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aristotle-chief-good.md:1: argue/negation: P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if x is an art, a science reduced to a teachable form, an action or a moral choice, then x aims at some good"
+aristotle-chief-good.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it
+aristotle-chief-good.md:1: argue/own-sentence: C (S1): needs P1, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+aristotle-chief-good.logic.r1: argue/valid 1

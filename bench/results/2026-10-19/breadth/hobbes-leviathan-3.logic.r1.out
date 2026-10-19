@@ -1,0 +1,14 @@
+# 3 readings by claude-opus-5-5, compared
+hobbes-leviathan-3.md:1: argue/readings: S9 is read 2 ways: hobbes-leviathan-3.logic.r1 has "not_profitable → fast_honour" and "fast_honour"; hobbes-leviathan-3.logic.r1.2 and hobbes-leviathan-3.logic.r1.3 have "not_profitable → fast_honour" and "not_profitable"; they differ when only "David's Fasting for Saul and Abner was for honours sake to their persons" is true, which the first allows
+hobbes-leviathan-3.md:1: argue/answered: S9: answered no, which keeps hobbes-leviathan-3.logic.r1.2 and hobbes-leviathan-3.logic.r1.3, to: Suppose "David's Fasting for Saul and Abner was for honours sake to their persons" is true and "the life of Saul and Abner was not profitable to David as mourner" is false. Is S9, "And thus with hard straining, hee has wrested those places to the proofe of a Purgatory; whereas it is manifest, that the ceremonies of Mourning, and Fasting, when they are used for the death of men, whose life was not profitable to the Mourners, they are used for honours sake to their persons; and when tis done for the death of them by whose life the Mourners had benefit, it proceeds from their particular dammage: And so David honoured Saul, and Abner, with his Fasting; and in the death of his owne child, recomforted himselfe, by receiving his ordinary food.", true then?
+hobbes-leviathan-3.logic.r1: argue/readings-agree 4
+hobbes-leviathan-3.logic.r1: argue/readings-differ 1
+hobbes-leviathan-3.logic.r1: argue/verdicts-agree 1
+hobbes-leviathan-3.logic.r1: argue/mismatches 0
+hobbes-leviathan-3.logic.r1.2: argue/mismatches 0
+hobbes-leviathan-3.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: hobbes-leviathan-3.logic.r1.2
+# argument written to hobbes-leviathan-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hobbes-leviathan-3.md:1: argue/assumed: C (S9): follows only by A1 and A2, which the text never states: state it, or argue for it
+hobbes-leviathan-3.md:1: argue/own-sentence: C (S9): needs P9 and P10, read from the conclusion's own sentence: check that S9 gives them as its reason and does not conclude them
+hobbes-leviathan-3.logic.r1: argue/valid 1

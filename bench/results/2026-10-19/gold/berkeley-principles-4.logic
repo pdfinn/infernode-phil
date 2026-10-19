@@ -1,0 +1,17 @@
+# the argument of berkeley-principles-4.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	opinion_prevails	the opinion prevails amongst men that sensible objects have an existence distinct from their being perceived
+atom	objects_unperceived	houses, mountains, rivers and all sensible objects have an existence, natural or real, distinct from their being perceived by the understanding
+atom	objects_are_perceived	the fore-mentioned objects are the things we perceive by sense
+atom	perceive_only_ideas	we perceive nothing besides our own ideas or sensations
+atom	ideas_unperceived	some one of our ideas or sensations, or some combination of them, exists unperceived
+P1	S1	opinion_prevails	kind empirical
+P2	S3	objects_are_perceived	kind conceptual
+P3	S3	perceive_only_ideas
+P4	S3	□¬ideas_unperceived	kind conceptual
+# "plainly repugnant" read as: necessarily, no idea or combination of ideas exists unperceived
+A1	-	objects_are_perceived ∧ perceive_only_ideas → □(objects_unperceived → ideas_unperceived)
+# the unstated step: if sensible objects just are what we perceive, and that is only ideas, then their existing unperceived would be ideas existing unperceived
+C	S2	□¬objects_unperceived	from P2 P3 P4 A1
+# "involve a manifest contradiction" read as: necessarily, sensible objects do not exist distinct from being perceived
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

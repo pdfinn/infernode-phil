@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+james-will-1.md:1: argue/readings: S5 is read 2 ways: james-will-1.logic.r2 and james-will-1.logic.r2.3 have "facts_bagged → past_dispensable"; james-will-1.logic.r2.2 has "facts_bagged → past_dispensable" and "facts_bagged"; they differ when nothing is true, which the first allows
+james-will-1.md:1: argue/answered: S5: answered yes, which keeps james-will-1.logic.r2 and james-will-1.logic.r2.3, to: Suppose "we have already securely bagged our facts in a certain order" and "we can dispense with any further warrant (substance) for the order of the irrecoverably past" are false. Is S5, "Truly enough, if we have {81} already securely bagged our facts in a certain order, we can dispense with any further warrant for that order.", true then?
+james-will-1.md:1: argue/readings: S7 is read 2 ways: james-will-1.logic.r2 has "future_different → ¬(past_dispensable → future_dispensable)"; james-will-1.logic.r2.2 and james-will-1.logic.r2.3 have "future_different → ¬future_dispensable"; they differ when only "with regard to the facts yet to come the case is far different" is true, which the second allows
+james-will-1.md:1: argue/answered: S7: answered no, which keeps james-will-1.logic.r2, to: Suppose "with regard to the facts yet to come the case is far different" is true and "we can dispense with any further warrant (substance) for the order of the irrecoverably past" and "substance is an equally empty complication to our notions of the future" are false. Is S7, "It does not follow that if substance may be dropped from our conception of the irrecoverably past, it need be an equally empty complication to our notions of the future.", true then?
+james-will-1.md:1: argue/readings: S9 is read 2 ways: james-will-1.logic.r2 and james-will-1.logic.r2.3 have nothing from it; james-will-1.logic.r2.2 has "confidence ∧ ¬future_dispensable → liking"; they differ when only "the logical form of referring things to a substance remains accompanied by a feeling of rest and future confidence" is true, which the first allows
+james-will-1.md:1: argue/answered: S9: answered no, which keeps james-will-1.logic.r2.2, to: Suppose "the logical form of referring things to a substance remains accompanied by a feeling of rest and future confidence" is true and "substance is an equally empty complication to our notions of the future" and "men will always have a liking for any philosophy which explains things per substantiam" are false. Is S9, "In spite of the acutest nihilistic criticism, men will therefore always have a liking for any philosophy which explains things per substantiam.", true then?
+james-will-1.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: james-will-1.logic.r2 and james-will-1.logic.r2.3 have "confidence → liking"; james-will-1.logic.r2.2 has nothing from it; they differ when only "the logical form of referring things to a substance remains accompanied by a feeling of rest and future confidence" is true, which the second allows
+james-will-1.md:1: argue/unfaithful: james-will-1.logic.r2 P5 (S7): the sentence has no word of "with regard to the facts yet to come the case is far different": is it the sentence P5 came from?
+james-will-1.md:1: argue/unfaithful: james-will-1.logic.r2.2 P6 (S7): the sentence has no word of "with regard to the facts yet to come the case is far different": is it the sentence P6 came from?
+james-will-1.md:1: argue/unfaithful: james-will-1.logic.r2.2 P8 (S9): the sentence has no word of "substance is an equally empty complication to our notions of the future": is it the sentence P8 came from?
+james-will-1.md:1: argue/unfaithful: james-will-1.logic.r2.3 P5 (S7): the sentence has no word of "with regard to the facts yet to come the case is far different": is it the sentence P5 came from?
+james-will-1.logic.r2: argue/readings-agree 3
+james-will-1.logic.r2: argue/readings-differ 4
+james-will-1.logic.r2: argue/verdicts-agree 1
+james-will-1.logic.r2: argue/answers-split: no reading agrees with all 3 answers (james-will-1.logic.r2 2, james-will-1.logic.r2.2 1, james-will-1.logic.r2.3 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+james-will-1.logic.r2: argue/mismatches 1
+james-will-1.logic.r2.2: argue/mismatches 2
+james-will-1.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: james-will-1.logic.r2
+# argument written to james-will-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+james-will-1.md:1: argue/unfaithful: P5 (S7): the sentence has no word of "with regard to the facts yet to come the case is far different": is it the sentence P5 came from?
+james-will-1.md:1: argue/assumed: C (S9): follows only by A1, which the text never states: state it, or argue for it
+james-will-1.logic.r2: argue/valid 1

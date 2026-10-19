@@ -1,0 +1,17 @@
+# the argument of meno-paradox.md as claude-opus-5-5 read it: check that it says what the text says
+# Socrates only reports Meno's argument ("You argue ..."); the text does not assert it in its own voice.
+# The main conclusion is Meno's: a man cannot enquire about what he knows, nor about what he does not know.
+atom	need_known	a man who knows a thing has need to enquire about it
+atom	enquire_known	a man can enquire about that which he knows
+atom	knows_subject	the man knows the very subject about which he is to enquire
+atom	enquire_unknown	a man can enquire about that which he does not know
+P1	S2	¬need_known	says meno
+P2	S2	¬knows_subject → ¬enquire_unknown	says meno
+P3	S2	¬knows_subject	says meno
+P4	S2	¬enquire_known ∧ ¬enquire_unknown	says meno
+# Unstated step Meno's argument relies on: one cannot enquire into what one has no need to enquire into.
+A1	-	¬need_known → ¬enquire_known
+# "cannot" is read as plain impossibility of enquiry, not as a modal operator.
+# C restates P4, Meno's conclusion. Its premises (P1, P2, P3) are attributed only, so the text never draws it in its own voice.
+C	S2	¬enquire_known ∧ ¬enquire_unknown
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

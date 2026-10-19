@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+mill-subjection-4.md:1: argue/readings: S6 is read 2 ways: mill-subjection-4.logic.r1 has "cultivated_assert_freedom" and "cultivated_assert_freedom → reason_duty_no_less_freedom"; mill-subjection-4.logic.r1.2 and mill-subjection-4.logic.r1.3 have "cultivated_assert_freedom"; they differ when only "the communities where reason and social duty are most cultivated most strongly assert individual freedom of action" is true, which the second allows
+mill-subjection-4.md:1: argue/answered: S6: answered yes, which keeps mill-subjection-4.logic.r1.2 and mill-subjection-4.logic.r1.3, to: Suppose "the communities where reason and social duty are most cultivated most strongly assert individual freedom of action" is true and "those who have learnt the meaning of duty and the value of reason do not desire freedom less nor accept others' will as interpreter of their principles" is false. Is S6, "On the contrary, the communities in which the reason has been most cultivated, and in which the idea of social duty has been most powerful, are those which have most strongly asserted the freedom of action of the individual--the liberty of each to govern his conduct by his own feelings of duty, and by such laws and social restraints as his own conscience can subscribe to.", true then?
+mill-subjection-4.logic.r1: argue/readings-agree 6
+mill-subjection-4.logic.r1: argue/readings-differ 1
+mill-subjection-4.logic.r1: argue/verdicts-agree 1
+mill-subjection-4.logic.r1: argue/mismatches 0
+mill-subjection-4.logic.r1.2: argue/mismatches 0
+mill-subjection-4.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: mill-subjection-4.logic.r1.2
+# argument written to mill-subjection-4.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+mill-subjection-4.md:1: argue/circular: C1 (S5): the conclusion only restates P4: it is assumed, not argued
+mill-subjection-4.md:1: argue/unlinked: P5 (S6): P5 is the only statement about "the communities where reason and social duty are most cultivated most strongly assert individual freedom of action": as written it cannot bear on the conclusion; was the same thing named two ways?
+mill-subjection-4.md:1: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it
+mill-subjection-4.logic.r1: argue/valid 0

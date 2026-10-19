@@ -1,0 +1,31 @@
+# 3 readings by claude-opus-5-5, compared
+descartes-real-distinction.md:1: argue/negation: descartes-real-distinction.logic.r2 P4 (S1): the sentence says "no", but P4 denies nothing it speaks of: it reads "if I thought to doubt of the truth of other things, then I was (existed)"
+descartes-real-distinction.md:1: argue/negation: descartes-real-distinction.logic.r2 P5 (S1): the sentence says "no", but P5 denies nothing it speaks of: it reads "I thought to doubt of the truth of other things"
+descartes-real-distinction.md:1: argue/negation: descartes-real-distinction.logic.r2.2 P4 (S1): the sentence says "no", but P4 denies nothing it speaks of: it reads "if I thought to doubt of the truth of other things, then I was (existed)"
+descartes-real-distinction.md:1: argue/negation: descartes-real-distinction.logic.r2.2 P5 (S1): the sentence says "no", but P5 denies nothing it speaks of: it reads "I thought to doubt of the truth of other things"
+descartes-real-distinction.md:1: argue/negation: descartes-real-distinction.logic.r2.3 P4 (S1): the sentence says "no", but P4 denies nothing it speaks of: it reads "I thought to doubt of the truth of other things"
+descartes-real-distinction.md:1: argue/negation: descartes-real-distinction.logic.r2.3 P5 (S1): the sentence says "no", but P5 denies nothing it speaks of: it reads "if I thought to doubt of the truth of other things, then I was (existed)"
+descartes-real-distinction.logic.r2: argue/readings-agree 2
+descartes-real-distinction.logic.r2: argue/readings-differ 0
+descartes-real-distinction.logic.r2: argue/verdicts-agree 1
+descartes-real-distinction.logic.r2: argue/mismatches 2
+descartes-real-distinction.logic.r2.2: argue/mismatches 2
+descartes-real-distinction.logic.r2.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: descartes-real-distinction.logic.r2
+# argument written to descartes-real-distinction.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+descartes-real-distinction.md:1: argue/negation: P4 (S1): the sentence says "no", but P4 denies nothing it speaks of: it reads "if I thought to doubt of the truth of other things, then I was (existed)"
+descartes-real-distinction.md:1: argue/negation: P5 (S1): the sentence says "no", but P5 denies nothing it speaks of: it reads "I thought to doubt of the truth of other things"
+descartes-real-distinction.md:1: argue/unlinked: C (S1): the conclusion speaks of "although the body were not, the mind would still continue to be all that it is", which no premise mentions: nothing links it to them
+descartes-real-distinction.md:1: argue/unlinked: C (S1): the conclusion speaks of "the mind is more easily known than the body", which no premise mentions: nothing links it to them
+descartes-real-distinction.md:1: argue/unlinked: C (S1): the conclusion speaks of "the mind by which I am what I am is wholly distinct from the body", which no premise mentions: nothing links it to them
+descartes-real-distinction.md:1: argue/invalid: C1 (S1): does not follow: when "I could suppose that I had no body", "I could suppose that there was no world nor any place in which I might be", "I thought to doubt of the truth of other things" and "I was (existed)" are true, "I am a substance whose whole essence or nature consists only in thinking", "in order to exist, I have need of some place" and "I am dependent on some material thing" are false, and nothing else is true, every premise holds and the conclusion fails
+descartes-real-distinction.md:1: argue/countermodel: C1 (S1): can_suppose_no_body = T, can_suppose_no_world = T, can_suppose_not_exist = F, ceased_thinking = F, depends_material = F, doubting = T, essence_thinking = F, exist = T, needs_place = F, reason_believe_exist = F
+descartes-real-distinction.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "I could suppose that I had no body": as written it cannot bear on the conclusion; was the same thing named two ways?
+descartes-real-distinction.md:1: argue/unlinked: P2 (S1): P2 is the only statement about "I could suppose that there was no world nor any place in which I might be": as written it cannot bear on the conclusion; was the same thing named two ways?
+descartes-real-distinction.md:1: argue/unlinked: P3 (S1): P3 is the only statement about "I could suppose that I was not": as written it cannot bear on the conclusion; was the same thing named two ways?
+descartes-real-distinction.md:1: argue/unlinked: P4 (S1): P4 is the only statement about "I was (existed)": as written it cannot bear on the conclusion; was the same thing named two ways?
+descartes-real-distinction.md:1: argue/unlinked: P6 (S1): P6 is the only statement about "I had only ceased to think" and "I would have reason to believe that I existed": as written it cannot bear on the conclusion; was the same thing named two ways?
+descartes-real-distinction.md:1: argue/invalid: C (S1): does not follow: when "I am a substance whose whole essence or nature consists only in thinking" is true, "the mind by which I am what I am is wholly distinct from the body", "the mind is more easily known than the body" and "although the body were not, the mind would still continue to be all that it is" are false, and nothing else is true, every premise holds and the conclusion fails
+descartes-real-distinction.md:1: argue/countermodel: C (S1): continue_without_body = F, depends_material = F, distinct_from_body = F, essence_thinking = T, more_easily_known = F, needs_place = F
+descartes-real-distinction.md:1: argue/unlinked: C1 (S1): C1 is the only statement about "I am a substance whose whole essence or nature consists only in thinking", "in order to exist, I have need of some place" and "I am dependent on some material thing": as written it cannot bear on the conclusion; was the same thing named two ways?
+descartes-real-distinction.logic.r2: argue/valid 0

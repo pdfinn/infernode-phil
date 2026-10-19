@@ -1,0 +1,27 @@
+# the argument of james-will-4.md as claude-opus-5-5 read it: check that it says what the text says
+# Main line: the existing literature of the supernatural is evidentially worthless (S8-S9),
+# so a bureau collecting fresh reports is indispensable (S6), even without any experimental work.
+# Side line: S3 gives the reasons the experimental work fell short (S2).
+# S4-S5 add further reasons not named in S3; they are kept as stated premises.
+# The two rules (A1, A2) are left unstated by the text.
+atom	bureau_work	as a weather bureau for accumulating reports of apparitions, the S. P. R. has done an immense amount of work
+atom	fulfilled_hopes	as an experimenting body, the S. P. R. has completely fulfilled the hopes of its founders
+atom	subjects_few	the clairvoyant and other subjects who will allow themselves to be experimented upon are few and far between
+atom	work_slow	work with such subjects takes an immense amount of time and has had to be carried on at odd intervals by members engaged in other pursuits
+atom	not_rich	the Society has not yet been rich enough to control the undivided services of skilled experimenters
+atom	gurney_lost	the loss of Edmund Gurney, who more than any one else had leisure to devote, has been so far irreparable
+atom	records_fallible	the records of the facts cited in the literature of the supernatural are so fallible and imperfect that at most they lead to the opinion that a window may be kept open on that quarter
+atom	lit_worthless	the existing literature of the supernatural is practically worthless for evidential purposes
+atom	indispensable	the S. P. R.'s function as a weather bureau for catching sporadic apparitions in their freshness is indispensable in the scientific organism
+P1	S1	bureau_work	kind empirical
+P2	S3	subjects_few ∧ work_slow	kind empirical
+P3	S3	subjects_few ∧ work_slow → ¬fulfilled_hopes
+C1	S2	¬fulfilled_hopes	from P2 P3
+P4	S4	not_rich	kind empirical
+P5	S5	gurney_lost	kind empirical
+P6	S9	records_fallible	kind empirical
+A1	-	records_fallible → lit_worthless
+C2	S8	lit_worthless	from P6 A1
+A2	-	lit_worthless → indispensable
+C	S6	indispensable	from C2 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

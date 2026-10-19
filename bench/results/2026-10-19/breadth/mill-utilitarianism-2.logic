@@ -1,0 +1,21 @@
+# the argument of mill-utilitarianism-2.md as claude-opus-5-5 read it: check that it says what the text says
+# Mill, Utilitarianism ch. 4: S1 states the conclusion that the "preceding considerations" (S2-S4) support.
+# The virtue case (S3-S4) is read as an instance supporting S2's general claim.
+atom	desired(x)	x is desired
+atom	means(x)	x is desired as a means to some end beyond itself, and ultimately to happiness
+atom	part(x)	x is desired as itself a part of happiness
+atom	foritself(x)	x is desired for its own sake
+atom	onlyhappiness(x)	x is desired for nothing except happiness
+atom	pleasure(x)	the consciousness of x is a pleasure
+atom	pain(x)	the consciousness of being without x is a pain
+P1	S2	∀x (desired(x) ∧ ¬means(x) → part(x))
+P2	S2	∀x (foritself(x) → part(x))
+P3	S3	foritself(virtue) → pleasure(virtue) ∨ pain(virtue)	kind empirical
+P4	S4	¬pleasure(virtue) ∧ ¬pain(virtue) → ¬foritself(virtue)	kind empirical
+# Unstated: what is a pleasure, or the escape from a pain, is thereby a part of happiness.
+A1	-	pleasure(virtue) ∨ pain(virtue) → part(virtue)
+C1	S3	foritself(virtue) → part(virtue)	from P3 A1
+# Unstated: whatever is desired as a means to happiness or as a part of it is desired for nothing but happiness.
+A2	-	∀x (means(x) ∨ part(x) → onlyhappiness(x))
+C	S1	∀x (desired(x) → onlyhappiness(x))	from P1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

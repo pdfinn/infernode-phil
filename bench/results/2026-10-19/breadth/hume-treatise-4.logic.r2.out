@@ -1,0 +1,38 @@
+# 3 readings by claude-opus-5-5, compared
+hume-treatise-4.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: hume-treatise-4.logic.r2 and hume-treatise-4.logic.r2.3 have "resolution ∧ produces_obligation → resolution_obliges" and "desire → ¬bind_without_desire" and "willing_action → ¬(future ∧ will_present_only)" and "resolution ∨ desire ∨ willing_action ∨ willing_obligation"; hume-treatise-4.logic.r2.2 has "produces_obligation ∧ resolution → resolution_obliges" and "bind_without_desire → ¬desire" and "future ∧ will_present_only → ¬willing_action" and "produces_obligation → resolution ∨ desire ∨ willing_action ∨ willing_obligation"; they differ when only "a resolution to perform alone imposes an obligation", "we may bind ourselves without such a desire, or even with an aversion, declared and avowed", "a promise always regards some future time" and "the will has an influence only on present actions" are true, which the second allows
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2 P2 (S4): the sentence says "neither", but P2 denies nothing it speaks of: it reads "the act of the mind which enters into a promise produces its obligation"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2 P4 (S3): the sentence says "neither", but P4 denies nothing it speaks of: it reads "a promise always regards some future time"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2 P5 (S3): the sentence says "neither", but P5 denies nothing it speaks of: it reads "the will has an influence only on present actions"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2 P6 (S5): the sentence says "nor", but P6 denies nothing it speaks of: it reads "it is conformable to our common ways of thinking and expressing ourselves that we are bound by our own consent and the obligation arises from our mere will"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2 C (S4): the sentence says "neither", but C denies nothing it speaks of: it reads "the act of the mind exprest by a promise is the willing of that obligation which arises from the promise"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.2 P2 (S4): the sentence says "neither", but P2 denies nothing it speaks of: it reads "the act of the mind which enters into a promise produces its obligation"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.2 P4 (S3): the sentence says "neither", but P4 denies nothing it speaks of: it reads "a promise always regards some future time"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.2 P5 (S3): the sentence says "neither", but P5 denies nothing it speaks of: it reads "the will has an influence only on present actions"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.2 P6 (S5): the sentence says "nor", but P6 denies nothing it speaks of: it reads "it is conformable to our common ways of thinking and expressing ourselves that we are bound by our own consent and the obligation arises from our mere will"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.2 C (S4): the sentence says "neither", but C denies nothing it speaks of: it reads "the act of the mind exprest by a promise is the willing of that obligation which arises from the promise"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.3 P2 (S4): the sentence says "neither", but P2 denies nothing it speaks of: it reads "the act of the mind which enters into a promise produces its obligation"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.3 P4 (S3): the sentence says "neither", but P4 denies nothing it speaks of: it reads "a promise always regards some future time"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.3 P5 (S3): the sentence says "neither", but P5 denies nothing it speaks of: it reads "the will has an influence only on present actions"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.3 P6 (S5): the sentence says "nor", but P6 denies nothing it speaks of: it reads "it is conformable to our common ways of thinking and expressing ourselves that we are bound by our own consent and the obligation arises from our mere will"
+hume-treatise-4.md:1: argue/negation: hume-treatise-4.logic.r2.3 C (S4): the sentence says "neither", but C denies nothing it speaks of: it reads "the act of the mind exprest by a promise is the willing of that obligation which arises from the promise"
+hume-treatise-4.logic.r2: argue/readings-agree 6
+hume-treatise-4.logic.r2: argue/readings-differ 1
+hume-treatise-4.logic.r2: argue/verdicts-agree 1
+hume-treatise-4.logic.r2: argue/mismatches 5
+hume-treatise-4.logic.r2.2: argue/mismatches 5
+hume-treatise-4.logic.r2.3: argue/mismatches 5
+# kept the reading that best fits the words and the other readings: hume-treatise-4.logic.r2
+# argument written to hume-treatise-4.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+hume-treatise-4.md:1: argue/negation: P2 (S4): the sentence says "neither", but P2 denies nothing it speaks of: it reads "the act of the mind which enters into a promise produces its obligation"
+hume-treatise-4.md:1: argue/negation: P4 (S3): the sentence says "neither", but P4 denies nothing it speaks of: it reads "a promise always regards some future time"
+hume-treatise-4.md:1: argue/negation: P5 (S3): the sentence says "neither", but P5 denies nothing it speaks of: it reads "the will has an influence only on present actions"
+hume-treatise-4.md:1: argue/negation: P6 (S5): the sentence says "nor", but P6 denies nothing it speaks of: it reads "it is conformable to our common ways of thinking and expressing ourselves that we are bound by our own consent and the obligation arises from our mere will"
+hume-treatise-4.md:1: argue/negation: C (S4): the sentence says "neither", but C denies nothing it speaks of: it reads "the act of the mind exprest by a promise is the willing of that obligation which arises from the promise"
+hume-treatise-4.md:1: argue/assumed: C1 (S1): follows only by A1, which the text never states: state it, or argue for it
+hume-treatise-4.md:1: argue/own-sentence: C1 (S1): needs P1, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+hume-treatise-4.md:1: argue/assumed: C2 (S2): follows only by A2, which the text never states: state it, or argue for it
+hume-treatise-4.md:1: argue/own-sentence: C2 (S2): needs P3, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+hume-treatise-4.md:1: argue/assumed: C3 (S3): follows only by A3, which the text never states: state it, or argue for it
+hume-treatise-4.md:1: argue/own-sentence: C3 (S3): needs P4 and P5, read from the conclusion's own sentence: check that S3 gives them as its reason and does not conclude them
+hume-treatise-4.md:1: argue/assumed: C (S4): follows only by A4, which the text never states: state it, or argue for it
+hume-treatise-4.logic.r2: argue/valid 1

@@ -1,0 +1,11 @@
+# 3 readings by claude-opus-5-5, compared
+hume-motivation.logic.r3: argue/readings-agree 4
+hume-motivation.logic.r3: argue/readings-differ 0
+hume-motivation.logic.r3: argue/verdicts-agree 1
+hume-motivation.logic.r3: argue/mismatches 0
+hume-motivation.logic.r3.2: argue/mismatches 0
+hume-motivation.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: hume-motivation.logic.r3
+# argument written to hume-motivation.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+hume-motivation.md:1: argue/assumed: C (S4): follows only by A1, which the text never states: state it, or argue for it
+hume-motivation.logic.r3: argue/valid 1

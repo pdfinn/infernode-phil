@@ -1,0 +1,27 @@
+# reading 3 of descartes-discourse-4.md by claude-opus-5-5
+# reading 3 of descartes-discourse-4.md by claude-opus-5-5
+atom	opp_useful	these oppositions would be useful, both in showing me my errors and in bringing others to understand and add to my views
+atom	liable_error	I recognize my extreme liability to error
+atom	expect_profit	I anticipate profit from objections to my views
+atom	proof_judgments	I have already had frequent proof of the judgments of friends, of indifferent persons, and of malicious and envious ones
+atom	rarely_new	it has rarely happened that anything was objected to me which I had myself altogether overlooked, unless far removed from the subject
+atom	critics_worse	every critic of my opinions has appeared to me either less rigorous or less equitable than myself
+atom	disputation_truth	some truth before unknown has been brought to light by the disputations practised in the schools
+atom	strive_victory	in the disputations each strives for victory and is more occupied with mere verisimilitude than with weighing the reasons on both sides
+atom	advocates_judges	those who have long been good advocates are on that account afterwards the better judges
+O1	S1	opp_useful	against C
+P1	S2	liable_error	kind empirical
+P2	S3	proof_judgments	kind empirical
+P3	S4	proof_judgments → rarely_new
+C1	S4	rarely_new	from P2 P3
+P4	S4	rarely_new → critics_worse
+C2	S4	critics_worse	from C1 P4
+P5	S5	¬disputation_truth	kind empirical
+P6	S5	strive_victory	kind empirical
+P7	S5	¬advocates_judges	kind empirical
+P8	S5	strive_victory → ¬disputation_truth
+# The text does not state this link outright: no profit is expected because critics are worse and disputations yield no new truth.
+A1	-	critics_worse ∧ ¬disputation_truth → ¬expect_profit
+C	S2	¬expect_profit	from C2 P5 A1
+R1	S2	¬expect_profit	against O1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

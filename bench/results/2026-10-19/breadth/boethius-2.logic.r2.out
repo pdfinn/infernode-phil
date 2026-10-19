@@ -1,0 +1,28 @@
+# 3 readings by claude-opus-5-5, compared
+boethius-2.md:1: argue/readings: S5 is read 2 ways: boethius-2.logic.r2 has "office_signalizes_iniquity → position_brings_infamy"; boethius-2.logic.r2.2 and boethius-2.logic.r2.3 have "position_brings_infamy"; they differ when nothing is true, which the first allows
+boethius-2.md:1: argue/answered: S5: answered no, which keeps boethius-2.logic.r2.2 and boethius-2.logic.r2.3, to: Suppose "offices are wont to signalize iniquity rather than chase it away" and "high position brings infamy upon the bad" are false. Is S5, "Dost not see what infamy high position brings upon the bad?", true then?
+boethius-2.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: boethius-2.logic.r2 has "honours_fall_to_wicked ∧ ¬office_plants_virtue → unworthy_of_office"; boethius-2.logic.r2.2 and boethius-2.logic.r2.3 have "honours_fall_to_wicked → unworthy_of_office" and "office_honours → revered_for_office"; they differ when only "official dignity clothes him to whom it comes with honour and reverence", "offices of state have power to plant virtue in the minds of their possessors and drive out vice", "honours often fall to the most iniquitous of men" and "the holders are men we deem unworthy of the office itself" are true, which the first allows
+boethius-2.md:1: argue/readings: the conclusion is read 2 ways: boethius-2.logic.r2 has "¬revered_for_office"; boethius-2.logic.r2.2 and boethius-2.logic.r2.3 have "¬office_honours"; they differ when only "official dignity clothes him to whom it comes with honour and reverence" is true, which the first allows
+boethius-2.md:1: argue/answered: the conclusion: answered yes, which keeps boethius-2.logic.r2, to: Suppose "official dignity clothes him to whom it comes with honour and reverence" is true and "we can deem such men worthy of reverence on account of their office" is false. Is the conclusion, "No; we cannot deem men worthy of reverence on account of their office, whom we deem unworthy of the office itself.", true then?
+boethius-2.logic.r2: argue/readings: U1: boethius-2.logic.r2.2 and boethius-2.logic.r2.3 take for granted "if official dignity clothes him to whom it comes with honour and reverence, then we can deem such men worthy of reverence on account of their office"; boethius-2.logic.r2 does not
+boethius-2.logic.r2: argue/answered: U1: answered yes, which keeps boethius-2.logic.r2.2 and boethius-2.logic.r2.3, to: Does the text's argument take this for granted, whether or not it says so: "if official dignity clothes him to whom it comes with honour and reverence, then we can deem such men worthy of reverence on account of their office"? Answer yes if the author would accept it as part of the argument.
+boethius-2.md:1: argue/negation: boethius-2.logic.r2 P1 (S2): the sentence states "offices of state have power to plant virtue in the minds of their possessors and drive out vice", with no word of denial, but P1 denies it: it reads "it is not so that offices of state have power to plant virtue in the minds of their possessors and drive out vice"
+boethius-2.md:1: argue/unfaithful: boethius-2.logic.r2 P4 (S5): the sentence has no word of "offices are wont to signalize iniquity rather than chase it away": is it the sentence P4 came from?
+boethius-2.md:1: argue/negation: boethius-2.logic.r2.2 P1 (S2): the sentence states "offices of state have power to plant virtue in the minds of their possessors and drive out vice", with no word of denial, but P1 denies it: it reads "it is not so that offices of state have power to plant virtue in the minds of their possessors and drive out vice"
+boethius-2.md:1: argue/negation: boethius-2.logic.r2.3 P1 (S2): the sentence states "offices of state have power to plant virtue in the minds of their possessors and drive out vice", with no word of denial, but P1 denies it: it reads "it is not so that offices of state have power to plant virtue in the minds of their possessors and drive out vice"
+boethius-2.logic.r2: argue/readings-agree 3
+boethius-2.logic.r2: argue/readings-differ 3
+boethius-2.logic.r2: argue/verdicts-agree 1
+boethius-2.logic.r2: argue/answers-split: no reading agrees with all 3 answers (boethius-2.logic.r2 1, boethius-2.logic.r2.2 2, boethius-2.logic.r2.3 2 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+boethius-2.logic.r2: argue/mismatches 2
+boethius-2.logic.r2.2: argue/mismatches 1
+boethius-2.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: boethius-2.logic.r2.2
+# argument written to boethius-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+boethius-2.md:1: argue/negation: P1 (S2): the sentence states "offices of state have power to plant virtue in the minds of their possessors and drive out vice", with no word of denial, but P1 denies it: it reads "it is not so that offices of state have power to plant virtue in the minds of their possessors and drive out vice"
+boethius-2.md:1: argue/assumed: C1 (S8): follows only by A1, which the text never states: state it, or argue for it
+boethius-2.md:1: argue/own-sentence: C1 (S8): needs P4, read from the conclusion's own sentence: check that S8 gives it as its reason and does not conclude it
+boethius-2.md:1: argue/assumed: C (S8): follows only by A2, which the text never states: state it, or argue for it
+boethius-2.logic.r2: argue/valid 1
+boethius-2.md:1: argue/defeated: C (S8): C falls to O1, which nothing answers
+boethius-2.logic.r2: argue/survives 0

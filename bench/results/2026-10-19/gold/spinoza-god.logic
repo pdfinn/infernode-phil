@@ -1,0 +1,10 @@
+# reading 2 of spinoza-god.md by claude-opus-5-5
+logic	s5
+atom	god_exists	God, or substance, consisting of infinite attributes, exists
+atom	essence_involves_existence	God's essence involves existence
+# S4: "conceive, if possible, that God does not exist: then his essence does not involve existence" read as holding in any conceivable case, hence boxed.
+P1	S4	□(¬god_exists → ¬essence_involves_existence)
+# S5: that the essence does not involve existence is "absurd" (by Prop. vii), read as impossible: ![]... no, !<>!essence_involves_existence, i.e. []essence_involves_existence. Prop. vii is the work's own earlier proposition, not someone else's claim.
+P2	S5	□essence_involves_existence	kind conceptual
+C	S6	□god_exists	from P1 P2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

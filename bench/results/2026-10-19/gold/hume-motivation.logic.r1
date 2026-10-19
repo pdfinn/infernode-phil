@@ -1,0 +1,11 @@
+# reading 2 of hume-motivation.md by claude-opus-5-5
+# S1 states the argument in brief; S2, S3 and S4 restate its premises and conclusion.
+atom	morals_influence	morals have an influence on the actions and affections: they excite passions, and produce or prevent actions
+atom	reason_influence	reason alone has an influence on the actions and affections
+atom	morals_from_reason	morals (the rules of morality) are derived from reason, as conclusions of our reason
+P1	S2	morals_influence	kind empirical
+P2	S3	¬reason_influence
+# The text relies on this unstated bridge: what is derived from reason alone could have no influence that reason alone lacks.
+A1	-	morals_from_reason → (morals_influence → reason_influence)
+C	S4	¬morals_from_reason
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

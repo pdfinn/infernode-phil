@@ -1,0 +1,12 @@
+# the argument of aquinas-evil-objection.md as claude-opus-5-5 read it: check that it says what the text says
+# The whole passage is Aquinas's Objection 1; no reply is given, so it is set out as the argument it presents.
+# S1's general principle about contraries is applied directly to goodness and evil, taken as contraries.
+atom	god_exists	God exists
+atom	infinite_good	there is an infinite goodness
+atom	evil	there is evil in the world
+P1	S1	infinite_good → ¬evil
+P2	S2	god_exists → infinite_good	kind conceptual
+C1	S3	god_exists → ¬evil	from P1 P2
+P3	S3	evil	kind empirical
+C	S4	¬god_exists	from C1 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

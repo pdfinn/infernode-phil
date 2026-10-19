@@ -1,0 +1,13 @@
+# reading 2 of kant.md by claude-opus-5-5
+atom	universal	my maxim is a universal law: everyone in difficulty may promise whatever he pleases with the purpose of not keeping it
+atom	nobody_believes	no one would consider that anything was promised to him, but would ridicule all such statements as vain pretences
+atom	promise_possible	the promise itself, and the end one has in view in it, is possible
+atom	holds	the maxim holds as a universal law of nature without contradicting itself
+# "necessarily contradict itself" is read as plain self-contradiction, not as a modal claim.
+P1	S8	universal → nobody_believes
+P2	S8	nobody_believes → ¬promise_possible
+C1	S8	universal → ¬promise_possible	from P1 P2
+# The text relies on this unstated link: the maxim holds as a universal law only if, once universal, the promising it relies on stays possible.
+A1	-	holds → universal ∧ promise_possible	kind conceptual
+C	S7	¬holds	from C1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

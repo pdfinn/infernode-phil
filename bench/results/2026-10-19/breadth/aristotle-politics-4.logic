@@ -1,0 +1,16 @@
+# the argument of aristotle-politics-4.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	necessary_parts	every animal has certain necessary parts: a sensorium, a mouth and belly to acquire and retain food, and parts to move from place to place
+atom	only_parts	these are the only parts of an animal
+atom	parts_differ	there are differences between these parts, in their various sorts of stomachs, bellies, sensoriums and motive powers
+atom	great_diff_same_kind	the same kind of animal has a very great difference in its mouth or ears
+atom	combos_species	the number of the combinations of all these parts makes up the different species of animals
+P1	S2	□necessary_parts	kind empirical
+P2	S3	only_parts ∧ parts_differ → □combos_species
+P3	S3	parts_differ	kind empirical
+# "If, then, these are the only parts" is put hypothetically, but the conclusion is drawn as if it holds.
+A1	-	only_parts
+P4	S4	¬◇great_diff_same_kind
+P5	S4	¬◇great_diff_same_kind → combos_species
+C	S3	□combos_species	from P2 P3 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

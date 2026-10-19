@@ -1,0 +1,17 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+aquinas-first-way.md:1: argue/readings: S11 is read 2 ways: aquinas-first-way.logic.r1 has "moved_by_other ∧ ¬first_mover → infinite_regress"; aquinas-first-way.logic.r1.2 and aquinas-first-way.logic.r1.3 have nothing from it; they differ when only "whatever is in motion is put in motion by another" is true, which the second allows
+aquinas-first-way.md:1: argue/answered: S11: answered yes, which keeps aquinas-first-way.logic.r1.2 and aquinas-first-way.logic.r1.3, to: Suppose "whatever is in motion is put in motion by another" is true and "the series of movers moved by another goes on to infinity" and "there is a first mover, put in motion by no other" are false. Is S11, "If that by which it is put in motion be itself put in motion, then this also must needs be put in motion by another, and that by another again.", true then?
+aquinas-first-way.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aquinas-first-way.logic.r1 and aquinas-first-way.logic.r1.3 have "motion_is_reduction ∧ reduction_needs_actual ∧ no_same_respect → no_self_motion" and "no_self_motion → moved_by_other" and "some_motion ∧ moved_by_other → other_movers"; aquinas-first-way.logic.r1.2 has "motion_is_reduction ∧ reduction_needs_actual ∧ no_same_respect → no_self_motion" and "no_self_motion → moved_by_other" and "some_motion ∧ moved_by_other → other_movers" and "some_motion ∧ moved_by_other ∧ ¬infinite_regress → first_mover"; they differ when only "in the world some things are in motion", "motion is nothing else than the reduction of something from potentiality to actuality", "nothing can be reduced from potentiality to actuality except by something in a state of actuality", "it is not possible that the same thing should be at once in actuality and potentiality in the same respect", "it is impossible that in the same respect a thing should be both mover and moved, i.e. move itself", "whatever is in motion is put in motion by another" and "there are other (subsequent) movers" are true, which the first allows
+# kept the reading that best fits the words and the other readings: aquinas-first-way.logic.r1.3
+# argument written to aquinas-first-way.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-first-way.md:1: argue/assumed: C1 (S9): follows only by A1, which the text never states: state it, or argue for it [in 2 of 3 runs]
+aquinas-first-way.md:1: argue/assumed: C2 (S10): follows only by A2, which the text never states: state it, or argue for it
+aquinas-first-way.md:1: argue/assumed: C3 (S13): follows only by A3, which the text never states: state it, or argue for it
+aquinas-first-way.md:1: argue/own-sentence: C4 (S12): needs P5, read from the conclusion's own sentence: check that S12 gives it as its reason and does not conclude it
+aquinas-first-way.md:1: argue/own-sentence: C (S13): needs P7, read from the conclusion's own sentence: check that S13 gives it as its reason and does not conclude it
+aquinas-first-way.md:1: argue/unused-step: C4 (S12): nothing rests on C4, and it is not the conclusion: a step that leads nowhere [in 1 of 3 runs]
+aquinas-first-way.logic.r1: argue/valid 1
+aquinas-first-way.logic: argue/runs-agree 1

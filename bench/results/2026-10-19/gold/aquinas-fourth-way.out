@@ -1,0 +1,16 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+aquinas-fourth-way.md:1: argue/readings: S4 is read 2 ways: aquinas-fourth-way.logic.r1 has "maximum ∧ uttermost_being → cause_all"; aquinas-fourth-way.logic.r1.2 and aquinas-fourth-way.logic.r1.3 have "uttermost_being → cause_all"; they differ when only "there is something which is uttermost being" is true, which the first allows [in 2 of 3 runs]
+aquinas-fourth-way.md:1: argue/answered: S4: answered no, which keeps aquinas-fourth-way.logic.r1.2 and aquinas-fourth-way.logic.r1.3, to: Suppose "there is something which is uttermost being" is true and "there is something which is truest, something best, something noblest" and "there is something which is to all beings the cause of their being, goodness, and every other perfection" are false. Is S4, "Now the maximum in any genus is the cause of all in that genus; as fire, which is the maximum heat, is the cause of all hot things.", true then? [in 2 of 3 runs]
+aquinas-fourth-way.md:1: argue/unfaithful: aquinas-fourth-way.logic.r1 P5 (S4): the sentence has no word of "there is something which is uttermost being": is it the sentence P5 came from? [in 2 of 3 runs]
+aquinas-fourth-way.md:1: argue/unfaithful: aquinas-fourth-way.logic.r1 P5 (S4): the sentence has no word of "there is something which is truest, something best, something noblest": is it the sentence P5 came from? [in 2 of 3 runs]
+# kept the reading that best fits the words and the other readings: aquinas-fourth-way.logic.r1.2
+# argument written to aquinas-fourth-way.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-fourth-way.md:1: argue/unfaithful: P5 (S4): the sentence has no word of "there is something which is uttermost being": is it the sentence P5 came from? [in 2 of 3 runs]
+aquinas-fourth-way.md:1: argue/own-sentence: C1 (S3): needs P2, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it [in 2 of 3 runs]
+aquinas-fourth-way.md:1: argue/own-sentence: C2 (S3): needs P4, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it [in 2 of 3 runs]
+aquinas-fourth-way.md:1: argue/own-sentence: C (S5): needs P6, read from the conclusion's own sentence: check that S5 gives it as its reason and does not conclude it
+aquinas-fourth-way.logic.r1: argue/valid 1
+aquinas-fourth-way.logic: argue/runs-agree 0

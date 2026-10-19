@@ -1,0 +1,16 @@
+# the argument of apology-death.md as claude-opus-5-5 read it: check that it says what the text says
+atom	nothing	death is a state of nothingness and utter unconsciousness, like a sleep undisturbed even by dreams
+atom	migration	death is a change and migration of the soul from this world to another place, where all the dead abide
+atom	good	death is a good, a gain
+atom	dreamless_best	few days or nights of a life, even the great king's, are passed better and more pleasantly than a night of sleep undisturbed even by dreams
+atom	single_night	eternity is then only a single night
+P1	S1	nothing ∨ migration
+P2	S3	dreamless_best	kind empirical
+P3	S4	nothing → single_night
+# the text plainly relies on this link from the dreamless-sleep comparison to death being a gain
+A1	-	dreamless_best ∧ single_night → good
+C1	S4	nothing → good	from P2 P3 A1
+# S5's rhetorical question is read as asserting that if death is migration, it is a great good
+P4	S5	migration → good
+C	S1	good	from P1 C1 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

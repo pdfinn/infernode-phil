@@ -1,0 +1,20 @@
+# 3 readings by claude-opus-5-5, compared
+epictetus-1.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: epictetus-1.logic.r1 and epictetus-1.logic.r1.2 have "carpenter_by_learning ∧ pilot_by_learning → ¬wish_sufficient ∧ must_learn"; epictetus-1.logic.r1.3 has nothing from it; they differ when only "the carpenter, when he has learned certain things, becomes a carpenter", "the pilot, by learning certain things, becomes a pilot" and "in philosophy it is sufficient to wish to be wise and good" are true, which the second allows
+epictetus-1.logic.r1: argue/readings: U1: epictetus-1.logic.r1 and epictetus-1.logic.r1.2 take for granted "if (the carpenter, when he has learned certain things, becomes a carpenter and the pilot, by learning certain things, becomes a pilot), then (it is not so that in philosophy it is sufficient to wish to be wise and good and in philosophy there is also a necessity to learn certain things)"; epictetus-1.logic.r1.3 does not
+epictetus-1.logic.r1: argue/answered: U1: answered no, which keeps epictetus-1.logic.r1.3, to: Does the text's argument take this for granted, whether or not it says so: "if (the carpenter, when he has learned certain things, becomes a carpenter and the pilot, by learning certain things, becomes a pilot), then (it is not so that in philosophy it is sufficient to wish to be wise and good and in philosophy there is also a necessity to learn certain things)"? Answer yes if the author would accept it as part of the argument.
+epictetus-1.logic.r1: argue/verdicts: valid as epictetus-1.logic.r1, epictetus-1.logic.r1.2 read it, not as the others do: which reading is right decides the verdict
+epictetus-1.logic.r1: argue/readings-agree 4
+epictetus-1.logic.r1: argue/readings-differ 1
+epictetus-1.logic.r1: argue/verdicts-agree 0
+epictetus-1.logic.r1: argue/mismatches 0
+epictetus-1.logic.r1.2: argue/mismatches 0
+epictetus-1.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: epictetus-1.logic.r1.3
+# argument written to epictetus-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+epictetus-1.md:1: argue/unlinked: C (S2): the conclusion speaks of "in philosophy there is also a necessity to learn certain things", which no premise mentions: nothing links it to them
+epictetus-1.md:1: argue/unlinked: C (S2): the conclusion speaks of "in philosophy it is sufficient to wish to be wise and good", which no premise mentions: nothing links it to them
+epictetus-1.md:1: argue/invalid: C (S2): does not follow: when "the carpenter, when he has learned certain things, becomes a carpenter" and "the pilot, by learning certain things, becomes a pilot" are true, "in philosophy it is sufficient to wish to be wise and good" and "in philosophy there is also a necessity to learn certain things" are false, every premise holds and the conclusion fails
+epictetus-1.md:1: argue/countermodel: C (S2): carpenter_by_learning = T, must_learn = F, pilot_by_learning = T, wish_sufficient = F
+epictetus-1.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "the carpenter, when he has learned certain things, becomes a carpenter": as written it cannot bear on the conclusion; was the same thing named two ways?
+epictetus-1.md:1: argue/unlinked: P2 (S1): P2 is the only statement about "the pilot, by learning certain things, becomes a pilot": as written it cannot bear on the conclusion; was the same thing named two ways?
+epictetus-1.logic.r1: argue/valid 0

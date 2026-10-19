@@ -1,0 +1,13 @@
+# reading 2 of aquinas-st-i-ii-1.md by claude-opus-5-5
+logic	s5
+atom	in_act	a thing is in act in a certain respect
+atom	can_act	the thing can act
+atom	deficient	the thing is in a certain respect deficient in act
+atom	cause_deficient	the thing causes a deficient act
+# S2 is read as three claims: being in act and deficient in act can go together; being in act lets the thing act; being deficient makes it cause a deficient act.
+# S3 (the blind man) only illustrates, so it is left out.
+P1	S2	◇(in_act ∧ deficient)	kind conceptual
+P2	S2	□(in_act → can_act)	kind conceptual
+P3	S2	□(deficient → cause_deficient)	kind conceptual
+C	S2	◇(can_act ∧ cause_deficient)
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

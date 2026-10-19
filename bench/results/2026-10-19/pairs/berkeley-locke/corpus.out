@@ -1,0 +1,15 @@
+./berkeley.md:1: claims/misattributed: berkeley P3 gives "berkeley_brutes_particular" (brutes reason only in particular ideas, just as they receive them from their senses) as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/misattributed: berkeley P7 gives "berkeley_words_imply_general&(!no_signs->!abstract_brutes|abstract_brutes)" as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/misattributed: berkeley P8 gives "berkeley_words_imply_general" (the making use of words implies the having general ideas) as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/misattributed: berkeley P10 gives "berkeley_sign_abstract" (a word becomes general by being made the sign of an abstract general idea) as locke's, but nothing locke holds, as read (readings/locke/logic), entails it, nor its denial
+./berkeley.md:1: claims/reported-only: berkeley P3 gives "berkeley_brutes_particular" (brutes reason only in particular ideas, just as they receive them from their senses) as locke's, and no work in the corpus holds it: it is only reported
+./berkeley.md:1: claims/reported-only: berkeley P7 gives "berkeley_words_imply_general&(!no_signs->!abstract_brutes|abstract_brutes)" as locke's, and no work in the corpus holds it: it is only reported
+./berkeley.md:1: claims/reported-only: berkeley P8 gives "berkeley_words_imply_general" (the making use of words implies the having general ideas) as locke's, and no work in the corpus holds it: it is only reported
+./berkeley.md:1: claims/reported-only: berkeley P10 gives "berkeley_sign_abstract" (a word becomes general by being made the sign of an abstract general idea) as locke's, and no work in the corpus holds it: it is only reported
+.: corpus/works 2
+.: corpus/claims 16
+.: claims/attributed 3
+.: claims/misattributed 4
+.: claims/contradicts-source 0
+.: claims/attributed-unread 0
+.: claims/reported-only 4

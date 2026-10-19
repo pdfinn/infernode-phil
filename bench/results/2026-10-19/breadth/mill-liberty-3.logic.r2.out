@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+mill-liberty-3.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: mill-liberty-3.logic.r2 has "is_orig" and "¬see_use → indifferent_natural" and "first_done ∧ good_fruits → O modest_belief"; mill-liberty-3.logic.r2.2 and mill-liberty-3.logic.r2.3 have "is_orig" and "¬see_use ∧ indifferent → indifferent_natural" and "first_done ∧ good_fruits → O modest_belief"; they differ when only "what they would be shown is genuinely originality", "nothing was ever yet done which some one was not the first to do", "all good things which exist are the fruits of originality" and "it ought to be that unoriginal minds believe there is something still left for originality to accomplish and that they need it the more, the less they are conscious of the want" are true, which the second allows
+mill-liberty-3.md:1: argue/negation: mill-liberty-3.logic.r2 P4 (S9): the sentence says "nothing", but P4 denies nothing it speaks of: it reads "all good things which exist are the fruits of originality"
+mill-liberty-3.md:1: argue/negation: mill-liberty-3.logic.r2 C (S9): the sentence says "nothing", but C denies nothing it speaks of: it reads "it ought to be that unoriginal minds believe there is something still left for originality to accomplish and that they need it the more, the less they are conscious of the want"
+mill-liberty-3.md:1: argue/negation: mill-liberty-3.logic.r2.2 P4 (S9): the sentence says "nothing", but P4 denies nothing it speaks of: it reads "all good things which exist are the fruits of originality"
+mill-liberty-3.md:1: argue/negation: mill-liberty-3.logic.r2.2 C (S9): the sentence says "nothing", but C denies nothing it speaks of: it reads "it ought to be that unoriginal minds believe there is something still left for originality to accomplish and that they need it the more, the less they are conscious of the want"
+mill-liberty-3.md:1: argue/negation: mill-liberty-3.logic.r2.3 P4 (S9): the sentence says "nothing", but P4 denies nothing it speaks of: it reads "all good things which exist are the fruits of originality"
+mill-liberty-3.md:1: argue/negation: mill-liberty-3.logic.r2.3 C (S9): the sentence says "nothing", but C denies nothing it speaks of: it reads "it ought to be that unoriginal minds believe there is something still left for originality to accomplish and that they need it the more, the less they are conscious of the want"
+mill-liberty-3.logic.r2: argue/readings-agree 4
+mill-liberty-3.logic.r2: argue/readings-differ 1
+mill-liberty-3.logic.r2: argue/verdicts-agree 1
+mill-liberty-3.logic.r2: argue/mismatches 2
+mill-liberty-3.logic.r2.2: argue/mismatches 2
+mill-liberty-3.logic.r2.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: mill-liberty-3.logic.r2.2
+# argument written to mill-liberty-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+mill-liberty-3.md:1: argue/negation: P4 (S9): the sentence says "nothing", but P4 denies nothing it speaks of: it reads "all good things which exist are the fruits of originality"
+mill-liberty-3.md:1: argue/negation: C (S9): the sentence says "nothing", but C denies nothing it speaks of: it reads "it ought to be that unoriginal minds believe there is something still left for originality to accomplish and that they need it the more, the less they are conscious of the want"
+mill-liberty-3.md:1: argue/assumed: C1 (S5): follows only by A1, which the text never states: state it, or argue for it
+mill-liberty-3.md:1: argue/assumed: C2 (S4): follows only by A2, which the text never states: state it, or argue for it
+mill-liberty-3.md:1: argue/assumed: C (S9): follows only by A3, which the text never states: state it, or argue for it
+mill-liberty-3.md:1: argue/own-sentence: C (S9): needs P3 and P4, read from the conclusion's own sentence: check that S9 gives them as its reason and does not conclude them
+mill-liberty-3.md:1: argue/unused-step: C2 (S4): nothing rests on C2, and it is not the conclusion: a step that leads nowhere
+mill-liberty-3.logic.r2: argue/valid 1

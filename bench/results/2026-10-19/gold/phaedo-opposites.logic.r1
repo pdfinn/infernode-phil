@@ -1,0 +1,26 @@
+# reading 3 of phaedo-opposites.md by claude-opus-5-5
+atom	has_opp(x)	x has an opposite
+atom	gen_from_opp(x)	x is generated out of its opposite
+atom	two_proc(x)	x has two intermediate processes, from one opposite to the other and back again
+atom	opp_life_death	death is the opposite of life
+atom	opp_sleep_wake	sleep is the opposite of waking
+atom	wake_from_sleep	out of sleeping waking is generated, and out of waking sleeping
+atom	dead_from_living	the dead are generated from the living
+atom	living_from_dead	the living are generated from the dead
+atom	souls_below	our souls exist in the world below
+domain	life death sleep waking
+# "of necessity" in S4 and S17 is not written as a modal, since modal logic here takes no all or some.
+P1	S12	∀x (has_opp(x) → gen_from_opp(x))
+P2	S17	∀x (has_opp(x) → two_proc(x))
+P3	S19	opp_sleep_wake
+P4	S27	opp_sleep_wake ∧ wake_from_sleep
+P5	S31	opp_life_death
+P6	S36	dead_from_living
+P7	S38	living_from_dead
+A1	-	opp_life_death → has_opp(life) ∧ has_opp(death)
+A2	-	(gen_from_opp(life) → living_from_dead) ∧ (gen_from_opp(death) → dead_from_living)
+C1	S39	living_from_dead	from P1 P5 A1 A2
+# The step from the living being generated from the dead to souls existing below is left unstated in the text.
+A3	-	living_from_dead → souls_below
+C	S41	souls_below	from C1 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

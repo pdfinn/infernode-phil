@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-3.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-3.logic.r1 has "□¬(according_incl ∧ against_incl)" and "□(according_nature → according_incl)"; aquinas-st-i-3.logic.r1.2 and aquinas-st-i-3.logic.r1.3 have "□¬(against_incl ∧ according_incl)"; they differ when only "necessarily, it is not so that (the thing is against the inclination of the thing and the thing is according to the inclination of the thing)" and "necessarily, it is not so that (the thing is according to the inclination of the thing and the thing is against the inclination of the thing)" are true, which the second allows
+aquinas-st-i-3.logic.r1: argue/readings: U1: aquinas-st-i-3.logic.r1 takes for granted "necessarily, (if the thing is according to the inclination of nature, then the thing is according to the inclination of the thing)"; aquinas-st-i-3.logic.r1.2 and aquinas-st-i-3.logic.r1.3 do not
+aquinas-st-i-3.logic.r1: argue/answered: U1: answered yes, which keeps aquinas-st-i-3.logic.r1, to: Does the text's argument take this for granted, whether or not it says so: "necessarily, (if the thing is according to the inclination of nature, then the thing is according to the inclination of the thing)"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-3.logic.r1: argue/readings-agree 4
+aquinas-st-i-3.logic.r1: argue/readings-differ 1
+aquinas-st-i-3.logic.r1: argue/verdicts-agree 1
+aquinas-st-i-3.logic.r1: argue/mismatches 0
+aquinas-st-i-3.logic.r1.2: argue/mismatches 0
+aquinas-st-i-3.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-3.logic.r1
+# argument written to aquinas-st-i-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-3.md:1: argue/assumed: C1 (S5): follows only by A1 and A2, which the text never states: state it, or argue for it
+aquinas-st-i-3.md:1: argue/assumed: C (S5): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-3.md:1: argue/unused-step: C1 (S5): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-3.logic.r1: argue/valid 1

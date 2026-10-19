@@ -1,0 +1,15 @@
+# the argument of locke.md as claude-opus-5-5 read it: check that it says what the text says
+atom	no_signs	we observe no footsteps in brutes of making use of general signs for universal ideas; they have no use of words or any other general signs
+atom	abstract_brutes	brutes have the power of abstracting, or making general ideas
+atom	man_general	man has general ideas
+atom	distinction	the having of general ideas puts a perfect distinction betwixt man and brutes
+# S2's "since" relies on the link that a creature with the faculty of abstracting would show some use of general signs
+# S3-S4 explain how ideas become general by abstraction, which licenses treating abstracting and making general ideas as one atom; they are left out as premises
+# S5-S6 (the general idea of a triangle) only illustrate the difficulty of abstraction and are left out
+P1	S2	no_signs	kind empirical
+A1	-	abstract_brutes → ¬no_signs
+C1	S2	¬abstract_brutes	from P1 A1
+A2	-	man_general
+A3	-	man_general ∧ ¬abstract_brutes → distinction
+C	S1	¬abstract_brutes ∧ distinction	from C1 A2 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

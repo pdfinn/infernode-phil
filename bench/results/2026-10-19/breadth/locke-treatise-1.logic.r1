@@ -1,0 +1,31 @@
+# reading 3 of locke-treatise-1.md by claude-opus-5-5
+logic	kd
+atom	end_continuation	the end of conjunction between male and female is not barely procreation but the continuation of the species
+atom	young_need	the young are to be sustained by those that got them till they are able to shift and provide for themselves
+atom	last_while_needed	the conjunction betwixt male and female lasts, even after procreation, so long as is necessary to the nourishment and support of the young ones
+atom	maker_rule	this rule is one which the infinite wise maker hath set to the works of his hands
+atom	creatures_obey	the inferior creatures steadily obey this rule
+atom	grass_teat_sufficient	in viviparous animals which feed on grass, the teat of the dam is sufficient to nourish the young, and the male can contribute nothing to their sustenance
+atom	grass_short	in viviparous animals which feed on grass, the conjunction lasts no longer than the very act of copulation
+atom	prey_male_needed	in beasts of prey, the assistance of the male is necessary to the maintenance of their common family
+atom	prey_longer	in beasts of prey, the conjunction lasts longer
+atom	bird_young_need_food	in birds, the young need food in the nest
+atom	bird_mates_continue	in birds, the cock and hen continue mates till the young are able to use their wing and provide for themselves
+P1	S3	end_continuation
+P2	S3	young_need
+# the "for ... being ..." construction in S3 gives these as the reason for the ought
+P3	S3	end_continuation ∧ young_need → O last_while_needed	kind normative
+P4	S4	maker_rule
+P5	S4	creatures_obey	kind empirical
+P6	S5	grass_teat_sufficient	kind empirical
+P7	S5	grass_teat_sufficient → grass_short	kind empirical
+P8	S5	grass_short	kind empirical
+P9	S6	prey_male_needed	kind empirical
+P10	S6	prey_male_needed → prey_longer	kind empirical
+P11	S6	prey_longer	kind empirical
+P12	S7	bird_young_need_food	kind empirical
+P13	S7	bird_young_need_food → bird_mates_continue	kind empirical
+P14	S7	bird_mates_continue	kind empirical
+# S5-S7 are offered as evidence for S4's claim that creatures obey the rule; the main conclusion is the ought in S3
+C	S3	O last_while_needed	from P1 P2 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

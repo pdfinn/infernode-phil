@@ -1,0 +1,25 @@
+# 3 readings by claude-opus-5-5, compared
+hume-enquiry-3.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: hume-enquiry-3.logic.r1 has "certain_no_hand_fire → moral_inference_certain"; hume-enquiry-3.logic.r1.2 and hume-enquiry-3.logic.r1.3 have "certain_no_hand_fire ∧ frenzy_no_possibility → moral_inference_certain"; they differ when only "I know with certainty that he is not to put his hand into the fire and hold it there till it be consumed" is true, which the second allows
+hume-enquiry-3.md:1: argue/readings: the conclusion is read 2 ways: hume-enquiry-3.logic.r1 and hume-enquiry-3.logic.r1.3 have "moral_inference_certain ∧ half_reasonings_similar"; hume-enquiry-3.logic.r1.2 has "moral_inference_certain"; they differ when only "inferences from the usual conduct of mankind attain certainty proportioned to our experience of that conduct" is true, which the second allows
+hume-enquiry-3.md:1: argue/answered: the conclusion: answered no, which keeps hume-enquiry-3.logic.r1 and hume-enquiry-3.logic.r1.3, to: Suppose "inferences from the usual conduct of mankind attain certainty proportioned to our experience of that conduct" is true and "above one half of human reasonings contain inferences of a similar nature" is false. Is the conclusion, "Above one half of human reasonings contain inferences of a similar nature, attended with more or less degrees of certainty proportioned to our experience of the usual conduct of mankind in such particular situations.", true then?
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r1 P4 (S4): the sentence says "no", but P4 denies nothing it speaks of: it reads "holding his hand in the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r1.2 P5 (S4): the sentence says "no", but P5 denies nothing it speaks of: it reads "holding his hand in the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r1.3 P4 (S4): the sentence says "no", but P4 denies nothing it speaks of: it reads "holding his hand in the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.logic.r1: argue/readings-agree 4
+hume-enquiry-3.logic.r1: argue/readings-differ 2
+hume-enquiry-3.logic.r1: argue/verdicts-agree 1
+hume-enquiry-3.logic.r1: argue/mismatches 1
+hume-enquiry-3.logic.r1.2: argue/mismatches 1
+hume-enquiry-3.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: hume-enquiry-3.logic.r1.3
+# argument written to hume-enquiry-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-enquiry-3.md:1: argue/negation: P4 (S4): the sentence says "no", but P4 denies nothing it speaks of: it reads "holding his hand in the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.md:1: argue/negation: O1 (S1): the sentence says "no", but O1 denies nothing it speaks of: it reads "he may have been seized with a sudden and unknown frenzy"
+hume-enquiry-3.md:1: argue/own-sentence: C1 (S3): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes
+hume-enquiry-3.md:1: argue/own-sentence: C2 (S4): follows from P4 and P5 alone, read from the conclusion's own sentence: unless S4 gives them as its reason, the reading has it assert what it concludes
+hume-enquiry-3.md:1: argue/assumed: C (S6): follows only by A1, which the text never states: state it, or argue for it
+hume-enquiry-3.md:1: argue/own-sentence: C (S6): needs P6, read from the conclusion's own sentence: check that S6 gives it as its reason and does not conclude it
+hume-enquiry-3.logic.r1: argue/valid 1
+hume-enquiry-3.md:1: argue/misses: O1 (S1): O1 does not contradict P1, even given the premises no one disputes: as written it leaves P1 standing; is it aimed at something else?
+hume-enquiry-3.md:1: argue/misses: R1 (S1): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+hume-enquiry-3.logic.r1: argue/survives 1

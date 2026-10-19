@@ -1,0 +1,12 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-ii-3.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-ii-3.logic.r1 and aquinas-st-i-ii-3.logic.r1.2 have "soil_easy → soil_simple" and "animal_trouble → flesh_delicate" and "god_wishes_simple ∧ soil_simple ∧ flesh_delicate → forbade_animals ∧ ¬forbade_soil"; aquinas-st-i-ii-3.logic.r1.3 has "soil_easy ∧ animal_trouble → soil_simple ∧ flesh_delicate" and "god_wishes_simple ∧ soil_simple ∧ flesh_delicate → forbade_animals ∧ ¬forbade_soil"; they differ when only "the soil gives birth to the herb of its own accord, and such products may be had in great quantities with very little effort" is true, which the second allows
+aquinas-st-i-ii-3.md:1: argue/negation: aquinas-st-i-ii-3.logic.r1 P1 (S4): the sentence says "no", but P1 denies nothing it speaks of: it reads "the soil gives birth to the herb of its own accord, and such products may be had in great quantities with very little effort" [in 1 of 2 runs]
+# kept the reading that best fits the words and the other readings: aquinas-st-i-ii-3.logic.r1.2
+# argument written to aquinas-st-i-ii-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-ii-3.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-ii-3.md:1: argue/assumed: C (S5): follows only by A2, which the text never states: state it, or argue for it
+aquinas-st-i-ii-3.md:1: argue/own-sentence: C (S5): needs P2, read from the conclusion's own sentence: check that S5 gives it as its reason and does not conclude it
+aquinas-st-i-ii-3.logic.r1: argue/valid 1
+aquinas-st-i-ii-3.logic: argue/runs-agree 1

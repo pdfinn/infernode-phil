@@ -1,0 +1,17 @@
+# the argument of hume-miracles.md as claude-opus-5-5 read it: check that it says what the text says
+# Hume's case against miracles, read as a claim about every event x.
+# S1 states the same conclusion in advance; S2, S4 and S5 are illustrations, so they are left out.
+atom	miracle(x)	x is a miracle, a violation of the laws of nature
+atom	observed(x)	x happens, or has been observed to happen, in the common course of nature
+atom	uniform_against(x)	there is a uniform experience against x
+atom	proof_against(x)	there is a direct and full proof, from the nature of the fact, against x
+atom	credible(x)	x is rendered credible
+atom	superior_opposite(x)	there is an opposite proof for x which is superior
+P1	S3	∀x (observed(x) → ¬miracle(x))	kind conceptual
+# The step to S6 relies on reading "never observed" as amounting to a uniform experience against the event.
+A1	-	∀x (¬observed(x) → uniform_against(x))
+C1	S6	∀x (miracle(x) → uniform_against(x))	from P1 A1
+P2	S7	∀x (uniform_against(x) → proof_against(x))	kind conceptual
+P3	S7	∀x (proof_against(x) → (credible(x) → superior_opposite(x)))
+C	S7	∀x (miracle(x) → proof_against(x) ∧ (credible(x) → superior_opposite(x)))	from C1 P2 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

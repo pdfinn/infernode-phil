@@ -1,0 +1,23 @@
+# the argument of epictetus-4.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	worry	one says "What shall I do? how will it be? how will it turn out? will this happen?", i.e. there is room for such anxious words
+atom	concern_external	one is turning oneself to things which are not within the power of the will
+atom	rule	one desires nothing which belongs to others and tries to avoid none of the things which are not in one's power
+atom	fail	one fails in one's desires and falls into that which one would avoid
+atom	choose_fail	one chooses to desire that which one will fail to obtain and to attempt to avoid that into which one will fall
+atom	assent_in_power	not assenting to the false and not turning from the truth is in one's own power
+atom	anxious_assent_warranted	there is reason to be anxious about assent and truth
+P1	S1	all_difficulty_external	kind empirical
+atom	all_difficulty_external	the difficulties and helplessness of all men are about external things
+P2	S3	worry → concern_external	kind empirical
+P3	S6	assent_in_power	kind empirical
+P4	S5	assent_in_power → ¬anxious_assent_warranted
+P5	S8	¬choose_fail → rule	kind normative
+P6	S9	□(¬rule → fail)
+# rule as stated in S8 just is not desiring or avoiding what lies outside the power of the will
+A1	-	rule → ¬concern_external	kind conceptual
+# the text takes it that no one chooses to fail in desire and fall into what he avoids
+A2	-	¬choose_fail
+C1	S8	rule	from P5 A2
+C	S10	¬worry	from C1 A1 P2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

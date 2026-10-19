@@ -1,0 +1,15 @@
+# the argument of aquinas-st-i-ii-4.md as claude-opus-5-5 read it: check that it says what the text says
+# Modal words ("can merit", "may merit") are folded into the atoms, not written with modal logic.
+atom	all_power_from_god	a man receives all his power of well-doing from God
+atom	power_from_man	a man receives his power of well-doing from man
+atom	merit_god_only_by_gift	a man can merit nothing from God except by His gift
+atom	merit_man_before_receiving	man may merit from man, before he has received anything from him, by what he has received from God
+atom	case_different	the case is different in God and in man
+P1	S3	all_power_from_god ∧ ¬power_from_man
+A1	-	all_power_from_god ∧ ¬power_from_man → merit_god_only_by_gift
+C1	S4	merit_god_only_by_gift	from P1 A1
+P2	S5	merit_god_only_by_gift	says paul
+P3	S6	merit_man_before_receiving
+A2	-	merit_god_only_by_gift ∧ merit_man_before_receiving → case_different
+C	S2	case_different	from C1 P3 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

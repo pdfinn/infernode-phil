@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+berkeley-master.md:1: argue/readings: S2 is read 2 ways: berkeley-master.logic.r1 has "imagine_unperceived" and "imagine_unperceived → framing_ideas"; berkeley-master.logic.r1.2 and berkeley-master.logic.r1.3 have nothing from it; they differ when only "you can imagine trees in a park, or books in a closet, existing with nobody by to perceive them" is true, which the second allows
+berkeley-master.md:1: argue/answered: S2: answered no, which keeps berkeley-master.logic.r1, to: Suppose "you can imagine trees in a park, or books in a closet, existing with nobody by to perceive them" is true and "such imagining is only framing in your mind ideas you call books and trees while omitting to frame the idea of anyone who may perceive them" is false. Is S2, "I answer, you may so, there is no difficulty in it; but what is all this, I beseech you, more than framing in your mind certain ideas which you call BOOKS and TREES, and the same time omitting to frame the idea of any one that may perceive them?", true then?
+berkeley-master.md:1: argue/readings: S3 is read 2 ways: berkeley-master.logic.r1 has "framing_ideas → you_perceive"; berkeley-master.logic.r1.2 and berkeley-master.logic.r1.3 have "you_perceive"; they differ when nothing is true, which the first allows
+berkeley-master.md:1: argue/answered: S3: answered no, which keeps berkeley-master.logic.r1.2 and berkeley-master.logic.r1.3, to: Suppose "such imagining is only framing in your mind ideas you call books and trees while omitting to frame the idea of anyone who may perceive them" and "you yourself perceive or think of them all the while" are false. Is S3, "BUT DO NOT YOU YOURSELF PERCEIVE OR THINK OF THEM ALL THE WHILE?", true then?
+berkeley-master.logic.r1: argue/readings: the main conclusion is read at 2 sentences: berkeley-master.logic.r1 puts it at S5, "To make out this, IT IS NECESSARY THAT YOU CONCEIVE THEM EXISTING UNCONCEIVED OR UNTHOUGHT OF, WHICH IS A MANIFEST REPUGNANCY."; berkeley-master.logic.r1.2 and berkeley-master.logic.r1.3 at S4, "This therefore is nothing to the purpose; it only shows you have the power of imagining or forming ideas in your mind: but it does not show that you can conceive it possible the objects of your thought may exist without the mind."
+berkeley-master.logic.r1: argue/answered: M: answered no, which keeps berkeley-master.logic.r1.2 and berkeley-master.logic.r1.3, to: Is the text's main conclusion S5, "To make out this, IT IS NECESSARY THAT YOU CONCEIVE THEM EXISTING UNCONCEIVED OR UNTHOUGHT OF, WHICH IS A MANIFEST REPUGNANCY.", rather than S4, "This therefore is nothing to the purpose; it only shows you have the power of imagining or forming ideas in your mind: but it does not show that you can conceive it possible the objects of your thought may exist without the mind."?
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r1 P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "if such imagining is only framing in your mind ideas you call books and trees while omitting to frame the idea of anyone who may perceive them, then you yourself perceive or think of them all the while"
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r1.2 P1 (S3): the sentence says "not", but P1 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r1.3 P1 (S3): the sentence says "not", but P1 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.logic.r1: argue/readings-agree 3
+berkeley-master.logic.r1: argue/readings-differ 2
+berkeley-master.logic.r1: argue/verdicts-agree 1
+berkeley-master.logic.r1: argue/answers-split: no reading agrees with all 3 answers (berkeley-master.logic.r1 1, berkeley-master.logic.r1.2 2, berkeley-master.logic.r1.3 2 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+berkeley-master.logic.r1: argue/mismatches 1
+berkeley-master.logic.r1.2: argue/mismatches 1
+berkeley-master.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: berkeley-master.logic.r1.2
+# argument written to berkeley-master.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+berkeley-master.md:1: argue/negation: P1 (S3): the sentence says "not", but P1 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.logic.r1: argue/valid 1
+berkeley-master.md:1: argue/misses: O1 (S1): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+berkeley-master.md:1: argue/misses: R1 (S2): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+berkeley-master.logic.r1: argue/survives 1

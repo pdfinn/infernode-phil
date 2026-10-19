@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+hume-treatise-2.md:1: argue/negation: hume-treatise-2.logic.r1 P2 (S2): the sentence says "no", but P2 denies nothing it speaks of: it reads "every vulgar hypothesis on this subject is imperfect"
+hume-treatise-2.md:1: argue/negation: hume-treatise-2.logic.r1.2 P2 (S2): the sentence says "no", but P2 denies nothing it speaks of: it reads "every vulgar hypothesis on this subject is imperfect"
+hume-treatise-2.md:1: argue/negation: hume-treatise-2.logic.r1.3 P2 (S2): the sentence says "no", but P2 denies nothing it speaks of: it reads "every vulgar hypothesis on this subject is imperfect"
+hume-treatise-2.logic.r1: argue/readings-agree 5
+hume-treatise-2.logic.r1: argue/readings-differ 0
+hume-treatise-2.logic.r1: argue/verdicts-agree 1
+hume-treatise-2.logic.r1: argue/mismatches 1
+hume-treatise-2.logic.r1.2: argue/mismatches 1
+hume-treatise-2.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: hume-treatise-2.logic.r1
+# argument written to hume-treatise-2.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-treatise-2.md:1: argue/negation: P2 (S2): the sentence says "no", but P2 denies nothing it speaks of: it reads "every vulgar hypothesis on this subject is imperfect"
+hume-treatise-2.md:1: argue/own-sentence: C (S3): follows from P3 and P4 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes
+hume-treatise-2.logic.r1: argue/valid 1

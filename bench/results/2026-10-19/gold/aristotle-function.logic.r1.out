@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1 P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "carpenter and cobbler have certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1 P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, and foot, and generally each of his members, has manifestly some special work"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1 C (S1): the sentence says "none", but C denies nothing it speaks of: it reads "the whole Man, as distinct from all these, has some work of his own"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1.2 P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "carpenter and cobbler have certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1.2 P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, and foot, and generally each of his members, has manifestly some special work"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1.2 C (S1): the sentence says "none", but C denies nothing it speaks of: it reads "the whole Man, as distinct from all these, has some work of his own"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1.3 P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "carpenter and cobbler have certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1.3 P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, and foot, and generally each of his members, has manifestly some special work"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1.3 C (S1): the sentence says "none", but C denies nothing it speaks of: it reads "the whole Man, as distinct from all these, has some work of his own"
+aristotle-function.logic.r1: argue/readings-agree 3
+aristotle-function.logic.r1: argue/readings-differ 0
+aristotle-function.logic.r1: argue/verdicts-agree 1
+aristotle-function.logic.r1: argue/mismatches 3
+aristotle-function.logic.r1.2: argue/mismatches 3
+aristotle-function.logic.r1.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: aristotle-function.logic.r1
+# argument written to aristotle-function.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aristotle-function.md:1: argue/negation: P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "carpenter and cobbler have certain works and courses of action"
+aristotle-function.md:1: argue/negation: P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, and foot, and generally each of his members, has manifestly some special work"
+aristotle-function.md:1: argue/negation: C (S1): the sentence says "none", but C denies nothing it speaks of: it reads "the whole Man, as distinct from all these, has some work of his own"
+aristotle-function.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it
+aristotle-function.md:1: argue/own-sentence: C (S1): needs P1 and P2, read from the conclusion's own sentence: check that S1 gives them as its reason and does not conclude them
+aristotle-function.logic.r1: argue/valid 1

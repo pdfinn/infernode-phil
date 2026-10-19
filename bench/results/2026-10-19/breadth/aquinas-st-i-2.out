@@ -1,0 +1,20 @@
+# run 1 of 2
+# run 2 of 2
+# the prover could not read aquinas-st-i-2.logic.r1.3: claude-opus-5-5 is asked again
+aquinas-st-i-2.logic.r1.3: argue/undefined: atom common_form is used but not given a meaning (atom	common_form	...) [in 1 of 2 runs]
+bind: /tmp/phil.read.180: '/tmp/phil.read.180' does not exist
+bind: /tmp/phil.read.180: '/tmp/phil.read.180' does not exist
+cd: /tmp/phil.read.180: '/tmp/phil.read.180' does not exist
+# the prover could not read aquinas-st-i-2.logic.r1.3: claude-opus-5-5 is asked again
+aquinas-st-i-2.logic.r1.3:2: argue/syntax: logic is classical, s5 (necessity and possibility), kd (ought and permitted), k or kt [in 1 of 2 runs]
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-2.md:1: argue/readings: S2 is read 2 ways: aquinas-st-i-2.logic.r1 has "equal → alike"; aquinas-st-i-2.logic.r1.2 and aquinas-st-i-2.logic.r1.3 have "equal → alike ∧ ¬more_perfect"; they differ when only "one of them participates in the form more perfectly than the other", "the Son is like to the Father" and "the Son is equal to the Father" are true, which the first allows [in 1 of 2 runs]
+aquinas-st-i-2.md:1: argue/answered: S2: answered yes, which keeps aquinas-st-i-2.logic.r1, to: Suppose "one of them participates in the form more perfectly than the other", "the Son is like to the Father" and "the Son is equal to the Father" are true. Is S2, "2: Where we have equality in respect of virtual quantity, equality includes likeness and something besides, because it excludes excess.", true then? [in 1 of 2 runs]
+aquinas-st-i-2.md:1: argue/negation: aquinas-st-i-2.logic.r1 P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "if one of them participates in the form more perfectly than the other, then it is not so that the Son is equal to the Father"
+# kept the reading that best fits the words and the other readings: aquinas-st-i-2.logic.r1
+# argument written to aquinas-st-i-2.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-2.md:1: argue/negation: P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "if one of them participates in the form more perfectly than the other, then it is not so that the Son is equal to the Father"
+aquinas-st-i-2.md:1: argue/assumed: C (S4): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-2.md:1: argue/own-sentence: C (S4): needs P4, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+aquinas-st-i-2.logic.r1: argue/valid 1
+aquinas-st-i-2.logic: argue/runs-agree 1

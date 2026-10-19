@@ -1,0 +1,27 @@
+# reading 2 of hobbes-leviathan-3.md by claude-opus-5-5
+atom	sep_soul	the Soule hath an existence separate from the Body (Naturall Eternity of separated Soules)
+atom	purgatory	there is a Purgatory
+atom	grace_only	Eternall Life is by Grace onely
+atom	fast_obtain	David's Fasting for Saul and Abner was for the obtaining of something for them at Gods hands, after their death
+atom	ate_after_child	after Fasting for the recovery of his owne child, assoone as he knew it was dead, David called for meate
+atom	nothing_hh	nothing can be obtained by mens Fasting for Soules already in Heaven or Hell
+atom	some_neither	there be some Soules of dead men which are neither in Heaven nor in Hell
+atom	third_place	some Soules of dead men are in some third place
+atom	not_profitable	the life of Saul and Abner was not profitable to David as mourner
+atom	fast_honour	David's Fasting for Saul and Abner was for honours sake to their persons
+atom	texts_prove	the texts alledged by Bellarmine prove a Purgatory
+P1	S1	purgatory → sep_soul	kind conceptual
+# S2 states only a supposition: grace_only is never asserted, so only the conditional is a premise
+P2	S2	grace_only → ¬sep_soul
+P3	S7	ate_after_child → fast_obtain	says bellarmine
+P4	S7	ate_after_child	says bellarmine	kind empirical
+P5	S8	sep_soul ∧ nothing_hh ∧ fast_obtain → some_neither	says bellarmine
+P6	S8	some_neither → third_place	says bellarmine
+P7	S8	third_place → purgatory	says bellarmine
+P8	S8	sep_soul ∧ nothing_hh	says bellarmine
+P9	S9	not_profitable → fast_honour
+P10	S9	not_profitable	kind empirical
+A1	-	fast_honour → ¬fast_obtain
+A2	-	texts_prove → fast_obtain
+C	S9	¬texts_prove	from P9 P10 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

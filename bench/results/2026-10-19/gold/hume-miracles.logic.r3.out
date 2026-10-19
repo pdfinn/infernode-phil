@@ -1,0 +1,25 @@
+# 3 readings by claude-opus-5-5, compared
+hume-miracles.md:1: argue/readings: the conclusion is read 2 ways: hume-miracles.logic.r3 has "∀x (miracle(x) ∧ ¬superiorproof(x) → ¬credible(x))"; hume-miracles.logic.r3.2 and hume-miracles.logic.r3.3 have "∀x (miracle(x) → proofagainst(x) ∧ (credible(x) → superiorproof(x)))"; they differ when nothing is true, which the first allows
+hume-miracles.md:1: argue/answered: the conclusion: answered no, which keeps hume-miracles.logic.r3.2 and hume-miracles.logic.r3.3, to: Suppose nothing is true. Is the conclusion, "And as a uniform experience amounts to a proof, there is here a direct and full proof, from the nature of the fact, against the existence of any miracle; nor can such a proof be destroyed, or the miracle rendered credible, but by an opposite proof, which is superior.", true then?
+hume-miracles.md:1: argue/negation: hume-miracles.logic.r3 P4 (S7): the sentence says "nor", but P4 denies nothing it speaks of: it reads "for every x, if there is a uniform (firm and unalterable) experience against x, then there is a direct and full proof against x"
+hume-miracles.md:1: argue/negation: hume-miracles.logic.r3.2 P4 (S7): the sentence says "nor", but P4 denies nothing it speaks of: it reads "for every x, if there is a uniform (firm and unalterable) experience against x, then there is a direct and full proof against x"
+hume-miracles.md:1: argue/negation: hume-miracles.logic.r3.2 P5 (S7): the sentence says "nor", but P5 denies nothing it speaks of: it reads "for every x, if (there is a direct and full proof against x and x is rendered credible), then there is an opposite proof, superior, in favour of x"
+hume-miracles.md:1: argue/negation: hume-miracles.logic.r3.2 C (S7): the sentence says "nor", but C denies nothing it speaks of: it reads "for every x, if x is a miracle, then (there is a direct and full proof against x and (if x is rendered credible, then there is an opposite proof, superior, in favour of x))"
+hume-miracles.md:1: argue/negation: hume-miracles.logic.r3.3 P4 (S7): the sentence says "nor", but P4 denies nothing it speaks of: it reads "for every x, if there is a uniform (firm and unalterable) experience against x, then there is a direct and full proof against x"
+hume-miracles.md:1: argue/negation: hume-miracles.logic.r3.3 P5 (S7): the sentence says "nor", but P5 denies nothing it speaks of: it reads "for every x, if (there is a direct and full proof against x and x is rendered credible), then there is an opposite proof, superior, in favour of x"
+hume-miracles.md:1: argue/negation: hume-miracles.logic.r3.3 C (S7): the sentence says "nor", but C denies nothing it speaks of: it reads "for every x, if x is a miracle, then (there is a direct and full proof against x and (if x is rendered credible, then there is an opposite proof, superior, in favour of x))"
+hume-miracles.logic.r3: argue/readings-agree 4
+hume-miracles.logic.r3: argue/readings-differ 1
+hume-miracles.logic.r3: argue/verdicts-agree 1
+hume-miracles.logic.r3: argue/mismatches 1
+hume-miracles.logic.r3.2: argue/mismatches 3
+hume-miracles.logic.r3.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: hume-miracles.logic.r3.2
+# argument written to hume-miracles.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+hume-miracles.md:1: argue/negation: P4 (S7): the sentence says "nor", but P4 denies nothing it speaks of: it reads "for every x, if there is a uniform (firm and unalterable) experience against x, then there is a direct and full proof against x"
+hume-miracles.md:1: argue/negation: P5 (S7): the sentence says "nor", but P5 denies nothing it speaks of: it reads "for every x, if (there is a direct and full proof against x and x is rendered credible), then there is an opposite proof, superior, in favour of x"
+hume-miracles.md:1: argue/unfaithful: C1 (S6): the sentence has no word of "x is a miracle": is it the sentence C1 came from?
+hume-miracles.md:1: argue/negation: C (S7): the sentence says "nor", but C denies nothing it speaks of: it reads "for every x, if x is a miracle, then (there is a direct and full proof against x and (if x is rendered credible, then there is an opposite proof, superior, in favour of x))"
+hume-miracles.md:1: argue/assumed: C1 (S6): follows only by A1, which the text never states: state it, or argue for it
+hume-miracles.md:1: argue/own-sentence: C (S7): needs P4 and P5, read from the conclusion's own sentence: check that S7 gives them as its reason and does not conclude them
+hume-miracles.logic.r3: argue/valid 1

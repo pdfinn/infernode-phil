@@ -1,0 +1,22 @@
+# reading 2 of mill-liberty-1.md by claude-opus-5-5
+atom	theory	truth may justifiably be persecuted because persecution cannot possibly do it any harm
+atom	hostile	the theory is intentionally hostile to the reception of new truths
+atom	great_service	to discover to the world something which deeply concerns it, or prove it mistaken on some vital point, is as important a service as a human being can render to his fellow-creatures
+atom	most_precious	in certain cases (the early Christians, the Reformers) such discovery was the most precious gift which could be bestowed on mankind
+atom	martyrdom_justified	that the authors of such splendid benefits should be requited by martyrdom is the normal and justifiable state of things
+atom	halter_rule	the propounder of a new truth should stand with a halter round his neck, to be tightened if the public assembly does not at once adopt his proposition
+atom	generous	we can commend the generosity of the theory's dealing with the persons to whom mankind are indebted for new truths
+atom	defends	people defend this mode of treating benefactors
+atom	values_benefit	those who defend this treatment set much value on the benefit
+atom	confined	this view is mostly confined to persons who think new truths may have been desirable once but that we have had enough of them now
+P1	S1	theory → ¬hostile
+P2	S2	great_service	kind normative
+P3	S2	most_precious	says johnson
+P4	S3	theory → martyrdom_justified
+P5	S4	theory → halter_rule
+P6	S5	defends → ¬values_benefit
+P7	S5	confined	kind empirical
+# The text relies on the step that requiting the greatest benefactors with martyrdom is ungenerous dealing.
+A1	-	great_service ∧ martyrdom_justified → ¬generous
+C	S1	theory → ¬generous	from P2 P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

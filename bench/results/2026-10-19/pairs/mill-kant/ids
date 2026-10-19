@@ -1,0 +1,11 @@
+# every statement's id, written by phil/corpus: work, id, name, sentence, formula over the shared atoms
+id	kant	kad2b2924	P1	S8	universal->nobody_believes
+id	kant	kdb2ce897	P2	S8	nobody_believes->!promise_possible
+id	kant	k927e4310	C1	S8	universal->!promise_possible
+id	kant	kb21a787d	A1	-	holds->universal&promise_possible
+id	kant	ke5840ff0	C	S7	!holds
+id	mill	kab794de1	P1	S2	mill_principle_ground
+id	mill	kaa12d3f7	P2	S3	!mill_shows_contradiction
+id	mill	k087b2754	P3	S4	mill_shows_bad_consequences&!mill_shows_contradiction
+id	mill	kf90b4f02	A1	-	mill_deduces_duties->mill_shows_contradiction
+id	mill	ka082ea0a	C	S3	!mill_deduces_duties

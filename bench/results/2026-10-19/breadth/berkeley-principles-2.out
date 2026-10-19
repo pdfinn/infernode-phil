@@ -1,0 +1,12 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+berkeley-principles-2.md:1: argue/readings: S2 is read 2 ways: berkeley-principles-2.logic.r1 and berkeley-principles-2.logic.r1.2 have "¬perceive_innum"; berkeley-principles-2.logic.r1.3 has "parts_perceived ∧ ¬perceive_innum → ¬contains_innum" and "¬perceive_innum"; they differ when only "each part of a finite extension must be perceived" and "innumerable parts are contained in a finite extension" are true, which the first allows
+berkeley-principles-2.md:1: argue/answered: S2: answered no, which keeps berkeley-principles-2.logic.r1.3, to: Suppose "each part of a finite extension must be perceived" and "innumerable parts are contained in a finite extension" are true and "I can perceive innumerable parts in a finite extension that I consider" is false. Is S2, "If, therefore, I cannot perceive innumerable parts in any finite extension that I consider, it is certain they are not contained in it; but, it is evident that I cannot distinguish innumerable parts in any particular line, surface, or solid, which I either perceive by sense, or figure to myself in my mind: wherefore I conclude they are not contained in it.", true then? [in 1 of 2 runs]
+berkeley-principles-2.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: berkeley-principles-2.logic.r1 and berkeley-principles-2.logic.r1.2 have "parts_perceived → (¬perceive_innum → ¬contains_innum)"; berkeley-principles-2.logic.r1.3 has nothing from it; they differ when only "each part of a finite extension must be perceived" and "innumerable parts are contained in a finite extension" are true, which the second allows
+# kept the reading that best fits the words and the other readings: berkeley-principles-2.logic.r1.3
+# argument written to berkeley-principles-2.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+berkeley-principles-2.md:1: argue/own-sentence: C1 (S1): follows from P1 and P2 alone, read from the conclusion's own sentence: unless S1 gives them as its reason, the reading has it assert what it concludes
+berkeley-principles-2.md:1: argue/own-sentence: C (S2): needs P3 and P4, read from the conclusion's own sentence: check that S2 gives them as its reason and does not conclude them
+berkeley-principles-2.logic.r1: argue/valid 1
+berkeley-principles-2.logic: argue/runs-agree 1

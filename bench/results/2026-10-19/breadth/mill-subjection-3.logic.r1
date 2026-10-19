@@ -1,0 +1,24 @@
+# the argument of mill-subjection-3.md as claude-opus-5-5 read it: check that it says what the text says
+atom	short_time	it is scarcely three generations since women, saving very rare exceptions, have begun to try their capacity in philosophy, science, or art
+atom	few_attempts	only in the present generation have women's attempts been at all numerous, and they are even now extremely few everywhere but in England and France
+atom	eminence_expected	a mind possessing the requisites of first-rate eminence could have been expected, on the mere calculation of chances, to turn up during that lapse of time among the women able to devote themselves to these pursuits
+atom	as_much_as_expected	in all things there has yet been time for, women have done quite as much and obtained as high and as many prizes as could be expected from the length of time and the number of competitors
+atom	early_success	in the earlier period when very few women made the attempt, some of those few made it with distinguished success
+atom	sappho_great	the Greeks always accounted Sappho among their great poets
+atom	myrtis_corinna_merit	Myrtis and Corinna must at least have had sufficient merit to be compared with Pindar
+atom	aspasia_taught	Socrates resorted to Aspasia for instruction and avowed himself to have obtained it
+atom	sufficient_grounds	experience has afforded sufficient grounds for an induction that women cannot reach first-rate eminence
+P1	S2	short_time	kind empirical
+P2	S3	few_attempts	kind empirical
+# S4 is posed as a question; its implied answer (no such mind could be expected) is taken as an unstated link
+A1	-	short_time ∧ few_attempts → ¬eminence_expected
+C1	S4	¬eminence_expected	from P1 P2 A1
+P3	S5	as_much_as_expected	kind empirical
+P4	S7	sappho_great	kind empirical
+P5	S7	myrtis_corinna_merit
+P6	S8	aspasia_taught	kind empirical
+A2	-	sappho_great ∧ myrtis_corinna_merit ∧ aspasia_taught → early_success
+C2	S6	early_success	from P4 P5 P6 A2
+A3	-	¬eminence_expected ∧ as_much_as_expected ∧ early_success → ¬sufficient_grounds
+C	S1	¬sufficient_grounds	from C1 P3 C2 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

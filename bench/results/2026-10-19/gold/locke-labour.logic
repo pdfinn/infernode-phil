@@ -1,0 +1,21 @@
+# reading 3 of locke-labour.md by claude-opus-5-5
+atom	earth_common	the earth, and all inferior creatures, are common to all men
+atom	own_person	every man has a property in his own person, which nobody but himself has any right to
+atom	labour_his	the labour of his body and the work of his hands are properly his
+atom	removes	he removes the thing out of the state that nature hath provided and left it in
+atom	mixed	he hath mixed his labour with the thing and joined to it something that is his own
+atom	enough_left	there is enough, and as good, left in common for others
+atom	excludes	something is annexed to the thing that excludes the common right of other men, so that no man but he can have a right to it
+atom	property	the thing is made his property
+P1	S1	earth_common
+P2	S1	own_person
+P3	S2	own_person → labour_his
+C1	S2	labour_his	from P2 P3
+P4	S3	removes → mixed
+P5	S4	removes
+C2	S4	mixed	from P4 P5
+P6	S4	labour_his ∧ mixed ∧ enough_left → excludes
+P7	S3	excludes → property
+# "at least where there is enough, and as good, left" read as a condition of the exclusion; the text states no premise that enough is left
+C	S3	property	from C1 C2 P6 P7
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

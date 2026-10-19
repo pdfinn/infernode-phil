@@ -1,0 +1,36 @@
+# 3 readings by claude-opus-5-5, compared
+kant-practical-2.md:1: argue/readings: S4 is read 2 ways: kant-practical-2.logic.r1 and kant-practical-2.logic.r1.2 have "endless → ¬same_all"; kant-practical-2.logic.r1.3 has nothing from it; they differ when only "the variety of judgement is endless" and "the principle prescribes the same practical rules to all rational beings" are true, which the second allows
+kant-practical-2.md:1: argue/answered: S4: answered no, which keeps kant-practical-2.logic.r1 and kant-practical-2.logic.r1.2, to: Suppose "the variety of judgement is endless" and "the principle prescribes the same practical rules to all rational beings" are true. Is S4, "This principle, therefore, does not prescribe the same practical rules to all rational beings, although the rules are all included under a common title, namely, that of happiness.", true then?
+kant-practical-2.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: kant-practical-2.logic.r1 and kant-practical-2.logic.r1.2 have nothing from it; kant-practical-2.logic.r1.3 has "endless → ¬same_all"; they differ when only "the variety of judgement is endless" and "the principle prescribes the same practical rules to all rational beings" are true, which the first allows
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1 P1 (S2): the sentence says "no", but P1 denies nothing it speaks of: it reads "the knowledge of happiness rests on mere empirical data and every man's judgement on happiness depends on his particular, very variable point of view"
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1 P4 (S3): the sentence says "nothing", but P4 denies nothing it speaks of: it reads "an object of choice is the foundation of the rule and must precede it"
+kant-practical-2.md:1: argue/unfaithful: kant-practical-2.logic.r1 P7 (S4): the sentence has no word of "the variety of judgement is endless": is it the sentence P7 came from?
+kant-practical-2.md:1: argue/unfaithful: kant-practical-2.logic.r1 P8 (S5): the sentence has no word of "the principle prescribes the same practical rules to all rational beings": is it the sentence P8 came from?
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1.2 P1 (S2): the sentence says "no", but P1 denies nothing it speaks of: it reads "the knowledge of happiness rests on mere empirical data"
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1.2 P2 (S2): the sentence says "no", but P2 denies nothing it speaks of: it reads "every man's judgement on happiness depends on his particular, very variable point of view"
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1.2 P5 (S3): the sentence says "nothing", but P5 denies nothing it speaks of: it reads "an object of choice is the foundation of the rule and must precede it"
+kant-practical-2.md:1: argue/unfaithful: kant-practical-2.logic.r1.2 P8 (S4): the sentence has no word of "the variety of judgement is endless": is it the sentence P8 came from?
+kant-practical-2.md:1: argue/unfaithful: kant-practical-2.logic.r1.2 P9 (S5): the sentence has no word of "the principle prescribes the same practical rules to all rational beings": is it the sentence P9 came from?
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1.3 P1 (S2): the sentence says "no", but P1 denies nothing it speaks of: it reads "the knowledge of happiness rests on mere empirical data"
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1.3 P2 (S2): the sentence says "no", but P2 denies nothing it speaks of: it reads "every man's judgement on happiness depends on his particular, very variable point of view"
+kant-practical-2.md:1: argue/negation: kant-practical-2.logic.r1.3 P5 (S3): the sentence says "nothing", but P5 denies nothing it speaks of: it reads "an object of choice is the foundation of the rule and must precede it"
+kant-practical-2.md:1: argue/unfaithful: kant-practical-2.logic.r1.3 P8 (S5): the sentence has no word of "the principle prescribes the same practical rules to all rational beings": is it the sentence P8 came from?
+kant-practical-2.logic.r1: argue/readings-agree 4
+kant-practical-2.logic.r1: argue/readings-differ 2
+kant-practical-2.logic.r1: argue/verdicts-agree 1
+kant-practical-2.logic.r1: argue/mismatches 4
+kant-practical-2.logic.r1.2: argue/mismatches 5
+kant-practical-2.logic.r1.3: argue/mismatches 4
+# kept the reading that best fits the words and the other readings: kant-practical-2.logic.r1
+# argument written to kant-practical-2.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+kant-practical-2.md:1: argue/negation: P1 (S2): the sentence says "no", but P1 denies nothing it speaks of: it reads "the knowledge of happiness rests on mere empirical data and every man's judgement on happiness depends on his particular, very variable point of view"
+kant-practical-2.md:1: argue/negation: P4 (S3): the sentence says "nothing", but P4 denies nothing it speaks of: it reads "an object of choice is the foundation of the rule and must precede it"
+kant-practical-2.md:1: argue/unfaithful: P7 (S4): the sentence has no word of "the variety of judgement is endless": is it the sentence P7 came from?
+kant-practical-2.md:1: argue/unfaithful: P8 (S5): the sentence has no word of "the principle prescribes the same practical rules to all rational beings": is it the sentence P8 came from?
+kant-practical-2.md:1: argue/negation: C2 (S3): the sentence says "nothing", but C2 denies nothing it speaks of: it reads "the variety of judgement is endless"
+kant-practical-2.md:1: argue/own-sentence: C1 (S2): follows from P1 and P2 alone, read from the conclusion's own sentence: unless S2 gives them as its reason, the reading has it assert what it concludes
+kant-practical-2.md:1: argue/own-sentence: C2 (S3): follows from P4, P5 and P6 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes
+kant-practical-2.md:1: argue/own-sentence: C3 (S4): needs P7, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+kant-practical-2.md:1: argue/unused: C1 (S2): C1 is not needed: the conclusion follows from C3 and P8 without it
+kant-practical-2.md:1: argue/unused: P3 (S2): P3 is not needed: the conclusion follows from C3 and P8 without it
+kant-practical-2.logic.r1: argue/valid 1

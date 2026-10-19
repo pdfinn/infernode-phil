@@ -1,0 +1,13 @@
+# the argument of plato-republic-4.md as claude-opus-5-5 read it: check that it says what the text says
+# The passage is largely exhortation; the one inferential thread is the conditional in S2:
+# freed from earthly encrustation, the soul would be seen as it is, and so its nature known.
+# S1 and S3 only frame the discussion (S3 closes off the treatment of the soul's present forms)
+# and are left out. The split of S2 into two steps is my reading of
+# "then you would see her as she is, and know ...".
+atom	freed	the soul wholly follows the superior principle and is disengaged from the earthly things that have grown around her
+atom	seen_as_is	you would see her as she is
+atom	know_nature	you would know whether she have one shape only or many, or what her nature is
+P1	S2	freed → seen_as_is
+P2	S2	seen_as_is → know_nature
+C	S2	freed → know_nature
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

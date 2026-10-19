@@ -1,0 +1,11 @@
+# 3 readings by claude-opus-5-5, compared
+kant-groundwork-2.logic.r2: argue/readings-agree 3
+kant-groundwork-2.logic.r2: argue/readings-differ 0
+kant-groundwork-2.logic.r2: argue/verdicts-agree 1
+kant-groundwork-2.logic.r2: argue/mismatches 0
+kant-groundwork-2.logic.r2.2: argue/mismatches 0
+kant-groundwork-2.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: kant-groundwork-2.logic.r2
+# argument written to kant-groundwork-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+kant-groundwork-2.md:1: argue/assumed: C (S7): follows only by A1, which the text never states: state it, or argue for it
+kant-groundwork-2.logic.r2: argue/valid 1

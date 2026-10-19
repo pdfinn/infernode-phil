@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-ii-2.md:1: argue/readings: S4 is read 2 ways: aquinas-st-i-ii-2.logic.r1 and aquinas-st-i-ii-2.logic.r1.3 have "lower_follow_higher" and "lower_follow_higher → (joy_increased → overflow)"; aquinas-st-i-ii-2.logic.r1.2 has "joy_from_justice ∧ joy_increased ∧ lower_follow_higher → overflow" and "lower_follow_higher"; they differ when only "the lower powers follow the movement of the higher" and "the joy of justice is increased through the perfection of justice" are true, which the second allows
+aquinas-st-i-ii-2.md:1: argue/answered: S4: answered no, which keeps aquinas-st-i-ii-2.logic.r1 and aquinas-st-i-ii-2.logic.r1.3, to: Suppose "the lower powers follow the movement of the higher" and "the joy of justice is increased through the perfection of justice" are true and "joy results from the act of justice, at least in the will" and "the joy of justice overflows into the sensitive appetite" are false. Is S4, "And if this joy be increased through the perfection of justice, it will overflow into the sensitive appetite; in so far as the lower powers follow the movement of the higher, as stated above (Q. 17, A. 7; Q. 24, A. 3).", true then?
+aquinas-st-i-ii-2.logic.r1: argue/readings: what the text leaves unstated is read 3 ways: aquinas-st-i-ii-2.logic.r1 has "joy_from_justice → joy_increased" and "joy_increased ∧ overflow → perfect_more_passion"; aquinas-st-i-ii-2.logic.r1.2 has "joy_increased" and "overflow → perfect_more_passion"; they differ when nothing is true, which the first allows; aquinas-st-i-ii-2.logic.r1.3 has "overflow → perfect_more_passion"
+aquinas-st-i-ii-2.logic.r1: argue/readings: U1: aquinas-st-i-ii-2.logic.r1 and aquinas-st-i-ii-2.logic.r1.2 take for granted "if joy results from the act of justice, at least in the will, then the joy of justice is increased through the perfection of justice"; aquinas-st-i-ii-2.logic.r1.3 does not
+aquinas-st-i-ii-2.logic.r1: argue/answered: U1: answered yes, which keeps aquinas-st-i-ii-2.logic.r1 and aquinas-st-i-ii-2.logic.r1.2, to: Does the text's argument take this for granted, whether or not it says so: "if joy results from the act of justice, at least in the will, then the joy of justice is increased through the perfection of justice"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-ii-2.logic.r1: argue/readings: U2: aquinas-st-i-ii-2.logic.r1 and aquinas-st-i-ii-2.logic.r1.2 take for granted "the joy of justice is increased through the perfection of justice"; aquinas-st-i-ii-2.logic.r1.3 does not
+aquinas-st-i-ii-2.logic.r1: argue/answered: U2: answered yes, which keeps aquinas-st-i-ii-2.logic.r1 and aquinas-st-i-ii-2.logic.r1.2, to: Does the text's argument take this for granted, whether or not it says so: "the joy of justice is increased through the perfection of justice"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-ii-2.logic.r1: argue/verdicts: valid as aquinas-st-i-ii-2.logic.r1, aquinas-st-i-ii-2.logic.r1.2 read it, not as the others do: which reading is right decides the verdict
+aquinas-st-i-ii-2.logic.r1: argue/readings-agree 4
+aquinas-st-i-ii-2.logic.r1: argue/readings-differ 2
+aquinas-st-i-ii-2.logic.r1: argue/verdicts-agree 0
+aquinas-st-i-ii-2.logic.r1: argue/mismatches 0
+aquinas-st-i-ii-2.logic.r1.2: argue/mismatches 0
+aquinas-st-i-ii-2.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-ii-2.logic.r1
+# argument written to aquinas-st-i-ii-2.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-ii-2.md:1: argue/own-sentence: C1 (S2): needs P2 and P3, read from the conclusion's own sentence: check that S2 gives them as its reason and does not conclude them
+aquinas-st-i-ii-2.md:1: argue/assumed: C (S5): follows only by A1 and A2, which the text never states: state it, or argue for it
+aquinas-st-i-ii-2.md:1: argue/unused-step: C1 (S2): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-ii-2.logic.r1: argue/valid 1

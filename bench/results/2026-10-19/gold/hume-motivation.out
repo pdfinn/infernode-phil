@@ -1,0 +1,10 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+hume-motivation.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: hume-motivation.logic.r1 has "morals_from_reason → reason_influence"; hume-motivation.logic.r1.2 and hume-motivation.logic.r1.3 have "morals_from_reason → (morals_influence → reason_influence)"; they differ when only "morals (the rules of morality) are derived from reason, as conclusions of our reason" is true, which the second allows [in 1 of 3 runs]
+# kept the reading that best fits the words and the other readings: hume-motivation.logic.r1.2
+# argument written to hume-motivation.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-motivation.md:1: argue/assumed: C (S4): follows only by A1, which the text never states: state it, or argue for it
+hume-motivation.logic.r1: argue/valid 1
+hume-motivation.logic: argue/runs-agree 1

@@ -1,0 +1,30 @@
+# the argument of sidgwick-methods-3.md as claude-opus-5-5 read it: check that it says what the text says
+# Gravity-by-intention argument: the main conclusion is S1. S2-S3 and S5-S6 give the difficulties.
+# A1 and A2 make explicit the link the text relies on between those difficulties and the lack of clear principles.
+atom	easy_principles	it is easy to state clear principles for determining the gravity of crimes by the intention only
+atom	intends_right_sometimes	sometimes, as with the patriotic rebel, the intention of the criminal is to do what is right and good
+atom	no_harm_intended_many	in many cases the criminal does not intend to cause any actual harm to any sentient being
+atom	secrecy_lessens_gravity	a crime is rendered less grave by being kept perfectly secret
+atom	secondary_evil_great_part	a great part of the harm done by a crime is the secondary evil of the alarm and insecurity which it causes
+atom	secrecy_cuts_off_secondary	the secondary evil is cut off by complete secrecy
+atom	difficulty_practical	the difficulty about secrecy is a practical one
+atom	punish_after_discovery	we are not called upon to punish a crime until it has been discovered, and then the secondary evil has been caused
+atom	designed_for_discovery	the crime was designed for discovery
+atom	secondary_evil_intended	the secondary evil caused by the crime was intended by the criminal
+atom	gravity_tracks_intended_harm	the gravity of a crime can be measured by the harm the criminal intended
+atom	utilitarian_reading	we say heinousness depends on the loss of happiness such acts would generally cause if unpunished, and suppose the criminal aware of this
+atom	legal_fiction	we are forcing a utilitarian theory into an intuitional form by means of a legal fiction
+P1	S2	intends_right_sometimes ∧ no_harm_intended_many	kind empirical
+P2	S3	¬secrecy_lessens_gravity
+P3	S3	secondary_evil_great_part
+P4	S3	secrecy_cuts_off_secondary
+O1	S4	punish_after_discovery ∧ ¬difficulty_practical	against P4
+R1	S5	¬designed_for_discovery ∧ (¬designed_for_discovery → ¬secondary_evil_intended)	against O1
+P5	S5	¬designed_for_discovery
+P6	S5	¬designed_for_discovery → ¬secondary_evil_intended
+C1	S5	¬secondary_evil_intended	from P5 P6
+P7	S6	utilitarian_reading → legal_fiction
+A1	-	no_harm_intended_many ∨ ¬secondary_evil_intended ∧ ¬secrecy_lessens_gravity → ¬gravity_tracks_intended_harm
+A2	-	easy_principles → gravity_tracks_intended_harm ∨ utilitarian_reading ∧ ¬legal_fiction
+C	S1	¬easy_principles	from P1 P2 C1 P7 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,17 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-ii-4.md:1: argue/readings: S6 is read 2 ways: aquinas-st-i-ii-4.logic.r2 and aquinas-st-i-ii-4.logic.r2.2 have "merit_man_before_receiving"; aquinas-st-i-ii-4.logic.r2.3 has nothing from it; they differ when nothing is true, which the second allows
+aquinas-st-i-ii-4.md:1: argue/answered: S6: answered no, which keeps aquinas-st-i-ii-4.logic.r2 and aquinas-st-i-ii-4.logic.r2.2, to: Suppose "man may merit from man, before he has received anything from him, by what he has received from God" is false. Is S6, "But man may merit from man, before he has received anything from him, by what he has received from God.", true then?
+aquinas-st-i-ii-4.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-ii-4.logic.r2 has "power_from_god → merit_god_only_by_gift"; aquinas-st-i-ii-4.logic.r2.2 and aquinas-st-i-ii-4.logic.r2.3 have nothing from it; they differ when only "a man receives all his power of well-doing from God, and not from man" is true, which the second allows
+aquinas-st-i-ii-4.logic.r2: argue/readings: U1: aquinas-st-i-ii-4.logic.r2 takes for granted "if a man receives all his power of well-doing from God, and not from man, then a man can merit nothing from God except by His gift"; aquinas-st-i-ii-4.logic.r2.2 and aquinas-st-i-ii-4.logic.r2.3 do not
+aquinas-st-i-ii-4.logic.r2: argue/answered: U1: answered yes, which keeps aquinas-st-i-ii-4.logic.r2, to: Does the text's argument take this for granted, whether or not it says so: "if a man receives all his power of well-doing from God, and not from man, then a man can merit nothing from God except by His gift"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-ii-4.logic.r2: argue/verdicts: valid as aquinas-st-i-ii-4.logic.r2 reads it, not as the others do: which reading is right decides the verdict
+aquinas-st-i-ii-4.logic.r2: argue/readings-agree 2
+aquinas-st-i-ii-4.logic.r2: argue/readings-differ 2
+aquinas-st-i-ii-4.logic.r2: argue/verdicts-agree 0
+aquinas-st-i-ii-4.logic.r2: argue/mismatches 0
+aquinas-st-i-ii-4.logic.r2.2: argue/mismatches 0
+aquinas-st-i-ii-4.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-ii-4.logic.r2
+# argument written to aquinas-st-i-ii-4.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-ii-4.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-ii-4.logic.r2: argue/valid 1

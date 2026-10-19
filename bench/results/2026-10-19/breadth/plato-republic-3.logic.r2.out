@@ -1,0 +1,17 @@
+# 3 readings by claude-opus-5-5, compared
+plato-republic-3.md:1: argue/readings: the conclusion is read 2 ways: plato-republic-3.logic.r2 and plato-republic-3.logic.r2.3 have "¬figure_applies"; plato-republic-3.logic.r2.2 has "(same_sphere ∧ same_result → same_faculty) ∧ (¬same_sphere ∧ ¬same_result → ¬same_faculty)"; they differ when only "two faculties have the same sphere" and "two faculties have the same result" are true, which the first allows
+plato-republic-3.logic.r2: argue/readings: the main conclusion is read at 2 sentences: plato-republic-3.logic.r2 and plato-republic-3.logic.r2.3 put it at S2, "I do not see them, and therefore the distinctions of figure, colour, and the like, which enable me to discern the differences of some things, do not apply to them."; plato-republic-3.logic.r2.2 at S3, "In speaking of a faculty I think only of its sphere and its result; and that which has the same sphere and the same result I call the same faculty, but that which has another sphere and another result I call different."
+plato-republic-3.logic.r2: argue/answered: M: answered no, which keeps plato-republic-3.logic.r2.2, to: Is the text's main conclusion S2, "I do not see them, and therefore the distinctions of figure, colour, and the like, which enable me to discern the differences of some things, do not apply to them.", rather than S3, "In speaking of a faculty I think only of its sphere and its result; and that which has the same sphere and the same result I call the same faculty, but that which has another sphere and another result I call different."?
+plato-republic-3.logic.r2: argue/readings-agree 3
+plato-republic-3.logic.r2: argue/readings-differ 1
+plato-republic-3.logic.r2: argue/verdicts-agree 1
+plato-republic-3.logic.r2: argue/mismatches 0
+plato-republic-3.logic.r2.2: argue/mismatches 0
+plato-republic-3.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: plato-republic-3.logic.r2.2
+# argument written to plato-republic-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+plato-republic-3.md:1: argue/assumed: C1 (S2): follows only by A1, which the text never states: state it, or argue for it
+plato-republic-3.md:1: argue/own-sentence: C1 (S2): needs P1, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+plato-republic-3.md:1: argue/unused: C1 (S2): C1 is not needed: the conclusion follows from P2 and P3 without it
+plato-republic-3.md:1: argue/own-sentence: C (S3): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes
+plato-republic-3.logic.r2: argue/valid 1

@@ -1,0 +1,17 @@
+# mill over the corpus's shared atoms, written by phil/corpus from readings/mill/logic: not to be edited
+atom	desired	each person, so far as he believes it to be attainable, desires his own happiness
+atom	proof	we have all the proof which the case admits of that happiness is a good
+atom	own_good	each person's happiness is a good to that person
+atom	general_good	the general happiness is a good to the aggregate of all persons
+atom	end_of_conduct	happiness has made out its title as one of the ends of conduct
+atom	criterion	happiness is one of the criteria of morality
+P1	S5	desired → proof
+P2	S6	desired	kind empirical
+C1	S6	proof	from P1 P2
+P3	S6	proof → own_good
+C2	S6	own_good	from C1 P3
+P4	S6	own_good → general_good
+C3	S6	general_good	from C2 P4
+A1	-	general_good → end_of_conduct
+P5	S7	end_of_conduct → criterion
+C	S7	end_of_conduct ∧ criterion	from C3 A1 P5

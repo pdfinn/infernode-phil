@@ -1,0 +1,41 @@
+# 3 readings by claude-opus-5-5, compared
+epictetus-3.md:1: argue/readings: S1 is read 2 ways: epictetus-3.logic.r2 and epictetus-3.logic.r2.2 have "O purify"; epictetus-3.logic.r2.3 has nothing from it; they differ when nothing is true, which the second allows
+epictetus-3.md:1: argue/modal-ambiguous: S1 is read epictetus-3.logic.r2.3 with no modality; epictetus-3.logic.r2 and epictetus-3.logic.r2.2 as what ought to be or is permitted: its "must" does not say which it means
+epictetus-3.md:1: argue/answered: S1: answered no, which keeps epictetus-3.logic.r2 and epictetus-3.logic.r2.2, to: Suppose "it ought to be that you make your ruling faculty pure" and "it ought to be that you make your ruling faculty pure" are false. Is S1, "In the first place then you must make your ruling faculty pure, and this mode of life also.", true then?
+epictetus-3.md:1: argue/readings: S8 is read 2 ways: epictetus-3.logic.r2 and epictetus-3.logic.r2.2 have "¬◇ejected"; epictetus-3.logic.r2.3 has nothing from it; they differ when only "possibly, some man ejects me out of the world" is true, which the second allows
+epictetus-3.md:1: argue/modal-ambiguous: S8 is read epictetus-3.logic.r2.3 with no modality; epictetus-3.logic.r2 and epictetus-3.logic.r2.2 as what is necessary or possible: its "cannot" does not say which it means
+epictetus-3.md:1: argue/answered: S8: answered no, which keeps epictetus-3.logic.r2 and epictetus-3.logic.r2.2, to: Suppose "possibly, some man ejects me out of the world" and "possibly, some man ejects me out of the world" are true. Is S8, "He cannot.", true then?
+epictetus-3.md:1: argue/readings: S9 is read 2 ways: epictetus-3.logic.r2 and epictetus-3.logic.r2.2 have "same_everywhere"; epictetus-3.logic.r2.3 has nothing from it; they differ when nothing is true, which the second allows
+epictetus-3.md:1: argue/answered: S9: answered no, which keeps epictetus-3.logic.r2 and epictetus-3.logic.r2.2, to: Suppose "wherever I go, there are the sun, the moon, the stars, dreams, omens and conversation with gods" is false. Is S9, "But wherever I go, there is the sun, there is the moon, there are the stars, dreams, omens, and the conversation ([Greek: omilia]) with gods.", true then?
+epictetus-3.logic.r2: argue/readings: what the text leaves unstated is read 3 ways: epictetus-3.logic.r2 has "body_nothing → death_indifferent" and "¬◇ejected ∧ same_everywhere → ¬O flee"; epictetus-3.logic.r2.2 has nothing from it; they differ when only "the body and its parts are nothing to me", "death may come when it chooses, of the whole or of a part", "wherever I go, there are the sun, the moon, the stars, dreams, omens and conversation with gods" and "it ought to be that I fly" are true, which the second allows; epictetus-3.logic.r2.3 has "body_nothing → death_indifferent" and "matter_understanding ∧ business_appearances → O purify"
+epictetus-3.md:1: argue/readings: the conclusion is read 3 ways: epictetus-3.logic.r2 has "¬O flee"; epictetus-3.logic.r2.2 has "death_indifferent"; they differ when nothing is true, which the first allows; epictetus-3.logic.r2.3 has "O purify"
+epictetus-3.md:1: argue/modal-ambiguous: the conclusion is read epictetus-3.logic.r2.2 with no modality; epictetus-3.logic.r2 and epictetus-3.logic.r2.3 as what ought to be or is permitted: the text does not say which it means
+epictetus-3.logic.r2: argue/readings: the main conclusion is read at 3 sentences: epictetus-3.logic.r2 puts it at S9, "But wherever I go, there is the sun, there is the moon, there are the stars, dreams, omens, and the conversation ([Greek: omilia]) with gods."; epictetus-3.logic.r2.2 and epictetus-3.logic.r2.3 at S1, "In the first place then you must make your ruling faculty pure, and this mode of life also." or S5, "Let it come when it chooses, either death of the whole or of a part."
+epictetus-3.logic.r2: argue/answered: M: answered no, which keeps epictetus-3.logic.r2.2 and epictetus-3.logic.r2.3, to: Is the text's main conclusion S9, "But wherever I go, there is the sun, there is the moon, there are the stars, dreams, omens, and the conversation ([Greek: omilia]) with gods.", rather than S1, "In the first place then you must make your ruling faculty pure, and this mode of life also." or S5, "Let it come when it chooses, either death of the whole or of a part."?
+epictetus-3.logic.r2: argue/readings: U1: epictetus-3.logic.r2 and epictetus-3.logic.r2.3 take for granted "if the body and its parts are nothing to me, then death may come when it chooses, of the whole or of a part"; epictetus-3.logic.r2.2 does not
+epictetus-3.logic.r2: argue/answered: U1: answered yes, which keeps epictetus-3.logic.r2 and epictetus-3.logic.r2.3, to: Does the text's argument take this for granted, whether or not it says so: "if the body and its parts are nothing to me, then death may come when it chooses, of the whole or of a part"? Answer yes if the author would accept it as part of the argument.
+epictetus-3.logic.r2: argue/readings: U2: epictetus-3.logic.r2 takes for granted "if ((it is not so that possibly, some man ejects me out of the world) and wherever I go, there are the sun, the moon, the stars, dreams, omens and conversation with gods), then (it is not so that it ought to be that I fly)"; epictetus-3.logic.r2.2 and epictetus-3.logic.r2.3 do not
+epictetus-3.logic.r2: argue/answered: U2: answered yes, which keeps epictetus-3.logic.r2, to: Does the text's argument take this for granted, whether or not it says so: "if ((it is not so that possibly, some man ejects me out of the world) and wherever I go, there are the sun, the moon, the stars, dreams, omens and conversation with gods), then (it is not so that it ought to be that I fly)"? Answer yes if the author would accept it as part of the argument.
+epictetus-3.md:1: argue/unfaithful: epictetus-3.logic.r2 P4 (S8): the sentence has no word of "some man ejects me out of the world": is it the sentence P4 came from?
+epictetus-3.md:1: argue/unfaithful: epictetus-3.logic.r2 C (S9): the sentence has no word of "I fly": is it the sentence C came from?
+epictetus-3.md:1: argue/unfaithful: epictetus-3.logic.r2.2 P4 (S8): the sentence has no word of "some man ejects me out of the world": is it the sentence P4 came from?
+epictetus-3.logic.r2: argue/verdicts: valid as epictetus-3.logic.r2, epictetus-3.logic.r2.3 read it, not as the others do: which reading is right decides the verdict
+epictetus-3.logic.r2: argue/readings-agree 2
+epictetus-3.logic.r2: argue/readings-differ 5
+epictetus-3.logic.r2: argue/verdicts-agree 0
+epictetus-3.logic.r2: argue/answers-split: no reading agrees with all 6 answers (epictetus-3.logic.r2 5, epictetus-3.logic.r2.2 4, epictetus-3.logic.r2.3 2 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+epictetus-3.logic.r2: argue/mismatches 2
+epictetus-3.logic.r2.2: argue/mismatches 1
+epictetus-3.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: epictetus-3.logic.r2
+# argument written to epictetus-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+epictetus-3.md:1: argue/unfaithful: P4 (S8): the sentence has no word of "some man ejects me out of the world": is it the sentence P4 came from?
+epictetus-3.md:1: argue/unfaithful: R1 (S7): the sentence has no word of "I fly": is it the sentence R1 came from?
+epictetus-3.md:1: argue/unfaithful: C (S9): the sentence has no word of "I fly": is it the sentence C came from?
+epictetus-3.md:1: argue/assumed: C1 (S5): follows only by A1, which the text never states: state it, or argue for it
+epictetus-3.md:1: argue/assumed: C (S9): follows only by A2, which the text never states: state it, or argue for it
+epictetus-3.md:1: argue/own-sentence: C (S9): needs P5, read from the conclusion's own sentence: check that S9 gives it as its reason and does not conclude it
+epictetus-3.md:1: argue/unused-step: C1 (S5): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+epictetus-3.logic.r2: argue/valid 1
+epictetus-3.md:1: argue/defeated: O1 (S6): O1 falls to R1, which nothing answers
+epictetus-3.logic.r2: argue/survives 1

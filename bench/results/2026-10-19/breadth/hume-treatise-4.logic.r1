@@ -1,0 +1,29 @@
+# the argument of hume-treatise-4.md as claude-opus-5-5 read it: check that it says what the text says
+# "must necessarily" in S4 marks the force of the inference, not a modal claim, so it is written in plain logic
+atom	resolution	the act of the mind exprest by a promise is a resolution to perform any thing
+atom	resolution_obliges	a resolution to perform alone imposes an obligation
+atom	produces_obligation	the act of the mind which enters into a promise produces its obligation
+atom	desire	the act of the mind exprest by a promise is a desire of such a performance
+atom	bind_without_desire	we may bind ourselves without such a desire, or even with an aversion, declared and avowed
+atom	willing_action	the act of the mind exprest by a promise is the willing of that action which we promise to perform
+atom	future	a promise always regards some future time
+atom	will_present_only	the will has an influence only on present actions
+atom	willing_obligation	the act of the mind which enters into a promise is the willing of that obligation which arises from the promise
+atom	consent_talk	we commonly say that we are bound by our own consent, and that the obligation arises from our mere will and pleasure
+P1	S1	¬resolution_obliges
+P2	S4	produces_obligation
+A1	-	resolution ∧ produces_obligation → resolution_obliges
+C1	S1	¬resolution	from P1 P2 A1
+P3	S2	bind_without_desire
+A2	-	bind_without_desire → ¬desire
+C2	S2	¬desire	from P3 A2
+P4	S3	future
+P5	S3	will_present_only
+A3	-	future ∧ will_present_only → ¬willing_action
+C3	S3	¬willing_action	from P4 P5 A3
+# S4 relies on these being the only candidates for the act of the mind in a promise
+A4	-	resolution ∨ desire ∨ willing_action ∨ willing_obligation
+C	S4	willing_obligation	from C1 C2 C3 A4
+# S5 offers corroboration from common speech; nothing in the inference is drawn from it
+P6	S5	consent_talk	kind empirical
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

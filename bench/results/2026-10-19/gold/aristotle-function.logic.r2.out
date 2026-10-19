@@ -1,0 +1,26 @@
+# the prover could not read aristotle-function.logic.r2.2: claude-opus-5-5 is asked again
+aristotle-function.logic.r2.2: argue/undefined: atom man_work is used but not given a meaning (atom	man_work	...)
+aristotle-function.logic.r2.2: argue/undefined: atom members_work is used but not given a meaning (atom	members_work	...)
+aristotle-function.logic.r2.2: argue/undefined: atom cobbler_work is used but not given a meaning (atom	cobbler_work	...)
+aristotle-function.logic.r2.2: argue/undefined: atom carpenter_work is used but not given a meaning (atom	carpenter_work	...)
+# 3 readings by claude-opus-5-5, compared
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r2 P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "the carpenter has certain works and courses of action and the cobbler has certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r2 P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, foot and generally each of man's members has manifestly some special work"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r2.2 P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "the carpenter has certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r2.2 P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "the cobbler has certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r2.2 P3 (S1): the sentence says "none", but P3 denies nothing it speaks of: it reads "eye, hand, foot and generally each of man's members has manifestly some special work"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r2.3 P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "the carpenter has certain works and courses of action and the cobbler has certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r2.3 P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, foot and generally each of man's members has manifestly some special work"
+aristotle-function.logic.r2: argue/readings-agree 3
+aristotle-function.logic.r2: argue/readings-differ 0
+aristotle-function.logic.r2: argue/verdicts-agree 1
+aristotle-function.logic.r2: argue/mismatches 2
+aristotle-function.logic.r2.2: argue/mismatches 3
+aristotle-function.logic.r2.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aristotle-function.logic.r2
+# argument written to aristotle-function.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aristotle-function.md:1: argue/negation: P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "the carpenter has certain works and courses of action and the cobbler has certain works and courses of action"
+aristotle-function.md:1: argue/negation: P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, foot and generally each of man's members has manifestly some special work"
+aristotle-function.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it
+aristotle-function.md:1: argue/own-sentence: C (S1): needs P1 and P2, read from the conclusion's own sentence: check that S1 gives them as its reason and does not conclude them
+aristotle-function.logic.r2: argue/valid 1

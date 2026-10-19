@@ -1,0 +1,14 @@
+# the argument of aquinas-st-i-2.md as claude-opus-5-5 read it: check that it says what the text says
+# Aquinas, ST I q.42 a.1 ad 2, on the equality and likeness of the Son to the Father
+atom	common_form	the same nature (common form) is in both Father and Son
+atom	more_perfect	one of them participates in the form more perfectly than the other
+atom	alike	the Son is like to the Father
+atom	equal	the Son is equal to the Father
+P1	S2	equal → alike	kind conceptual
+P2	S3	common_form → alike	kind conceptual
+P3	S3	more_perfect → ¬equal	kind conceptual
+P4	S4	common_form ∧ ¬more_perfect
+# the text treats a common form held in perfect equality as sufficient for equality
+A1	-	common_form ∧ ¬more_perfect → equal
+C	S4	alike ∧ equal	from P2 P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

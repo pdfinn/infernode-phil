@@ -1,0 +1,14 @@
+# 3 readings by claude-opus-5-5, compared
+plato-phaedo-2.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: plato-phaedo-2.logic.r2 has "no_return → spring_other" and "others_die"; plato-phaedo-2.logic.r2.2 and plato-phaedo-2.logic.r2.3 have "no_return → spring_other ∧ others_die"; they differ when only "the living spring from other things than the dead" is true, which the second allows
+plato-phaedo-2.logic.r2: argue/readings: U1: plato-phaedo-2.logic.r2 takes for granted "those other things too die"; plato-phaedo-2.logic.r2.2 and plato-phaedo-2.logic.r2.3 do not
+plato-phaedo-2.logic.r2: argue/answered: U1: answered yes, which keeps plato-phaedo-2.logic.r2, to: Does the text's argument take this for granted, whether or not it says so: "those other things too die"? Answer yes if the author would accept it as part of the argument.
+plato-phaedo-2.logic.r2: argue/readings-agree 2
+plato-phaedo-2.logic.r2: argue/readings-differ 1
+plato-phaedo-2.logic.r2: argue/verdicts-agree 1
+plato-phaedo-2.logic.r2: argue/mismatches 0
+plato-phaedo-2.logic.r2.2: argue/mismatches 0
+plato-phaedo-2.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: plato-phaedo-2.logic.r2
+# argument written to plato-phaedo-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+plato-phaedo-2.md:1: argue/assumed: C (S4): follows only by A1 and A2, which the text never states: state it, or argue for it
+plato-phaedo-2.logic.r2: argue/valid 1

@@ -1,0 +1,11 @@
+# each claim and the works that assert, deny, assume or report it, written by phil/corpus
+claim	universal->nobody_believes	asserts kant:P1
+claim	nobody_believes->!promise_possible	asserts kant:P2
+claim	universal->!promise_possible	asserts kant:C1
+claim	holds->universal&promise_possible	assumes kant:A1
+claim	holds	denies kant:C
+claim	mill_principle_ground	reports mill:P1 kant
+claim	mill_shows_contradiction	denies mill:P2
+claim	mill_shows_bad_consequences&!mill_shows_contradiction	asserts mill:P3
+claim	mill_deduces_duties->mill_shows_contradiction	assumes mill:A1
+claim	mill_deduces_duties	denies mill:C

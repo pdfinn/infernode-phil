@@ -1,0 +1,16 @@
+# the argument of hume-treatise-2.md as claude-opus-5-5 read it: check that it says what the text says
+atom	convinced	men are once fully convinced of the two principles: that nothing in any object, considered in itself, can afford a reason for drawing a conclusion beyond it, and that even after observing frequent or constant conjunction we have no reason to infer beyond what we have experienced
+atom	loose	men are thrown loose from all common systems
+atom	receive_extraordinary	men make no difficulty of receiving any system, however extraordinary it may appear
+atom	convincing_causal	the two principles have been found sufficiently convincing even with regard to our most certain reasonings from causation
+atom	evident_probable	with regard to conjectural or probable reasonings the two principles acquire a new degree of evidence
+atom	vulgar_imperfect	every vulgar hypothesis on this subject is imperfect
+atom	readers_reject	the generality of readers will reject as chimerical whatever does not agree with commonly received notions
+P1	S1	readers_reject	kind empirical
+P2	S2	vulgar_imperfect
+P3	S3	convinced → loose
+P4	S3	loose → receive_extraordinary
+C	S3	convinced → receive_extraordinary	from P3 P4
+P5	S4	convincing_causal
+P6	S4	evident_probable
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

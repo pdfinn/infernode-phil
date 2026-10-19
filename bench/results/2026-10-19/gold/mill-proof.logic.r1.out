@@ -1,0 +1,22 @@
+# 3 readings by claude-opus-5-5, compared
+mill-proof.md:1: argue/readings: S5 is read 2 ways: mill-proof.logic.r1 has "general_good → desired_own"; mill-proof.logic.r1.2 and mill-proof.logic.r1.3 have nothing from it; they differ when only "the general happiness is a good to the aggregate of all persons" is true, which the second allows
+mill-proof.md:1: argue/answered: S5: answered no, which keeps mill-proof.logic.r1, to: Suppose "the general happiness is a good to the aggregate of all persons" is true and "each person, so far as he believes it to be attainable, desires his own happiness" is false. Is S5, "No reason can be given why the general happiness is desirable, except that each person, so far as he believes it to be attainable, desires his own happiness.", true then?
+mill-proof.md:1: argue/unfaithful: mill-proof.logic.r1 P1 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P1 came from?
+mill-proof.md:1: argue/negation: mill-proof.logic.r1 P2 (S5): the sentence says "no", but P2 denies nothing it speaks of: it reads "if the general happiness is a good to the aggregate of all persons, then each person, so far as he believes it to be attainable, desires his own happiness"
+mill-proof.md:1: argue/unfaithful: mill-proof.logic.r1.2 P2 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P2 came from?
+mill-proof.md:1: argue/unfaithful: mill-proof.logic.r1.3 P1 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P1 came from?
+mill-proof.logic.r1: argue/readings-agree 4
+mill-proof.logic.r1: argue/readings-differ 1
+mill-proof.logic.r1: argue/verdicts-agree 1
+mill-proof.logic.r1: argue/mismatches 2
+mill-proof.logic.r1.2: argue/mismatches 1
+mill-proof.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: mill-proof.logic.r1
+# argument written to mill-proof.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+mill-proof.md:1: argue/unfaithful: P1 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P1 came from?
+mill-proof.md:1: argue/negation: P2 (S5): the sentence says "no", but P2 denies nothing it speaks of: it reads "if the general happiness is a good to the aggregate of all persons, then each person, so far as he believes it to be attainable, desires his own happiness"
+mill-proof.md:1: argue/own-sentence: C1 (S6): needs P3, read from the conclusion's own sentence: check that S6 gives it as its reason and does not conclude it
+mill-proof.md:1: argue/assumed: C2 (S6): follows only by A1, which the text never states: state it, or argue for it
+mill-proof.md:1: argue/assumed: C3 (S6): follows only by A2, which the text never states: state it, or argue for it
+mill-proof.md:1: argue/assumed: C (S7): follows only by A3 and A4, which the text never states: state it, or argue for it
+mill-proof.logic.r1: argue/valid 1

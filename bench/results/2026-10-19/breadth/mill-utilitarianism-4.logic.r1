@@ -1,0 +1,19 @@
+# the argument of mill-utilitarianism-4.md as claude-opus-5-5 read it: check that it says what the text says
+atom	real_distinction	the difference between the Just and the Expedient is a real, not merely imaginary, distinction
+atom	exposition_recognises	the exposition given of the nature and origin of the sentiment of justice recognises a real distinction
+atom	justice_more_sacred	justice is a more sacred thing than policy, so mankind have not been under a delusion in thinking so
+atom	concerns_essentials	the moral rules called justice concern the essentials of human well-being more nearly than any other rules for the guidance of life
+atom	more_binding	the moral rules called justice are of more absolute obligation than any other rules for the guidance of life
+atom	right_notion	the essence of the idea of justice is the notion of a right residing in an individual
+atom	chief_part	justice grounded on utility is the chief part, and incomparably the most sacred and binding part, of all morality
+P1	S4	exposition_recognises
+A1	-	exposition_recognises → real_distinction
+P2	S6	concerns_essentials	kind conceptual
+P3	S6	concerns_essentials → more_binding
+C1	S6	more_binding	from P2 P3
+P4	S6	right_notion	kind conceptual
+P5	S6	right_notion → more_binding
+P6	S5	chief_part
+A2	-	more_binding ∧ chief_part → justice_more_sacred
+C	S3	real_distinction ∧ justice_more_sacred	from P1 A1 C1 P6 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

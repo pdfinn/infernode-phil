@@ -1,0 +1,32 @@
+# the argument of sidgwick.md as claude-opus-5-5 read it: check that it says what the text says
+atom	desired	each person, so far as he believes it to be attainable, desires his own happiness
+atom	proof	we have all the proof which the case admits of that happiness is a good
+atom	own_good	each person's happiness is a good to that person
+atom	general_good	the general happiness is a good to the aggregate of all persons
+atom	end_of_conduct	happiness has made out its title as one of the ends of conduct
+atom	criterion	happiness is one of the criteria of morality
+atom	desired	each person, so far as he believes it to be attainable, desires his own happiness
+atom	proof	we have all the proof which the case admits of that happiness is a good
+atom	own_good	each person's happiness is a good to that person
+atom	general_good	the general happiness is a good to the aggregate of all persons
+atom	general_desirable	the general happiness is desirable, i.e. what each individual ought to desire or aim at realising in action
+atom	actual_desire_general	there is an actual desire for the general happiness
+atom	individual_desire_general	an actual desire for the general happiness exists in some individual
+atom	aggregate_desire_general	an actual desire for the general happiness exists in an aggregate of individuals
+atom	established	Mill's reasoning establishes that the general happiness is desirable
+atom	gap_filled	the gap in Mill's expressed argument is filled
+atom	rational_benevolence	some such proposition as the intuition of Rational Benevolence is supplied
+P1	S7	established → actual_desire_general	says mill
+P2	S8	desired	says mill	kind empirical
+P3	S9	desired → proof	says mill
+P4	S9	proof → own_good	says mill
+P5	S9	own_good → general_good	says mill
+P6	S12	actual_desire_general → general_desirable
+P7	S12	established → actual_desire_general
+P8	S13	¬individual_desire_general	kind conceptual
+P9	S13	¬individual_desire_general → ¬aggregate_desire_general
+A1	-	actual_desire_general → individual_desire_general ∨ aggregate_desire_general
+C1	S14	¬actual_desire_general	from P8 P9 A1
+P10	S14	gap_filled → rational_benevolence
+C	S14	¬established	from C1 P7
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,21 @@
+# the argument of aquinas-st-i-3.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+# A single generic thing is reasoned about throughout, since s5 takes no all/some.
+# S1 states the thesis that S5 concludes: coercion is repugnant to the will.
+# "Coerced or violent" in S5 is read as one claim, violent.
+atom	violent	the thing is violent (coerced)
+atom	against_incl	the thing is against the inclination of the thing
+atom	according_incl	the thing is according to the inclination of the thing
+atom	voluntary	the thing is voluntary
+atom	according_will	the thing is according to the inclination of the will
+atom	natural	the thing is natural
+atom	according_nature	the thing is according to the inclination of nature
+P1	S2	□(violent ↔ against_incl)	kind conceptual
+P2	S3	□(according_will → according_incl)
+P3	S4	□(natural ↔ according_nature)	kind conceptual
+P4	S4	□(voluntary ↔ according_will)	kind conceptual
+A1	-	□¬(according_incl ∧ against_incl)
+A2	-	□(according_nature → according_incl)
+C1	S5	□¬(violent ∧ natural)	from P1 P3 A1 A2
+C	S5	□¬(violent ∧ voluntary)	from P1 P2 P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

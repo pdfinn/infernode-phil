@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+hume-dialogues-1.md:1: argue/unfaithful: hume-dialogues-1.logic.r2 C (S4): the sentence has no word of "our arguments lose this advantage and run wide of common life": is it the sentence C came from?
+hume-dialogues-1.md:1: argue/unfaithful: hume-dialogues-1.logic.r2.2 C (S4): the sentence has no word of "our arguments lose this advantage and run wide of common life": is it the sentence C came from?
+hume-dialogues-1.md:1: argue/unfaithful: hume-dialogues-1.logic.r2.3 C (S4): the sentence has no word of "our arguments lose this advantage and run wide of common life": is it the sentence C came from?
+hume-dialogues-1.logic.r2: argue/readings-agree 3
+hume-dialogues-1.logic.r2: argue/readings-differ 0
+hume-dialogues-1.logic.r2: argue/verdicts-agree 1
+hume-dialogues-1.logic.r2: argue/mismatches 1
+hume-dialogues-1.logic.r2.2: argue/mismatches 1
+hume-dialogues-1.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: hume-dialogues-1.logic.r2
+# argument written to hume-dialogues-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+hume-dialogues-1.md:1: argue/unfaithful: C (S4): the sentence has no word of "our arguments lose this advantage and run wide of common life": is it the sentence C came from?
+hume-dialogues-1.md:1: argue/own-sentence: C (S4): needs P4 and P5, read from the conclusion's own sentence: check that S4 gives them as its reason and does not conclude them
+hume-dialogues-1.logic.r2: argue/valid 1

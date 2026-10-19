@@ -1,0 +1,22 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-chief-good.md:1: argue/negation: aristotle-chief-good.logic.r3 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: aristotle-chief-good.logic.r3 P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.md:1: argue/negation: aristotle-chief-good.logic.r3.2 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: aristotle-chief-good.logic.r3.2 P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.md:1: argue/negation: aristotle-chief-good.logic.r3.3 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: aristotle-chief-good.logic.r3.3 P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.logic.r3: argue/readings-agree 2
+aristotle-chief-good.logic.r3: argue/readings-differ 0
+aristotle-chief-good.logic.r3: argue/verdicts-agree 1
+aristotle-chief-good.logic.r3: argue/mismatches 2
+aristotle-chief-good.logic.r3.2: argue/mismatches 2
+aristotle-chief-good.logic.r3.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aristotle-chief-good.logic.r3
+# argument written to aristotle-chief-good.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+aristotle-chief-good.md:1: argue/negation: P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.md:1: argue/quantifier: P1 (S1): the sentence says "some", but P1 says all: it reads "for every x, if (either either x is an art or x is a science reduced to a teachable form or x is an action or moral choice), then x aims at some good"
+aristotle-chief-good.md:1: argue/unlinked: C (S1): the conclusion speaks of ""that which all things aim at" is a common and by no means a bad description of the Chief Good", which no premise mentions: nothing links it to them
+aristotle-chief-good.md:1: argue/invalid: C (S1): does not follow: when nothing is true, every premise holds and the conclusion fails
+aristotle-chief-good.md:1: argue/countermodel: C (S1): D = {another}; apt_description = F, action = ∅, aims_good = ∅, art = ∅, science = ∅
+aristotle-chief-good.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "x is an art", "x is a science reduced to a teachable form", "x is an action or moral choice" and "x aims at some good": as written it cannot bear on the conclusion; was the same thing named two ways?
+aristotle-chief-good.logic.r3: argue/valid 0

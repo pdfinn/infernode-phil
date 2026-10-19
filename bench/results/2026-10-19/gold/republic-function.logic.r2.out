@@ -1,0 +1,31 @@
+# 3 readings by claude-opus-5-5, compared
+republic-function.md:5: argue/readings: S4 is read 2 ways: republic-function.logic.r2 and republic-function.logic.r2.3 have "∀x ((fulfils(x) → liveswell(x)) ∧ (¬fulfils(x) → ¬liveswell(x)))"; republic-function.logic.r2.2 has "∀x (fulfils(x) → liveswell(x))"; they differ when nothing is true, which the second allows
+republic-function.md:5: argue/answered: S4: answered no, which keeps republic-function.logic.r2 and republic-function.logic.r2.3, to: Suppose nothing is true. Is S4, "And is not life to be reckoned among the ends of the soul?", true then?
+republic-function.md:13: argue/readings: S8 is read 2 ways: republic-function.logic.r2 has nothing from it; republic-function.logic.r2.2 and republic-function.logic.r2.3 have "∀x (¬excellent(x) → ¬fulfils(x))"; they differ when nothing is true, which the first allows
+republic-function.md:13: argue/answered: S8: answered no, which keeps republic-function.logic.r2.2 and republic-function.logic.r2.3, to: Suppose nothing is true. Is S8, "And can she or can she not fulfil her own ends when deprived of that excellence?", true then?
+republic-function.md:15: argue/readings: S9 is read 2 ways: republic-function.logic.r2 has "∀x (¬excellent(x) → ¬fulfils(x))"; republic-function.logic.r2.2 and republic-function.logic.r2.3 have nothing from it; they differ when nothing is true, which the second allows
+republic-function.md:15: argue/answered: S9: answered no, which keeps republic-function.logic.r2, to: Suppose nothing is true. Is S9, "She cannot.", true then?
+republic-function.md:17: argue/readings: S10 is read 3 ways: republic-function.logic.r2 has nothing from it; republic-function.logic.r2.2 has "∀x ((excellent(x) → fulfils(x)) ∧ (¬excellent(x) → ¬fulfils(x)))"; they differ when nothing is true, which the first allows; republic-function.logic.r2.3 has "∀x (excellent(x) → fulfils(x))"
+republic-function.md:17: argue/answered: S10: answered no, which keeps republic-function.logic.r2.2, to: Suppose nothing is true. Is S10, "Then an evil soul must necessarily be an evil ruler and superintendent, and the good soul a good ruler?", true then?
+republic-function.logic.r2: argue/readings: what the text leaves unstated is read 3 ways: republic-function.logic.r2 has "∀x (excellent(x) → fulfils(x))"; republic-function.logic.r2.2 has "∀x (liveswell(x) → fulfils(x))"; they differ when nothing is true, which the first allows; republic-function.logic.r2.3 has nothing from it
+republic-function.md:15: argue/unfaithful: republic-function.logic.r2 P1 (S9): the sentence has no word of "x's soul fulfils its own ends (superintends, commands, deliberates, lives) well, as a good ruler and superintendent": is it the sentence P1 came from?
+republic-function.md:15: argue/unfaithful: republic-function.logic.r2 P1 (S9): the sentence has no word of "x's soul has its own excellence": is it the sentence P1 came from?
+republic-function.md:5: argue/unfaithful: republic-function.logic.r2 P2 (S4): the sentence has no word of "x lives well": is it the sentence P2 came from?
+republic-function.md:41: argue/unfaithful: republic-function.logic.r2 C (S22): the sentence has no word of "x (the soul or the man) is just": is it the sentence C came from?
+republic-function.md:5: argue/unfaithful: republic-function.logic.r2.2 P1 (S4): the sentence has no word of "x lives well": is it the sentence P1 came from?
+republic-function.md:41: argue/unfaithful: republic-function.logic.r2.2 C (S22): the sentence has no word of "x (the soul or the man) is just": is it the sentence C came from?
+republic-function.md:5: argue/unfaithful: republic-function.logic.r2.3 P3 (S4): the sentence has no word of "x lives well": is it the sentence P3 came from?
+republic-function.md:41: argue/unfaithful: republic-function.logic.r2.3 C (S22): the sentence has no word of "x (the soul or the man) is just": is it the sentence C came from?
+republic-function.logic.r2: argue/readings-agree 4
+republic-function.logic.r2: argue/readings-differ 5
+republic-function.logic.r2: argue/verdicts-agree 1
+republic-function.logic.r2: argue/answers-split: no reading agrees with all 4 answers (republic-function.logic.r2 2, republic-function.logic.r2.2 2, republic-function.logic.r2.3 2 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+republic-function.logic.r2: argue/mismatches 4
+republic-function.logic.r2.2: argue/mismatches 2
+republic-function.logic.r2.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: republic-function.logic.r2.3
+# argument written to republic-function.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+republic-function.md:5: argue/unfaithful: P3 (S4): the sentence has no word of "x lives well": is it the sentence P3 came from?
+republic-function.md:33: argue/unfaithful: C2 (S18): the sentence has no word of "x (the soul or the man) is just": is it the sentence C2 came from?
+republic-function.md:41: argue/unfaithful: C (S22): the sentence has no word of "x (the soul or the man) is just": is it the sentence C came from?
+republic-function.logic.r2: argue/valid 1

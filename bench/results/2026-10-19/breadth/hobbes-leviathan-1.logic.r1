@@ -1,0 +1,26 @@
+# the argument of hobbes-leviathan-1.md as claude-opus-5-5 read it: check that it says what the text says
+atom	laws_addressed_variously	some Laws are addressed to all the Subjects in generall, some to particular Provinces, some to particular Vocations, and some to particular Men
+atom	laws_bind_addressees	Lawes are Lawes to every of those to whom the Command is directed, and to none else
+atom	nothing_unjust_without_law	nothing is reputed Unjust that is not contrary to some Law
+atom	laws_rules_just	Lawes are the Rules of Just and Unjust
+atom	subjection_to_cw_only	our Subjection is to the Common-wealth only
+atom	only_cw_makes_laws	none can make Lawes but the Common-wealth
+atom	know_obey_only_by_signs	a man knows not otherwise than by sufficient Signs how to obey Commands
+atom	commands_signified	Commands are to be signified by sufficient Signs
+atom	def_evident	in the definition of law there is nothing that is not at first sight evident
+atom	deductions_true	whatsoever can from this definition by necessary consequence be deduced ought to be acknowledged for truth
+P1	S2	laws_addressed_variously	kind empirical
+P2	S2	laws_addressed_variously → laws_bind_addressees
+P3	S3	nothing_unjust_without_law	kind conceptual
+P4	S3	nothing_unjust_without_law → laws_rules_just
+P5	S4	subjection_to_cw_only
+P6	S4	subjection_to_cw_only → only_cw_makes_laws
+P7	S4	know_obey_only_by_signs
+P8	S4	know_obey_only_by_signs → commands_signified
+# A1: the evidence of the definition rests on these parts being evident, as "For every man seeth" signals
+A1	-	laws_bind_addressees ∧ laws_rules_just ∧ only_cw_makes_laws ∧ commands_signified → def_evident
+C1	S1	def_evident	from P1 P2 P3 P4 P5 P6 P7 P8 A1
+# A2: what follows by necessary consequence from an evident definition is to be acknowledged true
+A2	-	def_evident → deductions_true
+C	S5	deductions_true	from C1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

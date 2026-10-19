@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r3 P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r3 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r3.2 P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r3.2 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r3.3 P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r3.3 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.logic.r3: argue/readings-agree 5
+aquinas-evil-objection.logic.r3: argue/readings-differ 0
+aquinas-evil-objection.logic.r3: argue/verdicts-agree 1
+aquinas-evil-objection.logic.r3: argue/mismatches 2
+aquinas-evil-objection.logic.r3.2: argue/mismatches 2
+aquinas-evil-objection.logic.r3.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aquinas-evil-objection.logic.r3
+# argument written to aquinas-evil-objection.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+aquinas-evil-objection.md:1: argue/unfaithful: P1 (S1): the sentence has no word of "there is evil in the world": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world"
+aquinas-evil-objection.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aquinas-evil-objection.logic.r3: argue/valid 1

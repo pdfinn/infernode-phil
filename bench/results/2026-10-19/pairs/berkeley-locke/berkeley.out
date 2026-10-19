@@ -1,0 +1,38 @@
+# 3 readings by claude-opus-5-5, compared
+berkeley.md:1: argue/reported-as-premise: C1 (S14): C1 rests on P8, which reports what locke says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+berkeley.md:1: argue/readings: S12 is read 2 ways: berkeley.logic has nothing from it; berkeley.logic.2 and berkeley.logic.3 have "distinguishing → many_men_brutes"; they differ when only "abstraction is made the distinguishing property of brutes as against men" is true, which the first allows
+berkeley.md:1: argue/answered: S12: answered no, which keeps berkeley.logic.2 and berkeley.logic.3, to: Suppose "abstraction is made the distinguishing property of brutes as against men" is true and "a great many of those that pass for men must be reckoned into the number of brutes" is false. Is S12, "But then if this be made the distinguishing property of that sort of animals, I fear a great many of those that pass for men must be reckoned into their number.", true then?
+berkeley.md:1: argue/readings: S13 is read 2 ways: berkeley.logic and berkeley.logic.2 have nothing from it; berkeley.logic.3 has "words_imply_general"; they differ when nothing is true, which the first allows
+berkeley.md:1: argue/answered: S13: answered yes, which keeps berkeley.logic and berkeley.logic.2, to: Suppose "the making use of words implies the having general ideas" is false. Is S13, "The reason that is here assigned why we have no grounds to think brutes have abstract general ideas is, that we observe in them no use of words or any other general signs; which is built on this supposition--that the making use of words implies the having general ideas.", true then?
+berkeley.md:1: argue/readings: S14 is read 2 ways: berkeley.logic and berkeley.logic.2 have "words_imply_general → men_abstract_lang"; berkeley.logic.3 has nothing from it; they differ when only "the making use of words implies the having general ideas" is true, which the second allows
+berkeley.md:1: argue/answered: S14: answered no, which keeps berkeley.logic and berkeley.logic.2, to: Suppose "the making use of words implies the having general ideas" is true and "men who use language are able to abstract or generalize their ideas" is false. Is S14, "From which it follows that men who use language are able to ABSTRACT or GENERALIZE their ideas.", true then?
+berkeley.logic: argue/readings: what the text leaves unstated is read 2 ways: berkeley.logic and berkeley.logic.2 have nothing from it; berkeley.logic.3 has "words_imply_general → men_abstract_lang"; they differ when only "the making use of words implies the having general ideas" is true, which the first allows
+berkeley.md:1: argue/readings: the conclusion is read 2 ways: berkeley.logic and berkeley.logic.2 have "sign_particulars ∧ ¬sign_abstract"; berkeley.logic.3 has "men_abstract_lang"; they differ when only "a word becomes general by being made the sign of several particular ideas, any one of which it indifferently suggests to the mind" is true, which the first allows
+berkeley.logic: argue/readings: the main conclusion is read at 2 sentences: berkeley.logic and berkeley.logic.2 put it at S18, "But it seems that a word becomes general by being made the sign, not of an ABSTRACT general idea, but of several particular ideas, any one of which it indifferently suggests to the mind."; berkeley.logic.3 at S14, "From which it follows that men who use language are able to ABSTRACT or GENERALIZE their ideas."
+berkeley.logic: argue/answered: M: answered yes, which keeps berkeley.logic and berkeley.logic.2, to: Is the text's main conclusion S18, "But it seems that a word becomes general by being made the sign, not of an ABSTRACT general idea, but of several particular ideas, any one of which it indifferently suggests to the mind.", rather than S14, "From which it follows that men who use language are able to ABSTRACT or GENERALIZE their ideas."?
+berkeley.md:1: argue/negation: berkeley.logic.3 P8 (S13): the sentence says "no", but P8 denies nothing it speaks of: it reads "the making use of words implies the having general ideas"
+berkeley.logic: argue/verdicts: valid as berkeley.logic.3 reads it, not as the others do: which reading is right decides the verdict
+berkeley.logic: argue/readings-agree 1
+berkeley.logic: argue/readings-differ 5
+berkeley.logic: argue/verdicts-agree 0
+berkeley.logic: argue/mismatches 0
+berkeley.logic.2: argue/mismatches 0
+berkeley.logic.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: berkeley.logic.2
+# argument written to berkeley.logic by claude-opus-5-5 (a language model, not a rule)
+berkeley.md:1: argue/reported-as-premise: C1 (S14): C1 rests on P8, which reports what locke says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+berkeley.md:1: argue/unlinked: C (S18): the conclusion speaks of "a word becomes general by being made the sign of an abstract general idea", which no premise mentions: nothing links it to them
+berkeley.md:1: argue/unlinked: C (S18): the conclusion speaks of "a word becomes general by being made the sign of several particular ideas, any one of which it indifferently suggests to the mind", which no premise mentions: nothing links it to them
+berkeley.md:1: argue/invalid: C1 (S14): does not follow: when nothing is true, every premise holds and the conclusion fails
+berkeley.md:1: argue/countermodel: C1 (S14): men_abstract_lang = F, words_imply_general = F
+berkeley.md:1: argue/missing: C1 (S14): it would follow given "words_imply_general" (the making use of words implies the having general ideas), or "¬words_imply_general → men_abstract_lang"
+berkeley.md:1: argue/unlinked: P9 (S14): P9 is the only statement about "the making use of words implies the having general ideas": as written it cannot bear on the conclusion; was the same thing named two ways?
+berkeley.md:1: argue/invalid: C (S18): does not follow: when "men who use language are able to abstract or generalize their ideas" is true, "a word becomes general by being made the sign of an abstract general idea" and "a word becomes general by being made the sign of several particular ideas, any one of which it indifferently suggests to the mind" are false, and nothing else is true, every premise holds and the conclusion fails
+berkeley.md:1: argue/countermodel: C (S18): abstract_brutes = F, distinguishing = F, many_men_brutes = F, men_abstract_lang = T, sign_abstract = F, sign_particulars = F
+berkeley.md:1: argue/unlinked: P5 (S11): P5 is the only statement about "brutes have the power of abstracting, or making general ideas": as written it cannot bear on the conclusion; was the same thing named two ways?
+berkeley.md:1: argue/unlinked: P6 (S12): P6 is the only statement about "abstraction is made the distinguishing property of brutes as against men" and "a great many of those that pass for men must be reckoned into the number of brutes": as written it cannot bear on the conclusion; was the same thing named two ways?
+berkeley.md:1: argue/unlinked: C1 (S14): C1 is the only statement about "men who use language are able to abstract or generalize their ideas": as written it cannot bear on the conclusion; was the same thing named two ways?
+berkeley.logic: argue/valid 0
+berkeley.md:1: argue/defeated: C1 (S14): C1 cannot stand: it does not follow from what it rests on, so no reply to the objections can save it
+berkeley.md:1: argue/defeated: C (S18): C cannot stand: it does not follow from what it rests on, so no reply to the objections can save it
+berkeley.logic: argue/survives 0

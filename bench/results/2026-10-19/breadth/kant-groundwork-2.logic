@@ -1,0 +1,14 @@
+# reading 2 of kant-groundwork-2.md by claude-opus-5-5
+logic	s5
+atom	universal_law	the maxim of promising falsely when in difficulty holds as a universal law of nature
+atom	nobody_believes	no one would consider that anything was promised to him, but would ridicule all such statements as vain pretences
+atom	promise_possible	the promise itself is possible
+atom	end_attainable	the end that one might have in view in the promise is attainable
+# S8 gives the reason: if the maxim were universal, no one would believe promises, so the promise and its end would become impossible.
+# The "would" of S8 is read as a necessary consequence, since S7 says the maxim "would necessarily contradict itself".
+P1	S8	□(universal_law → nobody_believes)	kind conceptual
+P2	S8	□(nobody_believes → ¬promise_possible ∧ ¬end_attainable)	kind conceptual
+# The self-contradiction the text relies on: the universalized maxim presupposes that promising is possible. The text never states this.
+A1	-	□(universal_law → promise_possible)
+C	S7	¬◇universal_law
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

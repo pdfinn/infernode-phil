@@ -1,0 +1,19 @@
+# reading 2 of boethius-2.md by claude-opus-5-5
+# S1 is the interlocutor's objection; Philosophy's reply concludes at S8.
+atom	office_confers_reverence	official dignity clothes him to whom it comes with honour and reverence
+atom	office_plants_virtue	offices of state have power to plant virtue in the minds of their possessors and drive out vice
+atom	office_signalizes_iniquity	offices of state are rather wont to signalize iniquity than to chase it away
+atom	honours_fall_to_iniquitous	honours so often fall to the most iniquitous of men
+atom	position_brings_infamy	high position brings infamy upon the bad
+atom	holders_unworthy_of_office	some holders of office are men we deem unworthy of the office itself
+O1	S1	office_confers_reverence	against C
+# S2 is a rhetorical question, read as denying that office plants virtue.
+P1	S2	¬office_plants_virtue
+P2	S3	office_signalizes_iniquity	kind empirical
+P3	S3	honours_fall_to_iniquitous	kind empirical
+P4	S5	position_brings_infamy
+P5	S8	holders_unworthy_of_office → ¬office_confers_reverence
+A1	-	honours_fall_to_iniquitous → holders_unworthy_of_office
+C1	S8	holders_unworthy_of_office	from P3 A1
+C	S8	¬office_confers_reverence	from C1 P5
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

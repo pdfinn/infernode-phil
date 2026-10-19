@@ -1,0 +1,14 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-ontological-objection.md:1: argue/readings: S7 is read 2 ways: aquinas-ontological-objection.logic.r2 and aquinas-ontological-objection.logic.r2.2 have "exists_mentally"; aquinas-ontological-objection.logic.r2.3 has "exists_mentally" and "meaning ∧ actual_greater ∧ exists_mentally → known_once_terms"; they differ when only "by the word "God" is signified that thing than which nothing greater can be conceived", "that which exists actually and mentally is greater than that which exists only mentally" and "as soon as the word "God" is understood, it exists mentally" are true, which the first allows
+aquinas-ontological-objection.md:1: argue/answered: S7: answered yes, which keeps aquinas-ontological-objection.logic.r2 and aquinas-ontological-objection.logic.r2.2, to: Suppose "by the word "God" is signified that thing than which nothing greater can be conceived", "that which exists actually and mentally is greater than that which exists only mentally" and "as soon as the word "God" is understood, it exists mentally" are true and "as soon as the signification of the word "God" is understood, it is at once seen that God exists" is false. Is S7, "Therefore, since as soon as the word "God" is understood it exists mentally, it also follows that it exists actually.", true then?
+aquinas-ontological-objection.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aquinas-ontological-objection.logic.r2 and aquinas-ontological-objection.logic.r2.2 have "meaning ∧ actual_greater ∧ exists_mentally → known_once_terms"; aquinas-ontological-objection.logic.r2.3 has nothing from it; they differ when only "by the word "God" is signified that thing than which nothing greater can be conceived", "that which exists actually and mentally is greater than that which exists only mentally" and "as soon as the word "God" is understood, it exists mentally" are true, which the second allows
+aquinas-ontological-objection.logic.r2: argue/readings-agree 4
+aquinas-ontological-objection.logic.r2: argue/readings-differ 2
+aquinas-ontological-objection.logic.r2: argue/verdicts-agree 1
+aquinas-ontological-objection.logic.r2: argue/mismatches 0
+aquinas-ontological-objection.logic.r2.2: argue/mismatches 0
+aquinas-ontological-objection.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-ontological-objection.logic.r2
+# argument written to aquinas-ontological-objection.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-ontological-objection.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it
+aquinas-ontological-objection.logic.r2: argue/valid 1

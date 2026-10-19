@@ -1,0 +1,19 @@
+# the argument of james-will-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Mill's objection is recorded as his report; James's reply rests on the past/future distinction.
+atom	missed	if the substratum were annihilated and the sensations continued in the same order, the substratum would be missed
+atom	warranted	we are warranted in believing that the substratum exists
+atom	dispensable_past	substance may be dropped from our conception of the irrecoverably past
+atom	empty_future	substance is an empty complication to our notions of the future
+atom	confidence	the logical form of referring things to a substance is accompanied by a feeling of rest and future confidence
+atom	liking	men will always have a liking for any philosophy which explains things per substantiam
+P1	S1	¬missed	says mill
+P2	S4	¬missed → ¬warranted	says mill
+O1	S4	¬warranted	against C
+P3	S5	dispensable_past	kind conceptual
+P4	S6	¬empty_future
+# S7 says it "does not follow" from dispensable_past that empty_future; rendered as the reply that substance is not empty for the future.
+R1	S7	dispensable_past ∧ ¬empty_future	against O1
+P5	S8	confidence	kind empirical
+A1	-	confidence → liking
+C	S9	liking	from P5 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

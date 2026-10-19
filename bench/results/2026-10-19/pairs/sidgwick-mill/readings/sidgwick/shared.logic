@@ -1,0 +1,27 @@
+# sidgwick over the corpus's shared atoms, written by phil/corpus from readings/sidgwick/logic: not to be edited
+atom	desired	each person, so far as he believes it to be attainable, desires his own happiness
+atom	proof	we have all the proof which the case admits of that happiness is a good
+atom	own_good	each person's happiness is a good to that person
+atom	general_good	the general happiness is a good to the aggregate of all persons
+atom	end_of_conduct	happiness has made out its title as one of the ends of conduct
+atom	criterion	happiness is one of the criteria of morality
+atom	sidgwick_general_desirable	the general happiness is desirable, i.e. what each individual ought to desire or aim at realising in action
+atom	sidgwick_actual_desire_general	there is an actual desire for the general happiness
+atom	sidgwick_individual_desire_general	an actual desire for the general happiness exists in some individual
+atom	sidgwick_aggregate_desire_general	an actual desire for the general happiness exists in an aggregate of individuals
+atom	sidgwick_established	Mill's reasoning establishes that the general happiness is desirable
+atom	sidgwick_gap_filled	the gap in Mill's expressed argument is filled
+atom	sidgwick_rational_benevolence	some such proposition as the intuition of Rational Benevolence is supplied
+P1	S7	sidgwick_established → sidgwick_actual_desire_general	says mill
+P2	S8	desired	says mill	kind empirical
+P3	S9	desired → proof	says mill
+P4	S9	proof → own_good	says mill
+P5	S9	own_good → general_good	says mill
+P6	S12	sidgwick_actual_desire_general → sidgwick_general_desirable
+P7	S12	sidgwick_established → sidgwick_actual_desire_general
+P8	S13	¬sidgwick_individual_desire_general	kind conceptual
+P9	S13	¬sidgwick_individual_desire_general → ¬sidgwick_aggregate_desire_general
+A1	-	sidgwick_actual_desire_general → sidgwick_individual_desire_general ∨ sidgwick_aggregate_desire_general
+C1	S14	¬sidgwick_actual_desire_general	from P8 P9 A1
+P10	S14	sidgwick_gap_filled → sidgwick_rational_benevolence
+C	S14	¬sidgwick_established	from C1 P7

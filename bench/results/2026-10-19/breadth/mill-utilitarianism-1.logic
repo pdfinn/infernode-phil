@@ -1,0 +1,29 @@
+# reading 2 of mill-utilitarianism-1.md by claude-opus-5-5
+logic	s5kd
+atom	without_happiness	people do without happiness
+atom	done_involuntarily	nineteen-twentieths of mankind do without happiness involuntarily
+atom	hero_sacrifices	the hero or martyr voluntarily does without happiness for something he prizes more than his own happiness
+atom	end_is_others_happiness	what the hero or martyr prizes more is the happiness of others or some of the requisites of happiness
+atom	sacrifice_has_end	self-sacrifice is for some end and is not its own end
+atom	end_is_virtue	the end of self-sacrifice is not happiness but virtue, which is better than happiness
+atom	sacrifice_made	the hero or martyr would make the sacrifice
+atom	believes_benefits_others	the hero or martyr believes the sacrifice earns for others immunity from similar sacrifices, rather than only making their lot like his
+atom	contributes_happiness	the renunciation contributes worthily to increase the amount of happiness in the world
+atom	admirable	the one who renounces is deserving of honour and admiration
+atom	imitate	men follow the example of the one who renounces
+P1	S2	done_involuntarily	kind empirical
+P2	S2	done_involuntarily → without_happiness
+C1	S2	◇without_happiness	from P1 P2
+P3	S2	hero_sacrifices	kind empirical
+P4	S3	hero_sacrifices → end_is_others_happiness
+P5	S4	sacrifice_has_end
+O1	S4	end_is_virtue ∧ ¬end_is_others_happiness	against P4
+R1	S4	sacrifice_made → believes_benefits_others	against O1
+P6	S5	sacrifice_made → believes_benefits_others
+P7	S6	contributes_happiness → admirable	kind normative
+P8	S6	¬contributes_happiness → ¬admirable	kind normative
+# "should" in S7 read as deontic ought; "can" read as possibility
+P9	S7	◇imitate
+A1	-	¬admirable → ¬O imitate
+C	S7	¬contributes_happiness → ¬O imitate	from P8 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

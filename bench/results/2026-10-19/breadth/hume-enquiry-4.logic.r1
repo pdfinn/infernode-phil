@@ -1,0 +1,23 @@
+# the argument of hume-enquiry-4.md as claude-opus-5-5 read it: check that it says what the text says
+# Hume, Enquiry XII: the sceptic's first and second objections to the opinion of external existence.
+# Main conclusion read as the conditional in S2. S3 is taken as its support.
+atom	rest_instinct	the opinion of external existence is rested on natural instinct
+atom	contrary_reason	the opinion of external existence is contrary to reason
+atom	refer_reason	the opinion of external existence is referred to reason
+atom	contrary_instinct	the opinion of external existence is contrary to natural instinct
+atom	rational_evidence	the opinion of external existence carries rational evidence with it, to convince an impartial enquirer
+atom	qualities_in_mind	it is a principle of reason that all sensible qualities are in the mind, not in the object
+atom	bereaved	matter is bereaved of all its intelligible qualities, both primary and secondary
+atom	annihilated	matter is in a manner annihilated, leaving only a certain unknown, inexplicable something as the cause of our perceptions
+atom	not_worth	the notion is so imperfect that no sceptic will think it worth while to contend against it
+P1	S1	rest_instinct → contrary_reason
+P2	S1	refer_reason → contrary_instinct
+P3	S1	¬rational_evidence
+P4	S3	bereaved → annihilated
+P5	S3	annihilated → not_worth	kind conceptual
+# A1: the step from "all sensible qualities are in the mind" to "matter is bereaved of all its qualities" is left implicit.
+A1	-	qualities_in_mind → bereaved
+# A2: that an opinion positing such an unknown something is contrary to reason is relied on, not stated.
+A2	-	annihilated → contrary_reason
+C	S2	qualities_in_mind → contrary_reason	from A1 P4 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

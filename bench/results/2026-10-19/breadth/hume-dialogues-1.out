@@ -1,0 +1,18 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+hume-dialogues-1.md:1: argue/readings: S4 is read 2 ways: hume-dialogues-1.logic.r1 has "suspense → triumph"; hume-dialogues-1.logic.r1.2 and hume-dialogues-1.logic.r1.3 have "equal_weight → suspense" and "suspense → triumph"; they differ when only "the one has no more weight than the other" is true, which the first allows [in 1 of 2 runs]
+hume-dialogues-1.md:1: argue/answered: S4: answered no, which keeps hume-dialogues-1.logic.r1.2 and hume-dialogues-1.logic.r1.3, to: Suppose "the one has no more weight than the other" is true and "the mind remains in suspense between them" and "scepticism triumphs" are false. Is S4, "The mind must remain in suspense between them; and it is that very suspense or balance, which is the triumph of scepticism.", true then? [in 1 of 2 runs]
+hume-dialogues-1.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: hume-dialogues-1.logic.r1 has "equal_weight → suspense"; hume-dialogues-1.logic.r1.2 and hume-dialogues-1.logic.r1.3 have nothing from it; they differ when only "the one has no more weight than the other" is true, which the second allows [in 1 of 2 runs]
+hume-dialogues-1.md:1: argue/unfaithful: hume-dialogues-1.logic.r1 P3 (S3): the sentence has no word of "sceptical reasonings oppose and counterbalance our arguments": is it the sentence P3 came from? [in 1 of 2 runs]
+hume-dialogues-1.md:1: argue/unfaithful: hume-dialogues-1.logic.r1 C (S4): the sentence has no word of "our arguments lose their advantage and run wide of common life": is it the sentence C came from?
+# kept the reading that best fits the words and the other readings: hume-dialogues-1.logic.r1.2
+# argument written to hume-dialogues-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-dialogues-1.md:1: argue/unfaithful: P3 (S3): the sentence has no word of "sceptical reasonings oppose and counterbalance our arguments": is it the sentence P3 came from? [in 1 of 2 runs]
+hume-dialogues-1.md:1: argue/unfaithful: P4 (S4): the sentence has no word of "the one has no more weight than the other": is it the sentence P4 came from?
+hume-dialogues-1.md:1: argue/unfaithful: C1 (S4): the sentence has no word of "our arguments lose their advantage and run wide of common life": is it the sentence C1 came from?
+hume-dialogues-1.md:1: argue/unfaithful: C (S4): the sentence has no word of "our arguments lose their advantage and run wide of common life": is it the sentence C came from?
+hume-dialogues-1.md:1: argue/own-sentence: C1 (S4): needs P4, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+hume-dialogues-1.md:1: argue/own-sentence: C (S4): needs P5, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+hume-dialogues-1.logic.r1: argue/valid 1
+hume-dialogues-1.logic: argue/runs-agree 1

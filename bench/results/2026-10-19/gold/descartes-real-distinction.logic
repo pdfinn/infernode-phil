@@ -1,0 +1,24 @@
+# the argument of descartes-real-distinction.md as claude-opus-5-5 read it: check that it says what the text says
+# Descartes, Discourse on Method, part IV. The whole argument is one sentence (S1).
+# "Could suppose" is read as conceivability and given plain atoms, not modal operators.
+atom	can_suppose_no_body	I could suppose that I had no body, and that there was no world nor any place in which I might be
+atom	can_suppose_not_exist	I could suppose that I was not
+atom	think	I thought to doubt of the truth of other things
+atom	exist	I was (I existed)
+atom	reason_believe_exist	I would have reason to believe that I existed
+atom	essence_thinking	I am a substance whose whole essence or nature consists only in thinking
+atom	independent_body	that it may exist, I have need of no place, nor am dependent on any material thing
+atom	distinct	the mind by which I am what I am is wholly distinct from the body
+atom	survives_without_body	although the body were not, the mind would still continue to be all that it is
+P1	S1	can_suppose_no_body
+P2	S1	¬can_suppose_not_exist
+P3	S1	think → exist
+P4	S1	think
+P5	S1	¬think → ¬reason_believe_exist
+# The bridge from what I can and cannot suppose to what my essence is never appears in the text.
+# The "thence concluded" plainly relies on it.
+A1	-	can_suppose_no_body ∧ ¬can_suppose_not_exist ∧ (¬think → ¬reason_believe_exist) → essence_thinking ∧ independent_body
+C1	S1	essence_thinking ∧ independent_body	from P1 P2 P5 A1
+# "so that ... wholly distinct ... would still continue to be" is drawn from C1 with no stated further premise.
+C	S1	distinct ∧ survives_without_body	from C1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

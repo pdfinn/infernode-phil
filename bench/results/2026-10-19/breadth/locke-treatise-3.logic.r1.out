@@ -1,0 +1,18 @@
+# 3 readings by claude-opus-5-5, compared
+locke-treatise-3.md:1: argue/readings: S4 is read 2 ways: locke-treatise-3.logic.r1 and locke-treatise-3.logic.r1.3 have nothing from it; locke-treatise-3.logic.r1.2 has "one_body ∧ state_of_nature → public_manages ∧ injury_engages_whole"; they differ when only "in reference to the rest of mankind, the members of a commonwealth make one body", "that body is still in the state of nature with the rest of mankind, as every member of it before was" and "controversies between any man of the society and those out of it are managed by the public" are true, which the first allows
+locke-treatise-3.md:1: argue/answered: S4: answered no, which keeps locke-treatise-3.logic.r1.2, to: Suppose "in reference to the rest of mankind, the members of a commonwealth make one body", "that body is still in the state of nature with the rest of mankind, as every member of it before was" and "controversies between any man of the society and those out of it are managed by the public" are true and "an injury done to a member of their body engages the whole in the reparation of it" is false. Is S4, "Hence it is, that the controversies that happen between any man of the society with those that are out of it, are managed by the public; and an injury done to a member of their body, engages the whole in the reparation of it.", true then?
+locke-treatise-3.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: locke-treatise-3.logic.r1 and locke-treatise-3.logic.r1.3 have "one_body ∧ state_of_nature → public_manages ∧ injury_engages_whole"; locke-treatise-3.logic.r1.2 has nothing from it; they differ when only "in reference to the rest of mankind, the members of a commonwealth make one body", "that body is still in the state of nature with the rest of mankind, as every member of it before was" and "controversies between any man of the society and those out of it are managed by the public" are true, which the second allows
+locke-treatise-3.logic.r1: argue/readings-agree 2
+locke-treatise-3.logic.r1: argue/readings-differ 2
+locke-treatise-3.logic.r1: argue/verdicts-agree 1
+locke-treatise-3.logic.r1: argue/mismatches 0
+locke-treatise-3.logic.r1.2: argue/mismatches 0
+locke-treatise-3.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: locke-treatise-3.logic.r1.2
+# argument written to locke-treatise-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+locke-treatise-3.md:1: argue/own-sentence: C1 (S3): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes
+locke-treatise-3.md:1: argue/own-sentence: C2 (S4): needs P4, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+locke-treatise-3.md:1: argue/circular: C (S5): the conclusion only restates P2: it is assumed, not argued
+locke-treatise-3.md:1: argue/unused-step: C1 (S3): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+locke-treatise-3.md:1: argue/unused-step: C2 (S4): nothing rests on C2, and it is not the conclusion: a step that leads nowhere
+locke-treatise-3.logic.r1: argue/valid 0

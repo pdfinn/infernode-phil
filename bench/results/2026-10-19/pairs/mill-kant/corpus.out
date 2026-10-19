@@ -1,0 +1,9 @@
+./mill.md:1: claims/misattributed: mill P1 gives "mill_principle_ground" (the rule 'So act, that the rule on which thou actest would admit of being adopted as a law by all rational beings' is the universal first principle, the origin and ground of moral obligation) as kant's, but nothing kant holds, as read (readings/kant/logic), entails it, nor its denial
+./mill.md:1: claims/reported-only: mill P1 gives "mill_principle_ground" (the rule 'So act, that the rule on which thou actest would admit of being adopted as a law by all rational beings' is the universal first principle, the origin and ground of moral obligation) as kant's, and no work in the corpus holds it: it is only reported
+.: corpus/works 2
+.: corpus/claims 10
+.: claims/attributed 0
+.: claims/misattributed 1
+.: claims/contradicts-source 0
+.: claims/attributed-unread 0
+.: claims/reported-only 1

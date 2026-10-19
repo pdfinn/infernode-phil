@@ -1,0 +1,31 @@
+# the argument of republic-function.md as claude-opus-5-5 read it: check that it says what the text says
+# "Necessarily" in S10 is read as the necessity of the inference, not as a modal claim, so no modal logic is used.
+atom	soul_has_ends	the soul has an end which nothing else can fulfil, such as to superintend, command and deliberate
+atom	life_end	life is to be reckoned among the ends of the soul
+atom	soul_has_excellence	the soul has an excellence
+atom	cannot_fulfil_without	the soul cannot fulfil her own ends when deprived of her excellence
+atom	good_rules_well	the good soul is a good ruler and superintendent
+atom	evil_rules_ill	an evil soul is an evil ruler and superintendent
+atom	justice_excellence	justice is the excellence of the soul
+atom	injustice_defect	injustice is the defect of the soul
+atom	just_lives_well	the just soul and the just man will live well
+atom	unjust_lives_ill	the unjust man will live ill
+atom	just_happy	the just is happy
+atom	unjust_miserable	the unjust is miserable
+atom	happiness_profitable	happiness and not misery is profitable
+atom	injustice_more_profitable	injustice is more profitable than justice
+P1	S3	soul_has_ends
+P2	S5	life_end
+P3	S7	soul_has_excellence
+P4	S9	cannot_fulfil_without
+A1	-	soul_has_ends ∧ soul_has_excellence ∧ cannot_fulfil_without → good_rules_well ∧ evil_rules_ill
+C1	S11	good_rules_well ∧ evil_rules_ill	from P1 P3 P4 A1
+P5	S13	justice_excellence ∧ injustice_defect
+A2	-	good_rules_well ∧ evil_rules_ill ∧ life_end ∧ justice_excellence ∧ injustice_defect → just_lives_well ∧ unjust_lives_ill
+C2	S14	just_lives_well ∧ unjust_lives_ill	from C1 P2 P5 A2
+P6	S17	(just_lives_well → just_happy) ∧ (unjust_lives_ill → unjust_miserable)	kind conceptual
+C3	S18	just_happy ∧ unjust_miserable	from C2 P6
+P7	S20	happiness_profitable
+A3	-	just_happy ∧ unjust_miserable ∧ happiness_profitable → ¬injustice_more_profitable
+C	S22	¬injustice_more_profitable	from C3 P7 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

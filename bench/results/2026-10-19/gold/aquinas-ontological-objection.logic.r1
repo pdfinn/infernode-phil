@@ -1,0 +1,22 @@
+# the argument of aquinas-ontological-objection.md as claude-opus-5-5 read it: check that it says what the text says
+# Objection 2 (Aquinas, ST I q.2 a.1): "God exists" is self-evident.
+# S3 (whole greater than its part) is only an illustration and is left out.
+# S4 is stated outright and then supported by S5-S7; it is kept as its own premise.
+atom	known_on_terms	as soon as the signification of the word "God" is understood, it is at once seen that God exists
+atom	self_evident	the proposition "God exists" is self-evident
+atom	first_principles_known_on_terms	the first principles of demonstration are known as soon as the terms are known
+atom	signifies_greatest	by the word "God" is signified that thing than which nothing greater can be conceived
+atom	actual_greater	that which exists actually and mentally is greater than that which exists only mentally
+atom	exists_mentally	as soon as the word "God" is understood, God exists mentally
+atom	exists_actually	God exists actually
+P1	S2	known_on_terms → self_evident	kind conceptual
+P2	S2	first_principles_known_on_terms	says aristotle
+P3	S4	known_on_terms
+P4	S5	signifies_greatest	kind conceptual
+P5	S6	actual_greater	kind conceptual
+P6	S7	exists_mentally
+# The step in S7 relies on this unstated link.
+A1	-	signifies_greatest ∧ actual_greater ∧ exists_mentally → exists_actually
+C1	S7	exists_actually	from P4 P5 P6 A1
+C	S8	self_evident	from P1 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

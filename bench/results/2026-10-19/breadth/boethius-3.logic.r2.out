@@ -1,0 +1,45 @@
+# 3 readings by claude-opus-5-5, compared
+boethius-3.md:1: argue/readings: S3 is read 2 ways: boethius-3.logic.r2 and boethius-3.logic.r2.2 have "good_ruler ∧ evil_exists ∧ evil_unpunished"; boethius-3.logic.r2.3 has "good_ruler ∧ ◇evil_exists ∧ ◇(evil_exists ∧ evil_unpunished)"; they differ when only "there exists a good ruler of the universe", "evil is at all", "possibly, (evil is at all and evil goes unpunished)" and "possibly, evil is at all" are true, which the second allows
+boethius-3.md:1: argue/modal-ambiguous: S3 is read boethius-3.logic.r2 and boethius-3.logic.r2.2 with no modality; boethius-3.logic.r2.3 as what is necessary or possible: its "should" does not say which it means
+boethius-3.md:1: argue/answered: S3: answered yes, which keeps boethius-3.logic.r2.3, to: Suppose "there exists a good ruler of the universe", "evil is at all", "possibly, (evil is at all and evil goes unpunished)" and "possibly, evil is at all" are true and "evil goes unpunished" is false. Is S3, "But, lo! herein is the very chiefest cause of my grief--that, while there exists a good ruler of the universe, it is possible that evil should be at all, still more that it should go unpunished.", true then?
+boethius-3.md:1: argue/readings: S4 is read 2 ways: boethius-3.logic.r2 and boethius-3.logic.r2.2 have "good_ruler ∧ evil_exists ∧ evil_unpunished → astonishing"; boethius-3.logic.r2.3 has nothing from it; they differ when only "there exists a good ruler of the universe", "evil is at all" and "evil goes unpunished" are true, which the second allows
+boethius-3.md:1: argue/answered: S4: answered no, which keeps boethius-3.logic.r2 and boethius-3.logic.r2.2, to: Suppose "there exists a good ruler of the universe", "evil is at all" and "evil goes unpunished" are true and "this of itself deservedly provokes astonishment" is false. Is S4, "Surely thou must see how deservedly this of itself provokes astonishment.", true then?
+boethius-3.md:1: argue/readings: S6 is read 2 ways: boethius-3.logic.r2 has "god_omniscient ∧ god_omnipotent ∧ god_wills_good" and "god_omniscient ∧ god_omnipotent ∧ god_wills_good ∧ wickedness_flourishes ∧ virtue_punished → beyond_wonder"; boethius-3.logic.r2.2 and boethius-3.logic.r2.3 have "god_omniscient ∧ god_omnipotent ∧ god_wills_good" and "god_omniscient ∧ god_omnipotent ∧ god_wills_good ∧ wickedness_flourishes ∧ virtue_unrewarded ∧ virtue_punished → beyond_wonder"; they differ when only "wickedness reigns and flourishes", "virtue is trampled under the feet of the wicked and suffers punishment in the place of crime", "God knows all things", "God can do all things" and "God wills only the good" are true, which the second allows
+boethius-3.md:1: argue/answered: S6: answered no, which keeps boethius-3.logic.r2, to: Suppose "wickedness reigns and flourishes", "virtue is trampled under the feet of the wicked and suffers punishment in the place of crime", "God knows all things", "God can do all things" and "God wills only the good" are true and "virtue lacks its reward" and "that this should happen cannot be sufficiently wondered at nor sufficiently lamented" are false. Is S6, "That this should happen under the rule of a God who knows all things and can do all things, but wills only the good, cannot be sufficiently wondered at nor sufficiently lamented.'", true then?
+boethius-3.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: boethius-3.logic.r2 and boethius-3.logic.r2.2 have nothing from it; boethius-3.logic.r2.3 has "good_ruler ∧ ◇evil_exists → astonishing"; they differ when only "there exists a good ruler of the universe" and "possibly, evil is at all" are true, which the first allows
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2 P2 (S4): the sentence has no word of "evil goes unpunished": is it the sentence P2 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2 P2 (S4): the sentence has no word of "evil is at all": is it the sentence P2 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2 P2 (S4): the sentence has no word of "there exists a good ruler of the universe": is it the sentence P2 came from?
+boethius-3.md:1: argue/negation: boethius-3.logic.r2 P4 (S6): the sentence says "nor", but P4 denies nothing it speaks of: it reads "God knows all things and God can do all things and God wills only the good"
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2 P5 (S6): the sentence has no word of "virtue is trampled under the feet of the wicked and suffers punishment in the place of crime": is it the sentence P5 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2 P5 (S6): the sentence has no word of "wickedness reigns and flourishes": is it the sentence P5 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.2 P2 (S4): the sentence has no word of "evil goes unpunished": is it the sentence P2 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.2 P2 (S4): the sentence has no word of "evil is at all": is it the sentence P2 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.2 P2 (S4): the sentence has no word of "there exists a good ruler of the universe": is it the sentence P2 came from?
+boethius-3.md:1: argue/negation: boethius-3.logic.r2.2 P4 (S6): the sentence says "nor", but P4 denies nothing it speaks of: it reads "God knows all things and God can do all things and God wills only the good"
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.2 P5 (S6): the sentence has no word of "virtue is trampled under the feet of the wicked and suffers punishment in the place of crime": is it the sentence P5 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.2 P5 (S6): the sentence has no word of "virtue lacks its reward": is it the sentence P5 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.2 P5 (S6): the sentence has no word of "wickedness reigns and flourishes": is it the sentence P5 came from?
+boethius-3.md:1: argue/negation: boethius-3.logic.r2.3 P3 (S6): the sentence says "nor", but P3 denies nothing it speaks of: it reads "God knows all things and God can do all things and God wills only the good"
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.3 P4 (S6): the sentence has no word of "virtue is trampled under the feet of the wicked and suffers punishment in the place of crime": is it the sentence P4 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.3 P4 (S6): the sentence has no word of "virtue lacks its reward": is it the sentence P4 came from?
+boethius-3.md:1: argue/unfaithful: boethius-3.logic.r2.3 P4 (S6): the sentence has no word of "wickedness reigns and flourishes": is it the sentence P4 came from?
+boethius-3.logic.r2: argue/readings-agree 2
+boethius-3.logic.r2: argue/readings-differ 4
+boethius-3.logic.r2: argue/verdicts-agree 1
+boethius-3.logic.r2: argue/answers-split: no reading agrees with all 3 answers (boethius-3.logic.r2 2, boethius-3.logic.r2.2 1, boethius-3.logic.r2.3 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+boethius-3.logic.r2: argue/mismatches 6
+boethius-3.logic.r2.2: argue/mismatches 7
+boethius-3.logic.r2.3: argue/mismatches 4
+# kept the reading that best fits the words and the other readings: boethius-3.logic.r2
+# argument written to boethius-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+boethius-3.md:1: argue/unfaithful: P2 (S4): the sentence has no word of "evil goes unpunished": is it the sentence P2 came from?
+boethius-3.md:1: argue/unfaithful: P2 (S4): the sentence has no word of "evil is at all": is it the sentence P2 came from?
+boethius-3.md:1: argue/unfaithful: P2 (S4): the sentence has no word of "there exists a good ruler of the universe": is it the sentence P2 came from?
+boethius-3.md:1: argue/negation: P4 (S6): the sentence says "nor", but P4 denies nothing it speaks of: it reads "God knows all things and God can do all things and God wills only the good"
+boethius-3.md:1: argue/unfaithful: P5 (S6): the sentence has no word of "virtue is trampled under the feet of the wicked and suffers punishment in the place of crime": is it the sentence P5 came from?
+boethius-3.md:1: argue/unfaithful: P5 (S6): the sentence has no word of "wickedness reigns and flourishes": is it the sentence P5 came from?
+boethius-3.md:1: argue/own-sentence: C1 (S4): needs P2, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+boethius-3.md:1: argue/own-sentence: C (S6): needs P4 and P5, read from the conclusion's own sentence: check that S6 gives them as its reason and does not conclude them
+boethius-3.md:1: argue/unused-step: C1 (S4): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+boethius-3.logic.r2: argue/valid 1

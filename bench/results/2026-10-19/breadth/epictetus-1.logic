@@ -1,0 +1,27 @@
+# reading 3 of epictetus-1.md by claude-opus-5-5
+atom	carpenter_by_learning	the carpenter, when he has learned certain things, becomes a carpenter
+atom	pilot_by_learning	the pilot, by learning certain things, becomes a pilot
+atom	wish_sufficient	in philosophy it is sufficient to wish to be wise and good
+atom	must_learn	in philosophy there is also a necessity to learn certain things
+atom	learn_god_provides	we ought first to learn that there is a God and that he provides for all things
+atom	learn_cannot_conceal	we ought to learn that it is not possible to conceal from God our acts, intentions and thoughts
+atom	would_please_gods	one would please and obey the gods
+atom	try_be_like_gods	one tries with all his power to be like the gods
+atom	divine_faithful	the divine is faithful
+atom	man_faithful	man must be faithful
+atom	divine_free	the divine is free
+atom	man_free	man must be free
+atom	divine_beneficent	the divine is beneficent
+atom	man_beneficent	man must be beneficent
+atom	divine_magnanimous	the divine is magnanimous
+atom	man_magnanimous	man must be magnanimous
+# S1 gives the crafts by analogy; S2 (a rhetorical question) draws the philosophical case from them.
+P1	S1	carpenter_by_learning	kind empirical
+P2	S1	pilot_by_learning	kind empirical
+C	S2	¬wish_sufficient ∧ must_learn	from P1 P2
+# S4 reports the philosophers' view; no individual author is named.
+P3	S4	learn_god_provides ∧ learn_cannot_conceal	says philosophers	kind normative
+# "must try" in S5 and "must" in S6 are taken as normative requirements, but the given atoms carry no modal operator, so no logic line is used.
+P4	S5	would_please_gods → try_be_like_gods	kind normative
+P5	S6	(divine_faithful → man_faithful) ∧ (divine_free → man_free) ∧ (divine_beneficent → man_beneficent) ∧ (divine_magnanimous → man_magnanimous)	kind normative
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+mill-proof.md:1: argue/readings: S6 is read 2 ways: mill-proof.logic.r3 and mill-proof.logic.r3.2 have "desires_own" and "own_good → general_good"; mill-proof.logic.r3.3 has "desires_own"; they differ when only "each person, so far as he believes it to be attainable, desires his own happiness" and "each person's happiness is a good to that person" are true, which the second allows
+mill-proof.md:1: argue/answered: S6: answered no, which keeps mill-proof.logic.r3 and mill-proof.logic.r3.2, to: Suppose "each person, so far as he believes it to be attainable, desires his own happiness" and "each person's happiness is a good to that person" are true and "the general happiness is a good to the aggregate of all persons" is false. Is S6, "This, however, being a fact, we have not only all the proof which the case admits of, but all which it is possible to require, that happiness is a good: that each person's happiness is a good to that person, and the general happiness, therefore, a good to the aggregate of all persons.", true then?
+mill-proof.logic.r3: argue/readings: what the text leaves unstated is read 3 ways: mill-proof.logic.r3 has "general_good → end_of_conduct"; mill-proof.logic.r3.2 has "own_good ∧ general_good → end_of_conduct"; they differ when only "the general happiness is a good to the aggregate of all persons" is true, which the second allows; mill-proof.logic.r3.3 has "own_good → general_good" and "general_good → end_of_conduct"
+mill-proof.md:1: argue/unfaithful: mill-proof.logic.r3 P1 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P1 came from?
+mill-proof.md:1: argue/unfaithful: mill-proof.logic.r3.2 P1 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P1 came from?
+mill-proof.md:1: argue/unfaithful: mill-proof.logic.r3.3 P2 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P2 came from?
+mill-proof.logic.r3: argue/readings-agree 3
+mill-proof.logic.r3: argue/readings-differ 2
+mill-proof.logic.r3: argue/verdicts-agree 1
+mill-proof.logic.r3: argue/mismatches 1
+mill-proof.logic.r3.2: argue/mismatches 1
+mill-proof.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: mill-proof.logic.r3
+# argument written to mill-proof.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+mill-proof.md:1: argue/unfaithful: P1 (S3): the sentence has no word of "each person's happiness is a good to that person": is it the sentence P1 came from?
+mill-proof.md:1: argue/own-sentence: C1 (S6): needs P2, read from the conclusion's own sentence: check that S6 gives it as its reason and does not conclude it
+mill-proof.md:1: argue/own-sentence: C2 (S6): needs P3, read from the conclusion's own sentence: check that S6 gives it as its reason and does not conclude it
+mill-proof.md:1: argue/assumed: C3 (S7): follows only by A1, which the text never states: state it, or argue for it
+mill-proof.md:1: argue/own-sentence: C (S7): needs P4, read from the conclusion's own sentence: check that S7 gives it as its reason and does not conclude it
+mill-proof.logic.r3: argue/valid 1

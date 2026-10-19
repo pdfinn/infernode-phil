@@ -1,0 +1,23 @@
+# the argument of spinoza-ethics-2.md as claude-opus-5-5 read it: check that it says what the text says
+# Spinoza: from the inconstancy of human judgment to an understanding of Repentance and Self-complacency.
+# "may be affected" in S1 is read as a claim that the state is readily conceivable, kept as a plain atom.
+atom	judges_by_emotions	a man often judges things solely by his emotions
+atom	imaginary_causes	the things a man believes cause pleasure or pain, and so endeavours to promote or prevent, are often purely imaginary
+atom	affected_self_cause	a man may be at one time affected with pleasure, and at another with pain, accompanied by the idea of himself as cause
+atom	repentance_def	Repentance is pain accompanied by the idea of one's self as cause
+atom	complacency_def	Self-complacency is pleasure accompanied by the idea of one's self as cause
+atom	understand_both	we can easily understand what Repentance and Self-complacency are
+atom	believe_free	men believe themselves to be free
+atom	most_intense	Repentance and Self-complacency are most intense
+P1	S1	judges_by_emotions	kind empirical
+P2	S1	imaginary_causes	kind empirical
+P3	S1	judges_by_emotions ∧ imaginary_causes → affected_self_cause
+C1	S1	affected_self_cause	from P1 P2 P3
+P4	S3	repentance_def	kind conceptual
+P5	S3	complacency_def	kind conceptual
+A1	-	affected_self_cause ∧ repentance_def ∧ complacency_def → understand_both
+C	S2	understand_both	from C1 P4 P5 A1
+# S3 cites III. xlix. for this claim; it is kept as the text's own premise because it gives no other author.
+P6	S3	believe_free → most_intense
+P7	S3	believe_free	kind empirical
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

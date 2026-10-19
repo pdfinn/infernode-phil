@@ -1,0 +1,15 @@
+# reading 2 of plato-republic-2.md by claude-opus-5-5
+logic	kd
+atom	enquire	we enquire who are the best guardians of their own conviction that what they think the interest of the State is to be the rule of their lives
+atom	test	we watch them from their youth upwards and make them perform actions in which they are most likely to forget or to be deceived
+atom	passes	he remembers and is not deceived in the trial
+atom	selected	he is selected
+atom	rejected	he is rejected
+# "must" in S1 and S2 read as deontic (what we ought to do)
+P1	S1	O enquire	kind normative
+# S2 gives the watching and testing as the way to carry out the enquiry of S1; S3 asks for agreement on this
+A1	-	O(enquire → test)	kind normative
+P2	S2	O(passes → selected)	kind normative
+P3	S2	O(¬passes → rejected)	kind normative
+C	S2	O test	from P1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

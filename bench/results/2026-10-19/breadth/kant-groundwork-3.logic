@@ -1,0 +1,18 @@
+# the argument of kant-groundwork-3.md as claude-opus-5-5 read it: check that it says what the text says
+atom	canon	we must be able to will that a maxim of our action should be a universal law; this is the canon of the moral appreciation of the action
+atom	inconceivable	some actions are such that their maxim cannot without contradiction be even conceived as a universal law of nature
+atom	unwillable	in other actions it is impossible to will that their maxim should be raised to the universality of a law of nature, since such a will would contradict itself
+atom	strict	the former actions violate strict or rigorous (inflexible) duty
+atom	lax	the latter actions violate only laxer (meritorious) duty
+atom	same_principle	all duties depend as regards the nature of the obligation on the same principle
+# "must be able to will" is kept inside the atom canon rather than written in kd, since the argument does not turn on the modal step.
+P1	S2	canon	kind normative
+P2	S4	inconceivable
+P3	S5	unwillable
+P4	S5	inconceivable → strict
+P5	S5	unwillable → lax
+C1	S5	strict ∧ lax	from P2 P3 P4 P5
+# The text's "thus" relies on this link between the canon and both classes of duty; S1 says the duties fall into two classes on the one principle.
+A1	-	canon ∧ strict ∧ lax → same_principle
+C	S6	same_principle	from C1 P1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

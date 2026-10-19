@@ -1,0 +1,18 @@
+# 3 readings by claude-opus-5-5, compared
+berkeley-master.md:1: argue/readings: S3 is read 2 ways: berkeley-master.logic.r3 has nothing from it; berkeley-master.logic.r3.2 and berkeley-master.logic.r3.3 have "you_perceive"; they differ when nothing is true, which the first allows
+berkeley-master.md:1: argue/answered: S3: answered no, which keeps berkeley-master.logic.r3.2 and berkeley-master.logic.r3.3, to: Suppose "you yourself perceive or think of them all the while" is false. Is S3, "BUT DO NOT YOU YOURSELF PERCEIVE OR THINK OF THEM ALL THE WHILE?", true then?
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r3.2 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r3.3 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.logic.r3: argue/readings-agree 4
+berkeley-master.logic.r3: argue/readings-differ 1
+berkeley-master.logic.r3: argue/verdicts-agree 1
+berkeley-master.logic.r3: argue/mismatches 0
+berkeley-master.logic.r3.2: argue/mismatches 1
+berkeley-master.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: berkeley-master.logic.r3.2
+# argument written to berkeley-master.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+berkeley-master.md:1: argue/negation: P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.logic.r3: argue/valid 1
+berkeley-master.md:1: argue/misses: O1 (S1): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+berkeley-master.md:1: argue/misses: R1 (S2): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+berkeley-master.logic.r3: argue/survives 1

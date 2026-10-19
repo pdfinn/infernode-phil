@@ -1,0 +1,18 @@
+# reading 2 of boethius-4.md by claude-opus-5-5
+atom	bad_more_unfortunate	the bad are more unfortunate when they have accomplished their desires than if they are unable to get them fulfilled
+atom	license_removed	that license which thou believest to be permitted to the wicked were taken away
+atom	punishment_remitted	the punishment of the wicked would be in great part remitted
+atom	will_evil_wretched	it is wretched to will evil
+atom	able_more_wretched	to have been able to accomplish evil is more wretched than only to will it
+atom	power_gives_effect	without the power the wretched will would fail of effect
+atom	each_state_wretched	each one of these states (willing, being able to accomplish, accomplishing crime) has its own measure of wretchedness
+atom	threefold	those who will, are able to accomplish, and accomplish crime are victims of a threefold wretchedness
+# "needs must be" (S3) and "must needs" (S5) are read as marking inference, not metaphysical necessity, so no modal logic is used.
+# S1 only says the matter will be shown later, so it is left out.
+P1	S2	license_removed → punishment_remitted
+P2	S3	bad_more_unfortunate
+P3	S4	power_gives_effect
+C1	S4	will_evil_wretched → able_more_wretched	from P3
+P4	S5	each_state_wretched
+C	S5	threefold	from C1 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,31 @@
+# the prover could not read aquinas-st-i-2.logic.r2.2: claude-opus-5-5 is asked again
+aquinas-st-i-2.logic.r2.2: argue/undefined: atom common_form is used but not given a meaning (atom	common_form	...)
+aquinas-st-i-2.logic.r2.2: argue/undefined: atom excess is used but not given a meaning (atom	excess	...)
+aquinas-st-i-2.logic.r2.2: argue/undefined: atom alike is used but not given a meaning (atom	alike	...)
+aquinas-st-i-2.logic.r2.2: argue/undefined: atom equal is used but not given a meaning (atom	equal	...)
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-2.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-2.logic.r2 and aquinas-st-i-2.logic.r2.2 have "common_form ∧ ¬excess → equal"; aquinas-st-i-2.logic.r2.3 has "alike ∧ ¬excess → equal"; they differ when only "the Son may be said to be like the Father" is true, which the first allows
+aquinas-st-i-2.md:1: argue/unfaithful: aquinas-st-i-2.logic.r2 P1 (S2): the sentence has no word of "one participates in the form more perfectly than the other": is it the sentence P1 came from?
+aquinas-st-i-2.md:1: argue/negation: aquinas-st-i-2.logic.r2 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "if the Father and the Son have a common form: the same nature is in both, then the Son may be said to be like the Father"
+aquinas-st-i-2.md:1: argue/negation: aquinas-st-i-2.logic.r2 P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "if one participates in the form more perfectly than the other, then it is not so that the Son may be said to be equal to the Father"
+aquinas-st-i-2.md:1: argue/unfaithful: aquinas-st-i-2.logic.r2.2 P1 (S2): the sentence has no word of "one participates in the form more perfectly than the other": is it the sentence P1 came from?
+aquinas-st-i-2.md:1: argue/negation: aquinas-st-i-2.logic.r2.2 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "if the Father and the Son have a common form: the same nature is in both, then the Son may be said to be like the Father"
+aquinas-st-i-2.md:1: argue/negation: aquinas-st-i-2.logic.r2.2 P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "if one participates in the form more perfectly than the other, then it is not so that the Son may be said to be equal to the Father"
+aquinas-st-i-2.md:1: argue/unfaithful: aquinas-st-i-2.logic.r2.3 P1 (S2): the sentence has no word of "one participates in the form more perfectly than the other": is it the sentence P1 came from?
+aquinas-st-i-2.md:1: argue/negation: aquinas-st-i-2.logic.r2.3 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "if the Father and the Son have a common form: the same nature is in both, then the Son may be said to be like the Father"
+aquinas-st-i-2.md:1: argue/negation: aquinas-st-i-2.logic.r2.3 P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "if one participates in the form more perfectly than the other, then it is not so that the Son may be said to be equal to the Father"
+aquinas-st-i-2.logic.r2: argue/readings-agree 4
+aquinas-st-i-2.logic.r2: argue/readings-differ 1
+aquinas-st-i-2.logic.r2: argue/verdicts-agree 1
+aquinas-st-i-2.logic.r2: argue/mismatches 3
+aquinas-st-i-2.logic.r2.2: argue/mismatches 3
+aquinas-st-i-2.logic.r2.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: aquinas-st-i-2.logic.r2
+# argument written to aquinas-st-i-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-2.md:1: argue/unfaithful: P1 (S2): the sentence has no word of "one participates in the form more perfectly than the other": is it the sentence P1 came from?
+aquinas-st-i-2.md:1: argue/negation: P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "if the Father and the Son have a common form: the same nature is in both, then the Son may be said to be like the Father"
+aquinas-st-i-2.md:1: argue/negation: P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "if one participates in the form more perfectly than the other, then it is not so that the Son may be said to be equal to the Father"
+aquinas-st-i-2.md:1: argue/own-sentence: C1 (S4): needs P4, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+aquinas-st-i-2.md:1: argue/assumed: C2 (S4): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-2.md:1: argue/own-sentence: C2 (S4): needs P4 and P5, read from the conclusion's own sentence: check that S4 gives them as its reason and does not conclude them
+aquinas-st-i-2.logic.r2: argue/valid 1

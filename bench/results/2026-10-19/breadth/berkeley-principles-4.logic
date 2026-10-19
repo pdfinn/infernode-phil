@@ -1,0 +1,20 @@
+# reading 2 of berkeley-principles-4.md by claude-opus-5-5
+atom	borrowed_terms	men are used to speak of the nature and operations of the mind in terms borrowed from sensible ideas
+atom	controversies	men are engaged in controversies and mistakes with regard to the nature and operations of the mind
+atom	will_motion	the will is termed the motion of the soul
+atom	ball_belief	there is a belief that the mind of man is as a ball in motion, impelled and determined by the objects of sense as necessarily as a ball by the stroke of a racket
+atom	moral_errors	endless scruples and errors of dangerous consequence arise in morality
+atom	reflect	philosophers retire into themselves and attentively consider their own meaning
+atom	cleared	these errors are cleared, and truth appears plain, uniform and consistent
+logic	s5
+P1	S1	borrowed_terms → controversies
+P2	S1	borrowed_terms	kind empirical
+P3	S2	will_motion	kind empirical
+P4	S2	will_motion → ball_belief
+C1	S2	ball_belief	from P3 P4
+P5	S3	ball_belief → moral_errors
+C2	S3	moral_errors	from C1 P5
+# S4 "may be cleared ... could but philosophers be prevailed on": read "may" as possibility conditional on reflection
+P6	S4	reflect → ◇cleared
+C	S4	reflect → ◇cleared	from P6
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

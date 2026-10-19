@@ -1,0 +1,15 @@
+# reading 2 of aquinas-st-i-1.md by claude-opus-5-5
+atom	less_common_includes	something may be included in the meaning of a less common term which is not included in the more common term
+atom	animal_meaning_differs	it is one thing to ask the meaning of the word animal, and another to ask its meaning when the animal in question is man
+atom	person_god_differs	it is one thing to ask the meaning of "person" in general, and another to ask the meaning of "person" as applied to God
+atom	person_individual_substance	"person" in general signifies the individual substance of a rational nature
+atom	individual_distinct	the individual is in itself undivided, but is distinct from others
+atom	person_signifies_distinct	"person" in any nature signifies what is distinct in that nature
+# The "may" in S1 is folded into the atom rather than treated as a modal operator.
+P1	S1	less_common_includes	kind conceptual
+C1	S2	animal_meaning_differs	from P1
+P2	S3	person_god_differs	kind conceptual
+P3	S4	person_individual_substance	kind conceptual
+P4	S5	individual_distinct	kind conceptual
+C	S6	person_signifies_distinct	from P3 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

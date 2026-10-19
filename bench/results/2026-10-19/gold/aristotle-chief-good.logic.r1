@@ -1,0 +1,9 @@
+# reading 2 of aristotle-chief-good.md by claude-opus-5-5
+# "it is thought" reports common opinion but names no one; the text argues from it, so it is a plain premise.
+atom	pursuit(x)	x is an art, a science reduced to a teachable form, an action or a moral choice
+atom	aims_at_good(x)	x aims at some good
+atom	apt_description	"that which all things aim at" is a common and by no means a bad description of the Chief Good
+P1	S1	∀x (pursuit(x) → aims_at_good(x))
+A1	-	∀x (pursuit(x) → aims_at_good(x)) → apt_description
+C	S1	apt_description
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,20 @@
+# the argument of berkeley-principles-3.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	rep_powers	an idea represents a spirit in the powers of thinking, willing and perceiving
+atom	rep_other	an idea represents a spirit in some other thing than those powers
+atom	idea_spirit	there is an idea of a spirit
+atom	spirit_only_powers	by the word spirit we mean only that which thinks, wills and perceives
+# S1 "if it does not in those mentioned" read modally, to match S4's "impossible"
+A3	-	¬◇rep_powers
+P1	S1	¬◇rep_powers → ¬◇rep_other
+# S2: leaving out those powers, nothing remains in which an idea can be like a spirit
+P2	S2	¬◇rep_other
+P3	S3	spirit_only_powers	kind conceptual
+# S3 is given ("For") as the reason for S2
+C1	S2	¬◇rep_other	from P3 A2
+A2	-	spirit_only_powers → ¬◇rep_other	kind conceptual
+# Unstated: an idea of a spirit would have to represent it either in those powers or in something else
+A1	-	□(idea_spirit → rep_powers ∨ rep_other)
+# S4's conclusion is conditional on the impossibility of representing those powers in an idea
+C	S4	¬◇rep_powers → ¬◇idea_spirit	from C1 A1 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

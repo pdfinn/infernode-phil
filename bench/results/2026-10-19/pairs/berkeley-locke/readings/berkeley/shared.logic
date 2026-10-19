@@ -1,0 +1,25 @@
+# berkeley over the corpus's shared atoms, written by phil/corpus from readings/berkeley/logic: not to be edited
+atom	no_signs	we observe no footsteps in brutes of making use of general signs for universal ideas; they have no use of words or any other general signs
+atom	abstract_brutes	brutes have the power of abstracting, or making general ideas
+atom	man_general	man has general ideas
+atom	distinction	the having of general ideas puts a perfect distinction betwixt man and brutes
+atom	berkeley_brutes_particular	brutes reason only in particular ideas, just as they receive them from their senses
+atom	berkeley_distinguishing	abstraction is made the distinguishing property of brutes as against men
+atom	berkeley_many_men_brutes	a great many of those that pass for men must be reckoned into the number of brutes
+atom	berkeley_words_imply_general	the making use of words implies the having general ideas
+atom	berkeley_men_abstract_lang	men who use language are able to abstract or generalize their ideas
+atom	berkeley_sign_abstract	a word becomes general by being made the sign of an abstract general idea
+atom	berkeley_sign_particulars	a word becomes general by being made the sign of several particular ideas, any one of which it indifferently suggests to the mind
+P1	S3	distinction ∧ man_general ∧ ¬abstract_brutes	says locke
+P2	S4	no_signs ∧ (no_signs → ¬abstract_brutes)	says locke
+P3	S7	berkeley_brutes_particular	says locke
+P4	S8	¬abstract_brutes	says locke
+P5	S11	¬abstract_brutes	kind empirical
+P6	S12	berkeley_distinguishing → berkeley_many_men_brutes
+P7	S13	berkeley_words_imply_general ∧ (¬no_signs → ¬abstract_brutes ∨ abstract_brutes)	says locke
+P8	S13	berkeley_words_imply_general	says locke
+P9	S14	berkeley_words_imply_general → berkeley_men_abstract_lang	kind conceptual
+C1	S14	berkeley_men_abstract_lang	from P8 P9
+P10	S16	berkeley_sign_abstract	says locke
+O1	S18	berkeley_sign_particulars ∧ ¬berkeley_sign_abstract	against P10
+C	S18	berkeley_sign_particulars ∧ ¬berkeley_sign_abstract

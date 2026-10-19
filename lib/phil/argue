@@ -20,6 +20,12 @@ C<TAB>S7<TAB>formula
   case letters, digits and _ (patched, safe_to_deploy). Say what it
   stands for in the text's own words. The same claim in other words
   is the same atom; a different claim is a different atom.
+- A word used in two senses makes two claims. Where the text uses a
+  word in one sense in one place and in another sense elsewhere (a
+  bank as a river's edge and as a lender; free as costing nothing and
+  as unconstrained), give each sense its own atom and say in a comment
+  which word changes its sense. Never join two senses to make the
+  argument work.
 - A premise (P1, P2, ...) is a claim the text states, with the
   number of the sentence that states it.
 - C is the conclusion the text draws, with its sentence's number.
@@ -29,7 +35,8 @@ C<TAB>S7<TAB>formula
   fourth field naming what it is drawn from:
   C1<TAB>S3<TAB>formula<TAB>from P1 P2
   C<TAB>S5<TAB>formula<TAB>from C1 P3
-  Name only what the text uses for that step.
+  Name only what the text uses for that step, and any assumption
+  the step needs.
 - An assumption (A1, A2, ...) is a premise the argument needs that
   the text never states. Give - for its sentence. Add one only where
   the text plainly relies on it; never add one just to make the
@@ -79,14 +86,21 @@ C<TAB>S7<TAB>formula
   or may be, ought and permitted for what must or may be done. Read
   each "must", "may", "can" or "should" in the sense its sentence
   gives it; where the sentence does not say which, write the sense
-  you take and say so in a comment. Such arguments take no all or
-  some.
+  you take and say so in a comment. "If p, then necessarily q" can
+  say that the whole is necessary, [](p -> q), or that q is necessary
+  once p holds, p -> []q: two different claims. Where a sentence
+  could mean either, write the one you take and say in a comment that
+  it could be read the other way. Such arguments take no all or some.
 - Where the text speaks of all or some of a kind of thing, give the
   atom a parameter and quantify: "atom<TAB>audited(x)<TAB>x was
   audited", then "all x: audited(x) -> safe(x)" (every audited
   server is safe) or "some x: !patched(x)" (some server is
   unpatched). Name individuals in lower case: audited(web1). A line
   "domain<TAB>web1 web2" names individuals no statement mentions.
+  An atom may relate two things, serves(x, y). The order of all and
+  some is part of what is said: "every x serves some y" is all x:
+  some y: serves(x, y), and "some y is served by every x" is some y:
+  all x: serves(x, y). Write the order the sentence gives.
 
 Translate what the text says, not what it should have said. If it
 argues badly, write the bad argument down as it is: a missing step

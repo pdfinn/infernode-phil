@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-politics-2.md:1: argue/negation: aristotle-politics-2.logic.r1 C (S1): the sentence states "all the discourses of Socrates are true", with no word of denial, but C denies it: it reads "it is not so that all the discourses of Socrates are true"
+aristotle-politics-2.md:1: argue/negation: aristotle-politics-2.logic.r1.2 C (S1): the sentence states "all the discourses of Socrates are true", with no word of denial, but C denies it: it reads "it is not so that all the discourses of Socrates are true"
+aristotle-politics-2.md:1: argue/negation: aristotle-politics-2.logic.r1.3 C (S1): the sentence states "all the discourses of Socrates are true", with no word of denial, but C denies it: it reads "it is not so that all the discourses of Socrates are true"
+aristotle-politics-2.logic.r1: argue/readings-agree 4
+aristotle-politics-2.logic.r1: argue/readings-differ 0
+aristotle-politics-2.logic.r1: argue/verdicts-agree 1
+aristotle-politics-2.logic.r1: argue/mismatches 1
+aristotle-politics-2.logic.r1.2: argue/mismatches 1
+aristotle-politics-2.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: aristotle-politics-2.logic.r1
+# argument written to aristotle-politics-2.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aristotle-politics-2.md:1: argue/negation: C (S1): the sentence states "all the discourses of Socrates are true", with no word of denial, but C denies it: it reads "it is not so that all the discourses of Socrates are true"
+aristotle-politics-2.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it
+aristotle-politics-2.logic.r1: argue/valid 1

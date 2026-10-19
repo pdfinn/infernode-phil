@@ -1,0 +1,23 @@
+# 3 readings by claude-opus-5-5, compared
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P1, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P2, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/readings: S2 is read 2 ways: meno-paradox.logic.r3 and meno-paradox.logic.r3.3 have nothing from it; meno-paradox.logic.r3.2 has "knows → no_need" and "¬knows → ¬can_enquire"; they differ when only "the man knows the subject about which he is to enquire" and "the man can enquire about the subject" are true, which the first allows
+meno-paradox.md:1: argue/answered: S2: answered yes, which keeps meno-paradox.logic.r3 and meno-paradox.logic.r3.3, to: Suppose "the man knows the subject about which he is to enquire" and "the man can enquire about the subject" are true and "the man has no need to enquire about the subject" is false. Is S2, "You argue that a man cannot enquire either about that which he knows, or about that which he does not know; for if he knows, he has no need to enquire; and if not, he cannot; for he does not know the very subject about which he is to enquire", true then?
+meno-paradox.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: meno-paradox.logic.r3 has nothing from it; meno-paradox.logic.r3.2 and meno-paradox.logic.r3.3 have "no_need → ¬can_enquire"; they differ when only "the man can enquire about the subject" and "the man has no need to enquire about the subject" are true, which the first allows
+meno-paradox.logic.r3: argue/readings: U1: meno-paradox.logic.r3.2 and meno-paradox.logic.r3.3 take for granted "if the man has no need to enquire about the subject, then it is not so that the man can enquire about the subject"; meno-paradox.logic.r3 does not
+meno-paradox.logic.r3: argue/answered: U1: answered yes, which keeps meno-paradox.logic.r3.2 and meno-paradox.logic.r3.3, to: Does the text's argument take this for granted, whether or not it says so: "if the man has no need to enquire about the subject, then it is not so that the man can enquire about the subject"? Answer yes if the author would accept it as part of the argument.
+meno-paradox.md:1: argue/negation: meno-paradox.logic.r3.2 P2 (S2): the sentence says "not", but P2 denies nothing it speaks of: it reads "if the man knows the subject about which he is to enquire, then the man has no need to enquire about the subject"
+meno-paradox.logic.r3: argue/verdicts: valid as meno-paradox.logic.r3.2 reads it, not as the others do: which reading is right decides the verdict
+meno-paradox.logic.r3: argue/readings-agree 1
+meno-paradox.logic.r3: argue/readings-differ 2
+meno-paradox.logic.r3: argue/verdicts-agree 0
+meno-paradox.logic.r3: argue/mismatches 0
+meno-paradox.logic.r3.2: argue/mismatches 1
+meno-paradox.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: meno-paradox.logic.r3.3
+# argument written to meno-paradox.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+meno-paradox.md:1: argue/invalid: C (S2): does not follow: when only "the man can enquire about the subject" is true, every premise holds and the conclusion fails
+meno-paradox.md:1: argue/countermodel: C (S2): can_enquire = T, no_need = F
+meno-paradox.md:1: argue/missing: C (S2): it would follow given "no_need" (the man has no need to enquire about the subject), or "¬no_need → ¬can_enquire"
+meno-paradox.logic.r3: argue/valid 0
+meno-paradox.logic.r3:11: argue/unlinked: A1: A1 is the only statement about "the man has no need to enquire about the subject": as written it cannot bear on the conclusion; was the same thing named two ways?

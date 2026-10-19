@@ -1,0 +1,11 @@
+# the argument of augustine-1.md as claude-opus-5-5 read it: check that it says what the text says
+atom	removal_by_darkened_affections	darkened affections is removal from Thee
+atom	leave_by_change_of_place	it is by our feet, or change of place, that men leave Thee, or return unto Thee
+atom	true_distance_in_darkened_affections	in lustful, that is, in darkened affections, is the true distance from Thy face
+# S1-S3 are a rhetorical question and an address to God; S6 (the younger son) illustrates S5 and is left out.
+P1	S4	removal_by_darkened_affections
+P2	S5	¬leave_by_change_of_place
+# The text relies on the true distance from God lying wherever removal from Him actually happens: not in place, but in the affections.
+A1	-	removal_by_darkened_affections ∧ ¬leave_by_change_of_place → true_distance_in_darkened_affections
+C	S7	true_distance_in_darkened_affections
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

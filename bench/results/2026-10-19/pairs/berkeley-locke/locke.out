@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+locke.md:1: argue/readings: S2 is read 2 ways: locke.logic has "no_signs"; locke.logic.2 and locke.logic.3 have "no_signs" and "no_signs → ¬abstract_brutes"; they differ when only "we observe no footsteps in brutes of making use of general signs for universal ideas; they have no use of words or any other general signs" and "brutes have the power of abstracting, or making general ideas" are true, which the first allows
+locke.md:1: argue/answered: S2: answered yes, which keeps locke.logic, to: Suppose "we observe no footsteps in brutes of making use of general signs for universal ideas; they have no use of words or any other general signs" and "brutes have the power of abstracting, or making general ideas" are true. Is S2, "For it is evident we observe no footsteps in them of making use of general signs for universal ideas; from which we have reason to imagine that they have not the faculty of abstracting, or making general ideas, since they have no use of words, or any other general signs.", true then?
+locke.logic: argue/readings: what the text leaves unstated is read 2 ways: locke.logic has "abstract_brutes → ¬no_signs" and "man_general" and "man_general ∧ ¬abstract_brutes → distinction"; locke.logic.2 and locke.logic.3 have "man_general" and "man_general ∧ ¬abstract_brutes → distinction"; they differ when only "we observe no footsteps in brutes of making use of general signs for universal ideas; they have no use of words or any other general signs", "brutes have the power of abstracting, or making general ideas" and "man has general ideas" are true, which the second allows
+locke.md:1: argue/readings: the conclusion is read 2 ways: locke.logic and locke.logic.2 have "¬abstract_brutes ∧ distinction"; locke.logic.3 has "distinction"; they differ when only "brutes have the power of abstracting, or making general ideas" and "the having of general ideas puts a perfect distinction betwixt man and brutes" are true, which the second allows
+locke.md:1: argue/answered: the conclusion: answered no, which keeps locke.logic and locke.logic.2, to: Suppose "brutes have the power of abstracting, or making general ideas" and "the having of general ideas puts a perfect distinction betwixt man and brutes" are true. Is the conclusion, "If it may be doubted whether beasts compound and enlarge their ideas that way to any degree; this, I think, I may be positive in,—that the power of abstracting is not at all in them; and that the having of general ideas is that which puts a perfect distinction betwixt man and brutes, and is an excellency which the faculties of brutes do by no means attain to.", true then?
+locke.md:1: argue/negation: locke.logic.3 C (S1): the sentence says "no", but C denies nothing it speaks of: it reads "the having of general ideas puts a perfect distinction betwixt man and brutes"
+locke.logic: argue/readings-agree 0
+locke.logic: argue/readings-differ 3
+locke.logic: argue/verdicts-agree 1
+locke.logic: argue/mismatches 0
+locke.logic.2: argue/mismatches 0
+locke.logic.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: locke.logic
+# argument written to locke.logic by claude-opus-5-5 (a language model, not a rule)
+locke.md:1: argue/assumed: C1 (S2): follows only by A1, which the text never states: state it, or argue for it
+locke.md:1: argue/own-sentence: C1 (S2): needs P1, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+locke.md:1: argue/assumed: C (S1): follows only by A2 and A3, which the text never states: state it, or argue for it
+locke.logic: argue/valid 1

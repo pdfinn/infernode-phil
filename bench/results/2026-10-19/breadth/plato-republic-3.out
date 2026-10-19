@@ -1,0 +1,9 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+# kept the reading that best fits the words and the other readings: plato-republic-3.logic.r1
+# argument written to plato-republic-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+plato-republic-3.md:1: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it
+plato-republic-3.md:1: argue/own-sentence: C (S2): needs P1, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+plato-republic-3.logic.r1: argue/valid 1
+plato-republic-3.logic: argue/runs-agree 1

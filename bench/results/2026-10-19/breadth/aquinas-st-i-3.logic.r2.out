@@ -1,0 +1,18 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-3.md:1: argue/readings: S4 is read 2 ways: aquinas-st-i-3.logic.r2 has "□(natural ↔ according_nature)" and "□(voluntary ↔ according_will)"; aquinas-st-i-3.logic.r2.2 and aquinas-st-i-3.logic.r2.3 have "□(natural ↔ according_nature)"; they differ when only "necessarily, (the thing is natural if and only if the thing is according to the inclination of nature)" and "necessarily, (the thing is natural if and only if the thing is according to the inclination of nature)" are true, which the second allows
+aquinas-st-i-3.md:1: argue/answered: S4: answered no, which keeps aquinas-st-i-3.logic.r2, to: Suppose "necessarily, (the thing is natural if and only if the thing is according to the inclination of nature)", "necessarily, (the thing is natural if and only if the thing is according to the inclination of nature)" and "necessarily, (the thing is natural if and only if the thing is according to the inclination of nature)" are true and "necessarily, (the thing is voluntary if and only if the thing is according to the inclination of the will)" is false. Is S4, "Therefore, as a thing is called natural because it is according to the inclination of nature, so a thing is called voluntary because it is according to the inclination of the will.", true then?
+aquinas-st-i-3.md:1: argue/readings: S5 is read 2 ways: aquinas-st-i-3.logic.r2 has "¬◇(violent ∧ natural)"; aquinas-st-i-3.logic.r2.2 and aquinas-st-i-3.logic.r2.3 have nothing from it; they differ when only "possibly, (the thing is coerced or violent and the thing is natural)" is true, which the second allows
+aquinas-st-i-3.md:1: argue/modal-ambiguous: S5 is read aquinas-st-i-3.logic.r2.2 and aquinas-st-i-3.logic.r2.3 with no modality; aquinas-st-i-3.logic.r2 as what is necessary or possible: the text does not say which it means
+aquinas-st-i-3.md:1: argue/answered: S5: answered no, which keeps aquinas-st-i-3.logic.r2, to: Suppose "possibly, (the thing is coerced or violent and the thing is natural)" is true. Is S5, "Therefore, just as it is impossible for a thing to be at the same time violent and natural, so it is impossible for a thing to be absolutely coerced or violent, and voluntary.", true then?
+aquinas-st-i-3.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-3.logic.r2 has "will_inclination → □(according_will → ¬against_incl)"; aquinas-st-i-3.logic.r2.2 and aquinas-st-i-3.logic.r2.3 have "□(according_nature → ¬against_incl)" and "□(according_will → ¬against_incl)"; they differ when only "the very movement of the will is an inclination to something", "necessarily, (if the thing is according to the inclination of the will, then it is not so that the thing is against the inclination of the thing)" and "necessarily, (if the thing is according to the inclination of the will, then it is not so that the thing is against the inclination of the thing)" are true, which the first allows
+aquinas-st-i-3.logic.r2: argue/verdicts: valid as aquinas-st-i-3.logic.r2 reads it, not as the others do: which reading is right decides the verdict
+aquinas-st-i-3.logic.r2: argue/readings-agree 3
+aquinas-st-i-3.logic.r2: argue/readings-differ 3
+aquinas-st-i-3.logic.r2: argue/verdicts-agree 0
+aquinas-st-i-3.logic.r2: argue/mismatches 0
+aquinas-st-i-3.logic.r2.2: argue/mismatches 0
+aquinas-st-i-3.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-3.logic.r2
+# argument written to aquinas-st-i-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-3.md:1: argue/assumed: C (S5): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-3.logic.r2: argue/valid 1

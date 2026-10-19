@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+plato-gorgias-4.md:1: argue/negation: plato-gorgias-4.logic.r2 P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "it ought to be that our treatment of the city and citizens is of use to them (has the same end in view as the treatment of individuals)"
+plato-gorgias-4.md:1: argue/negation: plato-gorgias-4.logic.r2.2 P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "it ought to be that our treatment of the city and citizens is of use to them (has the same end in view as the treatment of individuals)"
+plato-gorgias-4.md:1: argue/negation: plato-gorgias-4.logic.r2.3 P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "it ought to be that our treatment of the city and citizens is of use to them (has the same end in view as the treatment of individuals)"
+plato-gorgias-4.logic.r2: argue/readings-agree 3
+plato-gorgias-4.logic.r2: argue/readings-differ 0
+plato-gorgias-4.logic.r2: argue/verdicts-agree 1
+plato-gorgias-4.logic.r2: argue/mismatches 1
+plato-gorgias-4.logic.r2.2: argue/mismatches 1
+plato-gorgias-4.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: plato-gorgias-4.logic.r2
+# argument written to plato-gorgias-4.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+plato-gorgias-4.md:1: argue/negation: P1 (S1): the sentence says "not", but P1 denies nothing it speaks of: it reads "it ought to be that our treatment of the city and citizens is of use to them (has the same end in view as the treatment of individuals)"
+plato-gorgias-4.md:1: argue/invalid: C (S2): does not follow: when "it ought to be that our treatment of the city and citizens is of use to them (has the same end in view as the treatment of individuals)" is true, "it ought to be that the citizens are made as good as possible, their minds gentle and good" is false, and nothing else is true, every premise holds and the conclusion fails
+plato-gorgias-4.md:1: argue/countermodel: C (S2): W = {w0, w3}; R = {(w0, w3), (w3, w3)}; w0: benefit = F, citizens_good = F; w3: benefit = T, citizens_good = F
+plato-gorgias-4.logic.r2: argue/valid 0

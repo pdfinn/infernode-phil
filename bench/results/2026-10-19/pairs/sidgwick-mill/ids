@@ -1,0 +1,24 @@
+# every statement's id, written by phil/corpus: work, id, name, sentence, formula over the shared atoms
+id	mill	kd561168a	P1	S5	desired->proof
+id	mill	k8f3ce02b	P2	S6	desired
+id	mill	k41558ae4	C1	S6	proof
+id	mill	kdf0257fe	P3	S6	proof->own_good
+id	mill	kf291de42	C2	S6	own_good
+id	mill	k0c6ac65d	P4	S6	own_good->general_good
+id	mill	k3809daf5	C3	S6	general_good
+id	mill	k78d7419d	A1	-	general_good->end_of_conduct
+id	mill	k5bc96823	P5	S7	end_of_conduct->criterion
+id	mill	kee4dd406	C	S7	end_of_conduct&criterion
+id	sidgwick	k52aca4df	P1	S7	sidgwick_established->sidgwick_actual_desire_general
+id	sidgwick	k74a38f13	P2	S8	desired
+id	sidgwick	k2f0afcc5	P3	S9	desired->proof
+id	sidgwick	kfc121c40	P4	S9	proof->own_good
+id	sidgwick	k9b29b98c	P5	S9	own_good->general_good
+id	sidgwick	kb8f9405d	P6	S12	sidgwick_actual_desire_general->sidgwick_general_desirable
+id	sidgwick	k47c7c365	P7	S12	sidgwick_established->sidgwick_actual_desire_general
+id	sidgwick	kfe9fefd5	P8	S13	!sidgwick_individual_desire_general
+id	sidgwick	k5a3a8f22	P9	S13	!sidgwick_individual_desire_general->!sidgwick_aggregate_desire_general
+id	sidgwick	k4def6777	A1	-	sidgwick_actual_desire_general->sidgwick_individual_desire_general|sidgwick_aggregate_desire_general
+id	sidgwick	k89120737	C1	S14	!sidgwick_actual_desire_general
+id	sidgwick	k8f510c34	P10	S14	sidgwick_gap_filled->sidgwick_rational_benevolence
+id	sidgwick	ka96ec637	C	S14	!sidgwick_established

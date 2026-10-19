@@ -1,0 +1,23 @@
+# reading 3 of plato-republic-1.md by claude-opus-5-5
+# reading 3 of plato-republic-1.md by claude-opus-5-5
+atom	unite_appearance	we unite the worst injustice with a deceitful regard to appearances
+atom	fare_well	we shall fare to our mind both with gods and men, in life and after death
+atom	principle_for_justice	there is a principle on which we should any longer choose justice rather than the worst injustice
+atom	superior_honours_justice	a man who has any superiority of mind or person or rank or wealth is willing to honour justice
+atom	not_free_will	men are not just of their own free will
+atom	inspired_or_knows	the divinity within him has inspired him with a hatred of injustice, or he has attained knowledge of the truth
+atom	forgives_unjust	he who is satisfied that justice is best is not angry with the unjust but is very ready to forgive them
+atom	unjust_when_powerful	when he obtains the power, he immediately becomes unjust as far as he can be
+atom	blames_only_if_powerless	he only blames injustice who, owing to cowardice or age or some weakness, has not the power of being unjust
+P1	S1	unite_appearance → fare_well	says authorities
+P2	S1	unite_appearance → fare_well
+P3	S1	(unite_appearance → fare_well) → ¬principle_for_justice
+C1	S1	¬principle_for_justice	from P2 P3
+P4	S2	¬principle_for_justice → ¬superior_honours_justice
+C	S2	¬superior_honours_justice	from C1 P4
+P5	S3	not_free_will
+P6	S3	not_free_will ∧ ¬inspired_or_knows → forgives_unjust
+P7	S5	unjust_when_powerful	kind empirical
+P8	S5	unjust_when_powerful → blames_only_if_powerless
+C2	S4	blames_only_if_powerless	from P7 P8
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,20 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-ethics-3.md:1: argue/negation: aristotle-ethics-3.logic.r1 P4 (S3): the sentence says "no", but P4 denies nothing it speaks of: it reads "possibly, (the man is Clever and the man is a man of Imperfect Self-Control)"
+aristotle-ethics-3.md:1: argue/negation: aristotle-ethics-3.logic.r1 P5 (S3): the sentence says "no", but P5 denies nothing it speaks of: it reads "Cleverness differs from Practical Wisdom in respect of the moral choice"
+aristotle-ethics-3.md:1: argue/negation: aristotle-ethics-3.logic.r1.2 P4 (S3): the sentence says "no", but P4 denies nothing it speaks of: it reads "possibly, (the man is Clever and the man is a man of Imperfect Self-Control)"
+aristotle-ethics-3.md:1: argue/negation: aristotle-ethics-3.logic.r1.2 P5 (S3): the sentence says "no", but P5 denies nothing it speaks of: it reads "Cleverness differs from Practical Wisdom in respect of the moral choice"
+aristotle-ethics-3.md:1: argue/negation: aristotle-ethics-3.logic.r1.3 P4 (S3): the sentence says "no", but P4 denies nothing it speaks of: it reads "possibly, (the man is Clever and the man is a man of Imperfect Self-Control)"
+aristotle-ethics-3.md:1: argue/negation: aristotle-ethics-3.logic.r1.3 P5 (S3): the sentence says "no", but P5 denies nothing it speaks of: it reads "Cleverness differs from Practical Wisdom in respect of the moral choice"
+aristotle-ethics-3.logic.r1: argue/readings-agree 5
+aristotle-ethics-3.logic.r1: argue/readings-differ 0
+aristotle-ethics-3.logic.r1: argue/verdicts-agree 1
+aristotle-ethics-3.logic.r1: argue/mismatches 2
+aristotle-ethics-3.logic.r1.2: argue/mismatches 2
+aristotle-ethics-3.logic.r1.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aristotle-ethics-3.logic.r1
+# argument written to aristotle-ethics-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aristotle-ethics-3.md:1: argue/negation: P4 (S3): the sentence says "no", but P4 denies nothing it speaks of: it reads "possibly, (the man is Clever and the man is a man of Imperfect Self-Control)"
+aristotle-ethics-3.md:1: argue/negation: P5 (S3): the sentence says "no", but P5 denies nothing it speaks of: it reads "Cleverness differs from Practical Wisdom in respect of the moral choice"
+aristotle-ethics-3.md:1: argue/unused: P1 (S1): P1 is not needed: the conclusion follows from P2 and P3 without it
+aristotle-ethics-3.logic.r1:10: argue/unused: A1: A1 is not needed: the conclusion follows from P2 and P3 without it
+aristotle-ethics-3.logic.r1: argue/valid 1

@@ -1,0 +1,20 @@
+# every statement's id, written by phil/corpus: work, id, name, sentence, formula over the shared atoms
+id	locke	k7e7c77cd	P1	S2	no_signs
+id	locke	kb4de67dd	A1	-	abstract_brutes->!no_signs
+id	locke	k82feb441	C1	S2	!abstract_brutes
+id	locke	kb4d4f3dd	A2	-	man_general
+id	locke	ke6b61ced	A3	-	man_general&!abstract_brutes->distinction
+id	locke	kb71ed775	C	S1	!abstract_brutes&distinction
+id	berkeley	kd9a0d0fc	P1	S3	distinction&man_general&!abstract_brutes
+id	berkeley	k5b487a51	P2	S4	no_signs&(no_signs->!abstract_brutes)
+id	berkeley	k69f1b650	P3	S7	berkeley_brutes_particular
+id	berkeley	k830e5532	P4	S8	!abstract_brutes
+id	berkeley	k80fbb532	P5	S11	!abstract_brutes
+id	berkeley	k8d995b64	P6	S12	berkeley_distinguishing->berkeley_many_men_brutes
+id	berkeley	k0588e0cb	P7	S13	berkeley_words_imply_general&(!no_signs->!abstract_brutes|abstract_brutes)
+id	berkeley	k7e4942e7	P8	S13	berkeley_words_imply_general
+id	berkeley	k97737fe4	P9	S14	berkeley_words_imply_general->berkeley_men_abstract_lang
+id	berkeley	kb364475c	C1	S14	berkeley_men_abstract_lang
+id	berkeley	kfc0dfdc1	P10	S16	berkeley_sign_abstract
+id	berkeley	kc3291294	O1	S18	berkeley_sign_particulars&!berkeley_sign_abstract
+id	berkeley	k65e4e10d	C	S18	berkeley_sign_particulars&!berkeley_sign_abstract

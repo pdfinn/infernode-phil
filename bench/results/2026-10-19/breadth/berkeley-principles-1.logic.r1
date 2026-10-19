@@ -1,0 +1,19 @@
+# reading 2 of berkeley-principles-1.md by claude-opus-5-5
+# Ad hominem: the modern philosophers' own principle (variation in appearance shows a quality is not in Matter) is turned against them.
+# The principle is attributed to "modern philosophers" in S1-S2 and S4; Berkeley argues from it, so it also appears as a plain premise.
+atom	varies(x)	x appears various to different perceivers or at different stations while the object remains unaltered
+atom	inmatter(x)	x exists in Matter, without the mind, as a pattern of a real being
+atom	sensible(x)	x is a sensible quality
+domain	heat sweetness figure extension motion
+P1	S2	∀x (varies(x) → ¬inmatter(x))	says philosophers
+P2	S2	varies(heat) ∧ ¬inmatter(heat)	says philosophers
+P3	S4	varies(sweetness) ∧ ¬inmatter(sweetness)	says philosophers
+P4	S2	∀x (varies(x) → ¬inmatter(x))
+P5	S3	varies(figure) ∧ varies(extension)	kind empirical
+C1	S3	¬inmatter(figure) ∧ ¬inmatter(extension)	from P4 P5
+P6	S5	varies(motion)	kind empirical
+C2	S5	¬inmatter(motion)	from P4 P6
+# The general conclusion rests on the unstated premise that every sensible quality varies in this way.
+A1	-	∀x (sensible(x) → varies(x))
+C	S1	∀x (sensible(x) → ¬inmatter(x))	from P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

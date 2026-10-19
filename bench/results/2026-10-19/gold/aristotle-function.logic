@@ -1,0 +1,11 @@
+# the argument of aristotle-function.md as claude-opus-5-5 read it: check that it says what the text says
+# The sentence argues by rhetorical questions; the conclusion is the answer the text expects: the whole Man has some work of his own.
+# The step from crafts and bodily members to Man ("as ... so too") is an analogy the text relies on but never states; A1 makes it explicit.
+atom	crafts_have_work	carpenter and cobbler have certain works and courses of action
+atom	members_have_work	eye, hand, and foot, and generally each of his members, has manifestly some special work
+atom	man_has_work	the whole Man, as distinct from all these, has some work of his own
+P1	S1	crafts_have_work	kind empirical
+P2	S1	members_have_work	kind empirical
+A1	-	crafts_have_work ∧ members_have_work → man_has_work
+C	S1	man_has_work
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

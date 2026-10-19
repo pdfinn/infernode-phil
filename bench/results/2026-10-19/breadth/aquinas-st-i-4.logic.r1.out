@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-4.logic.r1: argue/readings: what the text leaves unstated is read 3 ways: aquinas-st-i-4.logic.r1 has "from_mother → extrinsic" and "from_semen → extrinsic" and "vital → extrinsic ∨ soul_in_embryo"; aquinas-st-i-4.logic.r1.2 has "from_mother ∨ from_semen → extrinsic" and "vital → from_own_soul ∨ extrinsic" and "from_own_soul → soul_in_embryo"; they differ when only "vital functions such as feeling, nourishment and growth are observed in the embryo", "the vital functions observed in the embryo are from the soul of the mother", "the vital functions observed in the embryo are from the formative power of the semen", "the vital functions observed in the embryo are from its soul" and "the vital functions in the embryo are from an extrinsic principle" are true, which the first allows; aquinas-st-i-4.logic.r1.3 has "from_mother → extrinsic" and "from_semen → extrinsic" and "vital → from_own_soul ∨ from_mother ∨ from_semen" and "from_own_soul → soul_in_embryo"
+aquinas-st-i-4.logic.r1: argue/readings: U1: aquinas-st-i-4.logic.r1.2 and aquinas-st-i-4.logic.r1.3 take for granted "if vital functions such as feeling, nourishment and growth are observed in the embryo, then (either the vital functions observed in the embryo are from its soul or the vital functions in the embryo are from an extrinsic principle)"; aquinas-st-i-4.logic.r1 does not
+aquinas-st-i-4.logic.r1: argue/answered: U1: answered yes, which keeps aquinas-st-i-4.logic.r1.2 and aquinas-st-i-4.logic.r1.3, to: Does the text's argument take this for granted, whether or not it says so: "if vital functions such as feeling, nourishment and growth are observed in the embryo, then (either the vital functions observed in the embryo are from its soul or the vital functions in the embryo are from an extrinsic principle)"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-4.logic.r1: argue/readings: U2: aquinas-st-i-4.logic.r1.2 and aquinas-st-i-4.logic.r1.3 take for granted "if vital functions such as feeling, nourishment and growth are observed in the embryo, then (either either the vital functions observed in the embryo are from its soul or the vital functions observed in the embryo are from the soul of the mother or the vital functions observed in the embryo are from the formative power of the semen)"; aquinas-st-i-4.logic.r1 does not
+aquinas-st-i-4.logic.r1: argue/answered: U2: answered yes, which keeps aquinas-st-i-4.logic.r1.2 and aquinas-st-i-4.logic.r1.3, to: Does the text's argument take this for granted, whether or not it says so: "if vital functions such as feeling, nourishment and growth are observed in the embryo, then (either either the vital functions observed in the embryo are from its soul or the vital functions observed in the embryo are from the soul of the mother or the vital functions observed in the embryo are from the formative power of the semen)"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-4.logic.r1: argue/readings-agree 3
+aquinas-st-i-4.logic.r1: argue/readings-differ 1
+aquinas-st-i-4.logic.r1: argue/verdicts-agree 1
+aquinas-st-i-4.logic.r1: argue/mismatches 0
+aquinas-st-i-4.logic.r1.2: argue/mismatches 0
+aquinas-st-i-4.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-4.logic.r1.2
+# argument written to aquinas-st-i-4.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-4.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-4.md:1: argue/own-sentence: C1 (S3): needs P2, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it
+aquinas-st-i-4.md:1: argue/assumed: C (S4): follows only by A2 and A3, which the text never states: state it, or argue for it
+aquinas-st-i-4.md:1: argue/unused-step: C1 (S3): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-4.logic.r1: argue/valid 1
+aquinas-st-i-4.md:1: argue/defeated: O1 (S2): O1 falls to R1, which nothing answers
+aquinas-st-i-4.logic.r1: argue/survives 1

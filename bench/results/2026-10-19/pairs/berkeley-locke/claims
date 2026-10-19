@@ -1,0 +1,17 @@
+# each claim and the works that assert, deny, assume or report it, written by phil/corpus
+claim	no_signs	asserts locke:P1
+claim	abstract_brutes->!no_signs	assumes locke:A1
+claim	abstract_brutes	denies locke:C1	reports-not berkeley:P4 locke	denies berkeley:P5
+claim	man_general	assumes locke:A2
+claim	man_general&!abstract_brutes->distinction	assumes locke:A3
+claim	!abstract_brutes&distinction	asserts locke:C
+claim	distinction&man_general&!abstract_brutes	reports berkeley:P1 locke
+claim	no_signs&(no_signs->!abstract_brutes)	reports berkeley:P2 locke
+claim	berkeley_brutes_particular	reports berkeley:P3 locke
+claim	berkeley_distinguishing->berkeley_many_men_brutes	asserts berkeley:P6
+claim	berkeley_words_imply_general&(!no_signs->!abstract_brutes|abstract_brutes)	reports berkeley:P7 locke
+claim	berkeley_words_imply_general	reports berkeley:P8 locke
+claim	berkeley_words_imply_general->berkeley_men_abstract_lang	asserts berkeley:P9
+claim	berkeley_men_abstract_lang	asserts berkeley:C1
+claim	berkeley_sign_abstract	reports berkeley:P10 locke
+claim	berkeley_sign_particulars&!berkeley_sign_abstract	asserts berkeley:C

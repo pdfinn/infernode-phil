@@ -1,0 +1,22 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-ii-2.md:1: argue/readings: S5 is read 2 ways: aquinas-st-i-ii-2.logic.r2 has nothing from it; aquinas-st-i-ii-2.logic.r2.2 and aquinas-st-i-ii-2.logic.r2.3 have "overflow → more_passion"; they differ when only "the joy overflows into the sensitive appetite" is true, which the first allows
+aquinas-st-i-ii-2.md:1: argue/answered: S5: answered no, which keeps aquinas-st-i-ii-2.logic.r2.2 and aquinas-st-i-ii-2.logic.r2.3, to: Suppose "the joy overflows into the sensitive appetite" is true and "the more perfect the virtue is, the more it causes passion" is false. Is S5, "Wherefore by reason of this kind of overflow, the more perfect a virtue is, the more does it cause passion.", true then?
+aquinas-st-i-ii-2.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-ii-2.logic.r2 has "overflow → more_passion"; aquinas-st-i-ii-2.logic.r2.2 and aquinas-st-i-ii-2.logic.r2.3 have "perfected"; they differ when only "the joy overflows into the sensitive appetite" and "the more perfect the virtue is, the more it causes passion" are true, which the first allows
+aquinas-st-i-ii-2.md:1: argue/readings: the conclusion is read 2 ways: aquinas-st-i-ii-2.logic.r2 has "perfected → more_passion"; aquinas-st-i-ii-2.logic.r2.2 and aquinas-st-i-ii-2.logic.r2.3 have "more_passion"; they differ when nothing is true, which the first allows
+aquinas-st-i-ii-2.md:1: argue/answered: the conclusion: answered no, which keeps aquinas-st-i-ii-2.logic.r2.2 and aquinas-st-i-ii-2.logic.r2.3, to: Suppose "the joy is increased through the perfection of justice" and "the more perfect the virtue is, the more it causes passion" are false. Is the conclusion, "Wherefore by reason of this kind of overflow, the more perfect a virtue is, the more does it cause passion.", true then?
+aquinas-st-i-ii-2.logic.r2: argue/readings: U1: aquinas-st-i-ii-2.logic.r2.2 and aquinas-st-i-ii-2.logic.r2.3 take for granted "the joy is increased through the perfection of justice"; aquinas-st-i-ii-2.logic.r2 does not
+aquinas-st-i-ii-2.logic.r2: argue/answered: U1: answered yes, which keeps aquinas-st-i-ii-2.logic.r2.2 and aquinas-st-i-ii-2.logic.r2.3, to: Does the text's argument take this for granted, whether or not it says so: "the joy is increased through the perfection of justice"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-ii-2.logic.r2: argue/readings-agree 4
+aquinas-st-i-ii-2.logic.r2: argue/readings-differ 3
+aquinas-st-i-ii-2.logic.r2: argue/verdicts-agree 1
+aquinas-st-i-ii-2.logic.r2: argue/mismatches 0
+aquinas-st-i-ii-2.logic.r2.2: argue/mismatches 0
+aquinas-st-i-ii-2.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-ii-2.logic.r2.2
+# argument written to aquinas-st-i-ii-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-ii-2.md:1: argue/own-sentence: C1 (S2): needs P2 and P3, read from the conclusion's own sentence: check that S2 gives them as its reason and does not conclude them
+aquinas-st-i-ii-2.md:1: argue/assumed: C2 (S4): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-ii-2.md:1: argue/own-sentence: C2 (S4): needs P5 and P6, read from the conclusion's own sentence: check that S4 gives them as its reason and does not conclude them
+aquinas-st-i-ii-2.md:1: argue/own-sentence: C (S5): needs P7, read from the conclusion's own sentence: check that S5 gives it as its reason and does not conclude it
+aquinas-st-i-ii-2.md:1: argue/unused-step: C1 (S2): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-ii-2.logic.r2: argue/valid 1

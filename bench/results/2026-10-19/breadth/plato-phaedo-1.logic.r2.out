@@ -1,0 +1,32 @@
+# 3 readings by claude-opus-5-5, compared
+plato-phaedo-1.md:1: argue/readings: S2 is read 2 ways: plato-phaedo-1.logic.r2 has "fearless ∧ noble" and "fearless ∧ noble → appeared_blessed" and "hardly_believed → ¬pity"; plato-phaedo-1.logic.r2.2 and plato-phaedo-1.logic.r2.3 have "fearless ∧ noble" and "fearless ∧ noble → appeared_blessed" and "appeared_blessed → hardly_believed" and "hardly_believed → ¬pity"; they differ when only "Socrates died fearlessly", "his words and bearing were noble and gracious" and "to Phaedo, Socrates appeared blessed" are true, which the first allows
+plato-phaedo-1.md:1: argue/answered: S2: answered no, which keeps plato-phaedo-1.logic.r2.2 and plato-phaedo-1.logic.r2.3, to: Suppose "Socrates died fearlessly", "his words and bearing were noble and gracious" and "to Phaedo, Socrates appeared blessed" are true and "Phaedo could hardly believe he was present at the death of a friend" and "Phaedo pitied Socrates" are false. Is S2, "For I could hardly believe that I was present at the death of a friend, and therefore I did not pity him, Echecrates; he died so fearlessly, and his words and bearing were so noble and gracious, that to me he appeared blessed.", true then?
+plato-phaedo-1.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: plato-phaedo-1.logic.r2 has "appeared_blessed → hardly_believed"; plato-phaedo-1.logic.r2.2 and plato-phaedo-1.logic.r2.3 have nothing from it; they differ when only "to Phaedo, Socrates appeared blessed" is true, which the second allows
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2 P3 (S2): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P3 came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2 P5 (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P5 came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2 C (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence C came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2.2 P4 (S2): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P4 came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2.2 P6 (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P6 came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2.2 C (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence C came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2.3 P4 (S2): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P4 came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2.3 P6 (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P6 came from?
+plato-phaedo-1.md:1: argue/unfaithful: plato-phaedo-1.logic.r2.3 C (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence C came from?
+plato-phaedo-1.logic.r2: argue/readings-agree 3
+plato-phaedo-1.logic.r2: argue/readings-differ 2
+plato-phaedo-1.logic.r2: argue/verdicts-agree 1
+plato-phaedo-1.logic.r2: argue/mismatches 3
+plato-phaedo-1.logic.r2.2: argue/mismatches 3
+plato-phaedo-1.logic.r2.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: plato-phaedo-1.logic.r2.2
+# argument written to plato-phaedo-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+plato-phaedo-1.md:1: argue/unfaithful: P4 (S2): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P4 came from?
+plato-phaedo-1.md:1: argue/unfaithful: P6 (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence P6 came from?
+plato-phaedo-1.md:1: argue/unfaithful: C (S3): the sentence has no word of "Phaedo pitied Socrates": is it the sentence C came from?
+plato-phaedo-1.md:1: argue/own-sentence: C1 (S2): follows from P1 and P2 alone, read from the conclusion's own sentence: unless S2 gives them as its reason, the reading has it assert what it concludes
+plato-phaedo-1.md:1: argue/own-sentence: C2 (S2): needs P3, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+plato-phaedo-1.md:1: argue/own-sentence: C3 (S5): follows from P7 and P8 alone, read from the conclusion's own sentence: unless S5 gives them as its reason, the reading has it assert what it concludes
+plato-phaedo-1.md:1: argue/unused: C2 (S2): C2 is not needed: the conclusion follows from P5 and P6 without it
+plato-phaedo-1.md:1: argue/unused: P4 (S2): P4 is not needed: the conclusion follows from P5 and P6 without it
+plato-phaedo-1.md:1: argue/own-sentence: C (S3): follows from P5 and P6 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes
+plato-phaedo-1.md:1: argue/unused-step: C3 (S5): nothing rests on C3, and it is not the conclusion: a step that leads nowhere
+plato-phaedo-1.logic.r2: argue/valid 1

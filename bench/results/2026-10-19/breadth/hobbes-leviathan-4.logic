@@ -1,0 +1,28 @@
+# the argument of hobbes-leviathan-4.md as claude-opus-5-5 read it: check that it says what the text says
+atom	called_tyranny	Those who learned from Aristotle's Civil Philosophy call all manner of Commonwealths but the Popular "Tyranny", and the condition of the people under Democracy "Liberty"
+atom	tyrant_meant_monarch	"Tyrant" originally signified no more than a Monarch
+atom	monarchy_abolished	Monarchy was afterwards abolished in most parts of Greece
+atom	tyrant_carries_hatred	The name "Tyrant" came to signify, with the thing, the hatred which the Popular States bare towards it
+atom	conceived_fault	Men conceive some great Fault to be signified in an attribute given in despite and to a great Enemy
+atom	displeased_with_admin	The same men are displeased with those that have the administration of the Democracy or Aristocracy
+atom	call_anarchy_oligarchy	They readily call the one Anarchy and the other Oligarchy, or the Tyranny of a Few
+atom	offence_is_arbitrary	What offends the People is no other thing but that they are governed as the Publique Representant thinks fit, that is, by an Arbitrary government
+atom	evil_names	They give evil names to their Superiors
+atom	arbitrary_gov	There is Arbitrary government
+atom	perpetual_war	Civil War is perpetual
+atom	men_arms_make_law	It is Men and Arms, not Words and Promises, that make the Force and Power of the Laws
+P1	S1	called_tyranny	kind empirical
+P2	S3	tyrant_meant_monarch	kind conceptual
+P3	S3	monarchy_abolished	kind empirical
+P4	S3	monarchy_abolished → tyrant_carries_hatred	kind conceptual
+C1	S3	tyrant_carries_hatred	from P3 P4
+P5	S3	tyrant_carries_hatred → conceived_fault
+C2	S3	conceived_fault	from C1 P5
+P6	S4	displeased_with_admin → call_anarchy_oligarchy	kind empirical
+P7	S5	offence_is_arbitrary	kind empirical
+P8	S5	offence_is_arbitrary → evil_names	kind empirical
+P9	S5	¬arbitrary_gov → perpetual_war
+P10	S5	men_arms_make_law
+# Conclusion read as: the people give evil names to the very arbitrary government without which war would be perpetual
+C	S5	evil_names ∧ (¬arbitrary_gov → perpetual_war)	from P7 P8 P9
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

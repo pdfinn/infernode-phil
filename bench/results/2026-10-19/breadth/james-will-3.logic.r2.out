@@ -1,0 +1,28 @@
+# 3 readings by claude-opus-5-5, compared
+james-will-3.md:1: argue/negation: james-will-3.logic.r2 P2 (S4): the sentence says "nothing", but P2 denies nothing it speaks of: it reads "if there is sense in condemning ourselves for taking the wrong way, then the right way was open to us as well"
+james-will-3.md:1: argue/negation: james-will-3.logic.r2 P3 (S5): the sentence says "without", but P3 denies nothing it speaks of: it reads "if there is willingness to act, no matter how we feel, then acts are believed to be really good and bad"
+james-will-3.md:1: argue/negation: james-will-3.logic.r2 P4 (S6): the sentence says "without", but P4 denies nothing it speaks of: it reads "if acts are believed to be really good and bad, then there is regret at a bad act's happening"
+james-will-3.md:1: argue/unfaithful: james-will-3.logic.r2 P6 (S8): the sentence has no word of "there are real, genuine possibilities in the world (the indeterministic way)": is it the sentence P6 came from?
+james-will-3.md:1: argue/negation: james-will-3.logic.r2.2 P2 (S4): the sentence says "nothing", but P2 denies nothing it speaks of: it reads "if there is sense in condemning ourselves for taking the wrong way, then the right way was open to us as well"
+james-will-3.md:1: argue/negation: james-will-3.logic.r2.2 P3 (S5): the sentence says "without", but P3 denies nothing it speaks of: it reads "if there is willingness to act, no matter how we feel, then acts are believed to be really good and bad"
+james-will-3.md:1: argue/negation: james-will-3.logic.r2.2 P4 (S6): the sentence says "without", but P4 denies nothing it speaks of: it reads "if acts are believed to be really good and bad, then there is regret at a bad act's happening"
+james-will-3.md:1: argue/unfaithful: james-will-3.logic.r2.2 P6 (S8): the sentence has no word of "there are real, genuine possibilities in the world (the indeterministic way)": is it the sentence P6 came from?
+james-will-3.md:1: argue/negation: james-will-3.logic.r2.3 P2 (S4): the sentence says "nothing", but P2 denies nothing it speaks of: it reads "if there is sense in condemning ourselves for taking the wrong way, then the right way was open to us as well"
+james-will-3.md:1: argue/negation: james-will-3.logic.r2.3 P3 (S5): the sentence says "without", but P3 denies nothing it speaks of: it reads "if there is willingness to act, no matter how we feel, then acts are believed to be really good and bad"
+james-will-3.md:1: argue/negation: james-will-3.logic.r2.3 P4 (S6): the sentence says "without", but P4 denies nothing it speaks of: it reads "if acts are believed to be really good and bad, then there is regret at a bad act's happening"
+james-will-3.md:1: argue/unfaithful: james-will-3.logic.r2.3 P6 (S8): the sentence has no word of "there are real, genuine possibilities in the world (the indeterministic way)": is it the sentence P6 came from?
+james-will-3.logic.r2: argue/readings-agree 8
+james-will-3.logic.r2: argue/readings-differ 0
+james-will-3.logic.r2: argue/verdicts-agree 1
+james-will-3.logic.r2: argue/mismatches 4
+james-will-3.logic.r2.2: argue/mismatches 4
+james-will-3.logic.r2.3: argue/mismatches 4
+# kept the reading that best fits the words and the other readings: james-will-3.logic.r2
+# argument written to james-will-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+james-will-3.md:1: argue/negation: P2 (S4): the sentence says "nothing", but P2 denies nothing it speaks of: it reads "if there is sense in condemning ourselves for taking the wrong way, then the right way was open to us as well"
+james-will-3.md:1: argue/negation: P3 (S5): the sentence says "without", but P3 denies nothing it speaks of: it reads "if there is willingness to act, no matter how we feel, then acts are believed to be really good and bad"
+james-will-3.md:1: argue/negation: P4 (S6): the sentence says "without", but P4 denies nothing it speaks of: it reads "if acts are believed to be really good and bad, then there is regret at a bad act's happening"
+james-will-3.md:1: argue/unfaithful: P6 (S8): the sentence has no word of "there are real, genuine possibilities in the world (the indeterministic way)": is it the sentence P6 came from?
+james-will-3.md:1: argue/own-sentence: C1 (S7): needs P5, read from the conclusion's own sentence: check that S7 gives it as its reason and does not conclude it
+james-will-3.md:1: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it
+james-will-3.logic.r2: argue/valid 1

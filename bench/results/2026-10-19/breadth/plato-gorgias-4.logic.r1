@@ -1,0 +1,11 @@
+# the argument of plato-gorgias-4.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+atom	minds_good	the mind of those who are to have the good (our citizens) is gentle and good, i.e. the citizens are made as good as possible
+atom	imparting_useful	there is use in imparting to the citizens any other good, whether money, office or any other sort of power
+# S1 (the same end in view for city and citizens) is read as framing the question and is left out
+P1	S3	¬minds_good → ¬imparting_useful
+# Unstated: our treatment of the city and citizens ought to be of use to them
+A1	-	O imparting_useful	kind normative
+# S2 "must we not try and make them as good as possible" read as obligation
+C	S2	O minds_good	from P1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

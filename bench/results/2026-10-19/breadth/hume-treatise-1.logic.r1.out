@@ -1,0 +1,20 @@
+# 3 readings by claude-opus-5-5, compared
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1 P1 (S2): the sentence says "without", but P1 denies nothing it speaks of: it reads "if we reason justly (begin regularly) concerning causation, then we understand perfectly the idea of causation"
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1 P2 (S2): the sentence says "without", but P2 denies nothing it speaks of: it reads "if we understand perfectly the idea of causation, then we trace the idea of causation up to its origin and examine the primary impression from which it arises"
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1.2 P1 (S2): the sentence says "without", but P1 denies nothing it speaks of: it reads "if we reason justly (begin regularly) concerning causation, then we understand perfectly the idea of causation"
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1.2 P2 (S2): the sentence says "without", but P2 denies nothing it speaks of: it reads "if we understand perfectly the idea of causation, then we trace the idea of causation up to its origin and examine the primary impression from which it arises"
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1.3 P1 (S2): the sentence says "without", but P1 denies nothing it speaks of: it reads "if we reason justly (begin regularly) concerning causation, then we understand perfectly the idea of causation"
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1.3 P2 (S2): the sentence says "without", but P2 denies nothing it speaks of: it reads "if we understand perfectly the idea of causation, then we trace the idea of causation up to its origin and examine the primary impression from which it arises"
+hume-treatise-1.logic.r1: argue/readings-agree 3
+hume-treatise-1.logic.r1: argue/readings-differ 0
+hume-treatise-1.logic.r1: argue/verdicts-agree 1
+hume-treatise-1.logic.r1: argue/mismatches 2
+hume-treatise-1.logic.r1.2: argue/mismatches 2
+hume-treatise-1.logic.r1.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: hume-treatise-1.logic.r1
+# argument written to hume-treatise-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-treatise-1.md:1: argue/negation: P1 (S2): the sentence says "without", but P1 denies nothing it speaks of: it reads "if we reason justly (begin regularly) concerning causation, then we understand perfectly the idea of causation"
+hume-treatise-1.md:1: argue/negation: P2 (S2): the sentence says "without", but P2 denies nothing it speaks of: it reads "if we understand perfectly the idea of causation, then we trace the idea of causation up to its origin and examine the primary impression from which it arises"
+hume-treatise-1.md:1: argue/unused: P3 (S3): P3 is not needed: the conclusion follows from P1 and P2 without it
+hume-treatise-1.md:1: argue/unused: P4 (S3): P4 is not needed: the conclusion follows from P1 and P2 without it
+hume-treatise-1.logic.r1: argue/valid 1

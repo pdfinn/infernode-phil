@@ -1,0 +1,15 @@
+# the argument of descartes-cogito.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5kd
+atom	think	I thus thought, wishing to think that all was false
+atom	exist	I, who thus thought, should be somewhat
+atom	certain	this truth, I think, therefore I am, was so certain and of such evidence
+atom	indubitable	no ground of doubt, however extravagant, could be alleged by the sceptics capable of shaking it
+atom	accept_first	I accept I think, therefore I am as the first principle of the philosophy of which I was in search
+# "absolutely necessary" is read as necessity ([]); "I might, without scruple, accept" is read as permission (permitted).
+P1	S1	□(think → exist)	kind conceptual
+P2	S1	think
+P3	S1	certain
+P4	S1	indubitable
+A1	-	certain ∧ indubitable → P accept_first	kind normative
+C	S1	P accept_first	from P3 P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

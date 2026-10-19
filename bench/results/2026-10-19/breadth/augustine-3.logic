@@ -1,0 +1,23 @@
+# reading 2 of augustine-3.md by claude-opus-5-5
+# The text's stated claim is that those who speak thus do not yet understand (S1).
+# S2 grounds it in the contrast between eternity and time; the link from an
+# unstable heart to not understanding is left implicit (A2).
+atom	heart_unstable	their heart fluttereth between the motions of things past and to come, and is still unstable
+atom	understand_wisdom	they understand how the things be made, which by Thee, and in Thee are made
+atom	strive_eternal	they strive to comprehend things eternal
+atom	eternal_whole_present	in the Eternal nothing passeth, but the whole is present
+atom	time_all_present	some time is all at once present
+atom	long_from_motions	a long time cannot become long, but out of many motions passing by
+atom	incomparable	eternity cannot be compared with the times which are never fixed
+atom	time_created	all past and to come is created, and flows out of that which is ever present
+P1	S1	heart_unstable	kind empirical
+P2	S1	strive_eternal	kind empirical
+P3	S2	eternal_whole_present
+P4	S2	¬time_all_present
+P5	S2	long_from_motions
+P6	S2	time_created
+A1	-	eternal_whole_present ∧ ¬time_all_present ∧ long_from_motions → incomparable
+C1	S2	incomparable	from P3 P4 P5 A1
+A2	-	heart_unstable ∧ incomparable → ¬understand_wisdom
+C	S1	¬understand_wisdom	from P1 C1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

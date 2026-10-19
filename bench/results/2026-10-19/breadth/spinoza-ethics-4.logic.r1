@@ -1,0 +1,15 @@
+# the argument of spinoza-ethics-4.md as claude-opus-5-5 read it: check that it says what the text says
+# S2 sets up the need for mutual aid; nothing in S3 is drawn from it.
+# S3: "hence" draws the multitude's preoccupation with money from money's being a token for everything.
+# The step needs a link the text leaves implicit, given as A1.
+atom	individual_strength_suffices	the strength of each individual suffices for providing these nourishments
+atom	mutual_aid	men lend one another mutual aid
+atom	money_token	money has furnished us with a token for everything
+atom	multitude_engrossed_money	the mind of the multitude is chiefly engrossed with the notion of money
+atom	pleasure_with_money_cause	the multitude can hardly conceive any kind of pleasure not accompanied with the idea of money as cause
+P1	S2	¬mutual_aid → ¬individual_strength_suffices	kind empirical
+P2	S3	money_token	kind empirical
+A1	-	money_token → multitude_engrossed_money
+P3	S3	pleasure_with_money_cause	kind empirical
+C	S3	multitude_engrossed_money	from P2 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

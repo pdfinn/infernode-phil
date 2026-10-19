@@ -1,0 +1,29 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-1.md:1: argue/readings: the conclusion is read 2 ways: aquinas-st-i-1.logic.r2 has "person_signifies_distinct ∧ human_person_flesh_bones_soul"; aquinas-st-i-1.logic.r2.2 and aquinas-st-i-1.logic.r2.3 have "person_signifies_distinct"; they differ when only ""person" in any nature signifies what is distinct in that nature" is true, which the second allows
+aquinas-st-i-1.md:1: argue/answered: the conclusion: answered no, which keeps aquinas-st-i-1.logic.r2, to: Suppose ""person" in any nature signifies what is distinct in that nature" is true and "in human nature "person" signifies this flesh, these bones and this soul, the individuating principles of a man, which belong to the meaning of a particular human person though not to "person" in general" is false. Is the conclusion, "Therefore "person" in any nature signifies what is distinct in that nature: thus in human nature it signifies this flesh, these bones, and this soul, which are the individuating principles of a man, and which, though not belonging to "person" in general, nevertheless do belong to the meaning of a particular human person.", true then?
+aquinas-st-i-1.logic.r2: argue/readings-agree 3
+aquinas-st-i-1.logic.r2: argue/readings-differ 1
+aquinas-st-i-1.logic.r2: argue/verdicts-agree 1
+aquinas-st-i-1.logic.r2: argue/mismatches 0
+aquinas-st-i-1.logic.r2.2: argue/mismatches 0
+aquinas-st-i-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-1.logic.r2
+# argument written to aquinas-st-i-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-1.md:1: argue/unlinked: C (S6): the conclusion speaks of "in human nature "person" signifies this flesh, these bones and this soul, the individuating principles of a man, which belong to the meaning of a particular human person though not to "person" in general", which no premise mentions: nothing links it to them
+aquinas-st-i-1.md:1: argue/unlinked: C (S6): the conclusion speaks of ""person" in any nature signifies what is distinct in that nature", which no premise mentions: nothing links it to them
+aquinas-st-i-1.md:1: argue/invalid: C1 (S2): does not follow: when "something may be included in the meaning of a less common term which is not included in the more common term" is true, "it is one thing to ask the meaning of the word animal, and another to ask its meaning when the animal in question is man" is false, every premise holds and the conclusion fails
+aquinas-st-i-1.md:1: argue/countermodel: C1 (S2): animal_questions_differ = F, less_common_term_includes_more = T
+aquinas-st-i-1.md:1: argue/missing: C1 (S2): it would follow given "less_common_term_includes_more → animal_questions_differ"
+aquinas-st-i-1.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "something may be included in the meaning of a less common term which is not included in the more common term": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/invalid: C2 (S3): does not follow: when "something may be included in the meaning of a less common term which is not included in the more common term" and ""person" in general signifies the individual substance of a rational figure" are true, "it is one thing to ask the meaning of "person" in general, and another to ask the meaning of "person" as applied to God" is false, every premise holds and the conclusion fails
+aquinas-st-i-1.md:1: argue/countermodel: C2 (S3): less_common_term_includes_more = T, person_individual_rational_substance = T, person_questions_differ = F
+aquinas-st-i-1.md:1: argue/missing: C2 (S3): it would follow given "less_common_term_includes_more → person_questions_differ", or "person_individual_rational_substance → person_questions_differ"
+aquinas-st-i-1.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "something may be included in the meaning of a less common term which is not included in the more common term": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/unlinked: P2 (S4): P2 is the only statement about ""person" in general signifies the individual substance of a rational figure": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/invalid: C (S6): does not follow: when ""person" in general signifies the individual substance of a rational figure" and "the individual in itself is undivided, but is distinct from others" are true, ""person" in any nature signifies what is distinct in that nature" and "in human nature "person" signifies this flesh, these bones and this soul, the individuating principles of a man, which belong to the meaning of a particular human person though not to "person" in general" are false, every premise holds and the conclusion fails
+aquinas-st-i-1.md:1: argue/countermodel: C (S6): human_person_flesh_bones_soul = F, individual_undivided_distinct = T, person_individual_rational_substance = T, person_signifies_distinct = F
+aquinas-st-i-1.md:1: argue/unlinked: P2 (S4): P2 is the only statement about ""person" in general signifies the individual substance of a rational figure": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/unlinked: P3 (S5): P3 is the only statement about "the individual in itself is undivided, but is distinct from others": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-st-i-1.md:1: argue/unused-step: C1 (S2): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-1.md:1: argue/unused-step: C2 (S3): nothing rests on C2, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-1.logic.r2: argue/valid 0

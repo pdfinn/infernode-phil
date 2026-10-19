@@ -1,0 +1,16 @@
+# the argument of plato-gorgias-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Socrates infers that the rhetorician will not be counselled on craft matters (S3) from the claim that the most skilled ought to be chosen (S4).
+# The building and military cases in S4 are given as parallel instances of the same point.
+# The text never says outright that the rhetorician is not the most skilled in these crafts, nor how the rule of choice bears on whom the assembly consults; both are added as assumptions.
+atom	counsel_rhet	the rhetorician will be taken into counsel when the assembly meets to elect a physician or a shipwright or any other craftsman
+atom	skilled_rule	at every election he ought to be chosen who is most skilled
+atom	rhet_most_skilled	the rhetorician is the most skilled in these crafts
+atom	workman_advises	when walls have to be built or harbours or docks to be constructed, not the rhetorician but the master workman will advise
+atom	military_advises	when generals have to be chosen and an order of battle arranged, the military will advise and not the rhetoricians
+P1	S4	skilled_rule	kind normative
+P2	S4	workman_advises	kind empirical
+P3	S4	military_advises	kind empirical
+A1	-	¬rhet_most_skilled
+A2	-	skilled_rule ∧ ¬rhet_most_skilled → ¬counsel_rhet
+C	S3	¬counsel_rhet	from P1 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

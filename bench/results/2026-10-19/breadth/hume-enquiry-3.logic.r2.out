@@ -1,0 +1,31 @@
+# 3 readings by claude-opus-5-5, compared
+hume-enquiry-3.logic.r2: argue/readings: what the text leaves unstated is read 3 ways: hume-enquiry-3.logic.r2 has "certain_no_fire ∧ equal_fire_fall ∧ ¬◇fire_event → moral_certainty"; hume-enquiry-3.logic.r2.2 has "equal_stab_house ∧ equal_fire_fall → moral_certainty"; they differ when only "I no more suspect the stabbing than the falling of the house itself", "I know with certainty that he is not to put his hand into the fire and hold it there till it be consumed", "I can foretell the hand-in-fire event with the same assurance as that a man who throws himself out of the window will not remain suspended in the air" and "possibly, he puts his hand into the fire and holds it there till it be consumed" are true, which the first allows; hume-enquiry-3.logic.r2.3 has "equal_stab_house ∧ equal_fire_fall ∧ ¬◇fire_event → moral_certainty"
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r2 P3 (S4): the sentence says "no", but P3 denies nothing it speaks of: it reads "putting his hand into the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.md:1: argue/unfaithful: hume-enquiry-3.logic.r2 P4 (S4): the sentence has no word of "he puts his hand into the fire and holds it there till it be consumed": is it the sentence P4 came from?
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r2 P4 (S4): the sentence says "unknown", but P4 denies nothing it speaks of: it reads "if putting his hand into the fire till it be consumed is contrary to all the known principles of human nature, then (it is not so that possibly, he puts his hand into the fire and holds it there till it be consumed)"
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r2.2 P3 (S4): the sentence says "no", but P3 denies nothing it speaks of: it reads "putting his hand into the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.md:1: argue/unfaithful: hume-enquiry-3.logic.r2.2 P4 (S4): the sentence has no word of "he puts his hand into the fire and holds it there till it be consumed": is it the sentence P4 came from?
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r2.2 P4 (S4): the sentence says "unknown", but P4 denies nothing it speaks of: it reads "if putting his hand into the fire till it be consumed is contrary to all the known principles of human nature, then (it is not so that possibly, he puts his hand into the fire and holds it there till it be consumed)"
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r2.3 P3 (S4): the sentence says "no", but P3 denies nothing it speaks of: it reads "putting his hand into the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.md:1: argue/unfaithful: hume-enquiry-3.logic.r2.3 P4 (S4): the sentence has no word of "he puts his hand into the fire and holds it there till it be consumed": is it the sentence P4 came from?
+hume-enquiry-3.md:1: argue/negation: hume-enquiry-3.logic.r2.3 P4 (S4): the sentence says "unknown", but P4 denies nothing it speaks of: it reads "if putting his hand into the fire till it be consumed is contrary to all the known principles of human nature, then (it is not so that possibly, he puts his hand into the fire and holds it there till it be consumed)"
+hume-enquiry-3.md:1: argue/unfaithful: hume-enquiry-3.logic.r2.3 P5 (S4): the sentence has no word of "he puts his hand into the fire and holds it there till it be consumed": is it the sentence P5 came from?
+hume-enquiry-3.logic.r2: argue/readings-agree 4
+hume-enquiry-3.logic.r2: argue/readings-differ 1
+hume-enquiry-3.logic.r2: argue/verdicts-agree 1
+hume-enquiry-3.logic.r2: argue/mismatches 3
+hume-enquiry-3.logic.r2.2: argue/mismatches 3
+hume-enquiry-3.logic.r2.3: argue/mismatches 4
+# kept the reading that best fits the words and the other readings: hume-enquiry-3.logic.r2
+# argument written to hume-enquiry-3.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+hume-enquiry-3.md:1: argue/negation: P3 (S4): the sentence says "no", but P3 denies nothing it speaks of: it reads "putting his hand into the fire till it be consumed is contrary to all the known principles of human nature"
+hume-enquiry-3.md:1: argue/unfaithful: P4 (S4): the sentence has no word of "he puts his hand into the fire and holds it there till it be consumed": is it the sentence P4 came from?
+hume-enquiry-3.md:1: argue/negation: P4 (S4): the sentence says "unknown", but P4 denies nothing it speaks of: it reads "if putting his hand into the fire till it be consumed is contrary to all the known principles of human nature, then (it is not so that possibly, he puts his hand into the fire and holds it there till it be consumed)"
+hume-enquiry-3.md:1: argue/unfaithful: C1 (S4): the sentence has no word of "he puts his hand into the fire and holds it there till it be consumed": is it the sentence C1 came from?
+hume-enquiry-3.md:1: argue/negation: O1 (S1): the sentence says "no", but O1 denies nothing it speaks of: it reads "possibly, he has been seized with a sudden and unknown frenzy"
+hume-enquiry-3.md:1: argue/own-sentence: C1 (S4): follows from P3 and P4 alone, read from the conclusion's own sentence: unless S4 gives them as its reason, the reading has it assert what it concludes
+hume-enquiry-3.md:1: argue/assumed: C (S6): follows only by A1, which the text never states: state it, or argue for it
+hume-enquiry-3.logic.r2: argue/valid 1
+hume-enquiry-3.md:1: argue/misses: O1 (S1): O1 does not contradict P1, even given the premises no one disputes: as written it leaves P1 standing; is it aimed at something else?
+hume-enquiry-3.md:1: argue/misses: R1 (S1): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+hume-enquiry-3.logic.r2: argue/survives 1

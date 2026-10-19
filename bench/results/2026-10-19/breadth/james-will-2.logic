@@ -1,0 +1,17 @@
+# reading 3 of james-will-2.md by claude-opus-5-5
+atom	gnostic	the world is regarded not as a machine for making real any outward good but as a contrivance for deepening the theoretic consciousness of what goodness and evil intrinsically are
+atom	acts_good	the necessary acts we erroneously regret are good
+atom	regret_good	our error in so regretting them is also good
+atom	cares_knowing	what nature cares for is the knowing of good and evil
+atom	cares_doing	what nature cares for is the doing of good or of evil
+# S2 "may be good ... on one simple condition" is read as: both are good only if the gnostic view holds.
+P1	S2	acts_good ∧ regret_good → gnostic
+# The text treats the condition as also sufficient: once it holds, the regretted acts and the regret are both good.
+A1	-	gnostic → acts_good ∧ regret_good
+P2	S3	cares_knowing ∧ ¬cares_doing
+# S3 and S4 are offered as what the gnostic view comes to; the text relies on nature's caring only for knowing to establish that view.
+A2	-	cares_knowing ∧ ¬cares_doing → gnostic
+C1	S6	gnostic	from P2 A2
+# S1 announces a refuge from the quandary; the refuge drawn is that both the acts and the regret may be good.
+C	S2	acts_good ∧ regret_good	from C1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

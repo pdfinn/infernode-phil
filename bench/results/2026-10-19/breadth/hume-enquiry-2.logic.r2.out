@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+hume-enquiry-2.md:1: argue/negation: hume-enquiry-2.logic.r2 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "the ideas of power, force, energy or necessary connexion are more obscure and uncertain than any other ideas occurring in metaphysics"
+hume-enquiry-2.md:1: argue/negation: hume-enquiry-2.logic.r2 P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "it is every moment necessary for us to treat of these ideas in all our disquisitions"
+hume-enquiry-2.md:1: argue/negation: hume-enquiry-2.logic.r2.2 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "the ideas of power, force, energy or necessary connexion are more obscure and uncertain than any other ideas occurring in metaphysics"
+hume-enquiry-2.md:1: argue/negation: hume-enquiry-2.logic.r2.2 P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "it is every moment necessary for us to treat of these ideas in all our disquisitions"
+hume-enquiry-2.md:1: argue/negation: hume-enquiry-2.logic.r2.3 P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "the ideas of power, force, energy or necessary connexion are more obscure and uncertain than any other ideas occurring in metaphysics"
+hume-enquiry-2.md:1: argue/negation: hume-enquiry-2.logic.r2.3 P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "it is every moment necessary for us to treat of these ideas in all our disquisitions"
+hume-enquiry-2.logic.r2: argue/readings-agree 3
+hume-enquiry-2.logic.r2: argue/readings-differ 0
+hume-enquiry-2.logic.r2: argue/verdicts-agree 1
+hume-enquiry-2.logic.r2: argue/mismatches 2
+hume-enquiry-2.logic.r2.2: argue/mismatches 2
+hume-enquiry-2.logic.r2.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: hume-enquiry-2.logic.r2
+# argument written to hume-enquiry-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+hume-enquiry-2.md:1: argue/negation: P1 (S1): the sentence says "no", but P1 denies nothing it speaks of: it reads "the ideas of power, force, energy or necessary connexion are more obscure and uncertain than any other ideas occurring in metaphysics"
+hume-enquiry-2.md:1: argue/negation: P2 (S1): the sentence says "no", but P2 denies nothing it speaks of: it reads "it is every moment necessary for us to treat of these ideas in all our disquisitions"
+hume-enquiry-2.md:1: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it
+hume-enquiry-2.logic.r2: argue/valid 1

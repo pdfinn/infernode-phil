@@ -1,0 +1,25 @@
+# 3 readings by claude-opus-5-5, compared
+locke-treatise-1.md:1: argue/negation: locke-treatise-1.logic.r2 P4 (S5): the sentence says "no", but P4 denies nothing it speaks of: it reads "in grass-feeding viviparous animals the teat of the dam is sufficient to nourish the young till it can feed on grass"
+locke-treatise-1.md:1: argue/negation: locke-treatise-1.logic.r2.2 P4 (S5): the sentence says "no", but P4 denies nothing it speaks of: it reads "in grass-feeding viviparous animals the teat of the dam is sufficient to nourish the young till it can feed on grass"
+locke-treatise-1.md:1: argue/negation: locke-treatise-1.logic.r2.3 P4 (S5): the sentence says "no", but P4 denies nothing it speaks of: it reads "in grass-feeding viviparous animals the teat of the dam is sufficient to nourish the young till it can feed on grass"
+locke-treatise-1.logic.r2: argue/readings-agree 7
+locke-treatise-1.logic.r2: argue/readings-differ 0
+locke-treatise-1.logic.r2: argue/verdicts-agree 1
+locke-treatise-1.logic.r2: argue/mismatches 1
+locke-treatise-1.logic.r2.2: argue/mismatches 1
+locke-treatise-1.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: locke-treatise-1.logic.r2
+# argument written to locke-treatise-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+locke-treatise-1.md:1: argue/negation: P4 (S5): the sentence says "no", but P4 denies nothing it speaks of: it reads "in grass-feeding viviparous animals the teat of the dam is sufficient to nourish the young till it can feed on grass"
+locke-treatise-1.md:1: argue/unused: P3 (S4): P3 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P4 (S5): P4 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P5 (S5): P5 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P6 (S5): P6 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P7 (S6): P7 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P8 (S6): P8 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P9 (S6): P9 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P10 (S7): P10 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/unused: P11 (S7): P11 is not needed: the conclusion follows from P1, P2 and A1 without it
+locke-treatise-1.md:1: argue/assumed: C (S3): follows only by A1, which the text never states: state it, or argue for it
+locke-treatise-1.md:1: argue/own-sentence: C (S3): needs P1 and P2, read from the conclusion's own sentence: check that S3 gives them as its reason and does not conclude them
+locke-treatise-1.logic.r2: argue/valid 1

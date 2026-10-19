@@ -1,0 +1,19 @@
+# the argument of spinoza-ethics-1.md as claude-opus-5-5 read it: check that it says what the text says
+atom	loved_pleas(x)	we conceive x to affect an object of our love pleasurably
+atom	loved_pain(x)	we conceive x to affect an object of our love painfully
+atom	us_pleas(x)	x affects us pleasurably
+atom	us_pain(x)	x affects us painfully
+atom	conceive(x)	the mind endeavours, as far as possible, to conceive x
+atom	present(x)	the mind endeavours to regard x as present
+atom	exclude(x)	the mind endeavours to exclude the existence of x
+atom	affirm(x)	we endeavour to affirm x concerning ourselves and concerning the loved object
+# The parenthetical references (III. xxi., III. xii., etc.) point to the author's own earlier propositions, so they are written as plain premises.
+P1	S1	∀x (loved_pleas(x) → us_pleas(x))
+P2	S1	∀x (loved_pain(x) → us_pain(x))
+P3	S2	∀x (us_pleas(x) → conceive(x))
+P4	S2	∀x (conceive(x) ↔ present(x))	kind conceptual
+P5	S3	∀x (us_pain(x) → exclude(x))
+# The step from endeavouring to regard a thing as present to endeavouring to affirm it of ourselves and the loved object is never stated.
+A1	-	∀x (present(x) → affirm(x))
+C	S3	∀x (us_pleas(x) ∨ loved_pleas(x) → affirm(x))	from P1 P3 P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

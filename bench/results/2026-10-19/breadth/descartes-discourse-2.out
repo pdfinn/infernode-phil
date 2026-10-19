@@ -1,0 +1,17 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+descartes-discourse-2.md:1: argue/readings: S2 is read 2 ways: descartes-discourse-2.logic.r1 and descartes-discourse-2.logic.r1.2 have "every_opinion_held" and "foreigners_reason_well"; descartes-discourse-2.logic.r1.3 has "¬one_master" and "every_opinion_held" and "foreigners_reason_well"; they differ when only "I received instruction from but one master and never knew the diversities of opinion among the learned", "no opinion, however absurd, can be imagined which has not been maintained by some philosopher" and "those whose opinions are repugnant to ours are not barbarians, and many of them use their reason as well as or better than we do" are true, which the first allows
+descartes-discourse-2.md:1: argue/answered: S2: answered no, which keeps descartes-discourse-2.logic.r1.3, to: Suppose "I received instruction from but one master and never knew the diversities of opinion among the learned", "no opinion, however absurd, can be imagined which has not been maintained by some philosopher" and "those whose opinions are repugnant to ours are not barbarians, and many of them use their reason as well as or better than we do" are true. Is S2, "But I had become aware, even so early as during my college life, that no opinion, however absurd and incredible, can be imagined, which has not been maintained by some on of the philosophers; and afterwards in the course of my travels I remarked that all those whose opinions are decidedly repugnant to ours are not in that account barbarians and savages, but on the contrary that many of these nations make an equally good, if not better, use of their reason than we do.", true then? [in 1 of 2 runs]
+descartes-discourse-2.md:1: argue/negation: descartes-discourse-2.logic.r1 P6 (S5): the sentence says "no", but P6 denies nothing it speaks of: it reads "in such cases truth is much more likely to be found by one than by many"
+descartes-discourse-2.md:1: argue/negation: descartes-discourse-2.logic.r1 C (S6): the sentence says "no", but C denies nothing it speaks of: it reads "I was constrained to use my own reason in the conduct of my life"
+# kept the reading that best fits the words and the other readings: descartes-discourse-2.logic.r1.3
+# argument written to descartes-discourse-2.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+descartes-discourse-2.md:1: argue/negation: P7 (S5): the sentence says "no", but P7 denies nothing it speaks of: it reads "in such cases truth is much more likely to be found by one than by many"
+descartes-discourse-2.md:1: argue/negation: C (S6): the sentence says "no", but C denies nothing it speaks of: it reads "I was constrained to use my own reason in the conduct of my life"
+descartes-discourse-2.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it
+descartes-discourse-2.md:1: argue/own-sentence: C2 (S5): follows from P7 and P8 alone, read from the conclusion's own sentence: unless S5 gives them as its reason, the reading has it assert what it concludes
+descartes-discourse-2.md:1: argue/assumed: C (S6): follows only by A2, which the text never states: state it, or argue for it
+descartes-discourse-2.md:1: argue/own-sentence: C (S6): needs P9, read from the conclusion's own sentence: check that S6 gives it as its reason and does not conclude it
+descartes-discourse-2.logic.r1: argue/valid 1
+descartes-discourse-2.logic: argue/runs-agree 1

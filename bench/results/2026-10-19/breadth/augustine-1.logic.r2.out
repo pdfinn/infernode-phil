@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+augustine-1.md:1: argue/readings: S5 is read 2 ways: augustine-1.logic.r2 and augustine-1.logic.r2.2 have "¬leave_by_place"; augustine-1.logic.r2.3 has nothing from it; they differ when only "men leave God, or return to him, by their feet or by change of place" is true, which the second allows
+augustine-1.md:1: argue/answered: S5: answered no, which keeps augustine-1.logic.r2 and augustine-1.logic.r2.2, to: Suppose "men leave God, or return to him, by their feet or by change of place" is true. Is S5, "For it is not by our feet, or change of place, that men leave Thee, or return unto Thee.", true then?
+augustine-1.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: augustine-1.logic.r2 and augustine-1.logic.r2.3 have "¬prodigal_physical → ¬leave_by_place" and "removal_darkened ∧ ¬leave_by_place → distance_affections"; augustine-1.logic.r2.2 has "removal_darkened ∧ ¬leave_by_place → distance_affections"; they differ when only "men leave God, or return to him, by their feet or by change of place" and "darkened affections are removal from God" are true, which the second allows
+augustine-1.logic.r2: argue/readings-agree 3
+augustine-1.logic.r2: argue/readings-differ 2
+augustine-1.logic.r2: argue/verdicts-agree 1
+augustine-1.logic.r2: argue/mismatches 0
+augustine-1.logic.r2.2: argue/mismatches 0
+augustine-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: augustine-1.logic.r2
+# argument written to augustine-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+augustine-1.md:1: argue/assumed: C1 (S5): follows only by A1, which the text never states: state it, or argue for it
+augustine-1.md:1: argue/assumed: C (S7): follows only by A2, which the text never states: state it, or argue for it
+augustine-1.logic.r2: argue/valid 1

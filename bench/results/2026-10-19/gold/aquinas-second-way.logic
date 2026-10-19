@@ -1,0 +1,28 @@
+# reading 2 of aquinas-second-way.md by claude-opus-5-5
+logic	s5
+atom	order	in the world of sense there is an order of efficient causes
+atom	selfcause	a thing is found to be the efficient cause of itself
+atom	prior_self	a thing is prior to itself
+atom	chain	in all efficient causes following in order, the first is the cause of the intermediate and the intermediate is the cause of the ultimate
+atom	first	there is a first efficient cause
+atom	intermediate	there are intermediate efficient causes
+atom	ultimate	there is an ultimate effect
+atom	infinite	in efficient causes it is possible to go on to infinity
+atom	god	the first efficient cause is what everyone names God
+P1	S2	order	kind empirical
+P2	S3	□(selfcause → prior_self)
+P3	S3	□¬prior_self
+C1	S3	¬◇selfcause	from P2 P3
+P4	S4	chain
+# S5 "to take away the cause is to take away the effect", applied to the ordered chain of S4
+P5	S5	chain ∧ ¬first → ¬ultimate ∧ ¬intermediate
+C2	S6	¬first → ¬ultimate ∧ ¬intermediate	from P4 P5
+P6	S7	infinite → ¬first ∧ ¬ultimate ∧ ¬intermediate
+# "all of which is plainly false": there is an ultimate effect and there are intermediate causes, as the order observed in S2 shows
+P7	S7	ultimate ∧ intermediate	kind empirical
+C3	S7	¬infinite	from P6 P7
+# S8 "it is necessary to admit a first efficient cause" is read as the claim that there is one
+C4	S8	first	from C2 P7
+P8	S8	god	kind conceptual
+C	S8	first ∧ god	from C4 P8
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

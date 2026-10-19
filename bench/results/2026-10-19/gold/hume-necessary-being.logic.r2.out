@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+hume-necessary-being.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: hume-necessary-being.logic.r2 and hume-necessary-being.logic.r2.2 have "∀x conceived_existent(x)"; hume-necessary-being.logic.r2.3 has nothing from it; they differ when nothing is true, which the second allows
+hume-necessary-being.logic.r2: argue/readings: U1: hume-necessary-being.logic.r2 and hume-necessary-being.logic.r2.2 take for granted "for every x, x is conceived as existent"; hume-necessary-being.logic.r2.3 does not
+hume-necessary-being.logic.r2: argue/answered: U1: answered yes, which keeps hume-necessary-being.logic.r2 and hume-necessary-being.logic.r2.2, to: Does the text's argument take this for granted, whether or not it says so: "for every x, x is conceived as existent"? Answer yes if the author would accept it as part of the argument.
+hume-necessary-being.md:1: argue/negation: hume-necessary-being.logic.r2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of x is demonstrable, then the non-existence of x implies a contradiction"
+hume-necessary-being.md:1: argue/negation: hume-necessary-being.logic.r2.2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of x is demonstrable, then the non-existence of x implies a contradiction"
+hume-necessary-being.md:1: argue/negation: hume-necessary-being.logic.r2.3 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of x is demonstrable, then the non-existence of x implies a contradiction"
+hume-necessary-being.logic.r2: argue/verdicts: valid as hume-necessary-being.logic.r2, hume-necessary-being.logic.r2.2 read it, not as the others do: which reading is right decides the verdict
+hume-necessary-being.logic.r2: argue/readings-agree 4
+hume-necessary-being.logic.r2: argue/readings-differ 1
+hume-necessary-being.logic.r2: argue/verdicts-agree 0
+hume-necessary-being.logic.r2: argue/mismatches 1
+hume-necessary-being.logic.r2.2: argue/mismatches 1
+hume-necessary-being.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: hume-necessary-being.logic.r2
+# argument written to hume-necessary-being.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+hume-necessary-being.md:1: argue/negation: P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of x is demonstrable, then the non-existence of x implies a contradiction"
+hume-necessary-being.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it
+hume-necessary-being.logic.r2: argue/valid 1

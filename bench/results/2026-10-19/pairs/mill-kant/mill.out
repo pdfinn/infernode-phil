@@ -1,0 +1,12 @@
+# 3 readings by claude-opus-5-5, compared
+mill.logic: argue/readings-agree 4
+mill.logic: argue/readings-differ 0
+mill.logic: argue/verdicts-agree 1
+mill.logic: argue/mismatches 0
+mill.logic.2: argue/mismatches 0
+mill.logic.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: mill.logic
+# argument written to mill.logic by claude-opus-5-5 (a language model, not a rule)
+mill.md:1: argue/assumed: C (S3): follows only by A1, which the text never states: state it, or argue for it
+mill.md:1: argue/own-sentence: C (S3): needs P2, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it
+mill.logic: argue/valid 1

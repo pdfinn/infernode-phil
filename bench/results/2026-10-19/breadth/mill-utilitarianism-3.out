@@ -1,0 +1,31 @@
+# run 1 of 2
+# run 2 of 2
+# the prover could not read mill-utilitarianism-3.logic.r1.2: claude-opus-5-5 is asked again
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom generating is used but not given a meaning (atom	generating	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom lament is used but not given a meaning (atom	lament	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom law_inexpedient is used but not given a meaning (atom	law_inexpedient	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom gratified_any is used but not given a meaning (atom	gratified_any	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom say_compelled is used but not given a meaning (atom	say_compelled	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom glad_enforce is used but not given a meaning (atom	glad_enforce	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom afraid_magistrate is used but not given a meaning (atom	afraid_magistrate	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom forego_inconvenience is used but not given a meaning (atom	forego_inconvenience	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom tribunal_expedient is used but not given a meaning (atom	tribunal_expedient	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom desire_punish is used but not given a meaning (atom	desire_punish	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom lingers is used but not given a meaning (atom	lingers	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom daily_conduct_just is used but not given a meaning (atom	daily_conduct_just	...) [in 1 of 2 runs]
+mill-utilitarianism-3.logic.r1.2: argue/undefined: atom justice_beyond_law is used but not given a meaning (atom	justice_beyond_law	...) [in 1 of 2 runs]
+# 3 readings by claude-opus-5-5, compared
+mill-utilitarianism-3.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: mill-utilitarianism-3.logic.r1 and mill-utilitarianism-3.logic.r1.2 have "desire_punish ∧ say_compelled ∧ gratified_any → lingers" and "lingers → generating"; mill-utilitarianism-3.logic.r1.3 has "desire_punish ∧ glad_enforce ∧ say_compelled ∧ gratified_any → lingers" and "lingers → generating"; they differ when only "it would always give us pleasure, and chime in with our feelings of fitness, that acts which we deem unjust should be punished", "when we think a person is bound in justice to do a thing, it is an ordinary form of language to say that he ought to be compelled to do it" and "we should be gratified to see the obligation enforced by anybody who had the power" are true, which the second allows
+mill-utilitarianism-3.logic.r1: argue/readings: U1: mill-utilitarianism-3.logic.r1 and mill-utilitarianism-3.logic.r1.2 take for granted "if (it would always give us pleasure, and chime in with our feelings of fitness, that acts which we deem unjust should be punished and when we think a person is bound in justice to do a thing, it is an ordinary form of language to say that he ought to be compelled to do it and we should be gratified to see the obligation enforced by anybody who had the power), then even here, the idea of the breach of what ought to be law still lingers in a modified shape"; mill-utilitarianism-3.logic.r1.3 does not
+mill-utilitarianism-3.logic.r1: argue/answered: U1: answered yes, which keeps mill-utilitarianism-3.logic.r1 and mill-utilitarianism-3.logic.r1.2, to: Does the text's argument take this for granted, whether or not it says so: "if (it would always give us pleasure, and chime in with our feelings of fitness, that acts which we deem unjust should be punished and when we think a person is bound in justice to do a thing, it is an ordinary form of language to say that he ought to be compelled to do it and we should be gratified to see the obligation enforced by anybody who had the power), then even here, the idea of the breach of what ought to be law still lingers in a modified shape"? Answer yes if the author would accept it as part of the argument.
+mill-utilitarianism-3.logic.r1: argue/verdicts: valid as mill-utilitarianism-3.logic.r1, mill-utilitarianism-3.logic.r1.2 read it, not as the others do: which reading is right decides the verdict
+# kept the reading that best fits the words and the other readings: mill-utilitarianism-3.logic.r1
+# argument written to mill-utilitarianism-3.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+mill-utilitarianism-3.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it [in 1 of 2 runs]
+mill-utilitarianism-3.md:1: argue/assumed: C (S10): follows only by A2, which the text never states: state it, or argue for it
+mill-utilitarianism-3.logic.r1: argue/valid 1
+mill-utilitarianism-3.md:1: argue/misses: O1 (S1): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+mill-utilitarianism-3.md:1: argue/misses: O2 (S2): O2 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+mill-utilitarianism-3.md:1: argue/misses: R1 (S3): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+mill-utilitarianism-3.logic.r1: argue/survives 1
+mill-utilitarianism-3.logic: argue/runs-agree 1

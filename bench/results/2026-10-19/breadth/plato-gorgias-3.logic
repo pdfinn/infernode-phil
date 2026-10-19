@@ -1,0 +1,27 @@
+# reading 2 of plato-gorgias-3.md by claude-opus-5-5
+logic	kd
+atom	servant	a man is the servant of anything
+atom	happy	a man is happy
+atom	indulge	one allows his desires to wax to the uttermost and, having courage and intelligence, ministers to them and satisfies all his longings
+atom	natural_justice	this is natural justice and nobility
+atom	many_cannot	the many cannot attain to this
+atom	shame_weakness	the many blame the strong man and call intemperance base because they are ashamed of their own weakness
+atom	praise_cowardice	the many praise temperance and justice out of their own cowardice
+atom	capable	a man is the son of a king or has a nature capable of acquiring an empire, a tyranny or sovereignty
+atom	temperance_base	temperance is base and evil for such a man
+atom	temperate	the man admits custom, reason and the opinion of other men to be lords over him
+atom	miserable	the man is in a miserable plight
+atom	intemperance	luxury, intemperance and licence
+atom	means	they are provided with means
+atom	virtue	luxury, intemperance and licence are virtue
+A1	-	natural_justice → virtue
+P1	S1	servant → ¬happy
+P2	S2	O indulge	kind normative
+P3	S3	natural_justice	kind normative
+P4	S4	many_cannot ∧ shame_weakness	kind empirical
+P5	S5	praise_cowardice	kind empirical
+P6	S6	capable → temperance_base
+P7	S6	capable ∧ temperate → miserable
+# "happiness" in S7 is read as the atom happy; S7 states the main thesis
+C	S7	intemperance ∧ means → virtue ∧ happy
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

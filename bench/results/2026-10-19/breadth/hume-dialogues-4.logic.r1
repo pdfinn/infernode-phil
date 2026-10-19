@@ -1,0 +1,22 @@
+# the argument of hume-dialogues-4.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	pain_employed	pains, as well as pleasures, are employed to excite all creatures to action and self-preservation
+atom	pleasure_suffices	pleasure alone, in its various degrees, is sufficient for exciting creatures to action and self-preservation
+atom	constant_enjoyment	all animals are constantly in a state of enjoyment
+atom	diminution_prompts	when urged by the necessities of nature, animals feel a diminution of pleasure instead of pain, which prompts them to seek what is necessary to their subsistence
+atom	pursue_pleasure_eagerly	men pursue pleasure as eagerly as they avoid pain
+atom	life_without_pain	the business of life is carried on without any pain
+atom	free_an_hour	animals are free from pain for an hour
+atom	perpetual_exemption	animals enjoy a perpetual exemption from pain
+atom	pain_particular_contrivance	producing the feeling of pain required as particular a contrivance of the organs as endowing animals with sight, hearing or any of the senses
+P1	S1	pain_employed	kind empirical
+P2	S2	◇pleasure_suffices
+P3	S3	◇(constant_enjoyment ∧ diminution_prompts)
+P4	S4	◇pursue_pleasure_eagerly
+# The text plainly relies on this link from S3 to S5: a constitution where a diminution of pleasure does pain's work is one where life goes on without pain.
+A1	-	□(diminution_prompts → life_without_pain)
+C	S5	◇life_without_pain	from P2 P3 P4 A1
+P5	S7	◇free_an_hour → ◇perpetual_exemption
+P6	S7	pain_particular_contrivance
+# S6 and S8 are rhetorical questions: the challenge that no reason appears for the contrivance of pain. They are not formalised.
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

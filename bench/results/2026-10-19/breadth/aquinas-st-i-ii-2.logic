@@ -1,0 +1,26 @@
+# the argument of aquinas-st-i-ii-2.md as claude-opus-5-5 read it: check that it says what the text says
+# Aquinas: virtues about operations can lack passion (S1-S2), but the joy of justice overflows into the senses (S3-S5).
+# Main conclusion: S5. The sub-argument about justice (S1-S2) is kept as a step.
+# S1's "can" is read as a plain claim inside the atom, not as a modal operator.
+atom	about_operations	justice is a moral virtue about operations, not about the passions
+atom	applies_will	justice applies the will to its proper act
+atom	act_is_passion	the proper act of the will to which justice applies it is a passion
+atom	can_be_without_passion	justice can be without passions
+atom	joy_from_justice	joy results from the act of justice, at least in the will
+atom	will_joy_is_passion	the joy in the will that results from the act of justice is a passion
+atom	lower_follow_higher	the lower powers follow the movement of the higher
+atom	joy_increased	the joy of justice is increased through the perfection of justice
+atom	overflow	the joy of justice overflows into the sensitive appetite
+atom	perfect_more_passion	the more perfect a virtue is, the more does it cause passion
+P1	S1	about_operations → can_be_without_passion	kind conceptual
+P2	S2	applies_will ∧ ¬act_is_passion
+P3	S2	applies_will ∧ ¬act_is_passion → about_operations
+C1	S2	can_be_without_passion	from P1 P2 P3
+P4	S3	joy_from_justice ∧ ¬will_joy_is_passion
+P5	S4	lower_follow_higher
+P6	S4	lower_follow_higher → (joy_increased → overflow)
+# The text plainly relies on the overflow (by reason of which perfection increases joy) to ground S5.
+A1	-	joy_from_justice → joy_increased
+A2	-	joy_increased ∧ overflow → perfect_more_passion
+C	S5	perfect_more_passion	from P4 P5 P6 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

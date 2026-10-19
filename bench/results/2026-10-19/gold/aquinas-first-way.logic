@@ -1,0 +1,30 @@
+# reading 3 of aquinas-first-way.md by claude-opus-5-5
+atom	some_motion	in the world some things are in motion
+atom	motion_is_reduction	motion is nothing else than the reduction of something from potentiality to actuality
+atom	reduction_needs_actual	nothing can be reduced from potentiality to actuality except by something in a state of actuality
+atom	no_same_respect	it is not possible that the same thing should be at once in actuality and potentiality in the same respect
+atom	no_self_motion	it is impossible that in the same respect a thing should be both mover and moved, i.e. move itself
+atom	moved_by_other	whatever is in motion is put in motion by another
+atom	infinite_regress	the series of movers moved by another goes on to infinity
+atom	first_mover	there is a first mover, put in motion by no other
+atom	other_movers	there are other (subsequent) movers
+atom	god	the first mover is God
+# Modal words (impossible, necessary) are already built into the given atoms, so no modal logic line is used.
+# S6 and S8 only illustrate (fire and wood; hot and cold) and are left out.
+P1	S2	some_motion	kind empirical
+P2	S4	motion_is_reduction	kind conceptual
+P3	S5	reduction_needs_actual	kind conceptual
+P4	S7	no_same_respect	kind conceptual
+A1	-	motion_is_reduction ∧ reduction_needs_actual ∧ no_same_respect → no_self_motion
+C1	S9	no_self_motion	from P2 P3 P4 A1
+A2	-	no_self_motion → moved_by_other
+C2	S10	moved_by_other	from C1 A2
+P5	S12	infinite_regress → ¬first_mover
+P6	S12	¬first_mover → ¬other_movers
+# The text relies on there being movers at all if things are in motion and are moved by another.
+A3	-	some_motion ∧ moved_by_other → other_movers
+C3	S13	first_mover	from P1 C2 A3 P6
+C4	S12	¬infinite_regress	from P5 C3
+P7	S13	first_mover → god
+C	S13	first_mover ∧ god	from C3 P7
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

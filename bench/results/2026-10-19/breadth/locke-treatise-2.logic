@@ -1,0 +1,17 @@
+# the argument of locke-treatise-2.md as claude-opus-5-5 read it: check that it says what the text says
+# Propositional reading of Locke, Second Treatise, sect. 120 (S1 and S2 are only the section heading).
+# The "must" in S5 is read as the condition under which the land is held, kept as a plain atom rather than a modal operator.
+atom	enters	a man incorporates himself into a commonwealth, entering society with others for the securing and regulating of property
+atom	land_exempt	his land, whose property is to be regulated by the laws of the society, is exempt from the jurisdiction of that government
+atom	annexes	by uniting himself to the commonwealth he annexes and submits to the community the possessions he has or shall acquire
+atom	land_subject	his possessions become subject to the government and dominion of that commonwealth as long as it hath a being
+atom	enjoys	someone thenceforth enjoys, by inheritance, purchase, permission or otherwise, any part of the land so annexed
+atom	submits	the one who enjoys the land takes it with the condition of submitting to the government of the commonwealth as far forth as any subject of it
+P1	S3	enters → ¬land_exempt	kind conceptual
+A1	-	¬land_exempt → annexes
+C1	S3	enters → annexes	from P1 A1
+P2	S4	annexes → land_subject
+C2	S4	enters → land_subject	from C1 P2
+P3	S5	land_subject ∧ enjoys → submits
+C	S5	enters → (enjoys → submits)	from C2 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

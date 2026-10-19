@@ -1,0 +1,11 @@
+# 3 readings by claude-opus-5-5, compared
+augustine-1.logic.r1: argue/readings-agree 4
+augustine-1.logic.r1: argue/readings-differ 0
+augustine-1.logic.r1: argue/verdicts-agree 1
+augustine-1.logic.r1: argue/mismatches 0
+augustine-1.logic.r1.2: argue/mismatches 0
+augustine-1.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: augustine-1.logic.r1
+# argument written to augustine-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+augustine-1.md:1: argue/assumed: C (S7): follows only by A1, which the text never states: state it, or argue for it
+augustine-1.logic.r1: argue/valid 1

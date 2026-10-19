@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+mill-liberty-2.md:1: argue/readings: S5 is read 2 ways: mill-liberty-2.logic.r2 has "◇guided_without"; mill-liberty-2.logic.r2.2 and mill-liberty-2.logic.r2.3 have nothing from it; they differ when nothing is true, which the second allows
+mill-liberty-2.md:1: argue/modal-ambiguous: S5 is read mill-liberty-2.logic.r2.2 and mill-liberty-2.logic.r2.3 with no modality; mill-liberty-2.logic.r2 as what is necessary or possible: its "might" does not say which it means
+mill-liberty-2.md:1: argue/answered: S5: answered no, which keeps mill-liberty-2.logic.r2, to: Suppose "possibly, he is guided in some good path and kept out of harm's way without any of these faculties" is false. Is S5, "It is possible that he might be guided in some good path, and kept out of harm's way, without any of these things.", true then?
+mill-liberty-2.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: mill-liberty-2.logic.r2 has "manner_matters ∧ man_first → grows_all_sides ∧ ¬machine_model"; mill-liberty-2.logic.r2.2 and mill-liberty-2.logic.r2.3 have nothing from it; they differ when only "it is of importance not only what men do but also what manner of men they are that do it", "among the works of man, which human life is rightly employed in perfecting and beautifying, the first in importance is man himself" and "human nature is a machine to be built after a model and set to do exactly the work prescribed for it" are true, which the second allows
+mill-liberty-2.logic.r2: argue/readings: U1: mill-liberty-2.logic.r2 takes for granted "if (it is of importance not only what men do but also what manner of men they are that do it and among the works of man, which human life is rightly employed in perfecting and beautifying, the first in importance is man himself), then (human nature is a tree, which requires to grow and develop itself on all sides according to its inward forces and it is not so that human nature is a machine to be built after a model and set to do exactly the work prescribed for it)"; mill-liberty-2.logic.r2.2 and mill-liberty-2.logic.r2.3 do not
+mill-liberty-2.logic.r2: argue/answered: U1: answered yes, which keeps mill-liberty-2.logic.r2, to: Does the text's argument take this for granted, whether or not it says so: "if (it is of importance not only what men do but also what manner of men they are that do it and among the works of man, which human life is rightly employed in perfecting and beautifying, the first in importance is man himself), then (human nature is a tree, which requires to grow and develop itself on all sides according to its inward forces and it is not so that human nature is a machine to be built after a model and set to do exactly the work prescribed for it)"? Answer yes if the author would accept it as part of the argument.
+mill-liberty-2.logic.r2: argue/verdicts: valid as mill-liberty-2.logic.r2 reads it, not as the others do: which reading is right decides the verdict
+mill-liberty-2.logic.r2: argue/readings-agree 6
+mill-liberty-2.logic.r2: argue/readings-differ 2
+mill-liberty-2.logic.r2: argue/verdicts-agree 0
+mill-liberty-2.logic.r2: argue/mismatches 0
+mill-liberty-2.logic.r2.2: argue/mismatches 0
+mill-liberty-2.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: mill-liberty-2.logic.r2
+# argument written to mill-liberty-2.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+mill-liberty-2.md:1: argue/assumed: C (S10): follows only by A1, which the text never states: state it, or argue for it
+mill-liberty-2.logic.r2: argue/valid 1
+mill-liberty-2.md:1: argue/misses: O1 (S5): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+mill-liberty-2.md:1: argue/misses: R1 (S7): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+mill-liberty-2.logic.r2: argue/survives 1
