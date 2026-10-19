@@ -10,3 +10,6 @@ phil/scope data/scope/twice.logic data/scope/foresight.md
 phil/scope data/scope/restated.logic data/scope/foresight.md
 phil/scope data/scope/conceptual.logic data/scope/foresight.md
 phil/scope data/scope/essence.logic data/scope/foresight.md
+phil/prove -s 1 data/scope/shift.logic
+phil/scope data/scope/shift.logic data/scope/order.md
+phil/scope data/scope/sound.logic data/scope/order.md

@@ -496,6 +496,18 @@ some of what it missed, and costs nothing. The two can be held to each
 other: a sentence the rule says reports someone, which a reading takes
 as the text's own premise, is the critic's S4 regression found again.
 
+## The order of all and some
+
+The same mechanism as scope: `prove -s` now turns a premise's "every one
+has some" (∀x∃y, or ∀x (A → ∃y (C ∧ B))) into "some one for every one"
+(∃y∀x, keeping what is said of y alone with the some), and the other
+way; `phil/scope` says where the argument turns. Over the readings
+already made, at no cost: Aristotle's chief good (every pursuit aims at
+some good, so there is a good every pursuit aims at) in 2 of the 3
+readings that wrote the quantifiers, the third adding to its conclusion
+a predicate nothing supplies; no finding of order in the other 155
+gold readings, the 200 breadth readings, or the held-out sets.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of
@@ -506,9 +518,9 @@ as the text's own premise, is the critic's S4 regression found again.
    check `phil/corpus`'s alignments of one work's claim with
    another's, where a shift of sense between authors would hide.
 2. Scope: `phil/scope` (above) finds it in 16 runs of 18, with no
-   model. Next: a held-out set from more than one author; whether ought
-   findings should be marked apart; and the quantifier order the
-   readers now keep, which `prove -s` could turn over the same way.
+   model; and the order of all and some the same way (above). Next: a
+   held-out set from more than one author, and whether ought findings
+   should be marked apart.
 3. `argue/unfaithful` in dialogues: a claim put as a question and
    granted in the reply should be read from both.
 4. For `phil/corpus`: a source is read for everything it claims

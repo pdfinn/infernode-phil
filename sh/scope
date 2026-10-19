@@ -1,11 +1,15 @@
 #!/dis/sh.dis
 # phil/scope [-x] logicfile [document] - whether the argument read in
-# logicfile turns on the scope of a necessity or an ought.  "If p, then
+# logicfile turns on the scope of a necessity or an ought, or on the
+# order of all and some.  "If p, then
 # necessarily q" may put the necessity on q alone, p → □q, or on the
 # whole, □(p → q): the necessity of the consequent, q itself necessary
 # once p holds, or only of the consequence, q following from p of
 # necessity.  An argument may need the first where the text gives only
-# the second (if God foresees it, it must happen).  The same for ought: "if you promise, you ought to keep it".
+# the second (if God foresees it, it must happen).  The same for ought:
+# "if you promise, you ought to keep it".  And for all and some: "every
+# action aims at some good" is not "some good is aimed at by every
+# action", and an argument may need the second.
 # phil/prove -s turns over each such premise or assumption, one at a
 # time, and the argument is proved again: where its verdict changes,
 # argue/scope says so, at the statement, with both readings.  Not
@@ -61,7 +65,9 @@ rm -f $logic^.scopefound
 # one reading turned over, in $1: what the verdict does
 fn try {
 	phil/prove $1 $doc > $logic^.scopeout >[2=1]
-	v1=`{awk $valid $logic^.scopeout}
+	# restating counts as following here too: a premise turned over may
+	# say just what the conclusion says
+	v1=`{awk 'BEGIN { c = 0 } /argue\/circular: C[0-9]* \(/ { c = 1 } /argue\/valid -?[0-9]+$/ { v = $NF } END { if(c && v == 0) print 1; else print v }' $logic^.scopeout}
 	# (an unset variable is 0 to this awk, not "")
 	fails=`{awk 'BEGIN { f = "" } /argue\/invalid: [^ ]+ \(S[0-9]+\)/ { if(!got){ i = index($0, "argue/invalid: "); r = substr($0, i+15); j = index(r, ")"); f = substr(r, 1, j); got = 1 } } END { print f }' $logic^.scopeout}
 	sed 1q $1 | awk -F '	' -v 'v0='^$"v0 -v 'v1='^$"v1 -v 'fails='^$"fails -v 'logic='^$orig -v 'restated='^$"restated '{
@@ -79,6 +85,14 @@ fn try {
 			needs = "it needs the ought on the consequent alone (narrow scope), not only on the conditional (wide)"
 		else if($5 != "necessity")
 			needs = "it needs the necessity or ought on the consequent in one of them"
+		if($5 == "order"){
+			# every x has some y, or some y for every x: the second says more
+			if(v0 == 0 && v1 == 1 && $4 == "every-some")
+				print logic ": argue/scope: " at ": read as every one has some, " $6 ", the argument fails; read as some one for every one, " $7 ", it holds: it needs all and some the other way round, a quantifier shift, and which the sentence means decides the argument"
+			else if(v0 == 1 && v1 == 0 && $4 == "some-every")
+				print logic ": argue/scope: " at ": read as some one for every one, " $6 ", " holds "; read as every one has some, " $7 ", " what " does not follow: it needs all and some in that order, and which the sentence means decides the argument"
+			next
+		}
 		if($6 == "-"){
 			# every one turned over together
 			if(v0 == 1 && v1 == 0)

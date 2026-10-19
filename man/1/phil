@@ -532,7 +532,9 @@ with the model, the instructions' hash and the date.
 .B phil/scope
 Whether the argument read in
 .I logicfile
-turns on the scope of a necessity or an ought: the necessity of the
+turns on the order of all and some (every one has some, or some one for
+every one: a quantifier shift), or on the scope of a necessity or an
+ought: the necessity of the
 consequent,
 .BR "p → □q" ,
 or only of the consequence,
@@ -1202,7 +1204,11 @@ scope of a necessity or an ought in a premise or assumption turned over:
 .B "p → □q"
 as
 .BR "□(p → q)" ,
-and the other way, in the formula or a conjunct it asserts; a first
+and the other way, in the formula or a conjunct it asserts, and
+.B "∀x ∃y"
+as
+.BR "∃y ∀x" ,
+and the other way; a first
 line, a comment, says which statement, where the reading put the
 operator, and both formulas; nothing is written if the file has fewer.
 .IP

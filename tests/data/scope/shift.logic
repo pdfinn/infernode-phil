@@ -1,0 +1,5 @@
+atom	action(x)	x is an action
+atom	good(y)	y is a good
+atom	aims(x, y)	x aims at y
+P1	S1	all x: action(x) -> some y: good(y) & aims(x, y)
+C	S2	some y: good(y) & all x: action(x) -> aims(x, y)

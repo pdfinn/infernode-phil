@@ -1639,8 +1639,8 @@ reformat(file: string)
 # formula with what it says.
 Flip: adt {
 	q:	ref Q;
-	how:	string;	# where the reading put it: "consequent" or "whole"
-	what:	string;	# "necessity" or "obligation"
+	how:	string;	# where the reading put it: "consequent" or "whole"; "every-some" or "some-every"
+	what:	string;	# "necessity", "obligation" or "order"
 };
 
 flips(q: ref Q): list of ref Flip
@@ -1662,6 +1662,29 @@ flips(q: ref Q): list of ref Flip
 		if(deontic(q))
 			what = "obligation";
 		r = ref Flip(ref Q(Fimp, nil, nil, q.l.l, ref Q(Fnec, q.name, nil, q.l.r, nil)), "whole", what) :: r;
+	}
+	# the order of all and some: every x has some y, ∀x∃y, against some
+	# y for every x, ∃y∀x; the second says more.  With a condition on x
+	# (∀x (A → ∃y B)) the some is brought out past it, and with one on y
+	# (∃y (C ∧ ∀x (A → B))) put back in.
+	if(q.op == Fall && q.l != nil){
+		if(q.l.op == Fsome)
+			r = ref Flip(ref Q(Fsome, q.l.name, nil, ref Q(Fall, q.name, nil, q.l.l, nil), nil), "every-some", "order") :: r;
+		else if(q.l.op == Fimp && q.l.r != nil && q.l.r.op == Fsome){
+			sm := q.l.r;
+			# ∀x (A → ∃y (C(y) ∧ B)): what is said of y alone stays with
+			# the some, ∃y (C(y) ∧ ∀x (A → B))
+			if(sm.l != nil && sm.l.op == Fand && !mentions(sm.l.l, q.name))
+				r = ref Flip(ref Q(Fsome, sm.name, nil, ref Q(Fand, nil, nil, sm.l.l, ref Q(Fall, q.name, nil, ref Q(Fimp, nil, nil, q.l.l, sm.l.r), nil)), nil), "every-some", "order") :: r;
+			else
+				r = ref Flip(ref Q(Fsome, sm.name, nil, ref Q(Fall, q.name, nil, ref Q(Fimp, nil, nil, q.l.l, sm.l), nil), nil), "every-some", "order") :: r;
+		}
+	}
+	if(q.op == Fsome && q.l != nil){
+		if(q.l.op == Fall)
+			r = ref Flip(ref Q(Fall, q.l.name, nil, ref Q(Fsome, q.name, nil, q.l.l, nil), nil), "some-every", "order") :: r;
+		else if(q.l.op == Fand && q.l.r != nil && q.l.r.op == Fall && q.l.r.l != nil && q.l.r.l.op == Fimp)
+			r = ref Flip(ref Q(Fall, q.l.r.name, nil, ref Q(Fimp, nil, nil, q.l.r.l.l, ref Q(Fsome, q.name, nil, ref Q(Fand, nil, nil, q.l.l, q.l.r.l.r), nil)), nil), "some-every", "order") :: r;
 	}
 	# within a necessity: □(p → □q), as a premise read as necessary is
 	# written
@@ -1818,6 +1841,22 @@ scopesall(file: string, stmts: list of ref Stmt)
 		}
 		out.puts(s);
 	}
+}
+
+# Does q speak of the variable v?
+mentions(q: ref Q, v: string): int
+{
+	if(q == nil)
+		return 0;
+	if(q.op == Fatom){
+		for(a := q.args; a != nil; a = tl a)
+			if(hd a == v)
+				return 1;
+		return 0;
+	}
+	if((q.op == Fall || q.op == Fsome) && q.name == v)
+		return 0;
+	return mentions(q.l, v) || mentions(q.r, v);
 }
 
 rev2f(l: list of ref Flip): list of ref Flip

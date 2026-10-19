@@ -19,3 +19,10 @@ data/scope/nested.logic: argue/scope: P1 (S1): read with the necessity on its co
 data/scope/twice.logic: argue/scope: P1 P2: read with the necessity on the consequent in each, the argument holds; read with it on the whole conditional in all of them together, C (S3) does not follow: it needs the necessity of the consequent, not only of the consequence, and which the sentences mean decides the argument
 data/scope/restated.logic: argue/scope: P1 (S1): read with the necessity on its consequent alone, foresees → □sit, the conclusion follows, restating it; read with it on the whole conditional, □(foresees → sit), C (S3) does not follow: it needs the necessity of the consequent, not only of the consequence, and which the sentence means decides the argument
 data/scope/conceptual.logic: argue/scope: P1 (S1): read with the necessity on its consequent alone, □(foresees → □sit), the argument holds; read with it on the whole conditional, □(foresees → sit), C (S3) does not follow: it needs the necessity of the consequent, not only of the consequence, and which the sentence means decides the argument
+# scope	P1	S1	every-some	order	∀x (action(x) → ∃y (good(y) ∧ aims(x, y)))	∃y (good(y) ∧ ∀x (action(x) → aims(x, y)))
+atom	action(x)	x is an action
+atom	good(y)	y is a good
+atom	aims(x, y)	x aims at y
+P1	S1	∃y (good(y) ∧ ∀x (action(x) → aims(x, y)))
+C	S2	some y: good(y) & all x: action(x) -> aims(x, y)
+data/scope/shift.logic: argue/scope: P1 (S1): read as every one has some, ∀x (action(x) → ∃y (good(y) ∧ aims(x, y))), the argument fails; read as some one for every one, ∃y (good(y) ∧ ∀x (action(x) → aims(x, y))), it holds: it needs all and some the other way round, a quantifier shift, and which the sentence means decides the argument
