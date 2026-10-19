@@ -1,0 +1,120 @@
+#!/dis/sh.dis
+# phil/tree dir - a corpus as a tree of files, to walk and grep: what
+# phil/corpus wrote in dir (works, claims, ids), laid out by work and by
+# claim, so that the corpus's graph (who holds, denies, assumes and
+# reports each claim) is directories and lines, read with ls, cat and
+# grep.  Written to dir/tree, which it replaces; nothing in it is to be
+# edited, since it is written again from the corpus.
+#
+#	tree/works/id/bib		the work's line in works
+#	tree/works/id/statements	its statements: id, name, sentence, formula
+#	tree/claims/cid/formula		the claim, over the shared atoms
+#	tree/claims/cid/atoms		what its atoms stand for
+#	tree/claims/cid/asserts		works:statements that assert it, one a line
+#	tree/claims/cid/denies		... deny it
+#	tree/claims/cid/assumes		... assume it
+#	tree/claims/cid/reports		... report it, and whom they give it to
+#	tree/claims/cid/reports-not	... report that someone does not hold it
+#	tree/claims/index		cid and formula, one claim a line
+#	tree/atoms			every atom and what it stands for: the
+#					shared ones, then each work's own as
+#					work_atom
+#
+# A claim's cid is c and the first eight hexadecimal digits of the SHA-1
+# of its formula, so that it is the same claim, by the same name, in
+# every corpus that reads it the same.  dir/notes, the research's own
+# notes (notes/claims/cid, notes/works/id, notes/terms/word,
+# notes/journal), is made if it is not there, and nothing in it is
+# touched: notes are the researcher's, kept by name against the claims.
+load std
+
+if {! ~ $#* 1} {
+	echo 'usage: phil/tree dir' >[1=2]
+	raise fail:usage
+}
+dir=$1
+for f in works claims ids {
+	if {! ftest -f $dir/$f} {
+		echo 'phil/tree: no '^$dir/$f^': run phil/corpus '^$dir^' first' >[1=2]
+		raise 'fail:no corpus'
+	}
+}
+# plain mkdir, a level at a time: mkdir -p takes a #U path's first
+# element for a directory to make here
+t=$dir/tree
+if {ftest -d $t} { rm -r $t }
+mkdir $t $t/works $t/claims
+for n in '' /claims /works /terms {
+	if {! ftest -d $dir/notes^$n} { mkdir $dir/notes^$n }
+}
+if {! ftest -f $dir/notes/journal} { echo -n > $dir/notes/journal }
+
+# the works
+ifs='
+'
+for l in `{grep -v '^#' $dir/works} {
+	id=`{echo $l | awk -F '	' '{ print $1 }'}
+	mkdir $t/works/$id
+	echo $l > $t/works/$id/bib
+	awk -F '	' -v 'w='^$id '$1 == "id" && $2 == w { print $3 "	" $4 "	" $5 "	" $6 }' $dir/ids > $t/works/$id/statements
+}
+
+# the atoms: shared, then each work's own, named as the claims name them
+awk -F '	' '$1 == "atom" { n = $2; sub(/\(.*/, "", n); print n "	" $3 }' $dir/atoms > $t/atoms
+for w in `{ls $t/works} {
+	w=`{basename $w}
+	if {ftest -f $dir/readings/$w/logic} {
+		awk -F '	' -v 'w='^$w '$1 == "atom" { n = $2; sub(/\(.*/, "", n); print w "_" n "	" $3 }' $dir/readings/$w/logic >> $t/atoms
+	}
+}
+
+# the claims
+for l in `{grep '^claim	' $dir/claims} {
+	f=`{echo $l | awk -F '	' '{ print $2 }'}
+	h=`{echo -n $f | sha1sum}
+	cid=c^`{echo ${hd $h} | sed 's/^(........).*/\1/'}
+	if {! ftest -d $t/claims/$cid} { mkdir $t/claims/$cid }
+	echo $f > $t/claims/$cid/formula
+	echo $cid^'	'^$f >> $t/claims/index
+	echo $l | awk -F '	' -v 'd='^$t/claims/$cid '{
+		# kept apart, since setting $0 to print it sets NF
+		nf = NF
+		for(i = 1; i <= nf; i++)
+			fld[i] = $i
+		for(i = 3; i <= nf; i++){
+			n = split(fld[i], w, " ")
+			rel = w[1]
+			out = d "/" rel
+			for(j = 2; j <= n; j++){
+				# reports, reports-not: work:statement whom
+				if(rel ~ /^reports/ && j < n && w[j+1] !~ /:/){
+					$0 = w[j] "\t" w[j+1]
+					print > out
+					j++
+				}else{
+					$0 = w[j]
+					print > out
+				}
+			}
+		}
+	}'
+	# what its atoms stand for
+	echo $f | awk -v 'atoms='^$t^'/atoms' 'BEGIN {
+		while((getline l < atoms) > 0){
+			split(l, a, "\t")
+			m[a[1]] = a[2]
+		}
+	}
+	{
+		s = $0
+		while(match(s, /[a-z_][a-z0-9_]*/)){
+			t = substr(s, RSTART, RLENGTH)
+			s = substr(s, RSTART+RLENGTH)
+			if(m[t] != "" && !seen[t]){
+				seen[t] = 1
+				print t "\t" m[t]
+			}
+		}
+	}' > $t/claims/$cid/atoms
+}
+exit

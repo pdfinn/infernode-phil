@@ -10,6 +10,7 @@ SCRIPTS=\
 	scope\
 	senses\
 	settle\
+	tree\
 
 DISBIN=../dis/phil
 

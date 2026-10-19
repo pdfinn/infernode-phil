@@ -1,0 +1,24 @@
+load std
+rm -rf out/tree.d
+mkdir -p out/tree.d
+cp -r data/corpus/sovereign out/tree.d/sovereign
+phil/corpus out/tree.d/sovereign > /dev/null
+phil/tree out/tree.d/sovereign
+cd out/tree.d/sovereign
+echo '#' the tree
+ls tree tree/works/* tree/claims/*
+echo '#' index
+cat tree/claims/index
+echo '#' atoms
+cat tree/atoms
+for f in tree/works/*/* tree/claims/*/* {
+	if {! ~ $f tree/claims/index} {
+		echo '#' $f
+		cat $f
+	}
+}
+echo '#' notes kept when written again
+echo 'a note' > notes/claims/x
+phil/tree .
+ls notes
+cat notes/claims/x

@@ -33,7 +33,11 @@ tools moved, October 2026; update it as things move.
    settled debates to pass first. Step 1 is built: the corpus directory,
    `phil/corpus` holding each work's reports to what the reported work
    holds (by `prove`), and `phil/claims` reading a source for everything
-   it claims. Measured on three commentaries and their sources
+   it claims. `phil/tree` lays a corpus out as files (a directory a
+   claim, named by a hash of its formula, listing who asserts, denies,
+   assumes and reports it) beside `notes/`, which is the researcher's:
+   step 1 of [the namespace sketch](https://github.com/pdfinn/infernode-phiwb/issues/1),
+   with no server. Measured on three commentaries and their sources
    ([bench/RESULTS.md](../bench/RESULTS.md)): a report and its source
    now turn on the form two readers give one claim. The rest (cases,
    ledger, agenda, the benchmark of settled debates) is not built.

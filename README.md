@@ -43,6 +43,7 @@ Xenith and acme open it with button 3 and wwb's `gate`, `delta` and
 | `phil/settle` | which of several readings to keep: where they differ, a question yes or no, answered afresh or by a person |
 | `phil/readable` | what makes a logic file one the prover cannot read; `read`'s checker for `argue` |
 | `phil/corpus` | a field's works read as one, by rule: each work over the shared atoms, the claims and who asserts, denies, assumes or reports each, statement ids that survive a reread, and the secondary literature checked against the primary (a claim given as a work's that its reading denies, or never makes) |
+| `phil/tree` | a corpus as files to walk and grep: each work's statements, each claim a directory (its formula, its atoms, who asserts, denies, assumes or reports it), named by a hash of its formula; `notes/` made beside it and left to the researcher |
 
 The manual is `man 1 phil`. The logic file is described in
 [docs/ARGUMENT-FORMAT.md](docs/ARGUMENT-FORMAT.md), and what the tools
@@ -279,8 +280,8 @@ the rule a change to `prove` is held to.
 ## Layout
 
 ```
-appl/cmd/          prove, join, map, tableau, corpus (Limbo)
-sh/                argue, read, settle, readable (Inferno shell)
+appl/cmd/          prove, join, map, tableau, corpus, says, kind (Limbo)
+sh/                argue, read, settle, readable, claims, senses, scope, tree (Inferno shell)
 lib/phil/          the instructions argue gives a model
 man/1/phil         the manual
 demo/              the guide and its files

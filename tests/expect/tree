@@ -1,0 +1,101 @@
+# the tree
+tree/atoms
+tree/claims
+tree/works
+tree/works/critic/bib
+tree/works/critic/statements
+tree/works/hobbes/bib
+tree/works/hobbes/statements
+tree/claims/c68a603ed/atoms
+tree/claims/c68a603ed/formula
+tree/claims/c68a603ed/reports
+tree/claims/c6abca1ca/atoms
+tree/claims/c6abca1ca/formula
+tree/claims/c6abca1ca/reports
+tree/claims/ca88f537b/asserts
+tree/claims/ca88f537b/atoms
+tree/claims/ca88f537b/formula
+tree/claims/ce64e3939/asserts
+tree/claims/ce64e3939/atoms
+tree/claims/ce64e3939/denies
+tree/claims/ce64e3939/formula
+tree/claims/cf65f74f3/asserts
+tree/claims/cf65f74f3/atoms
+tree/claims/cf65f74f3/formula
+tree/claims/cf65f74f3/reports
+tree/claims/cf65f74f3/reports-not
+tree/claims/index
+# index
+cf65f74f3	distrust
+ca88f537b	distrust->noindustry
+ce64e3939	noindustry
+c6abca1ca	ought critic_elected
+c68a603ed	critic_promises
+# atoms
+distrust	without a sovereign, people cannot trust one another
+noindustry	without a sovereign there is no industry
+critic_notrust	without a sovereign, people cannot trust one another
+critic_industry	without a sovereign there is industry
+critic_elected	the sovereign must be elected
+critic_promises	without a sovereign, people keep their promises
+hobbes_distrust	without a sovereign, people cannot trust one another
+hobbes_noindustry	without a sovereign there is no industry
+# tree/works/critic/bib
+critic	Critic2026	secondary	2026	critic.md	-	A reply to it
+# tree/works/critic/statements
+k959cf92b	P1	S1	distrust
+kccc18e89	P2	S2	!distrust
+ka95e1d11	P3	S3	ought critic_elected
+kf98a614c	P4	S4	critic_promises
+k002ee04d	P5	S5	!noindustry
+kf34cd63b	C	S6	!noindustry
+# tree/works/hobbes/bib
+hobbes	Hobbes1651	primary	1651	hobbes.md	-	An argument for the sovereign, after Leviathan ch. 13
+# tree/works/hobbes/statements
+k8f2a575b	P1	S1	distrust
+k4b81bcf2	P2	S2	distrust->noindustry
+k8b1f2e87	C	S3	noindustry
+# tree/claims/c68a603ed/atoms
+critic_promises	without a sovereign, people keep their promises
+# tree/claims/c68a603ed/formula
+critic_promises
+# tree/claims/c68a603ed/reports
+critic:P4	locke
+# tree/claims/c6abca1ca/atoms
+critic_elected	the sovereign must be elected
+# tree/claims/c6abca1ca/formula
+ought critic_elected
+# tree/claims/c6abca1ca/reports
+critic:P3	hobbes
+# tree/claims/ca88f537b/asserts
+hobbes:P2
+# tree/claims/ca88f537b/atoms
+distrust	without a sovereign, people cannot trust one another
+noindustry	without a sovereign there is no industry
+# tree/claims/ca88f537b/formula
+distrust->noindustry
+# tree/claims/ce64e3939/asserts
+hobbes:C
+# tree/claims/ce64e3939/atoms
+noindustry	without a sovereign there is no industry
+# tree/claims/ce64e3939/denies
+critic:P5
+critic:C
+# tree/claims/ce64e3939/formula
+noindustry
+# tree/claims/cf65f74f3/asserts
+hobbes:P1
+# tree/claims/cf65f74f3/atoms
+distrust	without a sovereign, people cannot trust one another
+# tree/claims/cf65f74f3/formula
+distrust
+# tree/claims/cf65f74f3/reports
+critic:P1	Hobbes1651
+# tree/claims/cf65f74f3/reports-not
+critic:P2	hobbes
+# notes kept when written again
+notes/claims
+notes/journal
+notes/terms
+notes/works
+a note

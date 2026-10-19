@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -226,6 +226,9 @@ phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses
 [
 .B -x
 ]
+.I dir
+.br
+.B phil/tree
 .I dir
 .SH DESCRIPTION
 These commands read an argument and decide what follows from it.
@@ -681,6 +684,53 @@ a reported claim no work in the corpus holds: none whose own premises,
 assumptions and conclusions entail it.
 Each is at the reporting work's sentence; measures follow, for
 .IR wwb/gate .
+.TP
+.B phil/tree
+The corpus in
+.I dir
+(as
+.I phil/corpus
+wrote it) laid out as files, to walk with
+.IR ls ,
+.I cat
+and
+.IR grep :
+.BI tree/works/ id /bib
+and
+.BI tree/works/ id /statementsR,
+and for each claim a directory
+.BI tree/claims/ cid
+holding its
+.BR formula ,
+its
+.B atoms
+and what they stand for, and the works' statements that
+.BR asserts ,
+.BR denies ,
+.BR assumes ,
+.B reports
+(with whom they give it to) and
+.B reports-not
+it, one a line;
+.B tree/claims/index
+lists them, and
+.B tree/atoms
+every atom.
+A
+.I cid
+is
+.B c
+and the first eight hexadecimal digits of the SHA-1 of the formula, so
+a claim has the same name wherever it is read the same.
+.B tree
+is written afresh each time.
+.BI dir /notes
+.RB ( claims ,
+.BR works ,
+.BR terms ,
+.BR journal )
+is made if it is missing and never touched: the research's notes,
+kept by the claims' and works' names.
 .TP
 .B phil/prove
 Decides whether an argument's conclusion follows from its premises.
