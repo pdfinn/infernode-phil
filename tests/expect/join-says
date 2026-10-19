@@ -1,0 +1,14 @@
+atom	short	without a sovereign the life of man is short
+atom	distrust	without a sovereign, people cannot trust one another
+atom	noplans	without a sovereign, no one plans for the future
+# part 1: data/argue/says/trust.logic
+P1	S1	short	says hobbes
+P2	S2	distrust	kind empirical
+P3	S3	distrust -> noplans	kind conceptual
+C1	S4	noplans	from P2 P3
+# part 2: data/argue/says/onreport.logic
+P4	S1	short	says hobbes
+P5	S2	short -> noplans
+C2	S4	noplans	from P4 P5	kind empirical
+C3	S4	noplans	from C2
+# steps: C1 C3

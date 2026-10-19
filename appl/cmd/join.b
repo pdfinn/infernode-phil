@@ -246,7 +246,7 @@ part(file: string, n: int): (string, string, string)
 	if(!cfrom)
 		for(l = lines; l != nil; l = tl l){
 			(nil, f) := sys->tokenize(hd l, "\t");
-			if(f == nil || !stmtname(hd f) || hd f == "C" || member(hd f, drawn))
+			if(f == nil || !stmtname(hd f) || hd f == "C" || member(hd f, drawn) || reports(f))
 				continue;
 			case (hd f)[0] {
 			'P' or 'A' or 'C' =>
@@ -294,29 +294,37 @@ part(file: string, n: int): (string, string, string)
 		}
 		if(!stmtname(hd f) || member(hd f, linked))
 			continue;
-		# name, sentence, formula, and what it is from or against
-		fs := array[4] of { * => "" };
+		# name, sentence, formula, and what follows: what it is from
+		# or against (first, where it is either), whose claim it
+		# reports, what kind of claim it is
+		nfs := len f;
+		if(nfs < 3)
+			nfs = 3;
+		fs := array[nfs] of { * => "" };
 		k := 0;
-		for(fl := f; fl != nil && k < 4; fl = tl fl)
+		for(fl := f; fl != nil; fl = tl fl)
 			fs[k++] = hd fl;
 		fs[0] = rename(fs[0], old, new);
 		fs[2] = deonticize(renameatoms(fs[2], aold, anew), kd);
 		pused = idents(fs[2], pused);
-		if(fs[3] != nil){
-			(nil, ws) := sys->tokenize(fs[3], " ");
+		for(x := 3; x < nfs; x++){
+			(nil, ws) := sys->tokenize(fs[x], " ");
+			if(ws == nil || hd ws != "from" && hd ws != "against")
+				continue;
 			nt := "";
 			for(; ws != nil; ws = tl ws){
 				if(nt != "")
 					nt += " ";
 				nt += rename(hd ws, old, new);
 			}
-			fs[3] = nt;
+			fs[x] = nt;
 		}
-		if(hd f == "C" && !cfrom && implicit != "")
-			fs[3] = "from" + implicit;
 		o += fs[0] + "\t" + fs[1] + "\t" + fs[2];
-		if(fs[3] != nil)
-			o += "\t" + fs[3];
+		if(hd f == "C" && !cfrom && implicit != "")
+			o += "\tfrom" + implicit;
+		for(x = 3; x < nfs; x++)
+			if(fs[x] != nil)
+				o += "\t" + fs[x];
 		o += "\n";
 	}
 	if(concl != nil){
@@ -325,6 +333,20 @@ part(file: string, n: int): (string, string, string)
 	}
 	used = pused :: used;
 	return (o, concl, nil);
+}
+
+# Whether a statement's fields say whose claim it reports (says): the
+# work's account of another's claim, which nothing rests on unasked.
+reports(f: list of string): int
+{
+	if(len f < 4)
+		return 0;
+	for(f = tl tl tl f; f != nil; f = tl f){
+		(nil, ws) := sys->tokenize(hd f, " ");
+		if(ws != nil && hd ws == "says")
+			return 1;
+	}
+	return 0;
 }
 
 # What the atom an is said to mean by the part that declared it first;

@@ -79,7 +79,13 @@ Stmt: adt {
 	text:	string;		# the formula as written
 	from:	list of string;	# a step's: the statements it is drawn from
 	against:	list of string;	# an objection's or reply's: what it attacks
+	says:	string;	# a premise the work reports, not asserts: whose claim it is
+	kind:	string;	# what kind of claim: empirical, normative or conceptual
 };
+
+# What kind a claim may be (a kind field): tested differently, and
+# priced differently in a corpus's ledger.
+Kinds := array[] of { "empirical", "normative", "conceptual" };
 
 out: ref Iobuf;
 atoms: array of string;
@@ -563,7 +569,7 @@ support(st: ref Stmt, prems: list of ref Stmt): list of ref Stmt
 		r: list of ref Stmt;
 		for(fl := st.from; fl != nil; fl = tl fl){
 			s := stmtnamed(hd fl, everything);
-			if(s != nil && !inlist(s, r))
+			if(s != nil && s.says == nil && !inlist(s, r))
 				r = s :: r;
 		}
 		return rev(r);
@@ -1729,27 +1735,51 @@ readstmts(file: string): (list of ref Stmt, ref Stmt, list of ref Stmt)
 			lreport(n, "argue/syntax", sys->sprint("%s: %s", name, err));
 			continue;
 		}
-		st := ref Stmt(name, sn, nil, q, n, text, nil, nil);
-		# a fourth field: what a conclusion is drawn from
-		if(nf > 3){
-			(nil, ws) := sys->tokenize(hd tl tl tl fl, " ,");
+		st := ref Stmt(name, sn, nil, q, n, text, nil, nil, nil, nil);
+		# fields after the formula, each a word and what follows it:
+		# what a conclusion is drawn from, what an objection is
+		# against, whose claim a premise reports, what kind a claim is
+		bad := 0;
+		for(xl := tl tl tl fl; xl != nil && !bad; xl = tl xl){
+			(nil, ws) := sys->tokenize(hd xl, " ,");
+			if(ws != nil && (hd ws == "says" || hd ws == "kind")){
+				if(tl ws == nil){
+					what := "a kind: empirical, normative or conceptual";
+					if(hd ws == "says")
+						what = "whose claim it is (says schmitt)";
+					lreport(n, "argue/syntax", sys->sprint("%s: %s names %s", name, hd ws, what));
+					bad = 1;
+				}else if(hd ws == "says"){
+					if(name == nil || name[0] != 'P'){
+						lreport(n, "argue/syntax", sys->sprint("%s: only a premise (P1, ...) reports what another says", name));
+						bad = 1;
+					}
+					st.says = words(tl ws);
+				}else{
+					st.kind = hd tl ws;
+					if(tl tl ws != nil || !member(st.kind, kindlist())){
+						lreport(n, "argue/syntax", sys->sprint("%s: a kind is empirical, normative or conceptual", name));
+						bad = 1;
+					}
+				}
+				continue;
+			}
 			if(ws == nil || (hd ws != "from" && hd ws != "against") || tl ws == nil){
 				lreport(n, "argue/syntax", sys->sprint("%s: a fourth field is from and the statements it rests on (from P1 P2), or against and what it attacks (against P1)", name));
-				continue;
-			}
-			if(hd ws == "from" && !isconcl(name)){
+				bad = 1;
+			}else if(hd ws == "from" && !isconcl(name)){
 				lreport(n, "argue/syntax", sys->sprint("%s: only a conclusion (C, C1, C2, ...) is drawn from others", name));
-				continue;
-			}
-			if(hd ws == "against" && !isattack(name)){
+				bad = 1;
+			}else if(hd ws == "against" && !isattack(name)){
 				lreport(n, "argue/syntax", sys->sprint("%s: only an objection (O1, ...) or a reply (R1, ...) is against something", name));
-				continue;
-			}
-			if(hd ws == "from")
+				bad = 1;
+			}else if(hd ws == "from")
 				st.from = tl ws;
 			else
 				st.against = tl ws;
 		}
+		if(bad)
+			continue;
 		h := hashstr(name) % Nhash;
 		for(l := byname[h]; l != nil; l = tl l)
 			if((hd l).name == name)
@@ -1766,8 +1796,10 @@ readstmts(file: string): (list of ref Stmt, ref Stmt, list of ref Stmt)
 			if(st.against == nil)
 				lreport(n, "argue/syntax", sys->sprint("%s: an objection or reply says what it is against (against P1)", name));
 			objections = st :: objections;
-		}else
+		}else if(st.says == nil)
 			prems = st :: prems;
+		# a premise that reports another's claim is the work's
+		# account of it, not a premise of its argument
 	}
 	steps = rev(steps);
 	objections = rev(objections);
@@ -1781,7 +1813,34 @@ readstmts(file: string): (list of ref Stmt, ref Stmt, list of ref Stmt)
 		for(al := (hd l).against; al != nil; al = tl al)
 			if(stmtnamed(hd al, stmts) == nil)
 				lreport((hd l).line, "argue/syntax", sys->sprint("%s is against %s, which is not in the file", (hd l).name, hd al));
+	# a step drawn from what the work only reports
+	if(!quiet)
+		for(l = stmts; l != nil; l = tl l)
+			for(rl := (hd l).from; rl != nil; rl = tl rl)
+				if((t := stmtnamed(hd rl, stmts)) != nil && t.says != nil)
+					sreport(hd l, "argue/reported-as-premise", sys->sprint("%s rests on %s, which reports what %s says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own", (hd l).name, t.name, t.says));
 	return (rev(prems), concl, stmts);
+}
+
+# The kinds a claim may be, as a list.
+kindlist(): list of string
+{
+	l: list of string;
+	for(i := len Kinds - 1; i >= 0; i--)
+		l = Kinds[i] :: l;
+	return l;
+}
+
+# Words joined by blanks.
+words(l: list of string): string
+{
+	s := "";
+	for(; l != nil; l = tl l){
+		if(s != nil)
+			s += " ";
+		s += hd l;
+	}
+	return s;
 }
 
 # An objection's name (O1, O2, ...) or a reply's (R1, ...).

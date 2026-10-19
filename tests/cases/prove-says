@@ -1,0 +1,5 @@
+phil/prove data/argue/says/trust.logic data/argue/says/trust.md
+phil/prove data/argue/says/onreport.logic data/argue/says/trust.md
+phil/prove data/argue/says/bad.logic data/argue/says/trust.md
+phil/prove -f data/argue/says/trust.logic
+phil/prove -p data/argue/says/trust.logic

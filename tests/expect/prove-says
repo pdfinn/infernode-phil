@@ -1,0 +1,21 @@
+data/argue/says/trust.logic: argue/valid 1
+data/argue/says/trust.md:4: argue/reported-as-premise: C1 (S4): C1 rests on P1, which reports what hobbes says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+data/argue/says/trust.md:4: argue/invalid: C1 (S4): does not follow: when nothing is true, every premise holds and the conclusion fails
+data/argue/says/trust.md:4: argue/countermodel: C1 (S4): noplans = F, short = F
+data/argue/says/trust.md:4: argue/missing: C1 (S4): it would follow given "short" (without a sovereign the life of man is short), or "¬short → noplans"
+data/argue/says/trust.md:2: argue/unlinked: P2 (S2): P2 is the only statement about "without a sovereign the life of man is short": as written it cannot bear on the conclusion; was the same thing named two ways?
+data/argue/says/onreport.logic: argue/valid 0
+data/argue/says/bad.logic:2: argue/syntax: P1: says names whose claim it is (says schmitt)
+data/argue/says/bad.logic:3: argue/syntax: P2: a kind is empirical, normative or conceptual
+data/argue/says/bad.logic:4: argue/syntax: C: only a premise (P1, ...) reports what another says
+atom	short	without a sovereign the life of man is short
+atom	distrust	without a sovereign, people cannot trust one another
+atom	noplans	without a sovereign, no one plans for the future
+P1	S1	short	says hobbes
+P2	S2	distrust	kind empirical
+P3	S3	distrust → noplans	kind conceptual
+C	S4	noplans
+data/argue/says/trust.logic: positions/coherent: all can be true together: as when only "without a sovereign, people cannot trust one another" and "without a sovereign, no one plans for the future" are true
+data/argue/says/trust.logic: positions/checked 4
+data/argue/says/trust.logic: positions/impossible 0
+data/argue/says/trust.logic: positions/coherent 1

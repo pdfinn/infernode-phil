@@ -46,6 +46,7 @@ Node: adt {
 	reads:	string;		# as prove reads it back
 	marks:	list of string;	# what prove found of it
 	line:	int;		# in the logic file
+	says:	string;	# whose claim it reports, if it reports one
 };
 
 nodes: list of ref Node;	# in the order of the file
@@ -129,13 +130,16 @@ readlogic(file: string)
 		sn := 0;
 		if(len where > 1 && where[0] == 'S')
 			sn = int where[1:];
-		nd := ref Node(name, sn, hd tl tl fl, nil, nil, nil, nil, n);
-		if(nf > 3){
-			(nil, ws) := sys->tokenize(hd tl tl tl fl, " ,");
+		nd := ref Node(name, sn, hd tl tl fl, nil, nil, nil, nil, n, nil);
+		# after the formula, any order: from, against, says, kind
+		for(xl := tl tl tl fl; xl != nil; xl = tl xl){
+			(nil, ws) := sys->tokenize(hd xl, " ,");
 			if(ws != nil && hd ws == "from")
 				nd.from = tl ws;
 			if(ws != nil && hd ws == "against")
 				nd.against = tl ws;
+			if(ws != nil && hd ws == "says" && tl ws != nil)
+				nd.says = hd tl ws;
 		}
 		r = nd :: r;
 	}
@@ -264,6 +268,8 @@ label(n: ref Node): string
 		s += sys->sprint(" (S%d)", n.sent);
 	else if(n.name[0] == 'A')
 		s += " (unstated)";
+	if(n.says != nil)
+		s += ", what " + n.says + " says";
 	s += ": " + text(n);
 	if(n.marks != nil){
 		m := "";
