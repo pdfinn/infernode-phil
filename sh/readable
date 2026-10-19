@@ -1,0 +1,13 @@
+#!/dis/sh.dis
+# phil/readable logicfile [document] - what makes a logic file one the
+# prover cannot read: a syntax error, a statement without a sentence
+# the document has, no conclusion, a name twice, an atom undeclared.
+# Nothing printed means it can be read.  phil/read's checker for the
+# readings argue asks for.
+load std
+if {! ~ $#* 1 2} {
+	echo 'usage: phil/readable logicfile [document]' >[1=2]
+	raise fail:usage
+}
+phil/prove $* >[2=1] | grep '(argue/syntax|argue/no-sentence|argue/no-conclusion|argue/duplicate|argue/undefined)'
+exit

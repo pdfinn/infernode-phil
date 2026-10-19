@@ -9,7 +9,7 @@
 # readings compared, and misreadings found by reading them back
 # beside the sentences, even when most of the readings share them;
 # an argument in steps with an objection; and a writer's own reading
-# set beside a cold one (-s).
+# set beside a cold one (-s).  ARGUE_REQUESTS=dir keeps the requests.
 # Needs python3; ROOT as for tests/run.sh.
 here=$(cd "$(dirname "$0")/.." && pwd)
 if [ -z "$ROOT" ] || [ ! -f "$ROOT/mkconfig" ]; then
@@ -30,10 +30,19 @@ if [ ! -f "$wwb/dis/wwb/lib/prose.dis" ]; then
 	echo "$0: no built Writer's Workbench at $wwb: set WWB" >&2
 	exit 1
 fi
-tmp=$(mktemp -d)
+# ARGUE_REQUESTS=dir keeps every request the fake model is sent there,
+# so that a change can be shown to send the same requests as before
+# (PHIL.md, how a prompt change is checked)
+if [ -n "$ARGUE_REQUESTS" ]; then
+	tmp=$ARGUE_REQUESTS
+	rm -rf "$tmp"
+	mkdir -p "$tmp"
+else
+	tmp=$(mktemp -d)
+fi
 rm -rf "$here/tests/out/argue.logic.parts"
 fake=
-trap '[ -n "$fake" ] && kill $fake 2>/dev/null; rm -rf "$tmp"' EXIT
+trap '[ -n "$fake" ] && kill $fake 2>/dev/null; [ -n "$ARGUE_REQUESTS" ] || rm -rf "$tmp"' EXIT
 port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0)); print(s.getsockname()[1])')
 python3 -I "$here/tests/fakellm.py" "$port" "$tmp/requests" "$here/tests/data/argue/reply" &
 fake=$!

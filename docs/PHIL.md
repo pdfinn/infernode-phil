@@ -1,7 +1,7 @@
 # ϕwb: the Philosopher's Workbench
 
-A design sketch, before code. Status: step 0's move is done; `read`
-and `settle` are next. This is the collection
+A design sketch, before code. Status: step 0 is done, the move and
+`read` and `settle`; CORPUS.md's step 1 is next. This is the collection
 that `argue`, `prove` and the corpus of [CORPUS.md](CORPUS.md) move
 into, what stays behind in the Writer's Workbench, how the two meet,
 and the two ways a language model is used in it. [REACH.md](REACH.md)
@@ -208,6 +208,9 @@ allowance that a model varies:
 1. The scripted-reader tests must give the same findings before and
    after; a prompt change that changes a parser's input is a format
    change and is made with the parser.
+   `ARGUE_REQUESTS=dir tests/argue_test.sh` keeps every request a
+   scripted run sends, so that a change meant to send the same requests
+   can be shown to.
 2. The live benchmarks are run three times before and three times
    after, with the same model, and the report says for each finding
    whether it was found in every run before, in every run after, or
@@ -233,7 +236,23 @@ The order of work in CORPUS.md stands. Before it, the move:
    `settle` extracted from `argue`, with `argue` a client of them and
    its tests unchanged. This is a refactor with a golden test on every
    side of it, and it is the step that makes every later tool a prompt
-   and a checker.
+   and a checker. Done, and held to more than the tests: every request
+   argue's test sends the model (fourteen scenarios, 182,069 bytes) is
+   byte for byte what it sent before (`ARGUE_REQUESTS=dir
+   tests/argue_test.sh` keeps them). `phil/readable` is the checker for
+   a logic file. What step 0 leaves:
+   - `settle` compares logic files only (through `prove -c`); a reading
+     of another form (an alignment's yes or no, a case's valuation) will
+     want a comparer of its own, and `settle` a way to name it, when
+     `align` and `cases` are built.
+   - `argue -w` still asks the model directly to join a work's parts
+     (`/lib/phil/argue-work`), since that reading is checked and retried
+     in its own way; it moves onto `read` when `read` can take that
+     check.
+   - A reader that is a host command (`os claude -p ...`) is not
+     confined by InferNode's name space, and its readings say so. Only
+     the API, `/mnt/llm`, or a reader inside InferNode is blinded by
+     construction.
 
 Then CORPUS.md's steps 1 to 8, with `questions` at step 4 beside
 `align` (the same protocol) and `split` at step 6 beside `schemes`.

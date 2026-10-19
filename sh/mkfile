@@ -4,6 +4,9 @@
 # finds them as phil/name.
 SCRIPTS=\
 	argue\
+	read\
+	readable\
+	settle\
 
 DISBIN=../dis/phil
 

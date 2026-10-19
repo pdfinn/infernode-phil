@@ -1,0 +1,219 @@
+#!/dis/sh.dis
+# phil/read [-k n] [-m model] [-H header] [-K lines] [-c checker] [-d doc]
+#	[-r again] [-z line] -o out prompt question - a reading: a language model, given
+# the instructions in prompt and the question in the file question,
+# writes something down in a declared form, and only the lines of that
+# form are kept.  The form is the logic file's: comments, atom, domain
+# and logic lines, and statements.  The reading is written to out; with
+# -k n, n readings, each by a reader of its own, to out.1 ... out.n.
+#
+# A reader is blinded.  Each runs in a name space of its own, made from
+# this one: its directory is an empty one, an empty directory is bound
+# over out's directory and over /n, and no device can be attached
+# (pctl nodevs), so a reader that is a program inside InferNode cannot
+# see the other readings, the answers or the corpus, by any name.  It
+# is given the instructions and the question and nothing else.  A
+# reader that is a host command (wwb/ask's way os ...) runs outside
+# InferNode's name space and is not confined by it; the reading says so.
+#
+# Each reading's first line is # header (-H), and its last says who
+# read it, with which instructions and when (last, so that it moves no
+# line the prover names):
+#	# read by claude-opus-5-5, prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space
+# -K names lines to put before the reader's own (atoms it may use
+# without declaring them; its own declaration, after, wins).
+#
+# With -c, checker is a command given the reading's file, and the
+# document it reads (-d); what it prints is what is wrong with the
+# reading, and nothing means it can be read (phil/readable, for a
+# logic file).
+# A reading that cannot be read goes back to a new reader with what is
+# wrong, twice at most: the text of -r (by default the question), what
+# was written (but its last line, which is not the reader's), and what
+# the checker said.  A reading that still cannot
+# be read is kept, and phil/read fails with the status unreadable.
+#
+# -z line: a reading with that line in it and no conclusion (C) is
+# taken as it is, unchecked: a reader's way of saying there is nothing
+# to read (# no argument).
+#
+# The model is reached through wwb/ask, as $wwbmodel says; -m names it.
+load std
+
+fn usage {
+	echo 'usage: phil/read [-k n] [-m model] [-H header] [-K lines] [-c checker] [-d doc] [-r again] [-z line] -o out prompt question' >[1=2]
+	raise fail:usage
+}
+
+k=1
+m=()
+header=()
+pre=()
+checker=()
+doc=()
+again=()
+none=()
+out=()
+args=$*
+while {~ ${hd $args} -*} {
+	opt=${hd $args}
+	args=${tl $args}
+	if {~ $#args 0} {usage}
+	if {~ $opt -k} {
+		k=${hd $args}
+	} {~ $opt -m} {
+		m=(-m ${hd $args})
+	} {~ $opt -H} {
+		header=${hd $args}
+	} {~ $opt -K} {
+		pre=${hd $args}
+	} {~ $opt -c} {
+		checker=${hd $args}
+	} {~ $opt -d} {
+		doc=${hd $args}
+	} {~ $opt -r} {
+		again=${hd $args}
+	} {~ $opt -z} {
+		none=${hd $args}
+	} {~ $opt -o} {
+		out=${hd $args}
+	} {
+		usage
+	}
+	args=${tl $args}
+}
+if {! ~ $#args 2 || ~ $#out 0} {usage}
+prompt=${hd $args}
+question=${hd ${tl $args}}
+for f in $prompt $question {
+	if {! ftest -f $f} {
+		echo 'phil/read: no file '^$f >[1=2]
+		raise 'fail:no file'
+	}
+}
+if {~ $#again 0} {
+	again=$question
+}
+
+who=`{wwb/ask -n $m}
+if {~ $#who 0} {
+	raise 'fail:no model'
+}
+who=$"who
+# the instructions, by a hash of what they say
+hash=`{sha1sum $prompt}
+hash=`{echo ${hd $hash} | sed 's/^(............).*/\1/'}
+day=`{date | awk 'BEGIN { split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", mn, " "); for(i = 1; i <= 12; i++) mi[mn[i]] = sprintf("%02d", i) } { printf "%s-%s-%02d\n", $NF, mi[$2], $3 }'}
+way=${hd ${split ' 	' $"wwbmodel}}
+blind='blinded by name space'
+if {~ $way os} {
+	blind='a host command, not confined by name space'
+}
+
+# out's directory, as a name: what a reader must not see
+dir=`{cleanname -d `{pwd} $out | sed 's,/[^/]*$,,'}
+if {~ $#dir 0} {
+	dir=/
+}
+empty=/tmp/phil.read.^${pid}
+mkdir -p $empty
+
+# ask in out's stead: a reader of its own, blinded; the question on its
+# standard input
+fn ask {
+	q=$1
+	a=$2
+	{
+		pctl forkns
+		if {ftest -d '#C'} {
+			bind -a '#C' / >[2] /dev/null
+		}
+		bind $empty $dir
+		if {ftest -d /n} {
+			bind $empty /n
+		}
+		cd $empty
+		pctl nodevs
+		wwb/ask $m $prompt
+	} < $q > $a
+}
+
+# keep answer target: only the reading's own lines, under its header
+fn keep {
+	answer=$1
+	target=$2
+	{
+		if {! ~ $#header 0} {
+			echo '#' $header
+		}
+		if {! ~ $#pre 0} {
+			grep '^(atom|domain)	' $pre
+		}
+		grep '^(#|atom	|domain	|logic	|[PAOR][0-9]+	|C[0-9]*	)' $answer
+		echo '#' read by $who, prompt $prompt $hash, $day, $blind
+	} > $target
+}
+
+# mend target: a reading the checker cannot read goes back to a new
+# reader, twice at most; unreadable says whether it still cannot be read
+fn mend {
+	target=$1
+	unreadable=()
+	tries=(1 2 3)
+	# nothing to read, as the reader says, or nothing to read it with
+	if {! ~ $#none 0} {
+		if {grep -s '^'^$none^'$' $target && ! grep -s '^C	' $target} {
+			tries=()
+		}
+	}
+	if {~ $#checker 0} {
+		tries=()
+	}
+	for try in $tries {
+		$checker $target $doc > $target^.wrong >[2=1]
+		unreadable=()
+		if {ftest -s $target^.wrong} {
+			unreadable=1
+		}
+		if {~ $#unreadable 1 && ! ~ $try 3} {
+			echo '#' the prover could not read $target: $who is asked again
+			cat $target^.wrong
+			{
+				cat $again
+				echo
+				echo 'You wrote:'
+				echo
+				grep -v '^# read by .*, prompt ' $target
+				echo
+				echo 'The prover could not use the file you wrote. It said:'
+				echo
+				cat $target^.wrong
+				echo
+				echo 'Write the whole file again, corrected, and nothing else.'
+			} > $target^.again
+			ask $target^.again $target^.answer
+			keep $target^.answer $target
+		}
+	}
+	rm -f $target^.answer $target^.wrong $target^.again
+}
+
+lost=()
+for i in `{seq 1 $k} {
+	t=$out
+	if {! ~ $k 1} {
+		t=$out^.$i
+	}
+	ask $question $t^.answer
+	keep $t^.answer $t
+	rm -f $t^.answer
+	mend $t
+	if {~ $#unreadable 1} {
+		lost=($lost $t)
+	}
+}
+rm -rf $empty
+if {! ~ $#lost 0} {
+	raise 'fail:unreadable'
+}
+exit

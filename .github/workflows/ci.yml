@@ -103,6 +103,10 @@ jobs:
       working-directory: infernode-phil
       run: tests/argue_test.sh
 
+    - name: phil/read's readers blinded
+      working-directory: infernode-phil
+      run: tests/read_test.sh
+
     - name: phil/prove against Z3
       working-directory: infernode-phil
       run: tests/prove_z3_test.sh

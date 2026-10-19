@@ -493,183 +493,67 @@ if {~ $#w 1} {
 		echo
 		grep '^(atom|domain|logic)	' $mine
 	}
-} | wwb/ask $m /lib/phil/argue > $logic^.answer
-# only the file's own lines: a model that talks is not obeyed
-# keep answer file header: only the file's own lines, under header
-fn keep {
-	# a block with a redirection is a command of its own: $1 in it is
-	# not this function's
-	answer=$1
-	target=$2
-	header=${tl ${tl $*}}
-	{
-		echo '#' $header
-		# a part may use the shared atoms without declaring them; its
-		# own lines come after, and a meaning it gives wins
-		if {! ~ $#vocab 0} {
-			grep '^(atom|domain)	' $vocab
-		}
-		grep '^(#|atom	|domain	|logic	|[PAOR][0-9]+	|C[0-9]*	)' $answer
-	} > $target
+} > $logic^.question
+# what a reader asked again is given before what it wrote, and what
+# precedes each question settle asks: the sentences alone
+{
+	echo 'The sentences, numbered:'
+	echo
+	wwb/sentences -m -t $r $f
+} > $logic^.sents
+# a part may use the shared atoms without declaring them
+pre=()
+if {! ~ $#vocab 0} {
+	pre=(-K $vocab)
 }
-# mend file header: a file the prover cannot read goes back to the
-# model with what is wrong in it, twice at most; unreadable says
-# whether it still cannot be read
-fn mend {
-	target=$1
-	header=${tl $*}
-	unreadable=()
-	for try in 1 2 3 {
-		phil/prove $target $f > $target^.check >[2=1]
-		grep '(argue/syntax|argue/no-sentence|argue/no-conclusion|argue/duplicate|argue/undefined)' $target^.check > $target^.wrong
-		unreadable=()
-		if {ftest -s $target^.wrong} {
-			unreadable=1
-		}
-		if {~ $#unreadable 1 && ! ~ $try 3} {
-			echo '#' the prover could not read $target: $who is asked again
-			cat $target^.wrong
-			# asked afresh, so the text goes with it
-			{
-				echo 'The sentences, numbered:'
-				echo
-				wwb/sentences -m -t $r $f
-				echo
-				echo 'You wrote:'
-				echo
-				cat $target
-				echo
-				echo 'The prover could not use the file you wrote. It said:'
-				echo
-				cat $target^.wrong
-				echo
-				echo 'Write the whole file again, corrected, and nothing else.'
-			} | wwb/ask $m /lib/phil/argue > $target^.answer
-			keep $target^.answer $target $header
-		}
-	}
-	rm -f $target^.answer $target^.check $target^.wrong
+# a part that argues nothing says so
+none=()
+if {! ~ $#range 0} {
+	none=(-z '# no argument')
 }
-# the model's answers and the prover's complaints, beside the file
-keep $logic^.answer $logic the argument of $f as $who read it: check that it says what the text says
+# the reading, by a reader of its own (phil/read): only the file's own
+# lines are kept, and a file the prover cannot read goes back to the
+# model with what is wrong in it, twice at most
+phil/read $m $pre $none -c phil/readable -d $f -r $logic^.sents -H 'the argument of '^$f^' as '^$who^' read it: check that it says what the text says' -o $logic /lib/phil/argue $logic^.question
 if {! ~ $#range 0 && grep -s '^# no argument' $logic && ! grep -s '^C	' $logic} {
-	rm -f $logic $logic^.answer
+	rm -f $logic $logic^.question $logic^.sents
 	echo '# no argument'
 	exit
 }
-mend $logic the argument of $f as $who read it: check that it says what the text says
 # more readings: the model reads the text again, as many times more as
-# -k asks, each time afresh but with the atoms of the first reading, so
-# that the readings can be compared; the prover says where they differ
-# and keeps the reading that, read back, fits the words best, and of
-# those the one most of the others agree with
+# -k asks, each by a reader of its own given the atoms of the first
+# reading, so that the readings can be compared; phil/settle says where
+# they differ, asks about it, and keeps the reading that, read back,
+# fits the words best, and of those the one most of the others agree with
 if {! ~ $k 1} {
 	grep '^(atom|domain|logic)	' $logic > $logic^.vocab
+	{
+		echo 'The sentences, numbered:'
+		echo
+		wwb/sentences -m -t $r $f
+		echo
+		echo 'Use these atoms, and no others; write their lines and then the statements:'
+		echo
+		cat $logic^.vocab
+	} > $logic^.question
 	files=$logic
 	for i in `{seq 2 $k} {
-		{
-			echo 'The sentences, numbered:'
-			echo
-			wwb/sentences -m -t $r $f
-			echo
-			echo 'Use these atoms, and no others; write their lines and then the statements:'
-			echo
-			cat $logic^.vocab
-		} | wwb/ask $m /lib/phil/argue > $logic^.answer
-		keep $logic^.answer $logic^.$i reading $i of $f by $who
-		mend $logic^.$i reading $i of $f by $who
+		phil/read $m $pre -c phil/readable -d $f -r $logic^.sents -H 'reading '^$i^' of '^$f^' by '^$who -o $logic^.$i /lib/phil/argue $logic^.question
 		# one reading the prover cannot read would stop the comparison
-		if {~ $#unreadable 0} {
+		if {~ $status ''} {
 			files=($files $logic^.$i)
 		} {
 			echo '#' reading $i is left out: the prover still cannot read it
 		}
 	}
 	echo '#' $#files readings by $who, compared
-	phil/prove $x -c -d $f $files > $logic^.cmp >[2=1]
-	# where they differ, a question the prover asks, yes or no, about a
-	# situation that tells the readings apart; put to the model afresh
-	# (unless -q), the answers rule readings out
-	rm -f $logic^.answers
-	qs=`{grep '^# question [^:]*:' $logic^.cmp | sed 's/^# question ([^:]*):.*/\1/'}
-	if {~ $#q 0} {
-		for key in $qs {
-			{
-				echo 'The sentences, numbered:'
-				echo
-				wwb/sentences -m -t $r $f
-				echo
-				grep '^# question '^$key^': ' $logic^.cmp | sed 's/^# question [^:]*: //'
-			} | wwb/ask $m /lib/phil/settle > $logic^.yn
-			# a model may reason first: the answer is the last line
-			# that is only yes or no, else the reply's first word
-			yn=`{tr A-Z a-z < $logic^.yn | sed -n 's/^[^a-z]*(yes|no)[^a-z]*$/\1/p' | tail -1}
-			if {~ $#yn 0} {
-				yn=`{sed 1q $logic^.yn | tr A-Z a-z | sed 's/^[^a-z]*//; s/[^a-z].*$//'}
-			}
-			if {~ $yn yes no} {
-				echo $key $yn >> $logic^.answers
-			}
-		}
-		if {ftest -s $logic^.answers} {
-			phil/prove $x -c -a $logic^.answers -d $f $files > $logic^.cmp >[2=1]
-		}
-	}
-	grep -v ': argue/support |^# best reading|^# assume S' $logic^.cmp
-	best=`{grep '^# best reading: ' $logic^.cmp | sed 's/^# best reading: //'}
-	if {! ~ $#best 0} {
-		if {! ~ $best $logic} {
-			cp $best $logic
-		}
-		echo '#' kept the reading that best fits the words and the other readings: $best
-	}
-	# what the answers say the text takes for granted, and the kept
-	# reading lacks: an assumption of its own, drawn on by the step at
-	# the sentence that rests on it in a reading that has it
-	if {grep -s '^# assume S' $logic^.cmp} {
-		grep '^# assume S' $logic^.cmp | sed 's/^# assume (S[0-9]+): /\1	/' > $logic^.assume
-		awk -F '	' -v 'OFS=	' '
-			NR == FNR { at[++na] = $1; f[na] = $2; next }
-			{ line[++nl] = $0 }
-			$1 ~ /^A[0-9]+$/ { k = substr($1, 2) + 0; if(k > maxa) maxa = k }
-			END {
-				for(i = 1; i <= na; i++){
-					name[i] = "A" (maxa + i)
-					# the step at its sentence that names what it rests
-					# on; else the conclusion, if it names its own
-					for(j = 1; j <= nl && !to[i]; j++){
-						split(line[j], w, "	")
-						if(w[2] == at[i] && w[4] ~ /^from /)
-							to[i] = j
-					}
-					for(j = 1; j <= nl && !to[i]; j++){
-						split(line[j], w, "	")
-						if(w[1] == "C" && w[4] ~ /^from /)
-							to[i] = j
-					}
-					if(to[i])
-						line[to[i]] = line[to[i]] " " name[i]
-				}
-				done = 0
-				for(j = 1; j <= nl; j++){
-					split(line[j], w, "	")
-					if(!done && w[1] ~ /^([PACOR][0-9]*)$/){
-						for(i = 1; i <= na; i++)
-							print name[i], "-", f[i]
-						done = 1
-					}
-					print line[j]
-				}
-			}' $logic^.assume $logic > $logic^.new
-		mv $logic^.new $logic
-		sed 's|^S[0-9]+	|# added to '^$logic^', as the answers say the text takes it for granted: |' $logic^.assume
-		rm -f $logic^.assume
-	}
-	rm -f $logic^.vocab $logic^.cmp $logic^.answer $logic^.answers $logic^.yn
+	phil/settle $q $x $m -p $logic^.sents -d $f $files
+	rm -f $logic^.vocab
 	for i in `{seq 2 $k} {
 		rm -f $logic^.$i
 	}
 }
+rm -f $logic^.question $logic^.sents
 if {! ~ $#mine 0} {
 	echo '#' $mine as its writer meant it, beside $logic as $who read it cold
 	phil/prove $x -c -d $f $mine $logic | grep -v ': argue/support |: argue/mismatches |^# best reading|^# if (yes|no):'

@@ -22,6 +22,7 @@ all install clean nuke:V:
 test:V:	install
 	tests/run.sh
 	tests/argue_test.sh
+	tests/read_test.sh
 	tests/prove_z3_test.sh
 	tests/format_test.sh
 	tests/typeset_test.sh

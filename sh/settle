@@ -1,0 +1,137 @@
+#!/dis/sh.dis
+# phil/settle [-qx] [-m model] [-p preamble] -d document reading ... -
+# which of several readings of a document to keep.  The readings are
+# logic files over one vocabulary (phil/read -k, each reader given the
+# first reading's atoms); the prover compares them (phil/prove -c) and,
+# where they differ, asks a question, yes or no, about a situation that
+# tells them apart.  Each question goes to a model afresh, through
+# wwb/ask with the instructions in /lib/phil/settle, after the text of
+# -p (the document's sentences, as the readers had them); with -q the
+# questions are left for a person (phil/prove -c -a answers them).  The
+# answers rule readings out; of those left, the one that, read back,
+# fits the words best and that most of the others agree with is kept,
+# copied over the first reading.  What the answers say the text takes
+# for granted and the kept reading lacks is added to it as an
+# assumption, drawn on by the step at the sentence that rests on it.
+#
+# It prints the comparison: where the readings differ, the questions,
+# the answers, and which reading was kept.  -x gives findings their
+# characters, as phil/prove -x does.
+load std
+
+fn usage {
+	echo 'usage: phil/settle [-qx] [-m model] [-p preamble] -d document reading ...' >[1=2]
+	raise fail:usage
+}
+
+q=()
+x=()
+m=()
+pre=()
+doc=()
+args=$*
+while {~ ${hd $args} -*} {
+	opt=${hd $args}
+	args=${tl $args}
+	if {~ $opt -q} {
+		q=-q
+	} {~ $opt -x} {
+		x=-x
+	} {~ $opt -m -p -d} {
+		if {~ $#args 0} {usage}
+		if {~ $opt -m} {
+			m=(-m ${hd $args})
+		} {~ $opt -p} {
+			pre=${hd $args}
+		} {
+			doc=${hd $args}
+		}
+		args=${tl $args}
+	} {
+		usage
+	}
+}
+if {~ $#args 0 || ~ $#doc 0} {usage}
+files=$args
+first=${hd $files}
+
+phil/prove $x -c -d $doc $files > $first^.cmp >[2=1]
+# where they differ, a question the prover asks, yes or no, about a
+# situation that tells the readings apart; put to the model afresh
+# (unless -q), the answers rule readings out
+rm -f $first^.answers
+qs=`{grep '^# question [^:]*:' $first^.cmp | sed 's/^# question ([^:]*):.*/\1/'}
+if {~ $#q 0} {
+	for key in $qs {
+		{
+			if {! ~ $#pre 0} {
+				cat $pre
+				echo
+			}
+			grep '^# question '^$key^': ' $first^.cmp | sed 's/^# question [^:]*: //'
+		} | wwb/ask $m /lib/phil/settle > $first^.yn
+		# a model may reason first: the answer is the last line
+		# that is only yes or no, else the reply's first word
+		yn=`{tr A-Z a-z < $first^.yn | sed -n 's/^[^a-z]*(yes|no)[^a-z]*$/\1/p' | tail -1}
+		if {~ $#yn 0} {
+			yn=`{sed 1q $first^.yn | tr A-Z a-z | sed 's/^[^a-z]*//; s/[^a-z].*$//'}
+		}
+		if {~ $yn yes no} {
+			echo $key $yn >> $first^.answers
+		}
+	}
+	if {ftest -s $first^.answers} {
+		phil/prove $x -c -a $first^.answers -d $doc $files > $first^.cmp >[2=1]
+	}
+}
+grep -v ': argue/support |^# best reading|^# assume S' $first^.cmp
+best=`{grep '^# best reading: ' $first^.cmp | sed 's/^# best reading: //'}
+if {! ~ $#best 0} {
+	if {! ~ $best $first} {
+		cp $best $first
+	}
+	echo '#' kept the reading that best fits the words and the other readings: $best
+}
+# what the answers say the text takes for granted, and the kept
+# reading lacks: an assumption of its own, drawn on by the step at
+# the sentence that rests on it in a reading that has it
+if {grep -s '^# assume S' $first^.cmp} {
+	grep '^# assume S' $first^.cmp | sed 's/^# assume (S[0-9]+): /\1	/' > $first^.assume
+	awk -F '	' -v 'OFS=	' '
+		NR == FNR { at[++na] = $1; f[na] = $2; next }
+		{ line[++nl] = $0 }
+		$1 ~ /^A[0-9]+$/ { k = substr($1, 2) + 0; if(k > maxa) maxa = k }
+		END {
+			for(i = 1; i <= na; i++){
+				name[i] = "A" (maxa + i)
+				# the step at its sentence that names what it rests
+				# on; else the conclusion, if it names its own
+				for(j = 1; j <= nl && !to[i]; j++){
+					split(line[j], w, "	")
+					if(w[2] == at[i] && w[4] ~ /^from /)
+						to[i] = j
+				}
+				for(j = 1; j <= nl && !to[i]; j++){
+					split(line[j], w, "	")
+					if(w[1] == "C" && w[4] ~ /^from /)
+						to[i] = j
+				}
+				if(to[i])
+					line[to[i]] = line[to[i]] " " name[i]
+			}
+			done = 0
+			for(j = 1; j <= nl; j++){
+				split(line[j], w, "	")
+				if(!done && w[1] ~ /^([PACOR][0-9]*)$/){
+					for(i = 1; i <= na; i++)
+						print name[i], "-", f[i]
+					done = 1
+				}
+				print line[j]
+			}
+		}' $first^.assume $first > $first^.new
+	mv $first^.new $first
+	sed 's|^S[0-9]+	|# added to '^$first^', as the answers say the text takes it for granted: |' $first^.assume
+	rm -f $first^.assume
+}
+rm -f $first^.cmp $first^.answers $first^.yn

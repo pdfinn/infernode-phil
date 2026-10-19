@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, prove, join, map, tableau \- the Philosopher's Workbench, \(*fwb
+phil, argue, prove, join, map, tableau, read, settle, readable \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -110,6 +110,57 @@ phil, argue, prove, join, map, tableau \- the Philosopher's Workbench, \(*fwb
 .B phil/tableau
 [
 .I file ...
+]
+.br
+.B phil/read
+[
+.B -k
+.I n
+] [
+.B -m
+.I model
+] [
+.B -H
+.I header
+] [
+.B -K
+.I lines
+] [
+.B -c
+.I checker
+] [
+.B -d
+.I doc
+] [
+.B -r
+.I again
+] [
+.B -z
+.I line
+]
+.B -o
+.I out
+.I prompt
+.I question
+.br
+.B phil/settle
+[
+.B -qx
+] [
+.B -m
+.I model
+] [
+.B -p
+.I preamble
+]
+.B -d
+.I document
+.I reading ...
+.br
+.B phil/readable
+.I logicfile
+[
+.I document
 ]
 .SH DESCRIPTION
 These commands read an argument and decide what follows from it.
@@ -303,6 +354,93 @@ statement is called.
 .B argue/runs-agree
 is 1 if every run's verdict was the same, 0 if not: a verdict that
 changes with the run rests on how the text is read.
+.TP
+.B phil/read
+A reading: a language model, given the instructions in
+.I prompt
+and the question in the file
+.IR question ,
+writes a logic file, and only the logic file's own lines are kept, in
+.IR out ;
+with
+.B -k
+.IR n ,
+.I n
+readings, each by a reader of its own, in
+.IB out .1
+\&...
+.IB out . n\fR.
+A reader is blinded: it runs in a name space of its own, its directory
+an empty one, an empty directory bound over
+.IR out 's
+directory and over
+.BR /n ,
+and no device attachable
+.RB ( "pctl nodevs" ),
+so that a reader that is a program inside InferNode cannot see the other
+readings, the answers or the corpus by any name; what it would see is not
+there.
+A reader that is a host command
+.RB ( $wwbmodel
+beginning
+.BR os )
+runs outside InferNode's name space and is not confined by it.
+Each reading's first line is
+.BI # " header"
+.RB ( -H ),
+and its last says who read it, with which instructions (by the first
+twelve digits of their SHA-1) and when, and whether it was blinded:
+.EX
+	# read by claude-opus-5-5, prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space
+.EE
+.B -K
+names atom lines to put before the reader's own.
+With
+.BR -c ,
+the
+.I checker
+is given the reading and the document
+.RB ( -d );
+what it prints is what is wrong, and a reading it finds wrong goes to a
+new reader with what is wrong, twice at most, after the text of
+.B -r
+(by default the question); a reading that still cannot be read is kept,
+and
+.I read
+fails with the status
+.BR unreadable .
+A reading with the line
+.B -z
+names in it and no conclusion is taken unchecked: a reader's way of
+saying there is nothing to read.
+.TP
+.B phil/settle
+Which of several readings of a document to keep.
+The prover compares them
+.RB ( "phil/prove -c" )
+and, where they differ, asks a question, yes or no, about a situation
+that tells them apart; each goes to a model afresh, with the instructions in
+.B /lib/phil/settle
+and the text of
+.B -p
+before it, and the answers rule readings out
+.RB ( -q
+leaves the questions for a person).
+Of those left, the one that, read back, fits the words best and that
+most of the others agree with is copied over the first; what the answers
+say the text takes for granted and it lacks is added to it as an
+assumption.
+It prints the comparison.
+.TP
+.B phil/readable
+What makes a logic file one the prover cannot read: a syntax error, a
+statement without a sentence the document has, no conclusion, a name
+twice, an atom undeclared.
+Nothing printed means it can be read.
+It is the checker
+.I argue
+gives
+.IR read .
 .TP
 .B phil/prove
 Decides whether an argument's conclusion follows from its premises.

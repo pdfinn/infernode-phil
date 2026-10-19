@@ -39,6 +39,9 @@ Xenith and acme open it with button 3 and wwb's `gate`, `delta` and
 | `phil/join` | the logic files of a work's parts as one argument in steps, for `argue -w` |
 | `phil/map` | an argument's shape: what each step rests on, as a tree, or in Argdown for argument-mapping tools |
 | `phil/tableau` | `prove -P`'s proofs, analytic tableaux, typeset for troff: the tree in pic, the formulas in eqn |
+| `phil/read` | a reading: a model writes a logic file, its own lines kept, each reader blinded by name space, a file the prover cannot read sent back; each reading says who read it, with which instructions and when |
+| `phil/settle` | which of several readings to keep: where they differ, a question yes or no, answered afresh or by a person |
+| `phil/readable` | what makes a logic file one the prover cannot read; `read`'s checker for `argue` |
 
 The manual is `man 1 phil`. The logic file is described in
 [docs/ARGUMENT-FORMAT.md](docs/ARGUMENT-FORMAT.md), and what the tools
@@ -225,6 +228,7 @@ model reading a text.
 ```sh
 ROOT=/path/to/infernode tests/run.sh             # the golden cases, in an emulator
 ROOT=/path/to/infernode tests/argue_test.sh      # phil/argue calling a fake model's API directly
+ROOT=/path/to/infernode tests/read_test.sh       # phil/read's readers blinded: what they cannot see, by name or device
 ROOT=/path/to/infernode tests/format_test.sh     # every logic file rewritten and proved the same; countermodels checked; tableaux close
 ROOT=/path/to/infernode tests/prove_z3_test.sh   # prove's verdicts against Z3 (pip install z3-solver)
 ROOT=/path/to/infernode tests/typeset_test.sh    # tableau set by the troff package (infernode-troff beside this tree)
@@ -240,7 +244,7 @@ the rule a change to `prove` is held to.
 
 ```
 appl/cmd/          prove, join, map, tableau (Limbo)
-sh/                argue (Inferno shell)
+sh/                argue, read, settle, readable (Inferno shell)
 lib/phil/          the instructions argue gives a model
 man/1/phil         the manual
 demo/              the guide and its files
