@@ -494,7 +494,8 @@ where it entails neither;
 .B claims/attributed-unread
 names a work not in the corpus, and
 .B claims/reported-only
-a claim no work asserts or assumes.
+a reported claim no work in the corpus holds: none whose own premises,
+assumptions and conclusions entail it.
 Each is at the reporting work's sentence; measures follow, for
 .IR wwb/gate .
 .TP

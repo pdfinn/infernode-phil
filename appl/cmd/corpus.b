@@ -26,8 +26,8 @@ implement Corpus;
 #		the claim nor its denial
 #	claims/attributed-unread	the claim is given as the view of a work
 #		not in the corpus, which cannot be checked
-#	claims/reported-only	no work in the corpus asserts or assumes the
-#		claim; it is only reported
+#	claims/reported-only	no work in the corpus holds the claim (none
+#		whose own commitments entail it); it is only reported
 #
 # Each check is decided by phil/prove: whether the other work's premises,
 # assumptions and conclusions entail the claim, or its denial.  Measures
@@ -633,20 +633,25 @@ attributions()
 			}
 		}
 	}
-	# a claim no work asserts or assumes
-	for(cl := revc(claims); cl != nil; cl = tl cl){
-		c := hd cl;
-		held := 0;
-		for(rl := c.rels; rl != nil; rl = tl rl){
-			(how, nil, nil) := hd rl;
-			if(how != "reports" && how != "reports-not")
-				held = 1;
+	# a claim no work holds: none whose own commitments entail it, as
+	# reported (its denial is another claim), the reporting work's own
+	# included; decided by prove, so that a claim held in other words
+	# is held
+	for(wl = works; wl != nil; wl = tl wl){
+		w := hd wl;
+		for(sl := w.stmts; sl != nil; sl = tl sl){
+			st := hd sl;
+			if(st.says == nil || !w.readable)
+				continue;
+			held := 0;
+			for(yl := works; yl != nil && !held; yl = tl yl)
+				if((hd yl).readable && entails(hd yl, w, st.shared) == 1)
+					held = 1;
+			if(held)
+				continue;
+			nonly++;
+			sfind(w, st, "claims/reported-only", sys->sprint("%s gives %s as %s's, and no work in the corpus holds it: it is only reported", st.name, show(st), st.says));
 		}
-		if(held || c.rels == nil)
-			continue;
-		nonly++;
-		(nil, w, st) := hd revrel(c.rels);
-		sfind(w, st, "claims/reported-only", sys->sprint("%s gives %s as %s's, and no work in the corpus asserts or assumes it: it is only reported", st.name, show(st), st.says));
 	}
 }
 
@@ -927,12 +932,23 @@ isidchar(c: int): int
 	return isidstart(c) || c >= '0' && c <= '9';
 }
 
+# A formula without its blanks, but one between two words (ought p,
+# all x), which it needs.
 unspace(s: string): string
 {
 	r := "";
-	for(i := 0; i < len s; i++)
-		if(s[i] != ' ' && s[i] != '\t')
+	for(i := 0; i < len s; i++){
+		if(s[i] != ' ' && s[i] != '\t'){
 			r[len r] = s[i];
+			continue;
+		}
+		j := i;
+		while(j < len s && (s[j] == ' ' || s[j] == '\t'))
+			j++;
+		if(len r > 0 && isidchar(r[len r-1]) && j < len s && isidchar(s[j]))
+			r[len r] = ' ';
+		i = j-1;
+	}
 	return r;
 }
 

@@ -174,6 +174,11 @@ of denials before it taken off; a work that states its denial denies it.
 	claim	contain_succeeds	denies mine:C	asserts gross:P14	assumes dyzenhaus:A3
 	claim	exception_decides	asserts schmitt:P3	reports gross:P7 schmitt	reports mine:P41 schmitt	denies gross:P8
 
+The index groups statements by their formula as written: two works
+that state one claim in different forms (`p -> q`, `!q -> !p`) are on
+two lines. What depends on holding a claim does not use the index for
+that; it asks `prove` whether a work's commitments entail it.
+
 The relations are `asserts` and `denies` (a premise or a conclusion),
 `assumes` and `assumes-not` (an assumption), and `reports` and
 `reports-not` (a premise with `says`), the last naming whose claim it
@@ -232,7 +237,7 @@ checks scholarship, by rule, each check decided by `prove` (built):
 | `claims/misattributed` | a work reports a claim of a work in the corpus that no reading of that work asserts |
 | `claims/contradicts-source` | a work reports a claim its source, in the corpus, denies |
 | `claims/attributed-unread` | a claim attributed to a work not in the corpus: the corpus cannot check it, and says which work would let it |
-| `claims/reported-only` | a claim every work in the corpus reports and none asserts: held by someone outside the corpus, or by no one |
+| `claims/reported-only` | a reported claim no work in the corpus holds, the reporter included: none whose own commitments entail it, as `prove` decides; held by someone outside the corpus, or by no one |
 
 The first two are the findings a historian of philosophy wants and no
 tool gives: the secondary literature checked against the primary text.
@@ -580,12 +585,14 @@ is, and the two other works.
    changed (944 arguments, 1,888 files of verdicts and TPTP compared).
    `map` marks a reported premise with whose claim it is; `join`
    carries every field and never makes a report a conclusion's
-   implicit premise. **Left of step 1:** `argue`'s instructions do not
-   yet ask the model for `says` and `kind` (a prompt change, held to
-   PHIL.md's check); the read-back does not yet check a `says`
-   statement's sentence for the marks of reporting
-   (`argue/attribution`); and the owner's own work with one other is
-   still to be written by hand.
+   implicit premise. `argue`'s instructions ask the model for `says`
+   and `kind`, checked live before and after
+   ([PROMPT-CHANGES.md](PROMPT-CHANGES.md)): every run marked exactly
+   the sentences that report, with the right author, and no verdict
+   changed. **Left of step 1:** the read-back does not yet check a
+   `says` statement's sentence for the marks of reporting
+   (`argue/attribution`), and the owner's own work with one other is
+   still to be put in a corpus.
 2. **`ledger`**, by rule, from what step 1 gives, with premises' kinds
    and `ledger/unsourced`. The first useful output. `delta` over it.
 3. **`cases`** and the suite runner; `pending` for the verdicts; the

@@ -52,6 +52,23 @@ C<TAB>S7<TAB>formula
   R1<TAB>S7<TAB>formula<TAB>against O1
   Write the objection as the text puts it, even if the text then
   answers it.
+- Where a sentence gives a claim as someone else's (X argues, X holds,
+  according to X, on X's view, a quotation with its author, a citation
+  after the claim), write it as a premise with a fourth field naming
+  whose it is, in one lower-case word: the author's surname, or the
+  work's key if the text gives one:
+  P3<TAB>S4<TAB>formula<TAB>says hobbes
+  Write the claim as the text attributes it, whether or not the text
+  agrees. Such a line is the text's report, not its own premise, and
+  nothing is drawn from it. Where the text also holds the claim itself,
+  or argues from it, write it again as a plain premise at that
+  sentence.
+- Where it is plain what kind of claim a premise is, add a field after
+  any other: kind empirical for how things are or were (what happened,
+  what people or institutions did), kind normative for what ought to
+  be, kind conceptual for what a word or concept means:
+  P2<TAB>S2<TAB>formula<TAB>kind empirical
+  Leave it out where it is not plain.
 - Where the text speaks of what must or might be (necessarily,
   possibly), put a line "logic<TAB>s5" first and write [] for
   necessarily and <> for possibly: "it might rain" is <>rain. Where

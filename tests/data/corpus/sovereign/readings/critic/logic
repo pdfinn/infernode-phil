@@ -1,11 +1,12 @@
 # the argument of critic.md, read by hand
+logic	kd
 atom	notrust	without a sovereign, people cannot trust one another
 atom	industry	without a sovereign there is industry
 atom	elected	the sovereign must be elected
 atom	promises	without a sovereign, people keep their promises
 P1	S1	notrust	says Hobbes1651
 P2	S2	!notrust	says hobbes
-P3	S3	elected	says hobbes
+P3	S3	ought elected	says hobbes
 P4	S4	promises	says locke
 P5	S5	industry	kind empirical
 C	S6	industry

@@ -76,6 +76,9 @@ in three documents:
 - [docs/REACH.md](docs/REACH.md): the problems the tools can and cannot
   reach.
 
+Every change to a prompt in `lib/phil` is checked live before and after,
+and recorded in [docs/PROMPT-CHANGES.md](docs/PROMPT-CHANGES.md).
+
 ## Installing
 
 You need a built InferNode and a built Writer's Workbench beside this
