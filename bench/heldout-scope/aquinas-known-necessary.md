@@ -1,0 +1,1 @@
+Obj. 3: Further, everything known by God must necessarily be, because even what we ourselves know, must necessarily be; and, of course, the knowledge of God is much more certain than ours. But no future contingent things must necessarily be. Therefore no contingent future thing is known by God.

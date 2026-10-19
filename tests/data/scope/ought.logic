@@ -1,0 +1,6 @@
+logic	kd
+atom	promise	you promise
+atom	keep	you keep the promise
+P1	S4	promise -> ought keep
+P2	S4	promise
+C	S4	ought keep

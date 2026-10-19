@@ -1,0 +1,1 @@
+Objection 1: It seems that the will of God imposes necessity on the things willed. For Augustine says (Enchiridion 103): "No one is saved, except whom God has willed to be saved. He must therefore be asked to will it; for if He wills it, it must necessarily be."

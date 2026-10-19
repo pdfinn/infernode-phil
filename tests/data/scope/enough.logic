@@ -1,0 +1,6 @@
+logic	s5
+atom	foresees	God foresees that I will sit
+atom	sit	I will sit
+P1	S1	[](foresees -> sit)
+P2	S2	[]foresees
+C	S3	[]sit

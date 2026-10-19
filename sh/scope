@@ -1,0 +1,80 @@
+#!/dis/sh.dis
+# phil/scope [-x] logicfile [document] - whether the argument read in
+# logicfile turns on the scope of a necessity or an ought.  "If p, then
+# necessarily q" may put the necessity on q alone, p → □q, or on the
+# whole, □(p → q): the necessity of the consequent, q itself necessary
+# once p holds, or only of the consequence, q following from p of
+# necessity.  An argument may need the first where the text gives only
+# the second (if God foresees it, it must happen).  The same for ought: "if you promise, you ought to keep it".
+# phil/prove -s turns over each such premise or assumption, one at a
+# time, and the argument is proved again: where its verdict changes,
+# argue/scope says so, at the statement, with both readings.  Not
+# marked: a reading on the whole that holds and fails on the consequent
+# alone, since it needs only the necessity of the consequence.  Which the
+# sentence means, and which is true, is not the prover's to say: the
+# finding marks where the argument turns.  No model is asked.
+load std
+
+fn usage {
+	echo 'usage: phil/scope [-x] logicfile [document]' >[1=2]
+	raise fail:usage
+}
+
+x=()
+args=$*
+while {~ ${hd $args} -*} {
+	if {~ ${hd $args} -x} {
+		x=-x
+	} {
+		usage
+	}
+	args=${tl $args}
+}
+if {~ $#args 0} {usage}
+logic=${hd $args}
+doc=${tl $args}
+
+valid='/argue\/valid -?[0-9]+$/ { v = $NF } END { print v }'
+v0=`{phil/prove $logic $doc >[2=1] | awk $valid}
+k=1
+more=1
+while {~ $more 1} {
+	phil/prove -s $k $logic > $logic^.scope >[2] /dev/null
+	if {! ftest -s $logic^.scope} {
+		more=0
+	} {
+		phil/prove $logic^.scope $doc > $logic^.scopeout >[2=1]
+		v1=`{awk $valid $logic^.scopeout}
+		# (an unset variable is 0 to this awk, not "")
+		fails=`{awk 'BEGIN { f = "" } /argue\/invalid: [^ ]+ \(S[0-9]+\)/ { if(!got){ i = index($0, "argue/invalid: "); r = substr($0, i+15); j = index(r, ")"); f = substr(r, 1, j); got = 1 } } END { print f }' $logic^.scopeout}
+		sed 1q $logic^.scope | awk -F '	' -v 'v0='^$"v0 -v 'v1='^$"v1 -v 'fails='^$"fails -v 'logic='^$logic '{
+			at = $2
+			if($3 != "-")
+				at = at " (" $3 ")"
+			if($4 == "consequent"){
+				as = "with the " $5 " on its consequent alone, " $6
+				other = "with it on the whole conditional, " $7
+			}else{
+				as = "with the " $5 " on the whole conditional, " $6
+				other = "with it on the consequent alone, " $7
+			}
+			what = fails
+			if(what == "")
+				what = "the conclusion"
+			needs = "it needs the necessity of the consequent, not only of the consequence"
+			if($5 == "obligation")
+				needs = "it needs the ought on the consequent alone (narrow scope), not only on the conditional (wide)"
+			# the necessity of the consequent needed: holds read so and not
+			# on the whole, or the other way about; a reading on the whole
+			# that holds needs only the necessity of the consequence
+			if(v0 == 1 && v1 == 0 && $4 == "consequent")
+				print logic ": argue/scope: " at ": read " as ", the argument holds; read " other ", " what " does not follow: " needs ", and which the sentence means decides the argument"
+			else if(v0 == 0 && v1 == 1 && $4 == "whole")
+				print logic ": argue/scope: " at ": read " as ", the argument fails; read " other ", it holds: " needs ", and which the sentence means decides the argument"
+			else if(v0 == 0 && v1 == 1)
+				print logic ": argue/scope: " at ": read " as ", the argument fails; read " other ", it holds: which the sentence means decides the argument"
+		}'
+	}
+	k=`{echo $k + 1 | calc}
+}
+rm -f $logic^.scope $logic^.scopeout

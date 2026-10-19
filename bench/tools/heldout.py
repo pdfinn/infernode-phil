@@ -43,7 +43,60 @@ H = [
      'G. Vlastos, "Was Polus Refuted?", American Journal of Philology 88 (1967)'),
 ]
 
+# The held-out scope shifts: an argument that needs the necessity of
+# the consequent (if p, then q is necessary) where the text gives only
+# the necessity of the consequence (necessarily, if p then q), each
+# named so by the author who answers it.  None was read while
+# phil/scope was written.  All four are objections in the Summa, the
+# one public-domain text at hand in which they are both made and
+# answered; that is a limit of the set.
+S = [
+    ('aquinas-known-necessary', 17611, 'Thomas Aquinas, Summa Theologica I q.14 a.13 obj. 3, tr. Fathers of the English Dominican Province',
+     'Obj. 3: Further, everything known by God must necessarily be',
+     'Therefore no contingent future thing is known by God.',
+     'scope', 'must necessarily be',
+     '"everything known by God must necessarily be" is true of the saying (necessarily, what God knows is so) and false of the thing (what God knows is itself necessary); the conclusion needs the second',
+     'Aquinas, ST I q.14 a.13 ad 3 (the composite and the divided sense)'),
+    ('aquinas-will-necessary', 17611, 'Thomas Aquinas, Summa Theologica I q.19 a.8 obj. 1, tr. Fathers of the English Dominican Province',
+     'Objection 1: It seems that the will of God imposes necessity on the things willed.',
+     'for if He wills it, it must necessarily be."',
+     'scope', 'must necessarily be',
+     '"if He wills it, it must necessarily be" is a necessary conditional, not a necessity in the thing willed; that the will imposes necessity needs the second',
+     'Aquinas, ST I q.19 a.8 ad 1 (conditional, not absolute, necessity)'),
+    ('aquinas-will-antecedent', 17611, 'Thomas Aquinas, Summa Theologica I q.19 a.8 obj. 3, tr. Fathers of the English Dominican Province',
+     'Obj. 3: Further, whatever is necessary by its antecedent cause is necessary absolutely',
+     'It follows therefore that all that God wills is necessary absolutely.',
+     'scope', 'necessary',
+     'that the conditional "if God wills a thing, it comes to pass" is necessary gives the necessity of the consequence; that what God wills is necessary absolutely needs the necessity of the consequent',
+     'Aquinas, ST I q.19 a.8 ad 3 (consequents have necessity according to the mode of their antecedents)'),
+    ('aquinas-providence-necessary', 17611, 'Thomas Aquinas, Summa Theologica I q.22 a.4 obj. 1, tr. Fathers of the English Dominican Province',
+     'Objection 1: It seems that divine providence imposes necessity upon things foreseen.',
+     'Therefore divine providence imposes a necessity upon things foreseen.',
+     'scope', 'of necessity',
+     'that the effect "flows of necessity" from providence, which cannot be frustrated, is the necessity of the consequence (necessarily, what is provided happens); that providence imposes necessity on the things needs the necessity of the consequent',
+     'Aquinas, ST I q.22 a.4 ad 1; Boethius, Consolation V.6 (simple and conditional necessity)'),
+]
+
+def build(items, out):
+    os.makedirs(out, exist_ok=True)
+    for (hid, n, src, start, end, cls, word, fault, ref) in items:
+        t = cut(n, start, end).replace('_', '')
+        open(os.path.join(out, hid + '.md'), 'w').write(t + '\n')
+        with open(os.path.join(out, hid + '.gold'), 'w') as f:
+            f.write('source\t%s\n' % src)
+            f.write('text\tProject Gutenberg ebook %d, https://www.gutenberg.org/ebooks/%d\n' % (n, n))
+            f.write('class\t%s\n' % cls)
+            f.write('word\t%s\n' % word)
+            f.write('fault\t%s\n' % fault)
+            f.write('reference\t%s\n' % ref)
+        print('%-28s %5d words  %s' % (hid, len(t.split()), word))
+
 if __name__ == '__main__':
+    # heldout.py dir [scope]: the equivocations, or with scope the
+    # scope shifts
+    if len(sys.argv) > 2 and sys.argv[2] == 'scope':
+        build(S, sys.argv[1])
+        sys.exit(0)
     out = sys.argv[1]
     os.makedirs(out, exist_ok=True)
     for (hid, n, src, start, end, cls, word, fault, ref) in H:

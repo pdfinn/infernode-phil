@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, prove, join, map, tableau, read, settle, senses, readable, corpus \- the Philosopher's Workbench, \(*fwb
+phil, argue, prove, join, map, tableau, read, settle, senses, scope, readable, corpus \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -83,6 +83,23 @@ phil, argue, prove, join, map, tableau, read, settle, senses, readable, corpus \
 ]
 .B -f
 .I logicfile
+.br
+.B phil/prove
+[
+.B -A
+]
+.B -s
+.I n
+.I logicfile
+.br
+.B phil/scope
+[
+.B -x
+]
+.I logicfile
+[
+.I document
+]
 .br
 .B phil/join
 [
@@ -483,6 +500,24 @@ does, and is not run by
 The answers are kept in
 .IB logicfile .senses ,
 with the model, the instructions' hash and the date.
+.TP
+.B phil/scope
+Whether the argument read in
+.I logicfile
+turns on the scope of a necessity or an ought: the necessity of the
+consequent,
+.BR "p → □q" ,
+or only of the consequence,
+.BR "□(p → q)" ;
+for ought, narrow scope or wide.
+Each premise and assumption read one way is turned over
+.RB ( "prove -s" )
+and the argument proved again; where it holds with the operator on the
+consequent and not on the whole, or the other way about,
+.B argue/scope
+says so, with both readings.
+Which the sentence means, and which is true, is not the prover's to
+say; no model is asked.
 .TP
 .B phil/readable
 What makes a logic file one the prover cannot read: a syntax error, a
@@ -1058,6 +1093,18 @@ With
 .I prove
 writes the logic file out again, its formulas so shown and everything
 else as it was; a file it cannot read is not written.
+With
+.B -s
+.IR n ,
+it writes it out with the
+.IR n th
+scope of a necessity or an ought in a premise or assumption turned over:
+.B "p → □q"
+as
+.BR "□(p → q)" ,
+and the other way, in the formula or a conjunct it asserts; a first
+line, a comment, says which statement, where the reading put the
+operator, and both formulas; nothing is written if the file has fewer.
 .IP
 With
 .BR -P ,

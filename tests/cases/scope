@@ -1,0 +1,7 @@
+phil/prove -s 1 data/scope/narrow.logic
+phil/prove -s 2 data/scope/narrow.logic
+phil/prove -s 1 data/scope/wide.logic
+phil/scope data/scope/narrow.logic data/scope/foresight.md
+phil/scope data/scope/wide.logic data/scope/foresight.md
+phil/scope data/scope/enough.logic data/scope/foresight.md
+phil/scope data/scope/ought.logic data/scope/foresight.md

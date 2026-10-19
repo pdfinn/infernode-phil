@@ -120,7 +120,7 @@ init(nil: ref Draw->Context, args: list of string)
 	prose->init();
 	arg := load Arg Arg->PATH;
 	arg->init(args);
-	arg->setusage("phil/prove [-APevx] logicfile [document]\n\tphil/prove -p logicfile [document]\n\tphil/prove [-Ax] -c [-a answers] [-d document] logicfile ...\n\tphil/prove -t logicfile\n\tphil/prove [-A] -f logicfile");
+	arg->setusage("phil/prove [-APevx] logicfile [document]\n\tphil/prove -p logicfile [document]\n\tphil/prove [-Ax] -c [-a answers] [-d document] logicfile ...\n\tphil/prove -t logicfile\n\tphil/prove [-A] -f logicfile\n\tphil/prove [-A] -s n logicfile");
 	cflag := 0;
 	tflag := 0;
 	docname: string;
@@ -136,6 +136,7 @@ init(nil: ref Draw->Context, args: list of string)
 		'a' =>	answerfile = arg->earg();
 		'A' =>	aflag = 1;
 		'f' =>	fflag = 1;
+		's' =>	scopek = int arg->earg();
 		'P' =>	proofflag++;
 		* =>	arg->usage();
 		}
@@ -162,6 +163,11 @@ init(nil: ref Draw->Context, args: list of string)
 	}
 	if(fflag){
 		reformat(logic);
+		out.flush();
+		return;
+	}
+	if(scopek > 0){
+		scopes(logic, scopek);
 		out.flush();
 		return;
 	}
@@ -1622,6 +1628,111 @@ reformat(file: string)
 		}
 		out.puts(s + nl);
 	}
+}
+
+# The scope of a necessity or an ought in a conditional: "if p, then
+# necessarily q" may put it on q alone, p → □q, or on the whole,
+# □(p → q); and the same for ought.  The other reading of each premise
+# or assumption read one way, in the formula or in one of the
+# conjuncts it asserts, as a whole formula with what it says.
+Flip: adt {
+	q:	ref Q;
+	how:	string;	# where the reading put it: "consequent" or "whole"
+	what:	string;	# "necessity" or "obligation"
+};
+
+flips(q: ref Q): list of ref Flip
+{
+	r: list of ref Flip;
+	if(q == nil)
+		return nil;
+	what := "necessity";
+	if(q.op == Fimp && q.r != nil && q.r.op == Fnec){
+		if(deontic(q.r))
+			what = "obligation";
+		r = ref Flip(ref Q(Fnec, q.r.name, nil, ref Q(Fimp, nil, nil, q.l, q.r.l), nil), "consequent", what) :: r;
+	}
+	if(q.op == Fnec && q.l != nil && q.l.op == Fimp){
+		if(deontic(q))
+			what = "obligation";
+		r = ref Flip(ref Q(Fimp, nil, nil, q.l.l, ref Q(Fnec, q.name, nil, q.l.r, nil)), "whole", what) :: r;
+	}
+	if(q.op == Fand){
+		for(l := flips(q.l); l != nil; l = tl l)
+			r = ref Flip(ref Q(Fand, nil, nil, (hd l).q, q.r), (hd l).how, (hd l).what) :: r;
+		for(l = flips(q.r); l != nil; l = tl l)
+			r = ref Flip(ref Q(Fand, nil, nil, q.l, (hd l).q), (hd l).how, (hd l).what) :: r;
+	}
+	return r;
+}
+
+# The logic file with the nth such scope turned over, the line it is on
+# said first, as a comment:
+#	# scope<TAB>P1<TAB>S2<TAB>consequent<TAB>necessity<TAB>as read<TAB>turned over
+# and nothing if the file has fewer.
+scopes(file: string, k: int)
+{
+	stdout := out;
+	out = bufio->fopen(sys->fildes(2), Bufio->OWRITE);
+	(nil, nil, stmts) := readstmts(file);
+	out.flush();
+	out = stdout;
+	if(errors)
+		raise "fail:syntax";
+	n := 0;
+	at: ref Stmt;
+	flip: ref Flip;
+	for(l := stmts; l != nil && at == nil; l = tl l){
+		st := hd l;
+		if(st.name == nil || st.name[0] != 'P' && st.name[0] != 'A')
+			continue;
+		for(fl := rev2f(flips(st.q)); fl != nil; fl = tl fl)
+			if(++n == k){
+				at = st;
+				flip = hd fl;
+				break;
+			}
+	}
+	if(at == nil)
+		return;
+	sent := "-";
+	if(at.sent > 0)
+		sent = "S" + string at.sent;
+	out.puts("# scope\t" + at.name + "\t" + sent + "\t" + flip.how + "\t" + flip.what + "\t" + qshow(at.q) + "\t" + qshow(flip.q) + "\n");
+	b := bufio->open(file, Bufio->OREAD);
+	if(b == nil)
+		fatal(sys->sprint("cannot open %s: %r", file));
+	line := 0;
+	while((s := b.gets('\n')) != nil){
+		line++;
+		if(line == at.line){
+			nl := "";
+			if(s[len s-1] == '\n'){
+				s = s[0:len s-1];
+				nl = "\n";
+			}
+			f := 0;
+			for(i := 0; i < len s; i++)
+				if(s[i] == '\t' && ++f == 2)
+					break;
+			if(i < len s){
+				j := i+1;
+				while(j < len s && s[j] != '\t')
+					j++;
+				s = s[0:i+1] + qshow(flip.q) + s[j:];
+			}
+			s += nl;
+		}
+		out.puts(s);
+	}
+}
+
+rev2f(l: list of ref Flip): list of ref Flip
+{
+	r: list of ref Flip;
+	for(; l != nil; l = tl l)
+		r = hd l :: r;
+	return r;
 }
 
 readlogic(file: string): (list of ref Stmt, ref Stmt)
@@ -5199,6 +5310,7 @@ eflag := 0;	# -e: every statement read back
 vflag := 0;	# -v: why a valid conclusion follows
 proofflag := 0;	# -P: a valid step's proof, as a tableau; -PP tries invalid ones too (a test)
 fflag := 0;	# -f: the logic file again, its formulas in logic's symbols
+scopek := 0;	# -s n: the logic file with its nth scope turned over
 aflag := 0;	# -A: formulas shown in ASCII, as a logic file may write them
 pflag := 0;	# -p: every impossible set and coherent position
 
