@@ -1,0 +1,19 @@
+# reading 2 of hume-dialogues-1.md by claude-opus-5-5
+atom	abstract_invincible	reason, considered in an abstract view, furnishes invincible arguments against itself
+atom	conviction	we retain conviction or assurance on some subject
+atom	wide	our arguments lose their advantage and run wide of common life
+atom	counter	sceptical reasonings oppose and counterbalance our arguments
+atom	equal_weight	the one has no more weight than the other
+atom	suspense	the mind remains in suspense between them
+atom	triumph	scepticism triumphs
+# S1 reports the sceptics' view: we keep conviction only because sceptical reasonings cannot counterpoise the arguments from sense and experience.
+P1	S1	abstract_invincible ∧ (counter → ¬conviction)	says sceptics
+P2	S2	wide → counter
+# S3 is read as following from the counterbalancing in S2: the two then have equal weight.
+P3	S3	counter → equal_weight
+# "must remain in suspense" is read as a conditional consequence of the equal weight, not as a modal claim.
+P4	S4	equal_weight → suspense
+P5	S4	suspense → triumph	kind conceptual
+C1	S4	wide → suspense	from P2 P3 P4
+C	S4	wide → triumph	from C1 P5
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+gorgias-polus.md:29: argue/readings: S15 is read 2 ways: gorgias-polus.logic.r1 has "dw_more_disgraceful → dw_more_pain ∨ dw_more_evil"; gorgias-polus.logic.r1.2 and gorgias-polus.logic.r1.3 have nothing from it; they differ when only "doing wrong is more disgraceful than suffering wrong" is true, which the second allows
+gorgias-polus.md:29: argue/answered: S15: answered no, which keeps gorgias-polus.logic.r1, to: Suppose "doing wrong is more disgraceful than suffering wrong" is true and "doing wrong exceeds suffering wrong in pain" and "doing wrong exceeds suffering wrong in evil, i.e. is a greater evil than suffering wrong" are false. Is S15, "SOCRATES: And of two deformed things, that which exceeds in deformity or disgrace, exceeds either in pain or evil—must it not be so?", true then?
+gorgias-polus.logic.r1: argue/readings: the main conclusion is read at 2 sentences: gorgias-polus.logic.r1 puts it at S36, "SOCRATES: And that is now discovered to be more evil?"; gorgias-polus.logic.r1.2 and gorgias-polus.logic.r1.3 at S32, "SOCRATES: Then doing injustice will have an excess of evil, and will therefore be a greater evil than suffering injustice?"
+gorgias-polus.logic.r1: argue/answered: M: answered no, which keeps gorgias-polus.logic.r1.2 and gorgias-polus.logic.r1.3, to: Is the text's main conclusion S36, "SOCRATES: And that is now discovered to be more evil?", rather than S32, "SOCRATES: Then doing injustice will have an excess of evil, and will therefore be a greater evil than suffering injustice?"?
+gorgias-polus.md:43: argue/unfaithful: gorgias-polus.logic.r1 P4 (S23): the sentence has no word of "the injurers suffer more than the injured": is it the sentence P4 came from?
+gorgias-polus.md:43: argue/unfaithful: gorgias-polus.logic.r1.2 P4 (S23): the sentence has no word of "the injurers suffer more than the injured": is it the sentence P4 came from?
+gorgias-polus.md:43: argue/unfaithful: gorgias-polus.logic.r1.3 P3 (S23): the sentence has no word of "the injurers suffer more than the injured": is it the sentence P3 came from?
+gorgias-polus.logic.r1: argue/readings-agree 5
+gorgias-polus.logic.r1: argue/readings-differ 1
+gorgias-polus.logic.r1: argue/verdicts-agree 1
+gorgias-polus.logic.r1: argue/answers-split: no reading agrees with all 2 answers (gorgias-polus.logic.r1 1, gorgias-polus.logic.r1.2 1, gorgias-polus.logic.r1.3 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+gorgias-polus.logic.r1: argue/mismatches 1
+gorgias-polus.logic.r1.2: argue/mismatches 1
+gorgias-polus.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: gorgias-polus.logic.r1.2
+# argument written to gorgias-polus.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+gorgias-polus.md:43: argue/unfaithful: P4 (S23): the sentence has no word of "the injurers suffer more than the injured": is it the sentence P4 came from?
+gorgias-polus.md:45: argue/assumed: C1 (S24): follows only by A1, which the text never states: state it, or argue for it
+gorgias-polus.logic.r1: argue/valid 1
+gorgias-polus.logic.r1: argue/equivocates: P1 (S20): "pain" is taken as pain the wrong causes by its character, as the beauty standard measures pleasure or pain to those who perceive it in P1 and as pain borne by those who do or suffer the wrong, i.e. injurers suffering more than the injured where dw_more_pain is used else, a reader says: the argument holds only if they are one; taken apart, C (S32) does not follow (gorgias-polus.logic.r1.sense1)
+gorgias-polus.logic.r1: argue/countermodel: C (S32): dw_more_disgraceful = T, dw_more_evil = F, dw_more_pain = F, dw_more_pain_2 = T
+gorgias-polus.logic.r1: argue/equivocates: C (S32): "evil" is taken as is a greater evil for the doer than suffering is for the victim, the sense of Polus's claim in S18 in C and as exceeds in harmfulness, the opposite of the utility standard, with no one specified as harmed where dw_more_evil is used else, a reader says: the argument holds only if they are one; taken apart, C (S32) does not follow (gorgias-polus.logic.r1.sense2)
+gorgias-polus.logic.r1: argue/countermodel: C (S32): dw_more_disgraceful = T, dw_more_evil = T, dw_more_evil_2 = F, dw_more_pain = F

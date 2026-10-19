@@ -23,8 +23,11 @@ finding on its own.
 A change to the prompt made from those misses, and run again the same
 day ([below](#the-prompt-changed-48e3990c5a0a)), turned the "every ...
 some" case into a finding, had every reader name the scope of
-"necessarily", and drew no new false alarm; the equivocations are
-still not found.
+"necessarily", and drew no new false alarm; the equivocations were
+still not found. A step of its own for them, `phil/senses`
+([below](#two-senses-philsenses-f4c9d13865f3)), names the shift in
+about two runs of three, on the gold set and on five held-out
+passages alike, and in the breadth sample's 1,112 claims finds none.
 
 ## The gold set
 
@@ -233,12 +236,78 @@ change is kept: it found what it was meant to and cost nothing
 measured elsewhere beyond the run-to-run noise, except the critic's
 report and the fewer `kind` fields, both small.
 
+## Two senses: phil/senses (f4c9d13865f3)
+
+Equivocation was missed in every run of both prompts: a reader writes
+each word in one sense, and with `-k` the later readers must use the
+first reader's atoms, so a merged sense is never split. `phil/senses`
+asks the question on its own. Each atom more than one statement uses
+is put to a model afresh, with the statements in words: one sense
+throughout, or two, and which statements take the second? The model
+does not judge the argument. The prover does: the atom is split for
+those statements and the argument proved again; valid as read and
+invalid split is `argue/equivocates`, with the case. `argue -e` runs it
+on the kept reading. Run the same day: alone, on the gold set's
+readings made with `48e3990c5a0a` and on the breadth sample's 200; and
+`argue -e -n 3` on [heldout/](heldout/), five equivocations the
+literature names in texts the bench had not used, none of them seen
+while the step was written. 389 calls, 0.77 million tokens in and 0.15
+million out (about $6); none failed. Output in
+[results/2026-10-19-senses/](results/2026-10-19-senses/); every run
+judged by hand in [results/senses-judged.tsv](results/senses-judged.tsv).
+
+| Set | Runs | Found | Named | Related | Missed |
+|---|---|---|---|---|---|
+| gold equivocations, before (both prompts) | 15 | 0 | 0 | 0 | 15 |
+| gold equivocations, `phil/senses` | 15 | 8 | 2 | 0 | 5 |
+| held-out equivocations, `argue -e` | 15 | 7 | 2 | 2 | 4 |
+
+Found is `argue/equivocates` on the word the literature names, or one
+carrying the same shift; named is `argue/two-senses` on it where the
+reading was not valid as read, so splitting it decides nothing.
+
+- **Found.** Berkeley's master argument, "unconceived" as the act of
+  conceiving and as what is conceived, in every run; *Principles* 4,
+  "perceive" as what is immediately present to sense and as the houses
+  and rivers the senses are aimed at (two of three); *Republic* I, "live
+  well" as faring well and as functioning well, at S16, the gold
+  sentence, in every run. Held out: *Republic* I on pleonexia, "desiring
+  more" as grasping at gain and as outdoing in a craft, in every run;
+  the *Gorgias*, "evil" and "pain" as worse for the doer and as harmful
+  to someone, Vlastos's objection, in every run; the *Euthydemus*, "be"
+  as ceasing to exist and as ceasing to be ignorant (one of three).
+- **Named, not decided.** The Meno's "know" (two runs), and the
+  *Euthydemus*' "learn", Socrates' own diagnosis, and "knowing": the
+  readings were not valid as read, so the split changes nothing.
+- **Missed.** The *Phaedo*'s opposites (every run), and two runs each of
+  two *Euthydemus* sophisms, whose readers answered one sense for
+  every claim.
+
+**False alarms.** On the eight valid passages, two runs of 24 flagged
+"infinite" in Aquinas's objection from evil (unbounded in extent, as a
+contrary that leaves no room for its opposite; unlimited in perfection,
+as God's goodness is): not the gold's dispute, but a charge commonly
+made against the objection. On the thirteen inference passages, five
+findings, each a defensible statement of the gold's own fault (the
+second way's "first", the third way's "could have been", Mill's
+"desirable"). On the breadth sample, 194 readings had a claim used
+twice, 1,112 claims in all: every one was answered one sense, and no
+finding was made. Every finding, read against its passage, is one I judged
+defensible; none names a shift the text does not make.
+
+So the gap is mostly closed: from none to about two runs in three
+naming the shift, held out as well as on the gold, with no false alarm
+in the breadth sample. The step costs one call a run. What it misses,
+it misses by answering "one sense"; a second asker, the split made if
+either says two, would test whether that is chance.
+
 ## What next
 
-1. Equivocation is the gap. Asking the reader did not close it; the
-   next try is structural: a second, adversarial reading that is asked
-   only whether any word changes its sense, whose answer splits the
-   atom and is checked like any other reading.
+1. Equivocation: `phil/senses` (above) finds it in about two runs of
+   three. Next: whether a second asker raises that; whether `-e` should
+   be argue's default; and the same question put across works, to
+   check `phil/corpus`'s alignments of one work's claim with
+   another's, where a shift of sense between authors would hide.
 2. A reader's comment that a sentence "could be read the other way" is
    the tool's to act on: write the other reading too, and let
    `phil/settle` ask the question it already asks when readings differ.
@@ -248,5 +317,5 @@ report and the fewer `kind` fields, both small.
    argument; and a finding name for "the source as read does not say
    it" that is not `misattributed`.
 5. The gold set: revise `descartes-cogito` and `aquinas-fourth-way`;
-   add held-out equivocations and scope shifts before the next prompt
-   change.
+   add held-out scope shifts before the next prompt change, as the
+   equivocations now are.

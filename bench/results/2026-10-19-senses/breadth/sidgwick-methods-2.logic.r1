@@ -1,0 +1,18 @@
+# the argument of sidgwick-methods-2.md as claude-opus-5-5 read it: check that it says what the text says
+# The main conclusion is S6: the current estimate cannot be taken to express simply men's experience of pleasure and pain.
+# S1-S2 (mal-observation, "idols of the tribe") raise a separate worry and are left out.
+# S3 is a general claim that S4 spells out, so it is left out too.
+atom	nodistinguish	the common estimate does not distinguish between objects of natural desire and sources of experienced pleasure
+atom	notcoincident	objects of natural desire and sources of experienced pleasure are not exactly coincident
+atom	desirecounts	men are apt to think desirable what they strongly desire, whether or not they have found it conducive to happiness on the whole
+atom	compromise	the common opinion tends to represent a compromise between the average force of desires and the average experience of the consequences of gratifying them
+atom	expresses	the current estimate of the desirability of objects of pursuit can be taken to express simply men's experience of pleasure and pain
+P1	S4	nodistinguish
+# The cross-reference in S5 is to the author's own earlier book, so P2 is a plain premise.
+P2	S5	notcoincident	kind empirical
+P3	S6	desirecounts	kind empirical
+A1	-	desirecounts → compromise
+C1	S6	compromise	from P3 A1
+A2	-	nodistinguish ∧ notcoincident ∧ compromise → ¬expresses
+C	S6	¬expresses	from P1 P2 C1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

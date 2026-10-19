@@ -1,0 +1,25 @@
+# the argument of hobbes-leviathan-2.md as claude-opus-5-5 read it: check that it says what the text says
+# Hobbes, on who interprets written laws. "May erre" and "can change" are read as plain claims, not modal ones.
+atom	cavil	commentaries are commonly more subject to cavill than the Text
+atom	need_more	commentaries need other commentaries
+atom	endless	there will be no end of such Interpretation
+atom	comm_interp	he that writeth a Commentary upon written Lawes is the Interpreter of them
+atom	auth	there is an Interpreter authorised by the Soveraign, from which the subordinate Judges are not to recede
+atom	judges_interp	the Interpreter of written Lawes is the ordinary Judges
+atom	law_case	the Judges' Sentences are to be taken by them that plead for Lawes in that particular case
+atom	bind_others	the Judges' Sentences bind other Judges in like cases to give like judgements
+atom	may_err	a Judge may erre in the Interpretation even of written Lawes
+atom	err_change	an errour of a subordinate Judge can change the Law
+P1	S2	cavil	kind empirical
+P2	S2	cavil → need_more
+P3	S2	need_more → endless
+A1	-	endless → ¬comm_interp
+C1	S1	¬comm_interp	from P1 P2 P3 A1
+A2	-	¬auth ∧ ¬comm_interp → judges_interp
+C2	S3	¬auth → judges_interp	from C1 A2
+P4	S3	law_case	kind normative
+P5	S4	may_err
+P6	S4	¬err_change
+A3	-	may_err ∧ ¬err_change → ¬bind_others
+C	S3	(¬auth → judges_interp) ∧ law_case ∧ ¬bind_others	from C2 P4 P5 P6 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

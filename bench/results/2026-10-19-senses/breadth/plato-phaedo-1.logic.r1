@@ -1,0 +1,22 @@
+# reading 3 of plato-phaedo-1.md by claude-opus-5-5
+atom	fearless	he died fearlessly
+atom	noble_bearing	his words and bearing were noble and gracious
+atom	appeared_blessed	to me he appeared blessed
+atom	hardly_believe	I could hardly believe that I was present at the death of a friend
+atom	pity	I pitied him
+atom	divine_call	in going to the other world he could not be without a divine call
+atom	happy_there	he would be happy, if any man ever was, when he arrived there
+atom	reflected_die	I reflected that he was soon to die
+atom	pain_mixed	in the pleasure there was also a strange admixture of pain
+P1	S2	fearless ∧ noble_bearing	kind empirical
+P2	S2	fearless ∧ noble_bearing → appeared_blessed
+C1	S2	appeared_blessed	from P1 P2
+P3	S2	hardly_believe	kind empirical
+P4	S2	hardly_believe ∧ appeared_blessed → ¬pity
+P5	S3	divine_call ∧ happy_there
+P6	S3	divine_call ∧ happy_there → ¬pity
+C	S3	¬pity	from C1 P3 P4 P5 P6
+# S5 is a separate observation: his reflecting on the coming death is given as the reason for the pain mixed in the pleasure; it does not bear on the conclusion.
+P7	S5	reflected_die	kind empirical
+P8	S5	reflected_die → pain_mixed
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

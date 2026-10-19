@@ -1,0 +1,21 @@
+# the argument of hume-treatise-3.md as claude-opus-5-5 read it: check that it says what the text says
+# S1: the contrariety of passions would be of small danger but for a peculiarity in our outward circumstances.
+# "May be ravished" and "may be transferred" are kept as plain atoms, not modal operators.
+atom	danger	this contrariety of passions is attended with more than small danger
+atom	peculiarity	the contrariety concurs with a peculiarity in our outward circumstances which affords it an opportunity of exerting itself
+atom	secure_mind	we are perfectly secure in the enjoyment of the internal satisfaction of our minds
+atom	ravish_body	the external advantages of our body may be ravished from us
+atom	advantage_body	the external advantages of our body can be of advantage to him who deprives us of them
+atom	exposed_poss	the possessions acquired by industry and good fortune are exposed to the violence of others
+atom	transfer_poss	the possessions acquired by industry and good fortune may be transferred without suffering any loss or alteration
+atom	scarce_poss	there is not a sufficient quantity of such possessions to supply every one's desires and necessities
+atom	improvement_advantage	the improvement of these goods is the chief advantage of society
+atom	impediment	the instability of the possession of these goods, along with their scarcity, is the chief impediment of society
+P1	S1	¬peculiarity → ¬danger
+P2	S3	secure_mind	kind empirical
+P3	S4	ravish_body ∧ ¬advantage_body	kind empirical
+P4	S5	exposed_poss ∧ transfer_poss ∧ scarce_poss	kind empirical
+P5	S6	improvement_advantage
+A1	-	exposed_poss ∧ transfer_poss ∧ scarce_poss → impediment
+C	S6	impediment	from P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,5 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+# Statement texts are not given, so I placed them by the shape of S2: P1 "if he knows, he has no need to enquire", P2 "if he does not know, he cannot enquire", P3 "either he knows or he does not".
+# The sense of P3 (the disjunction) is unclear. This reading follows the familiar analysis of Meno's paradox, which tells the senses apart from the reasons the text gives.
+knows	two	knows	P2	has full knowledge of the subject, so nothing is left to find out	has some grasp of the subject, enough to recognise what one is looking for
+can_enquire	one

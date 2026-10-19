@@ -1,0 +1,25 @@
+# 3 readings by claude-opus-5-5, compared
+gorgias-polus.md:29: argue/readings: S15 is read 2 ways: gorgias-polus.logic.r3 has "more_disgraceful → exceeds_pain ∨ exceeds_evil"; gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3 have nothing from it; they differ when only "doing wrong is more disgraceful than suffering wrong" is true, which the second allows
+gorgias-polus.md:29: argue/answered: S15: answered no, which keeps gorgias-polus.logic.r3, to: Suppose "doing wrong is more disgraceful than suffering wrong" is true and "doing wrong exceeds suffering wrong in pain" and "doing wrong exceeds suffering wrong in evil" are false. Is S15, "SOCRATES: And of two deformed things, that which exceeds in deformity or disgrace, exceeds either in pain or evil—must it not be so?", true then?
+gorgias-polus.md:37: argue/readings: S20 is read 2 ways: gorgias-polus.logic.r3 has nothing from it; gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3 have "more_disgraceful → exceeds_pain ∨ exceeds_evil"; they differ when only "doing wrong is more disgraceful than suffering wrong" is true, which the first allows
+gorgias-polus.md:37: argue/answered: S20: answered no, which keeps gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3, to: Suppose "doing wrong is more disgraceful than suffering wrong" is true and "doing wrong exceeds suffering wrong in pain" and "doing wrong exceeds suffering wrong in evil" are false. Is S20, "SOCRATES: Then, if doing wrong is more disgraceful than suffering, the more disgraceful must be more painful and must exceed in pain or in evil or both: does not that also follow?", true then?
+gorgias-polus.md:43: argue/readings: S23 is read 2 ways: gorgias-polus.logic.r3 has "¬exceeds_pain"; gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3 have nothing from it; they differ when only "doing wrong exceeds suffering wrong in pain" is true, which the second allows
+gorgias-polus.md:43: argue/answered: S23: answered no, which keeps gorgias-polus.logic.r3, to: Suppose "doing wrong exceeds suffering wrong in pain" is true. Is S23, "POLUS: No, Socrates; certainly not.", true then?
+gorgias-polus.md:45: argue/readings: S24 is read 2 ways: gorgias-polus.logic.r3 has nothing from it; gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3 have "¬exceeds_pain"; they differ when only "doing wrong exceeds suffering wrong in pain" is true, which the first allows
+gorgias-polus.md:45: argue/answered: S24: answered no, which keeps gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3, to: Suppose "doing wrong exceeds suffering wrong in pain" is true. Is S24, "SOCRATES: Then they do not exceed in pain?", true then?
+gorgias-polus.md:61: argue/readings: S32 is read 2 ways: gorgias-polus.logic.r3 has nothing from it; gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3 have "exceeds_evil → more_evil"; they differ when only "doing wrong exceeds suffering wrong in evil" is true, which the first allows
+gorgias-polus.md:61: argue/answered: S32: answered no, which keeps gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3, to: Suppose "doing wrong exceeds suffering wrong in evil" is true and "doing wrong is a greater evil than suffering wrong" is false. Is S32, "SOCRATES: Then doing injustice will have an excess of evil, and will therefore be a greater evil than suffering injustice?", true then?
+gorgias-polus.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: gorgias-polus.logic.r3 has "exceeds_evil → more_evil"; gorgias-polus.logic.r3.2 and gorgias-polus.logic.r3.3 have nothing from it; they differ when only "doing wrong exceeds suffering wrong in evil" is true, which the second allows
+gorgias-polus.md:43: argue/unfaithful: gorgias-polus.logic.r3 P5 (S23): the sentence has no word of "doing wrong exceeds suffering wrong in pain": is it the sentence P5 came from?
+gorgias-polus.logic.r3: argue/readings-agree 2
+gorgias-polus.logic.r3: argue/readings-differ 6
+gorgias-polus.logic.r3: argue/verdicts-agree 1
+gorgias-polus.logic.r3: argue/answers-split: no reading agrees with all 5 answers (gorgias-polus.logic.r3 2, gorgias-polus.logic.r3.2 3, gorgias-polus.logic.r3.3 3 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+gorgias-polus.logic.r3: argue/mismatches 1
+gorgias-polus.logic.r3.2: argue/mismatches 0
+gorgias-polus.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: gorgias-polus.logic.r3.2
+# argument written to gorgias-polus.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+gorgias-polus.logic.r3: argue/valid 1
+gorgias-polus.logic.r3: argue/equivocates: P5 (S32): "evil" is taken as doing wrong carries more harm for the one who does it, making it worse for the doer in P5 and as doing wrong has more harmfulness, the standard by which disgrace is measured where exceeds_evil is used else, a reader says: the argument holds only if they are one; taken apart, C (S36) does not follow (gorgias-polus.logic.r3.sense1)
+gorgias-polus.logic.r3: argue/countermodel: C (S36): exceeds_evil = T, exceeds_evil_2 = F, more_evil = F

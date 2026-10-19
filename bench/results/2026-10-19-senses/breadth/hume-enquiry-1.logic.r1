@@ -1,0 +1,23 @@
+# reading 2 of hume-enquiry-1.md by claude-opus-5-5
+atom	ceremonies_instances	the ceremonies of the Roman Catholic religion may be considered as instances of the same nature
+atom	external_enliven	the external motions, postures and actions of the ceremonies enliven devotion and quicken fervour, which otherwise would decay if directed entirely to distant and immaterial objects
+atom	types_present	shadowing out the objects of faith in sensible types and images renders them more present than is possible by a merely intellectual view and contemplation
+atom	sensible_influence	sensible objects have always a greater influence on the fancy than any other
+atom	convey_related	sensible objects readily convey this influence to those ideas to which they are related and which they resemble
+atom	resemblance_common	the effect of resemblance in enlivening the ideas is very common
+atom	concur	in every case a resemblance and a present impression must concur
+atom	principle_proved	we are abundantly supplied with experiments to prove the reality of the foregoing principle
+# The "must" of concur is kept inside the atom rather than written as a modal.
+P1	S1	ceremonies_instances
+P2	S2	external_enliven	says devotees	kind empirical
+P3	S3	types_present	says devotees	kind empirical
+# The author infers from "these practices, and this reasoning", so the devotees' claims are also written as his own premises.
+P4	S2	external_enliven	kind empirical
+P5	S3	types_present	kind empirical
+P6	S4	sensible_influence ∧ convey_related	kind empirical
+A1	-	external_enliven ∧ types_present ∧ sensible_influence ∧ convey_related → resemblance_common
+C1	S5	resemblance_common	from P4 P5 P6 A1
+P7	S5	concur
+A2	-	resemblance_common ∧ concur → principle_proved
+C	S5	principle_proved	from C1 P7 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

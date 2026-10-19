@@ -1,0 +1,25 @@
+# the argument of mill-liberty-3.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+atom	could_see	unoriginal minds could see what originality would do for them
+atom	is_orig	what would do this for them is originality
+atom	feel_use	unoriginal minds can feel the use of originality
+atom	indifferent	nearly all, at heart, think they can do very well without originality, though no one says it is not to be admired
+atom	natural	this indifference is too natural to be wondered at
+atom	first	nothing was ever yet done which some one was not the first to do
+atom	good_from_orig	all good things which exist are the fruits of originality
+atom	more_left	there is something still left for originality to accomplish
+A5	-	first ∧ good_from_orig → more_left
+P1	S7	could_see → ¬is_orig
+A1	-	is_orig
+C1	S6	¬could_see	from P1 A1
+A2	-	¬could_see → ¬feel_use
+C2	S5	¬feel_use	from C1 A2
+P2	S3	indifferent	kind empirical
+A3	-	indifferent ∧ ¬feel_use → natural
+C3	S4	natural	from P2 C2 A3
+P3	S9	first	kind empirical
+P4	S9	good_from_orig	kind empirical
+A4	-	first ∧ good_from_orig → O more_left
+# S9 "let them be modest enough to believe" read as what they ought to believe; the step from the two recollections to it is unstated
+C	S9	O more_left	from P3 P4 A4 A5
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

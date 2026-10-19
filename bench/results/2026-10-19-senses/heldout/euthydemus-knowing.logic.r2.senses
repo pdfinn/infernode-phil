@@ -1,0 +1,7 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+knows_something	one
+knowing	two	knowing	P2 C	being a knower without qualification, which would mean knowing all things (as in P4, P7)	being a knower of something, of the knowledge one has
+knows_all	one
+ignorant_something	one
+# In P2 (S3), "knowing" follows from knowing just something, so it can only mean being a knower of something. P4 (S5) and P7 (S7) need it to mean knowing outright, i.e. knowing everything.
+# C (S9) takes its "you are knowing" from S3/S4, which is the qualified sense, and its "not knowing" from S7, which is the unqualified sense. So C mixes the two senses; I listed it under the second sense because of its first conjunct.

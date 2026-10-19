@@ -1,0 +1,31 @@
+# the argument of boethius-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Boethius: servants and other goods counted as possessions are not really one's own
+atom	servants_vicious	the servants behave viciously
+atom	servants_burden	the servants are a ruinous burden to thy house and dangerous to their master
+atom	servants_honest	the servants are honest
+atom	virtue_others	the servants' goodness is other men's virtue
+atom	servants_thine	the servants (their worth) can be counted in the sum of thy possessions
+atom	possessions_thine	the things thou reckonest among thy possessions are really thine
+atom	beautiful	these things are beautiful in their own nature
+atom	beauty_thine	their beauty is anything to thee
+atom	ground_grief_joy	thou hast reason to grieve for their loss or find joy in their possession
+atom	pleasing_without	they would have been no less pleasing in themselves though never included among thy possessions
+atom	precious_from_counting	they derive their preciousness from being counted in thy riches
+A5	-	servants_burden → ¬servants_thine
+P1	S2	servants_vicious → servants_burden
+P2	S2	servants_honest → virtue_others
+P3	S2	virtue_others → ¬servants_thine	kind conceptual
+# the dilemma assumes servants are either vicious or honest
+A1	-	servants_vicious ∨ servants_honest
+# the step from servants to "all which" generalises to every reckoned possession
+A2	-	¬servants_thine → ¬possessions_thine
+# S3 draws its conclusion from the dilemma, but the vicious branch only shows the servants are a burden, not that they are not thine; the gap is left as the text has it
+C	S3	¬possessions_thine	from P1 P2 P3 A1 A2 A5
+P4	S4	¬beautiful → ¬ground_grief_joy
+P5	S6	pleasing_without
+P6	S7	¬precious_from_counting
+A3	-	pleasing_without ∧ ¬precious_from_counting → ¬beauty_thine
+C1	S5	beautiful → ¬beauty_thine	from P5 P6 A3
+# the second dilemma (S4–S5) plainly aims at there being no reason for grief or joy; it is not used for C
+A4	-	¬beauty_thine → ¬ground_grief_joy
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

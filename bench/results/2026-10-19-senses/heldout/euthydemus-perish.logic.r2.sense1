@@ -1,0 +1,26 @@
+# reading 3 of euthydemus-perish.md by claude-opus-5-5
+# reading 3 of euthydemus-perish.md by claude-opus-5-5
+atom	wish_wise	you wish Cleinias to become wise
+atom	wise_now	Cleinias is wise as yet
+atom	wish_not_ignorant	you wish Cleinias not to be ignorant
+atom	ignorant_now	Cleinias is now ignorant (what he is)
+atom	wish_change_pred	you wish Cleinias no longer to be what he is (predicative "be": no longer to be ignorant)
+atom	wish_change_pred_2	no longer to be at all, i.e. to cease to exist, so that it amounts to perishing
+atom	wish_perish	you wish Cleinias not to be (existential "be"), i.e. to perish
+atom	good_friends	they are good lovers and friends of Cleinias
+# The word "be" shifts sense: in S7 "no longer to be what he is" is predicative (no longer ignorant);
+# in S9 it is read existentially (not to be at all, to perish). Two atoms kept apart.
+P1	S2	wish_wise	kind empirical
+P2	S4	¬wise_now	kind empirical
+P3	S6	wish_not_ignorant	kind empirical
+# Unstated: not being wise as yet, he is ignorant
+A1	-	¬wise_now → ignorant_now
+# S7: given he is ignorant and you wish him not ignorant, you wish him no longer to be what he is
+P4	S7	ignorant_now ∧ wish_not_ignorant → wish_change_pred
+C1	S7	wish_change_pred	from P2 P3 P4 A1
+# S9: "which can only mean" — the sophist's equivocation from predicative to existential "be"
+P5	S9	wish_change_pred_2 → wish_perish
+C2	S9	wish_perish	from C1 P5
+P6	S10	wish_perish → ¬good_friends	kind normative
+C	S10	¬good_friends	from C2 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

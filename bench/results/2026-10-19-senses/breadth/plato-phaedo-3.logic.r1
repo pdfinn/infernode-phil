@@ -1,0 +1,16 @@
+# the argument of plato-phaedo-3.md as claude-opus-5-5 read it: check that it says what the text says
+# Echecrates: Socrates' argument for survival, the most convincing one, is discredited, so he must find another.
+# "Must" in S4 is read as practical need and kept as an atom, not as modal necessity.
+atom	most_convincing	nothing could be more convincing than the argument of Socrates
+atom	socrates_discredited	the argument of Socrates has now fallen into discredit
+atom	harmony_attractive	the doctrine that the soul is a harmony has always had a wonderful attraction for Echecrates, as his own original conviction
+atom	trust_arguments	Echecrates can ever trust an argument again
+atom	need_new_argument	Echecrates must begin again and find another argument which will assure him that the soul survives when the man is dead
+P1	S2	most_convincing
+P2	S2	socrates_discredited	kind empirical
+P3	S3	harmony_attractive	kind empirical
+A1	-	most_convincing ∧ socrates_discredited → ¬trust_arguments
+C1	S1	¬trust_arguments	from P1 P2 A1
+A2	-	socrates_discredited → need_new_argument
+C	S4	need_new_argument	from P2 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,14 @@
+# the argument of aquinas-evil-objection.md as claude-opus-5-5 read it: check that it says what the text says
+# Aquinas, Summa Theologica I q.2 a.3, Objection 1: the argument from evil, as the objector states it.
+# It is not answered here, so it is written as a plain argument rather than as O lines.
+atom	god_exists	God exists
+atom	infinite_good	there is infinite goodness (one of two contraries, good, is infinite)
+atom	infinite_good_2	God's own goodness is unlimited in degree or perfection, which does not imply that goodness occupies everything
+atom	evil	there is evil in the world (evil is discoverable)
+# S1: if one of two contraries is infinite, the other is altogether destroyed; applied to good and evil.
+P1	S1	infinite_good → ¬evil
+P2	S2	god_exists → infinite_good_2	kind conceptual
+C1	S3	god_exists → ¬evil	from P1 P2
+P3	S3	evil	kind empirical
+C	S4	¬god_exists	from C1 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

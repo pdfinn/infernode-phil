@@ -1,0 +1,14 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+just_lives_well	two	live well	P5	the just soul performs its function of living excellently	the just man fares well, i.e. is blessed and prosperous
+unjust_lives_ill	two	lives ill	P5	the unjust soul performs its function of living badly	the unjust man fares badly, i.e. is wretched
+life_end	one
+just_excellent	one
+# "excellence" in S8/S10 is the soul's excellence at its work, while S12 calls moral justice that excellence; but S12 is a single asserted premise, so I left this claim as one sense.
+unjust_defective	one
+just_fulfils	one
+unjust_fulfils	one
+just_happy	one
+unjust_miserable	one
+happiness_profitable	one
+misery_profitable	one
+injustice_more_profitable	one

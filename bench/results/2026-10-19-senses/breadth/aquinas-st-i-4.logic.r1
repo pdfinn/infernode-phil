@@ -1,0 +1,19 @@
+# reading 2 of aquinas-st-i-4.md by claude-opus-5-5
+atom	vital	vital functions such as feeling, nourishment and growth are observed in the embryo
+atom	from_mother	the vital functions observed in the embryo are from the soul of the mother
+atom	from_semen	the vital functions observed in the embryo are from the formative power of the semen
+atom	from_own_soul	the vital functions observed in the embryo are from its soul
+atom	extrinsic	the vital functions in the embryo are from an extrinsic principle
+atom	soul_in_embryo	the soul is in the embryo
+# "cannot be from an extrinsic principle" (S3) is read non-modally as: they are not from an extrinsic principle
+# "it must be said" (S4) marks the conclusion, not a modal claim about its content
+P1	S2	vital	kind empirical
+O1	S2	vital ∧ ¬from_own_soul ∧ (from_mother ∨ from_semen)	against C
+P2	S3	¬extrinsic
+R1	S3	¬extrinsic	against O1
+A1	-	from_mother ∨ from_semen → extrinsic
+C1	S3	¬from_mother ∧ ¬from_semen	from P2 A1
+A2	-	vital → from_own_soul ∨ extrinsic
+A3	-	from_own_soul → soul_in_embryo
+C	S4	soul_in_embryo	from P1 P2 A2 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

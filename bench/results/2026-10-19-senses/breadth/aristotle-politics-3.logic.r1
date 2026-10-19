@@ -1,0 +1,22 @@
+# the argument of aristotle-politics-3.md as claude-opus-5-5 read it: check that it says what the text says
+# Only one main conclusion is allowed; I took S5's verdict on the commendation of man and citizen.
+# S2's "may be the same" is a granted supposition, not a modal claim, so it is written as a plain premise.
+atom	man_eq_magistrate	the virtues of a good man and a good magistrate are the same
+atom	citizen_obeys	a citizen is one who obeys the magistrate
+atom	magistrate_diff_citizen	the virtue of the magistrate is different from the virtue of the citizen
+atom	man_eq_citizen	the virtue of the good man is in general the same as the virtue of the citizen
+atom	citizen_both	the virtue of a good citizen is to know how to command as well as to obey, and to do both well
+atom	man_only_command	the virtue of a good man consists only in being able to command
+atom	same_commendation	the commendation of the good man and of the good citizen is the same
+P1	S2	man_eq_magistrate
+P2	S2	citizen_obeys
+P3	S2	magistrate_diff_citizen
+P4	S2	man_eq_magistrate ∧ citizen_obeys ∧ magistrate_diff_citizen → ¬man_eq_citizen
+C1	S2	¬man_eq_citizen	from P1 P2 P3 P4
+P5	S4	citizen_both	kind normative
+P6	S5	man_only_command ∧ citizen_both → ¬same_commendation
+# The text plainly takes the good man's virtue to be the magistrate's, that is, ruling.
+A1	-	man_eq_magistrate → man_only_command
+C2	S5	man_only_command	from P1 A1
+C	S5	¬same_commendation	from C2 P5 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

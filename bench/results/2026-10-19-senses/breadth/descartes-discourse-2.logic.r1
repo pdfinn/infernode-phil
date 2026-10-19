@@ -1,0 +1,27 @@
+# reading 3 of descartes-discourse-2.md by claude-opus-5-5
+atom	one_master	I received instruction from but one master and never knew the diversities of opinion among the learned
+atom	latter_class	I would have belonged to the latter class
+atom	every_opinion_held	no opinion, however absurd, can be imagined which has not been maintained by some philosopher
+atom	foreigners_reason_well	those whose opinions are repugnant to ours are not barbarians, and many of them use their reason as well as or better than we do
+atom	upbringing_shapes	the same mind would have a very different character if brought up in France or Germany rather than among the Chinese or savages
+atom	fashion_shifts	what pleases us in fashion changes, so that what pleased us ten years ago now appears extravagant and ridiculous
+atom	custom_ground	the ground of our opinions is far more custom and example than any certain knowledge
+atom	majority_no_guarantee	a plurality of suffrages is no guarantee of truth where it is of difficult discovery
+atom	one_more_likely	in such cases truth is much more likely to be found by one than by many
+atom	no_one_preferable	I could select from the crowd no one whose opinions seemed worthy of preference
+atom	use_own_reason	I was constrained to use my own reason in the conduct of my life
+P1	S1	one_master → latter_class
+P2	S2	¬one_master	kind empirical
+P3	S2	every_opinion_held	kind empirical
+P4	S2	foreigners_reason_well	kind empirical
+P5	S3	upbringing_shapes	kind empirical
+P6	S3	fashion_shifts	kind empirical
+A1	-	every_opinion_held ∧ foreigners_reason_well ∧ upbringing_shapes ∧ fashion_shifts → custom_ground
+C1	S4	custom_ground	from P3 P4 P5 P6 A1
+P7	S5	one_more_likely
+P8	S5	one_more_likely → majority_no_guarantee
+C2	S5	majority_no_guarantee	from P7 P8
+P9	S6	no_one_preferable	kind empirical
+A2	-	custom_ground ∧ majority_no_guarantee ∧ no_one_preferable → use_own_reason
+C	S6	use_own_reason	from C1 C2 P9 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

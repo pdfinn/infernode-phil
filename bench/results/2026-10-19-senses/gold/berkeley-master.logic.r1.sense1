@@ -1,0 +1,26 @@
+# the argument of berkeley-master.md as claude-opus-5-5 read it: check that it says what the text says
+# Berkeley's reply to the objection that one can imagine unperceived trees or books.
+# The "possible" in S4 sits inside what is conceived ("conceive it possible"), so it is
+# folded into the atom conceive_mind_indep rather than written with a modal operator.
+# S4's literal claim is weaker ("it does not show that you can conceive..."). I take the
+# main conclusion as the stronger !conceive_mind_indep, which S5's "repugnancy" supports.
+atom	imagine_unperceived	one can imagine trees in a park or books in a closet with nobody by to perceive them
+atom	frame_ideas_omit	such imagining is no more than framing in one's mind ideas called books and trees while omitting to frame the idea of anyone who may perceive them
+atom	perceive_while	you yourself perceive or think of them all the while
+atom	conceive_mind_indep	you can conceive it possible that the objects of your thought may exist without the mind
+atom	conceive_unconceived	you conceive the objects existing unconceived or unthought of
+atom	conceive_unconceived_2	conceiving the objects while they are at that very moment unconceived, which one's own act of conceiving contradicts
+atom	repugnant	conceiving the objects existing unconceived or unthought of is a manifest repugnancy
+atom	contemplate_own_ideas	when we do our utmost to conceive the existence of external bodies, we are all the while only contemplating our own ideas
+O1	S1	imagine_unperceived ∧ (imagine_unperceived → conceive_mind_indep)	against C
+P1	S2	imagine_unperceived → frame_ideas_omit
+P2	S3	perceive_while
+R1	S4	frame_ideas_omit ∧ perceive_while ∧ ¬(imagine_unperceived → conceive_mind_indep)	against O1
+P3	S5	conceive_mind_indep → conceive_unconceived
+P4	S5	repugnant	kind conceptual
+# A1 is relied on but never stated: what is a manifest repugnancy cannot be conceived.
+A1	-	repugnant → ¬conceive_unconceived_2
+P5	S6	contemplate_own_ideas
+C1	S5	¬conceive_unconceived_2	from P4 A1
+C	S4	¬conceive_mind_indep	from C1 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

@@ -1,0 +1,23 @@
+# reading 3 of berkeley-principles-2.md by claude-opus-5-5
+atom	fe_idea_only	every particular finite extension which may be the object of our thought is an idea existing only in the mind
+atom	parts_perceived	each part of a finite extension must be perceived
+atom	perceive_innum	I can perceive innumerable parts in a finite extension that I consider
+atom	contains_innum	innumerable parts are contained in a finite extension
+atom	ext_are_ideas	the extensions I have in view are no other than my own ideas
+atom	ideas_inf_div	my ideas can be resolved into an infinite number of other ideas, that is, they are infinitely divisible
+atom	distinct_sense	by finite extension is meant something distinct from a finite idea
+atom	can_affirm	I can affirm or deny anything of finite extension
+atom	ideas_sense	the terms extension, parts, etc. are taken in a conceivable sense, that is, for ideas
+atom	manifest_contra	to say a finite extension consists of parts infinite in number is a manifest contradiction
+P1	S1	fe_idea_only	kind conceptual
+P2	S1	fe_idea_only → parts_perceived
+C1	S1	parts_perceived	from P1 P2
+# "If, therefore" in S2 rests the conditional on S1's result
+P3	S2	parts_perceived ∧ ¬perceive_innum → ¬contains_innum
+P4	S2	¬perceive_innum	kind empirical
+C	S2	¬contains_innum	from C1 P3 P4
+P5	S3	ext_are_ideas
+P6	S3	¬ideas_inf_div
+P7	S4	distinct_sense → ¬can_affirm
+P8	S5	ideas_sense → manifest_contra	kind conceptual
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

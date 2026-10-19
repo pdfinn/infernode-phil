@@ -1,0 +1,14 @@
+# reading 2 of apology-death.md by claude-opus-5-5
+atom	nothing	death is a state of nothingness and utter unconsciousness, like dreamless sleep
+atom	migration	death is a change and migration of the soul from this world to another, where all the dead abide
+atom	good	death is a good (a gain)
+atom	night_better	a night of sleep undisturbed even by dreams is better and more pleasant than nearly all the days and nights of a life
+atom	single_night	if death is nothingness, eternity is only a single such night
+P1	S1	nothing ∨ migration
+P2	S3	night_better
+P3	S4	nothing → single_night
+A1	-	single_night ∧ night_better → good
+C1	S4	nothing → good	from P2 P3 A1
+P4	S5	migration → good
+C	S1	good	from P1 C1 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

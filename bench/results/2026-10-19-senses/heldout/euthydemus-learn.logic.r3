@@ -1,0 +1,21 @@
+# reading 3 of euthydemus-learn.md by claude-opus-5-5
+# "wise" changes sense: in S7-S13 it means already knowing what is being learned (wise_k);
+# in S15-S17 it means the clever, apt pupils (wise_c). The two are kept apart.
+# The S13 conclusion generalises from Cleinias's case alone, as the text does.
+atom	learns(x)	x is a learner, one who learns what the teacher teaches
+atom	knows(x)	x already knows the things x is learning
+atom	wise_k(x)	x is wise, in the sense of already knowing what is being learned (S7)
+atom	unlearned(x)	x is unlearned
+atom	wise_c(x)	x is one of the wise boys, in the sense of the clever, apt pupils (S15-S16)
+P1	S3	learns(cleinias)	kind empirical
+P2	S5	¬knows(cleinias)	kind empirical
+A1	-	∀x (wise_k(x) → knows(x))	kind conceptual
+C1	S8	¬wise_k(cleinias)	from P2 A1
+P3	S9	∀x (¬wise_k(x) → unlearned(x))	kind conceptual
+C2	S11	learns(cleinias) ∧ unlearned(cleinias)	from P1 C1 P3
+C3	S13	∀x (learns(x) → unlearned(x) ∧ ¬wise_k(x))	from C2 C1
+P4	S16	∀x (learns(x) → wise_c(x))
+# the step in S17 relies on taking the wise boys to be not unlearned
+A2	-	∀x (wise_c(x) → ¬unlearned(x))
+C	S17	∀x (learns(x) → wise_c(x) ∧ ¬unlearned(x)) ∧ ¬∀x (learns(x) → unlearned(x) ∧ ¬wise_k(x))	from P4 A2 P1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

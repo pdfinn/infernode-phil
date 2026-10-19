@@ -1,0 +1,19 @@
+# reading 2 of aquinas-st-i-ii-3.md by claude-opus-5-5
+atom	soil_easy	the soil gives birth to the herb of its own accord, and such products may be had in great quantities with very little effort
+atom	animal_trouble	no small trouble is necessary either to rear or to catch an animal
+atom	soil_simple	the eating of the products of the soil savors rather of a simple life
+atom	flesh_delicate	the eating of flesh savors of delicate and over-careful living
+atom	god_wishes_simple	God was wishful to bring His people back to a more simple way of living
+atom	forbade_animals	God forbade His people to eat many kinds of animals
+atom	forbade_soil	God forbade His people to eat the things produced by the soil
+atom	idols_animals	animals were offered to idols
+atom	idols_soil	the products of the soil were offered to idols
+P1	S4	soil_easy ∧ animal_trouble	kind empirical
+A1	-	(soil_easy → soil_simple) ∧ (animal_trouble → flesh_delicate)
+C1	S3	soil_simple ∧ flesh_delicate	from P1 A1
+P2	S5	god_wishes_simple	kind empirical
+A2	-	god_wishes_simple ∧ soil_simple ∧ flesh_delicate → forbade_animals ∧ ¬forbade_soil
+C	S5	forbade_animals ∧ ¬forbade_soil	from C1 P2 A2
+P3	S6	idols_animals ∧ ¬idols_soil	kind empirical
+# S6 offers an alternative reason; it is recorded as a premise but not used in the main derivation.
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

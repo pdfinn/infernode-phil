@@ -6,6 +6,35 @@ with a record: the scripted tests unchanged, live runs before and
 after with the same model, and what each finding did. This is that
 record, newest first.
 
+## senses: a new prompt (October 2026)
+
+`lib/phil/senses` at `f4c9d13865f3`, new, with `phil/senses` and
+`argue -e`. It asks of each atom more than one statement uses whether
+the text means it in one sense throughout or in two; the prover decides
+whether the argument turns on it. Its examples (end, right, free) are
+from no passage of the bench.
+
+**Scripted.** `tests/senses_test.sh`, new. `tests/run.sh`,
+`argue_test.sh`, `read_test.sh` and `runner_test.sh` pass unchanged:
+`argue` without `-e` sends the same requests as before.
+
+**Live.** Claude Opus 5.5 through the Anthropic API. Alone on the gold
+set's 78 readings (argue `48e3990c5a0a`) and the breadth sample's 200;
+`argue -e -n 3 -k 3` on the five passages of `bench/heldout`. 389 calls,
+770,378 tokens in and 147,174 out; none failed. A first attempt (52
+calls) asked about no claims, because InferNode's sed broke on the
+readings' symbols; fixed in `fd40062` and run again.
+
+- Gold equivocations: shift found (`argue/equivocates`) in 8 runs of
+  15, named where the reading was not valid in 2 more; none before.
+- Held out: found in 7 of 15, named in 2, a related shift in 2.
+- False alarms: 2 runs of 24 on the valid passages, both "infinite" in
+  Aquinas's objection from evil, a charge commonly made; none in the
+  breadth sample (1,112 claims, all one sense).
+
+Details and each run's judgement: [bench/RESULTS.md](../bench/RESULTS.md),
+`bench/results/senses-judged.tsv`.
+
 ## argue asks for senses, scope and order (October 2026)
 
 `lib/phil/argue` from `a036b21b8816` to `48e3990c5a0a`. Four

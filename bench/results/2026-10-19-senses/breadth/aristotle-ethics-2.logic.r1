@@ -1,0 +1,22 @@
+# the argument of aristotle-ethics-2.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+atom	transferred	from one of two equal magnitudes somewhat has been taken and added to the other
+atom	exceeds_twice	the latter exceeds the former by twice that portion
+atom	only_taken	the portion had been merely taken from the former and not added to the latter
+atom	exceeds_once	the latter would have exceeded the former only by that one portion
+atom	greater_exceeds_mean	the greater exceeds the mean by one portion
+atom	mean_exceeds_less	the mean exceeds by one portion that magnitude from which the portion was taken
+atom	add_to_less	the excess of the mean over the less is added to the less
+atom	take_from_greater	the excess of the greater over the mean is taken from the greater
+# S1 (the etymology of "just" and "judge") is an aside and is left out.
+P1	S2	transferred → exceeds_twice
+P2	S2	only_taken → exceeds_once
+P3	S2	transferred → greater_exceeds_mean ∧ mean_exceeds_less
+# S3: the illustration yields a rule for what to take from the greater and add to the less.
+P4	S3	greater_exceeds_mean ∧ mean_exceeds_less → O(add_to_less ∧ take_from_greater)	kind normative
+# The text applies the rule to a case where one party has gained what the other lost; this is unstated.
+A1	-	transferred
+C1	S2	greater_exceeds_mean ∧ mean_exceeds_less	from P3 A1
+# "must" in S4 is read as obligation (what ought to be done).
+C	S4	O(add_to_less ∧ take_from_greater)	from C1 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

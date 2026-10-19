@@ -1,0 +1,27 @@
+# reading 3 of epictetus-2.md by claude-opus-5-5
+logic	s5
+atom	place_with_virtue	a man puts in the same place his interest, sanctity, goodness, country, parents and friends
+atom	inclines_virtue	the animal inclines toward sanctity, goodness, country, parents and friends, because the I and the Mine are placed with them
+atom	inclines_interest_only	the animal inclines toward interest alone, because the I and the Mine are placed apart from these
+atom	secured	all these (sanctity, goodness, country, parents, friends) are secured
+atom	give_way	all these give way, borne down by the weight of interest
+atom	self_in_will	I am there where my will is
+atom	interest_is_virtue	my interest is to maintain fidelity, modesty, patience, abstinence, co-operation and my relations
+atom	proper_relations	I am a friend, son and father such as I ought to be
+atom	epicurus_strong	the doctrine of Epicurus becomes strong
+atom	no_honesty	there is no honesty
+atom	honesty_by_opinion	honesty is that which opinion holds to be honest
+# S2: "of necessity the animal inclines" to where the I and the Mine are placed; read as necessity
+P1	S2	□(place_with_virtue → inclines_virtue)	kind conceptual
+P2	S2	□(¬place_with_virtue → inclines_interest_only)	kind conceptual
+# The text relies on what one inclines toward being secured, and on interest alone weighing down the rest
+A1	-	inclines_virtue → secured
+A2	-	inclines_interest_only → give_way
+P3	S3	self_in_will → interest_is_virtue
+P4	S3	interest_is_virtue → proper_relations
+# "then only": proper relations only when I am where my will is
+P5	S3	proper_relations → self_in_will
+P6	S4	¬place_with_virtue → epicurus_strong
+P7	S4	no_honesty ∨ honesty_by_opinion	says epicurus
+C	S1	(place_with_virtue → secured) ∧ (¬place_with_virtue → give_way)	from P1 P2 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,19 @@
+# the argument of mill-liberty-4.md as claude-opus-5-5 read it: check that it says what the text says
+atom	absorb	the absorption of all the principal ability of the country into the governing body
+atom	progressive	the mental activity and progressiveness of the governing body, its ability kept up to a high standard
+atom	outside_criticism	the official body is liable to the watchful criticism of equal ability outside the body
+atom	outside_ability	the means exist, independently of the government, of forming such ability and furnishing it with the opportunities and experience necessary for a correct judgment of great practical affairs
+atom	engross	the governing body engrosses all the occupations which form and cultivate the faculties required for the government of mankind
+atom	efficient	we possess permanently a skilful and efficient body of functionaries, able to originate and willing to adopt improvements, and not degenerating into a pedantocracy
+A4	-	engross → absorb
+P1	S1	absorb → ¬progressive
+P2	S2	progressive → outside_criticism
+# the text does not state that there can be watchful criticism by equal outside ability only if such ability is formed independently of government; the "therefore" of S3 relies on it
+A1	-	outside_criticism → outside_ability
+C1	S3	progressive → outside_ability	from P2 A1
+# the text does not state that if the body engrosses all the forming occupations, no independent means of forming ability remain
+A2	-	engross → ¬outside_ability
+# the text does not state that a permanently skilful, improving, non-pedantic body is one that keeps its mental activity and progressiveness
+A3	-	efficient → progressive
+C	S4	efficient → ¬engross	from C1 A2 A3 A4
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

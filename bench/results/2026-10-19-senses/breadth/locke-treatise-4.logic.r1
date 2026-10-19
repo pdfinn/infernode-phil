@@ -1,0 +1,20 @@
+# the argument of locke-treatise-4.md as claude-opus-5-5 read it: check that it says what the text says
+# Locke, Second Treatise sect. 171: political power is the natural power handed to society in trust, so its end is preservation and it cannot be absolute
+atom	pp_given_up	political power is that power which every man has in the state of nature and has given up to the society and its governors, with trust that it be employed for their good and the preservation of their property
+atom	nat_power_preserve	the power every man has in the state of nature is to use such means as he thinks good and nature allows to preserve his property, and to punish breaches of the law of nature so as may most conduce to the preservation of himself and mankind
+atom	end_nat_preservation	the end and measure of this power in every man's hands in the state of nature is the preservation of all mankind
+atom	end_mag_preserve	in the hands of the magistrate the power can have no other end or measure but to preserve the members of the society in their lives, liberties and possessions
+atom	not_absolute	the power cannot be an absolute, arbitrary power over the lives and fortunes of the members
+atom	power_laws	the power is a power to make laws and annex penalties tending to the preservation of the whole, cutting off only those parts so corrupt that they threaten the sound
+atom	compact_origin	this power has its original only from compact and agreement and the mutual consent of those who make up the community
+P1	S3	pp_given_up	kind conceptual
+P2	S3	nat_power_preserve	kind conceptual
+C1	S4	end_nat_preservation	from P2
+A1	-	pp_given_up ∧ end_nat_preservation → end_mag_preserve
+C2	S4	end_mag_preserve	from P1 C1 A1
+P3	S4	end_mag_preserve → not_absolute
+P4	S4	end_mag_preserve → power_laws
+C	S4	not_absolute ∧ power_laws	from C2 P3 P4
+# S5 is stated but not used in deriving the conclusion
+P5	S5	compact_origin
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

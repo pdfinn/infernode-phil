@@ -1,0 +1,18 @@
+# the argument of kant-practical-4.md as claude-opus-5-5 read it: check that it says what the text says
+atom	under_discipline	we stand under a discipline of reason
+atom	love_suitable	doing good from love and sympathetic good will, like volunteers above the thought of duty, is the true moral maxim of our conduct suitable to our position amongst rational beings as men
+atom	love_in_law	the maxim of doing good from love and our own good pleasure sets the determining principle of our will in the law itself and in respect for this law
+atom	legislative	we are legislative members of a moral kingdom rendered possible by freedom
+atom	subjects	we are subjects in the moral kingdom, not the sovereign
+atom	reject_authority	we mistake our inferior position as creatures and presumptuously reject the authority of the moral law
+atom	revolt	we revolt from the moral law in spirit, even though its letter is fulfilled
+atom	duty_only	duty and obligation are the only names that we must give to our relation to the moral law
+P1	S2	under_discipline
+P2	S2	under_discipline → (love_suitable → love_in_law)
+P3	S1	¬love_in_law
+P4	S4	legislative ∧ subjects
+P5	S4	subjects ∧ reject_authority → revolt
+P6	S3	duty_only	kind normative
+# S1's "this is not yet the true moral maxim" taken as the main conclusion; S2 supplies the requirement that the will be determined by the law alone
+C	S1	¬love_suitable	from P1 P2 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,25 @@
+# the argument of james-will-3.md as claude-opus-5-5 read it: check that it says what the text says
+atom	willing_to_act	there is a willingness to act, no matter how we feel
+atom	good_bad	acts are really good and bad
+atom	regret	there is regret at a bad act's happening
+atom	genuine_poss	there are real, genuine possibilities in the world
+atom	indeterminism	the world is represented in the indeterministic way
+atom	moral_world	the world is consistently represented as a pluralism whose parts may affect one another through their conduct being either good or bad
+atom	zest	there is interest, zest, or excitement in achieving the right way
+atom	wrong_possible	the wrong way is also a possible and a natural way
+atom	condemn_sense	there is sense in condemning ourselves for taking the wrong way
+atom	right_open	the right way was open to us as well
+atom	no_mockery	it is other than a mockery to feel, after failing to do our best, that an irreparable opportunity is gone from the universe
+A3	-	moral_world
+P1	S3	zest → wrong_possible
+P2	S4	condemn_sense → right_open
+P3	S5	willing_to_act → good_bad
+P4	S6	good_bad → regret
+P5	S7	regret → genuine_poss
+P6	S8	no_mockery → genuine_poss
+C1	S7	good_bad → genuine_poss	from P4 P5
+# the text relies on a world of good or bad conduct being one where acts are really good and bad, and on genuine possibilities belonging only to the indeterministic way
+A1	-	moral_world → good_bad	kind conceptual
+A2	-	genuine_poss → indeterminism	kind conceptual
+C	S2	moral_world → indeterminism	from C1 A1 A2 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

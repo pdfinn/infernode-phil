@@ -1,0 +1,13 @@
+# reading 2 of plato-phaedo-4.md by claude-opus-5-5
+atom	round_center	the earth is a round body in the centre of the heavens
+atom	equipoise	the earth is in equipoise
+atom	equable_surround	the surrounding heaven is equably diffused
+atom	no_incline	the earth will not incline any way but remains in the same state
+atom	needs_support	the earth has need of air or any similar force to be a support
+P1	S1	round_center
+P2	S1	equipoise ∧ equable_surround
+P3	S2	equipoise ∧ round_center ∧ equable_surround → no_incline
+C1	S2	no_incline	from P1 P2 P3
+A1	-	no_incline → ¬needs_support
+C	S1	¬needs_support	from C1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

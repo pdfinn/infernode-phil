@@ -1,0 +1,40 @@
+# the prover could not read euthydemus-perish.logic.r2.2: claude-opus-5-5 is asked again
+euthydemus-perish.logic.r2.2: argue/undefined: atom wish_wise is used but not given a meaning (atom	wish_wise	...)
+# the prover could not read euthydemus-perish.logic.r2.3: claude-opus-5-5 is asked again
+euthydemus-perish.logic.r2.3: argue/undefined: atom wish_wise is used but not given a meaning (atom	wish_wise	...)
+# 3 readings by claude-opus-5-5, compared
+euthydemus-perish.md:13: argue/readings: S7 is read 2 ways: euthydemus-perish.logic.r2 and euthydemus-perish.logic.r2.2 have nothing from it; euthydemus-perish.logic.r2.3 has "ignorant_now ∧ wish_not_ignorant → wish_change_pred"; they differ when only "you wish Cleinias not to be ignorant" and "Cleinias is now ignorant (what he is)" are true, which the first allows
+euthydemus-perish.md:13: argue/answered: S7: answered no, which keeps euthydemus-perish.logic.r2.3, to: Suppose "you wish Cleinias not to be ignorant" and "Cleinias is now ignorant (what he is)" are true and "you wish Cleinias no longer to be what he is (predicative "be": no longer to be ignorant)" is false. Is S7, "You wish him to be what he is not, and no longer to be what he is?", true then?
+euthydemus-perish.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: euthydemus-perish.logic.r2 has "¬wise_now → ignorant_now" and "wish_not_ignorant ∧ ignorant_now → wish_change_pred"; euthydemus-perish.logic.r2.2 and euthydemus-perish.logic.r2.3 have "¬wise_now → ignorant_now"; they differ when only "Cleinias is wise as yet", "you wish Cleinias not to be ignorant" and "Cleinias is now ignorant (what he is)" are true, which the second allows
+euthydemus-perish.logic.r2: argue/readings: U1: euthydemus-perish.logic.r2 and euthydemus-perish.logic.r2.3 take for granted "if (you wish Cleinias not to be ignorant and Cleinias is now ignorant (what he is)), then you wish Cleinias no longer to be what he is (predicative "be": no longer to be ignorant)"; euthydemus-perish.logic.r2.2 does not
+euthydemus-perish.logic.r2: argue/answered: U1: answered yes, which keeps euthydemus-perish.logic.r2 and euthydemus-perish.logic.r2.3, to: Does the text's argument take this for granted, whether or not it says so: "if (you wish Cleinias not to be ignorant and Cleinias is now ignorant (what he is)), then you wish Cleinias no longer to be what he is (predicative "be": no longer to be ignorant)"? Answer yes if the author would accept it as part of the argument.
+euthydemus-perish.md:3: argue/unfaithful: euthydemus-perish.logic.r2 P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: euthydemus-perish.logic.r2 P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: euthydemus-perish.logic.r2 P3 (S6): the sentence has no word of "you wish Cleinias not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.md:3: argue/unfaithful: euthydemus-perish.logic.r2.2 P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: euthydemus-perish.logic.r2.2 P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: euthydemus-perish.logic.r2.2 P3 (S6): the sentence has no word of "you wish Cleinias not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.md:3: argue/unfaithful: euthydemus-perish.logic.r2.3 P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: euthydemus-perish.logic.r2.3 P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: euthydemus-perish.logic.r2.3 P3 (S6): the sentence has no word of "you wish Cleinias not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.md:13: argue/unfaithful: euthydemus-perish.logic.r2.3 P4 (S7): the sentence has no word of "Cleinias is now ignorant (what he is)": is it the sentence P4 came from?
+euthydemus-perish.logic.r2: argue/verdicts: valid as euthydemus-perish.logic.r2, euthydemus-perish.logic.r2.3 read it, not as the others do: which reading is right decides the verdict
+euthydemus-perish.logic.r2: argue/readings-agree 6
+euthydemus-perish.logic.r2: argue/readings-differ 2
+euthydemus-perish.logic.r2: argue/verdicts-agree 0
+euthydemus-perish.logic.r2: argue/mismatches 3
+euthydemus-perish.logic.r2.2: argue/mismatches 3
+euthydemus-perish.logic.r2.3: argue/mismatches 4
+# kept the reading that best fits the words and the other readings: euthydemus-perish.logic.r2.3
+# argument written to euthydemus-perish.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+euthydemus-perish.md:3: argue/unfaithful: P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: P3 (S6): the sentence has no word of "you wish Cleinias not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.md:13: argue/unfaithful: P4 (S7): the sentence has no word of "Cleinias is now ignorant (what he is)": is it the sentence P4 came from?
+euthydemus-perish.md:13: argue/assumed: C1 (S7): follows only by A1, which the text never states: state it, or argue for it
+euthydemus-perish.md:13: argue/own-sentence: C1 (S7): needs P4, read from the conclusion's own sentence: check that S7 gives it as its reason and does not conclude it
+euthydemus-perish.md:17: argue/own-sentence: C2 (S9): needs P5, read from the conclusion's own sentence: check that S9 gives it as its reason and does not conclude it
+euthydemus-perish.md:17: argue/own-sentence: C (S10): needs P6, read from the conclusion's own sentence: check that S10 gives it as its reason and does not conclude it
+euthydemus-perish.logic.r2: argue/valid 1
+euthydemus-perish.logic.r2: argue/equivocates: P5 (S9): "be" is taken as no longer to be at all, i.e. to cease to exist, so that it amounts to perishing in P5 and as no longer to be ignorant, i.e. to lose his present quality where wish_change_pred is used else, a reader says: the argument holds only if they are one; taken apart, C2 (S9) does not follow (euthydemus-perish.logic.r2.sense1)
+euthydemus-perish.logic.r2: argue/countermodel: C2 (S9): wish_change_pred = T, wish_change_pred_2 = F, wish_perish = F

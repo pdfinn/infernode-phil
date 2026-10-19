@@ -1,0 +1,32 @@
+# reading 2 of kant-groundwork-4.md by claude-opus-5-5
+atom	sets_end	Rational nature sets before itself an end, which distinguishes it from the rest of nature
+atom	end_matter	This end would be the matter of every good will
+atom	abs_good	The will in question is absolutely good, not limited by any condition of attaining this or that end
+atom	effected	The end of the absolutely good will is conceived as an end to be effected
+atom	relative	Every will would be only relatively good
+atom	independent	The end is conceived as an independently existing end
+atom	negative	The end is conceived only negatively: as what we must never act against, never to be regarded merely as means, but in every volition esteemed as an end likewise
+atom	subject_good_will	The subject of all possible ends is also the subject of a possible absolutely good will
+atom	no_postpone	Such a will cannot without contradiction be postponed to any other object
+atom	subject_end	This end is nothing but the subject of all possible ends
+atom	limit_eq	Limiting my maxim, in using means for every end, by the condition of its holding good as a law for every subject comes to the same thing as the fundamental principle that the subject of all ends, the rational being himself, never be employed merely as means but in every case as an end likewise
+atom	equiv	The principle "so act in regard to every rational being that he may always have place in thy maxim as an end in himself" is essentially identical with "act upon a maxim which involves its own universal validity for every rational being"
+P1	S1	sets_end
+P2	S2	end_matter
+P3	S3	effected → relative
+P4	S3	abs_good → ¬relative	kind conceptual
+# S3 considers "the idea of" an absolutely good will; treated as the case under discussion
+P5	S3	abs_good
+A1	-	¬effected → independent
+C1	S3	independent	from P3 P4 P5 A1
+A2	-	independent → negative
+C2	S4	negative	from C1 A2
+P6	S5	no_postpone
+P7	S5	no_postpone → subject_good_will
+P8	S5	subject_good_will → subject_end
+C3	S5	subject_end	from P6 P7 P8
+P9	S7	limit_eq
+# "accordingly" links S6 to the preceding results; S7 gives the reason
+A3	-	negative ∧ subject_end ∧ limit_eq → equiv
+C	S6	equiv	from C2 C3 P9 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

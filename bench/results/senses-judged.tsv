@@ -1,0 +1,48 @@
+# phil/senses (prompt f4c9d13865f3), 19 October 2026, judged by hand.
+# On the gold set it was run alone on the readings already made with
+# argue 48e3990c5a0a; on the held-out set, argue -e -n 3 -k 3 read each
+# passage afresh.  found: argue/equivocates on the word the literature
+# names, or one that carries the same shift; named: argue/two-senses on
+# it, where the reading was not valid as read, so the split decides
+# nothing; related: a shift named in the passage, not the one the
+# literature names; no: nothing on it.  For a passage with no
+# equivocation in its gold, every finding is listed, with whether it
+# is defensible.
+# set	passage	run	judged	why
+gold	berkeley-master	1	found	"unconceived": conceiving things while no one conceives them, against conceiving that they exist unconceived (the act and its content); C fails split
+gold	berkeley-master	2	found	as run 1
+gold	berkeley-master	3	found	as run 1
+gold	berkeley-principles-4	1	found	"perceive": what is immediately present to sense, against the houses and rivers the senses are aimed at; C1 fails split
+gold	berkeley-principles-4	2	no	every claim one sense
+gold	berkeley-principles-4	3	found	as run 1, C fails
+gold	meno-paradox	1	no	every claim one sense
+gold	meno-paradox	2	named	"knows": some grasp of the subject, enough to recognise it, against full knowledge; the reading was not valid as read
+gold	meno-paradox	3	named	as run 2, and "enquire" (point in enquiring, against able to)
+gold	phaedo-opposites	1	no	every claim one sense
+gold	phaedo-opposites	2	no	every claim one sense
+gold	phaedo-opposites	3	no	every claim one sense
+gold	republic-function	1	found	"live well": fare well, be happy, against perform the soul's function well; at S16, the gold sentence; C2 fails split
+gold	republic-function	2	found	as run 1
+gold	republic-function	3	found	as run 1, and "live ill" the same way
+gold	aquinas-evil-objection	1	defensible	valid class; "infinite": unbounded in extent, leaving no room for a contrary, against unlimited in perfection, as God's goodness is; not the gold's dispute, but a charge commonly made against the objection
+gold	aquinas-evil-objection	2	defensible	as run 1
+gold	aquinas-second-way	1	defensible	inference class; "first": first term of a series against an existing originating cause; the argument does not turn on it
+gold	aquinas-second-way	2	defensible	"first": absolutely first, uncaused, against first of an ordered series; C3 fails split; the gold's fault (no first cause read as no cause) in other words
+gold	aquinas-third-way	1	defensible	"was": there could have been a time when nothing existed, against there was such a time; C2 fails split; the gold's step from possibility to fact
+gold	aquinas-third-way	2	defensible	as run 1, the argument not valid as read
+gold	mill-proof	3	defensible	"desirable": worthy of desire against able to be desired, the second half of the gold; the reading's step did not hold as read
+heldout	euthydemus-learn	1	named	"learning": understanding what is said, as in dictation, against acquiring knowledge one lacked, Socrates' own diagnosis; also "unlearned" (dull against ignorant); the reading was not valid as read
+heldout	euthydemus-learn	2	related	"unlearned": dull against ignorant; the argument does not turn on it
+heldout	euthydemus-learn	3	related	as run 2
+heldout	euthydemus-perish	1	no	every claim one sense
+heldout	euthydemus-perish	2	found	"be": cease to exist against cease to be ignorant; C2 fails split
+heldout	euthydemus-perish	3	no	every claim one sense
+heldout	euthydemus-knowing	1	no	every claim one sense
+heldout	euthydemus-knowing	2	named	"knowing": a knower of something against a knower without qualification; the reading was not valid as read
+heldout	euthydemus-knowing	3	no	every claim one sense
+heldout	republic-overreach	1	found	"more": getting more advantage than others against exceeding a fellow practitioner in a craft; C fails split
+heldout	republic-overreach	2	found	"go beyond": grasping at gain (pleonexia) against outdoing in a craft; C fails split
+heldout	republic-overreach	3	found	"desire more than", the same two senses; C fails split
+heldout	gorgias-polus	1	found	"evil": worse for the one who does it against more harmful, with no one named as harmed (Vlastos's point); also "pain" the same way; C fails split
+heldout	gorgias-polus	2	found	"pain": pain the doers suffer against pain to anyone affected or looking on, the same shift through pain; C fails split
+heldout	gorgias-polus	3	found	"evil", as run 1; C fails split

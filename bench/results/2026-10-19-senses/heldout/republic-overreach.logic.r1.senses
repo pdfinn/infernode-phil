@@ -1,0 +1,11 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+knowing	one
+ignorant	one
+wise	one
+# wise: P2 and P3 have no text. If they come from S3/S5, Thrasymachus' "wise" means shrewd at gaining advantage rather than skilled in a craft, which would be a second sense.
+good	one
+bad	one
+overlike	two	more	P1 P9 P10	exceeding a fellow practitioner in a craft's practice (saying or doing more than the craft requires)	getting more advantage or possessions than others (overreaching)
+overunlike	two	more	P1 P9 P10	exceeding a non-practitioner in a craft's practice	getting more advantage or possessions than others (overreaching)
+like	two	like	P4	resembles y in one respect, here in what he desires to exceed	is of the same nature as y, as S6 has it ("such as his like is")
+# like: P3 has no text. If it comes from S5/S6, it probably uses the "same nature" sense, as P4 does.

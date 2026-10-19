@@ -1,0 +1,31 @@
+# reading 2 of republic-function.md by claude-opus-5-5
+# Dialogue: each question with its assent is taken as stated; it is cited at the question's sentence.
+# The "necessarily" (S10, S11) and "can never" (S22) are left non-modal, as the steps do not turn on them.
+atom	life_end	life is to be reckoned among the ends of the soul
+atom	just_excellent	the just soul has the excellence of the soul (justice)
+atom	unjust_defective	the unjust soul is deprived of that excellence, having injustice, the defect of the soul
+atom	just_fulfils	the just soul fulfils its own ends well, as a good ruler and superintendent
+atom	unjust_fulfils	the unjust soul fulfils its own ends
+atom	just_lives_well	the just soul and the just man live well
+atom	unjust_lives_ill	the unjust man lives ill
+atom	unjust_lives_ill_2	the unjust man fares badly, i.e. is wretched
+atom	just_happy	the just man is blessed and happy
+atom	unjust_miserable	the unjust man is miserable, the reverse of happy
+atom	happiness_profitable	happiness is profitable
+atom	misery_profitable	misery is profitable
+atom	injustice_more_profitable	injustice is more profitable than justice
+P1	S4	life_end	kind conceptual
+P2	S8	unjust_defective → ¬unjust_fulfils
+P3	S10	just_excellent → just_fulfils
+P4	S12	just_excellent ∧ unjust_defective	kind conceptual
+# Unstated link: since life is among the soul's ends, fulfilling them well is living well, and failing to is living ill.
+A1	-	life_end ∧ just_fulfils → just_lives_well
+A2	-	life_end ∧ ¬unjust_fulfils → unjust_lives_ill
+C1	S14	just_lives_well ∧ unjust_lives_ill	from P1 P2 P3 P4 A1 A2
+P5	S16	(just_lives_well → just_happy) ∧ (unjust_lives_ill_2 → unjust_miserable)
+C2	S18	just_happy ∧ unjust_miserable	from C1 P5
+P6	S20	happiness_profitable ∧ ¬misery_profitable	kind normative
+# Unstated link: what makes the just happy and the unjust miserable, when happiness is profitable and misery is not, makes injustice no more profitable than justice.
+A3	-	just_happy ∧ unjust_miserable ∧ happiness_profitable ∧ ¬misery_profitable → ¬injustice_more_profitable
+C	S22	¬injustice_more_profitable	from C2 P6 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

@@ -1,0 +1,22 @@
+# 3 readings by claude-opus-5-5, compared
+gorgias-polus.md:43: argue/readings: S23 is read 2 ways: gorgias-polus.logic.r2 and gorgias-polus.logic.r2.2 have "¬more_painful"; gorgias-polus.logic.r2.3 has nothing from it; they differ when only "doing wrong exceeds suffering wrong in pain (the injurers suffer more than the injured)" is true, which the second allows
+gorgias-polus.md:43: argue/answered: S23: answered no, which keeps gorgias-polus.logic.r2 and gorgias-polus.logic.r2.2, to: Suppose "doing wrong exceeds suffering wrong in pain (the injurers suffer more than the injured)" is true. Is S23, "POLUS: No, Socrates; certainly not.", true then?
+gorgias-polus.md:45: argue/readings: S24 is read 2 ways: gorgias-polus.logic.r2 and gorgias-polus.logic.r2.2 have nothing from it; gorgias-polus.logic.r2.3 has "¬more_painful"; they differ when only "doing wrong exceeds suffering wrong in pain (the injurers suffer more than the injured)" is true, which the first allows
+gorgias-polus.md:45: argue/answered: S24: answered no, which keeps gorgias-polus.logic.r2.3, to: Suppose "doing wrong exceeds suffering wrong in pain (the injurers suffer more than the injured)" is true. Is S24, "SOCRATES: Then they do not exceed in pain?", true then?
+gorgias-polus.logic.r2: argue/readings: the main conclusion is read at 2 sentences: gorgias-polus.logic.r2 puts it at S36, "SOCRATES: And that is now discovered to be more evil?"; gorgias-polus.logic.r2.2 and gorgias-polus.logic.r2.3 at S32, "SOCRATES: Then doing injustice will have an excess of evil, and will therefore be a greater evil than suffering injustice?"
+gorgias-polus.logic.r2: argue/answered: M: answered no, which keeps gorgias-polus.logic.r2.2 and gorgias-polus.logic.r2.3, to: Is the text's main conclusion S36, "SOCRATES: And that is now discovered to be more evil?", rather than S32, "SOCRATES: Then doing injustice will have an excess of evil, and will therefore be a greater evil than suffering injustice?"?
+gorgias-polus.md:43: argue/unfaithful: gorgias-polus.logic.r2 P3 (S23): the sentence has no word of "doing wrong exceeds suffering wrong in pain (the injurers suffer more than the injured)": is it the sentence P3 came from?
+gorgias-polus.md:43: argue/unfaithful: gorgias-polus.logic.r2.2 P4 (S23): the sentence has no word of "doing wrong exceeds suffering wrong in pain (the injurers suffer more than the injured)": is it the sentence P4 came from?
+gorgias-polus.logic.r2: argue/readings-agree 3
+gorgias-polus.logic.r2: argue/readings-differ 2
+gorgias-polus.logic.r2: argue/verdicts-agree 1
+gorgias-polus.logic.r2: argue/answers-split: no reading agrees with all 3 answers (gorgias-polus.logic.r2 1, gorgias-polus.logic.r2.2 2, gorgias-polus.logic.r2.3 2 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+gorgias-polus.logic.r2: argue/mismatches 1
+gorgias-polus.logic.r2.2: argue/mismatches 1
+gorgias-polus.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: gorgias-polus.logic.r2.3
+# argument written to gorgias-polus.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+gorgias-polus.md:37: argue/own-sentence: C1 (S20): needs P1, read from the conclusion's own sentence: check that S20 gives it as its reason and does not conclude it
+gorgias-polus.logic.r2: argue/valid 1
+gorgias-polus.logic.r2: argue/equivocates: P4 (S24): "pain" is taken as the doers themselves suffer more pain than the victims in P4 and as exceeds in the pain by which disgrace is measured, i.e. causes more pain overall, to anyone affected or looking on where more_painful is used else, a reader says: the argument holds only if they are one; taken apart, C (S32) does not follow (gorgias-polus.logic.r2.sense1)
+gorgias-polus.logic.r2: argue/countermodel: C (S32): more_evil = F, more_painful = T, more_painful_2 = F

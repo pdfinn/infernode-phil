@@ -1,0 +1,9 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+learner	two	learning	C	acquiring knowledge one lacked from teachers	understanding what is said to one, as with a dictation
+knew	one
+wise_k	one
+unlearned_k	two	unlearned	C	ignorant of the things one is being taught	dull or slow pupils, the opposite of the clever boys
+learner_d	one
+wise_c	one
+# In S17, "the wise are the learners and not the unlearned" sets "unlearned" against "wise" in the clever-pupil sense, so there it means dull boys, not boys lacking the knowledge.
+# "Learners" in S17 means taking in a dictation, which is understanding. In S13 it means acquiring knowledge one lacked. This is the equivocation on "learn" that Socrates later points out. I was less sure about flagging learner than unlearned_k.

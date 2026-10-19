@@ -1,0 +1,14 @@
+# the argument of plato-republic-3.md as claude-opus-5-5 read it: check that it says what the text says
+# Socrates on faculties (Plato, Republic). The only drawn inference is the "therefore" in S2.
+# S3 states how faculties are individuated; it is recorded but the conclusion does not rest on it.
+atom	seen	I see the faculties
+atom	figcol	the distinctions of figure, colour, and the like, which enable me to discern the differences of some things, apply to the faculties
+atom	same_sr	two faculties have the same sphere and the same result
+atom	diff_sr	two faculties have another sphere and another result
+atom	same_fac	they are the same faculty
+P1	S2	¬seen	kind empirical
+A1	-	figcol → seen
+C	S2	¬figcol	from P1 A1
+P2	S3	same_sr → same_fac	kind conceptual
+P3	S3	diff_sr → ¬same_fac	kind conceptual
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

@@ -1,0 +1,24 @@
+# reading 3 of epictetus-3.md by claude-opus-5-5
+# Epictetus: the main conclusion (S1) is read as drawn from S2's account of what my work is.
+atom	purify_faculty	you must make your ruling faculty pure, and this mode of life also
+atom	material_understanding	the matter for me to work on is my understanding, as wood is to the carpenter
+atom	business_appearances	my business is the right use of appearances
+atom	body_nothing	the body and its parts are nothing to me
+atom	death_indifferent	death, of the whole or of a part, may come when it chooses
+atom	should_fly	one should fly (to escape)
+atom	can_eject	some man can eject me out of the world
+atom	same_everywhere	wherever I go there are the sun, moon, stars, dreams, omens and conversation with gods
+P1	S2	material_understanding
+P2	S2	business_appearances
+P3	S3	body_nothing
+A1	-	body_nothing → death_indifferent
+C1	S5	death_indifferent	from P3 A1
+O1	S6	should_fly	against C1
+# S7 is a rhetorical question, answered in S8.
+P4	S8	¬can_eject	kind empirical
+P5	S9	same_everywhere	kind empirical
+A2	-	¬can_eject ∧ same_everywhere → ¬should_fly
+R1	S9	¬should_fly	against O1
+A3	-	material_understanding ∧ business_appearances → purify_faculty
+C	S1	purify_faculty	from P1 P2 A3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

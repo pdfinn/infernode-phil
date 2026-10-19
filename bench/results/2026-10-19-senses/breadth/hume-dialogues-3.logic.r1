@@ -1,0 +1,17 @@
+# reading 2 of hume-dialogues-3.md by claude-opus-5-5
+# S1 Cleanthes' objection is read as a consequence of his principles; S2 as pushing that same inference further.
+# A1: S3's "then" infers like footing from the parity of many and one deities.
+# A2: the reductio in S4 relies on like footing being unacceptable.
+atom	cp	Cleanthes' principles are sound
+atom	pagan_nogain	nothing is gained by the Pagan hypothesis that the deities arose from the unknown powers of nature, since it is as easy to suppose all men and animals sprang immediately from a like origin
+atom	many_as_one	a numerous society of deities is as explicable as one universal deity who possesses within himself the powers and perfections of the whole society
+atom	like_footing	the systems of Scepticism, Polytheism and Theism are on a like footing, and no one of them has any advantage over the others
+atom	hesiod_pagan	this globe was governed by 30,000 deities, who arose from the unknown powers of nature
+P1	S1	hesiod_pagan	says hesiod
+P2	S1	cp → pagan_nogain
+P3	S2	pagan_nogain → many_as_one
+A1	-	many_as_one → like_footing
+C1	S3	cp → like_footing	from P2 P3 A1
+A2	-	¬like_footing
+C	S4	¬cp	from C1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

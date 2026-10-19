@@ -1,0 +1,7 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+dw_more_disgraceful	one
+dw_more_pain	two	pain	P1	pain borne by those who do or suffer the wrong, i.e. injurers suffering more than the injured	pain the wrong causes by its character, as the beauty standard measures pleasure or pain to those who perceive it
+dw_more_evil	two	evil	C	exceeds in harmfulness, the opposite of the utility standard, with no one specified as harmed	is a greater evil for the doer than suffering is for the victim, the sense of Polus's claim in S18
+injurers_suffer_more	one
+# For dw_more_pain, the standard set up in S1 and S11 measures pleasure or pain to spectators. S22 to S24 test only the pain felt by the doers and the sufferers, so P1's "pain" may not be the pain C1 denies.
+# For dw_more_evil, S32 passes from "has an excess of evil" (harmful, perhaps to others) to "is a greater evil than suffering injustice" (worse for the agent). I was less sure here, since S20 already uses "in evil".

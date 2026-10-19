@@ -1,0 +1,22 @@
+# the argument of euthydemus-knowing.md as claude-opus-5-5 read it: check that it says what the text says
+# Euthydemus-style sophism: "knowing" shifts sense between "knowing (the things one knows)"
+# and "knowing" without qualification. The sophist treats them as one; Socrates' replies (S4, S8) qualify them.
+# The atom "knowing" is the sophist's unqualified sense; the qualified senses get their own atoms.
+atom	knows_something	Socrates knows something
+atom	ignorant_some	there are many other things which Socrates does not know
+atom	knowing	Socrates is knowing (without qualification, the sophist's sense)
+atom	knowing_known	Socrates is knowing of the knowledge which he has (qualified sense)
+atom	not_knowing_unknown	Socrates is not knowing of that which he does not know (qualified sense)
+atom	knows_all	Socrates knows all things
+P1	S2	knows_something	kind empirical
+P2	S3	knows_something → knowing
+O1	S4	knows_something → knowing_known	against P2
+# S5 "That makes no difference": the sophist denies the qualification matters
+R1	S5	knowing_known → knowing	against O1
+P3	S5	knowing → knows_all
+P4	S6	¬knows_all
+P5	S6	ignorant_some	kind empirical
+P6	S7	ignorant_some → ¬knowing
+O2	S8	ignorant_some → not_knowing_unknown	against P6
+C	S9	knowing ∧ ¬knowing	from P1 P2 P5 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

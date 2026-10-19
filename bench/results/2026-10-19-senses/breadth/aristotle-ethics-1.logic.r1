@@ -1,0 +1,19 @@
+# reading 2 of aristotle-ethics-1.md by claude-opus-5-5
+atom	shame_fear_disgrace	Shame is defined as a kind of fear of disgrace
+atom	shame_blush	they who feel Shame grow red
+atom	shame_physical	Shame is in a way physical
+atom	shame_feeling	Shame is a feeling
+atom	shame_moral_state	Shame is a moral state
+atom	shame_virtue	Shame is a Virtue
+P1	S2	shame_fear_disgrace	kind conceptual
+P2	S2	shame_blush	kind empirical
+# S2-S3: being a kind of fear whose effects, like blushing, resemble those of fear of danger shows it is in a way physical
+P3	S3	shame_fear_disgrace ∧ shame_blush → shame_physical
+C1	S3	shame_physical	from P1 P2 P3
+# "is thought to be a mark of a feeling rather than a moral state": read as the text's own premise
+P4	S3	shame_physical → shame_feeling ∧ ¬shame_moral_state
+C2	S1	shame_feeling ∧ ¬shame_moral_state	from C1 P4
+# unstated: a Virtue is a moral state
+A1	-	shame_virtue → shame_moral_state	kind conceptual
+C	S1	¬shame_virtue	from C2 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

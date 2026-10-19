@@ -1,0 +1,25 @@
+# the argument of sidgwick-methods-4.md as claude-opus-5-5 read it: check that it says what the text says
+atom	own_good	my happiness is desirable and a good
+atom	other_equal	the equal happiness of any other person is equally desirable
+atom	benevolence_rational	disinterested benevolence is, in another sense and independently, rational
+atom	egoist_suggestion	when Happiness is spoken of as the sole ultimate good of man, the idea most commonly suggested is that each individual is to seek his own happiness at the expense or to the neglect of that of others
+atom	offends	this offends both our sympathetic and our rational regard for others' happiness
+atom	aversion_egoistic	Common Sense feels an aversion to the end of Egoistic rather than of Universalistic Hedonism
+atom	narrow	one's individual happiness is so narrow and limited, of such necessarily brief duration, and so shifting and insecure while it lasts
+atom	lacks_ultimate	one's individual happiness does not possess the characteristics which we "divine" to belong to Ultimate Good
+atom	individual_unsatisfactory	one's individual happiness is, in many respects, an unsatisfactory mark for one's supreme aim
+atom	universal_satisfies	Universal Happiness seems an End that satisfies our imagination by its vastness and sustains our resolution by its comparative security
+# S2: "must be equally desirable" read as what Reason shows, not as metaphysical necessity, so it is written without modal operators.
+P1	S2	own_good → other_equal
+P2	S2	(own_good → other_equal) → benevolence_rational
+P3	S3	egoist_suggestion ∧ offends	kind empirical
+P4	S4	aversion_egoistic	kind empirical
+P5	S6	narrow → lacks_ultimate	says aristotle
+P6	S6	narrow → lacks_ultimate
+P7	S6	narrow
+C1	S6	lacks_ultimate	from P6 P7
+A1	-	lacks_ultimate → individual_unsatisfactory
+C2	S5	individual_unsatisfactory	from C1 A1
+P8	S7	universal_satisfies
+C	S7	universal_satisfies ∧ individual_unsatisfactory	from C2 P8
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

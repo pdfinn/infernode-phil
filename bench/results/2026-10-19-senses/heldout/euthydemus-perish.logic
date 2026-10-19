@@ -1,0 +1,27 @@
+# reading 3 of euthydemus-perish.md by claude-opus-5-5
+# Euthydemus: the sophist's argument that wishing Cleinias wise is wishing him to perish.
+# The word "be" changes its sense. In S7 it is predicative: to be what he is, i.e. ignorant.
+# In S9-S10 it is existential: to be at all. These two senses are kept apart as
+# wish_cease_pred and wish_cease_exist.
+# S9's "can only mean" is the sophist joining the two senses (P4).
+# S10's "must be" is ironic exclamation, not modal, so no modal logic is used.
+atom	wish_wise	you wish Cleinias to become wise
+atom	wise	Cleinias is wise as yet
+atom	wish_not_ignorant	you wish Cleinias to become wise and not to be ignorant
+atom	wish_cease_pred	you wish Cleinias to be what he is not and no longer to be what he is (no longer to be ignorant, predicative "be")
+atom	wish_cease_exist	you wish Cleinias no longer to be, i.e. no longer to exist (existential "be")
+atom	wish_perish	you wish Cleinias to perish
+atom	bad_lovers	you are pretty lovers and friends, who want their favourite not to be, or to perish
+P1	S2	wish_wise
+P2	S4	¬wise
+P3	S6	wish_not_ignorant
+# Unstated bridge for S7: wishing someone to become what he is not yet is wishing him to stop being what he is.
+A1	-	wish_wise ∧ ¬wise ∧ wish_not_ignorant → wish_cease_pred	kind conceptual
+C1	S7	wish_cease_pred	from P1 P2 P3 A1
+# S9: "no longer to be what he is" read as "no longer to be". This is the equivocation on "be".
+P4	S9	wish_cease_pred → wish_cease_exist	kind conceptual
+P5	S9	wish_cease_exist → wish_perish	kind conceptual
+C2	S9	wish_perish	from C1 P4 P5
+P6	S10	wish_cease_exist ∨ wish_perish → bad_lovers
+C	S10	bad_lovers	from C2 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

@@ -1,0 +1,14 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+contingent	one
+generated_corrupt	one
+exists_at	one
+begin_needs_existing	one
+something_began	one
+now_nothing	one
+necessary	one
+caused_nec	one
+infinite_regress	one
+god	one
+# contingent: S2 grounds "possible not to be" in generation and corruption, and S3 reads it as "at some time is not". Both are the same corruptibility, so the sense does not shift.
+# The known weakness of S4 (each thing fails to exist at some time, so at some one time nothing exists) is a quantifier-scope move, not a change in what "exists" means.
+# necessary: S7 means "not able not to be". S8-S10 then divide necessary beings by whether their necessity is caused by another. I read this as subdividing one sense, not a second sense.

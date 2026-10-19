@@ -1,0 +1,22 @@
+# reading 2 of mill-subjection-1.md by claude-opus-5-5
+atom	isolated	the social subordination of women is an isolated fact in modern social institutions, a solitary breach of their fundamental law
+atom	relic	the social subordination of women is a relic of an old world of thought and practice exploded in everything else
+atom	discrepancy	there is an entire discrepancy between this one social fact and all those which accompany it
+atom	opposed	its nature is radically opposed to the progressive movement of the modern world
+atom	swept	the progressive movement has successively swept away everything else of an analogous character
+atom	reflection	this affords a conscientious observer serious matter for reflection
+atom	presumption	a prima facie presumption is raised on the unfavourable side, outweighing any which custom and usage could create on the favourable
+atom	balanced	the question of women's subordination is at least a balanced question
+P1	S1	isolated	kind empirical
+P2	S1	relic	kind empirical
+P3	S2	swept	kind empirical
+A1	-	isolated → discrepancy
+A2	-	relic ∧ swept → opposed
+C1	S2	discrepancy ∧ opposed	from P1 P2 P3 A1 A2
+P4	S2	discrepancy ∧ opposed → reflection
+C2	S2	reflection	from C1 P4
+P5	S3	discrepancy ∧ opposed → presumption
+C3	S3	presumption	from C1 P5
+P6	S3	presumption → balanced
+C	S3	balanced	from C3 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

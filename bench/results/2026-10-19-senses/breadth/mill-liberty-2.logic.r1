@@ -1,0 +1,26 @@
+# reading 2 of mill-liberty-2.md by claude-opus-5-5
+logic	s5
+atom	world_chooses	he lets the world, or his own portion of it, choose his plan of life for him
+atom	only_imitation	he has no need of any other faculty than the ape-like one of imitation
+atom	self_chooses	he chooses his plan of life for himself
+atom	all_faculties	he employs all his faculties (observation, reasoning, judgment, activity, discrimination, firmness and self-control)
+atom	guided_well	he is guided in some good path and kept out of harm's way
+atom	manner_matters	it is of importance not only what men do but also what manner of men they are that do it
+atom	man_first	among the works of man, the first in importance is man himself
+atom	nature_grows	human nature is not a machine built after a model but a tree that requires to grow and develop itself on all sides
+atom	lower_worth	his comparative worth as a human being is lessened
+P1	S1	world_chooses → only_imitation	kind conceptual
+P2	S2	self_chooses → all_faculties	kind conceptual
+O1	S5	◇(guided_well ∧ world_chooses ∧ ¬all_faculties)	against C
+R1	S7	manner_matters	against O1
+P3	S7	manner_matters	kind normative
+P4	S8	man_first	kind normative
+P5	S10	nature_grows
+# S3 and S4 spell out which faculties self-choice uses; S9 illustrates S7-S8 and is left out.
+# The text plainly takes a life that needs only imitation not to exercise the full faculties.
+A1	-	only_imitation → ¬all_faculties
+# The text plainly takes it that, since manner matters, a man who does not exercise his faculties is of lesser worth.
+A2	-	manner_matters ∧ ¬all_faculties → lower_worth
+# S6 is a rhetorical question, read as asserting lessened worth even when he is guided well.
+C	S6	world_chooses → lower_worth	from P1 A1 A2 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

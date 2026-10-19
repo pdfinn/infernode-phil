@@ -1,0 +1,26 @@
+# reading 3 of euthydemus-learn.md by claude-opus-5-5
+# Two sophistical arguments: Euthydemus (S1-S13), then Dionysodorus (S15-S17).
+# "wise" and "unlearned" change sense between them. In S7-S13 they mean knowing or not
+# knowing the thing being learned (wise_k, unlearned_k). In S15-S17 they mean clever or
+# dull pupils (wise_c, unlearned_c).
+# S17 treats the first sense as if it were the second; the two senses are not joined here.
+atom	learner	Cleinias was learning from the grammar-master and the lyre-master
+atom	knew	Cleinias knew the things which he was learning
+atom	wise_k	Cleinias was wise, in the sense of knowing what he was learning
+atom	unlearned_k	Cleinias was unlearned, in the sense of not knowing what he was learning
+atom	learner_d	Cleinias learned what the grammar-master dictated
+atom	wise_c	Cleinias was among the wise boys, in the sense of clever or quick pupils
+atom	unlearned_c	Cleinias was among the unlearned boys, in the sense of dull pupils
+P1	S3	learner	kind empirical
+P2	S5	learner → ¬knew	kind empirical
+P3	S7	¬wise_k	kind empirical
+P4	S9	¬wise_k → unlearned_k	kind conceptual
+C1	S11	learner ∧ ¬knew ∧ unlearned_k	from P1 P2 P3 P4
+C2	S13	learner ∧ unlearned_k ∧ ¬wise_k	from C1 P3
+P5	S15	learner_d	kind empirical
+P6	S16	wise_c ∧ learner_d	kind empirical
+# S17: "the wise are the learners and not the unlearned; your last answer was wrong".
+# It is read as denying the S13 claim that the unlearned (sense k) learn.
+# This is drawn only from the claim that clever pupils learned the dictation.
+C	S17	learner_d ∧ wise_c ∧ ¬(learner ∧ unlearned_k)	from P5 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

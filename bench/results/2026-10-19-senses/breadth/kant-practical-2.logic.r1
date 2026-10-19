@@ -1,0 +1,23 @@
+# the argument of kant-practical-2.md as claude-opus-5-5 read it: check that it says what the text says
+atom	emp	the knowledge of happiness rests on mere empirical data
+atom	var	every man's judgement on happiness depends on his particular, very variable point of view
+atom	universal	the principle of happiness can supply universal rules that must hold good always and necessarily
+atom	law	the principle of happiness can found practical laws, laws of the will
+atom	object_found	an object of choice is the foundation of the rule and must precede it
+atom	exp	the rule refers to nothing but what is felt, so it refers to experience and is founded on it
+atom	endless	the variety of judgement is endless
+atom	same_all	the principle prescribes the same practical rules to all rational beings
+P1	S2	emp ∧ var
+P2	S2	emp ∧ var → ¬universal
+C1	S2	¬universal	from P1 P2
+P3	S2	¬universal → ¬law
+P4	S3	object_found
+P5	S3	object_found → exp
+P6	S3	exp → endless
+C2	S3	endless	from P4 P5 P6
+P7	S4	endless → ¬same_all
+C3	S4	¬same_all	from C2 P7
+# S5: a practical law is objectively necessary only because it holds for everyone with reason and will
+P8	S5	law → same_all	kind conceptual
+C	S1	¬law	from C1 P3 C3 P8
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

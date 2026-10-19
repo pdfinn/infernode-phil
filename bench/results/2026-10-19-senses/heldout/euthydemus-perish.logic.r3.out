@@ -1,0 +1,30 @@
+# 3 readings by claude-opus-5-5, compared
+euthydemus-perish.md:13: argue/readings: S7 is read 2 ways: euthydemus-perish.logic.r3 has "wish_wise ∧ ¬wise → wish_no_longer_what_he_is"; euthydemus-perish.logic.r3.2 and euthydemus-perish.logic.r3.3 have nothing from it; they differ when only "you wish Cleinias to become wise" is true, which the second allows
+euthydemus-perish.md:13: argue/answered: S7: answered no, which keeps euthydemus-perish.logic.r3, to: Suppose "you wish Cleinias to become wise" is true and "Cleinias is wise as yet" and "you wish him to be what he is not, and no longer to be what he is (predicative "be": no longer to be ignorant)" are false. Is S7, "You wish him to be what he is not, and no longer to be what he is?", true then?
+euthydemus-perish.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: euthydemus-perish.logic.r3 has nothing from it; euthydemus-perish.logic.r3.2 and euthydemus-perish.logic.r3.3 have "wish_wise ∧ ¬wise ∧ wish_not_ignorant → wish_no_longer_what_he_is"; they differ when only "you wish Cleinias to become wise" and "you wish him to become wise and not to be ignorant" are true, which the first allows
+euthydemus-perish.md:3: argue/unfaithful: euthydemus-perish.logic.r3 P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: euthydemus-perish.logic.r3 P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: euthydemus-perish.logic.r3 P3 (S6): the sentence has no word of "you wish him to become wise and not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.md:13: argue/unfaithful: euthydemus-perish.logic.r3 P4 (S7): the sentence has no word of "Cleinias is wise as yet": is it the sentence P4 came from?
+euthydemus-perish.md:3: argue/unfaithful: euthydemus-perish.logic.r3.2 P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: euthydemus-perish.logic.r3.2 P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: euthydemus-perish.logic.r3.2 P3 (S6): the sentence has no word of "you wish him to become wise and not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.md:3: argue/unfaithful: euthydemus-perish.logic.r3.3 P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: euthydemus-perish.logic.r3.3 P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: euthydemus-perish.logic.r3.3 P3 (S6): the sentence has no word of "you wish him to become wise and not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.logic.r3: argue/readings-agree 6
+euthydemus-perish.logic.r3: argue/readings-differ 2
+euthydemus-perish.logic.r3: argue/verdicts-agree 1
+euthydemus-perish.logic.r3: argue/mismatches 4
+euthydemus-perish.logic.r3.2: argue/mismatches 3
+euthydemus-perish.logic.r3.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: euthydemus-perish.logic.r3
+# argument written to euthydemus-perish.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+euthydemus-perish.md:3: argue/unfaithful: P1 (S2): the sentence has no word of "you wish Cleinias to become wise": is it the sentence P1 came from?
+euthydemus-perish.md:7: argue/unfaithful: P2 (S4): the sentence has no word of "Cleinias is wise as yet": is it the sentence P2 came from?
+euthydemus-perish.md:11: argue/unfaithful: P3 (S6): the sentence has no word of "you wish him to become wise and not to be ignorant": is it the sentence P3 came from?
+euthydemus-perish.md:13: argue/unfaithful: P4 (S7): the sentence has no word of "Cleinias is wise as yet": is it the sentence P4 came from?
+euthydemus-perish.md:13: argue/own-sentence: C1 (S7): needs P4, read from the conclusion's own sentence: check that S7 gives it as its reason and does not conclude it
+euthydemus-perish.md:17: argue/own-sentence: C2 (S9): needs P5, read from the conclusion's own sentence: check that S9 gives it as its reason and does not conclude it
+euthydemus-perish.md:17: argue/own-sentence: C (S10): needs P6, read from the conclusion's own sentence: check that S10 gives it as its reason and does not conclude it
+euthydemus-perish.logic.r3: argue/valid 1

@@ -1,0 +1,29 @@
+# reading 2 of aristotle-politics-1.md by claude-opus-5-5
+atom	same_rank_in_office	Socrates would have persons of the same rank always in office
+atom	causes_sedition	this becomes the cause of sedition, especially among the courageous and warlike
+atom	magistracy_hazardous	settling the magistracy as Socrates has done is very hazardous
+atom	golden_particle_fixed	the golden particle God mixed into the soul does not pass from one to another but stays with the same persons
+atom	military_unhappy	Socrates deprives the military of happiness
+atom	artisans_unhappy	the artisans and those employed in inferior offices are not happy
+atom	part_happy	all, or the greater, or some part of the city is happy
+atom	city_happy	the whole city is happy
+atom	all_citizens_happy_aim	Socrates says the legislator ought to make all the citizens happy
+atom	has_defects	the state Socrates has described has these defects
+P1	S1	same_rank_in_office
+P2	S1	same_rank_in_office → causes_sedition
+P3	S1	causes_sedition → magistracy_hazardous
+C1	S1	magistracy_hazardous	from P1 P2 P3
+P4	S1	golden_particle_fixed	says socrates
+P5	S1	golden_particle_fixed
+P6	S1	golden_particle_fixed → same_rank_in_office
+P7	S1	military_unhappy
+P8	S1	all_citizens_happy_aim	says socrates
+P9	S1	city_happy → part_happy	kind conceptual
+P10	S2	artisans_unhappy
+P11	S2	military_unhappy ∧ artisans_unhappy → ¬part_happy
+C2	S2	¬part_happy	from P7 P10 P11
+C3	S2	¬city_happy	from P9 C2
+# the inference to defects is only implicit in "has all these defects"
+A1	-	magistracy_hazardous ∧ ¬city_happy → has_defects
+C	S3	has_defects	from C1 C3 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

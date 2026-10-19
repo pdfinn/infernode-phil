@@ -1,0 +1,18 @@
+# the argument of descartes-discourse-1.md as claude-opus-5-5 read it: check that it says what the text says
+atom	satisfied	every one thinks himself so abundantly provided with good sense that he does not desire a larger measure of it than he already possesses
+atom	all_mistaken	all are mistaken in this conviction
+atom	reason_equal	good sense, the power of judging aright and of distinguishing truth from error, is by nature equal in all men (most equally distributed)
+atom	diversity_from_reason	the diversity of our opinions arises from some being endowed with a larger share of reason than others
+atom	diversity_from_conduct	the diversity of our opinions arises from our conducting our thoughts along different ways and not fixing our attention on the same objects
+atom	vigour_enough	to be possessed of a vigorous mind is enough
+atom	right_application	the prime requisite is rightly to apply the mind
+P1	S1	satisfied	kind empirical
+P2	S2	¬all_mistaken
+P3	S2	satisfied ∧ ¬all_mistaken → reason_equal
+C1	S1	reason_equal	from P1 P2 P3
+P4	S2	reason_equal → ¬diversity_from_reason
+P5	S3	¬vigour_enough ∧ right_application
+# The text says the diversity arises "solely" from differing conduct of thought; it relies on these being the only candidate sources.
+A1	-	diversity_from_reason ∨ diversity_from_conduct
+C	S2	¬diversity_from_reason ∧ diversity_from_conduct	from C1 P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

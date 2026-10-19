@@ -1,0 +1,24 @@
+# reading 2 of augustine-2.md by claude-opus-5-5
+atom	vision_revealed	God by a vision revealed to the Bishop where the bodies of Gervasius and Protasius lay hid
+atom	bodies_translated	the bodies were discovered, dug up and translated with due honour to the Ambrosian Basilica
+atom	possessed_cured	those vexed with unclean spirits were cured
+atom	blind_healed	the blind man touched the bier with his handkerchief and his eyes were opened
+atom	fame_spread	the fame spread and God's praises glowed
+atom	empress_turned	the mind of that enemy, the Empress, was turned back from her fury of persecuting
+atom	empress_converted	the Empress was turned to the soundness of believing
+atom	odour_fragrant	the odour of God's ointments was so fragrant
+atom	ran_after	we ran after God
+atom	wept_more	I wept more among the singing of God's hymns
+P1	S1	vision_revealed	kind empirical
+P2	S2	bodies_translated	kind empirical
+P3	S2	bodies_translated → possessed_cured ∧ blind_healed
+P4	S4	blind_healed	kind empirical
+C1	S5	possessed_cured ∧ blind_healed	from P2 P3
+P5	S5	possessed_cured ∧ blind_healed → fame_spread ∧ empress_turned
+C2	S5	fame_spread ∧ empress_turned ∧ ¬empress_converted	from C1 P5 P6
+P6	S5	¬empress_converted	kind empirical
+P7	S8	odour_fragrant ∧ ¬ran_after	kind empirical
+# S9 "Therefore" draws the extra weeping from the earlier failure to run after God despite the fragrance
+P8	S9	odour_fragrant ∧ ¬ran_after → wept_more
+C	S9	wept_more	from P7 P8
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

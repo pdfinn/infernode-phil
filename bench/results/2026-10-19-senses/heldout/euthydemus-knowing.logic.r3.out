@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+euthydemus-knowing.md:5: argue/readings: S3 is read 2 ways: euthydemus-knowing.logic.r3 and euthydemus-knowing.logic.r3.3 have "knows_something → knowing_q"; euthydemus-knowing.logic.r3.2 has nothing from it; they differ when only "you know something" is true, which the second allows
+euthydemus-knowing.md:5: argue/answered: S3: answered no, which keeps euthydemus-knowing.logic.r3 and euthydemus-knowing.logic.r3.3, to: Suppose "you know something" is true and "you are knowing, in respect of the knowledge which you have" is false. Is S3, "If you know, you are knowing.", true then?
+euthydemus-knowing.md:7: argue/readings: S4 is read 2 ways: euthydemus-knowing.logic.r3 and euthydemus-knowing.logic.r3.3 have nothing from it; euthydemus-knowing.logic.r3.2 has "knows_something → knowing_q"; they differ when only "you know something" is true, which the first allows
+euthydemus-knowing.md:7: argue/answered: S4: answered no, which keeps euthydemus-knowing.logic.r3.2, to: Suppose "you know something" is true and "you are knowing, in respect of the knowledge which you have" is false. Is S4, "Certainly, of the knowledge which I have.", true then?
+euthydemus-knowing.md:3: argue/unfaithful: euthydemus-knowing.logic.r3 P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.md:3: argue/unfaithful: euthydemus-knowing.logic.r3.2 P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.md:3: argue/unfaithful: euthydemus-knowing.logic.r3.3 P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.logic.r3: argue/readings-agree 5
+euthydemus-knowing.logic.r3: argue/readings-differ 2
+euthydemus-knowing.logic.r3: argue/verdicts-agree 1
+euthydemus-knowing.logic.r3: argue/answers-split: no reading agrees with all 2 answers (euthydemus-knowing.logic.r3 1, euthydemus-knowing.logic.r3.2 1, euthydemus-knowing.logic.r3.3 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+euthydemus-knowing.logic.r3: argue/mismatches 1
+euthydemus-knowing.logic.r3.2: argue/mismatches 1
+euthydemus-knowing.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: euthydemus-knowing.logic.r3
+# argument written to euthydemus-knowing.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+euthydemus-knowing.md:3: argue/unfaithful: P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.md:17: argue/negation: C2 (S9): the sentence says "not", but C2 denies nothing it speaks of: it reads "you are knowing, in respect of the knowledge which you have"
+euthydemus-knowing.md:17: argue/inconsistent: C1 (S9): C1, C2 and P3 contradict each other, so anything at all would follow from them
+euthydemus-knowing.logic.r3: argue/valid 0
+euthydemus-knowing.md:9: argue/defeated: P3 (S5): P3 falls to O1, which nothing answers
+euthydemus-knowing.md:17: argue/defeated: C (S9): C cannot stand: it does not follow from what it rests on, so no reply to the objections can save it
+euthydemus-knowing.logic.r3: argue/survives 0

@@ -1,0 +1,17 @@
+# reading 2 of gorgias-polus.md by claude-opus-5-5
+atom	dw_more_disgraceful	doing wrong is more disgraceful than suffering wrong
+atom	dw_more_pain	doing wrong exceeds suffering wrong in pain
+atom	dw_more_evil	doing wrong exceeds suffering wrong in evil, i.e. is a greater evil than suffering wrong
+atom	dw_more_evil_2	is a greater evil for the doer than suffering is for the victim, the sense of Polus's claim in S18
+atom	sw_more_evil	suffering wrong is more evil than doing wrong
+atom	injurers_suffer_more	the injurers suffer more than the injured
+# S11-S15 give the standard: what exceeds in disgrace exceeds in pain or evil or both; S20 applies it.
+P1	S20	dw_more_disgraceful → dw_more_pain ∨ dw_more_evil	kind conceptual
+P2	S18	dw_more_disgraceful ∧ sw_more_evil	says polus
+P3	S34	dw_more_disgraceful
+P4	S23	¬injurers_suffer_more	kind empirical
+# S22: whether doing exceeds in pain is asked as whether the injurers suffer more.
+A1	-	dw_more_pain → injurers_suffer_more
+C1	S24	¬dw_more_pain	from P4 A1
+C	S32	dw_more_evil_2	from P1 P3 C1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

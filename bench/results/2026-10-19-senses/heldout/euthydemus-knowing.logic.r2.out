@@ -1,0 +1,20 @@
+# 3 readings by claude-opus-5-5, compared
+euthydemus-knowing.md:7: argue/readings: S4 is read 2 ways: euthydemus-knowing.logic.r2 has "knows_something → knowing_of_known"; euthydemus-knowing.logic.r2.2 and euthydemus-knowing.logic.r2.3 have nothing from it; they differ when only "you know something" is true, which the second allows
+euthydemus-knowing.md:7: argue/answered: S4: answered no, which keeps euthydemus-knowing.logic.r2, to: Suppose "you know something" is true and "you are knowing of the knowledge which you have (Socrates' qualified sense)" is false. Is S4, "Certainly, of the knowledge which I have.", true then?
+euthydemus-knowing.md:15: argue/readings: S8 is read 2 ways: euthydemus-knowing.logic.r2 has "ignorant_something → not_knowing_of_unknown"; euthydemus-knowing.logic.r2.2 and euthydemus-knowing.logic.r2.3 have nothing from it; they differ when only "there are things which you do not know" is true, which the second allows
+euthydemus-knowing.md:15: argue/answered: S8: answered no, which keeps euthydemus-knowing.logic.r2, to: Suppose "there are things which you do not know" is true and "you are not knowing of that which you do not know (Socrates' qualified sense)" is false. Is S8, "Yes, friend, of that which I do not know.", true then?
+euthydemus-knowing.md:3: argue/unfaithful: euthydemus-knowing.logic.r2 P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.md:3: argue/unfaithful: euthydemus-knowing.logic.r2.2 P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.md:3: argue/unfaithful: euthydemus-knowing.logic.r2.3 P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.logic.r2: argue/readings-agree 6
+euthydemus-knowing.logic.r2: argue/readings-differ 2
+euthydemus-knowing.logic.r2: argue/verdicts-agree 1
+euthydemus-knowing.logic.r2: argue/mismatches 1
+euthydemus-knowing.logic.r2.2: argue/mismatches 1
+euthydemus-knowing.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: euthydemus-knowing.logic.r2
+# argument written to euthydemus-knowing.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+euthydemus-knowing.md:3: argue/unfaithful: P1 (S2): the sentence has no word of "you know something": is it the sentence P1 came from?
+euthydemus-knowing.md:3: argue/inconsistent: P1 (S2): P1, P2, P5 and P7 contradict each other, so anything at all would follow from them
+euthydemus-knowing.logic.r2: argue/valid 0
+euthydemus-knowing.logic.r2: argue/two-senses: P2 (S3): "knowing" is taken as being a knower of something, of the knowledge one has in P2 C and as being a knower without qualification, which would mean knowing all things (as in P4, P7) where knowing is used else, a reader says

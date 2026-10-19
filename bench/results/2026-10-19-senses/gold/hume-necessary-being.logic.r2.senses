@@ -1,0 +1,6 @@
+# answered by claude-opus-5-5, prompt /lib/phil/senses f4c9d13865f3, 2026-10-19
+demonstrable	one
+nonexist_contradiction	one
+# S3 says only "conceive as non-existent" without S2's "distinctly". That is a missing qualifier, not a second sense of "conceive", so it counts as one sense.
+conceivable_nonexistent	one
+conceived_existent	one

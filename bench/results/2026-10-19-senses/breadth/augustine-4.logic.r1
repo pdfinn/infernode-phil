@@ -1,0 +1,26 @@
+# reading 3 of augustine-4.md by claude-opus-5-5
+atom	cw_first	a certain created wisdom was created before all things
+atom	cw_intellectual	the created wisdom is the intellectual nature, which by contemplating the light is light
+atom	cw_created	this wisdom is created
+atom	cw_called_wisdom	this created thing is also called wisdom
+atom	wisdoms_differ	the Wisdom that createth differs from the wisdom created as the Light which enlighteneth differs from that which is enlightened
+atom	we_righteousness	we also are called God's righteousness
+atom	no_time_before	we find no time before the created wisdom
+atom	creator_before	the Eternity of the Creator Himself is before the created wisdom
+atom	beginning_creation	the created wisdom took from the Creator the beginning of its creation
+atom	beginning_time	the created wisdom took from the Creator a beginning of time
+atom	time_not_yet	time itself was not yet
+P1	S1	cw_first
+P2	S1	cw_intellectual
+P3	S2	cw_created ∧ cw_called_wisdom	kind conceptual
+P4	S3	wisdoms_differ
+# S4 attributes the words to "a certain servant of Thine" without naming him; written as a plain premise
+P5	S4	we_righteousness
+P6	S6	cw_first → no_time_before
+C1	S6	no_time_before	from P1 P6
+P7	S6	time_not_yet
+P8	S6	time_not_yet → ¬beginning_time
+P9	S6	cw_created → beginning_creation
+A1	-	cw_created → creator_before
+C	S6	no_time_before ∧ creator_before ∧ beginning_creation ∧ ¬beginning_time	from C1 P3 P7 P8 P9 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue a036b21b8816, 2026-10-19, blinded by name space

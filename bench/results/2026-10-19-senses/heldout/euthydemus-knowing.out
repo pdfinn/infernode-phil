@@ -1,0 +1,17 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+euthydemus-knowing.md:11: argue/readings: S6 is read 2 ways: euthydemus-knowing.logic.r1 has "¬knows_all" and "ignorant_some"; euthydemus-knowing.logic.r1.2 and euthydemus-knowing.logic.r1.3 have "ignorant_some"; they differ when only "there are many other things which Socrates does not know" and "Socrates knows all things" are true, which the second allows [in 1 of 3 runs]
+euthydemus-knowing.md:11: argue/answered: S6: answered no, which keeps euthydemus-knowing.logic.r1, to: Suppose "there are many other things which Socrates does not know" and "Socrates knows all things" are true. Is S6, "Certainly not, I said, for there are many other things which I do not know.", true then? [in 1 of 3 runs]
+euthydemus-knowing.md:3: argue/unfaithful: euthydemus-knowing.logic.r1 P1 (S2): the sentence has no word of "Socrates knows something": is it the sentence P1 came from?
+# kept the reading that best fits the words and the other readings: euthydemus-knowing.logic.r1
+# argument written to euthydemus-knowing.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+euthydemus-knowing.md:3: argue/unfaithful: P1 (S2): the sentence has no word of "Socrates knows something": is it the sentence P1 came from?
+euthydemus-knowing.md:3: argue/inconsistent: P1 (S2): P1, P2, P5 and P6 contradict each other, so anything at all would follow from them [in 2 of 3 runs]
+euthydemus-knowing.logic.r1: argue/valid 0
+euthydemus-knowing.md:15: argue/misses: O2 (S8): O2 does not contradict P6, even given the premises no one disputes: as written it leaves P6 standing; is it aimed at something else? [in 1 of 3 runs]
+euthydemus-knowing.md:17: argue/defeated: C (S9): C cannot stand: it does not follow from what it rests on, so no reply to the objections can save it [in 2 of 3 runs]
+euthydemus-knowing.md:7: argue/defeated: O1 (S4): O1 falls to R1, which nothing answers [in 1 of 3 runs]
+euthydemus-knowing.logic.r1: argue/survives 0 [in 2 of 3 runs]
+euthydemus-knowing.logic: argue/runs-agree 1

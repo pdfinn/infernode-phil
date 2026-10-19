@@ -1,0 +1,34 @@
+# the argument of republic-overreach.md as claude-opus-5-5 read it: check that it says what the text says
+# Socrates against Thrasymachus. "x" ranges over persons.
+# "unlike_only(x)": x desires more than his unlike but not more than his like.
+# "both(x)": x desires more than both his like and his unlike.
+atom	just(x)	x is just
+atom	unjust(x)	x is unjust
+atom	knowing(x)	x is a man who has knowledge
+atom	ignorant(x)	x is ignorant
+atom	wise(x)	x is wise
+atom	good(x)	x is good
+atom	bad(x)	x is bad, evil
+atom	unlike_only(x)	x does not desire more than his like but more than his unlike
+atom	unlike_only_2(x)	trying to outdo others in performing a skill (tightening strings, prescribing, saying or doing more)
+atom	both(x)	x desires more than both his like and his unlike
+atom	like_wise(x)	x is like the wise and good
+atom	like_ignorant(x)	x is like the evil and ignorant
+atom	unjust_wise_good	the unjust is good and wise
+atom	just_wise_good	the just is good and wise
+P1	S1	∀x ((just(x) → unlike_only(x)) ∧ (unjust(x) → both(x)))
+P2	S3	unjust_wise_good ∧ ¬just_wise_good	says thrasymachus
+P3	S26	∀x (knowing(x) → unlike_only_2(x))	kind empirical
+P4	S29	∀x (ignorant(x) → both(x))	kind empirical
+P5	S31	∀x (knowing(x) → wise(x))	kind conceptual
+P6	S33	∀x (wise(x) → good(x))	kind conceptual
+# The text treats "the wise" and "the knowing" as the same; S35 reasons from the knowing to the wise.
+A1	-	∀x (wise(x) → knowing(x))
+C1	S35	∀x (wise(x) ∧ good(x) → unlike_only_2(x))	from P3 A1
+C2	S37	∀x (bad(x) ∧ ignorant(x) → both(x))	from P4
+P7	S39	∀x (unjust(x) → both(x))
+P8	S42	∀x (just(x) → unlike_only(x))
+# The final step treats sharing a manner of desire with a type as being like that type.
+A2	-	∀x ((unlike_only_2(x) → like_wise(x)) ∧ (both(x) → like_ignorant(x)))
+C	S44	∀x ((just(x) → like_wise(x)) ∧ (unjust(x) → like_ignorant(x)))	from P7 P8 C1 C2 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space
