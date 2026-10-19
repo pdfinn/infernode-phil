@@ -1,0 +1,1 @@
+Either the keeper lit the lamp that night or the ship was warned by the bell. Had the keeper lit the lamp, the log would record it, and the log records nothing for that night. If the ship was warned by the bell, then the ringer was awake. So the ringer was awake.

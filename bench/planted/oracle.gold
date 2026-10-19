@@ -1,0 +1,7 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/oracle.md, this repository
+class	inference
+at	S3	Therefore the bridge must fall
+fault	modal scope: "it must be that whatever the oracle sees comes to pass" gives the necessity of the consequence, not that what she sees is itself necessary
+reference	none: built here, a fault no commentary names
+known	planted

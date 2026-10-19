@@ -508,6 +508,31 @@ readings that wrote the quantifiers, the third adding to its conclusion
 a predicate nothing supplies; no finding of order in the other 155
 gold readings, the 200 breadth readings, or the held-out sets.
 
+## Canon and planted
+
+Every passage scored so far has a fault the literature names: the gold
+set (each with a reference), and the held-out sets, which were held out
+from the tools' development but not from the models' training. A reader
+that finds Aquinas's quantifier shift may be recalling Kenny. So the
+gold files now say `known canon`, `score.py` counts canon and planted
+apart, and `planted/` is a first set of 12 passages written here, with
+faults built in (three unstated premises or converses, two quantifier
+shifts, two modal scopes, two equivocations, three valid), each with
+its encoding, checked by the prover. Not yet run (an estimated $10 at
+the gold run's rate). Rescored, the 19 October gold run is all canon:
+
+| Known | Class | Passages | Runs | Located | Detected | Missed | Valid | False alarm |
+|---|---|---|---|---|---|---|---|---|
+| canon | inference | 13 | 39 | 28 | 6 | 5 | 0 | 0 |
+| canon | equivocation | 5 | 15 | 10 | 4 | 1 | 0 | 0 |
+| canon | valid | 8 | 24 | 0 | 0 | 0 | 24 | 0 |
+
+These are `score.py`'s counts, which take any finding of a fault at
+the gold sentence as located, whatever it says. The hand judgement of
+the same run ([above](#the-prompt-changed-48e3990c5a0a)) is the
+measure: 21 of the 39 inference runs found the fault and none of the
+15 equivocation runs did. A planted run will be judged by hand too.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of

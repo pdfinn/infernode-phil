@@ -1,0 +1,6 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/lighthouse.md, this repository
+class	valid
+fault	valid: the lamp was not lit (the log records nothing), so the bell warned the ship, so the ringer was awake
+reference	none: built here, a fault no commentary names
+known	planted

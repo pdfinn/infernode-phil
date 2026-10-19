@@ -22,4 +22,5 @@ for (gid, n, src, start, end, cls, at, fault, ref) in G:
             f.write('at\t%s\n' % at)
         f.write('fault\t%s\n' % fault)
         f.write('reference\t%s\n' % ref)
+        f.write('known\tcanon\n')     # the fault is the literature's
     print('%-30s %5d words  %s' % (gid, len(t.split()), cls))

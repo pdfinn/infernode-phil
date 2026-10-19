@@ -1,0 +1,1 @@
+A promise binds only if the one to whom it is made can release the one who made it. A river can release no one, for it neither speaks nor wills. So a promise made to a river does not bind, however solemnly it was spoken on the bank.

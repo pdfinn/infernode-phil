@@ -1,0 +1,8 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/judge-interest.md, this repository
+class	equivocation
+word	interest
+at	S2	Every judge worthy of the name takes an interest
+fault	"interest" is a stake in the outcome in the first premise and attention in the second: the conclusion holds only if one sense is kept throughout
+reference	none: built here, a fault no commentary names
+known	planted

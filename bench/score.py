@@ -14,7 +14,15 @@
 # is the result (bench/RESULTS.md).
 import os, re, sys
 FAULT = ('invalid', 'missing', 'assumed', 'begs', 'circular', 'equivocates', 'modal-ambiguous', 'quantifier', 'converse', 'unlinked', 'negation')
-gold, res = sys.argv[1], sys.argv[2]
+# Several gold sets may be scored at once (score.py gold results
+# planted results-planted): each passage's gold file says whether its
+# fault is the literature's (known canon) or was built here (known
+# planted), and the classes are counted again for each, apart, since a
+# reader blinded to the corpus is not blinded to what it read in
+# training (docs/THREATS.md).
+if len(sys.argv) < 3 or len(sys.argv) % 2 != 1:
+    sys.exit('usage: score.py gold results [gold results ...]')
+sets = list(zip(sys.argv[1::2], sys.argv[2::2]))
 def gfile(g):
     d = {}
     for l in open(os.path.join(gold, g + '.gold')):
@@ -32,7 +40,8 @@ def findings(path):
             r.append((m.group(1)[6:], int(s.group(1)) if s else None, m.group(2)))
     return r
 rows, review = [], []
-for f in sorted(os.listdir(gold)):
+for gold, res in sets:
+  for f in sorted(os.listdir(gold)):
     if not f.endswith('.gold'):
         continue
     g = f[:-5]; d = gfile(g); cls = d['class']
@@ -53,7 +62,7 @@ for f in sorted(os.listdir(gold)):
         lp = os.path.join(res, '%s.logic.r%d' % (g, i))
         asm = [l.rstrip('\n') for l in open(lp, errors='replace') if re.match(r'A\d+\t', l)] if os.path.exists(lp) else []
         runs.append((verdict, located, detected, said, asm, atconc, any(r in FAULT for r, s, _ in fs)))
-    rows.append((g, cls, at, runs))
+    rows.append((g, cls, at, runs, d.get('known', 'unmarked')))
     review.append((g, d, runs))
 def cell(cls, r):
     if r is None: return 'not run'
@@ -64,7 +73,7 @@ def cell(cls, r):
 print('| Passage | Class | Gold sentence | Run 1 | Run 2 | Run 3 |')
 print('|---|---|---|---|---|---|')
 tot = {}
-for g, cls, at, runs in rows:
+for g, cls, at, runs, known in rows:
     cs = [cell(cls, r) for r in runs]
     for c in cs:
         tot.setdefault(cls, {}).setdefault(c, 0)
@@ -79,10 +88,22 @@ print()
 print('| Class | Runs | Verdict 0 | A finding other than an assumption | Any finding of a fault | Located, gold sentence not the conclusion\'s |')
 print('|---|---|---|---|---|---|')
 for cls in ('inference', 'equivocation', 'valid'):
-    rs = [r for g, c, at, runs in rows if c == cls for r in runs if r is not None]
+    rs = [r for g, c, at, runs, k in rows if c == cls for r in runs if r is not None]
     nc = [r for r in rs if not r[5]]
     print('| %s | %d | %d | %d | %d | %s |' % (cls, len(rs), sum(r[0] == '0' for r in rs), sum(r[2] for r in rs), sum(r[6] for r in rs),
         '%d of %d' % (sum(r[1] for r in nc), len(nc)) if cls != 'valid' else '-'))
+print()
+print('| Known | Class | Passages | Runs | Located | Detected | Missed | Valid | False alarm | Undecided |')
+print('|---|---|---|---|---|---|---|---|---|---|')
+for known in sorted(set(k for *_, k in rows)):
+    for cls in ('inference', 'equivocation', 'valid'):
+        ps = [(c, runs) for g, c, at, runs, k in rows if k == known and c == cls]
+        if not ps:
+            continue
+        cs = [cell(cls, r) for c, runs in ps for r in runs if r is not None]
+        n = lambda w: sum(x == w for x in cs)
+        print('| %s | %s | %d | %d | %d | %d | %d | %d | %d | %d |' % (known, cls, len(ps), len(cs),
+            n('located'), n('detected'), n('missed'), n('valid'), n('false alarm'), n('undecided')))
 print()
 for g, d, runs in review:
     if d['class'] == 'valid' and all(r is None or r[0] == '1' for r in runs):

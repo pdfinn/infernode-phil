@@ -1,6 +1,6 @@
 # The bench: the tools on primary texts of philosophy
 
-Three sets of passages, read by a model through `phil/argue` and judged by
+Sets of passages, read by a model through `phil/argue` and judged by
 rule, to measure what the tools do on philosophy as it was written, not on
 test sentences. Every passage is from a Project Gutenberg edition whose
 author and translator died more than seventy years ago, so that the texts
@@ -12,6 +12,17 @@ ebook. Project Gutenberg's header, footer and trademark are not included.
 | `gold/` | 26 canonical arguments, each with what the literature says is wrong with it, or that it is valid as stated | whether a run finds the known fault at its sentence (located), finds something amiss elsewhere (detected), or misses it; and, for the valid ones, false alarms |
 | `breadth/` | 100 argumentative paragraphs, four from each of 25 works from Plato to William James, drawn by a fixed seed | where there is no gold: whether runs agree, how far readings agree, how often a passage cannot be read, what is marked as reported and of what kind |
 | `pairs/` | three commentaries with the passages of their source they report: Berkeley on Locke, Mill on Kant, Sidgwick on Mill | whether `phil/corpus` holds the commentary's reports to the source's own text |
+| `heldout/`, `heldout-scope/` | five equivocations and four scope shifts, each named by the literature, read by no one while the tools that find them were written | the same as the gold set, on passages the tools were not shaped on |
+| `planted/` | 12 short passages written here, each with a fault built into it (an unstated premise, the converse, a quantifier shift, modal scope, a word in two senses) or valid as stated, and each with its encoding (`<id>.key.logic`) | the same as the gold set, on faults no commentary names, so that a model cannot have read them in training |
+
+Every gold file says whether its fault is the literature's (`known
+canon`) or was built here (`known planted`), and `score.py` counts the
+two apart. The held-out sets are held out from the tools' development,
+not from the models' training: their faults are in the literature too,
+and they are canon. Only `planted/` is held out from training. The
+planted passages are this repository's own writing; each key is
+checked by `tests/cases/planted` to prove as its class says (valid,
+or invalid as stated; an equivocation is valid on one sense).
 
 ## The gold set
 
@@ -40,6 +51,8 @@ reading of it too; the references say whose.
 export ROOT=/path/to/infernode
 bench/run.sh bench/gold results/gold            # argue -n 3 -k 3 on each, 8 at a time
 python3 -I bench/score.py bench/gold results/gold
+bench/run.sh bench/planted results/planted
+python3 -I bench/score.py bench/gold results/gold bench/planted results/planted   # canon and planted apart
 RUNS=2 bench/run.sh bench/breadth results/breadth
 python3 -I bench/survey.py bench/breadth/SOURCES results/breadth
 bench/pairs.sh bench/pairs results/pairs        # then results/pairs/*/corpus.out

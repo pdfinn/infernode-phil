@@ -1,0 +1,1 @@
+No one can borrow a thing that no one owns, since to borrow is to take with an owner's leave. The common library, given to the town by a donor who renounced it, is owned by no one. Therefore no one can borrow a book from the common library; those who take its books take them on some other footing.

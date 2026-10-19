@@ -1,0 +1,7 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/ledger.md, this repository
+class	inference
+at	S3	So the clerk could not have miscounted
+fault	modal scope: from the necessity of the consequence (necessarily, if it balances, he counted right) to the necessity of the consequent (he necessarily counted right)
+reference	none: built here, a fault no commentary names
+known	planted

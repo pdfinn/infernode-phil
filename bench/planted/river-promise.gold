@@ -1,0 +1,6 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/river-promise.md, this repository
+class	valid
+fault	valid: a promise to a river does not bind, given that binding needs one who can release; the dispute is over that premise
+reference	none: built here, a fault no commentary names
+known	planted

@@ -1,0 +1,6 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/common-library.md, this repository
+class	valid
+fault	valid: given that borrowing needs an owner and the library has none; the dispute is over whether the town owns it
+reference	none: built here, a fault no commentary names
+known	planted

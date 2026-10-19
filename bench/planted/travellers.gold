@@ -1,0 +1,7 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/travellers.md, this repository
+class	inference
+at	S2	So there is a guide whom every traveller trusts
+fault	quantifier shift: from "every traveller trusts some guide" to "some guide is trusted by every traveller"
+reference	none: built here, a fault no commentary names
+known	planted

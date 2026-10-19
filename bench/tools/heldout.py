@@ -89,6 +89,7 @@ def build(items, out):
             f.write('word\t%s\n' % word)
             f.write('fault\t%s\n' % fault)
             f.write('reference\t%s\n' % ref)
+            f.write('known\tcanon\n')     # the fault is the literature's
         print('%-28s %5d words  %s' % (hid, len(t.split()), word))
 
 if __name__ == '__main__':
@@ -109,4 +110,5 @@ if __name__ == '__main__':
             f.write('word\t%s\n' % word)
             f.write('fault\t%s\n' % fault)
             f.write('reference\t%s\n' % ref)
+            f.write('known\tcanon\n')     # the fault is the literature's
         print('%-22s %5d words  %s' % (hid, len(t.split()), word))

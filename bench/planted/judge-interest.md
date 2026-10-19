@@ -1,0 +1,1 @@
+A judge must have no interest in the case before her. Every judge worthy of the name takes an interest in the case before her, attending to each detail of it. So no judge worthy of the name may sit in judgment.

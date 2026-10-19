@@ -1,0 +1,9 @@
+# the bench's planted passages: each hand encoding (key) proves as its
+# gold file's class says, valid, or invalid as stated
+load std
+for f in ../bench/planted/*.key.logic {
+	g=`{echo $f | sed 's/\.key\.logic$/.gold/'}
+	c=`{grep '^class' $g}
+	v=`{phil/prove $f | grep '^[^ ]*: argue/valid ' | sed 's/.*argue\/valid //'}
+	echo `{basename $f .key.logic} ${tl $c} valid $v
+}

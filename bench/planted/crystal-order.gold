@@ -1,0 +1,8 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/crystal-order.md, this repository
+class	equivocation
+word	order
+at	S2	The crystals in the cave grow in perfect order
+fault	"order" is a command (one that someone gives) in the first premise and an arrangement in the second
+reference	none: built here, a fault no commentary names
+known	planted

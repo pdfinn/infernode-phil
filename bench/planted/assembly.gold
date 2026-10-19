@@ -1,0 +1,7 @@
+source	planted: written for the bench, 2026-10-19
+text	bench/planted/assembly.md, this repository
+class	inference
+at	S2	So someone in the assembly can answer every question
+fault	quantifier shift: from "for each question some member can answer it" to "some member can answer each question"
+reference	none: built here, a fault no commentary names
+known	planted
