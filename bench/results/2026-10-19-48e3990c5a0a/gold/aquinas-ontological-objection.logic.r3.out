@@ -1,0 +1,16 @@
+# the prover could not read aquinas-ontological-objection.logic.r3.2: claude-opus-5-5 is asked again
+aquinas-ontological-objection.logic.r3.2: argue/undefined: atom known_on_terms is used but not given a meaning (atom	known_on_terms	...)
+# 3 readings by claude-opus-5-5, compared
+aquinas-ontological-objection.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: aquinas-ontological-objection.logic.r3 and aquinas-ontological-objection.logic.r3.3 have "signifies_greatest ∧ actual_greater ∧ exists_mentally → exists_actually" and "signifies_greatest ∧ exists_mentally ∧ exists_actually → known_on_terms"; aquinas-ontological-objection.logic.r3.2 has "signifies_greatest ∧ actual_greater ∧ exists_mentally → exists_actually" and "exists_actually → known_on_terms"; they differ when only "by the word "God" is signified that thing than which nothing greater can be conceived", "that which exists actually and mentally is greater than that which exists only mentally" and "God exists actually" are true, which the first allows
+aquinas-ontological-objection.logic.r3: argue/readings-agree 5
+aquinas-ontological-objection.logic.r3: argue/readings-differ 1
+aquinas-ontological-objection.logic.r3: argue/verdicts-agree 1
+aquinas-ontological-objection.logic.r3: argue/mismatches 0
+aquinas-ontological-objection.logic.r3.2: argue/mismatches 0
+aquinas-ontological-objection.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-ontological-objection.logic.r3
+# argument written to aquinas-ontological-objection.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+aquinas-ontological-objection.md:1: argue/assumed: C1 (S7): follows only by A1, which the text never states: state it, or argue for it
+aquinas-ontological-objection.md:1: argue/own-sentence: C1 (S7): needs P5, read from the conclusion's own sentence: check that S7 gives it as its reason and does not conclude it
+aquinas-ontological-objection.md:1: argue/assumed: C2 (S4): follows only by A2, which the text never states: state it, or argue for it
+aquinas-ontological-objection.logic.r3: argue/valid 1

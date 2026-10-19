@@ -1,0 +1,15 @@
+# the argument of hume-necessary-being.md as claude-opus-5-5 read it: check that it says what the text says
+# Domain: beings. "Can conceive" is folded into the atom conceivable_nonexist(x) rather than written with <>, since quantified arguments take no modal operators.
+atom	demonstrable(x)	the existence of x is demonstrable
+atom	contra_nonexist(x)	the non-existence of x (the contrary of its existence) implies a contradiction
+atom	conceivable_nonexist(x)	x can be distinctly conceived as non-existent
+atom	conceived_exist(x)	we conceive x as existent
+P1	S1	∀x (demonstrable(x) → contra_nonexist(x))	kind conceptual
+# S2 is general ("nothing distinctly conceivable implies a contradiction"); here it is applied to the non-existence of each being.
+P2	S2	∀x (conceivable_nonexist(x) → ¬contra_nonexist(x))	kind conceptual
+P3	S3	∀x (conceived_exist(x) → conceivable_nonexist(x))
+# The step to "no being" needs every being to be one we conceive as existent; the text relies on this without stating it.
+A1	-	∀x conceived_exist(x)
+C1	S4	∀x ¬contra_nonexist(x)	from P2 P3 A1
+C	S5	∀x ¬demonstrable(x)	from P1 C1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

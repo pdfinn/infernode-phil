@@ -1,0 +1,18 @@
+# 3 readings by claude-opus-5-5, compared
+mill-subjection-1.md:1: argue/unfaithful: mill-subjection-1.logic.r1 P4 (S3): the sentence has no word of "the nature of this social fact is radically opposed to the progressive movement of the modern world, which has swept away everything else of an analogous character": is it the sentence P4 came from?
+mill-subjection-1.md:1: argue/unfaithful: mill-subjection-1.logic.r1.2 P4 (S3): the sentence has no word of "the nature of this social fact is radically opposed to the progressive movement of the modern world, which has swept away everything else of an analogous character": is it the sentence P4 came from?
+mill-subjection-1.md:1: argue/unfaithful: mill-subjection-1.logic.r1.3 P4 (S3): the sentence has no word of "the nature of this social fact is radically opposed to the progressive movement of the modern world, which has swept away everything else of an analogous character": is it the sentence P4 came from?
+mill-subjection-1.logic.r1: argue/readings-agree 4
+mill-subjection-1.logic.r1: argue/readings-differ 0
+mill-subjection-1.logic.r1: argue/verdicts-agree 1
+mill-subjection-1.logic.r1: argue/mismatches 1
+mill-subjection-1.logic.r1.2: argue/mismatches 1
+mill-subjection-1.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: mill-subjection-1.logic.r1
+# argument written to mill-subjection-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+mill-subjection-1.md:1: argue/unfaithful: P4 (S3): the sentence has no word of "the nature of this social fact is radically opposed to the progressive movement of the modern world, which has swept away everything else of an analogous character": is it the sentence P4 came from?
+mill-subjection-1.md:1: argue/own-sentence: C1 (S2): needs P2 and P3, read from the conclusion's own sentence: check that S2 gives them as its reason and does not conclude them
+mill-subjection-1.md:1: argue/own-sentence: C2 (S3): needs P4, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it
+mill-subjection-1.md:1: argue/own-sentence: C (S3): needs P5, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it
+mill-subjection-1.md:1: argue/unused-step: C1 (S2): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+mill-subjection-1.logic.r1: argue/valid 1

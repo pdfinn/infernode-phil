@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+spinoza-god.md:3: argue/readings: S4 is read 2 ways: spinoza-god.logic.r3 and spinoza-god.logic.r3.2 have "◇¬god_exists → ¬essence_involves_existence"; spinoza-god.logic.r3.3 has "□(¬god_exists → ¬essence_involves_existence)"; they differ when nothing is true, which the first allows
+spinoza-god.md:3: argue/answered: S4: answered no, which keeps spinoza-god.logic.r3.3, to: Suppose "God's essence involves existence", "necessarily, (if it is not so that God, or substance consisting of infinite attributes, each expressing eternal and infinite essentiality, exists, then it is not so that God's essence involves existence)", "possibly, it is not so that God, or substance consisting of infinite attributes, each expressing eternal and infinite essentiality, exists" and "possibly, it is not so that God, or substance consisting of infinite attributes, each expressing eternal and infinite essentiality, exists" are false. Is S4, "Proof.--If this be denied, conceive, if possible, that God does not exist: then his essence does not involve existence.", true then?
+spinoza-god.md:3: argue/readings: S5 is read 2 ways: spinoza-god.logic.r3 and spinoza-god.logic.r3.2 have "essence_involves_existence"; spinoza-god.logic.r3.3 has "□essence_involves_existence"; they differ when only "God's essence involves existence" is true, which the first allows
+spinoza-god.md:3: argue/modal-ambiguous: S5 is read spinoza-god.logic.r3 and spinoza-god.logic.r3.2 with no modality; spinoza-god.logic.r3.3 as what is necessary or possible: the text does not say which it means
+spinoza-god.md:3: argue/answered: S5: answered no, which keeps spinoza-god.logic.r3.3, to: Suppose "God's essence involves existence" is true and "necessarily, God's essence involves existence" is false. Is S5, "But this (Prop. vii.) is absurd.", true then?
+spinoza-god.md:3: argue/unfaithful: spinoza-god.logic.r3 P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.md:3: argue/unfaithful: spinoza-god.logic.r3.2 P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.md:3: argue/unfaithful: spinoza-god.logic.r3.3 P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.logic.r3: argue/readings-agree 1
+spinoza-god.logic.r3: argue/readings-differ 2
+spinoza-god.logic.r3: argue/verdicts-agree 1
+spinoza-god.logic.r3: argue/mismatches 1
+spinoza-god.logic.r3.2: argue/mismatches 1
+spinoza-god.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: spinoza-god.logic.r3.3
+# argument written to spinoza-god.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+spinoza-god.md:3: argue/unfaithful: P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.logic.r3: argue/valid 1

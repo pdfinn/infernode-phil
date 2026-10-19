@@ -1,0 +1,11 @@
+# 3 readings by claude-opus-5-5, compared
+circle.logic.r2: argue/readings-agree 3
+circle.logic.r2: argue/readings-differ 0
+circle.logic.r2: argue/verdicts-agree 1
+circle.logic.r2: argue/mismatches 0
+circle.logic.r2.2: argue/mismatches 0
+circle.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: circle.logic.r2
+# argument written to circle.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+circle.md:2: argue/own-sentence: C1 (S2): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S2 gives them as its reason, the reading has it assert what it concludes
+circle.logic.r2: argue/valid 1

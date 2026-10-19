@@ -1,0 +1,23 @@
+# the argument of aquinas-fourth-way.md as claude-opus-5-5 read it: check that it says what the text says
+# S5's "must" is read as inferential ("therefore there is"), not as metaphysical necessity, so no modal logic is used.
+atom	graded	among beings there are some more and some less good, true, noble and the like
+atom	maximum_exists	there is something which is truest, something best, something noblest
+atom	uttermost_being	there is something which is uttermost being
+atom	cause_exists	there is something which is to all beings the cause of their being, goodness, and every other perfection
+atom	god	there is God
+P1	S2	graded	kind empirical
+# S3: more and less are predicated according to resemblance to something which is the maximum.
+P2	S3	graded → maximum_exists
+C1	S3	maximum_exists	from P1 P2
+# S3: those things that are greatest in truth are greatest in being; the text cites Metaph. ii for it and also argues from it.
+P3	S3	maximum_exists → uttermost_being	says aristotle
+P4	S3	maximum_exists → uttermost_being
+C2	S3	uttermost_being	from C1 P4
+# S4 states a general principle: the maximum in any genus is the cause of all in that genus.
+# It is written here as applied to being, which is how S5 uses it.
+P5	S4	uttermost_being → cause_exists
+C3	S5	cause_exists	from C2 P5
+# "and this we call God"
+P6	S5	cause_exists → god	kind conceptual
+C	S5	god	from C3 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

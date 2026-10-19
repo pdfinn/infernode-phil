@@ -1,0 +1,20 @@
+# the argument of hume-dialogues-1.md as claude-opus-5-5 read it: check that it says what the text says
+# S1 reports the sceptics' claim (Hume's Philo); the argument proper runs S2-S4.
+# S4's "must remain in suspense" is read as following from the balance, not as a separate modal claim.
+atom	invincible	reason, considered in an abstract view, furnishes invincible arguments against itself
+atom	too_refined	the sceptical reasonings are so refined and subtle that they cannot counterpoise the arguments derived from the senses and experience
+atom	conviction	we retain conviction or assurance on some subject
+atom	wide	our arguments lose this advantage and run wide of common life
+atom	counter	the most refined scepticism is upon a footing with our arguments and counterbalances them
+atom	equal	the one has no more weight than the other
+atom	suspense	the mind remains in suspense between them
+atom	triumph	scepticism triumphs
+P1	S1	invincible ∧ (¬too_refined → ¬conviction)	says sceptics
+P2	S2	wide → counter
+P3	S3	counter → equal
+P4	S4	suspense → triumph	kind conceptual
+# Unstated step: when arguments are of equal weight, the mind remains in suspense.
+A1	-	equal → suspense
+C1	S4	wide → suspense	from P2 P3 A1
+C	S4	wide → suspense ∧ triumph	from C1 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

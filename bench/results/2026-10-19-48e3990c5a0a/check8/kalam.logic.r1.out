@@ -1,0 +1,10 @@
+# 3 readings by claude-opus-5-5, compared
+kalam.logic.r1: argue/readings-agree 3
+kalam.logic.r1: argue/readings-differ 0
+kalam.logic.r1: argue/verdicts-agree 1
+kalam.logic.r1: argue/mismatches 0
+kalam.logic.r1.2: argue/mismatches 0
+kalam.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: kalam.logic.r1
+# argument written to kalam.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+kalam.logic.r1: argue/valid 1

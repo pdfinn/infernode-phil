@@ -1,0 +1,18 @@
+# the argument of sidgwick-methods-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Sidgwick: ordinary moral reasoning mixes methods, yet systematic guidance requires knowing which judgments are ultimately valid.
+# S4 is introduced with "Still", a contrast with S1-S3 rather than an inference from them, so C is given no derivation.
+atom	phases_not_sharp	the three phases are not sharply distinguished in the moral reasoning of ordinary men
+atom	intuit_not_sharp	Intuitionism of any sort is not sharply distinguished from either species of Hedonism (in ordinary moral reasoning)
+atom	loose_common	a loose combination or confusion of methods is the most common type of actual moral reasoning
+atom	believe_sense	most moral men believe their moral sense or instinct will guide them fairly right
+atom	believe_rules	most moral men believe there are general rules for determining right action in different departments of conduct
+atom	believe_explanation	most moral men believe a philosophical explanation can be found deducing these rules from fewer fundamental principles
+atom	systematic	conduct is to be given systematic direction
+atom	require_know_valid	we require to know on what judgments we are to rely as ultimately valid
+# "It must not be thought that..." is read as a plain denial, not a modal claim.
+P1	S1	phases_not_sharp ∧ intuit_not_sharp	kind empirical
+P2	S2	loose_common	kind empirical
+# S3 is hedged with "Probably"; the hedge is not modelled.
+P3	S3	believe_sense ∧ believe_rules ∧ believe_explanation	kind empirical
+C	S4	systematic → require_know_valid
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

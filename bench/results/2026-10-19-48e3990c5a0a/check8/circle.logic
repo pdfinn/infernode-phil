@@ -1,0 +1,13 @@
+# the argument of circle.md as claude-opus-5-5 read it: check that it says what the text says
+atom	scriptures_true	the scriptures are true
+atom	word_of_god	the scriptures are the word of God
+atom	scriptures_say_so	the scriptures say that they are the word of God
+P1	S1	word_of_god → scriptures_true
+P2	S2	scriptures_say_so	kind empirical
+P3	S2	scriptures_say_so → word_of_god
+# The step in S2 from what the scriptures say to their being the word of God
+# relies on the scriptures being trustworthy, which is the conclusion itself.
+# That reliance is left implicit, as the text leaves it.
+C1	S2	word_of_god	from P2 P3
+C	S3	scriptures_true	from C1 P1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

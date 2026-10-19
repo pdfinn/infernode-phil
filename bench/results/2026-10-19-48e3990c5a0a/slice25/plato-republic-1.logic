@@ -1,0 +1,27 @@
+# the argument of plato-republic-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Adeimantus' challenge (Republic II). The main conclusion is S2's rhetorical question: a man of superiority will not honour justice.
+# S1 cites "the most numerous and the highest authorities"; there is no surname, so "authorities" is the key.
+atom	fares_well	if we unite injustice with a deceitful regard to appearances, we fare to our mind with gods and men, in life and after death
+atom	no_principle	there is no principle on which to choose justice rather than the worst injustice
+atom	superior_honours	a man with any superiority of mind, person, rank or wealth is willing to honour justice
+atom	just_freely	men are just of their own free will
+atom	inspired_or_knowing	one has been inspired by the divinity within him with a hatred of injustice, or has attained knowledge of the truth
+atom	forgives_unjust	one who is satisfied that justice is best is not angry with the unjust but ready to forgive them
+atom	blames_injustice	a man blames injustice
+atom	lacks_power	the man, owing to cowardice or age or some weakness, has not the power of being unjust
+atom	gains_power	the man who blamed injustice obtains the power of being unjust
+atom	becomes_unjust	he immediately becomes unjust as far as he can be
+P1	S1	fares_well	says authorities
+P2	S1	fares_well
+P3	S1	fares_well → no_principle	kind normative
+C1	S1	no_principle	from P2 P3
+# S2's "knowing all this" links the lack of any principle to the superior man's unwillingness; that link is unstated, so it goes in as an assumption.
+A1	-	no_principle → ¬superior_honours
+C	S2	¬superior_honours	from C1 A1
+# S3 and S4: secondary claims; the main conclusion is not drawn from them.
+P4	S3	¬just_freely	kind empirical
+P5	S3	¬just_freely ∧ ¬inspired_or_knowing → forgives_unjust
+P6	S4	blames_injustice → lacks_power	kind empirical
+# S5 is offered as proof of S4, but S4 does not follow from it propositionally, so S5 is recorded only as a premise.
+P7	S5	gains_power → becomes_unjust	kind empirical
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

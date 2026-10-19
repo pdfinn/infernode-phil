@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r3 P1 (S3): the sentence says "unperceived", but P1 denies nothing it speaks of: it reads "for every x, if x is a sensible object (houses, mountains, rivers and the like), then x is a thing we perceive by sense"
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r3 P2 (S3): the sentence says "unperceived", but P2 denies nothing it speaks of: it reads "for every x, if x is a thing we perceive by sense, then x is one of our own ideas or sensations, or a combination of them"
+berkeley-principles-4.md:1: argue/unfaithful: berkeley-principles-4.logic.r3 C (S2): the sentence has no word of "x is a sensible object (houses, mountains, rivers and the like)": is it the sentence C came from?
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r3.2 P1 (S3): the sentence says "unperceived", but P1 denies nothing it speaks of: it reads "for every x, if x is a sensible object (houses, mountains, rivers and the like), then x is a thing we perceive by sense"
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r3.2 P2 (S3): the sentence says "unperceived", but P2 denies nothing it speaks of: it reads "for every x, if x is a thing we perceive by sense, then x is one of our own ideas or sensations, or a combination of them"
+berkeley-principles-4.md:1: argue/unfaithful: berkeley-principles-4.logic.r3.2 C (S2): the sentence has no word of "x is a sensible object (houses, mountains, rivers and the like)": is it the sentence C came from?
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r3.3 P1 (S3): the sentence says "unperceived", but P1 denies nothing it speaks of: it reads "for every x, if x is a sensible object (houses, mountains, rivers and the like), then x is a thing we perceive by sense"
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r3.3 P2 (S3): the sentence says "unperceived", but P2 denies nothing it speaks of: it reads "for every x, if x is a thing we perceive by sense, then x is one of our own ideas or sensations, or a combination of them"
+berkeley-principles-4.md:1: argue/unfaithful: berkeley-principles-4.logic.r3.3 C (S2): the sentence has no word of "x is a sensible object (houses, mountains, rivers and the like)": is it the sentence C came from?
+berkeley-principles-4.logic.r3: argue/readings-agree 2
+berkeley-principles-4.logic.r3: argue/readings-differ 0
+berkeley-principles-4.logic.r3: argue/verdicts-agree 1
+berkeley-principles-4.logic.r3: argue/mismatches 3
+berkeley-principles-4.logic.r3.2: argue/mismatches 3
+berkeley-principles-4.logic.r3.3: argue/mismatches 3
+# kept the reading that best fits the words and the other readings: berkeley-principles-4.logic.r3
+# argument written to berkeley-principles-4.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+berkeley-principles-4.md:1: argue/negation: P1 (S3): the sentence says "unperceived", but P1 denies nothing it speaks of: it reads "for every x, if x is a sensible object (houses, mountains, rivers and the like), then x is a thing we perceive by sense"
+berkeley-principles-4.md:1: argue/negation: P2 (S3): the sentence says "unperceived", but P2 denies nothing it speaks of: it reads "for every x, if x is a thing we perceive by sense, then x is one of our own ideas or sensations, or a combination of them"
+berkeley-principles-4.md:1: argue/unfaithful: C (S2): the sentence has no word of "x is a sensible object (houses, mountains, rivers and the like)": is it the sentence C came from?
+berkeley-principles-4.logic.r3: argue/valid 1
+berkeley-principles-4.md:1: argue/misses: O1 (S1): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+berkeley-principles-4.logic.r3: argue/survives 1

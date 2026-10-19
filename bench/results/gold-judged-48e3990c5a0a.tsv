@@ -1,0 +1,84 @@
+# The gold runs read with lib/phil/argue at 48e3990c5a0a (19 October
+# 2026), judged by hand as gold-judged.tsv judges the runs at
+# a036b21b8816, by the same rule; "comment" is a run whose reader names
+# the fault in a comment in its reading while no finding of the tool's
+# does.
+# passage	run	judged	why
+aquinas-first-way	1	partial	the identification with God flagged (own-sentence); assumed: no infinite regress -> a first unmoved mover
+aquinas-first-way	2	partial	the identification with God flagged
+aquinas-first-way	3	partial	the identification with God flagged; assumed: motion by another -> regress or a first mover
+aquinas-second-way	1	partial	the identification with God flagged
+aquinas-second-way	2	no	nothing at the step
+aquinas-second-way	3	no	nothing at the step
+aquinas-third-way	1	found	assumed: each contingent thing at some time not -> (all contingent -> once nothing), the shift
+aquinas-third-way	2	found	S4 would follow given "each at some time not -> once nothing"
+aquinas-third-way	3	no	assumptions elsewhere
+aquinas-fourth-way	1	no	the premise read as stated
+aquinas-fourth-way	2	no	as run 1
+aquinas-fourth-way	3	no	as run 1
+aquinas-ontological-objection	1	found	assumed: signifies the greatest, greater actual, exists mentally -> exists actually
+aquinas-ontological-objection	2	found	as run 1
+aquinas-ontological-objection	3	found	as run 1
+aristotle-chief-good	1	found	the conclusion read as "some good is aimed at by all", the premise as "each aims at some good"; invalid, with the case
+aristotle-chief-good	2	found	as run 1
+aristotle-chief-good	3	found	as run 1
+aristotle-function	1	found	assumed: crafts have a work -> man has one; members have a work -> man has one
+aristotle-function	2	found	as run 1
+aristotle-function	3	found	as run 1
+boethius-foreknowledge	1	comment	the reader: "It could also be read as necessity of the whole conditional ...; the argument turns on this"; no finding
+boethius-foreknowledge	2	comment	as run 1
+boethius-foreknowledge	3	comment	as run 1
+descartes-cogito	1	no	the first principle, as before
+descartes-cogito	2	no	as run 1
+descartes-cogito	3	no	as run 1
+descartes-real-distinction	1	found	invalid, with the case, as before
+descartes-real-distinction	2	found	as run 1
+descartes-real-distinction	3	found	as run 1
+hume-miracles	1	found	assumed: what is not in the common course has uniform experience against it
+hume-miracles	2	found	assumed: what is not observed has uniform experience against it
+hume-miracles	3	found	as run 1
+locke-labour	1	found	assumed: excludes -> property; C would follow given it
+locke-labour	2	no	nothing at the step
+locke-labour	3	found	as run 1
+mill-proof	1	no	assumption elsewhere
+mill-proof	2	found	S6 would follow given "own good -> general good"; the reader also says "desirable" changes its sense
+mill-proof	3	found	as run 2
+berkeley-master	1	no	assumption elsewhere
+berkeley-master	2	partial	assumed: what shows mind-independence -> conceiving the mind-independent, the step where content and act are run together, unnamed
+berkeley-master	3	partial	assumed: imagining shows -> conceiving without a mind, as run 2
+berkeley-principles-4	1	no	assumption elsewhere
+berkeley-principles-4	2	partial	the bridge between the two "perceive" premises assumed, as before, unnamed
+berkeley-principles-4	3	no	nothing at the step
+meno-paradox	1	no	one sense of "know"
+meno-paradox	2	no	the argument marked as Meno's, as it is; one sense of "know"
+meno-paradox	3	no	as run 1
+phaedo-opposites	1	no	assumption elsewhere
+phaedo-opposites	2	partial	assumed: mutual generation -> the living from the dead, the extension, unnamed
+phaedo-opposites	3	partial	assumed: generation from opposites for life and death -> the living from the dead
+republic-function	1	no	one sense of "live well"
+republic-function	2	no	as run 1
+republic-function	3	no	as run 1
+apology-death	1	valid	
+apology-death	2	valid	
+apology-death	3	valid	
+aquinas-economy-objection	1	valid	
+aquinas-economy-objection	2	valid	
+aquinas-economy-objection	3	valid	
+aquinas-evil-objection	1	valid	
+aquinas-evil-objection	2	valid	
+aquinas-evil-objection	3	valid	
+berkeley-heat-pain	1	valid	
+berkeley-heat-pain	2	valid	
+berkeley-heat-pain	3	valid	
+hume-induction	1	valid	
+hume-induction	2	valid	
+hume-induction	3	valid	
+hume-motivation	1	valid	
+hume-motivation	2	valid	
+hume-motivation	3	valid	
+hume-necessary-being	1	valid	
+hume-necessary-being	2	valid	
+hume-necessary-being	3	valid	
+spinoza-god	1	valid	
+spinoza-god	2	valid	
+spinoza-god	3	valid	

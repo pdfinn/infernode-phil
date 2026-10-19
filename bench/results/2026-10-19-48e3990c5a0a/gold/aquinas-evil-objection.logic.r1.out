@@ -1,0 +1,18 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r1 P1 (S1): the sentence has no word of "there is evil in the world (evil is discoverable)": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r1 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world (evil is discoverable)"
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r1.2 P1 (S1): the sentence has no word of "there is evil in the world (evil is discoverable)": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r1.2 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world (evil is discoverable)"
+aquinas-evil-objection.md:1: argue/unfaithful: aquinas-evil-objection.logic.r1.3 P1 (S1): the sentence has no word of "there is evil in the world (evil is discoverable)": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: aquinas-evil-objection.logic.r1.3 P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world (evil is discoverable)"
+aquinas-evil-objection.logic.r1: argue/readings-agree 4
+aquinas-evil-objection.logic.r1: argue/readings-differ 0
+aquinas-evil-objection.logic.r1: argue/verdicts-agree 1
+aquinas-evil-objection.logic.r1: argue/mismatches 2
+aquinas-evil-objection.logic.r1.2: argue/mismatches 2
+aquinas-evil-objection.logic.r1.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aquinas-evil-objection.logic.r1
+# argument written to aquinas-evil-objection.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-evil-objection.md:1: argue/unfaithful: P1 (S1): the sentence has no word of "there is evil in the world (evil is discoverable)": is it the sentence P1 came from?
+aquinas-evil-objection.md:1: argue/negation: P3 (S3): the sentence says "no", but P3 denies nothing it speaks of: it reads "there is evil in the world (evil is discoverable)"
+aquinas-evil-objection.logic.r1: argue/valid 1

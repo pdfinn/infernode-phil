@@ -1,0 +1,28 @@
+# 3 readings by claude-opus-5-5, compared
+phaedo-opposites.md:17: argue/readings: S12 is read 2 ways: phaedo-opposites.logic.r2 and phaedo-opposites.logic.r2.2 have nothing from it; phaedo-opposites.logic.r2.3 has "opposites_generated"; they differ when nothing is true, which the first allows
+phaedo-opposites.md:17: argue/answered: S12: answered no, which keeps phaedo-opposites.logic.r2.3, to: Suppose "all things which have opposites are generated out of their opposites" is false. Is S12, "And is this true of all opposites? and are we convinced that all of them are generated out of opposites?", true then?
+phaedo-opposites.md:25: argue/readings: S17 is read 2 ways: phaedo-opposites.logic.r2 and phaedo-opposites.logic.r2.2 have "opposites_generated"; phaedo-opposites.logic.r2.3 has nothing from it; they differ when nothing is true, which the second allows
+phaedo-opposites.md:25: argue/answered: S17: answered no, which keeps phaedo-opposites.logic.r2 and phaedo-opposites.logic.r2.2, to: Suppose "all things which have opposites are generated out of their opposites" is false. Is S17, "And this necessarily holds of all opposites, even though not always expressed in words--they are really generated out of one another, and there is a passing or process from one to the other of them?", true then?
+phaedo-opposites.md:29: argue/readings: S19 is read 2 ways: phaedo-opposites.logic.r2 has "life_death_opposites"; phaedo-opposites.logic.r2.2 and phaedo-opposites.logic.r2.3 have nothing from it; they differ when nothing is true, which the second allows
+phaedo-opposites.md:29: argue/answered: S19: answered no, which keeps phaedo-opposites.logic.r2, to: Suppose "death is the opposite of life" is false. Is S19, "Well, and is there not an opposite of life, as sleep is the opposite of waking?", true then?
+phaedo-opposites.md:37: argue/readings: S23 is read 2 ways: phaedo-opposites.logic.r2 and phaedo-opposites.logic.r2.3 have "opposites_generated → (life_death_opposites → mutual_generation)"; phaedo-opposites.logic.r2.2 has nothing from it; they differ when only "all things which have opposites are generated out of their opposites" and "death is the opposite of life" are true, which the second allows
+phaedo-opposites.md:37: argue/answered: S23: answered no, which keeps phaedo-opposites.logic.r2 and phaedo-opposites.logic.r2.3, to: Suppose "all things which have opposites are generated out of their opposites" and "death is the opposite of life" are true and "life and death are generated the one from the other" is false. Is S23, "And these, if they are opposites, are generated the one from the other, and have there their two intermediate processes also?", true then?
+phaedo-opposites.md:45: argue/readings: S31 is read 2 ways: phaedo-opposites.logic.r2 has nothing from it; phaedo-opposites.logic.r2.2 and phaedo-opposites.logic.r2.3 have "life_death_opposites"; they differ when nothing is true, which the first allows
+phaedo-opposites.md:45: argue/answered: S31: answered no, which keeps phaedo-opposites.logic.r2.2 and phaedo-opposites.logic.r2.3, to: Suppose "death is the opposite of life" is false. Is S31, "Is not death opposed to life?", true then?
+phaedo-opposites.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: phaedo-opposites.logic.r2 and phaedo-opposites.logic.r2.3 have "mutual_generation → living_from_dead" and "living_from_dead → souls_below"; phaedo-opposites.logic.r2.2 has "opposites_generated ∧ life_death_opposites → mutual_generation" and "mutual_generation → living_from_dead" and "living_from_dead → souls_below"; they differ when only "all things which have opposites are generated out of their opposites", "death is the opposite of life", "the living, whether things or persons, are generated from the dead" and "our souls exist in the world below" are true, which the first allows
+phaedo-opposites.md:29: argue/negation: phaedo-opposites.logic.r2 P2 (S19): the sentence says "not", but P2 denies nothing it speaks of: it reads "death is the opposite of life"
+phaedo-opposites.md:45: argue/negation: phaedo-opposites.logic.r2.2 P2 (S31): the sentence says "not", but P2 denies nothing it speaks of: it reads "death is the opposite of life"
+phaedo-opposites.md:45: argue/negation: phaedo-opposites.logic.r2.3 P2 (S31): the sentence says "not", but P2 denies nothing it speaks of: it reads "death is the opposite of life"
+phaedo-opposites.logic.r2: argue/readings-agree 1
+phaedo-opposites.logic.r2: argue/readings-differ 6
+phaedo-opposites.logic.r2: argue/verdicts-agree 1
+phaedo-opposites.logic.r2: argue/answers-split: no reading agrees with all 5 answers (phaedo-opposites.logic.r2 3, phaedo-opposites.logic.r2.2 2, phaedo-opposites.logic.r2.3 3 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+phaedo-opposites.logic.r2: argue/mismatches 1
+phaedo-opposites.logic.r2.2: argue/mismatches 1
+phaedo-opposites.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: phaedo-opposites.logic.r2
+# argument written to phaedo-opposites.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+phaedo-opposites.md:29: argue/negation: P2 (S19): the sentence says "not", but P2 denies nothing it speaks of: it reads "death is the opposite of life"
+phaedo-opposites.md:61: argue/assumed: C2 (S39): follows only by A1, which the text never states: state it, or argue for it
+phaedo-opposites.md:65: argue/assumed: C (S41): follows only by A2, which the text never states: state it, or argue for it
+phaedo-opposites.logic.r2: argue/valid 1

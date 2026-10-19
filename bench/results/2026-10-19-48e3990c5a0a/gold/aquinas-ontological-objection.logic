@@ -1,0 +1,24 @@
+# the argument of aquinas-ontological-objection.md as claude-opus-5-5 read it: check that it says what the text says
+# Aquinas, ST I q.2 a.1, Objection 2: "God exists" is self-evident
+# S3 (whole greater than its part) is only an illustration and is left out.
+atom	known_from_terms	the proposition "God exists" is known as soon as its terms are known, i.e. as soon as the signification of the word "God" is understood
+atom	self_evident	the proposition "God exists" is self-evident
+atom	first_principles_known_from_terms	the first principles of demonstration are known as soon as their terms are known
+atom	god_means_greatest	by the word "God" is signified that thing than which nothing greater can be conceived
+atom	actual_greater	that which exists actually and mentally is greater than that which exists only mentally
+atom	understood	the word "God" is understood
+atom	exists_mentally	God exists mentally
+atom	exists_actually	God exists actually
+P1	S2	known_from_terms → self_evident	kind conceptual
+P2	S2	first_principles_known_from_terms	says aristotle
+P3	S5	god_means_greatest	kind conceptual
+P4	S6	actual_greater
+P5	S7	understood → exists_mentally
+# The step in S7 relies, unstated, on: if God means that than which nothing greater can be conceived, and actual-and-mental existence is greater than mental existence alone, then God's existing mentally entails God's existing actually.
+A1	-	god_means_greatest ∧ actual_greater ∧ exists_mentally → exists_actually
+C1	S7	understood → exists_actually	from P3 P4 P5 A1
+# The move from C1 to S4 relies, unstated, on: if understanding the word suffices for God's existing actually, then "God exists" is known as soon as its terms are known.
+A2	-	(understood → exists_actually) → known_from_terms
+C2	S4	known_from_terms	from C1 A2
+C	S8	self_evident	from P1 C2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

@@ -1,0 +1,27 @@
+# reading 3 of mill-liberty-1.md by claude-opus-5-5
+logic	kd
+atom	theory_holds_persecution_permitted	the theory maintains that truth may justifiably be persecuted because persecution cannot harm it
+atom	persecuted	the discoverers of new truths are persecuted (requited by martyrdom, dealt with as the vilest of criminals)
+atom	greatest_service	discovering to the world a truth that deeply concerns it is as important a service as a human being can render
+atom	not_intentionally_hostile	the theory cannot be charged with being intentionally hostile to the reception of new truths
+atom	generous_to_benefactors	the theory deals generously with the persons to whom mankind are indebted for new truths
+atom	defends_treatment	the theory's defenders defend this mode of treating benefactors
+atom	values_benefit	the theory's defenders set much value on the benefit of new truths
+# S1 is read as "not intentionally hostile, but not generous to benefactors".
+# The generosity verdict is taken as the main conclusion, which S2-S5 support.
+P1	S1	theory_holds_persecution_permitted
+P2	S1	theory_holds_persecution_permitted → not_intentionally_hostile
+P3	S2	greatest_service
+# S3: on this theory, persecution of these benefactors is the normal and justifiable state of things.
+P4	S3	theory_holds_persecution_permitted → P persecuted
+P5	S4	theory_holds_persecution_permitted → P persecuted	says locrians
+# S5: those who defend this treatment cannot be supposed to value the benefit.
+P6	S5	defends_treatment → ¬values_benefit
+# Unstated: whoever treats it as permissible to persecute those who render the greatest service is not generous to them.
+A1	-	greatest_service ∧ P persecuted → ¬generous_to_benefactors
+A2	-	theory_holds_persecution_permitted → defends_treatment
+C1	S1	not_intentionally_hostile	from P1 P2
+C2	S3	P persecuted	from P1 P4
+C3	S5	¬values_benefit	from P1 A2 P6
+C	S1	¬generous_to_benefactors	from P3 C2 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

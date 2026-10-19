@@ -1,0 +1,49 @@
+# the prover could not read aquinas-third-way.logic.r2.2: claude-opus-5-5 is asked again
+aquinas-third-way.logic.r2.2: argue/undefined: atom god is used but not given a meaning (atom	god	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom infinite_regress is used but not given a meaning (atom	infinite_regress	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom self_necessary is used but not given a meaning (atom	self_necessary	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom all_caused is used but not given a meaning (atom	all_caused	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom necessary_exists is used but not given a meaning (atom	necessary_exists	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom now_nothing is used but not given a meaning (atom	now_nothing	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom begin_needs_existing is used but not given a meaning (atom	begin_needs_existing	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom once_nothing is used but not given a meaning (atom	once_nothing	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom all_contingent is used but not given a meaning (atom	all_contingent	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom each_sometime_not is used but not given a meaning (atom	each_sometime_not	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom contingents_exist is used but not given a meaning (atom	contingents_exist	...)
+aquinas-third-way.logic.r2.2: argue/undefined: atom generated_corrupt is used but not given a meaning (atom	generated_corrupt	...)
+# 3 readings by claude-opus-5-5, compared
+aquinas-third-way.md:1: argue/readings: S3 is read 2 ways: aquinas-third-way.logic.r2 has "all_contingent → each_sometime_not"; aquinas-third-way.logic.r2.2 and aquinas-third-way.logic.r2.3 have "each_sometime_not"; they differ when nothing is true, which the first allows
+aquinas-third-way.md:1: argue/answered: S3: answered no, which keeps aquinas-third-way.logic.r2.2 and aquinas-third-way.logic.r2.3, to: Suppose "everything is possible not to be" and "each thing that is possible not to be at some time is not" are false. Is S3, "But it is impossible for these always to exist, for that which is possible not to be at some time is not.", true then?
+aquinas-third-way.md:1: argue/readings: S8 is read 2 ways: aquinas-third-way.logic.r2 and aquinas-third-way.logic.r2.2 have "necessary_exists → all_caused ∨ self_necessary"; aquinas-third-way.logic.r2.3 has "necessary_exists → all_caused ∨ ¬all_caused"; they differ when only "there exists something the existence of which is necessary" is true, which the second allows
+aquinas-third-way.md:1: argue/answered: S8: answered yes, which keeps aquinas-third-way.logic.r2.3, to: Suppose "there exists something the existence of which is necessary" is true and "every necessary thing has its necessity caused by another" and "there exists some being having of itself its own necessity, not receiving it from another" are false. Is S8, "But every necessary thing either has its necessity caused by another, or not.", true then?
+aquinas-third-way.logic.r2: argue/readings: what the text leaves unstated is read 3 ways: aquinas-third-way.logic.r2 has "¬all_contingent → necessary_exists" and "all_caused → infinite_regress"; aquinas-third-way.logic.r2.2 has "¬all_contingent → necessary_exists" and "necessary_exists ∧ all_caused → infinite_regress"; they differ when only "everything is possible not to be" and "every necessary thing has its necessity caused by another" are true, which the second allows; aquinas-third-way.logic.r2.3 has "¬all_contingent → necessary_exists" and "all_caused → infinite_regress" and "necessary_exists ∧ ¬all_caused → self_necessary"
+aquinas-third-way.logic.r2: argue/readings: U1: aquinas-third-way.logic.r2 and aquinas-third-way.logic.r2.3 take for granted "if every necessary thing has its necessity caused by another, then there is a going on to infinity in necessary things which have their necessity caused by another"; aquinas-third-way.logic.r2.2 does not
+aquinas-third-way.logic.r2: argue/answered: U1: answered yes, which keeps aquinas-third-way.logic.r2 and aquinas-third-way.logic.r2.3, to: Does the text's argument take this for granted, whether or not it says so: "if every necessary thing has its necessity caused by another, then there is a going on to infinity in necessary things which have their necessity caused by another"? Answer yes if the author would accept it as part of the argument.
+aquinas-third-way.md:1: argue/negation: aquinas-third-way.logic.r2 P3 (S3): the sentence says "impossible", but P3 denies nothing it speaks of: it reads "if everything is possible not to be, then each thing that is possible not to be at some time is not"
+aquinas-third-way.md:1: argue/unfaithful: aquinas-third-way.logic.r2 P9 (S11): the sentence has no word of "there exists some being having of itself its own necessity, not receiving it from another": is it the sentence P9 came from?
+aquinas-third-way.md:1: argue/negation: aquinas-third-way.logic.r2.2 P3 (S3): the sentence says "impossible", but P3 denies nothing it speaks of: it reads "each thing that is possible not to be at some time is not"
+aquinas-third-way.md:1: argue/unfaithful: aquinas-third-way.logic.r2.2 P9 (S11): the sentence has no word of "there exists some being having of itself its own necessity, not receiving it from another": is it the sentence P9 came from?
+aquinas-third-way.md:1: argue/negation: aquinas-third-way.logic.r2.3 P3 (S3): the sentence says "impossible", but P3 denies nothing it speaks of: it reads "each thing that is possible not to be at some time is not"
+aquinas-third-way.md:1: argue/unfaithful: aquinas-third-way.logic.r2.3 P9 (S11): the sentence has no word of "there exists some being having of itself its own necessity, not receiving it from another": is it the sentence P9 came from?
+aquinas-third-way.logic.r2: argue/readings-agree 6
+aquinas-third-way.logic.r2: argue/readings-differ 3
+aquinas-third-way.logic.r2: argue/verdicts-agree 1
+aquinas-third-way.logic.r2: argue/mismatches 2
+aquinas-third-way.logic.r2.2: argue/mismatches 2
+aquinas-third-way.logic.r2.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aquinas-third-way.logic.r2.3
+# argument written to aquinas-third-way.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-third-way.md:1: argue/negation: P3 (S3): the sentence says "impossible", but P3 denies nothing it speaks of: it reads "each thing that is possible not to be at some time is not"
+aquinas-third-way.md:1: argue/unfaithful: P9 (S11): the sentence has no word of "there exists some being having of itself its own necessity, not receiving it from another": is it the sentence P9 came from?
+aquinas-third-way.md:1: argue/empty: P7 (S8): P7 is true whatever the case: it says nothing
+aquinas-third-way.md:1: argue/own-sentence: C1 (S2): follows from P1 and P2 alone, read from the conclusion's own sentence: unless S2 gives them as its reason, the reading has it assert what it concludes
+aquinas-third-way.md:1: argue/invalid: C2 (S4): does not follow: when "everything is possible not to be" and "each thing that is possible not to be at some time is not" are true, "at one time there could have been (was) nothing in existence" is false, every premise holds and the conclusion fails
+aquinas-third-way.md:1: argue/countermodel: C2 (S4): all_contingent = T, each_sometime_not = T, once_nothing = F
+aquinas-third-way.md:1: argue/missing: C2 (S4): it would follow given "each_sometime_not → ¬all_contingent", or "each_sometime_not → once_nothing"
+aquinas-third-way.md:1: argue/unlinked: P3 (S3): P3 is the only statement about "each thing that is possible not to be at some time is not": as written it cannot bear on the conclusion; was the same thing named two ways?
+aquinas-third-way.md:1: argue/assumed: C5 (S7): follows only by A1, which the text never states: state it, or argue for it
+aquinas-third-way.md:1: argue/unused: P7 (S8): P7 is not needed: the conclusion follows from C5, P8, A2 and A3 without it
+aquinas-third-way.md:1: argue/assumed: C6 (S10): follows only by A2 and A3, which the text never states: state it, or argue for it
+aquinas-third-way.md:1: argue/own-sentence: C (S11): needs P9, read from the conclusion's own sentence: check that S11 gives it as its reason and does not conclude it
+aquinas-third-way.md:1: argue/unused-step: C1 (S2): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-third-way.logic.r2: argue/valid 0

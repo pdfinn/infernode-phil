@@ -1,0 +1,16 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+critic.md:6: argue/unfaithful: critic.logic.r1 C (S6): the sentence has no word of "people trust one another": is it the sentence C came from?
+critic.md:6: argue/unfaithful: critic.logic.r1 C (S6): the sentence has no word of "there is a sovereign": is it the sentence C came from?
+# kept the reading that best fits the words and the other readings: critic.logic.r1
+# argument written to critic.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+critic.md:6: argue/unfaithful: C (S6): the sentence has no word of "people trust one another": is it the sentence C came from?
+critic.md:6: argue/unfaithful: C (S6): the sentence has no word of "there is a sovereign": is it the sentence C came from?
+critic.md:6: argue/unlinked: C (S6): the conclusion speaks of "people trust one another", which no premise mentions: nothing links it to them
+critic.md:6: argue/invalid: C (S6): does not follow: when "there is a sovereign" is true, "people trust one another" is false, and nothing else is true, every premise holds and the conclusion fails
+critic.md:6: argue/countermodel: C (S6): W = {w0, w1}; R = {(w0, w1), (w1, w1)}; w0: industry = F, sovereign = T, trust = F; w1: 
+critic.md:5: argue/unlinked: P5 (S5): P5 is the only statement about "there is industry": as written it cannot bear on the conclusion; was the same thing named two ways?
+critic.logic.r1: argue/valid 0
+critic.logic: argue/runs-agree 1

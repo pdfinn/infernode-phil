@@ -1,0 +1,16 @@
+# the argument of aquinas-economy-objection.md as claude-opus-5-5 read it: check that it says what the text says
+# This passage is the second objection (Obj. 2) to God's existence, which the work later answers.
+# No reply is given here, so the objection's own reasoning is written as premises and conclusions.
+atom	accounted_other	everything we see in the world can be accounted for by other principles, supposing God did not exist
+atom	need_god	there is need to suppose God's existence
+atom	natural_reduced	all natural things can be reduced to one principle, which is nature
+atom	voluntary_reduced	all voluntary things can be reduced to one principle, which is human reason or will
+# S2 is a general principle: what can be accounted for by a few principles is superfluously supposed to come from many.
+# Here it is applied to God as the further principle.
+P1	S2	accounted_other → ¬need_god	kind conceptual
+P2	S4	natural_reduced ∧ voluntary_reduced
+# The "For" in S4 relies on everything we see being either natural or voluntary, so nature and will together account for it all.
+A1	-	natural_reduced ∧ voluntary_reduced → accounted_other
+C1	S3	accounted_other	from P2 A1
+C	S5	¬need_god	from C1 P1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

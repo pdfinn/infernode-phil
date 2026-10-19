@@ -1,0 +1,17 @@
+# reading 2 of aquinas-st-i-1.md by claude-opus-5-5
+# S4 says "rational figure"; the given atom reads "rational nature" (Boethius's definition).
+# S2-S3 only apply the distinction in S1 to "animal" and "person"; they are left out.
+atom	less_common_includes_more	something may be included in the meaning of a less common term which is not included in the more common term
+atom	person_individual_substance	"person" in general signifies the individual substance of a rational nature
+atom	individual_undivided_distinct	the individual is undivided in itself but distinct from others
+atom	person_signifies_distinct	"person" in any nature signifies what is distinct in that nature
+atom	human_person_signifies_principles	in human nature "person" signifies this flesh, these bones and this soul, the individuating principles of a man, which belong to the meaning of a particular human person
+atom	general_includes_principles	the individuating principles (this flesh, these bones, this soul) belong to "person" in general
+P1	S1	less_common_includes_more	kind conceptual
+P2	S4	person_individual_substance	kind conceptual
+P3	S5	individual_undivided_distinct	kind conceptual
+A1	-	person_individual_substance ∧ individual_undivided_distinct → person_signifies_distinct
+C1	S6	person_signifies_distinct	from P2 P3 A1
+A2	-	person_signifies_distinct ∧ less_common_includes_more → human_person_signifies_principles ∧ ¬general_includes_principles
+C	S6	human_person_signifies_principles ∧ ¬general_includes_principles	from C1 P1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

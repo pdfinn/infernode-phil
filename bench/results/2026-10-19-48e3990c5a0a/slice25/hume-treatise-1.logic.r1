@@ -1,0 +1,17 @@
+# the argument of hume-treatise-1.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5kd
+# S1's "must" is read as ought (what must be done). S2's "impossible" is read as necessity, [] (it is not possible to have one without the other).
+# S2 speaks of any idea. Quantifiers cannot be used with modal logic here, so it is applied to the idea of causation.
+atom	reason_justly	we reason justly concerning causation
+atom	understand_idea	we understand perfectly the idea of causation
+atom	trace_origin	we trace the idea of causation up to its origin and examine the primary impression from which it arises
+atom	clear_idea	the idea of causation is given clearness
+atom	clear_reasoning	our reasoning concerning causation is given a like clearness
+P1	S2	□(reason_justly → understand_idea)	kind conceptual
+P2	S2	□(understand_idea → trace_origin)	kind conceptual
+P3	S3	trace_origin → clear_idea
+P4	S3	clear_idea → clear_reasoning
+# The text plainly relies on our aiming to reason justly about causation, but never states it.
+A1	-	O reason_justly	kind normative
+C	S1	O trace_origin	from P1 P2 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

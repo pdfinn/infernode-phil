@@ -1,0 +1,14 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+augustine-1.logic.r1: argue/readings: what the text leaves unstated is read 3 ways: augustine-1.logic.r1 has "affections_remove ∧ ¬place_removes → distance_in_affections"; augustine-1.logic.r1.2 has "affections_remove ∧ ¬place_removes ∧ lustful_is_darkened → distance_in_affections"; they differ when only "darkened affections is removal from God" is true, which the second allows; augustine-1.logic.r1.3 has nothing from it
+augustine-1.logic.r1: argue/readings: U1: augustine-1.logic.r1 and augustine-1.logic.r1.2 take for granted "if (darkened affections is removal from God and it is not so that men leave God or return unto Him by their feet, or change of place), then the true distance from God's face is in lustful, that is, darkened affections"; augustine-1.logic.r1.3 does not [in 1 of 2 runs]
+augustine-1.logic.r1: argue/answered: U1: answered yes, which keeps augustine-1.logic.r1 and augustine-1.logic.r1.2, to: Does the text's argument take this for granted, whether or not it says so: "if (darkened affections is removal from God and it is not so that men leave God or return unto Him by their feet, or change of place), then the true distance from God's face is in lustful, that is, darkened affections"? Answer yes if the author would accept it as part of the argument. [in 1 of 2 runs]
+augustine-1.logic.r1: argue/readings: U2: augustine-1.logic.r1 and augustine-1.logic.r1.2 take for granted "if (darkened affections is removal from God and it is not so that men leave God or return unto Him by their feet, or change of place and lustful affections are darkened affections), then the true distance from God's face is in lustful, that is, darkened affections"; augustine-1.logic.r1.3 does not [in 1 of 2 runs]
+augustine-1.logic.r1: argue/answered: U2: answered yes, which keeps augustine-1.logic.r1 and augustine-1.logic.r1.2, to: Does the text's argument take this for granted, whether or not it says so: "if (darkened affections is removal from God and it is not so that men leave God or return unto Him by their feet, or change of place and lustful affections are darkened affections), then the true distance from God's face is in lustful, that is, darkened affections"? Answer yes if the author would accept it as part of the argument. [in 1 of 2 runs]
+augustine-1.logic.r1: argue/verdicts: valid as augustine-1.logic.r1, augustine-1.logic.r1.2 read it, not as the others do: which reading is right decides the verdict [in 1 of 2 runs]
+# kept the reading that best fits the words and the other readings: augustine-1.logic.r1
+# argument written to augustine-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+augustine-1.md:1: argue/assumed: C (S7): follows only by A1, which the text never states: state it, or argue for it [in 1 of 2 runs]
+augustine-1.logic.r1: argue/valid 1
+augustine-1.logic: argue/runs-agree 0

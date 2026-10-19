@@ -1,0 +1,27 @@
+# reading 2 of james-will-1.md by claude-opus-5-5
+logic	s5
+# reading 2 of james-will-1.md by claude-opus-5-5
+# Mill's anti-substantialist case (S1-S4) is reported as his, then treated as an objection that S5-S7 answer.
+atom	substratum_missed_past	the substratum, if annihilated while the sensations continued in the same order, would be missed
+atom	warranted_past	we are now warranted in believing that the substratum exists
+atom	past_bagged	we have already securely bagged our facts in a certain order
+atom	dispense_warrant	we can dispense with any further warrant for that order
+atom	future_case_differs	with regard to the facts yet to come the case is far different
+atom	drop_past	substance may be dropped from our conception of the irrecoverably past
+atom	empty_future	substance is an equally empty complication to our notions of the future
+atom	new_attributes	the substance might develop at any moment a wholly new set of attributes
+atom	feeling_rest	referring things to a substance remains accompanied by a feeling of rest and future confidence
+atom	liking_substance	men will always have a liking for any philosophy which explains things per substantiam
+P1	S1	¬substratum_missed_past	says mill
+P2	S4	¬substratum_missed_past → ¬warranted_past	says mill
+O1	S4	¬warranted_past	against C
+P3	S5	past_bagged → dispense_warrant
+P4	S6	future_case_differs
+# S7 "it does not follow" is read as denying a necessary link from the past to the future.
+R1	S7	¬□(drop_past → empty_future)	against O1
+P5	S8	new_attributes → feeling_rest
+# "Even if" is read as saying the feeling of rest holds either way.
+P6	S8	feeling_rest
+A1	-	feeling_rest → liking_substance
+C	S9	liking_substance	from P6 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

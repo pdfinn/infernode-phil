@@ -1,0 +1,28 @@
+# reading 3 of aquinas-second-way.md by claude-opus-5-5
+logic	s5
+atom	order_causes	in the world of sense there is an order of efficient causes
+atom	self_cause	a thing is found to be the efficient cause of itself
+atom	prior_self	a thing would be prior to itself
+atom	regress	in efficient causes one goes on to infinity
+atom	causes_fi	the first cause is the cause of the intermediate cause
+atom	causes_iu	the intermediate cause is the cause of the ultimate cause
+atom	first	there is a first efficient cause
+atom	intermediate	there are intermediate efficient causes
+atom	ultimate	there is an ultimate effect
+atom	named_god	the first efficient cause is what everyone names God
+P1	S2	order_causes	kind empirical
+P2	S3	□(self_cause → prior_self)
+P3	S3	¬◇prior_self
+C1	S3	¬◇self_cause	from P2 P3
+P4	S4	□(causes_fi ∧ causes_iu)
+P5	S5	□(causes_fi ∧ ¬first → ¬intermediate) ∧ □(causes_iu ∧ ¬intermediate → ¬ultimate)
+C2	S6	□(¬first → ¬ultimate ∧ ¬intermediate)	from P4 P5
+P6	S7	□(regress → ¬first)
+# "all of which is plainly false" read as the claim that there are an ultimate effect and intermediate causes
+P7	S7	ultimate ∧ intermediate	kind empirical
+# S4 claims regress is impossible (!<>regress); the text's grounds only yield that it does not hold
+C3	S4	¬regress	from P6 C2 P7
+# "necessary to admit" read as what the argument compels us to grant, so written as plain first rather than []first
+P8	S8	named_god
+C	S8	first ∧ named_god	from C2 P7 P8
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

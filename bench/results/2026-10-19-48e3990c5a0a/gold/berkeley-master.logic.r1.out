@@ -1,0 +1,20 @@
+# 3 readings by claude-opus-5-5, compared
+berkeley-master.md:1: argue/readings: S2 is read 3 ways: berkeley-master.logic.r1 has "imagine_unperceived → frame_ideas_omit"; berkeley-master.logic.r1.2 has nothing from it; they differ when only "one can imagine trees in a park or books in a closet with nobody by to perceive them" is true, which the second allows; berkeley-master.logic.r1.3 has "imagine_unperceived" and "frame_ideas_omit"
+berkeley-master.md:1: argue/answered: S2: answered no, which keeps berkeley-master.logic.r1 and berkeley-master.logic.r1.3, to: Suppose "one can imagine trees in a park or books in a closet with nobody by to perceive them" is true and "such imagining is no more than framing in one's mind ideas called books and trees while omitting to frame the idea of anyone who may perceive them" is false. Is S2, "I answer, you may so, there is no difficulty in it; but what is all this, I beseech you, more than framing in your mind certain ideas which you call BOOKS and TREES, and the same time omitting to frame the idea of any one that may perceive them?", true then?
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r1 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r1.2 P1 (S3): the sentence says "not", but P1 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.md:1: argue/negation: berkeley-master.logic.r1.3 P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.logic.r1: argue/readings-agree 5
+berkeley-master.logic.r1: argue/readings-differ 1
+berkeley-master.logic.r1: argue/verdicts-agree 1
+berkeley-master.logic.r1: argue/mismatches 1
+berkeley-master.logic.r1.2: argue/mismatches 1
+berkeley-master.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: berkeley-master.logic.r1
+# argument written to berkeley-master.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+berkeley-master.md:1: argue/negation: P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "you yourself perceive or think of them all the while"
+berkeley-master.md:1: argue/assumed: C1 (S5): follows only by A1, which the text never states: state it, or argue for it
+berkeley-master.md:1: argue/own-sentence: C1 (S5): needs P4, read from the conclusion's own sentence: check that S5 gives it as its reason and does not conclude it
+berkeley-master.logic.r1: argue/valid 1
+berkeley-master.md:1: argue/defeated: O1 (S1): O1 falls to R1, which nothing answers
+berkeley-master.logic.r1: argue/survives 1

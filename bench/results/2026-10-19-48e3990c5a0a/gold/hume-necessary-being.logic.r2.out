@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+hume-necessary-being.md:1: argue/negation: hume-necessary-being.logic.r2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of being x is demonstrable, then the non-existence of being x (the contrary of its existence) implies a contradiction"
+hume-necessary-being.md:1: argue/negation: hume-necessary-being.logic.r2.2 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of being x is demonstrable, then the non-existence of being x (the contrary of its existence) implies a contradiction"
+hume-necessary-being.md:1: argue/negation: hume-necessary-being.logic.r2.3 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of being x is demonstrable, then the non-existence of being x (the contrary of its existence) implies a contradiction"
+hume-necessary-being.logic.r2: argue/readings-agree 5
+hume-necessary-being.logic.r2: argue/readings-differ 0
+hume-necessary-being.logic.r2: argue/verdicts-agree 1
+hume-necessary-being.logic.r2: argue/mismatches 1
+hume-necessary-being.logic.r2.2: argue/mismatches 1
+hume-necessary-being.logic.r2.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: hume-necessary-being.logic.r2
+# argument written to hume-necessary-being.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+hume-necessary-being.md:1: argue/negation: P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of being x is demonstrable, then the non-existence of being x (the contrary of its existence) implies a contradiction"
+hume-necessary-being.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it
+hume-necessary-being.logic.r2: argue/valid 1

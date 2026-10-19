@@ -1,0 +1,10 @@
+# 3 readings by claude-opus-5-5, compared
+trust.logic.r2: argue/readings-agree 3
+trust.logic.r2: argue/readings-differ 0
+trust.logic.r2: argue/verdicts-agree 1
+trust.logic.r2: argue/mismatches 0
+trust.logic.r2.2: argue/mismatches 0
+trust.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: trust.logic.r2
+# argument written to trust.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+trust.logic.r2: argue/valid 1

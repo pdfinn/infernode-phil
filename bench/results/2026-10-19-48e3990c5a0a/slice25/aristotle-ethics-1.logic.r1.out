@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-ethics-1.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aristotle-ethics-1.logic.r1 has "shame_virtue → shame_moral_state"; aristotle-ethics-1.logic.r1.2 and aristotle-ethics-1.logic.r1.3 have "shame_blush → shame_physical" and "shame_virtue → shame_moral_state"; they differ when only "they who feel Shame grow red" and "Shame is a moral state" are true, which the first allows
+aristotle-ethics-1.logic.r1: argue/readings: U1: aristotle-ethics-1.logic.r1.2 and aristotle-ethics-1.logic.r1.3 take for granted "if they who feel Shame grow red, then Shame is in a way physical"; aristotle-ethics-1.logic.r1 does not
+aristotle-ethics-1.logic.r1: argue/answered: U1: answered yes, which keeps aristotle-ethics-1.logic.r1.2 and aristotle-ethics-1.logic.r1.3, to: Does the text's argument take this for granted, whether or not it says so: "if they who feel Shame grow red, then Shame is in a way physical"? Answer yes if the author would accept it as part of the argument.
+aristotle-ethics-1.md:1: argue/negation: aristotle-ethics-1.logic.r1 C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.md:1: argue/negation: aristotle-ethics-1.logic.r1.2 C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.md:1: argue/negation: aristotle-ethics-1.logic.r1.3 C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.logic.r1: argue/verdicts: valid as aristotle-ethics-1.logic.r1.2, aristotle-ethics-1.logic.r1.3 read it, not as the others do: which reading is right decides the verdict
+aristotle-ethics-1.logic.r1: argue/readings-agree 3
+aristotle-ethics-1.logic.r1: argue/readings-differ 1
+aristotle-ethics-1.logic.r1: argue/verdicts-agree 0
+aristotle-ethics-1.logic.r1: argue/mismatches 1
+aristotle-ethics-1.logic.r1.2: argue/mismatches 1
+aristotle-ethics-1.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: aristotle-ethics-1.logic.r1.2
+# argument written to aristotle-ethics-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aristotle-ethics-1.md:1: argue/negation: C2 (S1): the sentence states "Shame is a moral state", with no word of denial, but C2 denies it: it reads "Shame is much more like a feeling and it is not so that Shame is a moral state"
+aristotle-ethics-1.md:1: argue/negation: C (S1): the sentence states "Shame is a Virtue", with no word of denial, but C denies it: it reads "it is not so that Shame is a Virtue"
+aristotle-ethics-1.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aristotle-ethics-1.md:1: argue/assumed: C (S1): follows only by A2, which the text never states: state it, or argue for it
+aristotle-ethics-1.logic.r1: argue/valid 1

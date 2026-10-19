@@ -1,0 +1,14 @@
+# 3 readings by claude-opus-5-5, compared
+spinoza-god.md:3: argue/unfaithful: spinoza-god.logic.r1 P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.md:3: argue/unfaithful: spinoza-god.logic.r1.2 P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.md:3: argue/unfaithful: spinoza-god.logic.r1.3 P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.logic.r1: argue/readings-agree 3
+spinoza-god.logic.r1: argue/readings-differ 0
+spinoza-god.logic.r1: argue/verdicts-agree 1
+spinoza-god.logic.r1: argue/mismatches 1
+spinoza-god.logic.r1.2: argue/mismatches 1
+spinoza-god.logic.r1.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: spinoza-god.logic.r1
+# argument written to spinoza-god.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+spinoza-god.md:3: argue/unfaithful: P2 (S5): the sentence has no word of "God's essence involves existence": is it the sentence P2 came from?
+spinoza-god.logic.r1: argue/valid 1

@@ -1,0 +1,10 @@
+# the argument of firstway.md as claude-opus-5-5 read it: check that it says what the text says
+atom	moving(x)	x is in motion
+atom	moves(x, y)	x moves y
+# S2's "moved by something other than itself" is read as: something moves x, and x does not move itself.
+P1	S1	∃x moving(x)	kind empirical
+P2	S2	∀x (moving(x) → ∃y moves(y, x) ∧ ¬moves(x, x))
+# S3: a first mover is something that moves something and that nothing moves.
+# The text states no premise ruling out an infinite chain of movers.
+C	S3	∃x (∃z moves(x, z) ∧ ∀y ¬moves(y, x))	from P1 P2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

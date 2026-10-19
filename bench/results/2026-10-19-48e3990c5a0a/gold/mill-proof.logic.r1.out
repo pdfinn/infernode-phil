@@ -1,0 +1,24 @@
+# 3 readings by claude-opus-5-5, compared
+mill-proof.md:1: argue/readings: S5 is read 2 ways: mill-proof.logic.r1 and mill-proof.logic.r1.2 have "desired_own"; mill-proof.logic.r1.3 has nothing from it; they differ when nothing is true, which the second allows
+mill-proof.md:1: argue/answered: S5: answered no, which keeps mill-proof.logic.r1 and mill-proof.logic.r1.2, to: Suppose "each person, so far as he believes it attainable, actually desires his own happiness" is false. Is S5, "No reason can be given why the general happiness is desirable, except that each person, so far as he believes it to be attainable, desires his own happiness.", true then?
+mill-proof.md:1: argue/readings: S6 is read 3 ways: mill-proof.logic.r1 has "desired_own → good_own" and "good_own → good_general"; mill-proof.logic.r1.2 has nothing from it; they differ when only "each person, so far as he believes it attainable, actually desires his own happiness" and "each person's happiness is a good to that person" are true, which the second allows; mill-proof.logic.r1.3 has "desired_own"
+mill-proof.md:1: argue/answered: S6: answered no, which keeps mill-proof.logic.r1, to: Suppose "each person, so far as he believes it attainable, actually desires his own happiness" and "each person's happiness is a good to that person" are true and "the general happiness is a good to the aggregate of all persons" is false. Is S6, "This, however, being a fact, we have not only all the proof which the case admits of, but all which it is possible to require, that happiness is a good: that each person's happiness is a good to that person, and the general happiness, therefore, a good to the aggregate of all persons.", true then?
+mill-proof.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: mill-proof.logic.r1 has "good_general → end_conduct"; mill-proof.logic.r1.2 and mill-proof.logic.r1.3 have nothing from it; they differ when only "the general happiness is a good to the aggregate of all persons" is true, which the second allows
+mill-proof.md:1: argue/readings: the conclusion is read 2 ways: mill-proof.logic.r1 and mill-proof.logic.r1.3 have "end_conduct ∧ criterion_morality"; mill-proof.logic.r1.2 has "criterion_morality"; they differ when only "happiness is one of the criteria of morality" is true, which the second allows
+mill-proof.md:1: argue/answered: the conclusion: answered no, which keeps mill-proof.logic.r1 and mill-proof.logic.r1.3, to: Suppose "happiness is one of the criteria of morality" is true and "happiness has made out its title as one of the ends of conduct" is false. Is the conclusion, "Happiness has made out its title as one of the ends of conduct, and consequently one of the criteria of morality.", true then?
+mill-proof.logic.r1: argue/readings: U1: mill-proof.logic.r1 takes for granted "if the general happiness is a good to the aggregate of all persons, then happiness has made out its title as one of the ends of conduct"; mill-proof.logic.r1.2 and mill-proof.logic.r1.3 do not
+mill-proof.logic.r1: argue/answered: U1: answered yes, which keeps mill-proof.logic.r1, to: Does the text's argument take this for granted, whether or not it says so: "if the general happiness is a good to the aggregate of all persons, then happiness has made out its title as one of the ends of conduct"? Answer yes if the author would accept it as part of the argument.
+mill-proof.logic.r1: argue/verdicts: valid as mill-proof.logic.r1 reads it, not as the others do: which reading is right decides the verdict
+mill-proof.logic.r1: argue/readings-agree 2
+mill-proof.logic.r1: argue/readings-differ 4
+mill-proof.logic.r1: argue/verdicts-agree 0
+mill-proof.logic.r1: argue/mismatches 0
+mill-proof.logic.r1.2: argue/mismatches 0
+mill-proof.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: mill-proof.logic.r1
+# argument written to mill-proof.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+mill-proof.md:1: argue/own-sentence: C1 (S6): needs P3, read from the conclusion's own sentence: check that S6 gives it as its reason and does not conclude it
+mill-proof.md:1: argue/own-sentence: C2 (S6): needs P4, read from the conclusion's own sentence: check that S6 gives it as its reason and does not conclude it
+mill-proof.md:1: argue/assumed: C (S7): follows only by A1, which the text never states: state it, or argue for it
+mill-proof.md:1: argue/own-sentence: C (S7): needs P5, read from the conclusion's own sentence: check that S7 gives it as its reason and does not conclude it
+mill-proof.logic.r1: argue/valid 1

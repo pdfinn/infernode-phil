@@ -1,0 +1,27 @@
+# reading 2 of berkeley-principles-1.md by claude-opus-5-5
+# Ad hominem parity argument: the modern philosophers' own inference from varying
+# appearance to "not in Matter" (S2, S4) is applied to extension (S3) and motion (S5).
+# S2 and S4 report what "is said" or "is proved" by modern philosophers. No author is
+# named, so they are written as plain premises: Berkeley argues from them ad hominem.
+atom	heat_varies	the same body appears cold to one hand and warm to another
+atom	heat_not_in_matter	heat and cold are affections only of the mind, not patterns of real beings existing in corporeal substances
+atom	sweet_varies	the thing remaining unaltered, its sweetness is changed into bitter, as with a fevered or vitiated palate
+atom	sweet_not_in_matter	sweetness is not really in the sapid thing
+atom	ext_varies	figure and extension appear various to the same eye at different stations, or to eyes of different texture at the same station
+atom	ext_not_in_matter	figure and extension are not patterns or resemblances of qualities existing in Matter, settled and determinate without the mind
+atom	motion_varies	if the succession of ideas in the mind becomes swifter, motion appears slower without any alteration in any external object
+atom	motion_not_in_matter	motion is not without the mind
+P1	S2	heat_varies → heat_not_in_matter
+P2	S2	heat_varies	kind empirical
+P3	S3	ext_varies	kind empirical
+# S3: "why may we not as well argue": the same inference pattern, applied by parity
+P4	S3	ext_varies → ext_not_in_matter
+P5	S4	sweet_varies → sweet_not_in_matter
+P6	S4	sweet_varies	kind empirical
+# S5: "it is acknowledged" by the opponents
+P7	S5	motion_varies	kind empirical
+P8	S5	motion_varies → motion_not_in_matter
+C1	S3	ext_not_in_matter	from P3 P4
+C2	S5	motion_not_in_matter	from P7 P8
+C	S1	heat_not_in_matter ∧ sweet_not_in_matter ∧ ext_not_in_matter ∧ motion_not_in_matter	from P1 P2 P5 P6 C1 C2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

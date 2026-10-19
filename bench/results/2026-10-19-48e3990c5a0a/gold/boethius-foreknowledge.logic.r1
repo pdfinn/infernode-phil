@@ -1,0 +1,20 @@
+# the argument of boethius-foreknowledge.md as claude-opus-5-5 read it: check that it says what the text says
+# the argument of boethius-foreknowledge.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	foresees	God foresees everything / knows all things, including men's deeds, designs and purposes
+atom	infallible	God (providence) can in no wise be deceived
+atom	foreseen_happens	that which providence foresees to be about to happen comes to pass
+atom	free_will	there is freedom of the will
+atom	sure_foreknowledge	there is sure foreknowledge of the future, not uncertain conjecture
+# S2: "must necessarily come to pass" is read as necessity of the consequent: q is necessary once p holds.
+# It could also be read as necessity of the whole conditional, [](foresees & infallible -> foreseen_happens); the argument turns on this.
+P1	S2	foresees ∧ infallible → □foreseen_happens
+P2	S3	infallible
+# The "seeing that" clause in S3 relies on freedom requiring that what is done could turn out otherwise than providence foresaw.
+A1	-	free_will → ◇¬foreseen_happens
+C1	S3	foresees ∧ infallible → ¬free_will	from P1 A1
+P3	S4	◇¬foreseen_happens → ¬sure_foreknowledge
+# "To think this of God I deem impiety": the speaker holds that God has sure foreknowledge.
+P4	S4	sure_foreknowledge	kind normative
+C	S1	foresees → ¬free_will	from C1 P2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

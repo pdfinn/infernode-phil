@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+hume-motivation.md:1: argue/readings: S1 is read 2 ways: hume-motivation.logic.r2 has nothing from it; hume-motivation.logic.r2.2 and hume-motivation.logic.r2.3 have "morals_influence" and "¬reason_influence"; they differ when only "morals have an influence on the actions and affections (excite passions, produce or prevent actions)" and "reason alone has an influence on the actions and affections" are true, which the first allows
+hume-motivation.md:1: argue/answered: S1: answered no, which keeps hume-motivation.logic.r2.2 and hume-motivation.logic.r2.3, to: Suppose "morals have an influence on the actions and affections (excite passions, produce or prevent actions)" and "reason alone has an influence on the actions and affections" are true. Is S1, "Since morals, therefore, have an influence on the actions and affections, it follows, that they cannot be derived from reason; and that because reason alone, as we have already proved, can never have any such influence.", true then?
+hume-motivation.logic.r2: argue/readings-agree 4
+hume-motivation.logic.r2: argue/readings-differ 1
+hume-motivation.logic.r2: argue/verdicts-agree 1
+hume-motivation.logic.r2: argue/mismatches 0
+hume-motivation.logic.r2.2: argue/mismatches 0
+hume-motivation.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: hume-motivation.logic.r2.2
+# argument written to hume-motivation.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+hume-motivation.md:1: argue/assumed: C1 (S1): follows only by A1, which the text never states: state it, or argue for it
+hume-motivation.md:1: argue/own-sentence: C1 (S1): needs P1 and P2, read from the conclusion's own sentence: check that S1 gives them as its reason and does not conclude them
+hume-motivation.md:1: argue/assumed: C (S4): follows only by A1, which the text never states: state it, or argue for it
+hume-motivation.md:1: argue/unused-step: C1 (S1): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+hume-motivation.logic.r2: argue/valid 1

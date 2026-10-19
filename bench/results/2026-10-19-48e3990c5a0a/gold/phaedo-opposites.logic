@@ -1,0 +1,17 @@
+# reading 3 of phaedo-opposites.md by claude-opus-5-5
+# S17's "necessarily holds" is left out: quantified formulas cannot also carry the modal operator.
+# S2, S12 and S17 all state the general law; it is written once, at S17, where "generated out of one another" gives both directions.
+atom	opp(x, y)	x is the opposite of y
+atom	gen(x, y)	x is generated out of y
+atom	souls_below	our souls exist in the world below
+P1	S17	∀x ∀y (opp(x, y) → gen(x, y) ∧ gen(y, x))
+P2	S31	opp(dead, living)
+P3	S27	opp(sleep, waking) ∧ gen(waking, sleep) ∧ gen(sleep, waking)	kind empirical
+P4	S36	gen(dead, living)
+P5	S38	gen(living, dead)
+C1	S39	gen(living, dead)	from P1 P2
+# The step from "the living are generated from the dead" to "souls exist below" is never stated.
+# The text plainly relies on it ("Then the inference is..."), so it is added as an assumption.
+A1	-	gen(living, dead) → souls_below
+C	S41	souls_below	from C1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

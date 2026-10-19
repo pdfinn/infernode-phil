@@ -1,0 +1,25 @@
+# reading 2 of aristotle-politics-1.md by claude-opus-5-5
+atom	same_rulers	Socrates would have persons of the same rank always in office
+atom	sedition	this arrangement becomes the cause of sedition
+atom	hazardous	it is very hazardous to settle the magistracy as Socrates has done
+atom	gold_fixed	the golden particle God mixed into the soul does not pass from one to another but always stays with the same
+atom	military_happy	the military are happy
+atom	legislator_ought	the legislator ought to make all the citizens happy
+atom	city_happy	the whole city is happy
+atom	artisans_happy	the artisans are happy
+atom	multitude_happy	the multitude employed in inferior offices are happy
+P1	S1	same_rulers	kind empirical
+P2	S1	same_rulers → sedition	kind empirical
+P3	S1	sedition → hazardous
+P4	S1	gold_fixed	says socrates
+P5	S1	gold_fixed → same_rulers
+P6	S1	¬military_happy
+P7	S1	legislator_ought	says socrates
+# "impossible that the whole city can be happy without all, or the greater, or some part of it be happy": with the atoms given, the parts are the military, the artisans and the multitude
+P8	S1	city_happy → military_happy ∨ artisans_happy ∨ multitude_happy	kind conceptual
+P9	S2	¬artisans_happy ∧ ¬multitude_happy
+C1	S1	hazardous	from P1 P2 P3
+C2	S2	¬city_happy	from P6 P8 P9
+# S3 sums up "all these defects": the hazardous magistracy and the unhappy city
+C	S3	hazardous ∧ ¬city_happy	from C1 C2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

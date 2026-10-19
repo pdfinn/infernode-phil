@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-st-i-1.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: aquinas-st-i-1.logic.r2 has "incl_less_common → distinct_q_person" and "person_indiv_subst ∧ indiv_distinct → person_signifies_distinct"; aquinas-st-i-1.logic.r2.2 and aquinas-st-i-1.logic.r2.3 have nothing from it; they differ when only "something may be included in the meaning of a less common term which is not included in the more common term", "it is one thing to ask the meaning of "person" in general and another to ask the meaning of "person" as applied to God", ""person" in general signifies the individual substance of a rational nature" and "the individual in itself is undivided but is distinct from others" are true, which the second allows
+aquinas-st-i-1.logic.r2: argue/readings: U1: aquinas-st-i-1.logic.r2 takes for granted "if something may be included in the meaning of a less common term which is not included in the more common term, then it is one thing to ask the meaning of "person" in general and another to ask the meaning of "person" as applied to God"; aquinas-st-i-1.logic.r2.2 and aquinas-st-i-1.logic.r2.3 do not
+aquinas-st-i-1.logic.r2: argue/answered: U1: answered yes, which keeps aquinas-st-i-1.logic.r2, to: Does the text's argument take this for granted, whether or not it says so: "if something may be included in the meaning of a less common term which is not included in the more common term, then it is one thing to ask the meaning of "person" in general and another to ask the meaning of "person" as applied to God"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-1.logic.r2: argue/readings: U2: aquinas-st-i-1.logic.r2 takes for granted "if ("person" in general signifies the individual substance of a rational nature and the individual in itself is undivided but is distinct from others), then "person" in any nature signifies what is distinct in that nature"; aquinas-st-i-1.logic.r2.2 and aquinas-st-i-1.logic.r2.3 do not
+aquinas-st-i-1.logic.r2: argue/answered: U2: answered yes, which keeps aquinas-st-i-1.logic.r2, to: Does the text's argument take this for granted, whether or not it says so: "if ("person" in general signifies the individual substance of a rational nature and the individual in itself is undivided but is distinct from others), then "person" in any nature signifies what is distinct in that nature"? Answer yes if the author would accept it as part of the argument.
+aquinas-st-i-1.logic.r2: argue/verdicts: valid as aquinas-st-i-1.logic.r2 reads it, not as the others do: which reading is right decides the verdict
+aquinas-st-i-1.logic.r2: argue/readings-agree 4
+aquinas-st-i-1.logic.r2: argue/readings-differ 1
+aquinas-st-i-1.logic.r2: argue/verdicts-agree 0
+aquinas-st-i-1.logic.r2: argue/mismatches 0
+aquinas-st-i-1.logic.r2.2: argue/mismatches 0
+aquinas-st-i-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-st-i-1.logic.r2
+# argument written to aquinas-st-i-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-st-i-1.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aquinas-st-i-1.md:1: argue/assumed: C (S6): follows only by A2, which the text never states: state it, or argue for it
+aquinas-st-i-1.md:1: argue/unused-step: C1 (S3): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+aquinas-st-i-1.logic.r2: argue/valid 1

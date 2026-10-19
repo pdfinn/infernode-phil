@@ -1,0 +1,13 @@
+# the argument of locke-treatise-1.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+atom	end_continuation	the end of conjunction between male and female is the continuation of the species
+atom	end_barely_procreation	the end of conjunction between male and female is barely procreation
+atom	parents_sustain_young	the young are sustained by those that got them till they are able to shift and provide for themselves
+atom	conj_lasts	the conjunction betwixt male and female lasts, even after procreation, so long as is necessary to the nourishment and support of the young ones
+# S4-S7 (inferior creatures obeying the rule: grass-feeders, beasts of prey, birds) are read as illustrations of the rule drawn in S3, not as steps toward it, so they are left out.
+P1	S3	end_continuation ∧ ¬end_barely_procreation
+P2	S3	O parents_sustain_young	kind normative
+# "who are to be sustained by those that got them" read as an obligation on the parents.
+A1	-	end_continuation ∧ O parents_sustain_young → O conj_lasts
+C	S3	O conj_lasts	from P1 P2 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

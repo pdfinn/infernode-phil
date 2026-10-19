@@ -1,0 +1,10 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+# kept the reading that best fits the words and the other readings: aristotle-chief-good.logic.r1
+# argument written to aristotle-chief-good.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aristotle-chief-good.md:1: argue/invalid: C (S1): does not follow: when nothing is true, every premise holds and the conclusion fails
+aristotle-chief-good.md:1: argue/countermodel: C (S1): D = {another}; action = ∅, aims = ∅, art = ∅, choice = ∅, good = ∅, science = ∅
+aristotle-chief-good.logic.r1: argue/valid 0
+aristotle-chief-good.logic: argue/runs-agree 1

@@ -1,0 +1,11 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-economy-objection.logic.r2: argue/readings-agree 4
+aquinas-economy-objection.logic.r2: argue/readings-differ 0
+aquinas-economy-objection.logic.r2: argue/verdicts-agree 1
+aquinas-economy-objection.logic.r2: argue/mismatches 0
+aquinas-economy-objection.logic.r2.2: argue/mismatches 0
+aquinas-economy-objection.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aquinas-economy-objection.logic.r2
+# argument written to aquinas-economy-objection.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aquinas-economy-objection.md:1: argue/assumed: C1 (S3): follows only by A1, which the text never states: state it, or argue for it
+aquinas-economy-objection.logic.r2: argue/valid 1

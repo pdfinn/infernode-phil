@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+james-will-1.md:1: argue/readings: S5 is read 2 ways: james-will-1.logic.r2 has "past_facts_bagged → dispense_warrant_past" and "past_facts_bagged" and "substance_droppable_past"; james-will-1.logic.r2.2 and james-will-1.logic.r2.3 have "past_facts_bagged → dispense_warrant_past"; they differ when only "we have already securely bagged our past facts in a certain order" and "we can dispense with any further warrant for the order of the past facts" are true, which the second allows
+james-will-1.md:1: argue/answered: S5: answered yes, which keeps james-will-1.logic.r2.2 and james-will-1.logic.r2.3, to: Suppose "we have already securely bagged our past facts in a certain order" and "we can dispense with any further warrant for the order of the past facts" are true and "substance may be dropped from our conception of the irrecoverably past" is false. Is S5, "Truly enough, if we have {81} already securely bagged our facts in a certain order, we can dispense with any further warrant for that order.", true then?
+james-will-1.md:1: argue/readings: S7 is read 2 ways: james-will-1.logic.r2 and james-will-1.logic.r2.2 have nothing from it; james-will-1.logic.r2.3 has "¬(substance_droppable_past → substance_empty_future)"; they differ when only "substance may be dropped from our conception of the irrecoverably past" and "substance is an equally empty complication to our notions of the future" are true, which the first allows
+james-will-1.md:1: argue/answered: S7: answered yes, which keeps james-will-1.logic.r2 and james-will-1.logic.r2.2, to: Suppose "substance may be dropped from our conception of the irrecoverably past" and "substance is an equally empty complication to our notions of the future" are true. Is S7, "It does not follow that if substance may be dropped from our conception of the irrecoverably past, it need be an equally empty complication to our notions of the future.", true then?
+james-will-1.md:1: argue/unfaithful: james-will-1.logic.r2 P6 (S5): the sentence has no word of "substance may be dropped from our conception of the irrecoverably past": is it the sentence P6 came from?
+james-will-1.logic.r2: argue/readings-agree 3
+james-will-1.logic.r2: argue/readings-differ 2
+james-will-1.logic.r2: argue/verdicts-agree 1
+james-will-1.logic.r2: argue/mismatches 1
+james-will-1.logic.r2.2: argue/mismatches 0
+james-will-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: james-will-1.logic.r2.2
+# argument written to james-will-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+james-will-1.md:1: argue/assumed: C (S9): follows only by A1, which the text never states: state it, or argue for it
+james-will-1.logic.r2: argue/valid 1
+james-will-1.md:1: argue/misses: O1 (S4): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+james-will-1.md:1: argue/misses: R1 (S7): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+james-will-1.logic.r2: argue/survives 1

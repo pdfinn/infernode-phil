@@ -1,0 +1,25 @@
+# 3 readings by claude-opus-5-5, compared
+critic.md:6: argue/unfaithful: critic.logic.r3 C (S6): the sentence has no word of "people can trust one another": is it the sentence C came from?
+critic.md:6: argue/unfaithful: critic.logic.r3 C (S6): the sentence has no word of "there is a sovereign": is it the sentence C came from?
+critic.md:6: argue/unfaithful: critic.logic.r3.2 C (S6): the sentence has no word of "people can trust one another": is it the sentence C came from?
+critic.md:6: argue/unfaithful: critic.logic.r3.2 C (S6): the sentence has no word of "there is a sovereign": is it the sentence C came from?
+critic.md:6: argue/unfaithful: critic.logic.r3.3 C (S6): the sentence has no word of "people can trust one another": is it the sentence C came from?
+critic.md:6: argue/unfaithful: critic.logic.r3.3 C (S6): the sentence has no word of "there is a sovereign": is it the sentence C came from?
+critic.logic.r3: argue/readings-agree 2
+critic.logic.r3: argue/readings-differ 0
+critic.logic.r3: argue/verdicts-agree 1
+critic.logic.r3: argue/mismatches 2
+critic.logic.r3.2: argue/mismatches 2
+critic.logic.r3.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: critic.logic.r3
+# argument written to critic.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+critic.md:6: argue/unfaithful: C (S6): the sentence has no word of "people can trust one another": is it the sentence C came from?
+critic.md:6: argue/unfaithful: C (S6): the sentence has no word of "there is a sovereign": is it the sentence C came from?
+critic.md:6: argue/unlinked: C (S6): the conclusion speaks of "people can trust one another", which no premise mentions: nothing links it to them
+critic.md:6: argue/invalid: C (S6): does not follow: when "there is a sovereign" is true, "people can trust one another" is false, and nothing else is true, every premise holds and the conclusion fails
+critic.md:6: argue/countermodel: C (S6): industry = F, sovereign = T, trust = F
+critic.md:5: argue/unlinked: P4 (S5): P4 is the only statement about "there is industry": as written it cannot bear on the conclusion; was the same thing named two ways?
+critic.logic.r3: argue/valid 0
+critic.md:4: argue/misses: O1 (S4): O1 does not contradict P1, even given the premises no one disputes: as written it leaves P1 standing; is it aimed at something else?
+critic.md:6: argue/defeated: C (S6): C cannot stand: it does not follow from what it rests on, so no reply to the objections can save it
+critic.logic.r3: argue/survives 0

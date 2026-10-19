@@ -1,0 +1,14 @@
+# the argument of aristotle-chief-good.md as claude-opus-5-5 read it: check that it says what the text says
+# "it is thought" reports common opinion with no named author, and the text argues from it, so it is a plain premise.
+# The conclusion says calling the Chief Good "that which all things aim at" is a fair description.
+# I read that as: there is some good at which all these pursuits aim.
+# The step moves from "each aims at some good" to "some good is aimed at by all" (order of all and some).
+atom	art(x)	x is an art
+atom	science(x)	x is a science reduced to a teachable form
+atom	action(x)	x is an action
+atom	choice(x)	x is a moral choice
+atom	good(y)	y is a good
+atom	aims(x, y)	x aims at y
+P1	S1	∀x (art(x) ∨ science(x) ∨ action(x) ∨ choice(x) → ∃y (good(y) ∧ aims(x, y)))
+C	S1	∃y (good(y) ∧ ∀x (art(x) ∨ science(x) ∨ action(x) ∨ choice(x) → aims(x, y)))	from P1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

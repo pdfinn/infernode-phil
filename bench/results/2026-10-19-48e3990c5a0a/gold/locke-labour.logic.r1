@@ -1,0 +1,21 @@
+# the argument of locke-labour.md as claude-opus-5-5 read it: check that it says what the text says
+# Locke's labour argument; one man and one thing he removes from the common state.
+# "property" in S1 (property in his person) and S3 (property in a thing) is kept as separate atoms.
+atom	earth_common	the earth and all inferior creatures are common to all men
+atom	owns_person	every man has a property in his own person, to which nobody has any right but himself
+atom	owns_labour	the labour of his body and the work of his hands are properly his
+atom	removes	he removes the thing out of the state that nature hath provided and left it in
+atom	mixes	he hath mixed his labour with the thing and joined to it something that is his own
+atom	excludes	the labour annexed to the thing excludes the common right of other men to it
+atom	enough_left	there is enough, and as good, left in common for others
+atom	property	he makes the thing his property
+A2	-	removes
+P1	S1	earth_common ∧ owns_person	kind normative
+P2	S2	owns_labour	kind normative
+P3	S3	removes → mixes
+P4	S4	owns_labour ∧ mixes ∧ enough_left → excludes	kind normative
+# S3 asserts the conclusion without the proviso that S4 adds; the step to it is left as the text gives it.
+# "excludes the common right of other men" is plainly taken to amount to his having the thing as his property.
+A1	-	excludes → property
+C	S3	removes → property	from P2 P3 P4 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

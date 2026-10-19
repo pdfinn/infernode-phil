@@ -1,0 +1,38 @@
+# the prover could not read plato-republic-1.logic.r1.3: claude-opus-5-5 is asked again
+plato-republic-1.logic.r1.3: argue/undefined: atom lacks_power is used but not given a meaning (atom	lacks_power	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom becomes_unjust is used but not given a meaning (atom	becomes_unjust	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom gains_power is used but not given a meaning (atom	gains_power	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom blames_injustice is used but not given a meaning (atom	blames_injustice	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom forgives_unjust is used but not given a meaning (atom	forgives_unjust	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom inspired_or_knowing is used but not given a meaning (atom	inspired_or_knowing	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom just_freely is used but not given a meaning (atom	just_freely	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom superior_honours is used but not given a meaning (atom	superior_honours	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom no_principle is used but not given a meaning (atom	no_principle	...)
+plato-republic-1.logic.r1.3: argue/undefined: atom fares_well is used but not given a meaning (atom	fares_well	...)
+bind: /tmp/phil.read.180: '/tmp/phil.read.180' does not exist
+bind: /tmp/phil.read.180: '/tmp/phil.read.180' does not exist
+cd: /tmp/phil.read.180: '/tmp/phil.read.180' does not exist
+# 3 readings by claude-opus-5-5, compared
+plato-republic-1.md:1: argue/readings: S1 is read 2 ways: plato-republic-1.logic.r1 and plato-republic-1.logic.r1.3 have "fares_well" and "fares_well → no_principle"; plato-republic-1.logic.r1.2 has "fares_well"; they differ when only "if we unite the worst injustice with a deceitful regard to appearances, we shall fare to our mind with gods and men, in life and after death" is true, which the second allows
+plato-republic-1.md:1: argue/answered: S1: answered no, which keeps plato-republic-1.logic.r1 and plato-republic-1.logic.r1.3, to: Suppose "if we unite the worst injustice with a deceitful regard to appearances, we shall fare to our mind with gods and men, in life and after death" is true and "there is no principle on which we shall any longer choose justice rather than the worst injustice" is false. Is S1, "On what principle, then, shall we any longer choose justice rather than the worst injustice? when, if we only unite the latter with a deceitful regard to appearances, we shall fare to our mind both with gods and men, in life and after death, as the most numerous and the highest authorities tell us.", true then?
+plato-republic-1.md:1: argue/readings: S4 is read 2 ways: plato-republic-1.logic.r1 has "blames_injustice → lacks_power"; plato-republic-1.logic.r1.2 and plato-republic-1.logic.r1.3 have nothing from it; they differ when only "he blames injustice" is true, which the second allows
+plato-republic-1.md:1: argue/answered: S4: answered no, which keeps plato-republic-1.logic.r1, to: Suppose "he blames injustice" is true and "owing to cowardice or age or some weakness, he has not the power of being unjust" is false. Is S4, "He only blames injustice who, owing to cowardice or age or some weakness, has not the power of being unjust.", true then?
+plato-republic-1.md:1: argue/readings: S5 is read 2 ways: plato-republic-1.logic.r1 and plato-republic-1.logic.r1.2 have "gains_power → becomes_unjust"; plato-republic-1.logic.r1.3 has "blames_injustice ∧ gains_power → becomes_unjust"; they differ when only "he obtains the power of being unjust" is true, which the second allows
+plato-republic-1.md:1: argue/answered: S5: answered no, which keeps plato-republic-1.logic.r1 and plato-republic-1.logic.r1.2, to: Suppose "he obtains the power of being unjust" is true and "he blames injustice" and "he immediately becomes unjust as far as he can be" are false. Is S5, "And this is proved by the fact that when he obtains the power, he immediately becomes unjust as far as he can be.", true then?
+plato-republic-1.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: plato-republic-1.logic.r1 and plato-republic-1.logic.r1.3 have "no_principle → ¬superior_honours"; plato-republic-1.logic.r1.2 has "fares_well → no_principle" and "no_principle → ¬superior_honours"; they differ when only "if we unite the worst injustice with a deceitful regard to appearances, we shall fare to our mind with gods and men, in life and after death" is true, which the first allows
+plato-republic-1.md:1: argue/negation: plato-republic-1.logic.r1 C (S2): the sentence states "a man who has any superiority of mind or person or rank or wealth is willing to honour justice", with no word of denial, but C denies it: it reads "it is not so that a man who has any superiority of mind or person or rank or wealth is willing to honour justice"
+plato-republic-1.md:1: argue/negation: plato-republic-1.logic.r1.2 C (S2): the sentence states "a man who has any superiority of mind or person or rank or wealth is willing to honour justice", with no word of denial, but C denies it: it reads "it is not so that a man who has any superiority of mind or person or rank or wealth is willing to honour justice"
+plato-republic-1.md:1: argue/unfaithful: plato-republic-1.logic.r1.3 P6 (S5): the sentence has no word of "he blames injustice": is it the sentence P6 came from?
+plato-republic-1.md:1: argue/negation: plato-republic-1.logic.r1.3 C (S2): the sentence states "a man who has any superiority of mind or person or rank or wealth is willing to honour justice", with no word of denial, but C denies it: it reads "it is not so that a man who has any superiority of mind or person or rank or wealth is willing to honour justice"
+plato-republic-1.logic.r1: argue/readings-agree 2
+plato-republic-1.logic.r1: argue/readings-differ 4
+plato-republic-1.logic.r1: argue/verdicts-agree 1
+plato-republic-1.logic.r1: argue/mismatches 1
+plato-republic-1.logic.r1.2: argue/mismatches 1
+plato-republic-1.logic.r1.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: plato-republic-1.logic.r1
+# argument written to plato-republic-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+plato-republic-1.md:1: argue/negation: C (S2): the sentence states "a man with any superiority of mind, person, rank or wealth is willing to honour justice", with no word of denial, but C denies it: it reads "it is not so that a man with any superiority of mind, person, rank or wealth is willing to honour justice"
+plato-republic-1.md:1: argue/own-sentence: C1 (S1): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S1 gives them as its reason, the reading has it assert what it concludes
+plato-republic-1.md:1: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it
+plato-republic-1.logic.r1: argue/valid 1

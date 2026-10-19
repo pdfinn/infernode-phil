@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+augustine-1.logic.r2: argue/readings: what the text leaves unstated is read 2 ways: augustine-1.logic.r2 and augustine-1.logic.r2.3 have nothing from it; augustine-1.logic.r2.2 has "removal_by_place ∨ removal_by_affections"; they differ when nothing is true, which the first allows
+augustine-1.md:1: argue/readings: the conclusion is read 2 ways: augustine-1.logic.r2 has "removal_by_affections ∧ ¬removal_by_place"; augustine-1.logic.r2.2 and augustine-1.logic.r2.3 have "removal_by_affections"; they differ when only "removal (distance) from God is in darkened, lustful affections" and "men leave God, or return to Him, by their feet or change of place" are true, which the second allows
+augustine-1.md:1: argue/answered: the conclusion: answered yes, which keeps augustine-1.logic.r2.2 and augustine-1.logic.r2.3, to: Suppose "removal (distance) from God is in darkened, lustful affections" and "men leave God, or return to Him, by their feet or change of place" are true. Is the conclusion, "So then in lustful, that is, in darkened affections, is the true distance from Thy face.", true then?
+augustine-1.md:1: argue/unfaithful: augustine-1.logic.r2 C (S7): the sentence has no word of "men leave God, or return to Him, by their feet or change of place": is it the sentence C came from?
+augustine-1.logic.r2: argue/readings-agree 2
+augustine-1.logic.r2: argue/readings-differ 2
+augustine-1.logic.r2: argue/verdicts-agree 1
+augustine-1.logic.r2: argue/mismatches 1
+augustine-1.logic.r2.2: argue/mismatches 0
+augustine-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: augustine-1.logic.r2.3
+# argument written to augustine-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+augustine-1.md:1: argue/circular: C (S7): the conclusion only restates P1: it is assumed, not argued
+augustine-1.md:1: argue/unlinked: P2 (S5): P2 is the only statement about "men leave God, or return to Him, by their feet or change of place": as written it cannot bear on the conclusion; was the same thing named two ways?
+augustine-1.logic.r2: argue/valid 0

@@ -1,0 +1,17 @@
+# the argument of plato-gorgias-1.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+atom	rhet_counsel	the rhetorician will be taken into counsel when the assembly meets to elect a physician or a shipwright or any other craftsman
+atom	most_skilled_chosen	at every election he is chosen who is most skilled
+atom	rhet_most_skilled	the rhetorician is the most skilled in the matter of the election
+atom	rhet_advises_building	when walls have to be built or harbours or docks constructed, the rhetorician advises rather than the master workman
+atom	rhet_advises_war	when generals have to be chosen, an order of battle arranged or a position taken, the rhetoricians advise rather than the military
+# S4 gives the reason for S3's "Surely not": the most skilled ought to be chosen, and parallel cases show the craftsman, not the rhetorician, advises.
+P1	S4	O most_skilled_chosen	kind normative
+P2	S4	¬rhet_advises_building
+P3	S4	¬rhet_advises_war
+# Unstated: the rhetorician, as such, is not the most skilled in a craft.
+A1	-	¬rhet_most_skilled
+# Unstated bridge: if the most skilled ought to be chosen and the rhetorician is not the most skilled, he is not taken into counsel.
+A2	-	O most_skilled_chosen ∧ ¬rhet_most_skilled → ¬rhet_counsel
+C	S3	¬rhet_counsel	from P1 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

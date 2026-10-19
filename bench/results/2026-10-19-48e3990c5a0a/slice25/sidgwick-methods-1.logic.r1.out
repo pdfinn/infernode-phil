@@ -1,0 +1,18 @@
+# 3 readings by claude-opus-5-5, compared
+sidgwick-methods-1.logic.r1: argue/readings-agree 4
+sidgwick-methods-1.logic.r1: argue/readings-differ 0
+sidgwick-methods-1.logic.r1: argue/verdicts-agree 1
+sidgwick-methods-1.logic.r1: argue/mismatches 0
+sidgwick-methods-1.logic.r1.2: argue/mismatches 0
+sidgwick-methods-1.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: sidgwick-methods-1.logic.r1
+# argument written to sidgwick-methods-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+sidgwick-methods-1.md:1: argue/unlinked: C (S4): the conclusion speaks of "we require to know on what judgments we are to rely as ultimately valid", which no premise mentions: nothing links it to them
+sidgwick-methods-1.md:1: argue/unlinked: C (S4): the conclusion speaks of "conduct is to be given systematic direction", which no premise mentions: nothing links it to them
+sidgwick-methods-1.md:1: argue/invalid: C (S4): does not follow: when "the three phases are not sharply distinguished in the moral reasoning of ordinary men", "Intuitionism of any sort is not sharply distinguished from either species of Hedonism (in ordinary moral reasoning)", "a loose combination or confusion of methods is the most common type of actual moral reasoning", "most moral men believe their moral sense or instinct will guide them fairly right", "most moral men believe there are general rules for determining right action in different departments of conduct", "most moral men believe a philosophical explanation can be found deducing these rules from fewer fundamental principles" and "conduct is to be given systematic direction" are true, "we require to know on what judgments we are to rely as ultimately valid" is false, every premise holds and the conclusion fails
+sidgwick-methods-1.md:1: argue/countermodel: C (S4): believe_explanation = T, believe_rules = T, believe_sense = T, intuit_not_sharp = T, loose_common = T, phases_not_sharp = T, require_know_valid = F, systematic = T
+sidgwick-methods-1.md:1: argue/missing: C (S4): it would follow given "phases_not_sharp → ¬systematic", or "phases_not_sharp → require_know_valid", or "intuit_not_sharp → ¬systematic"
+sidgwick-methods-1.logic.r1: argue/valid 0
+sidgwick-methods-1.md:1: argue/unlinked: P1 (S1): P1 is the only statement about "the three phases are not sharply distinguished in the moral reasoning of ordinary men" and "Intuitionism of any sort is not sharply distinguished from either species of Hedonism (in ordinary moral reasoning)": as written it cannot bear on the conclusion; was the same thing named two ways?
+sidgwick-methods-1.md:1: argue/unlinked: P2 (S2): P2 is the only statement about "a loose combination or confusion of methods is the most common type of actual moral reasoning": as written it cannot bear on the conclusion; was the same thing named two ways?
+sidgwick-methods-1.md:1: argue/unlinked: P3 (S3): P3 is the only statement about "most moral men believe their moral sense or instinct will guide them fairly right", "most moral men believe there are general rules for determining right action in different departments of conduct" and "most moral men believe a philosophical explanation can be found deducing these rules from fewer fundamental principles": as written it cannot bear on the conclusion; was the same thing named two ways?

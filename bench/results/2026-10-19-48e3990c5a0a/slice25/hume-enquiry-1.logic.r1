@@ -1,0 +1,21 @@
+# the argument of hume-enquiry-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Hume: Roman Catholic ceremonies as evidence that resemblance enlivens ideas
+# S1 only introduces the example and is left out.
+atom	feel_effect	the devotees feel the good effect of external motions, postures and actions in enlivening their devotion and quickening their fervour, which would otherwise decay if directed entirely to distant and immaterial objects
+atom	images_present	shadowing out the objects of faith in sensible types and images renders them more present than is possible merely by an intellectual view and contemplation
+atom	sensible_influence	sensible objects have always a greater influence on the fancy than any other, and readily convey this influence to the ideas to which they are related and which they resemble
+atom	resemblance_common	the effect of resemblance in enlivening the ideas is very common
+atom	concur	in every case a resemblance and a present impression concur
+atom	principle_proved	we are abundantly supplied with experiments to prove the reality of the foregoing principle
+P1	S2	feel_effect	says devotees	kind empirical
+P2	S3	images_present	says devotees	kind empirical
+# S4 is not marked "say they", so it is read as asserted outright; it may also continue the devotees' plea.
+P3	S4	sensible_influence	kind empirical
+# Hume argues from "these practices, and this reasoning", so the devotees' claims are repeated as premises he uses.
+P4	S5	feel_effect	kind empirical
+P5	S5	images_present	kind empirical
+# "must concur" is read as a plain general claim about every case, not as a modal one.
+P6	S5	concur
+C1	S5	resemblance_common	from P4 P5 P3
+C	S5	principle_proved	from C1 P6
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

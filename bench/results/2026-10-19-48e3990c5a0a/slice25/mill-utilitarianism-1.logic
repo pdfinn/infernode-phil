@@ -1,0 +1,33 @@
+# reading 3 of mill-utilitarianism-1.md by claude-opus-5-5
+logic	s5kd
+atom	done_without_involuntarily	nineteen-twentieths of mankind do without happiness involuntarily
+atom	without_happiness	people do without happiness
+atom	hero_sacrifices_for_something	the hero or martyr gives up his own happiness voluntarily, for the sake of something he prizes more
+atom	end_happiness_of_others	that something is the happiness of others, or some of the requisites of happiness
+atom	sacrifice_has_end	self-sacrifice must be for some end
+atom	sacrifice_own_end	self-sacrifice is its own end
+atom	end_virtue	the end of self-sacrifice is virtue, which is better than happiness
+atom	sacrifice_made	the hero or martyr makes the sacrifice
+atom	believes_benefits_others	the hero or martyr believes the sacrifice will spare others similar sacrifices, or bear fruit for his fellow creatures
+atom	contributes_happiness	those who renounce personal enjoyment thereby help increase the amount of happiness in the world
+atom	deserves_honour	those who renounce personal enjoyment deserve honour
+atom	admirable_ascetic	renouncing happiness for some other purpose deserves admiration
+atom	ascetic_renunciation	men renounce happiness for a purpose other than increasing happiness
+P1	S2	◇without_happiness
+P2	S2	done_without_involuntarily	kind empirical
+P3	S2	done_without_involuntarily → without_happiness
+P4	S2	hero_sacrifices_for_something	kind empirical
+# S3 is a rhetorical question, read as an assertion
+P5	S3	hero_sacrifices_for_something → end_happiness_of_others
+P6	S4	sacrifice_has_end
+P7	S4	¬sacrifice_own_end
+O1	S4	end_virtue ∧ ¬end_happiness_of_others	against P5
+# S4-S5 rhetorical questions, read as: the sacrifice would be made only if he believed it benefits others
+R1	S4	sacrifice_made → believes_benefits_others	against O1
+P8	S6	contributes_happiness → deserves_honour	kind normative
+P9	S6	¬admirable_ascetic	kind normative
+# "can do" in S7 read as possibility (what men are able to do)
+P10	S7	◇ascetic_renunciation
+A1	-	O ascetic_renunciation → admirable_ascetic
+C	S7	¬O ascetic_renunciation	from P9 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

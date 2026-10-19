@@ -1,0 +1,38 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+republic-function.md:5: argue/readings: S4 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.3 have "∀x (fulfils(x) ↔ lives_well(x))"; republic-function.logic.r1.2 has nothing from it; they differ when nothing is true, which the second allows [in 2 of 3 runs]
+republic-function.md:5: argue/answered: S4: answered no, which keeps republic-function.logic.r1 and republic-function.logic.r1.3, to: Suppose nothing is true. Is S4, "And is not life to be reckoned among the ends of the soul?", true then? [in 2 of 3 runs]
+republic-function.md:7: argue/readings: S5 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.3 have nothing from it; republic-function.logic.r1.2 has "∀x (fulfils(x) ↔ lives_well(x))"; they differ when nothing is true, which the first allows [in 2 of 3 runs]
+republic-function.md:7: argue/answered: S5: answered no, which keeps republic-function.logic.r1.2, to: Suppose nothing is true. Is S5, "Assuredly, he said.", true then? [in 2 of 3 runs]
+republic-function.md:13: argue/readings: S8 is read 2 ways: republic-function.logic.r1 has "∀x (¬excellent(x) → ¬fulfils(x))"; republic-function.logic.r1.2 and republic-function.logic.r1.3 have nothing from it; they differ when nothing is true, which the second allows
+republic-function.md:13: argue/answered: S8: answered no, which keeps republic-function.logic.r1, to: Suppose nothing is true. Is S8, "And can she or can she not fulfil her own ends when deprived of that excellence?", true then?
+republic-function.md:15: argue/readings: S9 is read 2 ways: republic-function.logic.r1 has nothing from it; republic-function.logic.r1.2 and republic-function.logic.r1.3 have "∀x (¬excellent(x) → ¬fulfils(x))"; they differ when nothing is true, which the first allows
+republic-function.md:15: argue/answered: S9: answered no, which keeps republic-function.logic.r1.2 and republic-function.logic.r1.3, to: Suppose nothing is true. Is S9, "She cannot.", true then?
+republic-function.md:17: argue/readings: S10 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.2 have nothing from it; republic-function.logic.r1.3 has "∀x (excellent(x) → fulfils(x))"; they differ when nothing is true, which the first allows
+republic-function.md:17: argue/answered: S10: answered no, which keeps republic-function.logic.r1.3, to: Suppose nothing is true. Is S10, "Then an evil soul must necessarily be an evil ruler and superintendent, and the good soul a good ruler?", true then?
+republic-function.md:19: argue/readings: S11 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.3 have nothing from it; republic-function.logic.r1.2 has "∀x (excellent(x) → fulfils(x))"; they differ when nothing is true, which the first allows [in 2 of 3 runs]
+republic-function.md:19: argue/answered: S11: answered no, which keeps republic-function.logic.r1.2, to: Suppose nothing is true. Is S11, "Yes, necessarily.", true then? [in 2 of 3 runs]
+republic-function.md:21: argue/readings: S12 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.3 have "∀x (just(x) ↔ excellent(x))"; republic-function.logic.r1.2 has nothing from it; they differ when nothing is true, which the second allows [in 2 of 3 runs]
+republic-function.md:21: argue/answered: S12: answered no, which keeps republic-function.logic.r1 and republic-function.logic.r1.3, to: Suppose nothing is true. Is S12, "And we have admitted that justice is the excellence of the soul, and injustice the defect of the soul?", true then? [in 2 of 3 runs]
+republic-function.md:23: argue/readings: S13 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.3 have nothing from it; republic-function.logic.r1.2 has "∀x (just(x) ↔ excellent(x))"; they differ when nothing is true, which the first allows [in 2 of 3 runs]
+republic-function.md:23: argue/answered: S13: answered no, which keeps republic-function.logic.r1.2, to: Suppose nothing is true. Is S13, "That has been admitted.", true then? [in 2 of 3 runs]
+republic-function.md:29: argue/readings: S16 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.3 have "∀x ((lives_well(x) → happy(x)) ∧ (¬lives_well(x) → ¬happy(x)))"; republic-function.logic.r1.2 has nothing from it; they differ when nothing is true, which the second allows [in 2 of 3 runs]
+republic-function.md:29: argue/answered: S16: answered no, which keeps republic-function.logic.r1 and republic-function.logic.r1.3, to: Suppose nothing is true. Is S16, "And he who lives well is blessed and happy, and he who lives ill the reverse of happy?", true then? [in 2 of 3 runs]
+republic-function.md:31: argue/readings: S17 is read 2 ways: republic-function.logic.r1 and republic-function.logic.r1.3 have nothing from it; republic-function.logic.r1.2 has "∀x (lives_well(x) ↔ happy(x))"; they differ when nothing is true, which the first allows [in 2 of 3 runs]
+republic-function.md:31: argue/answered: S17: answered no, which keeps republic-function.logic.r1.2, to: Suppose nothing is true. Is S17, "Certainly.", true then? [in 2 of 3 runs]
+republic-function.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: republic-function.logic.r1 has "∀x (excellent(x) → fulfils(x))" and "∀x (just(x) → happy(x)) ∧ ∀x (¬just(x) → ¬happy(x)) ∧ happiness_profitable → ¬injustice_more_profitable"; republic-function.logic.r1.2 and republic-function.logic.r1.3 have "∀x (just(x) ↔ happy(x)) ∧ happiness_profitable → ¬injustice_more_profitable"; they differ when only "happiness and not misery is profitable" and "injustice is more profitable than justice" are true, which the second allows [in 2 of 3 runs]
+republic-function.md:5: argue/unfaithful: republic-function.logic.r1 P1 (S4): the sentence has no word of "x lives well": is it the sentence P1 came from? [in 2 of 3 runs]
+republic-function.md:21: argue/negation: republic-function.logic.r1 P3 (S12): the sentence says "injustice", but P3 denies nothing it speaks of: it reads "for every x, x is just (has justice) if and only if x has the excellence of the soul" [in 1 of 3 runs]
+republic-function.logic.r1: argue/answers-split: no reading agrees with all 10 answers (republic-function.logic.r1 4, republic-function.logic.r1.2 5, republic-function.logic.r1.3 5 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+# kept the reading that best fits the words and the other readings: republic-function.logic.r1.3
+# argument written to republic-function.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+republic-function.md:15: argue/unfaithful: P1 (S9): the sentence has no word of "x fulfils the soul's own ends well (rules, superintends, lives well)": is it the sentence P1 came from?
+republic-function.md:15: argue/unfaithful: P1 (S9): the sentence has no word of "x has the excellence of the soul": is it the sentence P1 came from?
+republic-function.md:5: argue/unfaithful: P3 (S4): the sentence has no word of "x lives well": is it the sentence P3 came from? [in 2 of 3 runs]
+republic-function.md:21: argue/negation: P4 (S12): the sentence says "injustice", but P4 denies nothing it speaks of: it reads "for every x, x is just (has justice) if and only if x has the excellence of the soul" [in 1 of 3 runs]
+republic-function.md:37: argue/unused: P6 (S20): P6 is not needed: the conclusion follows from C2 and A1 without it [in 1 of 3 runs]
+republic-function.md:41: argue/assumed: C (S22): follows only by A1, which the text never states: state it, or argue for it [in 2 of 3 runs]
+republic-function.logic.r1: argue/valid 1
+republic-function.logic: argue/runs-agree 1

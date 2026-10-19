@@ -1,0 +1,17 @@
+# the argument of critic.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+atom	sovereign	there is a sovereign
+atom	trust	people trust one another
+atom	elected	the sovereign is elected
+atom	keep_promises	people keep their promises
+atom	industry	there is industry
+P1	S1	¬sovereign → ¬trust	says hobbes
+# S2 "trust needs no sovereign": read as trust being possible without a sovereign, i.e. !sovereign -> trust; attributed to Hobbes "on this reading"
+P2	S2	¬sovereign → trust	says hobbes
+# S3 "must be elected": read deontically (ought), as a claim about how the sovereign should come to power
+P3	S3	O elected	says hobbes
+P4	S4	¬sovereign → keep_promises	says locke
+P5	S5	¬sovereign → industry	kind empirical
+# S6 "the argument's conclusion" is taken to be Hobbes's claim in S1 that without a sovereign there is no trust
+C	S6	¬(¬sovereign → ¬trust)	from P5
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

@@ -1,0 +1,12 @@
+# reading 2 of berkeley-heat-pain.md by claude-opus-5-5
+atom	heat(x)	x is the subject of the most vehement and intense degree of heat perceived by sense
+atom	pain(x)	x is the subject of pain (is capable of pain)
+atom	perceives(x)	x is a being endowed with sense and perception (as opposed to unperceiving or senseless)
+# matter = Hylas's "material substance"
+# The premises are put as Philonous's questions; Hylas grants them (S3, S7, S11), so they are taken as asserted.
+P1	S1	∀x (heat(x) → pain(x))	kind conceptual
+P2	S5	∀x (¬perceives(x) → ¬pain(x))	kind conceptual
+P3	S11	¬perceives(matter)
+C1	S13	¬pain(matter)	from P2 P3
+C	S17	¬heat(matter)	from C1 P1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

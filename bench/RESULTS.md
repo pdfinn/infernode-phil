@@ -11,14 +11,20 @@ with `-k 3`. 1,397 calls, 2.53 million tokens in and 0.99 million out
 output are in [results/2026-10-19/](results/2026-10-19/); what a person
 judged is in [results/](results/).
 
-In one line: the tools find a fault that is a missing step, a bridge
-the text needs and never states, in three runs of five, and say a
-valid argument is valid 23 times in 24. They do not find a word used in
-two senses, a shift in the scope of "necessarily", or an "every ...
-some" turned round, because the reader writes the text's own
-assumption in, as the prompt tells it to. Attributions are marked
-accurately. What the prover says about a sentence beyond its verdict
-is too noisy to count as a finding on its own.
+In short: the tools find a fault that is a missing step, a bridge the
+text needs and never states, nearly every time, and say a valid
+argument is valid 23 times in 24. As first run they did not find a
+word used in two senses, a shift in the scope of "necessarily", or an
+"every ... some" turned round: the readers settled each ambiguity
+silently, one way. Attributions are marked accurately. What the prover
+says about a sentence beyond its verdict is too noisy to count as a
+finding on its own.
+
+A change to the prompt made from those misses, and run again the same
+day ([below](#the-prompt-changed-48e3990c5a0a)), turned the "every ...
+some" case into a finding, had every reader name the scope of
+"necessarily", and drew no new false alarm; the equivocations are
+still not found.
 
 ## The gold set
 
@@ -47,7 +53,7 @@ why.
 | Class | Runs | Found | Partly | Missed |
 |---|---|---|---|---|
 | inference, 13 passages | 39 | 18 | 6 | 15 |
-| inference, less the three whose gold is disputed (below) | 30 | 18 | 6 | 6 |
+| inference, less the three whose gold the run disputed (below) | 30 | 18 | 6 | 6 |
 | equivocation, 5 passages | 15 | 0 | 2 | 13 |
 
 | Class | Runs | Valid | False alarm |
@@ -87,8 +93,10 @@ passage as given, not the tools:
 
 - `aristotle-chief-good`: in Chase's translation the sentence says that
   "that which all things aim at" is a fair description of the Chief
-  Good; it does not assert one good that all things aim at, which is
-  what the quantifier-shift charge needs.
+  Good; it does not plainly assert one good that all things aim at,
+  which is what the quantifier-shift charge needs. (Withdrawn: under
+  the changed prompt every reader took it to assert that, and the
+  prover found the shift. The gold stands.)
 - `descartes-cogito`: the passage concludes that the cogito may be
   accepted as a first principle, and states the cogito; its inference
   is not the passage's argument.
@@ -96,7 +104,7 @@ passage as given, not the tools:
   maximum in a genus causes all in it) illustrated only; S4 states it,
   and the readers read it as stated.
 
-They are left as they are for this run, and are the first to revise.
+They are left as they are, and the last two are the first to revise.
 
 ## The breadth sample
 
@@ -163,3 +171,82 @@ So `phil/corpus` held the commentaries to the text it had, correctly.
 What it lacks: a source read as everything it asserts, not one
 argument; and a name for "the source as read does not say it" that is
 not "misattributed", which says more than the tool knows.
+
+## The prompt changed (48e3990c5a0a)
+
+From what the gold set missed, `lib/phil/argue` went from
+`a036b21b8816` to `48e3990c5a0a`: a word in two senses is two atoms,
+and the reader says which word shifts; "if p, then necessarily q" read
+one way is said to be readable the other; the order of all and some is
+kept, with relations of two places; a step names the assumptions it
+needs. The examples in the prompt are not from the bench. Run the same
+day with the prover as of `30ccaf7`: the gold set again (`-n 3`), the
+eight passages of the last prompt check, and one breadth passage from
+each work (`-n 2`). 711 calls, 1.44 million tokens in and 0.50 million
+out (about $16); none failed. Output in
+[results/2026-10-19-48e3990c5a0a/](results/2026-10-19-48e3990c5a0a/);
+judged in
+[results/gold-judged-48e3990c5a0a.tsv](results/gold-judged-48e3990c5a0a.tsv)
+by the same rule as before.
+
+| Class | Runs | Found | Partly | Said by the reader only | Missed |
+|---|---|---|---|---|---|
+| inference, before | 39 | 18 | 6 | 0 | 15 |
+| inference, after | 39 | 21 | 4 | 3 | 11 |
+| equivocation, before | 15 | 0 | 2 | 0 | 13 |
+| equivocation, after | 15 | 0 | 5 | 0 | 10 |
+| valid, before | 24 | 23 valid | | | 1 false alarm |
+| valid, after | 24 | 24 valid | | | 0 |
+
+- **Every ... some.** Every reader of `aristotle-chief-good` wrote the
+  premise as each pursuit aiming at some good and the conclusion as
+  some good aimed at by all, in a relation of two places, and the
+  prover found it invalid with its case: three runs of three, against
+  none.
+- **Scope.** Every reader of Boethius wrote the sentence's narrow
+  scope and said in a comment that it could be read as the necessity
+  of the whole conditional, "the argument turns on this". No finding
+  of the tool's says so: a comment is for the person, and the readings
+  agree on the formula, so nothing is asked. Counted as said by the
+  reader only.
+- **Senses.** No reader split a word in the five equivocations. Two
+  readings of Mill's proof said that "desirable" changes its sense,
+  the second half of that passage's gold. The equivocation runs found
+  in part rose from two to five, all through an assumption that
+  bridges the shift without naming it.
+- **What did not change.** The eight passages of the last prompt check
+  kept every verdict and every finding made in all three runs. The
+  critic's report of Locke (S4) was read as an objection to Hobbes in
+  two runs of three, not as Locke's claim, which loses
+  `claims/attributed-unread` on it in a corpus. In the 25 breadth
+  passages the verdicts are as often not valid as before (4 runs of
+  50 both times); five passages changed a verdict, in both directions,
+  as two runs of one passage do (10 of the first run's 100 passages
+  disagreed with themselves). Readings agree a little less (63% of
+  statements against 68%), fewer premises carry a `kind` (89 against
+  120), and three passages lost a `says` line in one run.
+
+The prompt was changed to answer this gold set's misses, so the gains
+on it are a development result, not a test: a held-out set of
+equivocations and scope shifts is what would show them general. The
+change is kept: it found what it was meant to and cost nothing
+measured elsewhere beyond the run-to-run noise, except the critic's
+report and the fewer `kind` fields, both small.
+
+## What next
+
+1. Equivocation is the gap. Asking the reader did not close it; the
+   next try is structural: a second, adversarial reading that is asked
+   only whether any word changes its sense, whose answer splits the
+   atom and is checked like any other reading.
+2. A reader's comment that a sentence "could be read the other way" is
+   the tool's to act on: write the other reading too, and let
+   `phil/settle` ask the question it already asks when readings differ.
+3. `argue/unfaithful` in dialogues: a claim put as a question and
+   granted in the reply should be read from both.
+4. For `phil/corpus`: a source read as everything it asserts, not one
+   argument; and a finding name for "the source as read does not say
+   it" that is not `misattributed`.
+5. The gold set: revise `descartes-cogito` and `aquinas-fourth-way`;
+   add held-out equivocations and scope shifts before the next prompt
+   change.

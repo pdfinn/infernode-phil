@@ -1,0 +1,14 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+apology-death.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: apology-death.logic.r1 has "single_night ∧ night_better → (nothing → good)"; apology-death.logic.r1.2 and apology-death.logic.r1.3 have "single_night ∧ night_better → good"; they differ when only "a night of sleep undisturbed even by dreams is better and more pleasant than nearly all the days and nights of a life" and "if death is nothingness, eternity is only a single such night" are true, which the first allows [in 1 of 3 runs]
+apology-death.md:1: argue/or: apology-death.logic.r1 P1 (S1): the sentence says "either ... or", which often means one and not both, but P1 allows both: it reads "either death is a state of nothingness and utter unconsciousness, like dreamless sleep or death is a change and migration of the soul from this world to another, where all the dead abide"; if not both, say so with & !(... & ...)
+# kept the reading that best fits the words and the other readings: apology-death.logic.r1.2
+# argument written to apology-death.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+apology-death.md:1: argue/or: P1 (S1): the sentence says "either ... or", which often means one and not both, but P1 allows both: it reads "either death is a state of nothingness and utter unconsciousness, like dreamless sleep or death is a change and migration of the soul from this world to another, where all the dead abide"; if not both, say so with & !(... & ...)
+apology-death.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it [in 2 of 3 runs]
+apology-death.md:1: argue/own-sentence: C1 (S4): needs P3, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it [in 2 of 3 runs]
+apology-death.md:1: argue/own-sentence: C (S1): needs P1, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+apology-death.logic.r1: argue/valid 1
+apology-death.logic: argue/runs-agree 1

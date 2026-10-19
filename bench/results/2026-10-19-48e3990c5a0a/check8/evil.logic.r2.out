@@ -1,0 +1,10 @@
+# 3 readings by claude-opus-5-5, compared
+evil.logic.r2: argue/readings-agree 5
+evil.logic.r2: argue/readings-differ 0
+evil.logic.r2: argue/verdicts-agree 1
+evil.logic.r2: argue/mismatches 0
+evil.logic.r2.2: argue/mismatches 0
+evil.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: evil.logic.r2
+# argument written to evil.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+evil.logic.r2: argue/valid 1

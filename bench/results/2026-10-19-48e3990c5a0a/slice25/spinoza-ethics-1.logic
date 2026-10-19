@@ -1,0 +1,18 @@
+# the argument of spinoza-ethics-1.md as claude-opus-5-5 read it: check that it says what the text says
+atom	conceive_affects_loved_pleasurably	we conceive a thing to affect an object of our love pleasurably
+atom	conceive_affects_loved_painfully	we conceive a thing to affect an object of our love painfully
+atom	affects_us_pleasurably	that thing affects us pleasurably
+atom	affects_us_painfully	that thing affects us painfully
+atom	endeavour_conceive	the mind endeavours, as far as possible, to conceive that thing
+atom	endeavour_regard_present	the mind endeavours to regard that thing as present
+atom	endeavour_exclude	the mind endeavours to exclude the existence of that thing
+atom	endeavour_affirm	we endeavour to affirm that thing concerning ourselves and concerning the loved object
+# Propositional reading about an arbitrary thing; the cited propositions (III. xxi., III. xii., III. xiii., II. xvii.) are Spinoza's own earlier results, so they are taken as plain premises.
+P1	S1	(conceive_affects_loved_pleasurably → affects_us_pleasurably) ∧ (conceive_affects_loved_painfully → affects_us_painfully)
+P2	S2	affects_us_pleasurably → endeavour_conceive
+P3	S2	endeavour_conceive ↔ endeavour_regard_present	kind conceptual
+P4	S3	affects_us_painfully → endeavour_exclude
+# Unstated link: endeavouring to regard a thing as present is endeavouring to affirm it of ourselves and the loved object.
+A1	-	endeavour_regard_present → endeavour_affirm
+C	S3	affects_us_pleasurably ∨ conceive_affects_loved_pleasurably → endeavour_affirm	from P1 P2 P3 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

@@ -1,0 +1,12 @@
+# the argument of spinoza-god.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+atom	god_exists	God, or substance, consisting of infinite attributes, each expressing eternal and infinite essentiality, exists
+atom	essence_involves_existence	God's essence involves existence
+# S4 "conceive, if possible, that God does not exist" read as: if it is possible that God does not exist, his essence does not involve existence.
+# It could instead be read with plain non-existence: !god_exists -> !essence_involves_existence.
+P1	S4	◇¬god_exists → ¬essence_involves_existence
+# S5 says the consequent is absurd by Prop. vii, which is a cross-reference within the work, so the claim is the text's own.
+P2	S5	essence_involves_existence	kind conceptual
+# S3 states the proposition and S6 draws it.
+C	S6	□god_exists	from P1 P2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

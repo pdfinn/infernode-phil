@@ -1,0 +1,12 @@
+# 3 readings by claude-opus-5-5, compared
+descartes-cogito.logic.r3: argue/readings-agree 3
+descartes-cogito.logic.r3: argue/readings-differ 0
+descartes-cogito.logic.r3: argue/verdicts-agree 1
+descartes-cogito.logic.r3: argue/mismatches 0
+descartes-cogito.logic.r3.2: argue/mismatches 0
+descartes-cogito.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: descartes-cogito.logic.r3
+# argument written to descartes-cogito.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+descartes-cogito.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it
+descartes-cogito.md:1: argue/own-sentence: C (S1): needs P3, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+descartes-cogito.logic.r3: argue/valid 1

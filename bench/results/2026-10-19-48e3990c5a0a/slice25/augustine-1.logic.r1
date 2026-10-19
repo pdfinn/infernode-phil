@@ -1,0 +1,14 @@
+# the argument of augustine-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Augustine argues that leaving God is a matter of disordered affections, not of place.
+# S1-S3 are lament and prayer, and S6 (the prodigal son) is an illustration: none is a premise.
+atom	affections_remove	darkened affections is removal from God
+atom	place_removes	men leave God or return unto Him by their feet, or change of place
+atom	lustful_is_darkened	lustful affections are darkened affections
+atom	distance_in_affections	the true distance from God's face is in lustful, that is, darkened affections
+P1	S4	affections_remove
+P2	S5	¬place_removes	kind conceptual
+P3	S7	lustful_is_darkened	kind conceptual
+# The text never states this link; the "So then" of S7 relies on it.
+A1	-	affections_remove ∧ ¬place_removes → distance_in_affections
+C	S7	distance_in_affections	from P1 P2 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

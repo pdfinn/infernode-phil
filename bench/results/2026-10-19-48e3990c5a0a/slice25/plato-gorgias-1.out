@@ -1,0 +1,10 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+plato-gorgias-1.md:1: argue/unfaithful: plato-gorgias-1.logic.r1 C (S3): the sentence has no word of "the rhetorician will be taken into counsel when the assembly meets to elect a physician or a shipwright or any other craftsman": is it the sentence C came from?
+# kept the reading that best fits the words and the other readings: plato-gorgias-1.logic.r1
+# argument written to plato-gorgias-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+plato-gorgias-1.md:1: argue/unfaithful: C (S3): the sentence has no word of "the rhetorician will be taken into counsel when the assembly meets to elect a physician or a shipwright or any other craftsman": is it the sentence C came from?
+plato-gorgias-1.md:1: argue/assumed: C (S3): follows only by A1 and A2, which the text never states: state it, or argue for it
+plato-gorgias-1.logic.r1: argue/valid 1
+plato-gorgias-1.logic: argue/runs-agree 1

@@ -1,0 +1,31 @@
+# 3 readings by claude-opus-5-5, compared
+mill-proof.md:1: argue/readings: S5 is read 2 ways: mill-proof.logic.r3 and mill-proof.logic.r3.2 have "desired_own"; mill-proof.logic.r3.3 has nothing from it; they differ when nothing is true, which the second allows
+mill-proof.md:1: argue/answered: S5: answered no, which keeps mill-proof.logic.r3 and mill-proof.logic.r3.2, to: Suppose "each person, so far as he believes it attainable, actually desires his own happiness" is false. Is S5, "No reason can be given why the general happiness is desirable, except that each person, so far as he believes it to be attainable, desires his own happiness.", true then?
+mill-proof.md:1: argue/readings: S6 is read 2 ways: mill-proof.logic.r3 and mill-proof.logic.r3.2 have nothing from it; mill-proof.logic.r3.3 has "desired_own"; they differ when nothing is true, which the first allows
+mill-proof.md:1: argue/answered: S6: answered no, which keeps mill-proof.logic.r3.3, to: Suppose "each person, so far as he believes it attainable, actually desires his own happiness" is false. Is S6, "This, however, being a fact, we have not only all the proof which the case admits of, but all which it is possible to require, that happiness is a good: that each person's happiness is a good to that person, and the general happiness, therefore, a good to the aggregate of all persons.", true then?
+mill-proof.md:1: argue/readings: S7 is read 2 ways: mill-proof.logic.r3 and mill-proof.logic.r3.3 have nothing from it; mill-proof.logic.r3.2 has "happiness_end → criterion_morality"; they differ when only "happiness has made out its title as one of the ends of conduct" is true, which the first allows
+mill-proof.md:1: argue/answered: S7: answered no, which keeps mill-proof.logic.r3.2, to: Suppose "happiness has made out its title as one of the ends of conduct" is true and "happiness is one of the criteria of morality" is false. Is S7, "Happiness has made out its title as one of the ends of conduct, and consequently one of the criteria of morality.", true then?
+mill-proof.logic.r3: argue/readings: what the text leaves unstated is read 3 ways: mill-proof.logic.r3 has "general_good → happiness_end" and "happiness_end → criterion_morality"; mill-proof.logic.r3.2 has nothing from it; they differ when only "the general happiness is a good to the aggregate of all persons" and "happiness has made out its title as one of the ends of conduct" are true, which the second allows; mill-proof.logic.r3.3 has "happiness_end → criterion_morality"
+mill-proof.md:1: argue/readings: the conclusion is read 2 ways: mill-proof.logic.r3 has "happiness_end ∧ criterion_morality"; mill-proof.logic.r3.2 and mill-proof.logic.r3.3 have "criterion_morality"; they differ when only "happiness is one of the criteria of morality" is true, which the second allows
+mill-proof.md:1: argue/answered: the conclusion: answered no, which keeps mill-proof.logic.r3, to: Suppose "happiness is one of the criteria of morality" is true and "happiness has made out its title as one of the ends of conduct" is false. Is the conclusion, "Happiness has made out its title as one of the ends of conduct, and consequently one of the criteria of morality.", true then?
+mill-proof.logic.r3: argue/readings: U1: mill-proof.logic.r3 takes for granted "if the general happiness is a good to the aggregate of all persons, then happiness has made out its title as one of the ends of conduct"; mill-proof.logic.r3.2 and mill-proof.logic.r3.3 do not
+mill-proof.logic.r3: argue/answered: U1: answered yes, which keeps mill-proof.logic.r3, to: Does the text's argument take this for granted, whether or not it says so: "if the general happiness is a good to the aggregate of all persons, then happiness has made out its title as one of the ends of conduct"? Answer yes if the author would accept it as part of the argument.
+mill-proof.logic.r3: argue/readings-agree 1
+mill-proof.logic.r3: argue/readings-differ 5
+mill-proof.logic.r3: argue/verdicts-agree 1
+mill-proof.logic.r3: argue/answers-split: no reading agrees with all 5 answers (mill-proof.logic.r3 3, mill-proof.logic.r3.2 2, mill-proof.logic.r3.3 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+mill-proof.logic.r3: argue/mismatches 0
+mill-proof.logic.r3.2: argue/mismatches 0
+mill-proof.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: mill-proof.logic.r3
+# argument written to mill-proof.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+mill-proof.md:1: argue/invalid: C2 (S6): does not follow: when "each person's happiness is desirable in the sense of capable of being desired (as visible = can be seen)" is true, "each person's happiness is a good to that person (desirable as worthy of desire)" is false, every premise holds and the conclusion fails
+mill-proof.md:1: argue/countermodel: C2 (S6): desirable_able = T, own_good = F
+mill-proof.md:1: argue/missing: C2 (S6): it would follow given "desirable_able → own_good"
+mill-proof.md:1: argue/unlinked: C1 (S6): C1 is the only statement about "each person's happiness is desirable in the sense of capable of being desired (as visible = can be seen)": as written it cannot bear on the conclusion; was the same thing named two ways?
+mill-proof.md:1: argue/invalid: C3 (S6): does not follow: when "each person's happiness is a good to that person (desirable as worthy of desire)" is true, "the general happiness is a good to the aggregate of all persons" is false, every premise holds and the conclusion fails
+mill-proof.md:1: argue/countermodel: C3 (S6): general_good = F, own_good = T
+mill-proof.md:1: argue/missing: C3 (S6): it would follow given "own_good → general_good"
+mill-proof.md:1: argue/unlinked: C2 (S6): C2 is the only statement about "each person's happiness is a good to that person (desirable as worthy of desire)": as written it cannot bear on the conclusion; was the same thing named two ways?
+mill-proof.md:1: argue/assumed: C (S7): follows only by A1 and A2, which the text never states: state it, or argue for it
+mill-proof.logic.r3: argue/valid 0

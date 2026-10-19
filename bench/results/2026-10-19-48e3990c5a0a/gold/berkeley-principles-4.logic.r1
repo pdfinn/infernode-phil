@@ -1,0 +1,16 @@
+# the argument of berkeley-principles-4.md as claude-opus-5-5 read it: check that it says what the text says
+atom	sensible(x)	x is a sensible object (house, mountain, river, etc.)
+atom	perceived_by_sense(x)	x is a thing we perceive by sense
+atom	idea(x)	x is one of our own ideas or sensations, or a combination of them
+atom	exists_unperceived(x)	x exists unperceived, distinct from its being perceived by the understanding
+atom	opinion_prevails	it is an opinion prevailing amongst men that sensible objects have an existence distinct from their being perceived
+atom	opinion_contradictory	the opinion that sensible objects exist distinct from their being perceived involves a manifest contradiction
+P1	S1	opinion_prevails	kind empirical
+P2	S3	∀x (sensible(x) → perceived_by_sense(x))	kind conceptual
+P3	S3	∀x (perceived_by_sense(x) → idea(x))
+# "plainly repugnant" read as: no idea can exist unperceived; written without modality because the argument quantifies
+P4	S3	∀x (idea(x) → ¬exists_unperceived(x))	kind conceptual
+C1	S3	∀x (sensible(x) → ¬exists_unperceived(x))	from P2 P3 P4
+A1	-	∀x (sensible(x) → ¬exists_unperceived(x)) → opinion_contradictory
+C	S2	opinion_contradictory	from C1 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

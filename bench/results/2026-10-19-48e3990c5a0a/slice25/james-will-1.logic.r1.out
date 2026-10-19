@@ -1,0 +1,32 @@
+# the prover could not read james-will-1.logic.r1.2: claude-opus-5-5 is asked again
+james-will-1.logic.r1.2:9: argue/syntax: R1: necessity and possibility need a line logic s5, ought and permitted logic kd, both logic s5kd
+james-will-1.logic.r1.2: argue/undefined: atom liking_substance is used but not given a meaning (atom	liking_substance	...)
+james-will-1.logic.r1.2: argue/undefined: atom feeling_rest is used but not given a meaning (atom	feeling_rest	...)
+james-will-1.logic.r1.2: argue/undefined: atom new_attributes is used but not given a meaning (atom	new_attributes	...)
+james-will-1.logic.r1.2: argue/undefined: atom future_case_differs is used but not given a meaning (atom	future_case_differs	...)
+james-will-1.logic.r1.2: argue/undefined: atom dispense_warrant is used but not given a meaning (atom	dispense_warrant	...)
+james-will-1.logic.r1.2: argue/undefined: atom past_bagged is used but not given a meaning (atom	past_bagged	...)
+james-will-1.logic.r1.2: argue/undefined: atom warranted_past is used but not given a meaning (atom	warranted_past	...)
+james-will-1.logic.r1.2: argue/undefined: atom substratum_missed_past is used but not given a meaning (atom	substratum_missed_past	...)
+bind: /tmp/phil.read.123: '/tmp/phil.read.123' does not exist
+bind: /tmp/phil.read.123: '/tmp/phil.read.123' does not exist
+cd: /tmp/phil.read.123: '/tmp/phil.read.123' does not exist
+# 3 readings by claude-opus-5-5, compared
+james-will-1.md:1: argue/readings: S5 is read 2 ways: james-will-1.logic.r1 has "past_bagged → dispense_warrant" and "past_bagged"; james-will-1.logic.r1.2 and james-will-1.logic.r1.3 have "past_bagged → dispense_warrant"; they differ when nothing is true, which the second allows
+james-will-1.md:1: argue/answered: S5: answered yes, which keeps james-will-1.logic.r1.2 and james-will-1.logic.r1.3, to: Suppose "we have already securely bagged our facts in a certain order" and "we can dispense with any further warrant for that order of past facts" are false. Is S5, "Truly enough, if we have {81} already securely bagged our facts in a certain order, we can dispense with any further warrant for that order.", true then?
+james-will-1.md:1: argue/readings: S7 is read 2 ways: james-will-1.logic.r1 has "¬(drop_past → empty_future) ∨ ¬◇¬(drop_past → empty_future)" and "¬□(drop_past → empty_future)"; james-will-1.logic.r1.2 and james-will-1.logic.r1.3 have nothing from it; they differ when only "substance may be dropped from our conception of the irrecoverably past", "substance is an equally empty complication to our notions of the future" and "possibly, it is not so that (if substance may be dropped from our conception of the irrecoverably past, then substance is an equally empty complication to our notions of the future)" are true, which the second allows
+james-will-1.md:1: argue/modal-ambiguous: S7 is read james-will-1.logic.r1.2 and james-will-1.logic.r1.3 with no modality; james-will-1.logic.r1 as what is necessary or possible: its "may" or "need" does not say which it means
+james-will-1.md:1: argue/answered: S7: answered yes, which keeps james-will-1.logic.r1.2 and james-will-1.logic.r1.3, to: Suppose "substance may be dropped from our conception of the irrecoverably past", "substance is an equally empty complication to our notions of the future" and "possibly, it is not so that (if substance may be dropped from our conception of the irrecoverably past, then substance is an equally empty complication to our notions of the future)" are true and "necessarily, (if substance may be dropped from our conception of the irrecoverably past, then substance is an equally empty complication to our notions of the future)" is false. Is S7, "It does not follow that if substance may be dropped from our conception of the irrecoverably past, it need be an equally empty complication to our notions of the future.", true then?
+james-will-1.logic.r1: argue/readings-agree 4
+james-will-1.logic.r1: argue/readings-differ 2
+james-will-1.logic.r1: argue/verdicts-agree 1
+james-will-1.logic.r1: argue/mismatches 0
+james-will-1.logic.r1.2: argue/mismatches 0
+james-will-1.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: james-will-1.logic.r1.2
+# argument written to james-will-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+james-will-1.md:1: argue/assumed: C (S9): follows only by A1, which the text never states: state it, or argue for it
+james-will-1.logic.r1: argue/valid 1
+james-will-1.md:1: argue/misses: O1 (S4): O1 does not contradict C, even given the premises no one disputes: as written it leaves C standing; is it aimed at something else?
+james-will-1.md:1: argue/misses: R1 (S7): R1 does not contradict O1, even given the premises no one disputes: as written it leaves O1 standing; is it aimed at something else?
+james-will-1.logic.r1: argue/survives 1

@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P1, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P2, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P3, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P1, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P2, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.logic.r2: argue/readings-agree 1
+meno-paradox.logic.r2: argue/readings-differ 0
+meno-paradox.logic.r2: argue/verdicts-agree 1
+meno-paradox.logic.r2: argue/mismatches 0
+meno-paradox.logic.r2.2: argue/mismatches 0
+meno-paradox.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: meno-paradox.logic.r2
+# argument written to meno-paradox.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P1, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P2, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/reported-as-premise: C (S2): C rests on P3, which reports what meno says: a work's account of another's claim is not its premise; if the work holds it, it says so on a line of its own
+meno-paradox.md:1: argue/unlinked: C (S2): the conclusion speaks of "the man can enquire about it", which no premise mentions: nothing links it to them
+meno-paradox.md:1: argue/invalid: C (S2): does not follow: when "the man can enquire about it" is true, the conclusion fails, and there are no premises
+meno-paradox.md:1: argue/countermodel: C (S2): can_enquire = T
+meno-paradox.logic.r2: argue/valid 0

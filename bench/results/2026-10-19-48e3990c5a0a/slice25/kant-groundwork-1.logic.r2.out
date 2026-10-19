@@ -1,0 +1,19 @@
+# 3 readings by claude-opus-5-5, compared
+kant-groundwork-1.md:1: argue/readings: S1 is read 2 ways: kant-groundwork-1.logic.r2 has "will_unqual_good"; kant-groundwork-1.logic.r2.2 and kant-groundwork-1.logic.r2.3 have "will_unqual_good ∧ ¬talents_unqual_good ∧ ¬fortune_unqual_good"; they differ when only "a good will is good without qualification" and "the talents of mind and qualities of temperament are good without qualification" are true, which the first allows
+kant-groundwork-1.md:1: argue/answered: S1: answered no, which keeps kant-groundwork-1.logic.r2.2 and kant-groundwork-1.logic.r2.3, to: Suppose "a good will is good without qualification" and "the talents of mind and qualities of temperament are good without qualification" are true and "the gifts of fortune (power, riches, honour, health, happiness) are good without qualification" is false. Is S1, "Nothing can possibly be conceived in the world, or even out of it, which can be called good, without qualification, except a good will.", true then?
+kant-groundwork-1.logic.r2: argue/readings-agree 5
+kant-groundwork-1.logic.r2: argue/readings-differ 1
+kant-groundwork-1.logic.r2: argue/verdicts-agree 1
+kant-groundwork-1.logic.r2: argue/mismatches 0
+kant-groundwork-1.logic.r2.2: argue/mismatches 0
+kant-groundwork-1.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: kant-groundwork-1.logic.r2.2
+# argument written to kant-groundwork-1.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+kant-groundwork-1.md:1: argue/assumed: C1 (S2): follows only by A1, which the text never states: state it, or argue for it
+kant-groundwork-1.md:1: argue/own-sentence: C1 (S2): needs P2, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+kant-groundwork-1.md:1: argue/assumed: C2 (S4): follows only by A2, which the text never states: state it, or argue for it
+kant-groundwork-1.md:1: argue/own-sentence: C2 (S4): needs P3, read from the conclusion's own sentence: check that S4 gives it as its reason and does not conclude it
+kant-groundwork-1.md:1: argue/assumed: C (S6): follows only by A3, which the text never states: state it, or argue for it
+kant-groundwork-1.md:1: argue/unused-step: C1 (S2): nothing rests on C1, and it is not the conclusion: a step that leads nowhere
+kant-groundwork-1.md:1: argue/unused-step: C2 (S4): nothing rests on C2, and it is not the conclusion: a step that leads nowhere
+kant-groundwork-1.logic.r2: argue/valid 1

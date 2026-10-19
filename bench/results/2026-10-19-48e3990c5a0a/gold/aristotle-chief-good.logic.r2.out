@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+aristotle-chief-good.md:1: argue/readings: the conclusion is read 2 ways: aristotle-chief-good.logic.r2 and aristotle-chief-good.logic.r2.2 have "∃y (chief(y) ∧ ∀x (pursuit(x) → aims(x, y)))"; aristotle-chief-good.logic.r2.3 has "∃y (chief(y) ∧ good(y) ∧ ∀x (pursuit(x) → aims(x, y)))"; they differ when nothing is true, which the first allows
+aristotle-chief-good.md:1: argue/answered: the conclusion: answered no, which keeps aristotle-chief-good.logic.r2.3, to: Suppose nothing is true. Is the conclusion, "Every art, and every science reduced to a teachable form, and in like manner every action and moral choice, aims, it is thought, at some good: for which reason a common and by no means a bad description of the Chief Good is, “that which all things aim at.", true then?
+aristotle-chief-good.logic.r2: argue/readings-agree 1
+aristotle-chief-good.logic.r2: argue/readings-differ 1
+aristotle-chief-good.logic.r2: argue/verdicts-agree 1
+aristotle-chief-good.logic.r2: argue/mismatches 0
+aristotle-chief-good.logic.r2.2: argue/mismatches 0
+aristotle-chief-good.logic.r2.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: aristotle-chief-good.logic.r2.3
+# argument written to aristotle-chief-good.logic.r2 by claude-opus-5-5 (a language model, not a rule)
+aristotle-chief-good.md:1: argue/unlinked: C (S1): the conclusion speaks of "y is the Chief Good", which no premise mentions: nothing links it to them
+aristotle-chief-good.md:1: argue/invalid: C (S1): does not follow: when nothing is true, every premise holds and the conclusion fails
+aristotle-chief-good.md:1: argue/countermodel: C (S1): D = {another}; aims = ∅, chief = ∅, good = ∅, pursuit = ∅
+aristotle-chief-good.logic.r2: argue/valid 0

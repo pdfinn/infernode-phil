@@ -1,0 +1,15 @@
+# 3 readings by claude-opus-5-5, compared
+circle.md:2: argue/readings: S2 is read 2 ways: circle.logic.r1 and circle.logic.r1.3 have "scriptures_say_so" and "scriptures_say_so → word_of_god"; circle.logic.r1.2 has "scriptures_say_so"; they differ when only "the scriptures say that they are the word of God" is true, which the second allows
+circle.md:2: argue/answered: S2: answered no, which keeps circle.logic.r1 and circle.logic.r1.3, to: Suppose "the scriptures say that they are the word of God" is true and "the scriptures are the word of God" is false. Is S2, "We know they are the word of God because the scriptures say so.", true then?
+circle.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: circle.logic.r1 and circle.logic.r1.3 have nothing from it; circle.logic.r1.2 has "scriptures_true ∧ scriptures_say_so → word_of_god"; they differ when only "the scriptures are true" and "the scriptures say that they are the word of God" are true, which the first allows
+circle.logic.r1: argue/verdicts: valid as circle.logic.r1, circle.logic.r1.3 read it, not as the others do: which reading is right decides the verdict
+circle.logic.r1: argue/readings-agree 2
+circle.logic.r1: argue/readings-differ 2
+circle.logic.r1: argue/verdicts-agree 0
+circle.logic.r1: argue/mismatches 0
+circle.logic.r1.2: argue/mismatches 0
+circle.logic.r1.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: circle.logic.r1
+# argument written to circle.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+circle.md:2: argue/own-sentence: C1 (S2): follows from P2 and P3 alone, read from the conclusion's own sentence: unless S2 gives them as its reason, the reading has it assert what it concludes
+circle.logic.r1: argue/valid 1

@@ -1,0 +1,36 @@
+# the argument of aquinas-third-way.md as claude-opus-5-5 read it: check that it says what the text says
+# Aquinas, Third Way. Read propositionally; quantifiers over beings are folded into atoms.
+# Note: S3 says each possible thing at some time is not; S4 infers that at one time nothing was.
+# This step (each at some time -> all at one time) is written as an unstated assumption A1.
+# The word "possible" in S4 ("could have been nothing") is not given a separate atom; it is read as "at one time nothing existed".
+atom	generated	things in nature are found to be generated and to corrupt
+atom	contingent_exist	there are things in nature possible to be and not to be
+atom	contingent_sometime_not	that which is possible not to be at some time is not
+atom	all_contingent	everything is possible not to be
+atom	once_nothing	at one time there was nothing in existence
+atom	begin_needs_existing	that which does not exist only begins to exist by something already existing
+atom	nothing_now	even now nothing would be in existence
+atom	necessary_exists	there exists something the existence of which is necessary
+atom	all_necessity_caused	every necessary thing has its necessity caused by another
+atom	regress	there is an infinite series of necessary things having their necessity caused by another
+atom	self_necessary	there exists some being having of itself its own necessity, not receiving it from another
+atom	god	God exists (the being all men speak of as God)
+P1	S2	generated	kind empirical
+P2	S2	generated → contingent_exist
+P3	S3	contingent_sometime_not
+A1	-	contingent_sometime_not → (all_contingent → once_nothing)
+C1	S4	all_contingent → once_nothing	from P3 A1
+P4	S5	begin_needs_existing
+P5	S5	begin_needs_existing → (once_nothing → nothing_now)
+P6	S6	¬nothing_now	kind empirical
+C2	S7	¬all_contingent	from C1 P4 P5 P6
+# "not all beings are merely possible" is taken to mean that something is necessary
+A2	-	¬all_contingent → necessary_exists
+C3	S7	necessary_exists	from C2 A2
+P7	S8	necessary_exists → all_necessity_caused ∨ self_necessary
+P8	S9	¬regress
+A3	-	all_necessity_caused → regress
+C4	S10	self_necessary	from C3 P7 P8 A3
+P9	S11	self_necessary → god	kind conceptual
+C	S11	god	from C4 P9
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

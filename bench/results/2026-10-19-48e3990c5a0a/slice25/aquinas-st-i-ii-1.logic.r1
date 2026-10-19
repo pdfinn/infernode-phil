@@ -1,0 +1,17 @@
+# the argument of aquinas-st-i-ii-1.md as claude-opus-5-5 read it: check that it says what the text says
+logic	s5
+# Reply to Objection 2 (Aquinas). "Nothing hinders" is read as "it is possible" (<>).
+# S3 (the blind man who walks but stumbles) only illustrates S2, so it is left out.
+# S1 is only a heading.
+atom	in_act	a thing is in act in a certain respect
+atom	can_act	the thing can act
+atom	deficient	the thing is in a certain respect deficient in act
+atom	causes_deficient_act	the thing causes a deficient act
+P1	S2	◇(in_act ∧ deficient)
+# "so that it can act": being in act is taken to suffice for being able to act, as a necessary link.
+P2	S2	□(in_act → can_act)
+# "so as to cause a deficient act": deficiency in act is taken to suffice for causing a deficient act, as a necessary link.
+P3	S2	□(deficient → causes_deficient_act)
+# The conclusion: one and the same thing may both act and cause a deficient act. That is the reply to the objection.
+C	S2	◇(can_act ∧ causes_deficient_act)	from P1 P2 P3
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

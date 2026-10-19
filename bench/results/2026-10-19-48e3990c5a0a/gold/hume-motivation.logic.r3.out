@@ -1,0 +1,16 @@
+# 3 readings by claude-opus-5-5, compared
+hume-motivation.md:1: argue/readings: S1 is read 2 ways: hume-motivation.logic.r3 and hume-motivation.logic.r3.2 have nothing from it; hume-motivation.logic.r3.3 has "morals_from_reason ∧ morals_influence → reason_influences"; they differ when only "morals have an influence on the actions and affections (they excite passions, and produce or prevent actions)" and "morals are derived from reason (the rules of morality are conclusions of our reason)" are true, which the first allows
+hume-motivation.md:1: argue/answered: S1: answered no, which keeps hume-motivation.logic.r3.3, to: Suppose "morals have an influence on the actions and affections (they excite passions, and produce or prevent actions)" and "morals are derived from reason (the rules of morality are conclusions of our reason)" are true and "reason alone has an influence on the actions and affections" is false. Is S1, "Since morals, therefore, have an influence on the actions and affections, it follows, that they cannot be derived from reason; and that because reason alone, as we have already proved, can never have any such influence.", true then?
+hume-motivation.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: hume-motivation.logic.r3 and hume-motivation.logic.r3.2 have "morals_from_reason ∧ morals_influence → reason_influences"; hume-motivation.logic.r3.3 has nothing from it; they differ when only "morals have an influence on the actions and affections (they excite passions, and produce or prevent actions)" and "morals are derived from reason (the rules of morality are conclusions of our reason)" are true, which the second allows
+hume-motivation.md:1: argue/negation: hume-motivation.logic.r3.3 P3 (S1): the sentence says "not", but P3 denies nothing it speaks of: it reads "if (morals are derived from reason (the rules of morality are conclusions of our reason) and morals have an influence on the actions and affections (they excite passions, and produce or prevent actions)), then reason alone has an influence on the actions and affections"
+hume-motivation.logic.r3: argue/readings-agree 3
+hume-motivation.logic.r3: argue/readings-differ 2
+hume-motivation.logic.r3: argue/verdicts-agree 1
+hume-motivation.logic.r3: argue/mismatches 0
+hume-motivation.logic.r3.2: argue/mismatches 0
+hume-motivation.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: hume-motivation.logic.r3.3
+# argument written to hume-motivation.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+hume-motivation.md:1: argue/negation: P3 (S1): the sentence says "not", but P3 denies nothing it speaks of: it reads "if (morals are derived from reason (the rules of morality are conclusions of our reason) and morals have an influence on the actions and affections (they excite passions, and produce or prevent actions)), then reason alone has an influence on the actions and affections"
+hume-motivation.md:1: argue/own-sentence: C1 (S1): needs P3, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+hume-motivation.logic.r3: argue/valid 1

@@ -1,0 +1,8 @@
+# the argument of agents.md as claude-opus-5-5 read it: check that it says what the text says
+atom	moral_agent(x)	x is a moral agent
+atom	rational(x)	x is a rational being
+atom	dolphin(x)	x is a dolphin
+P1	S1	∀x (moral_agent(x) → rational(x))	kind conceptual
+P2	S2	∀x (dolphin(x) → ¬rational(x))	kind empirical
+C	S3	∀x (dolphin(x) → ¬moral_agent(x))	from P1 P2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

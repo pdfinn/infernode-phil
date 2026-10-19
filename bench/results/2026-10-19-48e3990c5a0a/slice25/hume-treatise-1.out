@@ -1,0 +1,12 @@
+# run 1 of 2
+# run 2 of 2
+# 3 readings by claude-opus-5-5, compared
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1 P1 (S2): the sentence says "without", but P1 denies nothing it speaks of: it reads "necessarily, (if we reason justly concerning causation, then we understand perfectly the idea of causation)"
+hume-treatise-1.md:1: argue/negation: hume-treatise-1.logic.r1 P2 (S2): the sentence says "without", but P2 denies nothing it speaks of: it reads "necessarily, (if we understand perfectly the idea of causation, then we trace the idea of causation up to its origin and examine the primary impression from which it arises)"
+# kept the reading that best fits the words and the other readings: hume-treatise-1.logic.r1
+# argument written to hume-treatise-1.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-treatise-1.md:1: argue/negation: P1 (S2): the sentence says "without", but P1 denies nothing it speaks of: it reads "necessarily, (if we reason justly concerning causation, then we understand perfectly the idea of causation)"
+hume-treatise-1.md:1: argue/negation: P2 (S2): the sentence says "without", but P2 denies nothing it speaks of: it reads "necessarily, (if we understand perfectly the idea of causation, then we trace the idea of causation up to its origin and examine the primary impression from which it arises)"
+hume-treatise-1.md:1: argue/assumed: C (S1): follows only by A1, which the text never states: state it, or argue for it [in 1 of 2 runs]
+hume-treatise-1.logic.r1: argue/valid 1
+hume-treatise-1.logic: argue/runs-agree 1

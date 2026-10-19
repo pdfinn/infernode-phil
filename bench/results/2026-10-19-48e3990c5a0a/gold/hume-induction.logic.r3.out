@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+hume-induction.md:3: argue/readings: S6 is read 2 ways: hume-induction.logic.r3 has nothing from it; hume-induction.logic.r3.2 and hume-induction.logic.r3.3 have "arg_exists → moral_arg"; they differ when only "there is an argument engaging us to trust past experience and make it the standard of our future judgement" is true, which the first allows
+hume-induction.md:3: argue/answered: S6: answered no, which keeps hume-induction.logic.r3.2 and hume-induction.logic.r3.3, to: Suppose "there is an argument engaging us to trust past experience and make it the standard of our future judgement" is true and "there is a probable or moral argument (concerning matter of fact and existence) that the future will be conformable to the past" is false. Is S6, "If we be, therefore, engaged by arguments to put trust in past experience, and make it the standard of our future judgement, these arguments must be probable only, or such as regard matter of fact and real existence, according to the division above mentioned.", true then?
+hume-induction.md:3: argue/readings: S8 is read 2 ways: hume-induction.logic.r3 has "moral_arg → presupposes_uniformity"; hume-induction.logic.r3.2 and hume-induction.logic.r3.3 have "presupposes_uniformity"; they differ when nothing is true, which the first allows
+hume-induction.md:3: argue/answered: S8: answered no, which keeps hume-induction.logic.r3.2 and hume-induction.logic.r3.3, to: Suppose "there is a probable or moral argument (concerning matter of fact and existence) that the future will be conformable to the past" and "arguments concerning existence proceed upon the supposition that the future will be conformable to the past" are false. Is S8, "We have said that all arguments concerning existence are founded on the relation of cause and effect; that our knowledge of that relation is derived entirely from experience; and that all our experimental conclusions proceed upon the supposition that the future will be conformable to the past.", true then?
+hume-induction.md:1: argue/unfaithful: hume-induction.logic.r3 P1 (S1): the sentence has no word of "there is an argument engaging us to trust past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.md:1: argue/unfaithful: hume-induction.logic.r3.2 P1 (S1): the sentence has no word of "there is an argument engaging us to trust past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.md:1: argue/unfaithful: hume-induction.logic.r3.3 P1 (S1): the sentence has no word of "there is an argument engaging us to trust past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.logic.r3: argue/readings-agree 6
+hume-induction.logic.r3: argue/readings-differ 2
+hume-induction.logic.r3: argue/verdicts-agree 1
+hume-induction.logic.r3: argue/mismatches 1
+hume-induction.logic.r3.2: argue/mismatches 1
+hume-induction.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: hume-induction.logic.r3.2
+# argument written to hume-induction.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+hume-induction.md:1: argue/unfaithful: P1 (S1): the sentence has no word of "there is an argument engaging us to trust past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.md:1: argue/own-sentence: C1 (S2): needs P2, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+hume-induction.md:3: argue/own-sentence: C2 (S9): needs P6, read from the conclusion's own sentence: check that S9 gives it as its reason and does not conclude it
+hume-induction.md:3: argue/assumed: C3 (S7): follows only by A1, which the text never states: state it, or argue for it
+hume-induction.logic.r3: argue/valid 1

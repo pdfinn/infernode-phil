@@ -1,0 +1,21 @@
+# 3 readings by claude-opus-5-5, compared
+hume-miracles.md:1: argue/readings: S1 is read 2 ways: hume-miracles.logic.r3 and hume-miracles.logic.r3.3 have "∀x (miracle(x) → violation(x))"; hume-miracles.logic.r3.2 has "∀x (miracle(x) → violation(x))" and "∀x (violation(x) → uniform_against(x))"; they differ when nothing is true, which the first allows
+hume-miracles.md:1: argue/answered: S1: answered no, which keeps hume-miracles.logic.r3.2, to: Suppose nothing is true. Is S1, "A miracle is a violation of the laws of nature; and as a firm and unalterable experience has established these laws, the proof against a miracle, from the very nature of the fact, is as entire as any argument from experience can possibly be imagined.", true then?
+hume-miracles.md:1: argue/readings: S7 is read 2 ways: hume-miracles.logic.r3 and hume-miracles.logic.r3.3 have "∀x (uniform_against(x) → proof_against(x))" and "∀x (proof_against(x) ∧ ¬superior_opposite(x) → ¬credible(x))"; hume-miracles.logic.r3.2 has "∀x (uniform_against(x) → proof_against(x))" and "∀x (miracle(x) ∧ credible(x) → superior_opposite(x))"; they differ when nothing is true, which the first allows
+hume-miracles.md:1: argue/answered: S7: answered no, which keeps hume-miracles.logic.r3.2, to: Suppose nothing is true. Is S7, "And as a uniform experience amounts to a proof, there is here a direct and full proof, from the nature of the fact, against the existence of any miracle; nor can such a proof be destroyed, or the miracle rendered credible, but by an opposite proof, which is superior.", true then?
+hume-miracles.md:1: argue/readings: the conclusion is read 3 ways: hume-miracles.logic.r3 has "∀x (miracle(x) → proof_against(x) ∧ (¬superior_opposite(x) → ¬credible(x)))"; hume-miracles.logic.r3.2 has "∀x (miracle(x) → proof_against(x))"; they differ when nothing is true, which the second allows; hume-miracles.logic.r3.3 has "∀x (miracle(x) → (credible(x) → superior_opposite(x)))"
+hume-miracles.md:1: argue/answered: the conclusion: answered no, which keeps hume-miracles.logic.r3 and hume-miracles.logic.r3.3, to: Suppose nothing is true. Is the conclusion, "And as a uniform experience amounts to a proof, there is here a direct and full proof, from the nature of the fact, against the existence of any miracle; nor can such a proof be destroyed, or the miracle rendered credible, but by an opposite proof, which is superior.", true then?
+hume-miracles.md:1: argue/converse: hume-miracles.logic.r3 P2 (S3): the sentence makes the words after "if" the condition, but P2 has them follow from it: it reads "for every x, if x is a miracle, then it is not so that x ever happens in the common course of nature (has been observed in some age or country)"
+hume-miracles.logic.r3: argue/readings-agree 2
+hume-miracles.logic.r3: argue/readings-differ 3
+hume-miracles.logic.r3: argue/verdicts-agree 1
+hume-miracles.logic.r3: argue/answers-split: no reading agrees with all 3 answers (hume-miracles.logic.r3 1, hume-miracles.logic.r3.2 2, hume-miracles.logic.r3.3 1 of them): each is right somewhere, and the reading the answers want takes statements from more than one
+hume-miracles.logic.r3: argue/mismatches 1
+hume-miracles.logic.r3.2: argue/mismatches 0
+hume-miracles.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: hume-miracles.logic.r3.2
+# argument written to hume-miracles.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+hume-miracles.md:1: argue/unfaithful: C1 (S6): the sentence has no word of "x is a miracle": is it the sentence C1 came from?
+hume-miracles.md:1: argue/assumed: C1 (S6): follows only by A1, which the text never states: state it, or argue for it
+hume-miracles.md:1: argue/own-sentence: C (S7): needs P4, read from the conclusion's own sentence: check that S7 gives it as its reason and does not conclude it
+hume-miracles.logic.r3: argue/valid 1

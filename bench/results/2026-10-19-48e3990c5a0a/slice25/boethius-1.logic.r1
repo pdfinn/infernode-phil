@@ -1,0 +1,30 @@
+# the argument of boethius-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Boethius: servants and possessions are not really thine, so neither losing nor keeping them warrants grief or joy.
+# The main conclusion is read from the rhetorical questions of S4-S5. S3 is a step on the way.
+atom	vicious	the servants behave viciously
+atom	honest	the servants are honest
+atom	burden	the servants are a ruinous burden to thy house and dangerous to their master
+atom	servants_thine	the servants (their virtue) can be counted in the sum of thy possessions as really thine
+atom	things_thine	the things thou reckonest in the number of thy possessions are really thine
+atom	beautiful	these things are beautiful in their own nature
+atom	reason_grieve_joy	thou hast reason to grieve for their loss or find joy in their continued possession
+atom	nothing_to_thee	their beauty is nothing to thee
+atom	pleasing_without	they would have been not less pleasing in themselves though never included among thy possessions
+atom	precious_from_counting	they derive their preciousness from being counted in thy riches
+A1	-	vicious ∨ honest
+P1	S2	vicious → burden
+P2	S2	honest → ¬servants_thine
+# The text treats a ruinous burden as no possession of thine.
+A2	-	burden → ¬servants_thine
+C1	S2	¬servants_thine	from P1 P2 A1 A2
+# "From all which" generalises from the servants (and the goods discussed before) to all possessions.
+A3	-	¬servants_thine → ¬things_thine
+C2	S3	¬things_thine	from C1 A3
+P3	S4	¬beautiful → ¬reason_grieve_joy
+P4	S6	pleasing_without	kind conceptual
+P5	S7	¬precious_from_counting
+A4	-	pleasing_without ∧ ¬precious_from_counting ∧ ¬things_thine → (beautiful → nothing_to_thee)
+C3	S5	beautiful → nothing_to_thee	from P4 P5 C2 A4
+A5	-	nothing_to_thee → ¬reason_grieve_joy
+C	S4	¬reason_grieve_joy	from P3 C3 A5
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

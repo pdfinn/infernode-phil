@@ -1,0 +1,12 @@
+# the argument of aristotle-function.md as claude-opus-5-5 read it: check that it says what the text says
+# Aristotle's function argument: two rhetorical questions, both arguing by analogy that Man has a work of his own.
+# The analogical steps (from craftsmen, and from bodily members, to Man) are never stated as conditionals; I add them as assumptions.
+atom	crafts_have_work	carpenter and cobbler have certain works and courses of action
+atom	members_have_work	eye, hand, and foot, and generally each of his members, has manifestly some special work
+atom	man_has_work	the whole Man, as Man, has some work of his own (is not left by Nature without a work)
+P1	S1	crafts_have_work	kind empirical
+P2	S1	members_have_work	kind empirical
+A1	-	crafts_have_work → man_has_work
+A2	-	members_have_work → man_has_work
+C	S1	man_has_work	from P1 P2 A1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

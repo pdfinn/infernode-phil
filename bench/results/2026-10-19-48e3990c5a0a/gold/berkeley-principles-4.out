@@ -1,0 +1,16 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r1 P2 (S3): the sentence says "unperceived", but P2 denies nothing it speaks of: it reads "for every x, if x is a sensible object (house, mountain, river, etc.), then x is a thing we perceive by sense"
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r1 P3 (S3): the sentence says "unperceived", but P3 denies nothing it speaks of: it reads "for every x, if x is a thing we perceive by sense, then x is one of our own ideas or sensations, or a combination of them"
+berkeley-principles-4.md:1: argue/negation: berkeley-principles-4.logic.r1 C (S2): the sentence says "not", but C denies nothing it speaks of: it reads "the opinion that sensible objects exist distinct from their being perceived involves a manifest contradiction" [in 1 of 3 runs]
+# kept the reading that best fits the words and the other readings: berkeley-principles-4.logic.r1
+# argument written to berkeley-principles-4.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+berkeley-principles-4.md:1: argue/negation: P2 (S3): the sentence says "unperceived", but P2 denies nothing it speaks of: it reads "for every x, if x is a sensible object (house, mountain, river, etc.), then x is a thing we perceive by sense"
+berkeley-principles-4.md:1: argue/negation: P3 (S3): the sentence says "unperceived", but P3 denies nothing it speaks of: it reads "for every x, if x is a thing we perceive by sense, then x is one of our own ideas or sensations, or a combination of them"
+berkeley-principles-4.md:1: argue/negation: C (S2): the sentence says "not", but C denies nothing it speaks of: it reads "the opinion that sensible objects exist distinct from their being perceived involves a manifest contradiction" [in 1 of 3 runs]
+berkeley-principles-4.md:1: argue/own-sentence: C1 (S3): follows from P2, P3 and P4 alone, read from the conclusion's own sentence: unless S3 gives them as its reason, the reading has it assert what it concludes [in 1 of 3 runs]
+berkeley-principles-4.md:1: argue/assumed: C (S2): follows only by A1, which the text never states: state it, or argue for it [in 2 of 3 runs]
+berkeley-principles-4.logic.r1: argue/valid 1
+berkeley-principles-4.logic: argue/runs-agree 1

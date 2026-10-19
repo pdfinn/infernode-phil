@@ -1,0 +1,29 @@
+# 3 readings by claude-opus-5-5, compared
+hume-induction.md:1: argue/unfaithful: hume-induction.logic.r1 P1 (S1): the sentence has no word of "we are engaged by arguments to put trust in past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.md:1: argue/negation: hume-induction.logic.r1 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "that the course of nature may change can be clearly and distinctly conceived"
+hume-induction.md:1: argue/converse: hume-induction.logic.r1 P4 (S2): the sentence makes the words after "no" the condition, but P4 has them follow from it: it reads "if it is not so that that the course of nature may change implies a contradiction, then it is not so that there is a demonstrative argument (concerning relations of ideas) for uniformity"
+hume-induction.md:3: argue/unfaithful: hume-induction.logic.r1 P6 (S9): the sentence has no word of "our knowledge of the relation of cause and effect is derived entirely from experience": is it the sentence P6 came from?
+hume-induction.md:1: argue/unfaithful: hume-induction.logic.r1.2 P1 (S1): the sentence has no word of "we are engaged by arguments to put trust in past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.md:1: argue/negation: hume-induction.logic.r1.2 P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "that the course of nature may change can be clearly and distinctly conceived"
+hume-induction.md:1: argue/negation: hume-induction.logic.r1.2 P4 (S2): the sentence says "no", but P4 denies nothing it speaks of: it reads "if there is a demonstrative argument (concerning relations of ideas) for uniformity, then that the course of nature may change implies a contradiction"
+hume-induction.md:3: argue/unfaithful: hume-induction.logic.r1.2 P6 (S9): the sentence has no word of "our knowledge of the relation of cause and effect is derived entirely from experience": is it the sentence P6 came from?
+hume-induction.md:1: argue/unfaithful: hume-induction.logic.r1.3 P1 (S1): the sentence has no word of "we are engaged by arguments to put trust in past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.md:1: argue/negation: hume-induction.logic.r1.3 P2 (S2): the sentence says "no", but P2 denies nothing it speaks of: it reads "if there is a demonstrative argument (concerning relations of ideas) for uniformity, then that the course of nature may change implies a contradiction"
+hume-induction.md:1: argue/negation: hume-induction.logic.r1.3 P3 (S3): the sentence says "not", but P3 denies nothing it speaks of: it reads "that the course of nature may change can be clearly and distinctly conceived"
+hume-induction.md:3: argue/unfaithful: hume-induction.logic.r1.3 P6 (S9): the sentence has no word of "our knowledge of the relation of cause and effect is derived entirely from experience": is it the sentence P6 came from?
+hume-induction.logic.r1: argue/readings-agree 8
+hume-induction.logic.r1: argue/readings-differ 0
+hume-induction.logic.r1: argue/verdicts-agree 1
+hume-induction.logic.r1: argue/mismatches 4
+hume-induction.logic.r1.2: argue/mismatches 4
+hume-induction.logic.r1.3: argue/mismatches 4
+# kept the reading that best fits the words and the other readings: hume-induction.logic.r1
+# argument written to hume-induction.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-induction.md:1: argue/unfaithful: P1 (S1): the sentence has no word of "we are engaged by arguments to put trust in past experience and make it the standard of our future judgement": is it the sentence P1 came from?
+hume-induction.md:1: argue/negation: P2 (S3): the sentence says "not", but P2 denies nothing it speaks of: it reads "that the course of nature may change can be clearly and distinctly conceived"
+hume-induction.md:1: argue/converse: P4 (S2): the sentence makes the words after "no" the condition, but P4 has them follow from it: it reads "if it is not so that that the course of nature may change implies a contradiction, then it is not so that there is a demonstrative argument (concerning relations of ideas) for uniformity"
+hume-induction.md:3: argue/unfaithful: P6 (S9): the sentence has no word of "our knowledge of the relation of cause and effect is derived entirely from experience": is it the sentence P6 came from?
+hume-induction.md:1: argue/own-sentence: C1 (S2): needs P4, read from the conclusion's own sentence: check that S2 gives it as its reason and does not conclude it
+hume-induction.md:3: argue/assumed: C2 (S9): follows only by A1, which the text never states: state it, or argue for it
+hume-induction.md:3: argue/own-sentence: C2 (S9): needs P6, read from the conclusion's own sentence: check that S9 gives it as its reason and does not conclude it
+hume-induction.logic.r1: argue/valid 1

@@ -1,0 +1,28 @@
+# the argument of hobbes-leviathan-1.md as claude-opus-5-5 read it: check that it says what the text says
+logic	kd
+atom	def_evident	in the definition of civil law there is nothing that is not at first sight evident
+atom	laws_to_addressed	laws are laws to every one of those to whom the command is directed, and to none else
+atom	rules_just	laws are the rules of just and unjust
+atom	unjust_contrary_law	nothing is reputed unjust that is not contrary to some law
+atom	only_cw_makes	none can make laws but the commonwealth
+atom	subjection_cw	our subjection is to the commonwealth only
+atom	signs_required	commands are to be signified by sufficient signs
+atom	no_other_way_obey	a man knows not otherwise how to obey commands than by sufficient signs
+atom	ack_deduced	whatsoever can by necessary consequence be deduced from the definition is acknowledged for truth
+# "can make" in S4 is read as an atom (no one has the authority to make laws), not as a modal possibility
+# "are to be signified" in S4 is kept inside the atom signs_required rather than written with ought
+P1	S2	laws_to_addressed	kind conceptual
+P2	S3	unjust_contrary_law	kind conceptual
+P3	S3	unjust_contrary_law → rules_just
+P4	S4	subjection_cw
+P5	S4	subjection_cw → only_cw_makes
+P6	S4	no_other_way_obey
+P7	S4	no_other_way_obey → signs_required
+C2	S3	rules_just	from P2 P3
+C3	S4	only_cw_makes	from P4 P5
+C4	S4	signs_required	from P6 P7
+A1	-	laws_to_addressed ∧ rules_just ∧ only_cw_makes ∧ signs_required → def_evident
+C1	S1	def_evident	from P1 C2 C3 C4 A1
+A2	-	def_evident → O ack_deduced
+C	S5	O ack_deduced	from C1 A2
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

@@ -1,0 +1,12 @@
+# 3 readings by claude-opus-5-5, compared
+firstway.logic.r3: argue/readings-agree 3
+firstway.logic.r3: argue/readings-differ 0
+firstway.logic.r3: argue/verdicts-agree 1
+firstway.logic.r3: argue/mismatches 0
+firstway.logic.r3.2: argue/mismatches 0
+firstway.logic.r3.3: argue/mismatches 0
+# kept the reading that best fits the words and the other readings: firstway.logic.r3
+# argument written to firstway.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+firstway.md:3: argue/invalid: C (S3): does not follow: when "another2 is in motion", "another2 moves another" and "another moves another2" are true, "another moves another" and "another2 moves another2" are false, every premise holds and the conclusion fails
+firstway.md:3: argue/countermodel: C (S3): D = {another, another2}; motion = {another}, moves = {(another, another2), (another2, another)}
+firstway.logic.r3: argue/valid 0

@@ -1,0 +1,21 @@
+# the argument of meno-paradox.md as claude-opus-5-5 read it: check that it says what the text says
+# S2 reports Meno's argument ("You argue"), and Socrates calls it a tiresome dispute without endorsing it.
+# The prover needs one conclusion, and the text has no argument other than Meno's.
+# So the premises are given twice: once as Meno's (says meno), and once as plain lines that C is drawn from.
+# S1 only frames the dispute and is left out.
+atom	enq_known	a man can enquire about that which he knows
+atom	enq_unknown	a man can enquire about that which he does not know
+atom	need_known	he has need to enquire about that which he knows
+atom	knows_subject	he knows the very subject about which he is to enquire, in the unknown case
+P1	S2	¬enq_known ∧ ¬enq_unknown	says meno
+P2	S2	¬need_known	says meno
+P3	S2	¬knows_subject	says meno
+P4	S2	¬knows_subject → ¬enq_unknown	says meno
+P5	S2	¬need_known	kind conceptual
+P6	S2	¬knows_subject	kind conceptual
+P7	S2	¬knows_subject → ¬enq_unknown	kind conceptual
+# The text says he has "no need" to enquire into what he knows, but concludes that he "cannot".
+# The argument plainly relies on treating having no need as being unable.
+A1	-	¬need_known → ¬enq_known
+C	S2	¬enq_known ∧ ¬enq_unknown	from P5 P6 P7 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

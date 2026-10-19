@@ -1,0 +1,43 @@
+# reading 2 of aquinas-first-way.md by claude-opus-5-5
+logic	s5
+atom	some_motion	in the world some things are in motion
+atom	in_potency	whatever is in motion is in potentiality to that towards which it is in motion
+atom	mover_in_act	a thing moves inasmuch as it is in act
+atom	motion_is_reduction	motion is nothing else than the reduction of something from potentiality to actuality
+atom	reduction_needs_actual	nothing can be reduced from potentiality to actuality except by something in a state of actuality
+atom	act_pot_same	the same thing is at once in actuality and potentiality in the same respect
+atom	self_mover	a thing is both mover and moved in the same respect and way, i.e. moves itself
+atom	moved_by_another	whatever is in motion is put in motion by another
+atom	mover_moved	that by which a thing is put in motion is itself put in motion
+atom	series_continues	the mover is in turn put in motion by another, and that by another again
+atom	infinite_regress	the series of movers goes on to infinity
+atom	first_mover	there is a first mover
+atom	subsequent_depend	subsequent movers move only inasmuch as they are put in motion by the first mover
+atom	other_movers	there is any other mover
+atom	first_unmoved	we arrive at a first mover, put in motion by no other
+atom	god	this first mover is God
+P1	S2	some_motion	kind empirical
+P2	S3	in_potency
+P3	S3	mover_in_act
+P4	S4	motion_is_reduction	kind conceptual
+P5	S5	reduction_needs_actual
+P6	S7	¬◇act_pot_same
+# Unstated link: given that the moved is in potency and the mover is in act, self-motion would require being in act and in potency in the same respect.
+A1	-	in_potency ∧ mover_in_act → □(self_mover → act_pot_same)
+C1	S9	¬◇self_mover	from P2 P3 P6 A1
+A2	-	some_motion ∧ ¬self_mover → moved_by_another
+# "must be put in motion by another" is read as a plain conclusion of the step, not as a separate modal claim.
+C2	S10	moved_by_another	from C1 A2 P1
+P7	S11	moved_by_another ∧ mover_moved → series_continues
+P8	S12	infinite_regress → ¬first_mover
+P9	S12	subsequent_depend
+P10	S12	subsequent_depend → (¬first_mover → ¬other_movers)
+# Unstated: since things are in motion by another, there are movers.
+A3	-	some_motion ∧ moved_by_another → other_movers
+C3	S12	¬infinite_regress	from P8 P9 P10 A3 P1 C2
+# Unstated: if the series does not go to infinity, it ends in a first unmoved mover.
+A4	-	¬infinite_regress → first_unmoved
+P11	S13	first_unmoved → god
+# "it is necessary to arrive at" is read as the plain conclusion of the step; it could be read as []first_unmoved.
+C	S13	first_unmoved ∧ god	from C3 A4 P11
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

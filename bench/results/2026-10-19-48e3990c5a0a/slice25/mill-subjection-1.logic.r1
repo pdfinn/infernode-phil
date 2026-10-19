@@ -1,0 +1,15 @@
+# the argument of mill-subjection-1.md as claude-opus-5-5 read it: check that it says what the text says
+atom	isolated	the social subordination of women stands out an isolated fact in modern social institutions, a solitary breach of their fundamental law, a relic of an old world exploded in everything else
+atom	opposed_progress	the nature of this social fact is radically opposed to the progressive movement of the modern world, which has swept away everything else of an analogous character
+atom	serious_matter	the discrepancy affords a conscientious observer serious matter for reflection
+atom	presumption_unfavourable	the discrepancy raises a prima facie presumption on the unfavourable side, outweighing any favourable presumption that custom and usage could create
+atom	balanced_question	the subordination of women should at least be treated as a balanced question, like the choice between republicanism and royalty
+P1	S1	isolated	kind empirical
+P2	S2	opposed_progress	kind empirical
+P3	S2	isolated ∧ opposed_progress → serious_matter
+C1	S2	serious_matter	from P1 P2 P3
+P4	S3	isolated ∧ opposed_progress → presumption_unfavourable
+C2	S3	presumption_unfavourable	from P1 P2 P4
+P5	S3	presumption_unfavourable → balanced_question
+C	S3	balanced_question	from C2 P5
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

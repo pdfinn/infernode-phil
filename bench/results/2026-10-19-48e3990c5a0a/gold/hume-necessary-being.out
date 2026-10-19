@@ -1,0 +1,11 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+hume-necessary-being.md:1: argue/negation: hume-necessary-being.logic.r1 P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of x is demonstrable, then the non-existence of x (the contrary of its existence) implies a contradiction"
+# kept the reading that best fits the words and the other readings: hume-necessary-being.logic.r1
+# argument written to hume-necessary-being.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+hume-necessary-being.md:1: argue/negation: P1 (S1): the sentence says "nothing", but P1 denies nothing it speaks of: it reads "for every x, if the existence of x is demonstrable, then the non-existence of x (the contrary of its existence) implies a contradiction"
+hume-necessary-being.md:1: argue/assumed: C1 (S4): follows only by A1, which the text never states: state it, or argue for it
+hume-necessary-being.logic.r1: argue/valid 1
+hume-necessary-being.logic: argue/runs-agree 1

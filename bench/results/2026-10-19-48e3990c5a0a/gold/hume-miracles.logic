@@ -1,0 +1,19 @@
+# the argument of hume-miracles.md as claude-opus-5-5 read it: check that it says what the text says
+# Hume's argument against miracles. Domain: events x.
+# S2 is a rhetorical question and S4-S5 are examples (sudden death vs. a dead man revived), so they are left out.
+atom	miracle(x)	x is a miracle
+atom	violates_law(x)	x is a violation of the laws of nature
+atom	common_course(x)	x ever happens in the common course of nature (has been observed)
+atom	uniform_against(x)	there is a uniform experience against x
+atom	proof_against(x)	there is a direct and full proof against x
+atom	credible(x)	x is rendered credible
+atom	superior_proof(x)	there is an opposite proof for x that is superior
+P1	S1	∀x (miracle(x) → violates_law(x))	kind conceptual
+P2	S3	∀x (common_course(x) → ¬miracle(x))	kind conceptual
+# "uniform experience against" an event is read as its never having been observed in the common course of nature; the text relies on this to get S6 from S3.
+A1	-	∀x (¬common_course(x) → uniform_against(x))
+C1	S6	∀x (miracle(x) → uniform_against(x))	from P2 A1
+P3	S7	∀x (uniform_against(x) → proof_against(x))
+P4	S7	∀x (proof_against(x) → (credible(x) → superior_proof(x)))
+C	S7	∀x (miracle(x) → proof_against(x) ∧ (credible(x) → superior_proof(x)))	from C1 P3 P4
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

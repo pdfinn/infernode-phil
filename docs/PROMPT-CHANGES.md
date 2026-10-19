@@ -6,6 +6,61 @@ with a record: the scripted tests unchanged, live runs before and
 after with the same model, and what each finding did. This is that
 record, newest first.
 
+## argue asks for senses, scope and order (October 2026)
+
+`lib/phil/argue` from `a036b21b8816` to `48e3990c5a0a`. Four
+instructions, from what the bench's gold set missed
+([bench/RESULTS.md](../bench/RESULTS.md)): a word used in two senses
+is two atoms, and the reader says which word shifts; "if p, then
+necessarily q" can be [](p -> q) or p -> []q, and a reader who takes
+one says the other was possible; the order of all and some is kept,
+with an atom of two places where the sentence relates two things; a
+step names the assumptions it needs in its `from`. The examples are
+new (a bank, free; serves(x, y)), not the bench's passages.
+
+**Scripted.** `tests/run.sh` (40 cases), `argue_test.sh`,
+`read_test.sh`, `runner_test.sh` and `format_test.sh` pass unchanged.
+
+**Live.** Claude Opus 5.5 through the Anthropic API, the prover as of
+`30ccaf7`. The eight passages of the last check, `argue -n 3 -k 3`,
+against that check's "after" runs; the gold set, `-n 3`, against the
+bench's run of the same morning; one breadth passage from each of 25
+works, `-n 2`. 711 calls, 1,439,891 tokens in and 498,471 out; none
+failed.
+
+| Passage | Verdict, three runs, before | after | `says` lines, before / after | Findings in every run, lost / gained |
+|---|---|---|---|---|
+| agents | 1 1 1 | 1 1 1 | 0 / 0 | none / none |
+| circle | 1 1 1 | 1 1 1 | 0 / 0 | none / none |
+| evil | 1 1 1 | 1 1 1 | 0 / 0 | none / none |
+| firstway | 0 0 0 | 0 0 0 | 0 / 0 | none / none |
+| kalam | 1 1 1 | 1 1 1 | 0 / 0 | none / none |
+| hobbes | 1 1 1 | 1 1 1 | 0 / 0 | none / none |
+| trust | 1 1 1 | 1 1 1 | 3 / 3 | none / none |
+| critic | 0 0 0 | 0 0 0 | 12 / 10 | none / none |
+
+- **The critic.** In two runs of three, S4 ("Locke replies that people
+  keep their promises without a sovereign") was read as an objection
+  to Hobbes's claim, `O1 ... against P1`, not as a premise `says
+  locke`. Both are true to the sentence; the objection form carries no
+  attribution, so `phil/corpus` loses the report. Not fixed: an
+  objection or reply may need a `says` field of its own.
+- **The gold set.** Judged by hand: inference faults found in 21 runs
+  of 39 (18 before), in part in 4, named only in the reader's comment
+  in 3 (Boethius's scope, in every run), missed in 11 (15); the
+  quantifier shift in `aristotle-chief-good` found in every run (none
+  before); equivocations found in part in 5 runs of 15 (2), none
+  wholly; valid passages valid in 24 of 24 (23).
+- **Breadth.** On the 25 passages, as many runs not valid (4 of 50);
+  five passages changed a verdict, both ways, within the run-to-run
+  disagreement already measured; readings agree on 63% of statements
+  (68%); 89 `kind` fields (120); three passages marked a report in
+  one run fewer.
+
+Kept: it found what it was aimed at, with no false alarm, and its
+costs elsewhere are small. The gains are measured on the set the
+change was made from; they are not yet shown on held-out passages.
+
 ## argue asks for says and kind (October 2026)
 
 `lib/phil/argue` from `deb947963d6f` to `a036b21b8816` (the first

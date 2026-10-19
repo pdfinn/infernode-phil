@@ -1,0 +1,32 @@
+# the argument of epictetus-1.md as claude-opus-5-5 read it: check that it says what the text says
+# S2 is a rhetorical question, read as asserting its answer: wishing is not enough, one must learn.
+# "must"/"necessity" in S2, S5 and S6 is read as practical obligation (ought), not metaphysical necessity.
+logic	kd
+atom	carpenter_by_learning	the carpenter becomes a carpenter when he has learned certain things
+atom	pilot_by_learning	the pilot becomes a pilot by learning certain things
+atom	wish_sufficient	in philosophy it is sufficient to wish to be wise and good
+atom	learn_things	one learns certain things in philosophy
+atom	learn_god_exists	one learns that there is a God
+atom	learn_providence	one learns that God provides for all things
+atom	learn_no_concealment	one learns that it is not possible to conceal from God our acts, intentions and thoughts
+atom	would_please_gods	one would please and obey the gods
+atom	like_gods	one tries with all his power to be like the gods
+atom	divine_faithful	the divine is faithful
+atom	man_faithful	man is faithful
+atom	divine_free	the divine is free
+atom	man_free	man is free
+atom	divine_beneficent	the divine is beneficent
+atom	man_beneficent	man is beneficent
+atom	divine_magnanimous	the divine is magnanimous
+atom	man_magnanimous	man is magnanimous
+atom	imitator_of_god	man is an imitator of God
+atom	act_consistently	man does and says everything consistently with being an imitator of God
+P1	S1	carpenter_by_learning ∧ pilot_by_learning	kind empirical
+# The analogy from the crafts to philosophy is relied on but never stated.
+A1	-	carpenter_by_learning ∧ pilot_by_learning → ¬wish_sufficient ∧ O learn_things
+C	S2	¬wish_sufficient ∧ O learn_things	from P1 A1
+P2	S4	O(learn_god_exists ∧ learn_providence ∧ learn_no_concealment)	says philosophers	kind normative
+P3	S5	would_please_gods → O like_gods	kind normative
+P4	S6	(divine_faithful → O man_faithful) ∧ (divine_free → O man_free) ∧ (divine_beneficent → O man_beneficent) ∧ (divine_magnanimous → O man_magnanimous)	kind normative
+P5	S6	imitator_of_god → O act_consistently	kind normative
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

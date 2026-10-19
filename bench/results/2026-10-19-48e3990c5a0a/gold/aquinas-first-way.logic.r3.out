@@ -1,0 +1,29 @@
+# 3 readings by claude-opus-5-5, compared
+aquinas-first-way.md:1: argue/readings: S11 is read 2 ways: aquinas-first-way.logic.r3 has "some_motion ∧ moved_by_another → infinite_regress ∨ first_mover"; aquinas-first-way.logic.r3.2 and aquinas-first-way.logic.r3.3 have nothing from it; they differ when only "in the world some things are in motion" and "whatever is in motion is put in motion by another" are true, which the second allows
+aquinas-first-way.md:1: argue/answered: S11: answered yes, which keeps aquinas-first-way.logic.r3.2 and aquinas-first-way.logic.r3.3, to: Suppose "in the world some things are in motion" and "whatever is in motion is put in motion by another" are true and "the series of movers each put in motion by another goes on to infinity" and "there is a first mover, put in motion by no other" are false. Is S11, "If that by which it is put in motion be itself put in motion, then this also must needs be put in motion by another, and that by another again.", true then?
+aquinas-first-way.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: aquinas-first-way.logic.r3 has "moved_in_potency ∧ mover_in_act ∧ not_act_pot_same → ¬◇self_motion" and "motion_is_reduction ∧ reduction_needs_actual ∧ ¬self_motion → moved_by_another" and "some_motion → other_movers"; aquinas-first-way.logic.r3.2 and aquinas-first-way.logic.r3.3 have "moved_in_potency ∧ mover_in_act ∧ motion_is_reduction ∧ reduction_needs_actual ∧ not_act_pot_same → ¬◇self_motion" and "¬◇self_motion → moved_by_another" and "some_motion ∧ moved_by_another → other_movers" and "some_motion ∧ moved_by_another → infinite_regress ∨ first_mover"; they differ when only "in the world some things are in motion", "nothing can be in motion except it is in potentiality to that towards which it is in motion", "a thing moves inasmuch as it is in act", "motion is nothing else than the reduction of something from potentiality to actuality", "nothing can be reduced from potentiality to actuality except by something in a state of actuality", "the same thing cannot be at once in actuality and potentiality in the same respect", "whatever is in motion is put in motion by another" and "there is some other (subsequent) mover" are true, which the first allows
+aquinas-first-way.md:1: argue/readings: the conclusion is read 2 ways: aquinas-first-way.logic.r3 has "god"; aquinas-first-way.logic.r3.2 and aquinas-first-way.logic.r3.3 have "first_mover ∧ god"; they differ when only "there is God" is true, which the first allows
+aquinas-first-way.md:1: argue/answered: the conclusion: answered no, which keeps aquinas-first-way.logic.r3.2 and aquinas-first-way.logic.r3.3, to: Suppose "there is God" is true and "there is a first mover, put in motion by no other" is false. Is the conclusion, "Therefore it is necessary to arrive at a first mover, put in motion by no other; and this everyone understands to be God.", true then?
+aquinas-first-way.md:1: argue/negation: aquinas-first-way.logic.r3 P3 (S3): the sentence says "nothing", but P3 denies nothing it speaks of: it reads "a thing moves inasmuch as it is in act"
+aquinas-first-way.md:1: argue/negation: aquinas-first-way.logic.r3 P9 (S12): the sentence says "no", but P9 denies nothing it speaks of: it reads "subsequent movers move only inasmuch as they are put in motion by the first mover"
+aquinas-first-way.md:1: argue/negation: aquinas-first-way.logic.r3.2 P3 (S3): the sentence says "nothing", but P3 denies nothing it speaks of: it reads "a thing moves inasmuch as it is in act"
+aquinas-first-way.md:1: argue/negation: aquinas-first-way.logic.r3.2 P8 (S12): the sentence says "no", but P8 denies nothing it speaks of: it reads "subsequent movers move only inasmuch as they are put in motion by the first mover"
+aquinas-first-way.md:1: argue/negation: aquinas-first-way.logic.r3.3 P3 (S3): the sentence says "nothing", but P3 denies nothing it speaks of: it reads "a thing moves inasmuch as it is in act"
+aquinas-first-way.md:1: argue/negation: aquinas-first-way.logic.r3.3 P9 (S12): the sentence says "no", but P9 denies nothing it speaks of: it reads "subsequent movers move only inasmuch as they are put in motion by the first mover"
+aquinas-first-way.logic.r3: argue/readings-agree 7
+aquinas-first-way.logic.r3: argue/readings-differ 3
+aquinas-first-way.logic.r3: argue/verdicts-agree 1
+aquinas-first-way.logic.r3: argue/mismatches 2
+aquinas-first-way.logic.r3.2: argue/mismatches 2
+aquinas-first-way.logic.r3.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: aquinas-first-way.logic.r3.2
+# argument written to aquinas-first-way.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+aquinas-first-way.md:1: argue/negation: P3 (S3): the sentence says "nothing", but P3 denies nothing it speaks of: it reads "a thing moves inasmuch as it is in act"
+aquinas-first-way.md:1: argue/negation: P8 (S12): the sentence says "no", but P8 denies nothing it speaks of: it reads "subsequent movers move only inasmuch as they are put in motion by the first mover"
+aquinas-first-way.md:1: argue/assumed: C1 (S9): follows only by A1, which the text never states: state it, or argue for it
+aquinas-first-way.md:1: argue/assumed: C2 (S10): follows only by A2, which the text never states: state it, or argue for it
+aquinas-first-way.md:1: argue/assumed: C3 (S12): follows only by A3, which the text never states: state it, or argue for it
+aquinas-first-way.md:1: argue/own-sentence: C3 (S12): needs P7, P8 and P9, read from the conclusion's own sentence: check that S12 gives them as its reason and does not conclude them
+aquinas-first-way.md:1: argue/assumed: C (S13): follows only by A4, which the text never states: state it, or argue for it
+aquinas-first-way.md:1: argue/own-sentence: C (S13): needs P10, read from the conclusion's own sentence: check that S13 gives it as its reason and does not conclude it
+aquinas-first-way.logic.r3: argue/valid 1

@@ -1,0 +1,18 @@
+# the argument of descartes-discourse-1.md as claude-opus-5-5 read it: check that it says what the text says
+# Descartes, Discourse on Method, opening
+atom	content	everyone thinks himself abundantly provided with good sense and desires no larger measure of it
+atom	not_all_mistaken	not all are mistaken in this conviction
+atom	reason_equal	good sense or reason, the power of judging aright and distinguishing truth from error, is by nature equal in all men (good sense is the most equally distributed thing)
+atom	diversity_from_reason	the diversity of our opinions arises from some being endowed with a larger share of reason than others
+atom	diversity_from_conduct	the diversity of our opinions arises from our conducting our thoughts along different ways and not fixing attention on the same objects
+atom	application_decisive	to possess a vigorous mind is not enough; the prime requisite is rightly to apply it
+P1	S1	content	kind empirical
+P2	S2	not_all_mistaken
+P3	S2	content ∧ not_all_mistaken → reason_equal
+C1	S2	reason_equal	from P1 P2 P3
+P4	S2	reason_equal → ¬diversity_from_reason
+P5	S3	application_decisive
+# the text assumes these are the only two candidate sources of diverse opinions
+A1	-	diversity_from_reason ∨ diversity_from_conduct
+C	S2	¬diversity_from_reason ∧ diversity_from_conduct	from C1 P4 A1
+# read by claude-opus-5-5, prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space

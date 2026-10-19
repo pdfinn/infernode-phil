@@ -1,0 +1,18 @@
+# 3 readings by claude-opus-5-5, compared
+hobbes.md:2: argue/converse: hobbes.logic.r3 P2 (S2): the sentence makes the words after "no" the condition, but P2 has them follow from it: it reads "if it is not so that people can trust one another, then it is not so that there is industry"
+hobbes.md:3: argue/converse: hobbes.logic.r3 C (S3): the sentence makes the words after "no" the condition, but C has them follow from it: it reads "if it is not so that there is a sovereign, then it is not so that there is industry"
+hobbes.md:2: argue/converse: hobbes.logic.r3.2 P2 (S2): the sentence makes the words after "no" the condition, but P2 has them follow from it: it reads "if it is not so that people can trust one another, then it is not so that there is industry"
+hobbes.md:3: argue/converse: hobbes.logic.r3.2 C (S3): the sentence makes the words after "no" the condition, but C has them follow from it: it reads "if it is not so that there is a sovereign, then it is not so that there is industry"
+hobbes.md:2: argue/converse: hobbes.logic.r3.3 P2 (S2): the sentence makes the words after "no" the condition, but P2 has them follow from it: it reads "if it is not so that people can trust one another, then it is not so that there is industry"
+hobbes.md:3: argue/converse: hobbes.logic.r3.3 C (S3): the sentence makes the words after "no" the condition, but C has them follow from it: it reads "if it is not so that there is a sovereign, then it is not so that there is industry"
+hobbes.logic.r3: argue/readings-agree 3
+hobbes.logic.r3: argue/readings-differ 0
+hobbes.logic.r3: argue/verdicts-agree 1
+hobbes.logic.r3: argue/mismatches 2
+hobbes.logic.r3.2: argue/mismatches 2
+hobbes.logic.r3.3: argue/mismatches 2
+# kept the reading that best fits the words and the other readings: hobbes.logic.r3
+# argument written to hobbes.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+hobbes.md:2: argue/converse: P2 (S2): the sentence makes the words after "no" the condition, but P2 has them follow from it: it reads "if it is not so that people can trust one another, then it is not so that there is industry"
+hobbes.md:3: argue/converse: C (S3): the sentence makes the words after "no" the condition, but C has them follow from it: it reads "if it is not so that there is a sovereign, then it is not so that there is industry"
+hobbes.logic.r3: argue/valid 1

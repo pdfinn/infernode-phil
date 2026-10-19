@@ -1,0 +1,17 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+aristotle-function.logic.r1: argue/readings: what the text leaves unstated is read 2 ways: aristotle-function.logic.r1 and aristotle-function.logic.r1.2 have "crafts_have_work → man_has_work" and "members_have_work → man_has_work"; aristotle-function.logic.r1.3 has "crafts_have_work ∧ members_have_work → man_has_work"; they differ when only "carpenter and cobbler have certain works and courses of action" is true, which the second allows [in 1 of 3 runs]
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1 P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "carpenter and cobbler have certain works and courses of action"
+aristotle-function.md:1: argue/negation: aristotle-function.logic.r1 P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, and foot, and generally each of his members, has manifestly some special work"
+# kept the reading that best fits the words and the other readings: aristotle-function.logic.r1
+# argument written to aristotle-function.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aristotle-function.md:1: argue/negation: P1 (S1): the sentence says "none", but P1 denies nothing it speaks of: it reads "carpenter and cobbler have certain works and courses of action"
+aristotle-function.md:1: argue/negation: P2 (S1): the sentence says "none", but P2 denies nothing it speaks of: it reads "eye, hand, and foot, and generally each of his members, has manifestly some special work"
+aristotle-function.md:1: argue/unused: P1 (S1): P1 is not needed: the conclusion follows from P2 and A2 without it [in 1 of 3 runs]
+aristotle-function.logic.r1:9: argue/unused: A1: A1 is not needed: the conclusion follows from P2 and A2 without it [in 1 of 3 runs]
+aristotle-function.md:1: argue/assumed: C (S1): follows only by A2, which the text never states: state it, or argue for it
+aristotle-function.md:1: argue/own-sentence: C (S1): needs P2, read from the conclusion's own sentence: check that S1 gives it as its reason and does not conclude it
+aristotle-function.logic.r1: argue/valid 1
+aristotle-function.logic: argue/runs-agree 1

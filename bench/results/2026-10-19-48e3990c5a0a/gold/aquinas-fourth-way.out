@@ -1,0 +1,13 @@
+# run 1 of 3
+# run 2 of 3
+# run 3 of 3
+# 3 readings by claude-opus-5-5, compared
+aquinas-fourth-way.md:1: argue/unfaithful: aquinas-fourth-way.logic.r1 P5 (S4): the sentence has no word of "there is something which is uttermost being": is it the sentence P5 came from?
+# kept the reading that best fits the words and the other readings: aquinas-fourth-way.logic.r1
+# argument written to aquinas-fourth-way.logic.r1 by claude-opus-5-5 (a language model, not a rule)
+aquinas-fourth-way.md:1: argue/unfaithful: P5 (S4): the sentence has no word of "there is something which is uttermost being": is it the sentence P5 came from?
+aquinas-fourth-way.md:1: argue/own-sentence: C1 (S3): needs P2, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it
+aquinas-fourth-way.md:1: argue/own-sentence: C2 (S3): needs P4, read from the conclusion's own sentence: check that S3 gives it as its reason and does not conclude it
+aquinas-fourth-way.md:1: argue/own-sentence: C (S5): needs P6, read from the conclusion's own sentence: check that S5 gives it as its reason and does not conclude it
+aquinas-fourth-way.logic.r1: argue/valid 1
+aquinas-fourth-way.logic: argue/runs-agree 1

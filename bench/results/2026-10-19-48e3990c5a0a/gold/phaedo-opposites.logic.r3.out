@@ -1,0 +1,20 @@
+# 3 readings by claude-opus-5-5, compared
+phaedo-opposites.logic.r3: argue/readings: what the text leaves unstated is read 2 ways: phaedo-opposites.logic.r3 and phaedo-opposites.logic.r3.2 have "genopp(lifedeath) → living_from_dead" and "living_from_dead → souls_below"; phaedo-opposites.logic.r3.3 has "genopp(lifedeath) → living_from_dead"; they differ when only "the living, whether things or persons, are generated from the dead" is true, which the second allows
+phaedo-opposites.logic.r3: argue/readings: U1: phaedo-opposites.logic.r3 and phaedo-opposites.logic.r3.2 take for granted "if the living, whether things or persons, are generated from the dead, then our souls exist in the world below"; phaedo-opposites.logic.r3.3 does not
+phaedo-opposites.logic.r3: argue/answered: U1: answered yes, which keeps phaedo-opposites.logic.r3 and phaedo-opposites.logic.r3.2, to: Does the text's argument take this for granted, whether or not it says so: "if the living, whether things or persons, are generated from the dead, then our souls exist in the world below"? Answer yes if the author would accept it as part of the argument.
+phaedo-opposites.md:25: argue/quantifier: phaedo-opposites.logic.r3 P1 (S17): the sentence says "not always", but P1 says it of every one: it reads "for every x, if the members of x are opposites, then (the members of x are generated out of one another and there is a passing or process from one member of x to the other)"
+phaedo-opposites.md:25: argue/quantifier: phaedo-opposites.logic.r3.2 P1 (S17): the sentence says "not always", but P1 says it of every one: it reads "for every x, if the members of x are opposites, then (the members of x are generated out of one another and there is a passing or process from one member of x to the other)"
+phaedo-opposites.md:25: argue/quantifier: phaedo-opposites.logic.r3.3 P1 (S17): the sentence says "not always", but P1 says it of every one: it reads "for every x, if the members of x are opposites, then (the members of x are generated out of one another and there is a passing or process from one member of x to the other)"
+phaedo-opposites.logic.r3: argue/verdicts: valid as phaedo-opposites.logic.r3, phaedo-opposites.logic.r3.2 read it, not as the others do: which reading is right decides the verdict
+phaedo-opposites.logic.r3: argue/readings-agree 3
+phaedo-opposites.logic.r3: argue/readings-differ 1
+phaedo-opposites.logic.r3: argue/verdicts-agree 0
+phaedo-opposites.logic.r3: argue/mismatches 1
+phaedo-opposites.logic.r3.2: argue/mismatches 1
+phaedo-opposites.logic.r3.3: argue/mismatches 1
+# kept the reading that best fits the words and the other readings: phaedo-opposites.logic.r3
+# argument written to phaedo-opposites.logic.r3 by claude-opus-5-5 (a language model, not a rule)
+phaedo-opposites.md:25: argue/quantifier: P1 (S17): the sentence says "not always", but P1 says it of every one: it reads "for every x, if the members of x are opposites, then (the members of x are generated out of one another and there is a passing or process from one member of x to the other)"
+phaedo-opposites.md:61: argue/assumed: C2 (S39): follows only by A1, which the text never states: state it, or argue for it
+phaedo-opposites.md:65: argue/assumed: C (S41): follows only by A2, which the text never states: state it, or argue for it
+phaedo-opposites.logic.r3: argue/valid 1
