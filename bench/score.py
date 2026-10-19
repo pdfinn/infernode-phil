@@ -1,11 +1,17 @@
 # score.py gold results - how the readings in results (bench/run.sh's)
 # fare against the gold set: for each passage, run by run, whether the
 # known fault was located (a finding of a fault at the gold sentence),
-# detected (the argument does not hold without what the text never
-# states, or some fault is found elsewhere), or missed; for a valid
-# passage, whether it was read as valid (a false alarm if not).  Then
-# what each run's reading assumed or said was missing, beside the gold
-# statement of the fault, for a person to judge whether it is the one.
+# detected (the verdict is 0, or a finding other than an assumption is
+# made somewhere), or missed; for a valid passage, whether it was read
+# as valid (a false alarm if not).  Then the same measures for every
+# class side by side, so that what a finding is worth on an argument
+# with a fault can be set against how often it is made on one without;
+# and "located" again, counting only passages where the gold sentence
+# is not the conclusion's, since every finding about the conclusion is
+# reported at its sentence.  Then what each run's reading assumed or
+# said was missing, beside the gold statement of the fault, for a person
+# to judge whether it is the one: that judgement, and not these counts,
+# is the result (bench/RESULTS.md).
 import os, re, sys
 FAULT = ('invalid', 'missing', 'assumed', 'begs', 'circular', 'equivocates', 'modal-ambiguous', 'quantifier', 'converse', 'unlinked', 'negation')
 gold, res = sys.argv[1], sys.argv[2]
@@ -40,16 +46,18 @@ for f in sorted(os.listdir(gold)):
         v = re.findall(r'argue/valid (-?\d)', open(p, errors='replace').read())
         verdict = v[-1] if v else '?'
         located = at is not None and any(r in FAULT and s == at for r, s, _ in fs)
-        detected = verdict == '0' or any(r in FAULT for r, s, _ in fs)
+        detected = verdict == '0' or any(r in FAULT and r != 'assumed' for r, s, _ in fs)
+        cs = re.findall(r'^C\tS(\d+)\t', open(os.path.join(res, '%s.logic.r%d' % (g, i)), errors='replace').read(), re.M)
+        atconc = at is not None and str(at) in cs
         said = [(r, s, m) for r, s, m in fs if r in ('assumed', 'missing', 'begs', 'equivocates', 'modal-ambiguous')]
         lp = os.path.join(res, '%s.logic.r%d' % (g, i))
         asm = [l.rstrip('\n') for l in open(lp, errors='replace') if re.match(r'A\d+\t', l)] if os.path.exists(lp) else []
-        runs.append((verdict, located, detected, said, asm))
+        runs.append((verdict, located, detected, said, asm, atconc, any(r in FAULT for r, s, _ in fs)))
     rows.append((g, cls, at, runs))
     review.append((g, d, runs))
 def cell(cls, r):
     if r is None: return 'not run'
-    verdict, located, detected, _, _ = r
+    verdict, located, detected = r[:3]
     if cls == 'valid':
         return 'valid' if verdict == '1' else ('false alarm' if verdict == '0' else 'undecided')
     return 'located' if located else ('detected' if detected else 'missed')
@@ -68,6 +76,14 @@ for cls in ('inference', 'equivocation', 'valid'):
         n = sum(tot[cls].values())
         print('%s: %s, of %d runs' % (cls, ', '.join('%s %d' % (k, v) for k, v in sorted(tot[cls].items())), n))
 print()
+print('| Class | Runs | Verdict 0 | A finding other than an assumption | Any finding of a fault | Located, gold sentence not the conclusion\'s |')
+print('|---|---|---|---|---|---|')
+for cls in ('inference', 'equivocation', 'valid'):
+    rs = [r for g, c, at, runs in rows if c == cls for r in runs if r is not None]
+    nc = [r for r in rs if not r[5]]
+    print('| %s | %d | %d | %d | %d | %s |' % (cls, len(rs), sum(r[0] == '0' for r in rs), sum(r[2] for r in rs), sum(r[6] for r in rs),
+        '%d of %d' % (sum(r[1] for r in nc), len(nc)) if cls != 'valid' else '-'))
+print()
 for g, d, runs in review:
     if d['class'] == 'valid' and all(r is None or r[0] == '1' for r in runs):
         continue
@@ -76,7 +92,7 @@ for g, d, runs in review:
     for i, r in enumerate(runs, 1):
         if r is None:
             continue
-        verdict, located, detected, said, asm = r
+        verdict, located, detected, said, asm = r[:5]
         print('- Run %d, valid %s:' % (i, verdict))
         for a in asm:
             print('  - assumed `%s`' % a.split('\t', 2)[-1].replace('|', '\\|'))

@@ -1,0 +1,85 @@
+# The gold runs of 19 October 2026 judged by hand, run by run: found
+# (the run puts in front of its reader the step the gold names: an
+# assumption that is that step, a failure whose case is that step, or a
+# question about it), partial (it flags the step but not what is wrong
+# with it), or no.  For a valid passage, valid or false alarm, by the
+# verdict.  The reason follows.
+# passage	run	judged	why
+aquinas-first-way	1	partial	the identification with God is flagged (C needs P7, read from the conclusion's own sentence); the regress premise is read as stated, which it is
+aquinas-first-way	2	partial	as run 1
+aquinas-first-way	3	partial	as run 1
+aquinas-second-way	1	partial	the identification with God flagged as in the first way; "no first cause" against "no cause" not seen
+aquinas-second-way	2	partial	as run 1
+aquinas-second-way	3	no	nothing at the step
+aquinas-third-way	1	found	assumed: all contingent and each at some time not, so possibly once nothing (the quantifier shift, written as the step the text needs)
+aquinas-third-way	2	no	the step read as stated
+aquinas-third-way	3	found	S4 would follow given "each at some time not -> once nothing": the shift itself
+aquinas-fourth-way	1	no	the maximum causing all in its genus is read as stated (it is stated); gold disputed, see RESULTS.md
+aquinas-fourth-way	2	no	as run 1
+aquinas-fourth-way	3	no	as run 1
+aquinas-ontological-objection	1	found	assumed: what is understood to exist mentally, and is greater actual, exists actually: the step Aquinas denies
+aquinas-ontological-objection	2	found	as run 1
+aquinas-ontological-objection	3	found	as run 1
+aristotle-chief-good	1	no	the passage, as translated, calls "that which all things aim at" a fair description; no reading has one good all aim at; gold disputed, see RESULTS.md
+aristotle-chief-good	2	no	as run 1
+aristotle-chief-good	3	no	as run 1
+aristotle-function	1	found	assumed: crafts and members have a work, so man has one: the analogy with no premise to carry it
+aristotle-function	2	found	as run 1
+aristotle-function	3	found	as run 1
+boethius-foreknowledge	1	no	every reading writes the narrow scope the sentence says (foresees -> necessarily happens) and asks nothing about it
+boethius-foreknowledge	2	no	as run 1
+boethius-foreknowledge	3	no	as run 1
+descartes-cogito	1	no	the passage concludes that the cogito may be accepted as first principle; it states the cogito; gold disputed, see RESULTS.md
+descartes-cogito	2	no	as run 1
+descartes-cogito	3	no	as run 1
+descartes-real-distinction	1	found	invalid, with the case: what can and cannot be supposed holds and the essence and distinctness fail
+descartes-real-distinction	2	found	as run 1
+descartes-real-distinction	3	found	as run 1
+hume-miracles	1	found	assumed: what is not observed has uniform experience against it, the premise that begs the question
+hume-miracles	2	partial	assumed: what has not uniform experience against it is in the common course: the definition's direction, not the begging step
+hume-miracles	3	found	as run 1
+locke-labour	1	found	the conclusion would follow given that annexing what excludes the common right makes property: the unstated general premise
+locke-labour	2	found	assumed: excludes -> property
+locke-labour	3	found	assumed: all x, excludes(x) -> property(x)
+mill-proof	1	found	assumed: own good -> general good (composition)
+mill-proof	2	found	S6 would follow given "own good -> general good"
+mill-proof	3	no	the composition is read as stated
+berkeley-master	1	no	nothing at the step
+berkeley-master	2	no	as run 1
+berkeley-master	3	no	as run 1
+berkeley-principles-4	1	partial	assumed: what we perceive by sense, and that we perceive only ideas, make sensible objects ideas: the step where "perceive" shifts, unnamed
+berkeley-principles-4	2	no	nothing at the step
+berkeley-principles-4	3	no	an assumption elsewhere
+meno-paradox	1	no	one sense of "know" throughout
+meno-paradox	2	no	as run 1
+meno-paradox	3	no	as run 1
+phaedo-opposites	1	partial	assumed: generation from opposites applied to life and death, the extension, unnamed
+phaedo-opposites	2	no	an assumption elsewhere
+phaedo-opposites	3	no	as run 2
+republic-function	1	no	one sense of "live well" throughout
+republic-function	2	no	as run 1
+republic-function	3	no	as run 1
+apology-death	1	valid	
+apology-death	2	valid	
+apology-death	3	valid	
+aquinas-economy-objection	1	valid	
+aquinas-economy-objection	2	false alarm	the reading has the assumptions it needs (A1, A2) but leaves them out of the from of the steps that use them; the tool says so ("would follow if it were drawn from A1 too"): a slip of bookkeeping, not of reading
+aquinas-economy-objection	3	valid	
+aquinas-evil-objection	1	valid	
+aquinas-evil-objection	2	valid	
+aquinas-evil-objection	3	valid	
+berkeley-heat-pain	1	valid	
+berkeley-heat-pain	2	valid	
+berkeley-heat-pain	3	valid	
+hume-induction	1	valid	
+hume-induction	2	valid	
+hume-induction	3	valid	
+hume-motivation	1	valid	
+hume-motivation	2	valid	
+hume-motivation	3	valid	
+hume-necessary-being	1	valid	
+hume-necessary-being	2	valid	
+hume-necessary-being	3	valid	
+spinoza-god	1	valid	
+spinoza-god	2	valid	
+spinoza-god	3	valid	
