@@ -1,0 +1,6 @@
+source	Plato, Euthydemus 275d-276c, tr. B. Jowett
+text	Project Gutenberg ebook 1598, https://www.gutenberg.org/ebooks/1598
+class	equivocation
+word	learn
+fault	"learn" is acquiring knowledge one lacks in the first argument (so the unlearned learn) and understanding what one is told in the second (so the wise learn): each conclusion holds only in its own sense, and they do not contradict each other
+reference	Plato, Euthydemus 277e-278b (Socrates names the two senses); Aristotle, Sophistical Refutations 4, 165b32

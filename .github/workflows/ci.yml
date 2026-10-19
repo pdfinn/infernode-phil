@@ -103,6 +103,10 @@ jobs:
       working-directory: infernode-phil
       run: tests/argue_test.sh
 
+    - name: phil/senses, a claim in two senses split and proved
+      working-directory: infernode-phil
+      run: tests/senses_test.sh
+
     - name: phil/read's readers blinded
       working-directory: infernode-phil
       run: tests/read_test.sh

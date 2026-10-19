@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, prove, join, map, tableau, read, settle, readable, corpus \- the Philosopher's Workbench, \(*fwb
+phil, argue, prove, join, map, tableau, read, settle, senses, readable, corpus \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -12,7 +12,7 @@ phil, argue, prove, join, map, tableau, read, settle, readable, corpus \- the Ph
 .br
 .B phil/argue
 [
-.B -cjqwx
+.B -cejqwx
 ] [
 .B -k
 .I readings
@@ -156,6 +156,20 @@ phil, argue, prove, join, map, tableau, read, settle, readable, corpus \- the Ph
 .B -d
 .I document
 .I reading ...
+.br
+.B phil/senses
+[
+.B -x
+] [
+.B -m
+.I model
+] [
+.B -r
+.IB a - b
+]
+.B -d
+.I document
+.I logicfile
 .br
 .B phil/readable
 .I logicfile
@@ -360,6 +374,11 @@ statement is called.
 .B argue/runs-agree
 is 1 if every run's verdict was the same, 0 if not: a verdict that
 changes with the run rests on how the text is read.
+.IP
+.B -e
+checks the kept reading with
+.IR senses :
+whether the argument moves between two senses of one claim.
 .TP
 .B phil/read
 A reading: a language model, given the instructions in
@@ -437,6 +456,31 @@ most of the others agree with is copied over the first; what the answers
 say the text takes for granted and it lacks is added to it as an
 assumption.
 It prints the comparison.
+.TP
+.B phil/senses
+Whether the argument read in
+.I logicfile
+moves between two senses of one claim.
+Each atom more than one statement uses is put to a model afresh, with the
+instructions in
+.BR /lib/phil/senses ,
+the document's sentences, and each statement that uses it in words; the
+model says whether the text means it in one sense throughout or in two,
+and if two, which statements take the second, and what each sense is.
+It does not judge the argument.
+The prover does: the atom is split, a second atom for the second sense in
+those statements, and the argument proved again.
+Valid as read and invalid split is
+.BR argue/equivocates ,
+at the first statement of the second sense, with the case in which the
+conclusion fails; the split is kept in
+.IB logicfile .sense N.
+Valid either way is
+.BR argue/two-senses :
+a shift the argument does not turn on.
+The answers are kept in
+.IB logicfile .senses ,
+with the model, the instructions' hash and the date.
 .TP
 .B phil/readable
 What makes a logic file one the prover cannot read: a syntax error, a
@@ -1203,6 +1247,11 @@ joins a work's parts
 instructions to the model when
 .I argue
 asks which reading is right
+.TP
+.B /lib/phil/senses
+instructions to the model when
+.I senses
+asks whether a claim is in one sense or two
 .PD
 .SH SOURCE
 .B appl/cmd/*.b

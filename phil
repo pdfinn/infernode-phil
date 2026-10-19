@@ -83,7 +83,7 @@ E
 # rc's quoting: in quotes, a quote is doubled
 q() { printf "'%s'" "$(printf '%s' "$1" | sed "s/'/''/g")"; }
 case $cmd in
-argue)
+argue|senses)
 	(
 	umask 077
 	: > "$tmp/setup"

@@ -6,6 +6,7 @@ SCRIPTS=\
 	argue\
 	read\
 	readable\
+	senses\
 	settle\
 
 DISBIN=../dis/phil

@@ -1,6 +1,7 @@
 #!/bin/sh
 # bench/run.sh dir results [jobs] - phil/argue -n 3 -k 3 on every passage
-# (dir/*.md) into results, jobs at a time (default 8); $RUNS sets -n.  $WWBMODEL and
+# (dir/*.md) into results, jobs at a time (default 8); $RUNS sets -n,
+# and $FLAGS adds options (-e).  $WWBMODEL and
 # $MODEL (default claude-opus-5-5) say which model reads, as for ./phil.
 here=$(cd "$(dirname "$0")/.." && pwd)
 dir=$(cd "$1" && pwd)
@@ -13,5 +14,5 @@ cp "$dir"/*.md "$res"/
 cd "$res"
 ls *.md | sed 's/\.md$//' | xargs -P "$jobs" -I{} sh -c "
 	[ -s {}.out ] && grep -q 'argue/runs-agree' {}.out && exit 0
-	timeout 3600 '$here/phil' argue -n $runs -k 3 -m '$model' -o {}.logic {}.md > {}.out 2>&1
+	timeout 3600 '$here/phil' argue -n $runs -k 3 $FLAGS -m '$model' -o {}.logic {}.md > {}.out 2>&1
 	echo {} \$? >> done"

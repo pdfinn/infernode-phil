@@ -1,0 +1,37 @@
+You are checking whether an argument moves between two senses of one
+claim. You are given a text's sentences, each numbered (S1, S2, ...),
+and the argument someone else read in it: each claim the argument uses
+in more than one statement, with what it stands for and each statement
+that uses it, written out in words. You do not decide whether the
+argument is good. Your task is only to say, for each claim, whether
+the text means it in one sense in every statement that uses it, or in
+two.
+
+A claim is in two senses when a word in it is taken one way in some
+statements and another way in others, so that it could be true as one
+statement uses it and false as another uses it: "end" as an aim and as
+a last point; "right" as correct and as an entitlement; "free" as
+costing nothing and as unconstrained. Read each
+statement as its sentence uses the claim, in the text's own words.
+
+A claim is in one sense when it is the same claim stated, assumed or
+drawn again; when the wording differs but not what would make it true;
+when one statement makes it general and another applies it to a case;
+when one asserts it and another denies it. Most claims are in one
+sense: say two only where you can say what each sense is and how they
+differ in what would make the claim true.
+
+Answer with one line for each claim, fields separated by a TAB, and
+nothing else:
+
+name<TAB>one
+
+or
+
+name<TAB>two<TAB>word<TAB>statements<TAB>first sense<TAB>second sense
+
+where word is the word that changes its sense, statements names the
+statements that use the second sense (P2 C, separated by blanks), and
+each sense says in a few words what the claim means there. The first
+sense is the one the other statements use. Lines beginning with # are
+comments and may say where you were unsure.

@@ -1,0 +1,186 @@
+#!/dis/sh.dis
+# phil/senses [-x] [-m model] [-r a-b] -d document logicfile - whether
+# the argument read in logicfile moves between two senses of one claim.
+# Each claim (atom) the argument uses in more than one statement is put
+# to a model afresh, through wwb/ask with the instructions in
+# /lib/phil/senses: the document's sentences, and each statement that
+# uses the claim, in words (phil/prove -e).  The model says, claim by
+# claim, whether the text means it in one sense throughout or in two,
+# and if two, which statements take the second.  It does not judge the
+# argument.  The prover does: each claim said to be in two senses is
+# split, a second atom for the second sense in the statements that use
+# it, and the argument proved again.  Valid as read and not valid split
+# is argue/equivocates, at the first statement of the second sense,
+# with the case in which it fails; still valid is argue/two-senses,
+# a shift the argument does not turn on.  The model's answers are kept
+# in logicfile.senses, and a split that fails in logicfile.senseN.
+load std
+
+fn usage {
+	echo 'usage: phil/senses [-x] [-m model] [-r a-b] -d document logicfile' >[1=2]
+	raise fail:usage
+}
+
+x=()
+m=()
+r=()
+doc=()
+args=$*
+while {~ ${hd $args} -*} {
+	opt=${hd $args}
+	args=${tl $args}
+	if {~ $opt -x} {
+		x=-x
+	} {~ $opt -m -r -d} {
+		if {~ $#args 0} {usage}
+		if {~ $opt -m} {
+			m=(-m ${hd $args})
+		} {~ $opt -r} {
+			r=(-r ${hd $args})
+		} {
+			doc=${hd $args}
+		}
+		args=${tl $args}
+	} {
+		usage
+	}
+}
+if {! ~ $#args 1 || ~ $#doc 0} {usage}
+logic=${hd $args}
+
+# an atom's name in a formula: a word of lower-case letters, digits and
+# _, renamed whole
+ren='function ren(s, a, b,   o, t) {
+	o = ""
+	while(match(s, /[a-z_][a-z0-9_]*/)){
+		t = substr(s, RSTART, RLENGTH)
+		if(t == a)
+			t = b
+		o = o substr(s, 1, RSTART-1) t
+		s = substr(s, RSTART+RLENGTH)
+	}
+	return o s
+}
+function has(s, a) {
+	return ren(s, a, "") != s
+}'
+
+# the claims more than one statement uses: atom, what it stands for,
+# and the statements, a line each
+awk -F '	' $ren^'
+	$1 == "atom" { n = $2; sub(/\(.*/, "", n); at[++na] = n; mean[n] = $3; next }
+	$1 ~ /^[PACOR][0-9]*$/ { st[++ns] = $1; f[ns] = $3 }
+	END {
+		for(i = 1; i <= na; i++){
+			l = ""
+			c = 0
+			for(j = 1; j <= ns; j++)
+				if(has(f[j], at[i])){
+					l = l "	" st[j]
+					c++
+				}
+			if(c >= 2)
+				print at[i] "	" mean[at[i]] l
+		}
+	}' $logic > $logic^.shared
+if {! ftest -s $logic^.shared} {
+	rm -f $logic^.shared
+	exit
+}
+
+# what each statement says, in words
+phil/prove -e $logic $doc >[2=1] | sed -n 's/^.*argue\/says: ([^ :]+)( \(S[0-9]+\))?: reads (.*)$/\1	\1\2: \3/p' > $logic^.words
+{
+	echo 'The sentences, numbered:'
+	echo
+	wwb/sentences -m -t $r $doc
+	echo
+	echo 'The claims the argument uses in more than one statement, each with'
+	echo 'the statements that use it:'
+	awk -F '	' 'NR == FNR { w[$1] = $2; next }
+		{
+			print ""
+			print "Claim " $1 ": " $2
+			for(i = 3; i <= NF; i++){
+				if(w[$i] != "")
+					print "  " w[$i]
+				else
+					print "  " $i
+			}
+		}' $logic^.words $logic^.shared
+} | wwb/ask $m /lib/phil/senses > $logic^.senses.new
+# who answered, by what instructions, when: as a reading says it
+who=`{wwb/ask -n $m}
+hash=`{sha1sum /lib/phil/senses}
+hash=`{echo ${hd $hash} | sed 's/^(............).*/\1/'}
+day=`{date | awk 'BEGIN { split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", mn, " "); for(i = 1; i <= 12; i++) mi[mn[i]] = sprintf("%02d", i) } { printf "%s-%s-%02d\n", $NF, mi[$2], $3 }'}
+{
+	echo '#' answered by $"who, prompt /lib/phil/senses $hash, $day
+	cat $logic^.senses.new
+} > $logic^.senses
+rm -f $logic^.senses.new
+
+v0=`{phil/prove $logic $doc >[2=1] | sed -n 's/.*argue\/valid (-?[0-9]+)$/\1/p' | tail -1}
+ifs='
+'
+n=0
+for l in `{grep '^[a-z_][a-z0-9_]*	two	' $logic^.senses} {
+	n=`{echo $n + 1 | calc}
+	echo $l > $logic^.ans
+	# the claim split: a second atom for the second sense, in the
+	# statements the answer names; none of them, or every statement
+	# that uses the claim, is no split
+	ok=`{awk -F '	' -v 'OFS=	' -v 'out='^$logic^.split $ren^'
+		NR == FNR { a = $1; k = split($4, s, " "); for(i = 1; i <= k; i++) two[s[i]] = 1; sense = $6; next }
+		$1 == "atom" {
+			nm = $2
+			b = nm
+			sub(/\(.*/, "", b)
+			print > out
+			if(b == a){
+				# print x > f is a comparison to this awk: print $0
+				$0 = "atom" OFS a "_2" substr(nm, length(b)+1) OFS sense
+				print > out
+			}
+			next
+		}
+		$1 ~ /^[PACOR][0-9]*$/ && has($3, a) {
+			uses++
+			if(two[$1]){
+				$3 = ren($3, a, a "_2")
+				moved++
+			}
+		}
+		{ print > out }
+		END { print (moved > 0 && moved < uses) ? "split" : "none" }' $logic^.ans $logic}
+	if {~ $ok split} {
+		phil/prove $logic^.split $doc > $logic^.splitout >[2=1]
+		v1=`{sed -n 's/.*argue\/valid (-?[0-9]+)$/\1/p' $logic^.splitout | tail -1}
+		fails=`{sed -n 's/.*argue\/invalid: ([^ ]+ \(S[0-9]+\)).*/\1/p' $logic^.splitout | sed 1q}
+		eq=()
+		if {~ $v0 1 && ~ $v1 0} {
+			eq=1
+			cp $logic^.split $logic^.sense^$n
+		}
+		awk -F '	' -v 'v0='^$"v0 -v 'v1='^$"v1 -v 'eq='^$"eq -v 'fails='^$"fails -v 'logic='^$logic -v 'kept='^$logic^.sense^$n '
+			NR == FNR { a = $1; word = $3; list = $4; k = split($4, two, " "); s1 = $5; s2 = $6; next }
+			$1 ~ /^[PACOR][0-9]*$/ { sent[$1] = $2 }
+			END {
+				at = two[1]
+				if(sent[at] ~ /^S[0-9]+$/)
+					at = at " (" sent[at] ")"
+				msg = "\"" word "\" is taken as " s2 " in " list " and as " s1 " where " a " is used else, a reader says"
+				if(eq == "1")
+					print logic ": argue/equivocates: " at ": " msg ": the argument holds only if they are one; taken apart, " (fails != "" ? fails : "it") " does not follow (" kept ")"
+				else if(v0 == 1 && v1 == 1)
+					print logic ": argue/two-senses: " at ": " msg ": the argument does not turn on it"
+				else
+					print logic ": argue/two-senses: " at ": " msg
+			}' $logic^.ans $logic
+		if {~ $#eq 1} {
+			grep ': argue/countermodel: ' $logic^.splitout | sed 's|^[^ ]*: |'^$logic^': |'
+		}
+	}
+	rm -f $logic^.ans $logic^.split $logic^.splitout
+}
+rm -f $logic^.shared $logic^.words
