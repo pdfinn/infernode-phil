@@ -21,7 +21,7 @@ trap 'rm -rf "$tmp"' EXIT
 cp data/argue/steps/kalam.logic "$tmp/it's a b.logic"
 out=$(cd "$tmp" && "$here/phil" map "it's a b.logic") || no 'a name with a blank and a quote failed'
 echo "$out" | grep -q 'C (S5)' || no "a name with a blank and a quote: $out"
-# argue reaches a model: WWBMODEL goes to $wwbmodel, and the model's
+# argue reaches a model: LLM goes to $llm, and the model's
 # file is proved
 if command -v python3 > /dev/null; then
 	port=$(python3 -I -c 'import socket; s=socket.socket(); s.bind(("127.0.0.1",0)); print(s.getsockname()[1])')
@@ -29,7 +29,7 @@ if command -v python3 > /dev/null; then
 	fake=$!
 	sleep 1
 	cp data/argue/sample.md "$tmp/sample.md"
-	out=$(cd "$tmp" && WWBMODEL="openai http://127.0.0.1:$port/v1" "$here/phil" argue -m fake-model sample.md 2>&1) || no "argue through a fake API failed: $out"
+	out=$(cd "$tmp" && LLM="openai http://127.0.0.1:$port/v1" "$here/phil" argue -m fake-model sample.md 2>&1) || no "argue through a fake API failed: $out"
 	kill $fake 2>/dev/null
 	echo "$out" | grep -q 'affirming the consequent' || no "argue through a fake API: $out"
 	grep -q 'You are helping check the reasoning' "$tmp/requests" || no 'the fake API was not sent /lib/phil/argue'

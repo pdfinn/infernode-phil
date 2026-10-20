@@ -55,7 +55,7 @@ premise" or "report that Schmitt holds X".
   and no device attachable (`pctl nodevs`: `tests/read_test.sh`); it is
   given the prompt, the text and the atoms. It has no corpus, no other
   readings, and no network, except that where the model is an API
-  called from inside, `wwb/api` keeps `/net` for that call; the model
+  called from inside, `llmapi` keeps `/net` for that call; the model
   writes text and runs nothing. Denial is absence.
 - **The reading is checked by rule.** `readable` rejects what the
   parser cannot read; the read-back reports a condition turned round,
@@ -190,7 +190,7 @@ prompt is filed under another's hash; the host-command reader
   (PHIL.md, step 0's leavings); `tests/read_test.sh` checks it. A bench
   run that used it is marked.
 - **The provenance line carries the settings** the model was asked
-  with (`wwb/ask -s`: temperature, maxtokens, thinking), as the 2026
+  with (`ask -s`: temperature, maxtokens, thinking), as the 2026
   guidance for reproducible model use in the humanities asks beside
   model, version, access date and prompt. Not yet: a seed, where a
   provider takes one.
@@ -291,5 +291,5 @@ In order of what they close:
 - **A reader cannot open `/net`, the corpus directory, another
   reading, or `answers`.** Done: `tests/read_test.sh`, a reader that is
   a program sees an empty `/net`. Where the model is an API called from
-  inside (`anthropic`, `openai`), `/net` is kept for `wwb/api`'s call;
+  inside (`anthropic`, `openai`), `/net` is kept for `llmapi`'s call;
   the model writes text and runs nothing, and the line says so.

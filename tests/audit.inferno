@@ -34,7 +34,7 @@ echo '# a reading, sealed'
 	echo 'echo ''C	S2	s'''
 } > /tmp/phil.reader.^${pid}
 # a name with no # in it: the command is sh's to parse
-wwbmodel='sh /tmp/phil.reader.'^${pid}
+llm='sh /tmp/phil.reader.'^${pid}
 phil/read -o $d/one /lib/phil/argue $d/question
 phil/audit -c $m/chain $d/one
 echo status $status

@@ -14,15 +14,15 @@
 # see the other readings, the answers or the corpus, by any name.  It
 # is given the instructions and the question and nothing else.  /net
 # too is an empty directory, unless the way to the model is an API
-# called from here (wwb/ask's anthropic or openai), whose call needs it:
-# then only wwb/api uses it, and the model, which writes text and runs
-# nothing, has no way to.  A reader that is a host command (wwb/ask's
+# called from here (ask(1)'s anthropic or openai), whose call needs it:
+# then only llmapi uses it, and the model, which writes text and runs
+# nothing, has no way to.  A reader that is a host command (ask(1)'s
 # way os ...) runs outside InferNode's name space and is not confined
 # by it; the reading says so, unconfined.
 #
 # Each reading's first line is # header (-H), and its last is its
 # provenance, a comment of attr=value words (last, so that it moves no
-# line the prover names): who read it, asked how (wwb/ask -s), with which
+# line the prover names): who read it, asked how (ask -s), with which
 # instructions and their hash (the first twelve digits of their SHA-1),
 # when, and how confined (namespace, or none for a host command) and
 # with what network (none; api, kept for the API's call; host):
@@ -52,7 +52,7 @@
 # taken as it is, unchecked: a reader's way of saying there is nothing
 # to read (# no argument).
 #
-# The model is reached through wwb/ask, as $wwbmodel says; -m names it.
+# The model is reached through ask(1), as $llm says; -m names it.
 load std
 
 fn usage {
@@ -110,7 +110,7 @@ if {~ $#again 0} {
 	again=$question
 }
 
-who=`{wwb/ask -n $m}
+who=`{ask -n $m}
 if {~ $#who 0} {
 	raise 'fail:no model'
 }
@@ -120,12 +120,12 @@ hash=`{sha1sum $prompt}
 hash=`{echo ${hd $hash} | sed 's/^(............).*/\1/'}
 day=`{date | awk 'BEGIN { split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec", mn, " "); for(i = 1; i <= 12; i++) mi[mn[i]] = sprintf("%02d", i) } { printf "%s-%s-%02d\n", $NF, mi[$2], $3 }'}
 # how it is asked; a Writer's Workbench too old to say, says nothing
-how=`{wwb/ask -s $m >[2] /dev/null}
+how=`{ask -s $m >[2] /dev/null}
 if {~ $#how 0} {
 	how='temperature=unknown maxtokens=unknown thinking=unknown'
 }
 how=$"how
-way=${hd ${split ' 	' $"wwbmodel}}
+way=${hd ${split ' 	' $"llm}}
 if {~ $#way 0} {
 	if {ftest -f /mnt/llm/new} {
 		way=llm
@@ -174,7 +174,7 @@ fn seal {
 
 # ask in out's stead: a reader of its own, blinded; the question on its
 # standard input
-fn ask {
+fn reader {
 	q=$1
 	a=$2
 	{
@@ -194,7 +194,7 @@ fn ask {
 		}
 		cd $empty
 		pctl nodevs
-		wwb/ask $m $prompt
+		ask $m $prompt
 	} < $q > $a
 }
 
@@ -251,7 +251,7 @@ fn mend {
 				echo
 				echo 'Write the whole file again, corrected, and nothing else.'
 			} > $target^.again
-			ask $target^.again $target^.answer
+			reader $target^.again $target^.answer
 			keep $target^.answer $target
 		}
 	}
@@ -264,7 +264,7 @@ for i in `{seq 1 $k} {
 	if {! ~ $k 1} {
 		t=$out^.$i
 	}
-	ask $question $t^.answer
+	reader $question $t^.answer
 	keep $t^.answer $t
 	rm -f $t^.answer
 	mend $t

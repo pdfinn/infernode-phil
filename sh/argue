@@ -10,7 +10,7 @@
 # file for the document: the model reads the text cold, given only that
 # file's atoms, and phil/prove compares its reading with the writer's,
 # sentence by sentence, to show where the prose does not say what the
-# writer meant.  The model is reached through wwb/ask: $wwbmodel says
+# writer meant.  The model is reached through ask(1): $llm says
 # how (the Anthropic API with factotum's key, unless it names another
 # API, a command such as the host's Claude CLI, or /mnt/llm).
 #
@@ -236,7 +236,7 @@ m=()
 if {! ~ $#model 0} {
 	m=(-m $model)
 }
-who=`{wwb/ask -n $m}
+who=`{ask -n $m}
 if {~ $#who 0} {
 	raise 'fail:no model'
 }
@@ -389,7 +389,7 @@ if {~ $#w 1} {
 		wwb/sentences -m -t -r $last $f
 		echo
 		echo 'Number further steps from C'^`{echo $nc + 1 | calc}^' and assumptions from A'^`{echo $na + 1 | calc}^'.'
-	} | wwb/ask $m /lib/phil/argue-work > $parts/top
+	} | ask $m /lib/phil/argue-work > $parts/top
 	{
 		echo '#' the argument of $f as $who read it, part by part: check that it says what the text says
 		grep '^(#|atom	|A[0-9]+	|C[0-9]*	)' $parts/top > $parts/top.kept
@@ -413,7 +413,7 @@ if {~ $#w 1} {
 			grep 'argue/(syntax|no-sentence|no-conclusion|duplicate|undefined)' $parts/check
 			echo
 			echo 'Write your lines again, corrected, and nothing else.'
-		} | wwb/ask $m /lib/phil/argue-work > $parts/top
+		} | ask $m /lib/phil/argue-work > $parts/top
 		{
 			echo '#' the argument of $f as $who read it, part by part: check that it says what the text says
 			grep '^(#|atom	|A[0-9]+	|C[0-9]*	)' $parts/top > $parts/top.kept
@@ -444,7 +444,7 @@ if {~ $#w 1} {
 			echo 'If one does not, because an atom is used in a sense other than the one'
 			echo 'it declares, write all your lines again, corrected, and nothing else:'
 			echo 'declare a new atom for a claim no atom states.'
-		} | wwb/ask $m /lib/phil/argue-work > $parts/top2
+		} | ask $m /lib/phil/argue-work > $parts/top2
 		if {! grep -s '^# as meant' $parts/top2} {
 			if {grep -s '^C	' $parts/top2} {
 				cp $logic $parts/before

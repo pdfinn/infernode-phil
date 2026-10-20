@@ -44,7 +44,7 @@ tests any replacement must pass.
    reads as well on texts it was not trained on is what the held-out
    sets are for.
 
-Each tool keeps its own way to a model (`wwb/ask`'s ways: the API, a
+Each tool keeps its own way to a model (`ask(1)`'s ways: the API, a
 local model, `/mnt/llm`, a command), so a small model for `senses` and a
 large one for the reading can be used side by side while the change is
 made; that is configuration, not code.

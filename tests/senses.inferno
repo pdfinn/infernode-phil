@@ -10,7 +10,7 @@ port=${hd ${tl ${tl $*}}}
 bind -a '#I' /net
 ndb/cs
 run $phil/philns $phil $wwb
-wwbmodel='openai http://127.0.0.1:'^$port^'/v1'
+llm='openai http://127.0.0.1:'^$port^'/v1'
 cd $phil/tests
 mkdir -p out
 for i in 1 2 3 4 5 6 7 {

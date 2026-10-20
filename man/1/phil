@@ -278,11 +278,11 @@ and this manual as
 The workbench reads prose through the Writer's Workbench: its sentence
 numbering
 .RI ( wwb/sentences ),
-its prose library, and its way to a model
-.RI ( wwb/ask ,
-and
-.B $wwbmodel
-to choose one).
+and its prose library; and reaches a model through InferNode's
+.IR ask (1),
+with
+.B $llm
+to choose one.
 If
 .B /dis/wwb
 is not in the name space,
@@ -459,13 +459,13 @@ readings, the answers or the corpus by any name; what it would see is not
 there.
 .B /net
 is an empty directory too, unless the model is an API called from here
-.RB ( $wwbmodel
+.RB ( $llm
 .B anthropic
 or
 .BR openai ),
 whose call needs it; the model writes text and runs nothing.
 A reader that is a host command
-.RB ( $wwbmodel
+.RB ( $llm
 beginning
 .BR os )
 runs outside InferNode's name space and is not confined by it.
@@ -479,7 +479,7 @@ words, as
 writes them: who read it
 .RB ( model ),
 asked how
-.RB ( "wwb/ask -s" :
+.RB ( "ask -s" :
 .BR temperature ,
 .BR maxtokens ,
 .BR thinking ),

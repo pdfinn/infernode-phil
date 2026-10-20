@@ -51,7 +51,7 @@ if {! ftest -f $f} {
 if {~ $#logic 0} {
 	logic=$f^.claims
 }
-who=`{wwb/ask -n $m}
+who=`{ask -n $m}
 if {~ $#who 0} {
 	raise 'fail:no model'
 }

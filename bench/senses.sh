@@ -2,7 +2,7 @@
 # bench/senses.sh dir results [jobs] - phil/senses on readings already
 # made: each reading in dir (name.logic.rN, beside name.md) copied into
 # results and checked there, jobs at a time (default 8), its findings
-# in name.logic.rN.senses.out.  $WWBMODEL and $MODEL as for run.sh.
+# in name.logic.rN.senses.out.  $LLM (or $WWBMODEL) and $MODEL as for run.sh.
 # What it measures is the senses step alone, on readings it did not
 # shape.
 here=$(cd "$(dirname "$0")/.." && pwd)

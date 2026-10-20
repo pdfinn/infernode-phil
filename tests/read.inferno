@@ -23,7 +23,7 @@ echo '# the reader, unblinded'
 echo | sh $peek $d
 echo '# the reader, through phil/read'
 # quoted: a name that starts with # would be a comment to sh -c
-wwbmodel='sh '^$peek^' '''^$d^''''
+llm='sh '^$peek^' '''^$d^''''
 phil/read -H 'a test' -o out/read/one /lib/phil/argue out/read/question
 echo status $status
 cat out/read/one
@@ -35,7 +35,7 @@ echo 'atom	p	the server is patched' > $d2/other.logic
 echo 'SECRET' > $d2/secret
 echo | sh $peek $d2 | grep 'saw in the readings|read the secret'
 echo '# through phil/read, under a name'
-wwbmodel='sh '^$peek^' '^$d2
+llm='sh '^$peek^' '^$d2
 phil/read -o $d2/one /lib/phil/argue out/read/question
 echo status $status
 cat $d2/one
@@ -49,13 +49,13 @@ for f in out/read/three.1 out/read/three.2 out/read/three.3 {
 }
 
 echo '# a reader that never writes a file the prover can read'
-wwbmodel='cat > /dev/null; echo ''atom	p	the server is patched'''
+llm='cat > /dev/null; echo ''atom	p	the server is patched'''
 phil/read -c phil/readable -d out/read/doc.md -o out/read/bad /lib/phil/argue out/read/question
 echo status $status
 ftest -f out/read/bad && echo the reading is kept
 
 echo '# a host command'
-wwbmodel='os sh -c ''cat > /dev/null; printf "atom\tp\tthe server is patched\nC\tS1\tp\n"'''
+llm='os sh -c ''cat > /dev/null; printf "atom\tp\tthe server is patched\nC\tS1\tp\n"'''
 phil/read -o out/read/host /lib/phil/argue out/read/question
 echo status $status
 grep '^# read ' out/read/host

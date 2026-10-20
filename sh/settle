@@ -5,7 +5,7 @@
 # first reading's atoms); the prover compares them (phil/prove -c) and,
 # where they differ, asks a question, yes or no, about a situation that
 # tells them apart.  Each question goes to a model afresh, through
-# wwb/ask with the instructions in /lib/phil/settle, after the text of
+# ask(1) with the instructions in /lib/phil/settle, after the text of
 # -p (the document's sentences, as the readers had them); with -q the
 # questions are left for a person (phil/prove -c -a answers them).  The
 # answers rule readings out; of those left, the one that, read back,
@@ -69,7 +69,7 @@ if {~ $#q 0} {
 				echo
 			}
 			grep '^# question '^$key^': ' $first^.cmp | sed 's/^# question [^:]*: //'
-		} | wwb/ask $m /lib/phil/settle > $first^.yn
+		} | ask $m /lib/phil/settle > $first^.yn
 		# a model may reason first: the answer is the last line
 		# that is only yes or no, else the reply's first word
 		yn=`{tr A-Z a-z < $first^.yn | sed -n 's/^[^a-z]*(yes|no)[^a-z]*$/\1/p' | tail -1}

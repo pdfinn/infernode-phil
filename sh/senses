@@ -1,7 +1,7 @@
 #!/dis/sh.dis
 # phil/senses [-x] [-m model] [-r a-b] -d document logicfile - whether
 # the argument read in logicfile moves between two senses of one word.
-# The argument is put to a model afresh, through wwb/ask with the
+# The argument is put to a model afresh, through ask(1) with the
 # instructions in /lib/phil/senses: the document's sentences, each
 # statement in words (phil/prove -e), and each claim (atom) more than
 # one statement uses.  The model answers two questions.  Is each claim
@@ -131,10 +131,10 @@ if {! ftest -s $logic^.words} {
 					print "  " $i
 			}
 		}' $logic^.words $logic^.shared
-} | wwb/ask $m /lib/phil/senses > $logic^.senses.new
+} | ask $m /lib/phil/senses > $logic^.senses.new
 # who answered, by what instructions, when: as a reading says it
-who=`{wwb/ask -n $m}
-how=`{wwb/ask -s $m >[2] /dev/null}
+who=`{ask -n $m}
+how=`{ask -s $m >[2] /dev/null}
 if {~ $#how 0} {
 	how='temperature=unknown maxtokens=unknown thinking=unknown'
 }

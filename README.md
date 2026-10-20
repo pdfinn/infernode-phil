@@ -135,12 +135,13 @@ entering InferNode, as wwb's `./wwb` does:
 ```sh
 ./phil prove argument.logic argument.md
 ANTHROPIC_API_KEY=... ./phil argue -k 3 -m claude-opus-5-5 chapter.md
-WWBMODEL="os claude -p --tools '' --model opus --system-prompt {system}" ./phil argue -k 3 chapter.md
+LLM="os claude -p --tools '' --model opus --system-prompt {system}" ./phil argue -k 3 chapter.md
 ```
 
-`argue` reaches a model through wwb's `wwb/ask`, and `$wwbmodel` chooses
-which: the Anthropic API, an OpenAI-compatible one, `/mnt/llm`, or a
-command. wwb's README, under "Reaching a model", has the details. The whole
+`argue`, `senses` and `claims` reach a model through InferNode's
+`ask(1)`, and `$llm` (from the host, `LLM`; `WWBMODEL` is its old name)
+chooses which: the Anthropic API, an OpenAI-compatible one, `/mnt/llm`,
+or a command. `ask(1)` has the details. The whole
 document goes to the model; for one that must not leave the machine, use
 a local model.
 
@@ -155,7 +156,7 @@ cd demo
 ../phil says reports.md                        # who the text gives its claims to
 ```
 
-These read a text with a model (`ANTHROPIC_API_KEY` set, or `WWBMODEL`
+These read a text with a model (`ANTHROPIC_API_KEY` set, or `LLM`
 naming another way), each writing a file the next reads:
 
 ```sh

@@ -11,7 +11,7 @@ port=${hd ${tl $*}}
 bind -a '#I' /net
 ndb/cs
 run $phil/philns $phil $wwb
-wwbmodel='openai http://127.0.0.1:'^$port^'/v1'
+llm='openai http://127.0.0.1:'^$port^'/v1'
 cd $phil/tests
 mkdir -p out
 # -d names another document to argue
