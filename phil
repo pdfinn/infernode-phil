@@ -88,6 +88,10 @@ if {ftest -f $t/setup} {
 			cat $t/$k > /mnt/factotum/ctl
 		}
 	}
+	# the model, served at /mnt/llm with the key factotum holds
+	if {~ $serve 1} {
+		llmsrv $serveargs
+	}
 }
 {phil/^$cmd $args} >[2=1]
 echo $status > $t/status
@@ -113,8 +117,16 @@ argue|senses|claims)
 		fi
 	done
 	echo "keys=($keys)" >> "$tmp/setup"
+	# LLM (or WWBMODEL, its old name): a backend for llmsrv to serve at
+	# /mnt/llm (anthropic [url], the default; openai url), or a command,
+	# which becomes ask(1)'s $llm
 	model=${LLM:-${WWBMODEL:-}}
-	[ -n "$model" ] && echo "llm=$(q "$model")" >> "$tmp/setup"
+	case $model in
+	''|llm|anthropic)	echo 'serve=1' >> "$tmp/setup";;
+	'anthropic '*)	printf 'serve=1\nserveargs=(-u %s)\n' "$(q "${model#anthropic }")" >> "$tmp/setup";;
+	'openai '*)	printf 'serve=1\nserveargs=(-b openai -u %s)\n' "$(q "${model#openai }")" >> "$tmp/setup";;
+	*)		echo "llm=$(q "$model")" >> "$tmp/setup";;
+	esac
 	for v in https_proxy HTTPS_PROXY no_proxy NO_PROXY; do
 		eval "val=\${$v:-}"
 		[ -n "$val" ] && echo "$v=$(q "$val")" >> "$tmp/setup"

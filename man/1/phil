@@ -458,12 +458,11 @@ so that a reader that is a program inside InferNode cannot see the other
 readings, the answers or the corpus by any name; what it would see is not
 there.
 .B /net
-is an empty directory too, unless the model is an API called from here
-.RB ( $llm
-.B anthropic
-or
-.BR openai ),
-whose call needs it; the model writes text and runs nothing.
+is an empty directory too: the model is reached through
+.BR /mnt/llm ,
+whose server
+.RI ( llmsrv )
+makes the call from its own name space with its own key.
 A reader that is a host command
 .RB ( $llm
 beginning
@@ -494,15 +493,15 @@ how confined
 or
 .B none
 for a host command) and with what network
-.RB ( net=none ;
-.BR api ,
-kept for the API's call;
-.BR host ).
+.RB ( net=none ,
+or
+.B host
+for a host command).
 A value with a blank in it is quoted as
 .IR sh (1)
 quotes it.
 .EX
-	# read model=claude-opus-5-5 temperature=default maxtokens=8192 thinking=off prompt=/lib/phil/argue prompthash=7f3a9c1e2b4d date=2026-10-19 confined=namespace net=api
+	# read model=claude-opus-5-5 temperature=0.70 maxtokens=8192 thinking=disabled prompt=/lib/phil/argue prompthash=7f3a9c1e2b4d date=2026-10-19 confined=namespace net=none
 .EE
 .B -K
 names atom lines to put before the reader's own.

@@ -49,7 +49,7 @@ dontwant 'could not read' 'nor sent back' out
 want '# the claims of data/claims/source.md as fake-model read them' 'the reading says what it is' out
 want 'P1	S1	¬abstract_brutes	kind empirical' 'it is kept in logic'"'"'s symbols' out
 want 'P2	S2	words_signs	kind conceptual' 'every claim is kept' out
-want '# read model=fake-model temperature=default maxtokens=8192 thinking=off prompt=/lib/phil/claims prompthash=' 'who read it, asked how, by what prompt' out
+want '# read model=fake-model temperature=0.70 maxtokens=8192 thinking=disabled prompt=/lib/phil/claims prompthash=' 'who read it, asked how, by what prompt' out
 dontwant 'Here is the file' 'the model'"'"'s talk is dropped' out
 [ "$(sed -n '/^# files/,$p' "$tmp/out" | grep -c 'source.claims.')" = 0 ] || { echo 'FAIL: working files left'; fail=1; }
 if [ $fail = 0 ]; then

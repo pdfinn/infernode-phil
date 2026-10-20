@@ -139,9 +139,11 @@ LLM="os claude -p --tools '' --model opus --system-prompt {system}" ./phil argue
 ```
 
 `argue`, `senses` and `claims` reach a model through InferNode's
-`ask(1)`, and `$llm` (from the host, `LLM`; `WWBMODEL` is its old name)
-chooses which: the Anthropic API, an OpenAI-compatible one, `/mnt/llm`,
-or a command. `ask(1)` has the details. The whole
+`ask(1)`: the model at `/mnt/llm`, or a command. From the host, `LLM`
+(`WWBMODEL` is its old name) chooses: `anthropic [url]`, the default, or
+`openai url`, which `./phil` has `llmsrv` serve at `/mnt/llm` with the
+key; anything else is a command, `ask`'s `$llm`. A reader never has the
+network or the key: the server does. The whole
 document goes to the model; for one that must not leave the machine, use
 a local model.
 

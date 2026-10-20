@@ -10,7 +10,8 @@ port=${hd ${tl ${tl $*}}}
 bind -a '#I' /net
 ndb/cs
 run $phil/philns $phil $wwb
-llm='openai http://127.0.0.1:'^$port^'/v1'
+# the model: llmsrv, serving the fake API at /mnt/llm
+llmsrv -b openai -u http://127.0.0.1:^$port^/v1 -M fake-model
 cd $phil/tests
 mkdir -p out
 rm -f out/source.claims

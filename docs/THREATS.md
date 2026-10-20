@@ -54,9 +54,9 @@ premise" or "report that Schmitt holds X".
   the caller's with the readings' directory, `/n` and `/net` made empty
   and no device attachable (`pctl nodevs`: `tests/read_test.sh`); it is
   given the prompt, the text and the atoms. It has no corpus, no other
-  readings, and no network, except that where the model is an API
-  called from inside, `llmapi` keeps `/net` for that call; the model
-  writes text and runs nothing. Denial is absence.
+  readings, and no network: the model is reached through `/mnt/llm`,
+  whose server (`llmsrv`) makes the call from its own name space with
+  its own key. Denial is absence.
 - **The reading is checked by rule.** `readable` rejects what the
   parser cannot read; the read-back reports a condition turned round,
   a negation lost, an atom none of whose words the sentence has
@@ -290,6 +290,5 @@ In order of what they close:
   built.
 - **A reader cannot open `/net`, the corpus directory, another
   reading, or `answers`.** Done: `tests/read_test.sh`, a reader that is
-  a program sees an empty `/net`. Where the model is an API called from
-  inside (`anthropic`, `openai`), `/net` is kept for `llmapi`'s call;
-  the model writes text and runs nothing, and the line says so.
+  a program sees an empty `/net`, whatever the model; the model is
+  `/mnt/llm`'s server's to call.

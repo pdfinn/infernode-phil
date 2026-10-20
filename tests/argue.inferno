@@ -1,6 +1,6 @@
 #!/dis/sh.dis
 # argue.inferno phildir wwbdir port - phil/argue calling an OpenAI-compatible
-# API directly (no llmsrv), tests/fakellm.py, answering with
+# API through llmsrv at /mnt/llm, tests/fakellm.py, answering with
 # data/argue/reply; run by tests/argue_test.sh.
 load std
 
@@ -11,7 +11,8 @@ port=${hd ${tl $*}}
 bind -a '#I' /net
 ndb/cs
 run $phil/philns $phil $wwb
-llm='openai http://127.0.0.1:'^$port^'/v1'
+# the model: llmsrv, serving the fake API at /mnt/llm
+llmsrv -b openai -u http://127.0.0.1:^$port^/v1 -M fake-model
 cd $phil/tests
 mkdir -p out
 # -d names another document to argue
