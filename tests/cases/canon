@@ -1,0 +1,4 @@
+# phil/canon: citations by Stephanus, Bekker, Akademie, A/B, the Summa
+# and Diels-Kranz, resolved against lib/phil/canon, or refused
+load std
+phil/canon -t ../lib/phil/canon data/canon/cites.md

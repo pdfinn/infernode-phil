@@ -1,0 +1,92 @@
+# phil/canon's works: name, urn, system, first, last, author, title; a tab between.
+# Plato and Aristotle from PerseusDL canonical-greekLit (CC BY-SA 4.0), master, by bench/tools/canon.py;
+# first and last are the first and last passage the Greek edition marks.
+Apology	urn:cts:greekLit:tlg0059.tlg002	stephanus	17a	42a	Plato	Apology
+Ap.	urn:cts:greekLit:tlg0059.tlg002	stephanus	17a	42a	Plato	Apology
+Apol.	urn:cts:greekLit:tlg0059.tlg002	stephanus	17a	42a	Plato	Apology
+Crito	urn:cts:greekLit:tlg0059.tlg003	stephanus	43a	54e	Plato	Crito
+Cri.	urn:cts:greekLit:tlg0059.tlg003	stephanus	43a	54e	Plato	Crito
+Phaedo	urn:cts:greekLit:tlg0059.tlg004	stephanus	57a	118a	Plato	Phaedo
+Phd.	urn:cts:greekLit:tlg0059.tlg004	stephanus	57a	118a	Plato	Phaedo
+Theaetetus	urn:cts:greekLit:tlg0059.tlg006	stephanus	142a	210d	Plato	Theaetetus
+Tht.	urn:cts:greekLit:tlg0059.tlg006	stephanus	142a	210d	Plato	Theaetetus
+Sophist	urn:cts:greekLit:tlg0059.tlg007	stephanus	216a	268d	Plato	Sophist
+Sph.	urn:cts:greekLit:tlg0059.tlg007	stephanus	216a	268d	Plato	Sophist
+Soph.	urn:cts:greekLit:tlg0059.tlg007	stephanus	216a	268d	Plato	Sophist
+Statesman	urn:cts:greekLit:tlg0059.tlg008	stephanus	257a	311c	Plato	Statesman
+Plt.	urn:cts:greekLit:tlg0059.tlg008	stephanus	257a	311c	Plato	Statesman
+Parmenides	urn:cts:greekLit:tlg0059.tlg009	stephanus	126a	166c	Plato	Parmenides
+Prm.	urn:cts:greekLit:tlg0059.tlg009	stephanus	126a	166c	Plato	Parmenides
+Parm.	urn:cts:greekLit:tlg0059.tlg009	stephanus	126a	166c	Plato	Parmenides
+Philebus	urn:cts:greekLit:tlg0059.tlg010	stephanus	11a	67b	Plato	Philebus
+Phlb.	urn:cts:greekLit:tlg0059.tlg010	stephanus	11a	67b	Plato	Philebus
+Phil.	urn:cts:greekLit:tlg0059.tlg010	stephanus	11a	67b	Plato	Philebus
+Symposium	urn:cts:greekLit:tlg0059.tlg011	stephanus	172a	223d	Plato	Symposium
+Symp.	urn:cts:greekLit:tlg0059.tlg011	stephanus	172a	223d	Plato	Symposium
+Phaedrus	urn:cts:greekLit:tlg0059.tlg012	stephanus	227a	279c	Plato	Phaedrus
+Phdr.	urn:cts:greekLit:tlg0059.tlg012	stephanus	227a	279c	Plato	Phaedrus
+Alcibiades 1	urn:cts:greekLit:tlg0059.tlg013	stephanus	103a	135e	Plato	Alcibiades 1
+Alcibiades 2	urn:cts:greekLit:tlg0059.tlg014	stephanus	138a	151c	Plato	Alcibiades 2
+Hipparchus	urn:cts:greekLit:tlg0059.tlg015	stephanus	225a	232c	Plato	Hipparchus
+Lovers	urn:cts:greekLit:tlg0059.tlg016	stephanus	132a	139a	Plato	Lovers
+Theages	urn:cts:greekLit:tlg0059.tlg017	stephanus	121a	131a	Plato	Theages
+Charmides	urn:cts:greekLit:tlg0059.tlg018	stephanus	153a	176d	Plato	Charmides
+Laches	urn:cts:greekLit:tlg0059.tlg019	stephanus	178a	201c	Plato	Laches
+Lysis	urn:cts:greekLit:tlg0059.tlg020	stephanus	203a	223b	Plato	Lysis
+Euthydemus	urn:cts:greekLit:tlg0059.tlg021	stephanus	271a	307c	Plato	Euthydemus
+Euthd.	urn:cts:greekLit:tlg0059.tlg021	stephanus	271a	307c	Plato	Euthydemus
+Protagoras	urn:cts:greekLit:tlg0059.tlg022	stephanus	309a	362a	Plato	Protagoras
+Prt.	urn:cts:greekLit:tlg0059.tlg022	stephanus	309a	362a	Plato	Protagoras
+Prot.	urn:cts:greekLit:tlg0059.tlg022	stephanus	309a	362a	Plato	Protagoras
+Gorgias	urn:cts:greekLit:tlg0059.tlg023	stephanus	447a	527e	Plato	Gorgias
+Grg.	urn:cts:greekLit:tlg0059.tlg023	stephanus	447a	527e	Plato	Gorgias
+Gorg.	urn:cts:greekLit:tlg0059.tlg023	stephanus	447a	527e	Plato	Gorgias
+Meno	urn:cts:greekLit:tlg0059.tlg024	stephanus	70a	100c	Plato	Meno
+Men.	urn:cts:greekLit:tlg0059.tlg024	stephanus	70a	100c	Plato	Meno
+Greater Hippias	urn:cts:greekLit:tlg0059.tlg025	stephanus	281a	304e	Plato	Greater Hippias
+Lesser Hippias	urn:cts:greekLit:tlg0059.tlg026	stephanus	363a	376c	Plato	Lesser Hippias
+Ion	urn:cts:greekLit:tlg0059.tlg027	stephanus	530a	542b	Plato	Ion
+Menexenus	urn:cts:greekLit:tlg0059.tlg028	stephanus	234a	249e	Plato	Menexenus
+Cleitophon	urn:cts:greekLit:tlg0059.tlg029	stephanus	406a	410e	Plato	Cleitophon
+Republic	urn:cts:greekLit:tlg0059.tlg030	stephanus	327a	621d	Plato	Republic
+Rep.	urn:cts:greekLit:tlg0059.tlg030	stephanus	327a	621d	Plato	Republic
+Resp.	urn:cts:greekLit:tlg0059.tlg030	stephanus	327a	621d	Plato	Republic
+Timaeus	urn:cts:greekLit:tlg0059.tlg031	stephanus	17a	92c	Plato	Timaeus
+Ti.	urn:cts:greekLit:tlg0059.tlg031	stephanus	17a	92c	Plato	Timaeus
+Tim.	urn:cts:greekLit:tlg0059.tlg031	stephanus	17a	92c	Plato	Timaeus
+Critias	urn:cts:greekLit:tlg0059.tlg032	stephanus	106a	121c	Plato	Critias
+Minos	urn:cts:greekLit:tlg0059.tlg033	stephanus	313a	321d	Plato	Minos
+Laws	urn:cts:greekLit:tlg0059.tlg034	stephanus	624a	969d	Plato	Laws
+Leg.	urn:cts:greekLit:tlg0059.tlg034	stephanus	624a	969d	Plato	Laws
+Epinomis	urn:cts:greekLit:tlg0059.tlg035	stephanus	973a	992e	Plato	Epinomis
+Letters	urn:cts:greekLit:tlg0059.tlg036	stephanus	309a	363e	Plato	Letters
+Eudemian Ethics	urn:cts:greekLit:tlg0086.tlg009	bekker	1214a1	1249b25	Aristotle	Eudemian Ethics
+EE	urn:cts:greekLit:tlg0086.tlg009	bekker	1214a1	1249b25	Aristotle	Eudemian Ethics
+Eth. Eud.	urn:cts:greekLit:tlg0086.tlg009	bekker	1214a1	1249b25	Aristotle	Eudemian Ethics
+Nicomachean Ethics	urn:cts:greekLit:tlg0086.tlg010	bekker	1094a1	1181b20	Aristotle	Nicomachean Ethics
+NE	urn:cts:greekLit:tlg0086.tlg010	bekker	1094a1	1181b20	Aristotle	Nicomachean Ethics
+EN	urn:cts:greekLit:tlg0086.tlg010	bekker	1094a1	1181b20	Aristotle	Nicomachean Ethics
+Eth. Nic.	urn:cts:greekLit:tlg0086.tlg010	bekker	1094a1	1181b20	Aristotle	Nicomachean Ethics
+Nic. Eth.	urn:cts:greekLit:tlg0086.tlg010	bekker	1094a1	1181b20	Aristotle	Nicomachean Ethics
+Metaphysics	urn:cts:greekLit:tlg0086.tlg025	bekker	980a21	1093b25	Aristotle	Metaphysics
+Met.	urn:cts:greekLit:tlg0086.tlg025	bekker	980a21	1093b25	Aristotle	Metaphysics
+Metaph.	urn:cts:greekLit:tlg0086.tlg025	bekker	980a21	1093b25	Aristotle	Metaphysics
+Economics	urn:cts:greekLit:tlg0086.tlg029	bekker	1343a1	1353b20	Aristotle	Economics
+Poetics	urn:cts:greekLit:tlg0086.tlg034	bekker	1447a8	1462b15	Aristotle	Poetics
+Poet.	urn:cts:greekLit:tlg0086.tlg034	bekker	1447a8	1462b15	Aristotle	Poetics
+Politics	urn:cts:greekLit:tlg0086.tlg035	bekker	1252a1	1342b30	Aristotle	Politics
+Pol.	urn:cts:greekLit:tlg0086.tlg035	bekker	1252a1	1342b30	Aristotle	Politics
+Rhetoric	urn:cts:greekLit:tlg0086.tlg038	bekker	1354a1	1420a5	Aristotle	Rhetoric
+Rhet.	urn:cts:greekLit:tlg0086.tlg038	bekker	1354a1	1420a5	Aristotle	Rhetoric
+Critique of Pure Reason	-	krv	A1/B1	A856/B884	Kant	Critique of Pure Reason
+KrV	-	krv	A1/B1	A856/B884	Kant	Critique of Pure Reason
+CPR	-	krv	A1/B1	A856/B884	Kant	Critique of Pure Reason
+AA	-	aa	1:1	29:1	Kant	Gesammelte Schriften (Akademie-Ausgabe)
+Ak	-	aa	1:1	29:1	Kant	Gesammelte Schriften (Akademie-Ausgabe)
+Ak.	-	aa	1:1	29:1	Kant	Gesammelte Schriften (Akademie-Ausgabe)
+Groundwork	-	aa	4:385	4:463	Kant	Groundwork of the Metaphysics of Morals
+GMS	-	aa	4:385	4:463	Kant	Groundwork of the Metaphysics of Morals
+Summa Theologica	-	summa	I q.1	III q.90	Aquinas	Summa Theologiae
+Summa Theologiae	-	summa	I q.1	III q.90	Aquinas	Summa Theologiae
+ST	-	summa	I q.1	III q.90	Aquinas	Summa Theologiae
+DK	-	dk	1	90	Diels-Kranz	Die Fragmente der Vorsokratiker

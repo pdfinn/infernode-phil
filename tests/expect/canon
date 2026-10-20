@@ -1,0 +1,19 @@
+data/canon/cites.md:1: canon/resolved: Republic 514a: Plato, Republic, Stephanus 514a, urn:cts:greekLit:tlg0059.tlg030:514a
+data/canon/cites.md:1: canon/resolved: Gorgias 474c-475c: Plato, Gorgias, Stephanus 474c-475c, urn:cts:greekLit:tlg0059.tlg023:474c
+data/canon/cites.md:2: canon/resolved: Apology 40c-40e: Plato, Apology, Stephanus 40c-40e, urn:cts:greekLit:tlg0059.tlg002:40c
+data/canon/cites.md:2: canon/resolved: Rep. 349b-350c: Plato, Republic, Stephanus 349b-350c, urn:cts:greekLit:tlg0059.tlg030:349b
+data/canon/cites.md:3: canon/resolved: Phaedo 70c-72e: Plato, Phaedo, Stephanus 70c-72e, urn:cts:greekLit:tlg0059.tlg004:70c
+data/canon/cites.md:3: canon/resolved: Meno 80d-80e: Plato, Meno, Stephanus 80d-80e, urn:cts:greekLit:tlg0059.tlg024:80d
+data/canon/cites.md:4: canon/resolved: Metaphysics 1003a21: Aristotle, Metaphysics, Bekker 1003a21, urn:cts:greekLit:tlg0086.tlg025
+data/canon/cites.md:5: canon/resolved: Nicomachean Ethics 1097b22-1098a20: Aristotle, Nicomachean Ethics, Bekker 1097b22-1098a20, urn:cts:greekLit:tlg0086.tlg010
+data/canon/cites.md:6: canon/resolved: Summa Theologica I q.2 a.3: Aquinas, Summa Theologiae, I q.2 a.3
+data/canon/cites.md:7: canon/resolved: Ak 4:421: Kant, Gesammelte Schriften (Akademie-Ausgabe), Akademie-Ausgabe 4:421
+data/canon/cites.md:7: canon/resolved: GMS 4:421: Kant, Groundwork of the Metaphysics of Morals, Akademie-Ausgabe 4:421
+data/canon/cites.md:7: canon/resolved: KrV A51/B75: Kant, Critique of Pure Reason, A51/B75
+data/canon/cites.md:8: canon/resolved: DK 22 B 30: Diels-Kranz, Die Fragmente der Vorsokratiker, 22 B 30
+data/canon/cites.md:9: canon/no-such-passage: Apology 52a: Plato, Apology runs from 17a to 42a
+data/canon/cites.md:9: canon/no-such-passage: Metaphysics 1200a3: Aristotle, Metaphysics runs from 980a21 to 1093b25
+data/canon/cites.md:9: canon/no-such-passage: KrV A900: the first edition runs to A856, the second to B884
+data/canon/cites.md:9: canon/no-such-passage: ST I q.150 a.1: Aquinas, Summa Theologiae: part I has 119 questions
+data/canon/cites.md:9: canon/no-such-passage: DK 95 B 1: Diels-Kranz has 90 chapters
+data/canon/cites.md:10: canon/unknown: Xen. 23a: an abbreviation the table does not have

@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree, audit, skeleton, shape, align \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree, audit, skeleton, shape, align, canon \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [

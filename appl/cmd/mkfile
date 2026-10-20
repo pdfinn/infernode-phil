@@ -3,6 +3,7 @@
 TARG=\
 	align.dis\
 	audit.dis\
+	canon.dis\
 	corpus.dis\
 	join.dis\
 	kind.dis\
