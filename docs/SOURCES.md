@@ -1,6 +1,11 @@
 # Sources: references resolved, citations by canon, texts by name
 
-A design sketch, before code. Status: proposed; nothing built. What
+A design sketch, before code. Status: `phil/canon` is built, by rule,
+over a table of works built from PerseusDL (`lib/phil/canon`,
+`bench/tools/canon.py`): every Plato dialogue and the seven works of
+Aristotle in canonical-greekLit; Aristotle's logical works, *Physics* and
+*De Anima* are not there and wait for Open Greek and Latin. The rest is
+proposed. What
 ϕwb does not yet do, and what the rest of the field does worst: say
 whether a reference is on record, whether a canonical citation names a
 passage that exists, and whether a quotation matches its edition. This

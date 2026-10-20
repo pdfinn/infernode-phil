@@ -48,6 +48,7 @@ Xenith and acme open it with button 3 and wwb's `gate`, `delta` and
 | `phil/skeleton` | a reading by rule, with no model: from wwb's parse, the conclusion by its marker, conditionals, disjunctions, denials, necessity and ought, and quantified subjects, an atom to each clause; a reader of another kind to set beside a model's |
 | `phil/shape` | the form of each statement, atoms as letters, and its main connective: two readings whose atoms differ compared by sentence |
 | `phil/align` | which atoms of two readings of one text are one claim, by rule: paired by the form of their statements at each sentence, and by their meanings' words where the form says nothing; `negates` where one meaning denies; proposals in a corpus's `align` lines |
+| `phil/canon` | canonical citations (Stephanus, Bekker, KrV A/B, Akademie, the Summa, Diels-Kranz) resolved against a table of works built from PerseusDL, or refused: no such passage, or an abbreviation it does not know |
 
 The manual is `man 1 phil`. The logic file is described in
 [docs/ARGUMENT-FORMAT.md](docs/ARGUMENT-FORMAT.md), and what the tools

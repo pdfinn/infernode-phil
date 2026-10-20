@@ -246,6 +246,14 @@ phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses
 ]
 .I a.logic b.logic
 .br
+.B phil/canon
+[
+.B -t
+.I table
+] [
+.I file ...
+]
+.br
 .B phil/audit
 [
 .B -h
@@ -990,6 +998,43 @@ Nothing is decided: the lines are proposals, for
 .I settle
 or a person.
 For two works, which share no sentences, only the words propose.
+.TP
+.B phil/canon
+Canonical citations in prose, read by rule and checked against the
+works they cite: Plato by Stephanus page and section
+.RI ( "Republic 514a" ,
+.IR "Rep. I 349b-350c" ,
+.IR "Apology 40c-e" ),
+Aristotle by Bekker page, column and line
+.RI ( "Metaphysics 1003a21" ),
+the
+.I Critique of Pure Reason
+by its editions
+.RI ( "KrV A51/B75" ),
+Kant's other works by the Akademie edition
+.RI ( "Ak 4:421" ),
+the
+.I Summa
+by part, question and article
+.RI ( "ST I q.2 a.3" ),
+the Presocratics by Diels-Kranz
+.RI ( "DK 22 B 30" ).
+The works, their names and abbreviations, and the first and last passage
+of each are
+.BR /lib/phil/canon 's
+.RB ( -t
+another): name, urn, system, first, last, author, title, a tab between;
+Plato's and Aristotle's are built from PerseusDL's editions
+.RB ( bench/tools/canon.py ).
+A finding at the citation's line:
+.B canon/resolved
+with the passage and its CTS URN,
+.B canon/no-such-passage
+with where the work runs, or
+.B canon/unknown
+for an abbreviation the table lacks before what reads as a page.
+A Bekker citation is checked by page and column; a title with no
+passage after it is not a citation.
 .TP
 .B phil/prove
 Decides whether an argument's conclusion follows from its premises.
