@@ -1,0 +1,11 @@
+# the argument of judge-interest.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	interest_case(x)	x: have interest in the case before her
+atom	judge(x)	x: judge
+atom	tak_interest_case(x)	x: takes an interest in the case before her attending to each detail of it
+atom	judge_worthy_name(x)	x: judge worthy of the name
+atom	sit_judgment(x)	x: may sit in judgment
+P1	S1	(all x: judge(x) -> []!interest_case(x))
+P2	S2	(all x: judge_worthy_name(x) -> tak_interest_case(x))
+C	S3	(all x: judge_worthy_name(x) -> !sit_judgment(x))
+# rules tool=phil/skeleton date=2026-10-20

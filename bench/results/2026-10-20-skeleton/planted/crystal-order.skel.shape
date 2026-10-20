@@ -1,0 +1,3 @@
+crystal-order.skel.logic	P1	S1	some	(some x: a)
+crystal-order.skel.logic	P2	S2	atom	a
+crystal-order.skel.logic	C	S3	some	(some x: a)

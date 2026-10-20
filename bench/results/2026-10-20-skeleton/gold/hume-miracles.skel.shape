@@ -1,0 +1,8 @@
+hume-miracles.skel.logic	P1	S1	all	(all x: a -> b)
+hume-miracles.skel.logic	P2	S1	all	(all x: a -> b)
+hume-miracles.skel.logic	P3	S2	atom	a
+hume-miracles.skel.logic	P4	S3	->	(a -> (all x: !b))
+hume-miracles.skel.logic	P5	S4	atom	a
+hume-miracles.skel.logic	P6	S5	atom	a
+hume-miracles.skel.logic	P7	S6	[]	[]a
+hume-miracles.skel.logic	C	S7	|	(((all x: a -> b) & ((all x: a -> b) -> (all x: c -> d)) & (all x: c -> d)) | ((all x: e -> f) | g))

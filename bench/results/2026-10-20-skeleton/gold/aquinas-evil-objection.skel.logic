@@ -1,0 +1,13 @@
+# the argument of aquinas-evil-objection.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	objection_1_seem	Objection 1 It seems that God does not exist because if one of two contraries be infinite the other would be altogether destroyed
+atom	mean_infinite_goodness(x)	x: but means that He is infinite goodness
+atom	exist(x)	x: existed
+atom	discoverable(x)	x: there would be discoverable
+atom	evil(x)	x: evil
+atom	evil_world	there is evil in the world
+P1	S1	objection_1_seem
+P2	S2	mean_infinite_goodness(word_god)
+P3	S3	(exist(god) -> (all x: evil(x) -> !discoverable(x)))
+P4	S3	evil_world
+C	S4	!exist(god)
+# rules tool=phil/skeleton date=2026-10-20

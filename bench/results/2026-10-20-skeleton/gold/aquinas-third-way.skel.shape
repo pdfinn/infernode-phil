@@ -1,0 +1,15 @@
+aquinas-third-way.skel.logic	P1	S1	atom	a
+aquinas-third-way.skel.logic	P2	S1	atom	a
+aquinas-third-way.skel.logic	P3	S2	&	(a & (a -> b) & b)
+aquinas-third-way.skel.logic	P4	S2	atom	a
+aquinas-third-way.skel.logic	P5	S3	atom	a
+aquinas-third-way.skel.logic	P6	S4	->	((all x: a) -> (all x: !b))
+aquinas-third-way.skel.logic	P7	S5	->	(a -> (all x: !b))
+aquinas-third-way.skel.logic	P8	S6	atom	a
+aquinas-third-way.skel.logic	P9	S6	all	(all x: !a)
+aquinas-third-way.skel.logic	P10	S7	all	(all x: a -> !b)
+aquinas-third-way.skel.logic	P11	S7	[]	[]a
+aquinas-third-way.skel.logic	P12	S8	all	(all x: a -> b)
+aquinas-third-way.skel.logic	P13	S9	atom	a
+aquinas-third-way.skel.logic	C	S10	!	!a
+aquinas-third-way.skel.logic	P14	S11	all	(all x: a -> b)

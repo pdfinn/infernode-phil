@@ -1,0 +1,12 @@
+# the argument of hume-necessary-being.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	impli_contradiction(x)	x: implies a contradiction
+atom	demonstrable(x)	x: is demonstrable
+atom	conceive_existent_conceive	Whatever we conceive as existent we can also conceive as non-existent
+atom	nonexistence_impli_contradiction(x)	x: there is therefore whose non-existence implies a contradiction
+atom	existence_demonstrable(x)	x: being whose existence is demonstrable
+P1	S1	(!impli_contradiction(contrary) -> (all x: !demonstrable(x)))
+P2	S2	(all x: !impli_contradiction(x))
+P3	S3	conceive_existent_conceive
+P4	S4	(all x: !nonexistence_impli_contradiction(x))
+C	S5	(all x: existence_demonstrable(x) -> !true(x))
+# rules tool=phil/skeleton date=2026-10-20

@@ -1,0 +1,11 @@
+# the argument of common-library.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	borrow_take_owner	borrow is take with an owner's leave
+atom	borrow_thing_own(x)	x: can borrow a thing that no one owns
+atom	own(x)	x: is owned by one
+atom	borrow_book_common(x)	x: can borrow a book from the common library those who take its books take them on some other footing
+P1	S1	borrow_take_owner
+P2	S1	(borrow_take_owner -> (all x: !borrow_thing_own(x)))
+P3	S1	(all x: !borrow_thing_own(x))
+P4	S2	!own(common_library_town)
+C	S3	(all x: !borrow_book_common(x))
+# rules tool=phil/skeleton date=2026-10-20

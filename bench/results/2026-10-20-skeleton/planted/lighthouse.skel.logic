@@ -1,0 +1,10 @@
+# the argument of lighthouse.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	lit_lamp_night(x)	x: lit the lamp that night or the ship was warned by the bell
+atom	keeper_lit_lamp	had the keeper lit the lamp the log would record it and the log records nothing for that night
+atom	warn_bell(x)	x: was warned by the bell
+atom	awake(x)	x: then was awake
+P1	S1	lit_lamp_night(keeper)
+P2	S2	keeper_lit_lamp
+P3	S3	(warn_bell(ship) -> awake(ringer))
+C	S4	awake(ringer)
+# rules tool=phil/skeleton date=2026-10-20

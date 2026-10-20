@@ -1,0 +1,3 @@
+judge-interest.skel.logic	P1	S1	all	(all x: a -> []!b)
+judge-interest.skel.logic	P2	S2	all	(all x: a -> b)
+judge-interest.skel.logic	C	S3	all	(all x: a -> !b)

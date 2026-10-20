@@ -1,0 +1,7 @@
+# the argument of crystal-order.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	order_gave_order(x)	x: Wherever there is order gave the order
+atom	crystal_cave_grow	the crystals in the cave grow in perfect order face upon face
+P1	S1	(some x: order_gave_order(x))
+P2	S2	crystal_cave_grow
+C	S3	(some x: order_gave_order(x))
+# rules tool=phil/skeleton date=2026-10-20

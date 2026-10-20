@@ -1,0 +1,11 @@
+# the argument of oracle.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	oracle_see_com	it be that whatever the oracle sees comes to pass
+atom	seen_bridge_fall(x)	x: has seen the bridge fall
+atom	fall(x)	x: fall
+atom	save(x)	x: can save it
+P1	S1	[]oracle_see_com
+P2	S2	seen_bridge_fall(oracle)
+P3	S3	[]fall(bridge)
+C	S3	(all x: !save(x))
+# rules tool=phil/skeleton date=2026-10-20

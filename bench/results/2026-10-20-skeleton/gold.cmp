@@ -1,0 +1,92 @@
+passages: 26
+a connective in the other reading found by rule: 26 of 86 (30%)
+a connective by rule that the other reading has: 26 of 64 (40%)
+the same sentence concluded: 18 of 26 (69%)
+
+| Passage | Sentence | By rule | The other reading |
+|---|---|---|---|
+| apology-death | - | `conclusion at S5` | `conclusion at S1` |
+| apology-death | S3 | `((a & b) -> c); !a` | `a` |
+| aquinas-economy-objection | S2 | `a` | `a -> !b` |
+| aquinas-economy-objection | S4 | `a; (all x: a -> b)` | `a & b` |
+| aquinas-economy-objection | S5 | `(all x: a -> !b)` | `!a` |
+| aquinas-evil-objection | S1 | `a` | `a -> !b` |
+| aquinas-evil-objection | S2 | `a` | `a -> b` |
+| aquinas-first-way | S3 | `(all x: a)` | `a; a` |
+| aquinas-first-way | S5 | `(all x: !a)` | `a` |
+| aquinas-first-way | S9 | `a; ((all x: a -> ought b) & c)` | `!<>a` |
+| aquinas-first-way | S10 | `(all x: []a)` | `a` |
+| aquinas-first-way | S11 | `a` | `a & b -> c` |
+| aquinas-first-way | S12 | `(all x: a -> !b); ((all x: a -> !b) -> ((c & (c -> d) & d) & ((c & (c -> d) & d) -> !e) & !e)); ((a & (a -> b) & b) & ((a & (a -> b) & b) -> !c) & !c)` | `a -> !b; a; a -> (!b -> !c); !a` |
+| aquinas-first-way | S13 | `a; (all x: a)` | `a -> b; a & b` |
+| aquinas-fourth-way | S3 | `(all x: a -> b); ((all x: a -> b) -> c); a` | `a -> b; a; a -> b; a -> b; a` |
+| aquinas-fourth-way | S4 | `a` | `a -> b` |
+| aquinas-fourth-way | S5 | `(some x: []a); a` | `a; a -> b; a` |
+| aquinas-ontological-objection | S2 | `a` | `a -> b; a` |
+| aquinas-ontological-objection | S7 | `a` | `a -> b; a -> b` |
+| aquinas-second-way | S3 | `(all x: a -> !b)` | `[](a -> b); !<>a; !<>a` |
+| aquinas-second-way | S4 | `!a; a; a` | `[](a & b); !a` |
+| aquinas-second-way | S5 | `a` | `[](a & !b -> !c) & [](d & !c -> !e)` |
+| aquinas-second-way | S6 | `((all x: a -> !b) -> (all x: c -> !b))` | `[](!a -> !b & !c)` |
+| aquinas-second-way | S7 | `(a -> (all x: b -> !c))` | `[](a -> !b); a & b` |
+| aquinas-second-way | S8 | `a` | `a; a & b` |
+| aquinas-third-way | - | `conclusion at S10` | `conclusion at S11` |
+| aquinas-third-way | S2 | `(a & (a -> b) & b); a` | `a; a -> b` |
+| aquinas-third-way | S6 | `a; (all x: !a)` | `!a` |
+| aquinas-third-way | S7 | `(all x: a -> !b); []a` | `!a; a` |
+| aquinas-third-way | S8 | `(all x: a -> b)` | `a -> b \| c` |
+| aquinas-third-way | S9 | `a` | `!a` |
+| aquinas-third-way | S10 | `!a` | `a` |
+| aquinas-third-way | S11 | `(all x: a -> b)` | `a -> b; a` |
+| aristotle-chief-good | S1 | `(all x: a -> b)` | `all x: (a \| b \| c \| d -> some y: (e & f)); some y: (a & all x: (b \| c \| d \| e -> f))` |
+| berkeley-heat-pain | S3 | `(all x: !a)` | `a` |
+| berkeley-heat-pain | S7 | `a` | `all x: (!a -> !b)` |
+| berkeley-heat-pain | S11 | `a` | `!a` |
+| berkeley-heat-pain | S17 | `!a; (!a -> b); a` | `!a` |
+| berkeley-master | - | `conclusion at S6` | `conclusion at S4` |
+| berkeley-master | S1 | `a` | `a & (a -> b)` |
+| berkeley-master | S2 | `a` | `a -> b` |
+| berkeley-master | S3 | `(a \| b)` | `a` |
+| berkeley-master | S4 | `a; !a` | `a & b & !(c -> d); !a` |
+| berkeley-master | S5 | `a` | `a -> b; a; !a` |
+| berkeley-principles-4 | - | `conclusion at S3` | `conclusion at S2` |
+| berkeley-principles-4 | S2 | `(all x: a -> b); (all x: a)` | `a` |
+| berkeley-principles-4 | S3 | `a` | `all x: (a -> b); all x: (a -> b); all x: (a -> !b); all x: (a -> !b)` |
+| boethius-foreknowledge | - | `conclusion at S4` | `conclusion at S1` |
+| boethius-foreknowledge | S1 | `a; ought a` | `a -> !b` |
+| boethius-foreknowledge | S3 | `a` | `a; a & b -> !c` |
+| descartes-cogito | S1 | `a` | `[](a -> b); a; a; P a` |
+| descartes-real-distinction | S1 | `(a & (a -> b) & b); !a` | `a & b; !a; a -> b; a; !a -> !b; a & b & c; a & b & c` |
+| hume-induction | - | `conclusion at S9` | `conclusion at S7` |
+| hume-induction | S1 | `(all x: a -> b)` | `a -> b \| c` |
+| hume-induction | S2 | `a; (!a & (!a -> (all x: b -> c)) & (all x: b -> c))` | `!a -> !b; !a` |
+| hume-induction | S5 | `(all x: a); (a & !b & !c)` | `a -> !b` |
+| hume-induction | S7 | `(all x: a -> !b)` | `!a` |
+| hume-induction | S8 | `a; a` | `a & b & c` |
+| hume-induction | S9 | `[]a; a` | `a & b & c -> d; !a` |
+| hume-miracles | S3 | `(a -> (all x: !b))` | `all x: (a -> !b)` |
+| hume-miracles | S6 | `[]a` | `all x: (a -> b)` |
+| hume-miracles | S7 | `(((all x: a -> b) & ((all x: a -> b) -> (all x: c -> d)) & (all x: c -> d)) \| ((all x: e -> f) \| g))` | `all x: (a -> b); all x: (a -> (b -> c)); all x: (a -> b & (c -> d))` |
+| hume-motivation | S3 | `a` | `!a` |
+| hume-necessary-being | S1 | `(!a -> (all x: !b))` | `all x: (a -> b)` |
+| hume-necessary-being | S3 | `a` | `all x: (a -> b)` |
+| locke-labour | - | `conclusion at S4` | `conclusion at S3` |
+| locke-labour | S1 | `a; (all x: a -> b)` | `a & b` |
+| locke-labour | S3 | `a; (a & b & c)` | `a -> b; a -> b` |
+| locke-labour | S4 | `a; a` | `a & b & c -> d` |
+| meno-paradox | S2 | `a; (a -> !b)` | `!a & !b; !a; !a; !a -> !b; !a; !a; !a -> !b; !a & !b` |
+| mill-proof | S3 | `a` | `a -> b` |
+| mill-proof | S5 | `(all x: a -> !b)` | `a` |
+| mill-proof | S6 | `a` | `a -> b; a -> b; a; a` |
+| mill-proof | S7 | `a` | `a -> b; a & b` |
+| phaedo-opposites | S17 | `[]a` | `all x: all y: (a -> b & c)` |
+| phaedo-opposites | S27 | `a; a` | `a & b & c` |
+| republic-function | - | `conclusion at S19` | `conclusion at S22` |
+| republic-function | S4 | `!a` | `all x: (a <-> b)` |
+| republic-function | S9 | `!a` | `all x: (!a -> !b)` |
+| republic-function | S10 | `[](all x: a -> []b)` | `all x: (a -> b)` |
+| republic-function | S12 | `a` | `all x: (a <-> b)` |
+| republic-function | S14 | `a; a` | `all x: ((a -> b) & (!a -> !b))` |
+| republic-function | S16 | `a; a` | `all x: (a <-> b)` |
+| republic-function | S18 | `a` | `all x: ((a -> b) & (!a -> !b))` |
+| spinoza-god | S4 | `a` | `<>!a -> !b` |

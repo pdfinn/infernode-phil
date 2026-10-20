@@ -1,0 +1,21 @@
+berkeley-heat-pain.skel.logic	P1	S1	!	!a
+berkeley-heat-pain.skel.logic	P2	S2	atom	a
+berkeley-heat-pain.skel.logic	P3	S3	all	(all x: !a)
+berkeley-heat-pain.skel.logic	P4	S4	atom	a
+berkeley-heat-pain.skel.logic	P5	S5	atom	a
+berkeley-heat-pain.skel.logic	P6	S6	atom	a
+berkeley-heat-pain.skel.logic	P7	S7	atom	a
+berkeley-heat-pain.skel.logic	P8	S8	atom	a
+berkeley-heat-pain.skel.logic	P9	S9	|	(a | b)
+berkeley-heat-pain.skel.logic	P10	S10	atom	a
+berkeley-heat-pain.skel.logic	P11	S11	atom	a
+berkeley-heat-pain.skel.logic	P12	S12	atom	a
+berkeley-heat-pain.skel.logic	P13	S13	!	!a
+berkeley-heat-pain.skel.logic	P14	S14	atom	a
+berkeley-heat-pain.skel.logic	P15	S15	atom	a
+berkeley-heat-pain.skel.logic	P16	S16	atom	a
+berkeley-heat-pain.skel.logic	P17	S17	!	!a
+berkeley-heat-pain.skel.logic	P18	S17	->	(!a -> b)
+berkeley-heat-pain.skel.logic	C	S17	atom	a
+berkeley-heat-pain.skel.logic	P19	S18	atom	a
+berkeley-heat-pain.skel.logic	P20	S19	atom	a

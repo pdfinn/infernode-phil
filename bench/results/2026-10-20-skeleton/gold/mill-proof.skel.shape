@@ -1,0 +1,7 @@
+mill-proof.skel.logic	P1	S1	atom	a
+mill-proof.skel.logic	P2	S2	atom	a
+mill-proof.skel.logic	P3	S3	atom	a
+mill-proof.skel.logic	P4	S4	all	(all x: !a)
+mill-proof.skel.logic	P5	S5	all	(all x: a -> !b)
+mill-proof.skel.logic	P6	S6	atom	a
+mill-proof.skel.logic	C	S7	atom	a

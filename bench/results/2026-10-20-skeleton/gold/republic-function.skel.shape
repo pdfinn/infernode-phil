@@ -1,0 +1,25 @@
+republic-function.skel.logic	P1	S1	atom	a
+republic-function.skel.logic	P2	S2	atom	a
+republic-function.skel.logic	P3	S2	atom	a
+republic-function.skel.logic	P4	S3	atom	a
+republic-function.skel.logic	P5	S4	!	!a
+republic-function.skel.logic	P6	S5	atom	a
+republic-function.skel.logic	P7	S6	!	!a
+republic-function.skel.logic	P8	S7	atom	a
+republic-function.skel.logic	P9	S8	!	!a
+republic-function.skel.logic	P10	S9	!	!a
+republic-function.skel.logic	P11	S10	[]	[](all x: a -> []b)
+republic-function.skel.logic	P12	S11	atom	a
+republic-function.skel.logic	P13	S12	atom	a
+republic-function.skel.logic	P14	S13	atom	a
+republic-function.skel.logic	P15	S14	atom	a
+republic-function.skel.logic	P16	S14	atom	a
+republic-function.skel.logic	P17	S15	atom	a
+republic-function.skel.logic	P18	S16	atom	a
+republic-function.skel.logic	P19	S16	atom	a
+republic-function.skel.logic	P20	S17	atom	a
+republic-function.skel.logic	P21	S18	atom	a
+republic-function.skel.logic	C	S19	atom	a
+republic-function.skel.logic	P22	S20	atom	a
+republic-function.skel.logic	P23	S21	atom	a
+republic-function.skel.logic	P24	S22	!	!a

@@ -1,0 +1,10 @@
+# the argument of hand-map.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	made_hand_bear(x)	x: is made by hand bears its maker's intention
+atom	made_hand_surveyor(x)	x: was made by hand by a surveyor of the old harbour
+atom	show_coast(x)	x: shows the coast
+P1	S1	(all x: made_hand_bear(x))
+P2	S2	made_hand_surveyor(map_lower_drawer)
+P3	S3	true
+P4	S3	(true -> show_coast(map))
+C	S3	show_coast(map)
+# rules tool=phil/skeleton date=2026-10-20

@@ -1,0 +1,37 @@
+# the argument of berkeley-heat-pain.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	vehement_intense_degree	but is the most vehement and intense degree of heat a very great pain ?
+atom	hyl	HYL
+atom	deny(x)	x: can deny it
+atom	phil	PHIL
+atom	unperceiv_thing_capable	and is any unperceiving thing capable of pain or pleasure ?
+atom	certainly	no certainly
+atom	material_substance_senseless	is your material substance a senseless being ?
+atom	endow_sense_perception	a being endowed with sense and perception
+atom	senseless_doubt	it is senseless without doubt
+atom	subject_pain	it can therefore be the subject of pain ?
+atom	mean	by no means
+atom	acknowledge_small_pain	you acknowledge this to be small pain
+atom	perceiv_sense	nor perceived by sense ?
+atom	grant	I grant it
+P1	S1	!vehement_intense_degree
+P2	S2	hyl
+P3	S3	(all x: !deny(x))
+P4	S4	phil
+P5	S5	unperceiv_thing_capable
+P6	S6	hyl
+P7	S7	certainly
+P8	S8	phil
+P9	S9	(material_substance_senseless | endow_sense_perception)
+P10	S10	hyl
+P11	S11	senseless_doubt
+P12	S12	phil
+P13	S13	!subject_pain
+P14	S14	hyl
+P15	S15	mean
+P16	S16	phil
+P17	S17	!acknowledge_small_pain
+P18	S17	(!acknowledge_small_pain -> perceiv_sense)
+C	S17	perceiv_sense
+P19	S18	hyl
+P20	S19	grant
+# rules tool=phil/skeleton date=2026-10-20

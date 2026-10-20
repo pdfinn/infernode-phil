@@ -1,0 +1,28 @@
+# the argument of hume-miracles.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	violation_law_nature(x)	x: is a violation of the laws of nature
+atom	miracle(x)	x: miracle
+atom	establish_law_proof(x)	x: as has established these laws the proof against a miracle from the very nature of the fact is as entire as any argument from experience can possibly be imagined
+atom	firm_unalterable_experience(x)	x: firm and unalterable experience
+atom	more_probable_men	Why is it more than probable that all men must die that lead can not of itself remain suspended in the air that fire consumes wood and is extinguished by water unless it be that these events are found agreeable to the laws of nature and there is required a violation of these laws or in other words a miracle to prevent them ?
+atom	ever_happen_common	it ever happen in the common course of nature
+atom	esteem_miracle(x)	x: is esteemed a miracle
+atom	miracle_man_seemingly	it is no miracle that a man seemingly in good health should die on a sudden because such a kind of death though more unusual than any other has yet been frequently observed to happen
+atom	miracle_dead_man	but it is a miracle that a dead man should come to life because that has never been observed in any age or country
+atom	uniform_experience_miraculou	there therefore be a uniform experience against every miraculous event otherwise the event would not merit that appellation
+atom	amount_proof(x)	x: amounts to a proof
+atom	uniform_experience(x)	x: uniform experience
+atom	here(x)	x: and there is here
+atom	direct_full_proof(x)	x: direct and full proof from the nature of the fact against the existence of any miracle
+atom	destroy(x)	x: can be destroyed
+atom	proof(x)	x: such proof
+atom	render_credible_opposite(x)	x: rendered credible but by an opposite proof which is superior
+P1	S1	(all x: miracle(x) -> violation_law_nature(x))
+P2	S1	(all x: firm_unalterable_experience(x) -> establish_law_proof(x))
+P3	S2	more_probable_men
+P4	S3	(ever_happen_common -> (all x: !esteem_miracle(x)))
+P5	S4	miracle_man_seemingly
+P6	S5	miracle_dead_man
+P7	S6	[]uniform_experience_miraculou
+C	S7	(((all x: uniform_experience(x) -> amount_proof(x)) & ((all x: uniform_experience(x) -> amount_proof(x)) -> (all x: direct_full_proof(x) -> here(x))) & (all x: direct_full_proof(x) -> here(x))) | ((all x: proof(x) -> destroy(x)) | render_credible_opposite(miracle)))
+# rules tool=phil/skeleton date=2026-10-20

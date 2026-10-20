@@ -1,0 +1,23 @@
+# the argument of apology-death.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	let_reflect_way	Let us reflect in another way
+atom	see_great_reason	we shall see that there is great reason to hope that death is a good for one of two things — either death is a state of nothingness and utter unconsciousness
+atom	men_say	men say
+atom	change_migration_soul(x)	x: change and migration of the soul from this world to another
+atom	suppose_consciousness_sleep	you suppose that there is no consciousness but a sleep like the sleep of him who is undisturbed even by dreams
+atom	now_death_unspeakable	Now death will be an unspeakable gain
+atom	person_select_night	a person were select the night in which his sleep was undisturbed even by dreams and were to compare with this the other days and nights of his life
+atom	tell_many_day	then were to tell us how many days and nights he had passed in the course of his life better and more pleasantly than this one
+atom	think_man_say	I think that any man I will not say a private man
+atom	find_many_such(x)	x: will find many such days or nights when compared with the others
+atom	death_nature	death be of such a nature
+atom	now_say_die	Now I say that to die is gain for eternity is then only a single night
+atom	men_say_dead	and there men say all the dead abide what good O my friends and judges
+atom	death_journey_place	death is the journey to another place
+atom	greater	but can be greater than this ?
+P1	S1	(let_reflect_way | see_great_reason | (men_say & (men_say -> (all x: change_migration_soul(x) -> true(x))) & (all x: change_migration_soul(x) -> true(x))))
+P2	S2	(suppose_consciousness_sleep -> now_death_unspeakable)
+P3	S3	((person_select_night & tell_many_day) -> think_man_say)
+P4	S3	!find_many_such(great_king)
+P5	S4	(death_nature -> now_say_die)
+C	S5	((men_say_dead & (men_say_dead -> death_journey_place) & death_journey_place) -> greater)
+# rules tool=phil/skeleton date=2026-10-20

@@ -1,0 +1,6 @@
+apology-death.skel.logic	P1	S1	|	(a | b | (c & (c -> (all x: d -> e)) & (all x: d -> e)))
+apology-death.skel.logic	P2	S2	->	(a -> b)
+apology-death.skel.logic	P3	S3	->	((a & b) -> c)
+apology-death.skel.logic	P4	S3	!	!a
+apology-death.skel.logic	P5	S4	->	(a -> b)
+apology-death.skel.logic	C	S5	->	((a & (a -> b) & b) -> c)

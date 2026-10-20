@@ -45,6 +45,8 @@ Xenith and acme open it with button 3 and wwb's `gate`, `delta` and
 | `phil/corpus` | a field's works read as one, by rule: each work over the shared atoms, the claims and who asserts, denies, assumes or reports each, statement ids that survive a reread, and the secondary literature checked against the primary (a claim given as a work's that its reading denies, or never makes) |
 | `phil/tree` | a corpus as files to walk and grep: each work's statements, each claim a directory (its formula, its atoms, who asserts, denies, assumes or reports it), named by a hash of its formula; `notes/` made beside it and left to the researcher |
 | `phil/audit` | whether each reading is one a model wrote, as it now stands: its statements against the records `read` and `argue` sealed in the audit log (auditfs); a reading written or changed by another hand is `audit/unbacked` |
+| `phil/skeleton` | a reading by rule, with no model: from wwb's parse, the conclusion by its marker, conditionals, disjunctions, denials, necessity and ought, and quantified subjects, an atom to each clause; a reader of another kind to set beside a model's |
+| `phil/shape` | the form of each statement, atoms as letters, and its main connective: two readings whose atoms differ compared by sentence |
 
 The manual is `man 1 phil`. The logic file is described in
 [docs/ARGUMENT-FORMAT.md](docs/ARGUMENT-FORMAT.md), and what the tools

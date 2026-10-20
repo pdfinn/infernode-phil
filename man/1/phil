@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree, audit \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree, audit, skeleton, shape \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -230,6 +230,14 @@ phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses
 .br
 .B phil/tree
 .I dir
+.br
+.B wwb/parse
+.I file
+|
+.B phil/skeleton
+.br
+.B phil/shape
+.I logicfile ...
 .br
 .B phil/audit
 [
@@ -838,6 +846,105 @@ names a copy of the chain; that the chain is whole is
 to say.
 .B -h
 prints each file's hash of its statements, as the records carry it.
+.TP
+.B phil/skeleton
+A reading by rule, with no model: the shape of an argument from each
+sentence's dependencies, as
+.I wwb/parse
+writes them.
+A sentence beginning
+.IR so ,
+.IR therefore ,
+.IR hence ,
+.IR thus ,
+.I consequently
+or
+.I it follows that
+is the conclusion (the last such; if none, the last sentence), each
+other a premise, a conjunction a statement to each conjunct.
+Within a sentence: a clause marked
+.I if
+(or
+.IR when ,
+or a conditional with
+.I had
+or
+.I were
+first) is an antecedent,
+.I only if
+turns it round,
+.I unless
+is if not,
+.IR because ,
+.I since
+or
+.I as
+gives the reason and its link to the main clause as premises; clauses
+joined by
+.I or
+and
+.I and
+are a disjunction and a conjunction;
+.IR not ,
+.IR never ,
+.I no
+or
+.I nothing
+denies,
+.I necessarily
+or
+.I must
+is
+.BR [] ,
+.I ought
+or
+.I should
+is
+.BR ought .
+A subject quantified
+.RI ( every ,
+.IR each ,
+.IR all ,
+.IR any ,
+.IR whatever ,
+a generic
+.I a
+with the verb in the present;
+.IR no ,
+.IR nothing ;
+.IR some ,
+.IR someone )
+makes the clause
+.B all x:
+or
+.B some x:
+over predicates of x; a subject that names one thing (a name, or
+.I the
+and a noun) makes it a predicate of a constant.
+What is left of a clause is an atom, its words its meaning; clauses
+with the same content words, or the same main word and one more, are
+one.
+It knows nothing of an object's quantifier, of pronouns, or of what a
+sentence takes for granted, and is as good as the parse: a reader of
+another kind than a model, to set beside one.
+Its last line is
+.BR "# rules tool=phil/skeleton date=" ...
+.TP
+.B phil/shape
+The form of each statement, with what it is about left out: a line a
+statement, tab between, the file, the statement, its sentence, its main
+connective
+.RB ( "-> <-> | & ! [] <> ought permitted all some" ,
+or
+.BR atom )
+and the formula with each atom a letter in the order it is first used.
+Either spelling of the notation is read.
+Two readings of one text whose atoms differ, a model's and
+.IR skeleton 's,
+or a reading and a key, are set side by side by sentence with
+.I join
+or
+.IR awk .
 .TP
 .B phil/prove
 Decides whether an argument's conclusion follows from its premises.

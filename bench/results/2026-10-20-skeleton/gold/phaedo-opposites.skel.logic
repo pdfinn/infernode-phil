@@ -1,0 +1,94 @@
+# the argument of phaedo-opposites.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	let_consider_whole	then let us consider the whole question not in relation to man only but in relation to animals generally and to plants and to everything of which there is generation
+atom	easier(x)	x: will be easier
+atom	thing_opposit_generat	are all things which have opposites generated out of their opposites ?
+atom	mean_such_thing	I mean such things as good and evil just and unjust
+atom	innumerable_other_opposit	- - there are innumerable other opposites which are generated out of opposites
+atom	want_show_opposit	and I want to show that in all opposites there is of necessity a similar alternation I mean to say for example that anything which becomes greater must become greater after being less
+atom	true	True
+atom	becom_less_once	and that which becomes less have been once greater
+atom	become_less	then have become less
+atom	generat_stronger_swifter(x)	x: and is generated from the stronger and the swifter from the slower
+atom	better(x)	x: and is from the better
+atom	more_just_unjust	the more just is from the more unjust
+atom	course	of course
+atom	true_opposit	and is this true of all opposites ?
+atom	convinc_generat_opposit	? are we convinced that all of them are generated out of opposites
+atom	universal_opposition_thing	and in this universal opposition of all things are there also two intermediate processes which are ever going on from one to the other opposite and back again where there is a greater and a less there is also an intermediate process of increase and diminution and that which grows is said to wax and that which decays to wane ?
+atom	said	Yes he said
+atom	many_other_process	and there are many other processes such as division and composition cooling and heating which equally involve a passage into and out of one another
+atom	hold_opposit_even	and this holds of all opposites even though not always expressed in words - - they are really generated out of one another and there is a passing or process from one to the other of them ?
+atom	true_repli	very true he replied
+atom	sleep_opposite_wak	sleep is the opposite of waking
+atom	opposite_life	Well and is there not an opposite of life ?
+atom	true_said	True he said
+atom	death_answer	Death he answered
+atom	opposit	they are opposites
+atom	generat_other	and these are generated the one from the other ?
+atom	two_intermediate_process	have there their two intermediate processes also
+atom	now_said_analyze(x)	x: Now said I will analyze one of the two pairs of opposites which I have mentioned to you and also its intermediate processes and you shall analyze the other to me
+atom	term_sleep_other	one of them I term sleep the other waking
+atom	oppo_state_wak(x)	x: is opposed to the state of waking and out of sleeping waking is generated and out of waking sleeping
+atom	case_fall_asleep(x)	x: is in the one case falling asleep and in the other waking up
+atom	agree	do you agree ?
+atom	entirely_agree	I entirely agree
+atom	suppose_analyze_life	then suppose that you analyze life and death to me in the same manner
+atom	death_oppo_life	is not death opposed to life ?
+atom	generat_liv	what is generated from the living ?
+atom	dead	the dead
+atom	say_answer_liv	I can only say in answer - - the living
+atom	thing_person_ceb(x)	x: whether things or persons Cebes are generated from the dead ?
+atom	clear_repli	that is clear he replied
+atom	inference_soul_exist	then the inference is that our souls exist in the world below ?
+P1	S1	let_consider_whole
+P2	S1	easier(proof)
+P3	S2	!thing_opposit_generat
+P4	S3	mean_such_thing
+P5	S3	innumerable_other_opposit
+P6	S4	want_show_opposit
+P7	S5	true
+P8	S6	[]becom_less_once
+P9	S6	become_less
+P10	S7	true
+P11	S8	generat_stronger_swifter(weaker)
+P12	S9	true
+P13	S10	better(worse)
+P14	S10	more_just_unjust
+P15	S11	course
+P16	S12	true_opposit
+P17	S12	convinc_generat_opposit
+P18	S13	true
+P19	S14	!universal_opposition_thing
+P20	S15	said
+P21	S16	many_other_process
+P22	S17	[]hold_opposit_even
+P23	S18	true_repli
+P24	S19	sleep_opposite_wak
+P25	S19	(sleep_opposite_wak -> opposite_life)
+P26	S19	opposite_life
+P27	S20	true_said
+P28	S21	true
+P29	S22	death_answer
+P30	S23	(opposit -> generat_other)
+P31	S23	two_intermediate_process
+P32	S24	course
+P33	S25	now_said_analyze(socrates)
+P34	S26	term_sleep_other
+P35	S27	oppo_state_wak(state_sleep)
+P36	S27	case_fall_asleep(process_generation)
+P37	S28	agree
+P38	S29	entirely_agree
+P39	S30	suppose_analyze_life
+P40	S31	death_oppo_life
+P41	S32	true
+P42	S33	generat_other
+P43	S34	true
+P44	S35	generat_liv
+P45	S36	dead
+P46	S37	dead
+P47	S38	say_answer_liv
+P48	S39	thing_person_ceb(living)
+P49	S40	clear_repli
+C	S41	inference_soul_exist
+# rules tool=phil/skeleton date=2026-10-20

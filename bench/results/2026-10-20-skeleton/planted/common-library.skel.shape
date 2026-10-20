@@ -1,0 +1,5 @@
+common-library.skel.logic	P1	S1	atom	a
+common-library.skel.logic	P2	S1	->	(a -> (all x: !b))
+common-library.skel.logic	P3	S1	all	(all x: !a)
+common-library.skel.logic	P4	S2	!	!a
+common-library.skel.logic	C	S3	all	(all x: !a)

@@ -1,0 +1,9 @@
+# phil/shape: the form of each statement, atoms as letters, and its main
+# connective, in either spelling of the notation
+load std
+phil/shape ../bench/planted/ledger.key.logic ../bench/planted/travellers.key.logic data/scope/shift.logic
+echo 'P1	S1	∀x (art(x) ∨ action(x) → ∃y (good(y) ∧ aims(x, y)))' > /tmp/shape.logic
+echo 'P2	S2	¬◇prior_self' >> /tmp/shape.logic
+echo 'C	S3	□(a → (b ↔ c))' >> /tmp/shape.logic
+phil/shape /tmp/shape.logic
+rm /tmp/shape.logic

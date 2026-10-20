@@ -1,0 +1,6 @@
+aquinas-economy-objection.skel.logic	P1	S1	atom	a
+aquinas-economy-objection.skel.logic	P2	S2	atom	a
+aquinas-economy-objection.skel.logic	P3	S3	atom	a
+aquinas-economy-objection.skel.logic	P4	S4	atom	a
+aquinas-economy-objection.skel.logic	P5	S4	all	(all x: a -> b)
+aquinas-economy-objection.skel.logic	C	S5	all	(all x: a -> !b)

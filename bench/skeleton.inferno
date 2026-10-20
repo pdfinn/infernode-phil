@@ -1,0 +1,12 @@
+#!/dis/sh.dis
+# skeleton.inferno phildir wwbdir resultsdir - wwb/parse | phil/skeleton
+# on each passage in resultsdir, then phil/shape; run by bench/skeleton.sh.
+load std
+run $1/philns $1 $2
+cd $3
+for f in *.md {
+	n=`{basename $f .md}
+	wwb/parse $f | phil/skeleton > $n.skel.logic
+	phil/shape $n.skel.logic > $n.skel.shape
+}
+echo halt > /dev/sysctl

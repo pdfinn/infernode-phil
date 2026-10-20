@@ -1,0 +1,10 @@
+aquinas-second-way.skel.logic	P1	S1	atom	a
+aquinas-second-way.skel.logic	P2	S2	atom	a
+aquinas-second-way.skel.logic	P3	S3	all	(all x: a -> !b)
+aquinas-second-way.skel.logic	P4	S4	!	!a
+aquinas-second-way.skel.logic	P5	S4	atom	a
+aquinas-second-way.skel.logic	P6	S4	atom	a
+aquinas-second-way.skel.logic	P7	S5	atom	a
+aquinas-second-way.skel.logic	P8	S6	->	((all x: a -> !b) -> (all x: c -> !b))
+aquinas-second-way.skel.logic	P9	S7	->	(a -> (all x: b -> !c))
+aquinas-second-way.skel.logic	C	S8	atom	a

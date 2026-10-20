@@ -1,0 +1,19 @@
+# the argument of aquinas-ontological-objection.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	c2_further_thing	2 Further those things are said to be self-evident which are known as soon as the terms are known which the Philosopher ( 1 Poster iii ) says is true of the first principles of demonstration
+atom	nature_whole_part	when the nature of a whole and of a part is known it is at once recognized that every whole is greater than its part
+atom	soon_signification_word	but as soon as the signification of the word " God " is understood it is at once seen that God exists
+atom	word_signifi_thing	for by this word is signified that thing than which nothing greater can be conceived
+atom	exist_actually	but that which exists actually
+atom	mentally_greater_exist	mentally is greater than that which exists only mentally
+atom	soon_word_god	since as soon as the word " God " is understood it exists mentally it also follows that it exists actually
+atom	selfevident(x)	x: is self-evident
+P1	S1	true
+P2	S2	c2_further_thing
+P3	S3	nature_whole_part
+P4	S4	soon_signification_word
+P5	S5	word_signifi_thing
+P6	S6	exist_actually
+P7	S6	mentally_greater_exist
+P8	S7	soon_word_god
+C	S8	selfevident(proposition_god)
+# rules tool=phil/skeleton date=2026-10-20

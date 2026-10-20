@@ -1,0 +1,39 @@
+# the argument of aquinas-third-way.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	taken_possibility_necessity(x)	x: is taken from possibility and necessity
+atom	run	runs thus
+atom	found_generat_corrupt	they are found to be generated and to corrupt
+atom	find_nature_thing	we find in nature things that are possible to be and not to be
+atom	possible	and consequently they are possible to be and not to be
+atom	impossible_alway_exist	but it is impossible for these always to exist for that which is possible not to be at some time is not
+atom	possible_2(x)	x: is possible not to be
+atom	time(x)	x: then at one time there could have been
+atom	true	this were true
+atom	now_even_now(x)	x: Now even now there would be because that which does not exist only begins to exist by something already existing
+atom	time_existence_impossible	if at one time nothing was in existence it would have been impossible for anything to have begun to exist
+atom	even_now_existence(x)	x: thus even now would be in existence - - which is absurd
+atom	merely_possible(x)	x: are merely possible
+atom	being(x)	x: beings
+atom	exist_someth_existence	there exist something the existence of which is necessary
+atom	necessity_cau(x)	x: but either has its necessity caused by another or not
+atom	necessary_thing(x)	x: necessary thing
+atom	now_impossible_go	Now it is impossible to go on to infinity in necessary things which have their necessity caused by another as has been already proved in regard to efficient causes
+atom	postulate_existence_own	we can but postulate the existence of some being having of itself its own necessity and not receiving it from another but rather causing in others their necessity
+atom	speak_god(x)	x: speak of as God
+atom	men(x)	x: this men
+P1	S1	taken_possibility_necessity(third_way)
+P2	S1	run
+P3	S2	(found_generat_corrupt & (found_generat_corrupt -> find_nature_thing) & find_nature_thing)
+P4	S2	possible
+P5	S3	impossible_alway_exist
+P6	S4	((all x: possible_2(x)) -> (all x: !time(x)))
+P7	S5	(true -> (all x: !now_even_now(x)))
+P8	S6	time_existence_impossible
+P9	S6	(all x: !even_now_existence(x))
+P10	S7	(all x: being(x) -> !merely_possible(x))
+P11	S7	[]exist_someth_existence
+P12	S8	(all x: necessary_thing(x) -> necessity_cau(x))
+P13	S9	now_impossible_go
+C	S10	!postulate_existence_own
+P14	S11	(all x: men(x) -> speak_god(x))
+# rules tool=phil/skeleton date=2026-10-20

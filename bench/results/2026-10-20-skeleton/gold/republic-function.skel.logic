@@ -1,0 +1,50 @@
+# the argument of republic-function.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	soul_end_else	and has not the soul an end which nothing else can fulfil ? for example to superintend and command and deliberate and the like
+atom	function_proper_soul	are not these functions proper to the soul ?
+atom	rightly_assign_other	can they rightly be assigned to any other
+atom	other	to no other
+atom	life_reckon_end	and is life to be reckoned among the ends of the soul ?
+atom	assuredly_said	Assuredly he said
+atom	soul_excellence	and has the soul an excellence also ?
+atom	fulfil_own_end	and can she or can she fulfil her own ends when deprived of that excellence ?
+atom	evil_ruler_superintendent(x)	x: then be an evil ruler and superintendent and the good soul a good ruler ?
+atom	evil_soul(x)	x: evil soul
+atom	admitt_justice_excellence	and we have admitted that justice is the excellence of the soul and injustice the defect of the soul ?
+atom	admitt	that has been admitted
+atom	live_well(x)	x: then will live well ?
+atom	live_ill(x)	x: will live ill
+atom	argument_prov	that is what your argument proves
+atom	liv_well_bless	and he who lives well is blessed and happy ?
+atom	liv_ill_reverse	he who lives ill the reverse of happy
+atom	certainly	Certainly
+atom	just_happy_unjust	then the just is happy and the unjust miserable ?
+atom	happiness_misery_profitable	but happiness and not misery is profitable
+atom	course	of course
+atom	injustice_profitable_justice(x)	x: then injustice can be more profitable than justice
+P1	S1	soul_end_else
+P2	S2	function_proper_soul
+P3	S2	rightly_assign_other
+P4	S3	other
+P5	S4	!life_reckon_end
+P6	S5	assuredly_said
+P7	S6	!soul_excellence
+P8	S7	true
+P9	S8	!fulfil_own_end
+P10	S9	!true
+P11	S10	[](all x: evil_soul(x) -> []evil_ruler_superintendent(x))
+P12	S11	true
+P13	S12	admitt_justice_excellence
+P14	S13	admitt
+P15	S14	live_well(soul_man)
+P16	S14	live_ill(unjust_man)
+P17	S15	argument_prov
+P18	S16	liv_well_bless
+P19	S16	liv_ill_reverse
+P20	S17	certainly
+P21	S18	just_happy_unjust
+C	S19	true
+P22	S20	happiness_misery_profitable
+P23	S21	course
+P24	S22	!injustice_profitable_justice(thrasymachus)
+# rules tool=phil/skeleton date=2026-10-20

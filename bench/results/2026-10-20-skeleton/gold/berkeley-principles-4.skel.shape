@@ -1,0 +1,5 @@
+berkeley-principles-4.skel.logic	P1	S1	atom	a
+berkeley-principles-4.skel.logic	P2	S1	atom	a
+berkeley-principles-4.skel.logic	P3	S2	all	(all x: a -> b)
+berkeley-principles-4.skel.logic	P4	S2	all	(all x: a)
+berkeley-principles-4.skel.logic	C	S3	atom	a

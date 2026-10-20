@@ -1,0 +1,9 @@
+# the argument of travellers.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	trust_guide(x)	x: trusts some guide
+atom	traveller_mountain_road(x)	x: traveller on the mountain road
+atom	guide_traveller_trust(x)	x: guide whom every traveller trusts
+atom	guide_road_safety	to that guide the road's safety is owed
+P1	S1	(all x: traveller_mountain_road(x) -> trust_guide(x))
+P2	S2	(all x: guide_traveller_trust(x) -> true(x))
+C	S2	guide_road_safety
+# rules tool=phil/skeleton date=2026-10-20

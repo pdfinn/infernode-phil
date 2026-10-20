@@ -1,0 +1,43 @@
+# the argument of aquinas-first-way.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5kd
+atom	argument_motion(x)	x: is the argument from motion
+atom	certain_evident_sen	it is certain and evident to our senses that in the world some things are in motion
+atom	now_motion_put(x)	x: Now is in motion is put in motion by another for nothing can be in motion except it is in potentiality to that towards which it is in motion whereas a thing moves inasmuch as it is in act
+atom	motion_else_reduction	for motion is nothing else than the reduction of something from potentiality to actuality
+atom	reduc_potentiality_actuality(x)	x: but can be reduced from potentiality to actuality except by something in a state of actuality
+atom	actually_hot_fire	that which is actually hot as fire makes wood which is potentially hot to be actually hot and thereby moves and changes it
+atom	now_possible_same	Now it is possible that the same thing should be at once in actuality and potentiality in the same respect but only in different respects
+atom	actually_hot_simultaneously	for what is actually hot can simultaneously be potentially hot
+atom	simultaneously_potentially_cold	it is simultaneously potentially cold
+atom	impossible	it is impossible
+atom	same_respect_same(x)	x: that in the same respect in the same way be both mover i.e. that it should move itself
+atom	thing(x)	x: thing
+atom	mov	moved
+atom	motion_put_motion(x)	x: is in motion be put in motion by another
+atom	put_motion_put	if that by which it is put in motion be itself put in motion then this also must needs be put in motion by another and that by another again
+atom	see_subsequent_mover(x)	x: then there would be seeing that subsequent movers move only inasmuch as they are put in motion by the first mover
+atom	first_mover_other(x)	x: first mover and consequently no other mover
+atom	put_motion_hand	it is put in motion by the hand
+atom	mov_2(x)	x: moves
+atom	go_infinity	but this can go on to infinity
+atom	necessary_arrive_first	it is necessary to arrive at a first mover put in motion by no other
+atom	understand_god(x)	x: understands to be God
+P1	S1	argument_motion(first_manifest_way)
+P2	S2	certain_evident_sen
+P3	S3	(all x: now_motion_put(x))
+P4	S4	motion_else_reduction
+P5	S5	(all x: !reduc_potentiality_actuality(x))
+P6	S6	actually_hot_fire
+P7	S7	!now_possible_same
+P8	S8	!actually_hot_simultaneously
+P9	S8	simultaneously_potentially_cold
+P10	S9	impossible
+P11	S9	((all x: thing(x) -> ought same_respect_same(x)) & mov)
+P12	S10	(all x: []motion_put_motion(x))
+P13	S11	put_motion_put
+P14	S12	(all x: first_mover_other(x) -> !see_subsequent_mover(x))
+P15	S12	((all x: first_mover_other(x) -> !see_subsequent_mover(x)) -> ((put_motion_hand & (put_motion_hand -> mov_2(staff)) & mov_2(staff)) & ((put_motion_hand & (put_motion_hand -> mov_2(staff)) & mov_2(staff)) -> !go_infinity) & !go_infinity))
+P16	S12	((put_motion_hand & (put_motion_hand -> mov_2(staff)) & mov_2(staff)) & ((put_motion_hand & (put_motion_hand -> mov_2(staff)) & mov_2(staff)) -> !go_infinity) & !go_infinity)
+P17	S13	necessary_arrive_first
+C	S13	(all x: understand_god(x))
+# rules tool=phil/skeleton date=2026-10-20

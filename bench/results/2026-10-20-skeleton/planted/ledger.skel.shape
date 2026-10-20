@@ -1,0 +1,3 @@
+ledger.skel.logic	P1	S1	[]	[](a -> b)
+ledger.skel.logic	P2	S2	atom	a
+ledger.skel.logic	C	S3	!	!a

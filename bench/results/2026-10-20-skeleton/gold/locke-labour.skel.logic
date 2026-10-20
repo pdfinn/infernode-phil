@@ -1,0 +1,19 @@
+# the argument of locke-labour.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	common_men_body(x)	x: Though be common to all men this no body has any right to but himself
+atom	property_own_person(x)	x: has a property in his own person
+atom	man(x)	x: man
+atom	properly(x)	x: are properly his
+atom	whatsoever_remov_state	Whatsoever then he removes out of the state that nature hath provided and left it in
+atom	hath_mix_labour	he hath mixed his labour with
+atom	join_someth_own	joined to it something that is his own
+atom	thereby_mak_property	thereby makes it his property
+atom	remov_common_state	it being by him removed from the common state nature hath placed it in
+atom	hath_someth_annex	it hath by this labour something annexed to it that excludes the common right of other men for this labour being the unquestionable property of the labourer no man but he can have a right to what that is once joined to at least where there is enough and as good left in common for others
+P1	S1	common_men_body(earth_inferior_creatures)
+P2	S1	(all x: man(x) -> property_own_person(x))
+P3	S2	properly(labour_body_work)
+P4	S3	whatsoever_remov_state
+P5	S3	(hath_mix_labour & join_someth_own & thereby_mak_property)
+P6	S4	remov_common_state
+C	S4	hath_someth_annex
+# rules tool=phil/skeleton date=2026-10-20

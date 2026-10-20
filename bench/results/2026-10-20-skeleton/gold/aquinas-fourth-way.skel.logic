@@ -1,0 +1,18 @@
+# the argument of aquinas-fourth-way.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	taken_gradation_found(x)	x: is taken from the gradation to be found in things
+atom	being_more_good	Among beings there are some more and some less good true noble and the like
+atom	said_hotter(x)	x: is said to be hotter
+atom	thing(x)	x: thing
+atom	less_predicat_different	but more and less are predicated of different things according as they resemble in their different ways something which is the maximum according as it more nearly resembles that which is hottest so that there is something which is truest something best something noblest and consequently something which is uttermost being for those things that are greatest in truth are greatest in being as it is written in Metaph ii
+atom	now_cause_genu(x)	x: Now is the cause of all in that genus as fire which is the maximum heat is the cause of all hot things
+atom	call_god	this we call God
+P1	S1	taken_gradation_found(fourth_way)
+P2	S2	being_more_good
+P3	S3	(all x: thing(x) -> said_hotter(x))
+P4	S3	((all x: thing(x) -> said_hotter(x)) -> less_predicat_different)
+P5	S3	less_predicat_different
+P6	S4	now_cause_genu(maximum_genus)
+P7	S5	(some x: []true(x))
+C	S5	call_god
+# rules tool=phil/skeleton date=2026-10-20

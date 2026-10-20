@@ -1,0 +1,10 @@
+# the argument of ledger.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	balanc(x)	x: balances
+atom	count_correctly(x)	x: counted correctly
+atom	ledger_balanc	the ledger balances
+atom	miscount_count_necessary(x)	x: could have miscounted his counting was necessary not fortunate
+P1	S1	[](balanc(ledger) -> count_correctly(clerk))
+P2	S2	ledger_balanc
+C	S3	!miscount_count_necessary(clerk)
+# rules tool=phil/skeleton date=2026-10-20

@@ -1,0 +1,35 @@
+# the argument of hume-induction.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	divid_two_kind(x)	x: may be divided into two kinds namely demonstrative reasoning or that concerning relations of ideas and moral reasoning or that concerning matter of fact and existence
+atom	reason(x)	x: reasonings
+atom	demonstrative_argument_case	that there are no demonstrative arguments in the case seems evident
+atom	impli_contradiction_course	it implies contradiction that the course of nature may change
+atom	seemingly_experienc_attend(x)	x: seemingly like those which we have experienced may be attended with different or contrary effects
+atom	object(x)	x: and that object
+atom	clearly_distinctly_conceive	may I not clearly and distinctly conceive that a body falling from the clouds and which in all other respects resembles snow has yet the taste of salt or feeling of fire ?
+atom	intelligible_proposition_affirm(x)	x: more intelligible proposition than to affirm that all the trees will flourish in December and January and decay in May and June
+atom	now_intelligible(x)	x: Now is intelligible
+atom	distinctly_conceiv	can be distinctly conceived
+atom	impli_contradiction	implies contradiction
+atom	prov_false_demonstrative	can be proved false by any demonstrative argument or abstract reasoning à priori
+atom	engag_argument_put	if we be therefore engaged by arguments to put trust in past experience and make it the standard of our future judgement these arguments be probable only or such as regard matter of fact and real existence according to the division above mentioned
+atom	appear_explication_speci(x)	x: but that there is must appear if our explication of that species of reasoning be admitted as solid and satisfactory
+atom	argument_kind(x)	x: argument of this kind
+atom	said_argument_concern	we have said that all arguments concerning existence are founded on the relation of cause and effect that our knowledge of that relation is derived entirely from experience
+atom	experimental_conclusion_proce	that all our experimental conclusions proceed upon the supposition that the future will be conformable to the past
+atom	evidently_going_circle(x)	x: to endeavour therefore be evidently going in a circle
+atom	tak_grant_point	taking that for granted which is the very point in question
+P1	S1	(all x: reason(x) -> divid_two_kind(x))
+P2	S2	demonstrative_argument_case
+P3	S2	(!impli_contradiction_course & (!impli_contradiction_course -> (all x: object(x) -> seemingly_experienc_attend(x))) & (all x: object(x) -> seemingly_experienc_attend(x)))
+P4	S3	clearly_distinctly_conceive
+P5	S4	(all x: intelligible_proposition_affirm(x) -> true(x))
+P6	S5	(all x: now_intelligible(x))
+P7	S5	(distinctly_conceiv & !impli_contradiction & !prov_false_demonstrative)
+P8	S6	[]engag_argument_put
+P9	S7	(all x: argument_kind(x) -> !appear_explication_speci(x))
+P10	S8	said_argument_concern
+P11	S8	experimental_conclusion_proce
+P12	S9	[]evidently_going_circle(proof_last_supposition)
+C	S9	tak_grant_point
+# rules tool=phil/skeleton date=2026-10-20

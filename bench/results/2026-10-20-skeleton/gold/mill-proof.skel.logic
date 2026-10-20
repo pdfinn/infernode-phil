@@ -1,0 +1,17 @@
+# the argument of mill-proof.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	people_actually_see(x)	x: is that people actually see it
+atom	proof_sound_audible	the only proof that a sound is audible is that people hear it and so of the other sources of our experience
+atom	manner_apprehend_sole	in like manner I apprehend the sole evidence it is possible to produce that anything is desirable is that people do actually desire it
+atom	end_utilitarian_doctrine(x)	x: if the end which the utilitarian doctrine proposes to itself were not in theory and in practice acknowledged to be an end could ever convince any person that it was so
+atom	given_general_happiness(x)	x: can be given why the general happiness is desirable except that each person so far as he believes it to be attainable desires his own happiness
+atom	reason(x)	x: reason
+atom	fact_proof_case	this however being a fact we have not only all the proof which the case admits of but all which it is possible to require that happiness is a good that each person's happiness is a good to that person and the general happiness therefore a good to the aggregate of all persons
+atom	made_title_end(x)	x: has made out its title as one of the ends of conduct and consequently one of the criteria of morality
+P1	S1	people_actually_see(proof_capable_object)
+P2	S2	proof_sound_audible
+P3	S3	manner_apprehend_sole
+P4	S4	(all x: !end_utilitarian_doctrine(x))
+P5	S5	(all x: reason(x) -> !given_general_happiness(x))
+P6	S6	fact_proof_case
+C	S7	made_title_end(happiness)
+# rules tool=phil/skeleton date=2026-10-20

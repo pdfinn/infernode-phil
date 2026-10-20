@@ -1,0 +1,52 @@
+# ledger
+# the argument of ../bench/planted/ledger.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	balanc(x)	x: balances
+atom	count_correctly(x)	x: counted correctly
+atom	ledger_balanc	the ledger balances
+atom	miscount_count_necessary(x)	x: could have miscounted his counting was necessary not fortunate
+P1	S1	[](balanc(ledger) -> count_correctly(clerk))
+P2	S2	ledger_balanc
+C	S3	!miscount_count_necessary(clerk)
+# river-promise
+# the argument of ../bench/planted/river-promise.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	made_release_made	the one to whom it is made can release the one who made it
+atom	bind(x)	x: binds
+atom	promise(x)	x: promise
+atom	release_speak_will(x)	x: can release one for it neither speaks nor wills
+atom	river(x)	x: river
+atom	bind_solemnly_spoken(x)	x: does bind however solemnly it was spoken on the bank
+atom	promise_made_river(x)	x: promise made to a river
+P1	S1	((all x: promise(x) -> bind(x)) -> made_release_made)
+P2	S2	(all x: river(x) -> !release_speak_will(x))
+C	S3	(all x: promise_made_river(x) -> !bind_solemnly_spoken(x))
+# judge-interest
+# the argument of ../bench/planted/judge-interest.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	interest_case(x)	x: have interest in the case before her
+atom	judge(x)	x: judge
+atom	tak_interest_case(x)	x: takes an interest in the case before her attending to each detail of it
+atom	judge_worthy_name(x)	x: judge worthy of the name
+atom	sit_judgment(x)	x: may sit in judgment
+P1	S1	(all x: judge(x) -> []!interest_case(x))
+P2	S2	(all x: judge_worthy_name(x) -> tak_interest_case(x))
+C	S3	(all x: judge_worthy_name(x) -> !sit_judgment(x))
+# lighthouse
+# the argument of ../bench/planted/lighthouse.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	lit_lamp_night(x)	x: lit the lamp that night or the ship was warned by the bell
+atom	keeper_lit_lamp	had the keeper lit the lamp the log would record it and the log records nothing for that night
+atom	warn_bell(x)	x: was warned by the bell
+atom	awake(x)	x: then was awake
+P1	S1	lit_lamp_night(keeper)
+P2	S2	keeper_lit_lamp
+P3	S3	(warn_bell(ship) -> awake(ringer))
+C	S4	awake(ringer)
+# orchard
+# the argument of ../bench/planted/orchard.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	graft_sick_stock(x)	x: grafted from a sick stock sickens in its third summer
+atom	tree(x)	x: tree
+atom	graft_old_pear(x)	x: was grafted from the old pear by the wall
+atom	sicken_fourth_summer(x)	x: will sicken before the fourth summer comes
+P1	S1	(all x: tree(x) -> graft_sick_stock(x))
+P2	S2	graft_old_pear(north_row)
+C	S3	sicken_fourth_summer(north_row)

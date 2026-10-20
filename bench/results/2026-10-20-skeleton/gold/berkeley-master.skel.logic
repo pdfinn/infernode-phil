@@ -1,0 +1,17 @@
+# the argument of berkeley-master.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	say_surely_easier	but say you surely there is nothing easier than for me to imagine trees for instance in a park or books existing in a closet and nobody by to perceive them
+atom	answer_difficulty_beseech	I answer you may so there is no difficulty in it but what is all this I beseech you more than framing in your mind certain ideas which you call BOOKS and TREES and the same time omitting to frame the idea of any one that may perceive them ?
+atom	perceive_while	BUT DO NOT YOU YOURSELF PERCEIVE ALL THE WHILE ?
+atom	think	THINK OF THEM
+atom	purpose_show_power	this therefore is nothing to the purpose it only shows you have the power of imagining or forming ideas in your mind
+atom	show_conceive_possible	it does show that you can conceive it possible the objects of your thought may exist without the mind
+atom	make_necessary_conceive	to make out this IT IS NECESSARY THAT YOU CONCEIVE THEM EXISTING UNCONCEIVED OR UNTHOUGHT OF WHICH IS A MANIFEST REPUGNANCY
+atom	utmost_conceive_existence	when we do our utmost to conceive the existence of external bodies we are all the while only contemplating our own ideas
+P1	S1	say_surely_easier
+P2	S2	answer_difficulty_beseech
+P3	S3	(perceive_while | think)
+P4	S4	purpose_show_power
+P5	S4	!show_conceive_possible
+P6	S5	make_necessary_conceive
+C	S6	utmost_conceive_existence
+# rules tool=phil/skeleton date=2026-10-20

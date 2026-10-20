@@ -1,0 +1,9 @@
+# the argument of assembly.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	question_put_assembly(x)	x: for each question put to the assembly there is
+atom	member_able_answer(x)	x: member able to answer it
+atom	answer_question(x)	x: can answer every question
+atom	preside(x)	x: ought to preside
+P1	S1	(all x: member_able_answer(x) -> question_put_assembly(x))
+P2	S2	(some x: answer_question(x))
+C	S2	preside(member)
+# rules tool=phil/skeleton date=2026-10-20

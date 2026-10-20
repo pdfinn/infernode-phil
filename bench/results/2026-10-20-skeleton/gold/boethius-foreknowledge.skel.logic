@@ -1,0 +1,20 @@
+# the argument of boethius-foreknowledge.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5kd
+atom	seem_said_too	' It seems ' said I ' too much of a paradox and a contradiction that God should know all things
+atom	free	there be free will
+atom	forese_everyth(x)	x: foresees everything
+atom	wise_deceiv	can in wise be deceived
+atom	providence_forese_about	that which providence foresees to be about to happen come to pass
+atom	wherefore_eternity_foreknow	Wherefore if from eternity He foreknows not only what men will do but also their designs and purposes there can be no freedom of the will seeing that nothing can be done nor can any sort of purpose be entertained save such as a Divine providence incapable of being deceived has perceived beforehand
+atom	issu_turn_aside	the issues can be turned aside to some other end than that foreseen by providence
+atom	sure_foreknowledge_future(x)	x: sure foreknowledge of the future but uncertain conjecture instead
+atom	think_god	to think this of God
+atom	deem_impiety	I deem impiety
+P1	S1	seem_said_too
+P2	S1	ought free
+P3	S2	((forese_everyth(god) & !wise_deceiv) -> []providence_forese_about)
+P4	S3	wherefore_eternity_foreknow
+P5	S4	(issu_turn_aside -> (all x: sure_foreknowledge_future(x) -> !true(x)))
+P6	S4	think_god
+C	S4	deem_impiety
+# rules tool=phil/skeleton date=2026-10-20

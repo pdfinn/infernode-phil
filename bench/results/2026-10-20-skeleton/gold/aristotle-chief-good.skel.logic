@@ -1,0 +1,5 @@
+# the argument of aristotle-chief-good.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	thought_good_reason(x)	x: it is thought at some good for which reason a common and by no means a bad description of the Chief Good is “ that which all things aim at
+atom	art_science_reduc(x)	x: art and every science reduced to a teachable form and in like manner every action and moral choice aims
+C	S1	(all x: art_science_reduc(x) -> thought_good_reason(x))
+# rules tool=phil/skeleton date=2026-10-20

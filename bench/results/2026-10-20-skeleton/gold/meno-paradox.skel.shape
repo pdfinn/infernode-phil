@@ -1,0 +1,4 @@
+meno-paradox.skel.logic	P1	S1	atom	a
+meno-paradox.skel.logic	P2	S1	atom	a
+meno-paradox.skel.logic	P3	S2	atom	a
+meno-paradox.skel.logic	C	S2	->	(a -> !b)

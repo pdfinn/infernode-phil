@@ -1,0 +1,7 @@
+locke-labour.skel.logic	P1	S1	atom	a
+locke-labour.skel.logic	P2	S1	all	(all x: a -> b)
+locke-labour.skel.logic	P3	S2	atom	a
+locke-labour.skel.logic	P4	S3	atom	a
+locke-labour.skel.logic	P5	S3	&	(a & b & c)
+locke-labour.skel.logic	P6	S4	atom	a
+locke-labour.skel.logic	C	S4	atom	a

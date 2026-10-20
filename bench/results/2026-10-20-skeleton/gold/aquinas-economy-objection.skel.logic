@@ -1,0 +1,14 @@
+# the argument of aquinas-economy-objection.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	c2_further_superfluou	2 Further it is superfluous to suppose that what can be accounted for by a few principles has been produced by many
+atom	seem_everyth_see	but it seems that everything we see in the world can be accounted for by other principles supposing God did not exist
+atom	natural_thing_reduc	for all natural things can be reduced to one principle which is nature
+atom	reduc_principle_human(x)	x: can be reduced to one principle which is human reason or will
+atom	voluntary_thing(x)	x: voluntary things
+atom	need_suppose_god(x)	x: need to suppose God's existence
+P1	S1	true
+P2	S2	c2_further_superfluou
+P3	S3	seem_everyth_see
+P4	S4	natural_thing_reduc
+P5	S4	(all x: voluntary_thing(x) -> reduc_principle_human(x))
+C	S5	(all x: need_suppose_god(x) -> !true(x))
+# rules tool=phil/skeleton date=2026-10-20

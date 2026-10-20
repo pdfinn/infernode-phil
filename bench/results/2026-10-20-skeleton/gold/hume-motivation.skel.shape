@@ -1,0 +1,5 @@
+hume-motivation.skel.logic	P1	S1	atom	a
+hume-motivation.skel.logic	P2	S1	&	(a & (a -> !b) & !b)
+hume-motivation.skel.logic	P3	S2	atom	a
+hume-motivation.skel.logic	P4	S3	atom	a
+hume-motivation.skel.logic	C	S4	!	!a

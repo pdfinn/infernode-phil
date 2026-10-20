@@ -1,0 +1,7 @@
+boethius-foreknowledge.skel.logic	P1	S1	atom	a
+boethius-foreknowledge.skel.logic	P2	S1	ought	ought a
+boethius-foreknowledge.skel.logic	P3	S2	->	((a & !b) -> []c)
+boethius-foreknowledge.skel.logic	P4	S3	atom	a
+boethius-foreknowledge.skel.logic	P5	S4	->	(a -> (all x: b -> !c))
+boethius-foreknowledge.skel.logic	P6	S4	atom	a
+boethius-foreknowledge.skel.logic	C	S4	atom	a

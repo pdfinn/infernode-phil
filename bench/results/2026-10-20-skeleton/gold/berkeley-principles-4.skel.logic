@@ -1,0 +1,13 @@
+# the argument of berkeley-principles-4.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	inde_opinion_strangely	it is indeed an opinion STRANGELY prevailing amongst men that houses mountains rivers and in a word all sensible objects
+atom	existence_natural_real	have an existence natural or real distinct from their being perceived by the understanding
+atom	great_entertain_world(x)	x: but with how great may be entertained in the world may if I mistake not perceive it to involve a manifest contradiction
+atom	assurance_acquiescence_principle(x)	x: assurance and acquiescence soever this principle
+atom	find_heart_call(x)	x: shall find in his heart to call it in question
+atom	foremention_object_thing	for what are the fore-mentioned objects but the things we perceive by sense ? and what do we PERCEIVE BESIDES OUR OWN IDEAS OR SENSATIONS ? and is it not plainly repugnant that any one of these or any combination of them should exist unperceived ?
+P1	S1	inde_opinion_strangely
+P2	S1	existence_natural_real
+P3	S2	(all x: assurance_acquiescence_principle(x) -> great_entertain_world(x))
+P4	S2	(all x: find_heart_call(x))
+C	S3	foremention_object_thing
+# rules tool=phil/skeleton date=2026-10-20

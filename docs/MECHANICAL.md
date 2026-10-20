@@ -65,7 +65,7 @@ research says", has the sources.
 | `senses` | word-sense disambiguation | no philosophy inventory exists; contextual embeddings do the general case | the corpus's `terms/` is the inventory to make; until then a model, one call a run |
 | `scope` | none needed | done by rule | the prover writes both readings |
 | `argue`, `claims` | LLM-to-logic with fine-tuning | an 8B open model at 95% validity against a frontier model's 61%, with validity and faithfulness scored together | the skeleton by rule first; then the small model with `prove` as judge, trained on the readings the checks passed |
-| a reader of another kind | the rule-written skeleton | none published | it counts for more than a third sample of one model, because its errors are not the model's (THREATS.md) |
+| a reader of another kind | the rule-written skeleton | none published | built: `phil/skeleton` finds 14 of the 24 connectives of the planted keys, and 30% of a model's on the gold set (RESULTS.md); it counts for more than a third sample of one model, because its errors are not the model's (THREATS.md) |
 
 A replacement is taken when the bench says it is as good on the
 held-out sets, and the model it replaces stays bound at `/mnt/llm` for

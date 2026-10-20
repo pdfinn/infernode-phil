@@ -1,0 +1,13 @@
+# the argument of hume-motivation.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	moral_influence_action	Since morals therefore have an influence on the actions and affections it follows that they can not be derived from reason
+atom	reason_alone_already	reason alone we have already proved
+atom	such_influence	that can have any such influence
+atom	moral_excite_passion	Morals excite passions and produce or prevent actions
+atom	reason_utterly_impotent	Reason of itself is utterly impotent in this particular
+atom	rul_morality_conclusion	the rules of morality therefore are conclusions of our reason
+P1	S1	moral_influence_action
+P2	S1	(reason_alone_already & (reason_alone_already -> !such_influence) & !such_influence)
+P3	S2	moral_excite_passion
+P4	S3	reason_utterly_impotent
+C	S4	!rul_morality_conclusion
+# rules tool=phil/skeleton date=2026-10-20

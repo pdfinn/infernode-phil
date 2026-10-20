@@ -1,0 +1,14 @@
+# the argument of spinoza-god.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+logic	s5
+atom	prop	PROP
+atom	xi	XI
+atom	exist(x)	x: exists
+atom	proof_deni_conceive	Proof - - If this be denied conceive if possible that God does not exist then his essence does not involve existence
+atom	prop_vii_absurd	but this ( Prop vii ) is absurd
+P1	S1	prop
+P2	S2	xi
+P3	S3	[]exist(god_substance_consisting)
+P4	S4	proof_deni_conceive
+P5	S5	prop_vii_absurd
+C	S6	[]exist(god)
+# rules tool=phil/skeleton date=2026-10-20

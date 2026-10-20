@@ -1,0 +1,4 @@
+lighthouse.skel.logic	P1	S1	atom	a
+lighthouse.skel.logic	P2	S2	atom	a
+lighthouse.skel.logic	P3	S3	->	(a -> b)
+lighthouse.skel.logic	C	S4	atom	a

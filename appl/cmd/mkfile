@@ -8,6 +8,7 @@ TARG=\
 	map.dis\
 	prove.dis\
 	says.dis\
+	skeleton.dis\
 	tableau.dis\
 
 # prove and map use the Writer's Workbench's prose library, and map

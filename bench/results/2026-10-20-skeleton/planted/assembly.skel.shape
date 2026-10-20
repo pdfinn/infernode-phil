@@ -1,0 +1,3 @@
+assembly.skel.logic	P1	S1	all	(all x: a -> b)
+assembly.skel.logic	P2	S2	some	(some x: a)
+assembly.skel.logic	C	S2	atom	a

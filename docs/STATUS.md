@@ -272,3 +272,12 @@ tools moved, October 2026; update it as things move.
   generator for graded examples.  Whether a model so trained reasons
   better without the tool is the question to measure.  Separate from the
   workbench's own work; the training belongs in infernode-os-llm.
+
+## Deferred
+
+- `./phil` and `./wwb` set up a command's session by hand: the network,
+  factotum with the host's keys, and llmsrv for a command that asks a
+  model. InferNode's login profile does the same from the session's own
+  settings (`/lib/ndb/llm`, the proxy, `/mnt/audit`), and a runner could
+  use it (`sh -l`); but the profile starts more than a command needs
+  (speech, `/n`). Left for later, by decision (October 2026).

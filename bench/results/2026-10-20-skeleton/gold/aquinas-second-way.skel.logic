@@ -1,0 +1,25 @@
+# the argument of aquinas-second-way.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	nature_efficient_cause(x)	x: is from the nature of the efficient cause
+atom	world_sense_find	in the world of sense we find there is an order of efficient causes
+atom	prior_impossible(x)	x: there is for so it would be prior to itself which is impossible
+atom	case_known_inde(x)	x: case known ( neither is it indeed possible ) in which a thing is found to be the efficient cause of itself
+atom	now_efficient_cau	Now in efficient causes it is possible to go on to infinity
+atom	efficient_cau_follow(x)	x: because in all efficient causes following in order is the cause of the intermediate cause
+atom	cause_ultimate_cause(x)	x: is the cause of the ultimate cause whether the intermediate cause be several or only one
+atom	now_take_cause	Now to take away the cause is to take away the effect
+atom	first_cause_efficient(x)	x: first cause among efficient causes
+atom	ultimate_intermediate_cause(x)	x: ultimate nor any intermediate cause
+atom	efficient_cau_possible	in efficient causes it is possible to go on to infinity
+atom	ultimate_effect_intermediate(x)	x: but there will be neither will there be an ultimate effect nor any intermediate efficient causes all of which is plainly false
+atom	necessary_admit_first	it is necessary to admit a first efficient cause to which everyone gives the name of God
+P1	S1	nature_efficient_cause(second_way)
+P2	S2	world_sense_find
+P3	S3	(all x: case_known_inde(x) -> !prior_impossible(x))
+P4	S4	!now_efficient_cau
+P5	S4	efficient_cau_follow(first)
+P6	S4	cause_ultimate_cause(intermediate)
+P7	S5	now_take_cause
+P8	S6	((all x: first_cause_efficient(x) -> !true(x)) -> (all x: ultimate_intermediate_cause(x) -> !true(x)))
+P9	S7	(efficient_cau_possible -> (all x: first_cause_efficient(x) -> !ultimate_effect_intermediate(x)))
+C	S8	necessary_admit_first
+# rules tool=phil/skeleton date=2026-10-20

@@ -1,0 +1,5 @@
+hand-map.skel.logic	P1	S1	all	(all x: a)
+hand-map.skel.logic	P2	S2	atom	a
+hand-map.skel.logic	P3	S3	atom	a
+hand-map.skel.logic	P4	S3	->	(a -> b)
+hand-map.skel.logic	C	S3	atom	a

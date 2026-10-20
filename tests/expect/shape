@@ -1,0 +1,10 @@
+../bench/planted/ledger.key.logic	P1	S1	[]	[](a -> b)
+../bench/planted/ledger.key.logic	P2	S2	atom	a
+../bench/planted/ledger.key.logic	C	S3	[]	[]a
+../bench/planted/travellers.key.logic	P1	S1	all	all x: a -> some y: b & c
+../bench/planted/travellers.key.logic	C	S2	some	some y: a & all x: b -> c
+data/scope/shift.logic	P1	S1	all	all x: a -> some y: b & c
+data/scope/shift.logic	C	S2	some	some y: a & all x: b -> c
+/tmp/shape.logic	P1	S1	all	all x: (a | b -> some y: (c & d))
+/tmp/shape.logic	P2	S2	!	!<>a
+/tmp/shape.logic	C	S3	[]	[](a -> (b <-> c))

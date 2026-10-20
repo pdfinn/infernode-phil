@@ -1,0 +1,147 @@
+#!/dis/sh.dis
+# phil/shape logicfile ... - the form of each statement, with what it is
+# about left out: each atom (a name, or a predicate and its arguments)
+# a letter, in the order the statement first uses them, and the main
+# connective, the one the whole statement is.  A line a statement, tab
+# between: the file, the statement, its sentence, the main connective
+# (-> <-> | & ! [] <> ought permitted all some, or atom), the form:
+#
+#	x.logic	P1	S1	[]	[](a -> b)
+#
+# so that two readings of one text, a model's and a rule's
+# (phil/skeleton), or a reading and its key, are set side by side by
+# sentence with join or awk, where their atoms are not the same.
+load std
+if {~ $#* 0} {
+	echo 'usage: phil/shape logicfile ...' >[1=2]
+	raise fail:usage
+}
+for f in $* {
+	awk -F '	' -v 'file='^$f '
+	function trim(s) {
+		sub(/^[ \t]+/, "", s)
+		sub(/[ \t]+$/, "", s)
+		return s
+	}
+	# s without parentheses round the whole of it
+	function strip(s,    d, i, c, n) {
+		s = trim(s)
+		while(substr(s, 1, 1) == "(" && substr(s, length(s), 1) == ")") {
+			d = 0
+			n = length(s)
+			for(i = 1; i <= n; i++) {
+				c = substr(s, i, 1)
+				if(c == "(")
+					d++
+				else if(c == ")")
+					d--
+				if(d == 0 && i < n)
+					break
+			}
+			if(i < n)
+				break
+			s = trim(substr(s, 2, n - 2))
+		}
+		return s
+	}
+	# the operator at depth 0 that binds last: -> and <-> (the first),
+	# then |, then &
+	function binop(s, op,    d, i, c, n, k) {
+		d = 0
+		n = length(s)
+		k = length(op)
+		for(i = 1; i <= n; i++) {
+			c = substr(s, i, 1)
+			if(c == "(")
+				d++
+			else if(c == ")")
+				d--
+			else if(d == 0 && substr(s, i, k) == op) {
+				if(op == "->" && i > 1 && substr(s, i - 1, 1) == "<")
+					continue
+				return i
+			}
+		}
+		return 0
+	}
+	function main(s,    t) {
+		s = strip(s)
+		# a quantifier put first holds to the end
+		t = s
+		sub(/[ (].*/, "", t)
+		if(t == "all" || t == "some")
+			return t
+		if(binop(s, "<->"))
+			return "<->"
+		if(binop(s, "->"))
+			return "->"
+		if(binop(s, "|"))
+			return "|"
+		if(binop(s, "&"))
+			return "&"
+		if(substr(s, 1, 1) == "!")
+			return "!"
+		if(substr(s, 1, 2) == "[]")
+			return "[]"
+		if(substr(s, 1, 2) == "<>")
+			return "<>"
+		t = s
+		sub(/[ (].*/, "", t)
+		if(t == "ought" || t == "permitted" || t == "all" || t == "some")
+			return t
+		return "atom"
+	}
+	# the form: each atom a letter, in order of first use
+	# (seen is global: awk here does not make a local array afresh)
+	function form(s,    out, w, letters, k, m) {
+		letters = "abcdefghijklmnopqrstuvwxyz"
+		out = ""
+		k = 0
+		split("", seen)
+		while(match(s, /[a-z_][a-z0-9_]*(\([^)]*\))?/)) {
+			out = out substr(s, 1, RSTART - 1)
+			w = substr(s, RSTART, RLENGTH)
+			s = substr(s, RSTART + RLENGTH)
+			m = w
+			sub(/\(.*/, "", m)
+			if(m == "ought" || m == "permitted" || m == "all" || m == "some" || m == "nec" || m == "pos") {
+				out = out w
+				continue
+			}
+			# a quantifier names its variable: x: is not an atom
+			if(substr(s, 1, 1) == ":" && length(w) == 1) {
+				out = out w
+				continue
+			}
+			if(seen[w] == "") {
+				k++
+				seen[w] = substr(letters, k, 1)
+			}
+			out = out seen[w]
+		}
+		return out s
+	}
+	# the other spellings of the notation, as phil/prove reads them
+	function ascii(s) {
+		gsub(/→/, "->", s)
+		gsub(/↔/, "<->", s)
+		gsub(/∧/, "\\&", s)
+		gsub(/∨/, "|", s)
+		gsub(/¬/, "!", s)
+		gsub(/□/, "[]", s)
+		gsub(/◇/, "<>", s)
+		while(match(s, /∀[a-z] */)) {
+			s = substr(s, 1, RSTART - 1) "all " substr(s, RSTART + 1, 1) ": " substr(s, RSTART + RLENGTH)
+		}
+		while(match(s, /∃[a-z] */)) {
+			s = substr(s, 1, RSTART - 1) "some " substr(s, RSTART + 1, 1) ": " substr(s, RSTART + RLENGTH)
+		}
+		return s
+	}
+	$1 ~ /^(P[0-9]+|A[0-9]+|C[0-9]*|O[0-9]+|R[0-9]+)$/ && NF >= 3 {
+		f = ascii($3)
+		$0 = file "\t" $1 "\t" $2 "\t" main(f) "\t" form(f)
+		print
+	}' $f
+}
+exit

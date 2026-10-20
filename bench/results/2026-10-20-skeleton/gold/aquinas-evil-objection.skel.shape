@@ -1,0 +1,5 @@
+aquinas-evil-objection.skel.logic	P1	S1	atom	a
+aquinas-evil-objection.skel.logic	P2	S2	atom	a
+aquinas-evil-objection.skel.logic	P3	S3	->	(a -> (all x: b -> !c))
+aquinas-evil-objection.skel.logic	P4	S3	atom	a
+aquinas-evil-objection.skel.logic	C	S4	!	!a

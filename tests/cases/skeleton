@@ -1,0 +1,7 @@
+# phil/skeleton on the planted passages: a reading by rule from wwb's
+# parse (its last line, dated, left out)
+load std
+for f in ledger river-promise judge-interest lighthouse orchard {
+	echo '#' $f
+	wwb/parse ../bench/planted/$f.md | phil/skeleton | grep -v '^# rules '
+}

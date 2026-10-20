@@ -1,0 +1,2 @@
+descartes-real-distinction.skel.logic	P1	S1	&	(a & (a -> b) & b)
+descartes-real-distinction.skel.logic	C	S1	!	!a

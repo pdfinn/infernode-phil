@@ -1,0 +1,12 @@
+# the argument of river-promise.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	made_release_made	the one to whom it is made can release the one who made it
+atom	bind(x)	x: binds
+atom	promise(x)	x: promise
+atom	release_speak_will(x)	x: can release one for it neither speaks nor wills
+atom	river(x)	x: river
+atom	bind_solemnly_spoken(x)	x: does bind however solemnly it was spoken on the bank
+atom	promise_made_river(x)	x: promise made to a river
+P1	S1	((all x: promise(x) -> bind(x)) -> made_release_made)
+P2	S2	(all x: river(x) -> !release_speak_will(x))
+C	S3	(all x: promise_made_river(x) -> !bind_solemnly_spoken(x))
+# rules tool=phil/skeleton date=2026-10-20

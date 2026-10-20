@@ -1,0 +1,8 @@
+# the argument of guild.md by rule (phil/skeleton): connectives from the parse, an atom to each clause
+atom	admit_serv_seven(x)	x: admits only those who have served seven years at the furnace
+atom	serv_seven_year(x)	x: has served seven years at the furnace
+atom	admit_mira(x)	x: will admit Mira
+P1	S1	admit_serv_seven(guild)
+P2	S2	serv_seven_year(mira)
+C	S3	admit_mira(guild)
+# rules tool=phil/skeleton date=2026-10-20

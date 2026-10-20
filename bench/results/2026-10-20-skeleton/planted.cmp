@@ -1,0 +1,21 @@
+passages: 12
+a connective in the other reading found by rule: 14 of 24 (58%)
+a connective by rule that the other reading has: 14 of 23 (60%)
+the same sentence concluded: 12 of 12 (100%)
+
+| Passage | Sentence | By rule | The other reading |
+|---|---|---|---|
+| common-library | S1 | `a; (a -> (all x: !b)); (all x: !a)` | `a -> b` |
+| common-library | S3 | `(all x: !a)` | `!a` |
+| crystal-order | S1 | `(some x: a)` | `all x: a -> b` |
+| crystal-order | S3 | `(some x: a)` | `a` |
+| guild | S1 | `a` | `a -> b` |
+| hand-map | S3 | `a; (a -> b); a` | `a` |
+| ledger | S3 | `!a` | `[]a` |
+| lighthouse | S1 | `a` | `a \| b` |
+| lighthouse | S2 | `a` | `a -> b; !a` |
+| oracle | S3 | `[]a; (all x: !a)` | `[]a` |
+| river-promise | S1 | `((all x: a -> b) -> c)` | `all x: a -> b` |
+| river-promise | S2 | `(all x: a -> !b)` | `!a` |
+| river-promise | S3 | `(all x: a -> !b)` | `!a` |
+| travellers | S2 | `(all x: a -> b); a` | `some y: a & all x: b -> c` |

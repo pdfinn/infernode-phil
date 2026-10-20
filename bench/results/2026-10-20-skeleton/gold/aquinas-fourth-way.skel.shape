@@ -1,0 +1,8 @@
+aquinas-fourth-way.skel.logic	P1	S1	atom	a
+aquinas-fourth-way.skel.logic	P2	S2	atom	a
+aquinas-fourth-way.skel.logic	P3	S3	all	(all x: a -> b)
+aquinas-fourth-way.skel.logic	P4	S3	->	((all x: a -> b) -> c)
+aquinas-fourth-way.skel.logic	P5	S3	atom	a
+aquinas-fourth-way.skel.logic	P6	S4	atom	a
+aquinas-fourth-way.skel.logic	P7	S5	some	(some x: []a)
+aquinas-fourth-way.skel.logic	C	S5	atom	a

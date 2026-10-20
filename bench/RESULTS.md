@@ -533,6 +533,39 @@ the same run ([above](#the-prompt-changed-48e3990c5a0a)) is the
 measure: 21 of the 39 inference runs found the fault and none of the
 15 equivocation runs did. A planted run will be judged by hand too.
 
+## A reader by rule: phil/skeleton
+
+A reading with no model: `wwb/parse | phil/skeleton`, the conclusion by
+its marker, conditionals (if, only if, unless, because), disjunction,
+conjunction, denial, necessity and ought from the dependency tree, and
+quantified or named subjects; an atom to each clause. Run on the 12
+planted passages and the 26 of the gold set in 21 seconds, with no
+model. Its statements are set beside another reading's by sentence,
+each statement's form with its atoms as letters (`phil/shape`,
+`bench/skelcmp.py`), since the two readings' atoms are not the same.
+Output in [results/2026-10-20-skeleton/](results/2026-10-20-skeleton/).
+
+| Beside | Passages | Its connectives the rule also finds | The rule's connectives the other has | Same sentence concluded |
+|---|---|---|---|---|
+| the planted keys | 12 | 14 of 24 (58%) | 14 of 23 (60%) | 12 of 12 |
+| the model's kept readings (gold, 48e3990c5a0a) | 26 | 26 of 86 (30%) | 26 of 64 (40%) | 18 of 26 |
+
+On the keys it began at 7 of 24 with connectives alone; quantified
+subjects, because-clauses and premises split at their conjunctions
+brought it to 14. What it misses there is an object's quantifier (the
+guild "admits only those who"), a generic subject over a whole
+conditional ("a promise binds only if"), and the parser's errors ("that
+night or the ship was warned" read as a relative clause). Beside the
+model on the gold set, in 26 of 85 disagreements the rule left a whole
+sentence an atom where the model wrote a connective it inferred (a
+reason with no because, a premise and its link written apart), and the
+rest are each reading's choices of form (a quantifier where the other
+denies an atom) or a misparse. It is a reader of another kind, not a
+replacement: where it and a model's reading agree on a sentence's
+form, two readers wrong in different ways agree; where they differ, the
+difference is a question for settle or a person, not an error in
+either.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of

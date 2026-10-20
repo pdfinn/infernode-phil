@@ -1,0 +1,13 @@
+hume-induction.skel.logic	P1	S1	all	(all x: a -> b)
+hume-induction.skel.logic	P2	S2	atom	a
+hume-induction.skel.logic	P3	S2	&	(!a & (!a -> (all x: b -> c)) & (all x: b -> c))
+hume-induction.skel.logic	P4	S3	atom	a
+hume-induction.skel.logic	P5	S4	all	(all x: a -> b)
+hume-induction.skel.logic	P6	S5	all	(all x: a)
+hume-induction.skel.logic	P7	S5	&	(a & !b & !c)
+hume-induction.skel.logic	P8	S6	[]	[]a
+hume-induction.skel.logic	P9	S7	all	(all x: a -> !b)
+hume-induction.skel.logic	P10	S8	atom	a
+hume-induction.skel.logic	P11	S8	atom	a
+hume-induction.skel.logic	P12	S9	[]	[]a
+hume-induction.skel.logic	C	S9	atom	a
