@@ -159,9 +159,11 @@ decided:
   only in the word (below).
 - `rival`: two claims the corpus treats as alternatives, for `prove
   -p`; the line goes into a family `prove -p` is given as `rivals`.
-- The last field says who decided: `answers k/n` (that many of n
-  readings answered yes to the question), `hand`, or `prove` (the
-  formulas were found equivalent under the works' own premises).
+- The last field says who decided, in `attr=value` words (PHIL.md,
+  "Recorded with provenance"): `answers=k/n` (that many of n readings
+  answered yes to the question) with the model, prompt hash and date,
+  `hand=<who>`, or `prove=equivalent` (the formulas were found
+  equivalent under the works' own premises).
 
 An atom aligned to nothing keeps its work's name prefixed with the
 work's id, as `join` renames a colliding atom today (`outmoded_81`).
@@ -280,8 +282,8 @@ presupposes a claim the field disputes. `questions` holds the
 question each work takes itself to be answering, in its own terms,
 with the atoms the question needs:
 
-	question	contain	can normalisation of emergency powers be contained within the legal order?	norm_constitutional contain_succeeds	mine gross dyzenhaus	readings 3/3
-	question	contain	can the political forces that normalise emergency powers be contained at all?	norm_political contain_succeeds	mine	readings 2/3
+	question	contain	can normalisation of emergency powers be contained within the legal order?	norm_constitutional contain_succeeds	mine gross dyzenhaus	readings=3/3
+	question	contain	can the political forces that normalise emergency powers be contained at all?	norm_political contain_succeeds	mine	readings=2/3
 
 - The second field names the question; two works under one name are
   claimed to ask the same thing, and the line is made as `align`'s
@@ -511,7 +513,7 @@ that move as a tool. Given a smallest inconsistent set from `prove
 one atom, read in two senses, would let the set stand, and what the
 two senses are:
 
-	split	emergency	emergency_existential emergency_ideological	readings 2/3
+	split	emergency	emergency_existential emergency_ideological	readings=2/3
 	atom	emergency_existential	a threat to the state's existence
 	atom	emergency_ideological	a threat to a particular conception of the state
 

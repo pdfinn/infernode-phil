@@ -472,17 +472,37 @@ runs outside InferNode's name space and is not confined by it.
 Each reading's first line is
 .BI # " header"
 .RB ( -H ),
-and its last says who read it, asked how
+and its last is its provenance, a comment of
+.IB attr = value
+words, as
+.IR ndb (6)
+writes them: who read it
+.RB ( model ),
+asked how
 .RB ( "wwb/ask -s" :
-temperature, maxtokens, thinking), with which instructions (by the first
-twelve digits of their SHA-1), when, and how it was confined:
-.B blinded by name space
-(with
-.B "/net for the API's call"
-where it was kept), or
-.BR unconfined :
+.BR temperature ,
+.BR maxtokens ,
+.BR thinking ),
+with which instructions
+.RB ( prompt ,
+and
+.BR prompthash ,
+the first twelve digits of their SHA-1), when
+.RB ( date ),
+how confined
+.RB ( confined=namespace ,
+or
+.B none
+for a host command) and with what network
+.RB ( net=none ;
+.BR api ,
+kept for the API's call;
+.BR host ).
+A value with a blank in it is quoted as
+.IR sh (1)
+quotes it.
 .EX
-	# read by claude-opus-5-5 (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space, /net for the API's call
+	# read model=claude-opus-5-5 temperature=default maxtokens=8192 thinking=off prompt=/lib/phil/argue prompthash=7f3a9c1e2b4d date=2026-10-19 confined=namespace net=api
 .EE
 .B -K
 names atom lines to put before the reader's own.
@@ -769,35 +789,50 @@ serves one on the host file
 .B $PHILAUDIT
 names),
 .I read
-seals each reading it keeps there: the SHA-256 of its statements (every
-line not a comment), the prompt's hash and who read it; and
+seals each reading it keeps there, a record whose message is
+.IB attr = value
+words: the SHA-256 of its statements (every line not a comment), the
+prompt, its hash and who read it,
+.EX
+	phil/read reading sha256=afe7... prompt=/lib/phil/argue prompthash=48e3990c5a0a model=claude-opus-5-5
+.EE
+and
 .I argue
-seals the reading it keeps after settling and tidying, with the readings
-it was made from.
+seals the reading it keeps after settling and tidying, with one
+.B from=
+for each reading it was made from:
+.EX
+	phil/argue kept sha256=8143... from=afe7... from=c3e0...
+.EE
 A reader's name space has the log's directory empty, so a reader cannot
 seal a record of its own.
 .I Audit
 hashes each
 .I file
-with a
-.B # read by
-line the same way and says
+with a provenance line
+.RB ( "# read " ...)
+the same way and writes one finding a file, in the workbench's form:
 .B audit/backed
+(with the record's
+.BR record= ,
+.B source=
+and
+.BR time= )
 where a record of
 .I read
 names the hash, or one of
 .I argue
 does whose readings all have records;
 .B audit/unbacked
-(at the
-.B # read by
-line) where none does: written, or changed, by another hand after the
-model read.
+(at the provenance line) where none does: written, or changed, by
+another hand after the model read; and
+.B audit/unread
+for a file with no provenance line.
 A comment added changes nothing.
-A file with no
-.B # read by
-line is counted as not a model's reading.
-It fails when any reading is unbacked.
+It fails when any reading is unbacked, and
+.I wwb/gate
+can hold it to
+.BR "audit/unbacked = 0" .
 .B -c
 names a copy of the chain; that the chain is whole is
 .IR auditverify 's

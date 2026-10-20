@@ -36,14 +36,14 @@ want() {
 		fail=1
 	fi
 }
-want 'audit/backed: phil/read, record [0-9]+' 'a reading phil/read kept is backed' 'a reading, sealed'
+want 'audit/backed: record=[0-9]+ source=phil/read time=[0-9-]+T[0-9:]+Z' 'a reading phil/read kept is backed' 'a reading, sealed'
 want '^status $' 'audit succeeds on it' 'a reading, sealed'
-want 'audit/backed: phil/argue, record [0-9]+' 'the reading argue kept from three is backed' 'an argument of three'
+want 'audit/backed: record=[0-9]+ source=phil/argue' 'the reading argue kept from three is backed' 'an argument of three'
 want 'audit/backed' 'a comment added changes nothing' 'a comment added'
 want 'changed:[0-9]+: audit/unbacked: no sealed record' 'a statement changed is unbacked' 'a statement changed'
 want '^status (fail:)?unbacked' 'audit fails on it' 'a statement changed'
 want 'forged:3: audit/unbacked' 'a reading written by hand is unbacked' 'written by hand'
-grep -q 'not read by a model 1' "$tmp/out" || { echo 'FAIL: a file with no provenance is not a reading'; fail=1; }
+grep -q 'hand: audit/unread: no provenance line' "$tmp/out" || { echo 'FAIL: a file with no provenance is not a reading'; fail=1; }
 sed -n '/^# the chain$/,$p' "$tmp/out" > "$tmp/chain"
 grep -q 'no record of the reader' "$tmp/chain" || { echo 'FAIL: a reader sealed a record of its own'; fail=1; }
 grep -q '^ok: ' "$tmp/chain" || { echo 'FAIL: the chain verifies'; fail=1; }

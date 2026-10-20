@@ -45,7 +45,7 @@ echo '# three readers'
 phil/read -k 3 -o out/read/three /lib/phil/argue out/read/question
 echo status $status
 for f in out/read/three.1 out/read/three.2 out/read/three.3 {
-	grep -s '^# read by sh .*, prompt /lib/phil/argue [0-9a-f]+, [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9], blinded by name space$' $f && echo $f has its provenance
+	grep -s '^# read model=''sh .*'' temperature=unknown maxtokens=unknown thinking=unknown prompt=/lib/phil/argue prompthash=[0-9a-f]+ date=[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] confined=namespace net=none$' $f && echo $f has its provenance
 }
 
 echo '# a reader that never writes a file the prover can read'
@@ -58,5 +58,5 @@ echo '# a host command'
 wwbmodel='os sh -c ''cat > /dev/null; printf "atom\tp\tthe server is patched\nC\tS1\tp\n"'''
 phil/read -o out/read/host /lib/phil/argue out/read/question
 echo status $status
-grep '^# read by' out/read/host
+grep '^# read ' out/read/host
 echo halt > /dev/sysctl

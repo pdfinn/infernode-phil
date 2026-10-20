@@ -20,10 +20,15 @@
 # way os ...) runs outside InferNode's name space and is not confined
 # by it; the reading says so, unconfined.
 #
-# Each reading's first line is # header (-H), and its last says who
-# read it, asked how (wwb/ask -s), with which instructions, when, and
-# how confined (last, so that it moves no line the prover names):
-#	# read by claude-opus-5-5 (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/argue 7f3a9c1e2b4d, 2026-10-19, blinded by name space, /net for the API's call
+# Each reading's first line is # header (-H), and its last is its
+# provenance, a comment of attr=value words (last, so that it moves no
+# line the prover names): who read it, asked how (wwb/ask -s), with which
+# instructions and their hash (the first twelve digits of their SHA-1),
+# when, and how confined (namespace, or none for a host command) and
+# with what network (none; api, kept for the API's call; host):
+#	# read model=claude-opus-5-5 temperature=default maxtokens=8192 thinking=off prompt=/lib/phil/argue prompthash=7f3a9c1e2b4d date=2026-10-19 confined=namespace net=api
+# A value with a blank in it is quoted as sh quotes (model='os claude -p').
+# grep '^# read ' finds them; sed 's/.* model=//' or tokenize reads them.
 # Where there is an audit log (/mnt/audit/log, or $philaudit), each
 # reading kept is sealed in it: the SHA-256 of its statements (phil/audit
 # -h), the prompt's hash and who read it; phil/audit checks a reading
@@ -117,7 +122,7 @@ day=`{date | awk 'BEGIN { split("Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
 # how it is asked; a Writer's Workbench too old to say, says nothing
 how=`{wwb/ask -s $m >[2] /dev/null}
 if {~ $#how 0} {
-	how='settings not recorded'
+	how='temperature=unknown maxtokens=unknown thinking=unknown'
 }
 how=$"how
 way=${hd ${split ' 	' $"wwbmodel}}
@@ -128,12 +133,12 @@ if {~ $#way 0} {
 		way=anthropic
 	}
 }
-blind='blinded by name space'
+blind='confined=namespace net=none'
 net=()
 if {~ $way os} {
-	blind='unconfined: a host command, not blinded by name space'
+	blind='confined=none net=host'
 } {~ $way anthropic openai} {
-	blind=$blind^', /net for the API''s call'
+	blind='confined=namespace net=api'
 	net=1
 }
 
@@ -163,7 +168,7 @@ fn seal {
 	if {! ~ $#log 0} {
 		sf=$1
 		h=`{phil/audit -h $sf}
-		echo 'phil/read reading sha256='^$h^' prompt='^$hash^' model='^$who > $log
+		echo 'phil/read reading sha256='^$h^' prompt='^$prompt^' prompthash='^$hash^' model='^${quote $who} > $log
 	}
 }
 
@@ -205,7 +210,7 @@ fn keep {
 			grep '^(atom|domain)	' $pre
 		}
 		grep '^(#|atom	|domain	|logic	|[PAOR][0-9]+	|C[0-9]*	)' $answer
-		echo '#' read by $who '('^$how^'),' prompt $prompt $hash, $day, $blind
+		echo '# read model='^${quote $who} $how 'prompt='^$prompt 'prompthash='^$hash 'date='^$day $blind
 	} > $target
 }
 
@@ -238,7 +243,7 @@ fn mend {
 				echo
 				echo 'You wrote:'
 				echo
-				grep -v '^# read by .*, prompt ' $target
+				grep -v '^# read ' $target
 				echo
 				echo 'The prover could not use the file you wrote. It said:'
 				echo

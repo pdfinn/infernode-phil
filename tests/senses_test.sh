@@ -70,7 +70,7 @@ count 7 'argue/two-senses: P3 (S3): it takes "end" from the last point of a thin
 count 7 'argue/equivocates' 0 'and is not an equivocation'
 count 7 'C (S4): it takes' 0 'a conclusion named as a bridge is passed over'
 count 1 'senses.logic.senses' 1 'the answers are kept'
-want '# answered by fake-model (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/senses ' 'the answers say who answered, asked how, by what prompt' out
+want '# answered model=fake-model temperature=default maxtokens=8192 thinking=off prompt=/lib/phil/senses prompthash=' 'the answers say who answered, asked how, by what prompt' out
 for i in 1 2 3 4 5 6 7; do
 	count $i 'senses.logic.(shared|words|ans|split)' 0 'no working files are left'
 done

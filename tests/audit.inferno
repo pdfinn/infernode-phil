@@ -59,7 +59,7 @@ echo '# written by hand, with a provenance line: unbacked'
 {
 	echo 'atom	p	the server is patched'
 	echo 'C	S1	p'
-	echo '# read by claude-opus-5-5 (temperature default, maxtokens 8192, thinking off), prompt /lib/phil/argue 48e3990c5a0a, 2026-10-19, blinded by name space'
+	echo '# read model=claude-opus-5-5 temperature=default maxtokens=8192 thinking=off prompt=/lib/phil/argue prompthash=48e3990c5a0a date=2026-10-19 confined=namespace net=api'
 } > $d/forged
 phil/audit -c $m/chain $d/forged
 echo status $status

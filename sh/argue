@@ -63,12 +63,14 @@ fn seal {
 	if {ftest -e $slog} {
 		# $1 inside a `{} block is the block's, so name it first
 		skept=$1
-		sfrom=''
+		# one from= for each reading it was made from, as ndb repeats
+		# an attribute
+		sfrom=()
 		for sg in ${tl $*} {
-			sfrom=$sfrom^`{phil/audit -h $sg}^,
+			sfrom=($sfrom 'from='^`{phil/audit -h $sg})
 		}
 		shash=`{phil/audit -h $skept}
-		echo 'phil/argue kept sha256='^$shash^' from='^$sfrom > $slog
+		echo 'phil/argue kept sha256='^$shash $sfrom > $slog
 	}
 }
 

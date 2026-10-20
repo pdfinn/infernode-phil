@@ -95,17 +95,20 @@ commands extracted from `argue`:
   and keeps the reading the answers and the words favour. The
   faithfulness read-back (`prove -e`) vetoes a reading whatever the
   answers say.
-- **Recorded with provenance.** Every line a reading produces says
-  `readings k/n` or `answers k/n`, the model, the prompt's hash and
-  the date: `readings 3/3 claude-opus-5-5 7f3a9c1e 2026-10-19`. A
-  person's line, `hand <who>`, outweighs it; a driving agent's line,
-  `agent <name>`, is a proposal with that provenance and never
-  outweighs a person's. A reading's own line (`# read by`) also gives
-  the settings it was asked with (`wwb/ask -s`: temperature, maxtokens,
-  thinking), which the 2026 guidance for reproducible model use in the
-  humanities asks for beside model, version, date and prompt, and how
-  it was confined: `blinded by name space`, or, for a reader that is a
-  host command, `unconfined`. Still to add: a seed, where a provider
+- **Recorded with provenance.** Every line a reading produces ends
+  in a field of `attr=value` words (ndb(6)'s form, as InferNode's
+  9p-data-conventions ask for records whose fields may grow): who
+  decided, the model, the prompt's hash and the date,
+  `readings=3/3 model=claude-opus-5-5 prompthash=7f3a9c1e date=2026-10-19`,
+  or `answers=2/3 ...`. A person's line, `hand=<who>`, outweighs it; a
+  driving agent's line, `agent=<name>`, is a proposal with that
+  provenance and never outweighs a person's. A reading's own line
+  (`# read model=...`) also gives the settings it was asked with
+  (`wwb/ask -s`: `temperature=`, `maxtokens=`, `thinking=`), which the
+  2026 guidance for reproducible model use in the humanities asks for
+  beside model, version, date and prompt, and how it was confined:
+  `confined=namespace`, or, for a reader that is a host command,
+  `confined=none net=host`. Still to add: a seed, where a provider
   takes one.
 - **Blinded to the corpus, not to its training.** A reader cannot see
   the other readings or the answers. It can recall what it read in

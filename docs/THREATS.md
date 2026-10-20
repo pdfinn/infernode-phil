@@ -122,7 +122,7 @@ logic file so `prove` says valid.
   `ledger` and `agenda` are designed the same way. `corpus/stale`, to
   name a line whose id no reading has, is designed, not built.
 - **Provenance is written by the tool that made the line,** never by
-  the driver: `readings k/n model hash date`, `hand who`, `agent name`.
+  the driver, as `attr=value` words: `readings=k/n model=... prompthash=... date=...`, `hand=<who>`, `agent=<name>`.
   An `agent` line never outweighs a `hand` line, and a reader cannot
   write one at all (PHIL.md, "What a model never does").
 - **`phil/audit` holds every reading to a sealed record.** `read`
@@ -138,7 +138,7 @@ logic file so `prove` says valid.
   space can write a record that says `phil/read`. Give a driving agent
   the commands, not the log; and copy `head` off the machine to catch a
   chain cut back (`auditverify -a`). The corpus files' own lines
-  (`readings k/n`) are not yet held to the records; the readings they
+  (`readings=k/n`) are not yet held to the records; the readings they
   were made from are.
 - **Not covered.** A person writing a wrong `hand` line. The commit
   history shows it.
@@ -186,7 +186,7 @@ prompt is filed under another's hash; the host-command reader
   gives it with the model and the date. Not yet built: a hash over
   prompt, text and model together, under which a rerun with the same
   three would return the kept reading.
-- **The host-command reader says it is `unconfined`**, by design
+- **The host-command reader says `confined=none`**, by design
   (PHIL.md, step 0's leavings); `tests/read_test.sh` checks it. A bench
   run that used it is marked.
 - **The provenance line carries the settings** the model was asked
@@ -283,7 +283,7 @@ In order of what they close:
 - **A verdict written into a corpus file by hand is not read.**
   `ledger` rebuilt ignores it; `corpus/stale` names it if its id is
   gone.
-- **The host-command reader's provenance says unconfined.** Done:
+- **The host-command reader's provenance says `confined=none`.** Done:
   `tests/read_test.sh`.
 - **Decoding settings in the provenance line.** Done; to be
   round-tripped through `read`'s kept-reading lookup when that is
