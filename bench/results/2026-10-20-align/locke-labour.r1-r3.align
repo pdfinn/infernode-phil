@@ -1,0 +1,8 @@
+same	locke-labour.r1:earth_common	locke-labour.r3:earth_common	rule=shape votes=1 sentences=S1 words=1.00
+same	locke-labour.r1:owns_person	locke-labour.r3:owns_person	rule=shape votes=1 sentences=S1 words=1.00
+same	locke-labour.r1:owns_labour	locke-labour.r3:labour_his	rule=shape votes=2 sentences=S4,S2 words=1.00
+same	locke-labour.r1:removes	locke-labour.r3:removes	rule=shape votes=2 sentences=S3 words=1.00
+same	locke-labour.r1:mixes	locke-labour.r3:mixed	rule=shape votes=2 sentences=S4,S3 words=1.00
+same	locke-labour.r1:excludes	locke-labour.r3:no_other_right	rule=shape votes=1 sentences=S4 words=0.31
+same	locke-labour.r1:enough_left	locke-labour.r3:enough_left	rule=shape votes=1 sentences=S4 words=1.00
+same	locke-labour.r1:property	locke-labour.r3:property	rule=shape votes=1 sentences=S3 words=0.86

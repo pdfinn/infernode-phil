@@ -1,0 +1,6 @@
+same	hume-induction.r2:arg_exists	hume-induction.r3:arg_exists	rule=shape votes=2 sentences=S1,S6 words=0.84
+same	hume-induction.r2:demo	hume-induction.r3:demo_arg	rule=shape votes=2 sentences=S1,S2 words=1.00
+same	hume-induction.r2:moral	hume-induction.r3:moral_arg	rule=shape votes=3 sentences=S1,S6,S7 words=0.86
+same	hume-induction.r2:noncontra	hume-induction.r3:change_conceivable	rule=shape votes=1 sentences=S2 words=0.83
+same	hume-induction.r2:presuppose	hume-induction.r3:presupposes_uniformity	rule=words words=0.67
+same	hume-induction.r2:circular	hume-induction.r3:circular	rule=words words=0.82

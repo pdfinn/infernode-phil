@@ -1,0 +1,12 @@
+same	aquinas-third-way.r1:generated	aquinas-third-way.r2:generated_corrupt	rule=shape votes=2 sentences=S2 words=1.00
+same	aquinas-third-way.r1:contingent_exist	aquinas-third-way.r2:contingents_exist	rule=shape votes=1 sentences=S2 words=1.00
+same	aquinas-third-way.r1:contingent_sometime_not	aquinas-third-way.r2:each_sometime_not	rule=shape votes=1 sentences=S3 words=0.80
+same	aquinas-third-way.r1:all_contingent	aquinas-third-way.r2:all_contingent	rule=shape votes=2 sentences=S4,S7 words=1.00
+same	aquinas-third-way.r1:once_nothing	aquinas-third-way.r2:once_nothing	rule=shape votes=1 sentences=S4 words=1.00
+same	aquinas-third-way.r1:begin_needs_existing	aquinas-third-way.r2:begin_needs_existing	rule=shape votes=1 sentences=S5 words=1.00
+same	aquinas-third-way.r1:nothing_now	aquinas-third-way.r2:now_nothing	rule=shape votes=1 sentences=S6 words=1.00
+same	aquinas-third-way.r1:necessary_exists	aquinas-third-way.r2:necessary_exists	rule=shape votes=1 sentences=S7 words=1.00
+same	aquinas-third-way.r1:all_necessity_caused	aquinas-third-way.r2:all_caused	rule=words words=1.00
+same	aquinas-third-way.r1:regress	aquinas-third-way.r2:infinite_regress	rule=shape votes=1 sentences=S9 words=0.67
+same	aquinas-third-way.r1:self_necessary	aquinas-third-way.r2:self_necessary	rule=shape votes=2 sentences=S11,S10 words=1.00
+same	aquinas-third-way.r1:god	aquinas-third-way.r2:god	rule=shape votes=2 sentences=S11 words=1.00

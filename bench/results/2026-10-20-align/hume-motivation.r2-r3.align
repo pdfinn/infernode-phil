@@ -1,0 +1,3 @@
+same	hume-motivation.r2:morals_influence	hume-motivation.r3:morals_influence	rule=shape votes=1 sentences=S2 words=1.00
+same	hume-motivation.r2:reason_influence	hume-motivation.r3:reason_influences	rule=shape votes=1 sentences=S3 words=1.00
+same	hume-motivation.r2:morals_from_reason	hume-motivation.r3:morals_from_reason	rule=shape votes=2 sentences=S4,S1 words=0.92

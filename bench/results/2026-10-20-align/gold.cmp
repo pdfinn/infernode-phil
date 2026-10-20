@@ -1,0 +1,17 @@
+passages: 26
+first reading's atoms aligned by form: 223 of 326 (68%)
+aligned by words alone: 59 of 326 (18%)
+by form, the words agreeing (>= 0.5): 214 of 223 (95%)
+holding together (r1-r2-r3 the same as r1-r3): 117 of 124 (94%)
+
+| Passage | r1 | r2 or r3 | Words | Sentences |
+|---|---|---|---|---|
+| aquinas-evil-objection | infinite_good | infinite_goodness | 0.44 | S2 |
+| descartes-real-distinction | can_suppose_no_body | essence_thinking | 0.00 | S1 |
+| descartes-real-distinction | can_suppose_no_body | essence_thinking | 0.00 | S1 |
+| descartes-real-distinction | can_suppose_no_world | independent | 0.36 | S1 |
+| descartes-real-distinction | can_suppose_no_world | needs_no_body | 0.36 | S1 |
+| hume-induction | just_arg | moral | 0.29 | S7 |
+| hume-induction | contra | demo_arg | 0.00 | S5 |
+| hume-miracles | violates_law | uniform | 0.00 | S1 |
+| locke-labour | excludes | no_other_right | 0.31 | S4 |

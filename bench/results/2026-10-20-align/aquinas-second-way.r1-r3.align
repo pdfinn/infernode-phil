@@ -1,0 +1,10 @@
+same	aquinas-second-way.r1:order_causes	aquinas-second-way.r3:order_exists	rule=shape votes=1 sentences=S2 words=1.00
+same	aquinas-second-way.r1:self_cause	aquinas-second-way.r3:self_cause	rule=shape votes=1 sentences=S3 words=0.89
+same	aquinas-second-way.r1:prior_self	aquinas-second-way.r3:prior_to_self	rule=shape votes=1 sentences=S3 words=1.00
+same	aquinas-second-way.r1:regress	aquinas-second-way.r3:infinite	rule=words words=1.00
+same	aquinas-second-way.r1:causes_fi	aquinas-second-way.r3:intermediate	rule=words words=0.67
+same	aquinas-second-way.r1:causes_iu	aquinas-second-way.r3:ultimate	rule=words words=0.67
+same	aquinas-second-way.r1:first	aquinas-second-way.r3:first	rule=words words=1.00
+same	aquinas-second-way.r1:intermediate	aquinas-second-way.r3:intermediate	rule=shape votes=1 sentences=S7 words=0.67
+same	aquinas-second-way.r1:ultimate	aquinas-second-way.r3:ultimate	rule=shape votes=1 sentences=S7 words=0.80
+same	aquinas-second-way.r1:named_god	aquinas-second-way.r3:god	rule=shape votes=1 sentences=S8 words=1.00

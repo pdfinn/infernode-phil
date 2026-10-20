@@ -1,0 +1,3 @@
+same	berkeley-principles-4.r2:objects_sensed	berkeley-principles-4.r3:sensible	rule=words words=0.62
+same	berkeley-principles-4.r2:ideas_unperceived	berkeley-principles-4.r3:idea	rule=words words=0.67
+same	berkeley-principles-4.r2:objects_unperceived	berkeley-principles-4.r3:can_exist_unperceived	rule=words words=0.67

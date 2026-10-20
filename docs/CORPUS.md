@@ -380,6 +380,12 @@ unchanged, and a click in Xenith opens the sentence.
 
 ### phil/align
 
+Built in part: by rule, `phil/align a.logic b.logic` proposes `same` and
+`negates` lines for two readings of one text, by the form of their
+statements at each sentence and by their meanings' words
+(bench/RESULTS.md, "Alignment by rule"). What follows is the rest: the
+questions that settle a proposal, and alignment across works.
+
 The central new tool, and the hardest. Two works' atoms are one claim
 only if each work's sentence means the other's. A model proposes
 candidates from the atoms' English (the meanings in the `atom` lines,

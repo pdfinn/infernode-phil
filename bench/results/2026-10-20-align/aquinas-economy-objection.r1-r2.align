@@ -1,0 +1,4 @@
+same	aquinas-economy-objection.r1:accounted_other	aquinas-economy-objection.r2:accounted_other	rule=shape votes=1 sentences=S3 words=1.00
+negates	aquinas-economy-objection.r1:need_god	aquinas-economy-objection.r2:no_need_god	rule=words words=0.91
+same	aquinas-economy-objection.r1:natural_reduced	aquinas-economy-objection.r2:natural_reduced	rule=words words=1.00
+same	aquinas-economy-objection.r1:voluntary_reduced	aquinas-economy-objection.r2:voluntary_reduced	rule=words words=1.00

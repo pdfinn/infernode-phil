@@ -1,0 +1,4 @@
+same	aquinas-economy-objection.r2:natural_reduced	aquinas-economy-objection.r3:natural_reduce	rule=shape votes=1 sentences=S4 words=1.00
+same	aquinas-economy-objection.r2:voluntary_reduced	aquinas-economy-objection.r3:voluntary_reduce	rule=shape votes=1 sentences=S4 words=1.00
+same	aquinas-economy-objection.r2:accounted_other	aquinas-economy-objection.r3:few_suffice	rule=shape votes=2 sentences=S2,S3 words=0.90
+same	aquinas-economy-objection.r2:no_need_god	aquinas-economy-objection.r3:no_need_god	rule=shape votes=2 sentences=S2,S5 words=1.00

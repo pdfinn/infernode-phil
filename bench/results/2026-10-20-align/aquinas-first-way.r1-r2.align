@@ -1,0 +1,15 @@
+same	aquinas-first-way.r1:some_motion	aquinas-first-way.r2:motion_exists	rule=shape votes=1 sentences=S2 words=1.00
+negates	aquinas-first-way.r1:in_potency	aquinas-first-way.r2:moved_in_potency	rule=words words=0.67
+same	aquinas-first-way.r1:mover_in_act	aquinas-first-way.r2:mover_in_act	rule=words words=1.00
+same	aquinas-first-way.r1:motion_is_reduction	aquinas-first-way.r2:motion_is_reduction	rule=shape votes=1 sentences=S4 words=1.00
+same	aquinas-first-way.r1:reduction_needs_actual	aquinas-first-way.r2:reduction_needs_actual	rule=shape votes=1 sentences=S5 words=1.00
+same	aquinas-first-way.r1:act_pot_same	aquinas-first-way.r2:act_potency_same_respect	rule=shape votes=1 sentences=S7 words=1.00
+same	aquinas-first-way.r1:self_mover	aquinas-first-way.r2:self_mover	rule=shape votes=1 sentences=S9 words=0.94
+same	aquinas-first-way.r1:moved_by_another	aquinas-first-way.r2:moved_by_another	rule=words words=1.00
+same	aquinas-first-way.r1:series_continues	aquinas-first-way.r2:infinite_regress	rule=words words=0.62
+same	aquinas-first-way.r1:infinite_regress	aquinas-first-way.r2:infinite_regress	rule=shape votes=1 sentences=S12 words=0.73
+same	aquinas-first-way.r1:first_mover	aquinas-first-way.r2:first_mover	rule=shape votes=1 sentences=S12 words=0.57
+negates	aquinas-first-way.r1:subsequent_depend	aquinas-first-way.r2:first_mover	rule=words words=0.67
+same	aquinas-first-way.r1:other_movers	aquinas-first-way.r2:other_movers	rule=words words=0.80
+same	aquinas-first-way.r1:first_unmoved	aquinas-first-way.r2:first_mover	rule=shape votes=2 sentences=S13 words=0.91
+same	aquinas-first-way.r1:god	aquinas-first-way.r2:is_god	rule=shape votes=2 sentences=S13 words=1.00

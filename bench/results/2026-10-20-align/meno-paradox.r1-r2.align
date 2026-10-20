@@ -1,0 +1,4 @@
+same	meno-paradox.r1:enq_known	meno-paradox.r2:knows	rule=words words=1.00
+same	meno-paradox.r1:enq_unknown	meno-paradox.r2:can_enquire	rule=shape votes=1 sentences=S2 words=0.86
+same	meno-paradox.r1:need_known	meno-paradox.r2:can_enquire	rule=shape votes=1 sentences=S2 words=0.57
+same	meno-paradox.r1:knows_subject	meno-paradox.r2:knows	rule=shape votes=1 sentences=S2 words=0.60

@@ -1,0 +1,9 @@
+same	aquinas-third-way.r2:generated_corrupt	aquinas-third-way.r3:generated_corrupt	rule=words words=0.75
+same	aquinas-third-way.r2:all_contingent	aquinas-third-way.r3:contingent	rule=words words=0.67
+negates	aquinas-third-way.r2:once_nothing	aquinas-third-way.r3:exists_at	rule=words words=0.67
+same	aquinas-third-way.r2:begin_needs_existing	aquinas-third-way.r3:begin_needs_existing	rule=shape votes=1 sentences=S5 words=1.00
+same	aquinas-third-way.r2:now_nothing	aquinas-third-way.r3:now_nothing	rule=shape votes=1 sentences=S6 words=1.00
+same	aquinas-third-way.r2:necessary_exists	aquinas-third-way.r3:necessary	rule=words words=0.67
+same	aquinas-third-way.r2:all_caused	aquinas-third-way.r3:infinite_regress	rule=words words=0.83
+same	aquinas-third-way.r2:infinite_regress	aquinas-third-way.r3:infinite_regress	rule=shape votes=1 sentences=S9 words=1.00
+same	aquinas-third-way.r2:god	aquinas-third-way.r3:god	rule=words words=0.86

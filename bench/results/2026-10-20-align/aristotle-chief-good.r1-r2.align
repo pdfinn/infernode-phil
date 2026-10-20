@@ -1,0 +1,3 @@
+same	aristotle-chief-good.r1:science	aristotle-chief-good.r2:pursuit	rule=words words=0.67
+same	aristotle-chief-good.r1:good	aristotle-chief-good.r2:good	rule=words words=1.00
+same	aristotle-chief-good.r1:aims	aristotle-chief-good.r2:aims	rule=words words=1.00

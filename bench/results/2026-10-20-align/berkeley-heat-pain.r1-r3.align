@@ -1,0 +1,2 @@
+same	berkeley-heat-pain.r1:heat_is_pain	berkeley-heat-pain.r3:intense_heat_is_pain	rule=words words=1.00
+same	berkeley-heat-pain.r1:subject_heat	berkeley-heat-pain.r3:ms_subject_of_heat	rule=words words=0.83

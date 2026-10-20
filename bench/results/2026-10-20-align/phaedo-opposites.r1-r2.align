@@ -1,0 +1,2 @@
+same	phaedo-opposites.r1:gen	phaedo-opposites.r2:opposites_generated	rule=words words=0.67
+same	phaedo-opposites.r1:souls_below	phaedo-opposites.r2:souls_below	rule=shape votes=1 sentences=S41 words=1.00

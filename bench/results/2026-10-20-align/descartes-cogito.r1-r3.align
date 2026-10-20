@@ -1,0 +1,4 @@
+same	descartes-cogito.r1:think	descartes-cogito.r3:thinking	rule=shape votes=2 sentences=S1 words=1.00
+same	descartes-cogito.r1:exist	descartes-cogito.r3:exist	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-cogito.r1:indubitable	descartes-cogito.r3:indubitable	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-cogito.r1:accept_first	descartes-cogito.r3:accept_first	rule=shape votes=1 sentences=S1 words=1.00

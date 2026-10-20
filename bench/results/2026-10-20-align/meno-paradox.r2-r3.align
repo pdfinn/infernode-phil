@@ -1,0 +1,3 @@
+same	meno-paradox.r2:knows	meno-paradox.r3:knows	rule=shape votes=2 sentences=S2 words=1.00
+same	meno-paradox.r2:need_enquire	meno-paradox.r3:needs_enquire	rule=shape votes=1 sentences=S2 words=0.86
+same	meno-paradox.r2:can_enquire	meno-paradox.r3:can_enquire	rule=shape votes=1 sentences=S2 words=0.80

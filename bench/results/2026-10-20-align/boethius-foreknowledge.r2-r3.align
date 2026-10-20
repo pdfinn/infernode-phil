@@ -1,0 +1,4 @@
+same	boethius-foreknowledge.r2:god_foreknows	boethius-foreknowledge.r3:foresees	rule=shape votes=2 sentences=S1,S3 words=0.70 contested=undeceivable
+same	boethius-foreknowledge.r2:foreseen_happens	boethius-foreknowledge.r3:comes_to_pass	rule=shape votes=1 sentences=S4 words=1.00
+same	boethius-foreknowledge.r2:free_will	boethius-foreknowledge.r3:free	rule=shape votes=2 sentences=S1,S3 words=1.00
+same	boethius-foreknowledge.r2:impious_to_deny	boethius-foreknowledge.r3:undeceivable	rule=shape votes=1 sentences=S4 words=0.33

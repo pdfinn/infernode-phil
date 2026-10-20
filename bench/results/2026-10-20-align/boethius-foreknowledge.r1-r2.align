@@ -1,0 +1,4 @@
+negates	boethius-foreknowledge.r1:foresees	boethius-foreknowledge.r2:god_foreknows	rule=words words=0.70
+same	boethius-foreknowledge.r1:foreseen_happens	boethius-foreknowledge.r2:foreseen_happens	rule=shape votes=1 sentences=S4 words=1.00
+same	boethius-foreknowledge.r1:free_will	boethius-foreknowledge.r2:free_will	rule=words words=1.00
+same	boethius-foreknowledge.r1:sure_foreknowledge	boethius-foreknowledge.r2:impious_to_deny	rule=shape votes=1 sentences=S4 words=0.55 contested=god_foreknows

@@ -1,0 +1,9 @@
+same	descartes-real-distinction.r2:can_suppose_no_body	descartes-real-distinction.r3:can_suppose_no_body	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:can_suppose_not_exist	descartes-real-distinction.r3:can_suppose_not_exist	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:think	descartes-real-distinction.r3:doubt	rule=shape votes=2 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:exist	descartes-real-distinction.r3:exist	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:essence_thinking	descartes-real-distinction.r3:essence_thinking	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:independent	descartes-real-distinction.r3:needs_no_body	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:distinct	descartes-real-distinction.r3:distinct	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:easier_known	descartes-real-distinction.r3:easier_known	rule=shape votes=1 sentences=S1 words=1.00
+same	descartes-real-distinction.r2:survives	descartes-real-distinction.r3:survives_without_body	rule=shape votes=1 sentences=S1 words=1.00

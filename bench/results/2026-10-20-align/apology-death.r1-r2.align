@@ -1,0 +1,5 @@
+same	apology-death.r1:nothing	apology-death.r2:nothingness	rule=shape votes=3 sentences=S1,S4 words=1.00
+same	apology-death.r1:migration	apology-death.r2:migration	rule=shape votes=2 sentences=S1,S5 words=0.94
+same	apology-death.r1:good	apology-death.r2:death_good	rule=shape votes=1 sentences=S1 words=0.80 contested=gain_nothing
+same	apology-death.r1:night_better	apology-death.r2:dreamless_best	rule=shape votes=1 sentences=S3 words=0.78
+same	apology-death.r1:single_night	apology-death.r2:eternity_one_night	rule=shape votes=1 sentences=S4 words=0.91

@@ -566,6 +566,36 @@ form, two readers wrong in different ways agree; where they differ, the
 difference is a question for settle or a person, not an error in
 either.
 
+## Alignment by rule: phil/align
+
+Two readers of one text name its claims differently, so their readings
+cannot be compared until the names are matched. `phil/align` matches
+them by rule: where both readings have a statement at the same sentence
+of the same form, their atoms stand in the same places; where the form
+says nothing, the meanings' content words propose. Run on the three
+independent runs of each gold passage (each run's first reading made its
+own atoms), pairwise, in four seconds, with no model
+([results/2026-10-20-align/](results/2026-10-20-align/)):
+
+| Measure | |
+|---|---|
+| the first run's atoms aligned to another run's by form | 223 of 326 (68%) |
+| proposed by the words alone | 59 of 326 (18%) |
+| aligned by form, the meanings' words agreeing (Dice 0.5 or more) | 214 of 223 (95%) |
+| holding together across three runs (r1 to r2 to r3 the same as r1 to r3) | 117 of 124 (94%) |
+
+No person has judged them yet; the two agreements are checks the rule
+cannot arrange for itself (the words are not what the form uses, and
+three runs' pairings need not close). Of the nine aligned by form whose
+words disagree, the misses are where one sentence holds many statements
+of one form (Descartes' S1, Hume's S5): the line says `doubt=words`. The
+words alone first took `need_god` and `no_need_god` for one claim; a
+meaning denied beside one that is not is now `negates`. For the pairs,
+two works with no sentence in common, only the words propose, and they
+are the weaker half: Berkeley's "a word becomes general by being made
+the sign of several particulars" scores 0.62 against Locke's "words are
+made the signs of general ideas", which is the contrast Berkeley draws.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of

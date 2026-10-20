@@ -1,0 +1,4 @@
+same	aristotle-chief-good.r2:pursuit	aristotle-chief-good.r3:pursuit	rule=shape votes=1 sentences=S1 words=1.00
+same	aristotle-chief-good.r2:good	aristotle-chief-good.r3:good	rule=shape votes=1 sentences=S1 words=1.00
+same	aristotle-chief-good.r2:aims	aristotle-chief-good.r3:aims	rule=shape votes=1 sentences=S1 words=1.00
+same	aristotle-chief-good.r2:chief	aristotle-chief-good.r3:good	rule=words words=0.67

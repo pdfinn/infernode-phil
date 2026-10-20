@@ -1,0 +1,6 @@
+# phil/align: two readings of one text, their atoms paired by the form
+# of their statements at each sentence, and by the words where the form
+# does not; a denied meaning beside one not denied, negates
+load std
+phil/align data/align/locke.r1.logic data/align/locke.r2.logic
+phil/align data/align/aquinas.r1.logic data/align/aquinas.r2.logic

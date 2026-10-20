@@ -1,0 +1,7 @@
+same	hume-miracles.r1:miracle	hume-miracles.r3:miracle	rule=shape votes=3 sentences=S6,S1,S3 words=1.00
+same	hume-miracles.r1:violates_law	hume-miracles.r3:violation	rule=shape votes=1 sentences=S1 words=1.00
+same	hume-miracles.r1:common_course	hume-miracles.r3:in_common_course	rule=shape votes=1 sentences=S3 words=0.86
+same	hume-miracles.r1:uniform_against	hume-miracles.r3:uniform_against	rule=shape votes=2 sentences=S6,S7 words=1.00
+same	hume-miracles.r1:proof_against	hume-miracles.r3:proof_against	rule=shape votes=1 sentences=S7 words=0.89
+same	hume-miracles.r1:credible	hume-miracles.r3:credible	rule=words words=1.00
+same	hume-miracles.r1:superior_proof	hume-miracles.r3:superior_opposite	rule=words words=0.86

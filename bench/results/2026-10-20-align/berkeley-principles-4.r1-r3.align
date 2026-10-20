@@ -1,0 +1,4 @@
+same	berkeley-principles-4.r1:sensible	berkeley-principles-4.r3:sensible	rule=shape votes=1 sentences=S3 words=0.67
+same	berkeley-principles-4.r1:perceived_by_sense	berkeley-principles-4.r3:perceived_by_sense	rule=shape votes=2 sentences=S3 words=1.00
+same	berkeley-principles-4.r1:idea	berkeley-principles-4.r3:idea	rule=shape votes=2 sentences=S3 words=1.00
+same	berkeley-principles-4.r1:exists_unperceived	berkeley-principles-4.r3:can_exist_unperceived	rule=shape votes=1 sentences=S3 words=0.67

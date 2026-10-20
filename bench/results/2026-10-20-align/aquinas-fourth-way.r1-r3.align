@@ -1,0 +1,5 @@
+same	aquinas-fourth-way.r1:graded	aquinas-fourth-way.r3:gradation	rule=shape votes=2 sentences=S3,S2 words=1.00
+same	aquinas-fourth-way.r1:maximum_exists	aquinas-fourth-way.r3:maximum	rule=shape votes=2 sentences=S3 words=1.00
+same	aquinas-fourth-way.r1:uttermost_being	aquinas-fourth-way.r3:uttermost_being	rule=shape votes=2 sentences=S4,S3 words=1.00
+same	aquinas-fourth-way.r1:cause_exists	aquinas-fourth-way.r3:cause_of_all	rule=shape votes=3 sentences=S4,S5 words=1.00
+same	aquinas-fourth-way.r1:god	aquinas-fourth-way.r3:god	rule=shape votes=2 sentences=S5 words=0.50

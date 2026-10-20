@@ -1,0 +1,5 @@
+same	republic-function.r1:just	republic-function.r2:just	rule=shape votes=3 sentences=S14,S12,S18 words=0.67
+same	republic-function.r1:excellent	republic-function.r2:excellent	rule=shape votes=3 sentences=S10,S9,S12 words=0.80
+same	republic-function.r1:fulfils	republic-function.r2:fulfils	rule=shape votes=2 sentences=S10,S9 words=0.89
+same	republic-function.r1:lives_well	republic-function.r2:lives_well	rule=shape votes=1 sentences=S14 words=1.00
+same	republic-function.r1:happy	republic-function.r2:happy	rule=shape votes=1 sentences=S18 words=0.67

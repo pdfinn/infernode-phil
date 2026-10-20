@@ -1,0 +1,9 @@
+same	hume-induction.r1:just_arg	hume-induction.r2:moral	rule=shape votes=1 sentences=S7 words=0.29 contested=arg_exists doubt=words
+same	hume-induction.r1:dem_arg	hume-induction.r2:demo	rule=shape votes=2 sentences=S1,S2 words=0.71
+same	hume-induction.r1:prob_arg	hume-induction.r2:moral	rule=shape votes=1 sentences=S1 words=0.56
+same	hume-induction.r1:conceivable	hume-induction.r2:conceivable	rule=shape votes=1 sentences=S3 words=0.53
+negates	hume-induction.r1:contra	hume-induction.r2:noncontra	rule=words words=1.00
+same	hume-induction.r1:founded_cause	hume-induction.r2:founded_cause	rule=shape votes=1 sentences=S8 words=1.00
+same	hume-induction.r1:from_experience	hume-induction.r2:from_exp	rule=shape votes=1 sentences=S8 words=1.00
+same	hume-induction.r1:presuppose	hume-induction.r2:presuppose	rule=shape votes=1 sentences=S8 words=1.00
+same	hume-induction.r1:circular	hume-induction.r2:circular	rule=words words=0.73

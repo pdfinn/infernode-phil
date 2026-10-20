@@ -1,0 +1,4 @@
+same	berkeley-heat-pain.r1:heat_is_pain	berkeley-heat-pain.r2:heat	rule=words words=0.67
+same	berkeley-heat-pain.r1:perceives	berkeley-heat-pain.r2:perceives	rule=shape votes=1 sentences=S11 words=0.60
+same	berkeley-heat-pain.r1:capable_pain	berkeley-heat-pain.r2:pain	rule=shape votes=1 sentences=S13 words=1.00
+same	berkeley-heat-pain.r1:subject_heat	berkeley-heat-pain.r2:heat	rule=shape votes=1 sentences=S17 words=0.62

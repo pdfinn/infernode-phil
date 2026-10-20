@@ -1,6 +1,6 @@
 .TH PHIL 1
 .SH NAME
-phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree, audit, skeleton, shape \- the Philosopher's Workbench, \(*fwb
+phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses, scope, readable, corpus, tree, audit, skeleton, shape, align \- the Philosopher's Workbench, \(*fwb
 .SH SYNOPSIS
 .B run philns
 [
@@ -238,6 +238,13 @@ phil, argue, claims, says, kind, prove, join, map, tableau, read, settle, senses
 .br
 .B phil/shape
 .I logicfile ...
+.br
+.B phil/align
+[
+.B -w
+.I min
+]
+.I a.logic b.logic
 .br
 .B phil/audit
 [
@@ -945,6 +952,44 @@ or a reading and a key, are set side by side by sentence with
 .I join
 or
 .IR awk .
+.TP
+.B phil/align
+Which atoms of two readings of one text are one claim, by rule.
+Where both have a statement at the same sentence of the same form (each
+atom a letter in the order it is first used, and a predicate's arity,
+as
+.I shape
+gives it), their atoms stand in the same places: each place is a vote
+that the two are one, statements of one form at one sentence paired
+one to one, the pair whose meanings agree best first.
+An atom of
+.I a
+goes with the atom of
+.I b
+that has most votes; one with no votes is proposed on its meaning's
+content words alone, if they share at least
+.I min
+(0.6) with an atom of
+.IR b ,
+and as
+.B negates
+where one meaning denies and the other does not.
+A line each, as a corpus's
+.B align
+has them, the last field what decided it:
+.EX
+	same	a:earth_common	b:common_earth	rule=shape votes=1 sentences=S1 words=1.00
+	negates	a:need_god	b:no_need_god	rule=words words=0.91
+.EE
+with
+.B contested=
+where another atom had votes too, and
+.B doubt=words
+where the form pairs meanings that share less than 0.3 of their words.
+Nothing is decided: the lines are proposals, for
+.I settle
+or a person.
+For two works, which share no sentences, only the words propose.
 .TP
 .B phil/prove
 Decides whether an argument's conclusion follows from its premises.

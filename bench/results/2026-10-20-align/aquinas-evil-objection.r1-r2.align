@@ -1,0 +1,3 @@
+same	aquinas-evil-objection.r1:god_exists	aquinas-evil-objection.r2:god_exists	rule=shape votes=3 sentences=S3,S2,S4 words=1.00
+same	aquinas-evil-objection.r1:infinite_good	aquinas-evil-objection.r2:infinite_goodness	rule=shape votes=2 sentences=S2,S1 words=0.57
+same	aquinas-evil-objection.r1:evil	aquinas-evil-objection.r2:evil_exists	rule=shape votes=3 sentences=S3,S1 words=0.80

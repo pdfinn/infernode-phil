@@ -1,0 +1,4 @@
+same	republic-function.r1:just	republic-function.r3:just_excellent	rule=words words=0.67
+same	republic-function.r1:excellent	republic-function.r3:just_excellent	rule=words words=0.67
+negates	republic-function.r1:happiness_profitable	republic-function.r3:misery_profitable	rule=words words=0.80
+same	republic-function.r1:injustice_more_profitable	republic-function.r3:injustice_more_profitable	rule=shape votes=1 sentences=S22 words=1.00

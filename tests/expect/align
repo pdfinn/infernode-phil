@@ -1,0 +1,12 @@
+same	locke.r1:earth_common	locke.r2:common_earth	rule=shape votes=1 sentences=S1 words=1.00
+same	locke.r1:owns_person	locke.r2:owns_person	rule=shape votes=1 sentences=S1 words=1.00
+same	locke.r1:owns_labour	locke.r2:owns_labour	rule=shape votes=2 sentences=S4,S2 words=1.00
+same	locke.r1:removes	locke.r2:removed	rule=shape votes=2 sentences=S3 words=1.00
+same	locke.r1:mixes	locke.r2:mixed	rule=shape votes=2 sentences=S4,S3 words=1.00
+same	locke.r1:excludes	locke.r2:excludes	rule=shape votes=1 sentences=S4 words=0.78
+same	locke.r1:enough_left	locke.r2:enough_left	rule=shape votes=1 sentences=S4 words=1.00
+same	locke.r1:property	locke.r2:property	rule=shape votes=1 sentences=S3 words=0.67
+same	aquinas.r1:accounted_other	aquinas.r2:accounted_other	rule=shape votes=1 sentences=S3 words=1.00
+negates	aquinas.r1:need_god	aquinas.r2:no_need_god	rule=words words=0.91
+same	aquinas.r1:natural_reduced	aquinas.r2:natural_reduced	rule=words words=1.00
+same	aquinas.r1:voluntary_reduced	aquinas.r2:voluntary_reduced	rule=words words=1.00

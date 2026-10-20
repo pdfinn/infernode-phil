@@ -1,0 +1,8 @@
+same	aquinas-ontological-objection.r2:known_on_terms	aquinas-ontological-objection.r3:known_on_terms	rule=shape votes=2 sentences=S2,S4 words=0.71
+same	aquinas-ontological-objection.r2:self_evident	aquinas-ontological-objection.r3:self_evident	rule=shape votes=2 sentences=S2,S8 words=1.00
+same	aquinas-ontological-objection.r2:first_principles_known	aquinas-ontological-objection.r3:first_principles_known	rule=shape votes=1 sentences=S2 words=1.00
+same	aquinas-ontological-objection.r2:understood	aquinas-ontological-objection.r3:exists_mentally	rule=words words=0.67
+same	aquinas-ontological-objection.r2:signifies_greatest	aquinas-ontological-objection.r3:signifies_greatest	rule=shape votes=1 sentences=S5 words=1.00
+same	aquinas-ontological-objection.r2:greater_actual	aquinas-ontological-objection.r3:actual_greater	rule=shape votes=1 sentences=S6 words=1.00
+same	aquinas-ontological-objection.r2:mental	aquinas-ontological-objection.r3:exists_actually	rule=words words=0.67
+same	aquinas-ontological-objection.r2:actual	aquinas-ontological-objection.r3:exists_actually	rule=shape votes=1 sentences=S7 words=1.00

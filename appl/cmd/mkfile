@@ -1,6 +1,7 @@
 <$ROOT/mkconfig
 
 TARG=\
+	align.dis\
 	audit.dis\
 	corpus.dis\
 	join.dis\

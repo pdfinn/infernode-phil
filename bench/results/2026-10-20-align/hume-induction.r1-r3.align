@@ -1,0 +1,7 @@
+same	hume-induction.r1:just_arg	hume-induction.r3:arg_exists	rule=shape votes=2 sentences=S1,S7 words=0.95
+same	hume-induction.r1:dem_arg	hume-induction.r3:demo_arg	rule=shape votes=2 sentences=S1,S2 words=0.71
+same	hume-induction.r1:prob_arg	hume-induction.r3:moral_arg	rule=shape votes=1 sentences=S1 words=0.71
+same	hume-induction.r1:conceivable	hume-induction.r3:change_conceivable	rule=shape votes=1 sentences=S5 words=0.77
+same	hume-induction.r1:contra	hume-induction.r3:demo_arg	rule=shape votes=1 sentences=S5 words=0.00 doubt=words
+same	hume-induction.r1:presuppose	hume-induction.r3:presupposes_uniformity	rule=words words=0.67
+same	hume-induction.r1:circular	hume-induction.r3:circular	rule=words words=0.80

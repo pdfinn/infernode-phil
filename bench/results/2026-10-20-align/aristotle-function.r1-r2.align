@@ -1,0 +1,3 @@
+same	aristotle-function.r1:crafts_have_work	aristotle-function.r2:craftsmen_have_work	rule=shape votes=1 sentences=S1 words=1.00
+same	aristotle-function.r1:members_have_work	aristotle-function.r2:members_have_work	rule=shape votes=1 sentences=S1 words=0.89
+same	aristotle-function.r1:man_has_work	aristotle-function.r2:man_has_work	rule=shape votes=1 sentences=S1 words=0.62

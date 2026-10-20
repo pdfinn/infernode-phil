@@ -1,0 +1,4 @@
+same	hume-necessary-being.r2:demonstrable	hume-necessary-being.r3:demonstrable	rule=shape votes=2 sentences=S1,S5 words=1.00
+same	hume-necessary-being.r2:nonexist_contradiction	hume-necessary-being.r3:contra	rule=shape votes=3 sentences=S1,S2,S4 words=0.91
+same	hume-necessary-being.r2:conceivable_nonexistent	hume-necessary-being.r3:conc_nonexist	rule=shape votes=2 sentences=S2,S3 words=0.55
+same	hume-necessary-being.r2:conceived_existent	hume-necessary-being.r3:conc_exist	rule=shape votes=1 sentences=S3 words=0.80

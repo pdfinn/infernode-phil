@@ -1,0 +1,6 @@
+same	mill-proof.r2:desires_own	mill-proof.r3:desired_own	rule=shape votes=1 sentences=S3 words=0.93
+same	mill-proof.r2:desirable_capable	mill-proof.r3:desirable_able	rule=shape votes=2 sentences=S3,S6 words=0.71
+same	mill-proof.r2:own_good	mill-proof.r3:own_good	rule=shape votes=1 sentences=S6 words=0.93
+same	mill-proof.r2:general_good	mill-proof.r3:general_good	rule=shape votes=1 sentences=S6 words=1.00
+same	mill-proof.r2:end_of_conduct	mill-proof.r3:happiness_end	rule=shape votes=1 sentences=S7 words=0.67
+same	mill-proof.r2:criterion	mill-proof.r3:criterion_morality	rule=shape votes=1 sentences=S7 words=1.00

@@ -1,0 +1,7 @@
+same	berkeley-master.r1:imagine_unperceived	berkeley-master.r3:imagine_unperceived	rule=words words=1.00
+same	berkeley-master.r1:frame_ideas_omit	berkeley-master.r3:frame_ideas_omit	rule=words words=0.89
+same	berkeley-master.r1:perceive_while	berkeley-master.r3:you_perceive	rule=shape votes=1 sentences=S3 words=0.80
+same	berkeley-master.r1:conceive_mind_indep	berkeley-master.r3:imagining_shows	rule=shape votes=1 sentences=S4 words=0.88 contested=conceive_without_mind
+same	berkeley-master.r1:conceive_unconceived	berkeley-master.r3:conceive_unconceived	rule=shape votes=2 sentences=S5 words=1.00
+same	berkeley-master.r1:repugnant	berkeley-master.r3:conceive_unconceived	rule=words words=0.67
+same	berkeley-master.r1:contemplate_own_ideas	berkeley-master.r3:only_own_ideas	rule=shape votes=1 sentences=S6 words=0.95
