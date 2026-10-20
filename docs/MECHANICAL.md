@@ -61,7 +61,7 @@ research says", has the sources.
 |---|---|---|---|
 | `says` | attribution and reported-speech detection (PARC 3.0) | BERT macro-F1 82.6 on content spans; transfers badly between corpora | the rule's 10 of 14 is in range; a trained model would need philosophy examples, which the readings are |
 | `kind` | argument-scheme classification (EthiX, USTV) | macro-F1 0.72 and 0.44 with fine-tuned BERT; tested on ten arguments a scheme | 67% agreement is where the field is; the judged sample decides whether reader or rule was right, and is the training set |
-| `settle` | natural-language inference, small cross-encoders | DeBERTa-v3-small 91.65 SNLI, 87.55 MNLI-mm; an xsmall binary model on 782k pairs | the first call to move: 362 questions with answers are the test, and the question is written to be an NLI pair |
+| `settle` | natural-language inference, small cross-encoders | DeBERTa-v3-small 91.65 SNLI, 87.55 MNLI-mm; an xsmall binary model on 782k pairs | tried, and not yet: off the shelf, xsmall and small agree with Opus on 70% of 240 situation questions where always "no" agrees on 84%, kappa near 0 (RESULTS.md); next, fine-tuned on settle's own questions with answers a person has checked |
 | `senses` | word-sense disambiguation | no philosophy inventory exists; contextual embeddings do the general case | the corpus's `terms/` is the inventory to make; until then a model, one call a run |
 | `scope` | none needed | done by rule | the prover writes both readings |
 | `argue`, `claims` | LLM-to-logic with fine-tuning | an 8B open model at 95% validity against a frontier model's 61%, with validity and faithfulness scored together | the skeleton by rule first; then the small model with `prove` as judge, trained on the readings the checks passed |

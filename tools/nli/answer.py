@@ -15,6 +15,11 @@
 # leaves it unanswered.  The model is a cross-encoder trained on NLI
 # (cross-encoder/nli-deberta-v3-small by default), fetched once and kept
 # by the transformers library.
+#
+# Measured (bench/RESULTS.md, October 2026): off the shelf it does not
+# beat answering every question the same way, and agrees with a large
+# model no more than chance.  It is here to be measured and, fine-tuned
+# on settle's own questions, measured again; not to be used for settling.
 import re, sys
 
 def parse_situation(q):

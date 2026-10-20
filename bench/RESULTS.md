@@ -596,6 +596,37 @@ are the weaker half: Berkeley's "a word becomes general by being made
 the sign of several particulars" scores 0.62 against Locke's "words are
 made the signs of general ideas", which is the contrast Berkeley draws.
 
+## Settling without a language model: small NLI models, and a rule
+
+`settle`'s questions answered by a small natural-language-inference
+model on the host (`tools/nli/answer.py`, a command for `ask`'s `$llm`),
+set beside Opus 5.5's answers to the same 354 questions of the breadth
+run (`bench/nlicmp.py`; [results/2026-10-20-nli/](results/2026-10-20-nli/breadth.md)).
+A situation question ("Suppose A and B are true and C false: is S2 true
+then?") is an NLI pair; a question whether the argument takes a claim
+for granted is the passage and the claim.
+
+| Kind | Questions | Always the commoner answer | DeBERTa-v3 xsmall | DeBERTa-v3 small | Kappa (small) |
+|---|---|---|---|---|---|
+| situation | 240 | 203 (84%, no) | 170 (70%) | 169 (70%) | -0.01 |
+| taken for granted | 95 | 89 (93%, yes) | 75 (78%) | 80 (84%) | 0.04 |
+
+Neither beats giving the commoner answer every time, and kappa near 0
+says they agree with Opus no more than chance would. On situations
+they say yes to 7 or 8 of the 37 Opus said yes to: a sentence the
+supposed truths make likely is not one they entail, and the off-the-shelf
+models were trained on everyday premises, not on a scenario built from a
+reading's atoms. So `settle` stays with a language model. The next
+attempt is a cross-encoder fine-tuned on settle's own questions, which
+needs answers a person has checked, not Opus's, and more of them than
+354, few of them yes.
+
+The 19 questions of which sentence is the main conclusion were put to a
+rule (the conclusion is the sentence that begins so, therefore, hence,
+thus or consequently; if neither does, the later): it agreed with Opus
+in 7. They are asked where the words do not decide, which is where a
+marker rule has nothing to go on.
+
 ## What next
 
 1. Equivocation: `phil/senses` (above) finds it in about two runs of
